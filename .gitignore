@@ -8,6 +8,9 @@ data/*
 !data/introduction.json
 !data/audio/
 !data/audio/*
+!data/literary/
+data/literary/.cache/
+data/literary/.checkpoints/
 # Python
 __pycache__/
 *.py[cod]
