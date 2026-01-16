@@ -388,10 +388,16 @@ def render_sidebar():
         reverse_map = {"📖 Lessons": "lesson", "📚 Reference": "reference", "🎋 Poems": "poems"}
         new_mode = reverse_map.get(view_mode, "lesson")
 
-        # Only update if clicking the radio (not cover/intro buttons)
-        if st.session_state.view_mode not in ["cover", "introduction"]:
+        # Track radio selection to detect actual user clicks
+        if "last_radio_mode" not in st.session_state:
+            st.session_state.last_radio_mode = new_mode
+
+        # Only switch to radio mode if user actually clicked the radio (value changed)
+        if new_mode != st.session_state.last_radio_mode:
             st.session_state.view_mode = new_mode
-        elif view_mode:  # User clicked a radio option
+            st.session_state.last_radio_mode = new_mode
+        # Also switch if already in a radio-controlled mode and mode matches
+        elif st.session_state.view_mode in ["lesson", "reference", "poems"]:
             st.session_state.view_mode = new_mode
 
         if st.session_state.view_mode == "lesson":
