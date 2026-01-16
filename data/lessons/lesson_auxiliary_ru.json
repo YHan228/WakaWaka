@@ -1,0 +1,527 @@
+{
+  "lesson_id": "lesson_auxiliary_ru",
+  "lesson_title": "The 'State' Suffix: Mastering the Versatile る (ru)",
+  "lesson_summary": "In this lesson, we analyze the suffix 'ru' (る), which acts as a logical 'packaging' tool. It transforms verbs into descriptions (Attributive) or indicates a state of being (Passive/Resultative).",
+  "grammar_point": "auxiliary_ru",
+  "grammar_explanation": {
+    "concept": "The auxiliary 'ru' (る) functions like a status flag in a data object. It tells the reader that the preceding action is not just a simple 'does,' but is either (1) describing a noun, (2) representing a continuous state, or (3) indicating an action received (passive). For a Chinese speaker, think of it as a bridge between a verb and a noun, similar to the function of '的' in '浮动的叶子' (floating leaves).",
+    "formation": "In Classical Japanese, 'ru' typically attaches to the end of verbs or other auxiliaries. Its specific meaning depends on the 'base' it attaches to, but its visual form 'る' almost always signals that the word is in the Rentaikei (Attributive) form.",
+    "variations": [
+      "る (ru) - Standard attributive/passive form",
+      "つる (tsuru) - Perfective 'tsu' + attributive 'ru'",
+      "れる (reru) - Resultative 'ri' + attributive 'ru' (often appears as 'eru' in certain verb classes)"
+    ],
+    "common_confusions": [
+      "vs. 'zu' (ず): 'ru' indicates a state or description, while 'zu' indicates negation.",
+      "vs. 'ri' (り): 'ru' is often the 'attributive' version of the resultative 'ri'."
+    ]
+  },
+  "teaching_sequence": [
+    {
+      "type": "introduction",
+      "content": "You have already mastered how particles like 'no' and 'ni' create spatial and logical links. Now, we look at the suffix 'る' (ru). In your programming mental model, if a verb is a function `action()`, adding 'る' often turns it into a property `action.status`. It allows a verb to act as an adjective for a noun or to indicate that an action has reached a certain state."
+    },
+    {
+      "type": "poem_presentation",
+      "poem_id": "lapis_6e00d6082a28b396",
+      "display": {
+        "text_with_furigana": "<ruby>白浪<rt>しらなみ</rt></ruby>に<ruby>秋<rt>あき</rt></ruby>のこのはの<ruby>うかへる<rt>うかへる</rt></ruby>を<ruby>あま<rt>あま</rt></ruby>の<ruby>なかせる<rt>なかせる</rt></ruby><ruby>舟<rt>ふね</rt></ruby>かとそ<ruby>見る<rt>みる</rt></ruby>",
+        "romaji": "shiranami ni, aki no konoha no, ukaeru o, ama no nakaseru, fune ka to zo miru",
+        "translation": "Seeing the autumn leaves floating on the white waves, I wonder if they are boats set adrift by fishermen."
+      },
+      "vocabulary": [
+        {
+          "word": "白浪",
+          "reading": "しらなみ",
+          "meaning": "white waves",
+          "span": [
+            0,
+            2
+          ],
+          "chinese_cognate_note": "Identical to Chinese '白浪'"
+        },
+        {
+          "word": "に",
+          "reading": "ni",
+          "meaning": "in/on (location particle)",
+          "span": [
+            2,
+            3
+          ],
+          "chinese_cognate_note": null
+        },
+        {
+          "word": "秋",
+          "reading": "あき",
+          "meaning": "autumn",
+          "span": [
+            3,
+            4
+          ],
+          "chinese_cognate_note": "Identical to Chinese '秋'"
+        },
+        {
+          "word": "の",
+          "reading": "no",
+          "meaning": "possessive particle (of)",
+          "span": [
+            4,
+            5
+          ],
+          "chinese_cognate_note": null
+        },
+        {
+          "word": "このは",
+          "reading": "konoha",
+          "meaning": "leaves of trees",
+          "span": [
+            5,
+            8
+          ],
+          "chinese_cognate_note": "木 (ko) + の (no) + 葉 (ha)"
+        },
+        {
+          "word": "の",
+          "reading": "no",
+          "meaning": "subject marker in a descriptive clause",
+          "span": [
+            8,
+            9
+          ],
+          "chinese_cognate_note": null
+        },
+        {
+          "word": "うかへる",
+          "reading": "ukaeru",
+          "meaning": "floating (state)",
+          "span": [
+            9,
+            13
+          ],
+          "chinese_cognate_note": "Contains '浮' (float)"
+        },
+        {
+          "word": "を",
+          "reading": "o",
+          "meaning": "object marker",
+          "span": [
+            13,
+            14
+          ],
+          "chinese_cognate_note": null
+        },
+        {
+          "word": "あま",
+          "reading": "ama",
+          "meaning": "fisherman",
+          "span": [
+            14,
+            16
+          ],
+          "chinese_cognate_note": "Written as '海人'"
+        },
+        {
+          "word": "の",
+          "reading": "no",
+          "meaning": "subject marker (by)",
+          "span": [
+            16,
+            17
+          ],
+          "chinese_cognate_note": null
+        },
+        {
+          "word": "なかせる",
+          "reading": "nakaseru",
+          "meaning": "set adrift / caused to flow",
+          "span": [
+            17,
+            21
+          ],
+          "chinese_cognate_note": "Contains '流' (flow)"
+        },
+        {
+          "word": "舟",
+          "reading": "fune",
+          "meaning": "boat",
+          "span": [
+            21,
+            22
+          ],
+          "chinese_cognate_note": "Identical to Chinese '舟'"
+        },
+        {
+          "word": "か",
+          "reading": "ka",
+          "meaning": "question particle",
+          "span": [
+            22,
+            23
+          ],
+          "chinese_cognate_note": null
+        },
+        {
+          "word": "と",
+          "reading": "to",
+          "meaning": "quotative particle",
+          "span": [
+            23,
+            24
+          ],
+          "chinese_cognate_note": null
+        },
+        {
+          "word": "そ",
+          "reading": "zo",
+          "meaning": "emphatic particle (triggers Rentaikei)",
+          "span": [
+            24,
+            25
+          ],
+          "chinese_cognate_note": null
+        },
+        {
+          "word": "見る",
+          "reading": "miru",
+          "meaning": "to see/look",
+          "span": [
+            25,
+            27
+          ],
+          "chinese_cognate_note": "Identical to Chinese '見/看'"
+        }
+      ],
+      "focus_highlight": [
+        12,
+        13
+      ]
+    },
+    {
+      "type": "grammar_spotlight",
+      "content": "Look at 'ukaeru' (うかへる) and 'nakaseru' (なかせる). Both end in 'ru'. \n\n1. **ukaeru**: This is 'ukafu' (to float) + 'ru'. It describes the *state* of the leaves. Instead of 'the leaves float,' it becomes 'the floating leaves.'\n2. **nakaseru**: This is 'nakasu' (to let flow) + 'ru'. Here, 'ru' acts as a bridge to the noun 'fune' (boat). It defines the boat as one that 'has been set adrift.'\n\nIn both cases, 'ru' is the 'Attributive' (Rentaikei) form, which you learned is required to modify a noun or when triggered by the emphatic particle 'zo' (そ/ぞ).",
+      "evidence": "See the poem above."
+    },
+    {
+      "type": "poem_presentation",
+      "poem_id": "lapis_5a207dd28bcacbf7",
+      "display": {
+        "text_with_furigana": "わかの<ruby>うら<rt>うら</rt></ruby>を<ruby>まつ<rt>まつ</rt></ruby>の<ruby>こし<rt>こし</rt></ruby>に<ruby>なかむれ<rt>なかむれ</rt></ruby>は<ruby>こすゑ<rt>こすゑ</rt></ruby>に<ruby>よする<rt>よする</rt></ruby><ruby>あま<rt>あま</rt></ruby>の<ruby>つりふね<rt>つりふね</rt></ruby>",
+        "romaji": "wakanoura, o matsu no koshi ni, nakamure ba, kosue ni yosuru, ama no tsuribune",
+        "translation": "When I look at Waka Bay through the pines on the shore, I see the fishing boats of the fishermen approaching the treetops."
+      },
+      "vocabulary": [
+        {
+          "word": "わかのうら",
+          "reading": "wakanoura",
+          "meaning": "Waka Bay (place name)",
+          "span": [
+            0,
+            5
+          ],
+          "chinese_cognate_note": null
+        },
+        {
+          "word": "を",
+          "reading": "o",
+          "meaning": "object marker",
+          "span": [
+            5,
+            6
+          ],
+          "chinese_cognate_note": null
+        },
+        {
+          "word": "まつ",
+          "reading": "matsu",
+          "meaning": "pine tree",
+          "span": [
+            6,
+            8
+          ],
+          "chinese_cognate_note": "Identical to Chinese '松'"
+        },
+        {
+          "word": "の",
+          "reading": "no",
+          "meaning": "possessive particle",
+          "span": [
+            8,
+            9
+          ],
+          "chinese_cognate_note": null
+        },
+        {
+          "word": "こし",
+          "reading": "koshi",
+          "meaning": "shore / waist-high area",
+          "span": [
+            10,
+            12
+          ],
+          "chinese_cognate_note": "Often written as '腰'"
+        },
+        {
+          "word": "に",
+          "reading": "ni",
+          "meaning": "at/in (location)",
+          "span": [
+            12,
+            13
+          ],
+          "chinese_cognate_note": null
+        },
+        {
+          "word": "なかむれ",
+          "reading": "nakamure",
+          "meaning": "gaze / look out",
+          "span": [
+            13,
+            17
+          ],
+          "chinese_cognate_note": "Contains '眺' (gaze)"
+        },
+        {
+          "word": "ば",
+          "reading": "ba",
+          "meaning": "when/if (conditional)",
+          "span": null,
+          "chinese_cognate_note": null
+        },
+        {
+          "word": "こすゑ",
+          "reading": "kosue",
+          "meaning": "treetops",
+          "span": [
+            18,
+            21
+          ],
+          "chinese_cognate_note": "Written as '梢'"
+        },
+        {
+          "word": "に",
+          "reading": "ni",
+          "meaning": "toward (direction)",
+          "span": [
+            21,
+            22
+          ],
+          "chinese_cognate_note": null
+        },
+        {
+          "word": "よする",
+          "reading": "yosuru",
+          "meaning": "approaching / drawing near",
+          "span": [
+            22,
+            25
+          ],
+          "chinese_cognate_note": "Contains '寄' (approach)"
+        },
+        {
+          "word": "あま",
+          "reading": "ama",
+          "meaning": "fisherman",
+          "span": [
+            25,
+            27
+          ],
+          "chinese_cognate_note": "Written as '海人'"
+        },
+        {
+          "word": "の",
+          "reading": "no",
+          "meaning": "possessive particle",
+          "span": [
+            27,
+            28
+          ],
+          "chinese_cognate_note": null
+        },
+        {
+          "word": "つりふね",
+          "reading": "tsuribune",
+          "meaning": "fishing boat",
+          "span": [
+            28,
+            32
+          ],
+          "chinese_cognate_note": "釣 (fishing) + 舟 (boat)"
+        }
+      ],
+      "focus_highlight": [
+        24,
+        25
+      ]
+    },
+    {
+      "type": "contrast_example",
+      "content": "In the second poem, 'yosuru' (よする) modifies 'tsuribune' (fishing boat). \n\n- **Base Verb:** 'yosu' (寄す - to approach)\n- **With 'ru':** 'yosuru' (寄する - approaching)\n\nWithout 'ru', the sentence would just say 'The boat approaches.' With 'ru', it becomes 'The **approaching** boat.' This is the power of the Rentaikei (Attributive) form signaled by 'ru'."
+    },
+    {
+      "type": "poem_presentation",
+      "poem_id": "ogura100_3918ff2aefc7d4ab",
+      "display": {
+        "text_with_furigana": "ほととぎす<ruby>鳴<rt>な</rt></ruby>きつる<ruby>方<rt>かた</rt></ruby>を<ruby>ながむれ<rt>ながむれ</rt></ruby>ばただ<ruby>有明<rt>ありあけ</rt></ruby>の<ruby>月<rt>つき</rt></ruby>ぞ<ruby>残<rt>のこ</rt></ruby>れる",
+        "romaji": "hototogisu, nakitsuru kata o, nagamureba, tada ariake no, tsuki zo nokoreru",
+        "translation": "When I look toward the direction where the cuckoo cried, only the dawn moon remains."
+      },
+      "vocabulary": [
+        {
+          "word": "ほととぎす",
+          "reading": "hototogisu",
+          "meaning": "cuckoo bird",
+          "span": [
+            0,
+            5
+          ],
+          "chinese_cognate_note": "Often written as '子規'"
+        },
+        {
+          "word": "鳴き",
+          "reading": "naki",
+          "meaning": "cried/chirped",
+          "span": [
+            5,
+            7
+          ],
+          "chinese_cognate_note": "Identical to Chinese '鳴'"
+        },
+        {
+          "word": "つる",
+          "reading": "tsuru",
+          "meaning": "did (perfective 'tsu' + 'ru')",
+          "span": [
+            7,
+            9
+          ],
+          "chinese_cognate_note": "The 'ru' here makes it attributive"
+        },
+        {
+          "word": "方",
+          "reading": "kata",
+          "meaning": "direction",
+          "span": [
+            9,
+            10
+          ],
+          "chinese_cognate_note": "Identical to Chinese '方'"
+        },
+        {
+          "word": "を",
+          "reading": "o",
+          "meaning": "object marker",
+          "span": [
+            10,
+            11
+          ],
+          "chinese_cognate_note": null
+        },
+        {
+          "word": "ながむれ",
+          "reading": "nagamure",
+          "meaning": "gaze",
+          "span": [
+            11,
+            15
+          ],
+          "chinese_cognate_note": "Contains '眺'"
+        },
+        {
+          "word": "ば",
+          "reading": "ba",
+          "meaning": "when (conditional)",
+          "span": [
+            15,
+            16
+          ],
+          "chinese_cognate_note": null
+        },
+        {
+          "word": "ただ",
+          "reading": "tada",
+          "meaning": "only / simply",
+          "span": [
+            16,
+            18
+          ],
+          "chinese_cognate_note": "Similar to '只'"
+        },
+        {
+          "word": "有明",
+          "reading": "ariake",
+          "meaning": "dawn / morning moon",
+          "span": [
+            18,
+            20
+          ],
+          "chinese_cognate_note": "Identical to Chinese '有明'"
+        },
+        {
+          "word": "の",
+          "reading": "no",
+          "meaning": "possessive particle",
+          "span": [
+            20,
+            21
+          ],
+          "chinese_cognate_note": null
+        },
+        {
+          "word": "月",
+          "reading": "tsuki",
+          "meaning": "moon",
+          "span": [
+            21,
+            22
+          ],
+          "chinese_cognate_note": "Identical to Chinese '月'"
+        },
+        {
+          "word": "ぞ",
+          "reading": "zo",
+          "meaning": "emphatic particle (triggers Rentaikei ending)",
+          "span": [
+            22,
+            23
+          ],
+          "chinese_cognate_note": null
+        },
+        {
+          "word": "残れる",
+          "reading": "nokoreru",
+          "meaning": "remaining (state)",
+          "span": [
+            23,
+            26
+          ],
+          "chinese_cognate_note": "Contains '残' (remain)"
+        }
+      ],
+      "focus_highlight": [
+        8,
+        9
+      ]
+    },
+    {
+      "type": "comprehension_check",
+      "question": "In the third poem, why does the word 'nokoreru' (残れる) end in 'ru' instead of just being the base verb 'nokoru'?",
+      "answer": "Because of the emphatic particle 'zo' (ぞ). As learned in Unit 7, 'zo' requires the final verb to be in the Rentaikei (Attributive) form. The 'ru' suffix is the marker of that form here.",
+      "hint": "Look for the particle 'zo' earlier in the line."
+    }
+  ],
+  "reference_card": {
+    "point": "Auxiliary る (ru)",
+    "one_liner": "A suffix that marks the Attributive (Rentaikei) form, used to describe nouns or indicate a state of being.",
+    "example": "よする舟 (yosuru fune) = The approaching boat.",
+    "see_also": [
+      "lesson_conjugation_rentaikei",
+      "lesson_particle_zo"
+    ]
+  },
+  "forward_references": [
+    {
+      "point": "らる (raru)",
+      "note": "We will learn the more complex version of this suffix, 'raru', which is used for honorifics and potentiality, in the next lesson."
+    }
+  ]
+}

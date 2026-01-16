@@ -1,0 +1,541 @@
+{
+  "lesson_id": "lesson_particle_tsutsu",
+  "lesson_title": "The 'Loop' Particle: Continuous and Simultaneous Action with つつ (tsutsu)",
+  "lesson_summary": "In this lesson, we move beyond sequential actions (A then B) to explore the particle つつ, which functions like a logical 'while' loop or a parallel process, indicating actions that are ongoing or happening simultaneously.",
+  "grammar_point": "particle_tsutsu",
+  "grammar_explanation": {
+    "concept": "The particle つつ (tsutsu) attaches to verbs to indicate that an action is either continuing over time (like a background process) or occurring at the exact same time as another action.",
+    "formation": "Verb (Continuative/Ren'youkei form) + つつ",
+    "variations": [
+      "Continuous: 'Keep on doing...'",
+      "Simultaneous: 'While doing A, B happens...'"
+    ],
+    "common_confusions": [
+      "vs. て (te): て usually marks a sequence (Step 1 then Step 2). つつ marks overlap (Step 1 during Step 2)."
+    ]
+  },
+  "teaching_sequence": [
+    {
+      "type": "introduction",
+      "content": "In our previous lessons, we mastered the particle て (te) to link actions in a sequence—much like a series of commands in a script. However, poetry often describes states that don't just 'happen and end.' Today we look at つつ (tsutsu). Think of it as a **parallel process** or a **while-loop**. It tells us that an action is persisting in the background while we observe the world."
+    },
+    {
+      "type": "poem_presentation",
+      "poem_id": "ogura100_9ac02ed9904e8f9c",
+      "display": {
+        "text_with_furigana": "<ruby>田子<rt>たご</rt></ruby>の<ruby>浦<rt>うら</rt></ruby>にうち<ruby>出<rt>い</rt></ruby>でてみれば<ruby>白妙<rt>しろたえ</rt></ruby>の<ruby>富士<rt>ふじ</rt></ruby>の<ruby>高嶺<rt>たかね</rt></ruby>に<ruby>雪<rt>ゆき</rt></ruby>は<ruby>降<rt>ふ</rt></ruby>りつつ",
+        "romaji": "tagono ura, ni uchi idete mireba, shirotae, no fuji no takane, ni yuki wa furitsutsu",
+        "translation": "When I go out to the shore of Tago and look, I see the snow falling continuously on the high peak of white-clothed Fuji."
+      },
+      "vocabulary": [
+        {
+          "word": "田子の浦",
+          "reading": "たごのうら",
+          "meaning": "Tago Bay (Place name)",
+          "span": [
+            0,
+            4
+          ],
+          "chinese_cognate_note": "浦 means 'shore/bay' in Chinese."
+        },
+        {
+          "word": "に",
+          "reading": "に",
+          "meaning": "at/to (location marker)",
+          "span": [
+            4,
+            5
+          ],
+          "chinese_cognate_note": null
+        },
+        {
+          "word": "うち出でて",
+          "reading": "うちいでて",
+          "meaning": "to go out / set out",
+          "span": [
+            5,
+            10
+          ],
+          "chinese_cognate_note": null
+        },
+        {
+          "word": "みれば",
+          "reading": "みれば",
+          "meaning": "when I look",
+          "span": [
+            10,
+            13
+          ],
+          "chinese_cognate_note": null
+        },
+        {
+          "word": "白妙",
+          "reading": "しろたえ",
+          "meaning": "white cloth / pure white",
+          "span": [
+            13,
+            15
+          ],
+          "chinese_cognate_note": "白 is white; 妙 is exquisite."
+        },
+        {
+          "word": "の",
+          "reading": "の",
+          "meaning": "possessive particle (of)",
+          "span": [
+            15,
+            16
+          ],
+          "chinese_cognate_note": null
+        },
+        {
+          "word": "富士",
+          "reading": "ふじ",
+          "meaning": "Mt. Fuji",
+          "span": [
+            16,
+            18
+          ],
+          "chinese_cognate_note": "Direct cognate."
+        },
+        {
+          "word": "の",
+          "reading": "の",
+          "meaning": "possessive particle (of)",
+          "span": [
+            18,
+            19
+          ],
+          "chinese_cognate_note": null
+        },
+        {
+          "word": "高嶺",
+          "reading": "たかね",
+          "meaning": "high peak",
+          "span": [
+            19,
+            21
+          ],
+          "chinese_cognate_note": "高 (high) 嶺 (mountain ridge)."
+        },
+        {
+          "word": "に",
+          "reading": "に",
+          "meaning": "on (location marker)",
+          "span": [
+            21,
+            22
+          ],
+          "chinese_cognate_note": null
+        },
+        {
+          "word": "雪",
+          "reading": "ゆき",
+          "meaning": "snow",
+          "span": [
+            22,
+            23
+          ],
+          "chinese_cognate_note": "Direct cognate."
+        },
+        {
+          "word": "は",
+          "reading": "は",
+          "meaning": "topic marker",
+          "span": [
+            23,
+            24
+          ],
+          "chinese_cognate_note": null
+        },
+        {
+          "word": "降りつつ",
+          "reading": "ふりつつ",
+          "meaning": "falling continuously",
+          "span": [
+            24,
+            28
+          ],
+          "chinese_cognate_note": null
+        }
+      ],
+      "focus_highlight": [
+        24,
+        28
+      ]
+    },
+    {
+      "type": "grammar_spotlight",
+      "content": "In the poem above, the poet looks at Mt. Fuji and sees the snow. By ending with **降りつつ (furi-tsutsu)**, the poet emphasizes that the snow isn't just 'there'—it is **in the process of falling**. \n\nIn programming terms:\n`while(is_viewing(Fuji)) { snow_falls(); }` \n\nIf the poet had used `furi-te`, it would imply the snow fell and then something else happened. `tsutsu` keeps the action active and ongoing.",
+      "evidence": "See the poem above."
+    },
+    {
+      "type": "poem_presentation",
+      "poem_id": "ogura100_d70e6b4bb485eb24",
+      "display": {
+        "text_with_furigana": "<ruby>嘆<rt>なげ</rt></ruby>きつつひとり<ruby>寝<rt>ぬ</rt></ruby>る<ruby>夜<rt>よ</rt></ruby>の<ruby>明<rt>あ</rt></ruby>くる<ruby>間<rt>ま</rt></ruby>はいかに<ruby>久<rt>ひさ</rt></ruby>しきものとかは<ruby>知<rt>し</rt></ruby>る",
+        "romaji": "nageki tsutsu, hitori nuru yo no, akuru ma wa, ika ni hisashiki, mono to ka wa shiru",
+        "translation": "Do you know how long the time is until the dawn, during the night when I sleep alone while sighing in grief?"
+      },
+      "vocabulary": [
+        {
+          "word": "嘆きつつ",
+          "reading": "なげきつつ",
+          "meaning": "while sighing / while grieving",
+          "span": [
+            0,
+            4
+          ],
+          "chinese_cognate_note": "嘆 is 'to sigh' in Chinese."
+        },
+        {
+          "word": "ひとり",
+          "reading": "ひとり",
+          "meaning": "alone / one person",
+          "span": [
+            4,
+            7
+          ],
+          "chinese_cognate_note": "一人."
+        },
+        {
+          "word": "寝る",
+          "reading": "ぬる",
+          "meaning": "to sleep",
+          "span": [
+            7,
+            9
+          ],
+          "chinese_cognate_note": null
+        },
+        {
+          "word": "夜",
+          "reading": "よ",
+          "meaning": "night",
+          "span": [
+            9,
+            10
+          ],
+          "chinese_cognate_note": "Direct cognate."
+        },
+        {
+          "word": "の",
+          "reading": "の",
+          "meaning": "possessive particle (of)",
+          "span": [
+            10,
+            11
+          ],
+          "chinese_cognate_note": null
+        },
+        {
+          "word": "明くる",
+          "reading": "あくる",
+          "meaning": "to dawn / to break (day)",
+          "span": [
+            11,
+            14
+          ],
+          "chinese_cognate_note": null
+        },
+        {
+          "word": "間",
+          "reading": "ま",
+          "meaning": "interval / time",
+          "span": [
+            14,
+            15
+          ],
+          "chinese_cognate_note": "Direct cognate for 'space/interval'."
+        },
+        {
+          "word": "は",
+          "reading": "は",
+          "meaning": "topic marker",
+          "span": [
+            15,
+            16
+          ],
+          "chinese_cognate_note": null
+        },
+        {
+          "word": "いかに",
+          "reading": "いかに",
+          "meaning": "how / in what way",
+          "span": [
+            16,
+            19
+          ],
+          "chinese_cognate_note": null
+        },
+        {
+          "word": "久しき",
+          "reading": "ひさしき",
+          "meaning": "long (time)",
+          "span": [
+            19,
+            22
+          ],
+          "chinese_cognate_note": "久 is 'long time' in Chinese."
+        },
+        {
+          "word": "もの",
+          "reading": "もの",
+          "meaning": "thing",
+          "span": [
+            22,
+            24
+          ],
+          "chinese_cognate_note": "物."
+        },
+        {
+          "word": "と",
+          "reading": "と",
+          "meaning": "quotative particle",
+          "span": [
+            24,
+            25
+          ],
+          "chinese_cognate_note": null
+        },
+        {
+          "word": "か",
+          "reading": "か",
+          "meaning": "question particle",
+          "span": [
+            25,
+            26
+          ],
+          "chinese_cognate_note": null
+        },
+        {
+          "word": "は",
+          "reading": "は",
+          "meaning": "topic/emphasis marker",
+          "span": [
+            26,
+            27
+          ],
+          "chinese_cognate_note": null
+        },
+        {
+          "word": "知る",
+          "reading": "しる",
+          "meaning": "to know",
+          "span": [
+            27,
+            29
+          ],
+          "chinese_cognate_note": "知."
+        }
+      ],
+      "focus_highlight": [
+        0,
+        4
+      ]
+    },
+    {
+      "type": "contrast_example",
+      "content": "In this second poem, **嘆きつつ (nageki-tsutsu)** shows **simultaneous action**. The speaker is sleeping (state) *while* sighing (action). \n\nIn Chinese, this is exactly like **一边叹息一边睡觉** (yībiān tànxī yībiān shuìjiào). The sighing is a continuous thread that runs through the entire night."
+    },
+    {
+      "type": "poem_presentation",
+      "poem_id": "ogura100_2eaba95627b91dd3",
+      "display": {
+        "text_with_furigana": "<ruby>御垣守<rt>みかきもり</rt></ruby><ruby>衛士<rt>えじ</rt></ruby>のたく<ruby>火<rt>ひ</rt></ruby>の<ruby>夜<rt>よる</rt></ruby>は<ruby>燃<rt>も</rt></ruby>え<ruby>昼<rt>ひる</rt></ruby>は<ruby>消<rt>き</rt></ruby>えつつ<ruby>物<rt>もの</rt></ruby>をこそ<ruby>思<rt>おも</rt></ruby>へ",
+        "romaji": "mikakimori, eji no taku hi no, yoru wa moe, hiru wa kie tsutsu, mono o koso omoe",
+        "translation": "Like the fire lit by the palace guards, which burns by night and goes out by day, I too am lost in thought (repeatedly)."
+      },
+      "vocabulary": [
+        {
+          "word": "御垣守",
+          "reading": "みかきもり",
+          "meaning": "palace gate guard",
+          "span": [
+            0,
+            3
+          ],
+          "chinese_cognate_note": null
+        },
+        {
+          "word": "衛士",
+          "reading": "えじ",
+          "meaning": "guardsman",
+          "span": [
+            3,
+            5
+          ],
+          "chinese_cognate_note": "衛 is 'to guard', 士 is 'soldier'."
+        },
+        {
+          "word": "の",
+          "reading": "の",
+          "meaning": "possessive particle (of)",
+          "span": [
+            5,
+            6
+          ],
+          "chinese_cognate_note": null
+        },
+        {
+          "word": "たく",
+          "reading": "たく",
+          "meaning": "to burn / to light a fire",
+          "span": [
+            6,
+            8
+          ],
+          "chinese_cognate_note": null
+        },
+        {
+          "word": "火",
+          "reading": "ひ",
+          "meaning": "fire",
+          "span": [
+            8,
+            9
+          ],
+          "chinese_cognate_note": "Direct cognate."
+        },
+        {
+          "word": "の",
+          "reading": "の",
+          "meaning": "possessive particle (of)",
+          "span": [
+            9,
+            10
+          ],
+          "chinese_cognate_note": null
+        },
+        {
+          "word": "夜",
+          "reading": "よる",
+          "meaning": "night",
+          "span": [
+            10,
+            11
+          ],
+          "chinese_cognate_note": "Direct cognate."
+        },
+        {
+          "word": "は",
+          "reading": "は",
+          "meaning": "topic marker",
+          "span": [
+            11,
+            12
+          ],
+          "chinese_cognate_note": null
+        },
+        {
+          "word": "燃え",
+          "reading": "もえ",
+          "meaning": "burn",
+          "span": [
+            12,
+            14
+          ],
+          "chinese_cognate_note": null
+        },
+        {
+          "word": "昼",
+          "reading": "ひる",
+          "meaning": "daytime",
+          "span": [
+            14,
+            15
+          ],
+          "chinese_cognate_note": "Direct cognate."
+        },
+        {
+          "word": "は",
+          "reading": "は",
+          "meaning": "topic marker",
+          "span": [
+            15,
+            16
+          ],
+          "chinese_cognate_note": null
+        },
+        {
+          "word": "消えつつ",
+          "reading": "きえつつ",
+          "meaning": "extinguishing repeatedly / while going out",
+          "span": [
+            16,
+            20
+          ],
+          "chinese_cognate_note": "消 is 'to disappear/extinguish'."
+        },
+        {
+          "word": "物",
+          "reading": "もの",
+          "meaning": "things / matters",
+          "span": [
+            20,
+            21
+          ],
+          "chinese_cognate_note": "物."
+        },
+        {
+          "word": "を",
+          "reading": "を",
+          "meaning": "object marker",
+          "span": [
+            21,
+            22
+          ],
+          "chinese_cognate_note": null
+        },
+        {
+          "word": "こそ",
+          "reading": "こそ",
+          "meaning": "strong emphasis particle",
+          "span": [
+            22,
+            24
+          ],
+          "chinese_cognate_note": null
+        },
+        {
+          "word": "思へ",
+          "reading": "おもへ",
+          "meaning": "to think / to long for",
+          "span": [
+            24,
+            26
+          ],
+          "chinese_cognate_note": "思."
+        }
+      ],
+      "focus_highlight": [
+        18,
+        22
+      ]
+    },
+    {
+      "type": "comprehension_check",
+      "question": "In the third poem, the fire 'burns at night' and 'goes out by day' (消えつつ). Why is つつ used here instead of a simple 'ended' form?",
+      "answer": "Because the fire goes out every single day in a repeating cycle. つつ captures the iterative, recurring nature of the action, just like the poet's recurring thoughts of love.",
+      "hint": "Think about whether the fire goes out once and stays out, or if it's a daily 'loop'."
+    }
+  ],
+  "reference_card": {
+    "point": "つつ (tsutsu)",
+    "one_liner": "The 'while' or 'continuous' particle used for simultaneous or repeating actions.",
+    "example": "雪は降りつつ (Yuki wa furitsutsu) = The snow keeps on falling.",
+    "see_also": [
+      "particle_te"
+    ]
+  },
+  "forward_references": [
+    {
+      "point": "こそ (koso) + 思へ (omoe)",
+      "note": "Notice how the verb 'omoe' ends differently because of 'koso'. This is a special grammatical 'handshake' called Kakari-Musubi, which we will study in Unit 7."
+    },
+    {
+      "point": "みれば (mireba)",
+      "note": "The 'ba' at the end of 'mire' means 'when' or 'if'. We will cover these conditional links in Unit 5."
+    }
+  ]
+}

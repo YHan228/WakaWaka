@@ -1,0 +1,558 @@
+{
+  "lesson_id": "lesson_conjugation_te",
+  "lesson_title": "The Logical Semicolon: Connecting Actions with て (te)",
+  "lesson_summary": "In this lesson, we move beyond single-action sentences to explore how Classical Japanese links multiple verbs or states together using the conjunctive form 'te'. This functions like a logical 'and then' or a semicolon in programming, allowing for a continuous flow of imagery.",
+  "grammar_point": "conjugation_te",
+  "grammar_explanation": {
+    "concept": "The 'te' (て) conjugation acts as a logical bridge. It suspends the sentence mid-stream, indicating that the current action is related to or followed by the next one. For a Chinese speaker, think of this as the functional equivalent of '而' (ér) or serial verb constructions where the relationship is 'Action A → Action B'.",
+    "formation": "It attaches to the 'continuative' base of verbs and adjectives. While we haven't memorized conjugation tables yet, you can recognize it as the 'te' sound appearing immediately after a verb root.",
+    "variations": [
+      "で (de) - A voiced version used after certain verb types (similar to how some Chinese initials change in compounds)."
+    ],
+    "common_confusions": [
+      "vs. Particle 'te': While they share an origin, focus here on 'te' as a 'logic gate' that allows the sentence to continue rather than ending."
+    ]
+  },
+  "teaching_sequence": [
+    {
+      "type": "introduction",
+      "content": "Until now, we have looked at static relationships (A is B, A of B). But poetry is often a sequence of events. In programming terms, if a sentence is a line of code, 'te' is the semicolon (;) that tells the processor: 'I'm not done yet; execute this, then move to the next part.' It creates a 'flow' (ren'you) between concepts."
+    },
+    {
+      "type": "poem_presentation",
+      "poem_id": "ogura100_fc656001b8e16a97",
+      "display": {
+        "text_with_furigana": "<ruby>み吉野<rt>みよしの</rt></ruby>の<ruby>山<rt>やま</rt></ruby>の<ruby>秋風<rt>あきかぜ</rt></ruby><ruby>さ夜<rt>さよ</rt></ruby><ruby>更<rt>ふ</rt></ruby>けて<ruby>ふるさと<rt>ふるさと</rt></ruby><ruby>寒<rt>さむ</rt></ruby>く<ruby>衣<rt>ころも</rt></ruby>うつなり",
+        "romaji": "miyoshino no, yama no akikaze, sayo fukete, furusato samuku, koromo utsu nari",
+        "translation": "In beautiful Yoshino, the autumn wind from the mountains blows as the night deepens; in the old village, it grows cold, and I hear the sound of beating cloth."
+      },
+      "vocabulary": [
+        {
+          "word": "み吉野",
+          "reading": "みよしの",
+          "meaning": "Beautiful Yoshino (place name)",
+          "span": [
+            0,
+            3
+          ],
+          "chinese_cognate_note": "吉野 is a famous mountain/region."
+        },
+        {
+          "word": "の",
+          "reading": "の",
+          "meaning": "of (possessive particle)",
+          "span": [
+            3,
+            4
+          ],
+          "chinese_cognate_note": "Equivalent to '的'."
+        },
+        {
+          "word": "山",
+          "reading": "やま",
+          "meaning": "mountain",
+          "span": [
+            4,
+            5
+          ],
+          "chinese_cognate_note": "Identical to '山'."
+        },
+        {
+          "word": "の",
+          "reading": "の",
+          "meaning": "of (possessive particle)",
+          "span": [
+            5,
+            6
+          ],
+          "chinese_cognate_note": null
+        },
+        {
+          "word": "秋風",
+          "reading": "あきかぜ",
+          "meaning": "autumn wind",
+          "span": [
+            6,
+            8
+          ],
+          "chinese_cognate_note": "Identical to '秋风'."
+        },
+        {
+          "word": "さ夜",
+          "reading": "さよ",
+          "meaning": "night (with 'sa' as an intensifier)",
+          "span": [
+            8,
+            10
+          ],
+          "chinese_cognate_note": "夜 means night."
+        },
+        {
+          "word": "更けて",
+          "reading": "ふけて",
+          "meaning": "deepening (and...)",
+          "span": [
+            10,
+            13
+          ],
+          "chinese_cognate_note": "The Kanji '更' here refers to the passing of time/watches of the night."
+        },
+        {
+          "word": "ふるさと",
+          "reading": "ふるさと",
+          "meaning": "old village / hometown",
+          "span": [
+            13,
+            17
+          ],
+          "chinese_cognate_note": "Written as '古里'."
+        },
+        {
+          "word": "寒く",
+          "reading": "さむく",
+          "meaning": "coldly / becoming cold",
+          "span": [
+            17,
+            19
+          ],
+          "chinese_cognate_note": "Identical to '寒'."
+        },
+        {
+          "word": "衣",
+          "reading": "ころも",
+          "meaning": "clothes / robe",
+          "span": [
+            19,
+            20
+          ],
+          "chinese_cognate_note": "Identical to '衣'."
+        },
+        {
+          "word": "うつ",
+          "reading": "うつ",
+          "meaning": "to beat / strike",
+          "span": [
+            20,
+            22
+          ],
+          "chinese_cognate_note": "Written as '打'."
+        },
+        {
+          "word": "なり",
+          "reading": "なり",
+          "meaning": "it is heard that / it is (descriptive auxiliary)",
+          "span": [
+            22,
+            24
+          ],
+          "chinese_cognate_note": null
+        }
+      ],
+      "focus_highlight": [
+        12,
+        13
+      ]
+    },
+    {
+      "type": "grammar_spotlight",
+      "content": "In the poem above, look at **更けて (fukete)**. The verb is 'fuku' (to deepen). By adding 'te', the poet links the 'deepening of the night' directly to the next observation: the coldness and the sound of cloth. \n\n**Logic Flow:** [Night Deepens] + て → [Village grows cold]. \nWithout 'te', these would be two disconnected facts. With 'te', the deepening night *leads into* the coldness.",
+      "evidence": "See the poem above."
+    },
+    {
+      "type": "poem_presentation",
+      "poem_id": "ogura100_83ce7fdac79da2f3",
+      "display": {
+        "text_with_furigana": "<ruby>君<rt>きみ</rt></ruby>がため<ruby>春<rt>はる</rt></ruby>の<ruby>野<rt>の</rt></ruby>に<ruby>出<rt>い</rt></ruby>でて<ruby>若菜<rt>わかな</rt></ruby><ruby>摘<rt>つ</rt></ruby>むわが<ruby>衣手<rt>ころもで</rt></ruby>に<ruby>雪<rt>ゆき</rt></ruby>は<ruby>降<rt>ふ</rt></ruby>りつつ",
+        "romaji": "kimi ga tame, haru no no ni idete, wakana tsumu, waga koromo de, ni yuki wa furitsutsu",
+        "translation": "For your sake, I went out to the spring fields to pick young greens, while upon my sleeves the snow kept falling."
+      },
+      "vocabulary": [
+        {
+          "word": "君",
+          "reading": "きみ",
+          "meaning": "you (polite)",
+          "span": [
+            0,
+            1
+          ],
+          "chinese_cognate_note": "Identical to '君' (lord/you)."
+        },
+        {
+          "word": "が",
+          "reading": "が",
+          "meaning": "possessive particle (similar to 'no')",
+          "span": [
+            1,
+            2
+          ],
+          "chinese_cognate_note": null
+        },
+        {
+          "word": "ため",
+          "reading": "ため",
+          "meaning": "for the sake of / purpose",
+          "span": [
+            2,
+            4
+          ],
+          "chinese_cognate_note": "Written as '為'."
+        },
+        {
+          "word": "春",
+          "reading": "はる",
+          "meaning": "spring",
+          "span": [
+            4,
+            5
+          ],
+          "chinese_cognate_note": "Identical to '春'."
+        },
+        {
+          "word": "の",
+          "reading": "の",
+          "meaning": "of",
+          "span": [
+            5,
+            6
+          ],
+          "chinese_cognate_note": null
+        },
+        {
+          "word": "野",
+          "reading": "の",
+          "meaning": "field",
+          "span": [
+            6,
+            7
+          ],
+          "chinese_cognate_note": "Identical to '野'."
+        },
+        {
+          "word": "に",
+          "reading": "に",
+          "meaning": "to / in (direction/location)",
+          "span": [
+            7,
+            8
+          ],
+          "chinese_cognate_note": null
+        },
+        {
+          "word": "出でて",
+          "reading": "いでて",
+          "meaning": "going out (and...)",
+          "span": [
+            8,
+            11
+          ],
+          "chinese_cognate_note": "Contains '出' (to go out)."
+        },
+        {
+          "word": "若菜",
+          "reading": "わかな",
+          "meaning": "young herbs / greens",
+          "span": [
+            11,
+            13
+          ],
+          "chinese_cognate_note": "菜 means vegetable/greens."
+        },
+        {
+          "word": "摘む",
+          "reading": "つむ",
+          "meaning": "to pick / pluck",
+          "span": [
+            13,
+            15
+          ],
+          "chinese_cognate_note": "Written as '摘'."
+        },
+        {
+          "word": "わが",
+          "reading": "わが",
+          "meaning": "my",
+          "span": [
+            15,
+            17
+          ],
+          "chinese_cognate_note": "Written as '我が'."
+        },
+        {
+          "word": "衣手",
+          "reading": "ころもで",
+          "meaning": "sleeve",
+          "span": [
+            17,
+            19
+          ],
+          "chinese_cognate_note": "Literally 'clothing hand' (衣手)."
+        },
+        {
+          "word": "に",
+          "reading": "に",
+          "meaning": "on / at (location)",
+          "span": [
+            19,
+            20
+          ],
+          "chinese_cognate_note": null
+        },
+        {
+          "word": "雪",
+          "reading": "ゆき",
+          "meaning": "snow",
+          "span": [
+            20,
+            21
+          ],
+          "chinese_cognate_note": "Identical to '雪'."
+        },
+        {
+          "word": "は",
+          "reading": "は",
+          "meaning": "topic marker",
+          "span": [
+            21,
+            22
+          ],
+          "chinese_cognate_note": null
+        },
+        {
+          "word": "降りつつ",
+          "reading": "ふりつつ",
+          "meaning": "continuously falling",
+          "span": [
+            22,
+            26
+          ],
+          "chinese_cognate_note": null
+        }
+      ],
+      "focus_highlight": [
+        10,
+        11
+      ]
+    },
+    {
+      "type": "contrast_example",
+      "content": "Compare the Chinese structure to the Japanese structure for the phrase 'Go out to the field and pick greens':\n\n**Chinese:** [出] 到 [野外] **(and)** [摘] [菜]\n**Classical Japanese:** [野] に [出で] **て** [若菜] [摘む]\n\nIn Chinese, the 'and' is often invisible. In Japanese, the **て (te)** is the explicit physical link that holds the two verbs together."
+    },
+    {
+      "type": "poem_presentation",
+      "poem_id": "lapis_ac7bcf57833883dd",
+      "display": {
+        "text_with_furigana": "<ruby>花<rt>はな</rt></ruby>の<ruby>色<rt>いろ</rt></ruby>はかすみにこめて<ruby>見<rt>み</rt></ruby>せすともかをたにぬすめ<ruby>春<rt>はる</rt></ruby>の<ruby>山<rt>やま</rt></ruby>かせ",
+        "romaji": "hana no iro, wa kasumi ni komete, misesu tomo, ka o ta ni nusume, haru no yama kase",
+        "translation": "Though the mist hides the colors of the flowers, let the spring mountain wind at least steal their scent."
+      },
+      "vocabulary": [
+        {
+          "word": "花",
+          "reading": "はな",
+          "meaning": "flower",
+          "span": [
+            0,
+            1
+          ],
+          "chinese_cognate_note": "Identical to '花'."
+        },
+        {
+          "word": "の",
+          "reading": "の",
+          "meaning": "of",
+          "span": [
+            1,
+            2
+          ],
+          "chinese_cognate_note": null
+        },
+        {
+          "word": "色",
+          "reading": "いろ",
+          "meaning": "color",
+          "span": [
+            2,
+            3
+          ],
+          "chinese_cognate_note": "Identical to '色'."
+        },
+        {
+          "word": "は",
+          "reading": "は",
+          "meaning": "topic marker",
+          "span": [
+            3,
+            4
+          ],
+          "chinese_cognate_note": null
+        },
+        {
+          "word": "かすみ",
+          "reading": "かすみ",
+          "meaning": "mist / haze",
+          "span": [
+            4,
+            7
+          ],
+          "chinese_cognate_note": "Written as '霞'."
+        },
+        {
+          "word": "に",
+          "reading": "に",
+          "meaning": "in / by",
+          "span": [
+            7,
+            8
+          ],
+          "chinese_cognate_note": null
+        },
+        {
+          "word": "こめて",
+          "reading": "こめて",
+          "meaning": "enclosing / including (and...)",
+          "span": [
+            8,
+            11
+          ],
+          "chinese_cognate_note": "Written as '込めて'."
+        },
+        {
+          "word": "見せ",
+          "reading": "みせ",
+          "meaning": "to show",
+          "span": [
+            11,
+            13
+          ],
+          "chinese_cognate_note": "Related to '見' (to see)."
+        },
+        {
+          "word": "す",
+          "reading": "す",
+          "meaning": "auxiliary (causative/polite)",
+          "span": [
+            13,
+            14
+          ],
+          "chinese_cognate_note": null
+        },
+        {
+          "word": "とも",
+          "reading": "とも",
+          "meaning": "even if / although",
+          "span": [
+            14,
+            16
+          ],
+          "chinese_cognate_note": null
+        },
+        {
+          "word": "か",
+          "reading": "か",
+          "meaning": "scent / fragrance",
+          "span": [
+            16,
+            17
+          ],
+          "chinese_cognate_note": "Written as '香'."
+        },
+        {
+          "word": "を",
+          "reading": "を",
+          "meaning": "object marker",
+          "span": [
+            17,
+            18
+          ],
+          "chinese_cognate_note": null
+        },
+        {
+          "word": "たに",
+          "reading": "たに",
+          "meaning": "at least / even",
+          "span": [
+            18,
+            20
+          ],
+          "chinese_cognate_note": null
+        },
+        {
+          "word": "ぬすめ",
+          "reading": "ぬすめ",
+          "meaning": "steal (imperative)",
+          "span": [
+            20,
+            23
+          ],
+          "chinese_cognate_note": "Written as '盗め'."
+        },
+        {
+          "word": "春",
+          "reading": "はる",
+          "meaning": "spring",
+          "span": [
+            23,
+            24
+          ],
+          "chinese_cognate_note": null
+        },
+        {
+          "word": "の",
+          "reading": "の",
+          "meaning": "of",
+          "span": [
+            24,
+            25
+          ],
+          "chinese_cognate_note": null
+        },
+        {
+          "word": "山かせ",
+          "reading": "やまかぜ",
+          "meaning": "mountain wind",
+          "span": [
+            25,
+            28
+          ],
+          "chinese_cognate_note": "山风."
+        }
+      ],
+      "focus_highlight": [
+        10,
+        11
+      ]
+    },
+    {
+      "type": "comprehension_check",
+      "question": "In the third poem, what is the logical relationship established by 'komete' (こめて)?",
+      "answer": "It links the action of the mist 'enclosing' the colors to the subsequent thought about the wind stealing the scent. It shows that the 'enclosing' is the state in which the next action occurs.",
+      "hint": "Think about what the mist is doing to the 'hana no iro' (flower colors) before the poet speaks to the wind."
+    },
+    {
+      "type": "summary",
+      "content": "You've now mastered the 'Logical Semicolon'. Whenever you see a verb ending in 'te' (て), you know the poet is not finished with the thought. They are building a chain of actions or states. This is the primary way complex scenes are painted in Japanese poetry."
+    }
+  ],
+  "reference_card": {
+    "point": "Conjunctive Form (て - te)",
+    "one_liner": "A logical bridge that connects two verbs or states, acting like 'and then' or 'while'.",
+    "example": "出でて (ide-te) = Go out AND...",
+    "see_also": [
+      "particle_te"
+    ]
+  },
+  "forward_references": [
+    {
+      "point": "なり (nari)",
+      "note": "We saw this at the end of Poem 1; it's a descriptive auxiliary we will cover in Unit 3."
+    },
+    {
+      "point": "つつ (tsutsu)",
+      "note": "In Poem 2, this shows ongoing action. We will compare it to 'te' in later lessons."
+    },
+    {
+      "point": "とも (tomo)",
+      "note": "In Poem 3, this creates a 'though/even if' relationship, which is a more complex version of the logical links we are learning now."
+    }
+  ]
+}

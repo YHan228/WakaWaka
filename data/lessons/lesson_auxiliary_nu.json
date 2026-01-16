@@ -1,0 +1,583 @@
+{
+  "lesson_id": "lesson_auxiliary_nu",
+  "lesson_title": "The Logic of the 'Nu' Switch: Completion vs. Negation",
+  "lesson_summary": "In this lesson, we decode the auxiliary ぬ (nu). Depending on the 'base' it attaches to, it acts either as a 'Completion' marker (it happened!) or a 'Negative' marker (it didn't!).",
+  "grammar_point": "auxiliary_nu",
+  "grammar_explanation": {
+    "concept": "The auxiliary ぬ (nu) is a 'polymorphic' operator. Its meaning changes based on the 'base' (conjugation) of the verb it follows. 1) Perfective: Indicates an action is fully completed (like 'has done'). 2) Negative: Indicates an action does not happen (like 'does not').",
+    "formation": "Perfective: [Ren'youkei (I-sound base)] + ぬ. Negative: [Mizenkei (A-sound base)] + ぬ.",
+    "variations": [
+      "ぬる (nuru) - Attributive form (Rentaikei) of the Perfective",
+      "ね (ne) - Realized form (Izenkei) of the Perfective",
+      "ぬ (nu) - Attributive form (Rentaikei) of the Negative 'zu'"
+    ],
+    "common_confusions": [
+      "Perfective ぬ vs. Negative ぬ: Check the vowel sound of the verb immediately preceding it. 'A' sound = Negative; 'I' sound = Perfective."
+    ]
+  },
+  "teaching_sequence": [
+    {
+      "type": "introduction",
+      "content": "In previous units, we looked at how verbs describe actions. But how do we say an action is *finished* or that it *isn't happening at all*? In Classical Japanese, the syllable ぬ (nu) handles both, acting like a logical switch. To a Chinese speaker, this is like distinguishing between '了' (completion) and '不' (negation) based purely on the 'plug' used to connect the word."
+    },
+    {
+      "type": "poem_presentation",
+      "poem_id": "ogura100_9da8649ab2efb04b",
+      "display": {
+        "text_with_furigana": "<ruby>筑波嶺<rt>つくばね</rt></ruby>の<ruby>峰<rt>みね</rt></ruby>より<ruby>落<rt>お</rt></ruby>つるみなの<ruby>川<rt>かわ</rt></ruby><ruby>恋<rt>こい</rt></ruby>ぞつもりて<ruby>淵<rt>ふち</rt></ruby>となり<ruby>ぬる<rt>ぬる</rt></ruby>",
+        "romaji": "tsukubane no, mine yori otsuru, mina no kawa, koi zo tsumorite, fuchi to narinuru",
+        "translation": "Like the Mina River that falls from the peaks of Mount Tsukuba, my love has accumulated and [finally] become a deep pool."
+      },
+      "vocabulary": [
+        {
+          "word": "筑波嶺",
+          "reading": "つくばね",
+          "meaning": "Mt. Tsukuba",
+          "span": [
+            0,
+            3
+          ],
+          "chinese_cognate_note": "筑波 (Tsukuba) + 嶺 (peak/mountain ridge)"
+        },
+        {
+          "word": "の",
+          "reading": "の",
+          "meaning": "of (possessive particle)",
+          "span": [
+            3,
+            4
+          ],
+          "chinese_cognate_note": null
+        },
+        {
+          "word": "峰",
+          "reading": "みね",
+          "meaning": "peak/summit",
+          "span": [
+            4,
+            5
+          ],
+          "chinese_cognate_note": "Same meaning as Chinese 峰"
+        },
+        {
+          "word": "より",
+          "reading": "より",
+          "meaning": "from (starting point particle)",
+          "span": [
+            5,
+            7
+          ],
+          "chinese_cognate_note": null
+        },
+        {
+          "word": "落つる",
+          "reading": "おつる",
+          "meaning": "to fall",
+          "span": [
+            7,
+            10
+          ],
+          "chinese_cognate_note": "Cognate with 落 (to fall)"
+        },
+        {
+          "word": "みなの川",
+          "reading": "みなのかわ",
+          "meaning": "Mina River",
+          "span": [
+            10,
+            14
+          ],
+          "chinese_cognate_note": "川 means river in both languages"
+        },
+        {
+          "word": "恋",
+          "reading": "こい",
+          "meaning": "love/romance",
+          "span": [
+            14,
+            15
+          ],
+          "chinese_cognate_note": "Cognate with 恋"
+        },
+        {
+          "word": "ぞ",
+          "reading": "ぞ",
+          "meaning": "emphasis particle",
+          "span": [
+            15,
+            16
+          ],
+          "chinese_cognate_note": null
+        },
+        {
+          "word": "つもり",
+          "reading": "つもり",
+          "meaning": "to accumulate/pile up",
+          "span": [
+            16,
+            19
+          ],
+          "chinese_cognate_note": null
+        },
+        {
+          "word": "て",
+          "reading": "て",
+          "meaning": "and (linking particle)",
+          "span": [
+            19,
+            20
+          ],
+          "chinese_cognate_note": null
+        },
+        {
+          "word": "淵",
+          "reading": "ふち",
+          "meaning": "deep pool/abyss",
+          "span": [
+            20,
+            21
+          ],
+          "chinese_cognate_note": "Same meaning as Chinese 渊"
+        },
+        {
+          "word": "と",
+          "reading": "と",
+          "meaning": "into/as (resultative particle)",
+          "span": [
+            21,
+            22
+          ],
+          "chinese_cognate_note": null
+        },
+        {
+          "word": "なり",
+          "reading": "なり",
+          "meaning": "to become",
+          "span": [
+            22,
+            24
+          ],
+          "chinese_cognate_note": "Cognate with 成 (to become)"
+        },
+        {
+          "word": "ぬる",
+          "reading": "ぬる",
+          "meaning": "has [completed action]",
+          "span": [
+            24,
+            26
+          ],
+          "chinese_cognate_note": "Functions like the Chinese aspect marker 了"
+        }
+      ],
+      "focus_highlight": [
+        24,
+        26
+      ]
+    },
+    {
+      "type": "grammar_spotlight",
+      "content": "Look at the end of the poem: **なりぬる (narinuru)**. \n\n1. **なり (nari)** is the 'Ren'youkei' (Continuative form) of 'to become'. It ends in an **'i'** sound.\n2. **ぬる (nuru)** is the 'Rentaikei' (Attributive form) of the auxiliary **ぬ (nu)**.\n\nBecause it follows an **'i'** sound, this ぬ means **Completion**. The love didn't just 'become' a pool; it *has finished becoming* a pool. \n\n*Logic Check:* Why is it 'nuru' and not 'nu'? Because of the particle **ぞ (zo)** earlier in the line, which triggers the 'Kakari-musubi' rule, forcing the final verb into the Rentaikei form.",
+      "evidence": "See the poem above."
+    },
+    {
+      "type": "poem_presentation",
+      "poem_id": "lapis_ae2672d6f690a454",
+      "display": {
+        "text_with_furigana": "けふのみと<ruby>春<rt>はる</rt></ruby>を<ruby>おもは<rt>おもは</rt></ruby>ぬ<ruby>時<rt>とき</rt></ruby>たにも<ruby>立<rt>た</rt></ruby>つことやすき<ruby>花<rt>はな</rt></ruby>のかけかは",
+        "romaji": "kefu nomi to, haru o omowanu, toki tani mo, tatsu koto yasuki, hana no kake ka wa",
+        "translation": "Even at a time when I do not think of spring as being only for today, is it easy to pass by the reflection of the flowers?"
+      },
+      "vocabulary": [
+        {
+          "word": "けふ",
+          "reading": "きょう",
+          "meaning": "today",
+          "span": [
+            0,
+            2
+          ],
+          "chinese_cognate_note": null
+        },
+        {
+          "word": "のみ",
+          "reading": "のみ",
+          "meaning": "only/just",
+          "span": [
+            2,
+            4
+          ],
+          "chinese_cognate_note": null
+        },
+        {
+          "word": "と",
+          "reading": "と",
+          "meaning": "that (quotative particle)",
+          "span": [
+            4,
+            5
+          ],
+          "chinese_cognate_note": null
+        },
+        {
+          "word": "春",
+          "reading": "はる",
+          "meaning": "spring",
+          "span": [
+            5,
+            6
+          ],
+          "chinese_cognate_note": "Same as Chinese 春"
+        },
+        {
+          "word": "を",
+          "reading": "を",
+          "meaning": "[object marker]",
+          "span": [
+            6,
+            7
+          ],
+          "chinese_cognate_note": null
+        },
+        {
+          "word": "おもは",
+          "reading": "おもわ",
+          "meaning": "to think (Mizenkei base)",
+          "span": [
+            7,
+            10
+          ],
+          "chinese_cognate_note": "Cognate with 思 (to think)"
+        },
+        {
+          "word": "ぬ",
+          "reading": "ぬ",
+          "meaning": "not (negative auxiliary)",
+          "span": [
+            10,
+            11
+          ],
+          "chinese_cognate_note": null
+        },
+        {
+          "word": "時",
+          "reading": "とき",
+          "meaning": "time/when",
+          "span": [
+            11,
+            12
+          ],
+          "chinese_cognate_note": "Same as Chinese 时"
+        },
+        {
+          "word": "たに",
+          "reading": "たに",
+          "meaning": "even/at least",
+          "span": [
+            12,
+            14
+          ],
+          "chinese_cognate_note": null
+        },
+        {
+          "word": "も",
+          "reading": "も",
+          "meaning": "also/even",
+          "span": [
+            14,
+            15
+          ],
+          "chinese_cognate_note": null
+        },
+        {
+          "word": "立つ",
+          "reading": "たつ",
+          "meaning": "to pass (of time)",
+          "span": [
+            15,
+            17
+          ],
+          "chinese_cognate_note": null
+        },
+        {
+          "word": "こと",
+          "reading": "こと",
+          "meaning": "thing/fact",
+          "span": [
+            17,
+            19
+          ],
+          "chinese_cognate_note": null
+        },
+        {
+          "word": "やすき",
+          "reading": "やすき",
+          "meaning": "easy",
+          "span": [
+            19,
+            22
+          ],
+          "chinese_cognate_note": "Cognate with 易 (easy)"
+        },
+        {
+          "word": "花",
+          "reading": "はな",
+          "meaning": "flower",
+          "span": [
+            22,
+            23
+          ],
+          "chinese_cognate_note": "Same as Chinese 花"
+        },
+        {
+          "word": "の",
+          "reading": "の",
+          "meaning": "of (possessive)",
+          "span": [
+            23,
+            24
+          ],
+          "chinese_cognate_note": null
+        },
+        {
+          "word": "かけ",
+          "reading": "かげ",
+          "meaning": "reflection/shade",
+          "span": [
+            24,
+            26
+          ],
+          "chinese_cognate_note": null
+        },
+        {
+          "word": "か",
+          "reading": "か",
+          "meaning": "[question particle]",
+          "span": [
+            26,
+            27
+          ],
+          "chinese_cognate_note": null
+        },
+        {
+          "word": "は",
+          "reading": "は",
+          "meaning": "[topic/emphasis particle]",
+          "span": [
+            27,
+            28
+          ],
+          "chinese_cognate_note": null
+        }
+      ],
+      "focus_highlight": [
+        10,
+        11
+      ]
+    },
+    {
+      "type": "grammar_spotlight",
+      "content": "Now look at **おもはぬ (omowanu)**. \n\n1. **おもは (omowa)** is the 'Mizenkei' (Unrealized form) of 'to think'. It ends in an **'a'** sound.\n2. **ぬ (nu)** follows it.\n\nBecause it follows an **'a'** sound, this ぬ means **Negation**. It translates to 'do *not* think'. \n\n*Data Analogy:* \n- `Verb_End_I + nu` = `Action.status = COMPLETED` \n- `Verb_End_A + nu` = `Action.exists = FALSE`",
+      "evidence": "See the poem above."
+    },
+    {
+      "type": "poem_presentation",
+      "poem_id": "lapis_a5601eb3dbd902e2",
+      "display": {
+        "text_with_furigana": "<ruby>あきかせ<rt>あきかせ</rt></ruby>に<ruby>あふた<rt>あふた</rt></ruby>の<ruby>み<rt>み</rt></ruby>こそかなしけれわか<ruby>身<rt>み</rt></ruby>むなしくなり<ruby>ぬ<rt>ぬ</rt></ruby>と<ruby>思<rt>おも</rt></ruby>へは",
+        "romaji": "akikaze ni, afuta no mi koso, kanashikere, waga mi munashiku, narinu to omoe ba",
+        "translation": "It is truly sad to be a person who has met the autumn wind, when I think that my body has become empty."
+      },
+      "vocabulary": [
+        {
+          "word": "あきかせ",
+          "reading": "あきかぜ",
+          "meaning": "autumn wind",
+          "span": [
+            0,
+            4
+          ],
+          "chinese_cognate_note": "秋 (autumn) + 風 (wind)"
+        },
+        {
+          "word": "に",
+          "reading": "に",
+          "meaning": "by/in (particle)",
+          "span": [
+            4,
+            5
+          ],
+          "chinese_cognate_note": null
+        },
+        {
+          "word": "あふた",
+          "reading": "あふた",
+          "meaning": "meeting/one who meets",
+          "span": [
+            5,
+            8
+          ],
+          "chinese_cognate_note": null
+        },
+        {
+          "word": "の",
+          "reading": "の",
+          "meaning": "of (possessive)",
+          "span": [
+            8,
+            9
+          ],
+          "chinese_cognate_note": null
+        },
+        {
+          "word": "み",
+          "reading": "み",
+          "meaning": "person/self",
+          "span": [
+            9,
+            10
+          ],
+          "chinese_cognate_note": null
+        },
+        {
+          "word": "こそ",
+          "reading": "こそ",
+          "meaning": "emphasis particle",
+          "span": [
+            10,
+            12
+          ],
+          "chinese_cognate_note": null
+        },
+        {
+          "word": "かなしけれ",
+          "reading": "かなしけれ",
+          "meaning": "is sad (emphasized form)",
+          "span": [
+            12,
+            17
+          ],
+          "chinese_cognate_note": null
+        },
+        {
+          "word": "わか",
+          "reading": "わが",
+          "meaning": "my",
+          "span": [
+            17,
+            19
+          ],
+          "chinese_cognate_note": null
+        },
+        {
+          "word": "身",
+          "reading": "み",
+          "meaning": "body/self",
+          "span": [
+            19,
+            20
+          ],
+          "chinese_cognate_note": "Same as Chinese 身"
+        },
+        {
+          "word": "むなしく",
+          "reading": "むなしく",
+          "meaning": "empty/vainly",
+          "span": [
+            20,
+            24
+          ],
+          "chinese_cognate_note": "Cognate with 空 (empty)"
+        },
+        {
+          "word": "なり",
+          "reading": "なり",
+          "meaning": "to become (Ren'youkei base)",
+          "span": [
+            24,
+            26
+          ],
+          "chinese_cognate_note": null
+        },
+        {
+          "word": "ぬ",
+          "reading": "ぬ",
+          "meaning": "has [completed action]",
+          "span": [
+            26,
+            27
+          ],
+          "chinese_cognate_note": null
+        },
+        {
+          "word": "と",
+          "reading": "と",
+          "meaning": "that (quotative particle)",
+          "span": [
+            27,
+            28
+          ],
+          "chinese_cognate_note": null
+        },
+        {
+          "word": "思へ",
+          "reading": "おもえ",
+          "meaning": "to think",
+          "span": [
+            28,
+            30
+          ],
+          "chinese_cognate_note": null
+        },
+        {
+          "word": "は",
+          "reading": "は",
+          "meaning": "since/when (particle)",
+          "span": [
+            30,
+            31
+          ],
+          "chinese_cognate_note": null
+        }
+      ],
+      "focus_highlight": [
+        26,
+        27
+      ]
+    },
+    {
+      "type": "contrast_example",
+      "content": "Let's compare the two 'nu' forms in the wild:\n\n1. **なりぬ (nari-nu)**: 'nari' ends in **-i**. Result: **Has become** (Perfective).\n2. **ならぬ (nara-nu)**: 'nara' ends in **-a**. Result: **Does not become** (Negative).\n\nIn Poem 3, we see **なりぬ (narinu)**. The poet is lamenting that their body *has already* become empty/vain."
+    },
+    {
+      "type": "comprehension_check",
+      "question": "In the phrase '花咲かぬ' (hana saka-nu), where 'saka' is the Mizenkei (A-base) of 'to bloom', what does the phrase mean?",
+      "answer": "The flowers do not bloom.",
+      "hint": "Check the vowel sound before 'nu'. Is it 'a' or 'i'?"
+    },
+    {
+      "type": "summary",
+      "content": "You've mastered the 'Nu' Switch! Remember: \n- **A + ぬ** = Negative (Not)\n- **I + ぬ** = Perfective (Done)\n\nThis distinction is vital because the same character ぬ can completely flip the meaning of a sentence from 'it happened' to 'it didn't happen'."
+    }
+  ],
+  "reference_card": {
+    "point": "Auxiliary ぬ (nu)",
+    "one_liner": "A suffix that indicates completion (after I-sound) or negation (after A-sound).",
+    "example": "なりぬ (nari-nu) = Has become; ならぬ (nara-nu) = Does not become.",
+    "see_also": [
+      "auxiliary_zu",
+      "conjugation_mizenkei",
+      "conjugation_renyoukei"
+    ]
+  },
+  "forward_references": [
+    {
+      "point": "かなしけれ (kanashikere)",
+      "note": "This is the Iznekei form of an adjective, triggered by 'koso'. We will study this 'Kakari-musubi' pattern in Unit 7."
+    },
+    {
+      "point": "思へは (omoe-ba)",
+      "note": "The combination of the Izenkei base + 'ba' creates a 'since' or 'when' logic, which we will cover in the next unit."
+    }
+  ]
+}

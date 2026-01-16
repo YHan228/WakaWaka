@@ -1,0 +1,378 @@
+{
+  "lesson_title": "The 'Unrealized' Base: Introduction to Mizenkei (未然形)",
+  "lesson_summary": "In this lesson, we introduce the Mizenkei (未然形), a specific verb form used for actions that have not yet occurred, such as negation ('not doing') or volition ('will do').",
+  "grammar_explanation": {
+    "concept": "In Classical Japanese, verbs change their ending (conjugate) depending on what follows them. The Mizenkei (未然形) is the 'Unrealized Base.' The name comes from the Kanji 未 (not yet) and 然 (so/happened). It acts as a logic gate: if you want to attach a word meaning 'not' or 'will,' the verb must first switch into this 'pending' state.",
+    "formation": "For many verbs, the Mizenkei is formed by changing the final vowel to an 'a' sound (e.g., 'aw-u' becomes 'aw-a'). For irregular verbs like 'to come' (kuru), it changes to 'ko'.",
+    "variations": [
+      "Used with 'zu' or 'de' for negation (Not doing)",
+      "Used with 'mu' for volition or future intent (Will do)"
+    ],
+    "common_confusions": [
+      "Do not confuse with the Rentaikei (Unit 3), which is used to modify nouns. Mizenkei cannot stand alone or modify nouns; it only exists to 'glue' to specific auxiliaries."
+    ]
+  },
+  "teaching_sequence": [
+    {
+      "type": "introduction",
+      "content": "You have already mastered how to link nouns with particles and how to use the Rentaikei to describe things. Now, we move into the realm of the 'Unrealized.' In Chinese, you might use '不' (bù) or '将' (jiāng) before a verb. In Classical Japanese, the verb itself must transform into the **Mizenkei (未然形)** before these logical modifiers can be attached. Think of it as a 'pre-execution' state in programming."
+    },
+    {
+      "type": "poem_presentation",
+      "poem_id": "ogura100_c90a499f0a279460",
+      "display": {
+        "text_with_furigana": "<ruby>難波潟<rt>なにわがた</rt></ruby><ruby>短<rt>みじか</rt></ruby>き<ruby>蘆<rt>あし</rt></ruby>のふしの<ruby>間<rt>ま</rt></ruby>も<ruby>逢<rt>あ</rt></ruby>はでこの<ruby>世<rt>よ</rt></ruby>を<ruby>過<rt>す</rt></ruby>ぐしてよとや",
+        "romaji": "nanihagata mijikaki ashi no fushi no ma mo awade konoyo o sugushite yo to ya",
+        "translation": "Even for a time as short as the nodes of a reed in Naniwa Lagoon, you tell me to pass through this life without meeting."
+      },
+      "vocabulary": [
+        {
+          "word": "難波潟",
+          "reading": "なにはがた",
+          "meaning": "Naniwa Lagoon (Osaka Bay)",
+          "chinese_cognate_note": "難波 is a place name; 潟 means lagoon/tidal flat."
+        },
+        {
+          "word": "短き",
+          "reading": "みじかき",
+          "meaning": "short",
+          "chinese_cognate_note": "Same as Chinese '短'."
+        },
+        {
+          "word": "蘆",
+          "reading": "あし",
+          "meaning": "reed, rush",
+          "chinese_cognate_note": "Same as Chinese '蘆'."
+        },
+        {
+          "word": "の",
+          "reading": "の",
+          "meaning": "of (possessive particle)"
+        },
+        {
+          "word": "ふし",
+          "reading": "ふし",
+          "meaning": "node (of a plant)",
+          "chinese_cognate_note": "Equivalent to Chinese '節'."
+        },
+        {
+          "word": "の",
+          "reading": "の",
+          "meaning": "of (possessive particle)"
+        },
+        {
+          "word": "間",
+          "reading": "ま",
+          "meaning": "interval, space",
+          "chinese_cognate_note": "Same as Chinese '間'."
+        },
+        {
+          "word": "も",
+          "reading": "も",
+          "meaning": "even, also"
+        },
+        {
+          "word": "逢は",
+          "reading": "あは",
+          "meaning": "to meet (Mizenkei form)",
+          "chinese_cognate_note": "Same as Chinese '逢' (to meet/encounter)."
+        },
+        {
+          "word": "で",
+          "reading": "で",
+          "meaning": "without (negative connective)"
+        },
+        {
+          "word": "この",
+          "reading": "この",
+          "meaning": "this"
+        },
+        {
+          "word": "世",
+          "reading": "よ",
+          "meaning": "world, life",
+          "chinese_cognate_note": "Same as Chinese '世'."
+        },
+        {
+          "word": "を",
+          "reading": "を",
+          "meaning": "object marker"
+        },
+        {
+          "word": "過ぐし",
+          "reading": "すぐし",
+          "meaning": "to pass, spend time",
+          "chinese_cognate_note": "Same as Chinese '過'."
+        }
+      ],
+      "focus_highlight": [
+        12,
+        14
+      ]
+    },
+    {
+      "type": "grammar_spotlight",
+      "content": "Look at the word **逢は (awa)**. The dictionary form (the way it ends a sentence) is *au*. However, because it is followed by **で (de)**, which means 'without doing,' the verb must switch to its **Mizenkei** form: *awa*. \n\nLogic: [Verb: 逢 (Meet)] + [Base: は (Unrealized)] + [Particle: で (Negative)] = 'Without meeting.' \n\nThis 'a' sound ending is the hallmark of the Mizenkei for most verbs."
+    },
+    {
+      "type": "poem_presentation",
+      "poem_id": "lapis_5b3666bea72e5572",
+      "display": {
+        "text_with_furigana": "<ruby>今<rt>いま</rt></ruby>こむと<ruby>いひ<rt>いひ</rt></ruby>てわかれし<ruby>朝<rt>あさ</rt></ruby>より<ruby>思<rt>おも</rt></ruby>ひくらしの<ruby>ね<rt>ね</rt></ruby>をのみぞなく",
+        "romaji": "imakomu to ihite wakareshi asa yori omoi kurashi no ne o nomiso naku",
+        "translation": "Since the morning we parted, when you said 'I will come soon,' I have spent my days doing nothing but weeping."
+      },
+      "vocabulary": [
+        {
+          "word": "今",
+          "reading": "いま",
+          "meaning": "now, soon",
+          "chinese_cognate_note": "Same as Chinese '今'."
+        },
+        {
+          "word": "こ",
+          "reading": "こ",
+          "meaning": "to come (Mizenkei form)",
+          "chinese_cognate_note": "Equivalent to Chinese '来'."
+        },
+        {
+          "word": "む",
+          "reading": "む",
+          "meaning": "will, shall (volitional auxiliary)"
+        },
+        {
+          "word": "と",
+          "reading": "と",
+          "meaning": "quotative particle ('said that...')"
+        },
+        {
+          "word": "いひ",
+          "reading": "いひ",
+          "meaning": "to say",
+          "chinese_cognate_note": "Equivalent to Chinese '言'."
+        },
+        {
+          "word": "て",
+          "reading": "て",
+          "meaning": "and (conjunctive particle)"
+        },
+        {
+          "word": "わかれ",
+          "reading": "わかれ",
+          "meaning": "separation, parting",
+          "chinese_cognate_note": "Equivalent to Chinese '別'."
+        },
+        {
+          "word": "し",
+          "reading": "し",
+          "meaning": "past tense marker"
+        },
+        {
+          "word": "朝",
+          "reading": "あさ",
+          "meaning": "morning",
+          "chinese_cognate_note": "Same as Chinese '朝'."
+        },
+        {
+          "word": "より",
+          "reading": "より",
+          "meaning": "from (source particle)"
+        },
+        {
+          "word": "思ひ",
+          "reading": "おもひ",
+          "meaning": "to think, feel",
+          "chinese_cognate_note": "Equivalent to Chinese '思'."
+        },
+        {
+          "word": "くらし",
+          "reading": "くらし",
+          "meaning": "living, life"
+        },
+        {
+          "word": "の",
+          "reading": "の",
+          "meaning": "of (possessive particle)"
+        },
+        {
+          "word": "ね",
+          "reading": "ね",
+          "meaning": "sound, voice",
+          "chinese_cognate_note": "Equivalent to Chinese '音'."
+        },
+        {
+          "word": "を",
+          "reading": "を",
+          "meaning": "object marker"
+        },
+        {
+          "word": "のみ",
+          "reading": "のみ",
+          "meaning": "only"
+        },
+        {
+          "word": "ぞ",
+          "reading": "ぞ",
+          "meaning": "emphasis particle"
+        },
+        {
+          "word": "なく",
+          "reading": "なく",
+          "meaning": "to lack, to be without",
+          "chinese_cognate_note": "Equivalent to Chinese '無'."
+        }
+      ],
+      "focus_highlight": [
+        1,
+        3
+      ]
+    },
+    {
+      "type": "grammar_spotlight",
+      "content": "In the phrase **こむ (komu)**, we see the Mizenkei used for volition (future intent). The verb 'to come' is *kuru*. Its Mizenkei is the irregular **こ (ko)**. \n\nLogic: [Verb: 来 (Come)] + [Base: こ (Unrealized)] + [Auxiliary: む (Will)] = 'Will come.' \n\nBecause the 'coming' hasn't happened yet, the Mizenkei is required."
+    },
+    {
+      "type": "poem_presentation",
+      "poem_id": "lapis_32b4192857a66839",
+      "display": {
+        "text_with_furigana": "をしめとも<ruby>つね<rt>つね</rt></ruby>ならぬ<ruby>よ<rt>よ</rt></ruby>の<ruby>はな<rt>はな</rt></ruby>なれはいまはこの<ruby>み<rt>み</rt></ruby>をにしにもとめむ",
+        "romaji": "oshime tomo tsune naranu yo no hana nare wa ima wa kono mi o nishi ni motomemu",
+        "translation": "Though I regret it, the flowers of this world are not constant; so now I shall seek my own self in the West."
+      },
+      "vocabulary": [
+        {
+          "word": "をしめ",
+          "reading": "をしめ",
+          "meaning": "to regret, to begrudge",
+          "chinese_cognate_note": "Equivalent to Chinese '惜'."
+        },
+        {
+          "word": "とも",
+          "reading": "とも",
+          "meaning": "even if"
+        },
+        {
+          "word": "つね",
+          "reading": "つね",
+          "meaning": "constant, usual",
+          "chinese_cognate_note": "Equivalent to Chinese '常'."
+        },
+        {
+          "word": "なら",
+          "reading": "なら",
+          "meaning": "to be (Mizenkei of 'nari')"
+        },
+        {
+          "word": "ぬ",
+          "reading": "ぬ",
+          "meaning": "not (negative auxiliary)"
+        },
+        {
+          "word": "よ",
+          "reading": "よ",
+          "meaning": "world",
+          "chinese_cognate_note": "Equivalent to Chinese '世'."
+        },
+        {
+          "word": "の",
+          "reading": "の",
+          "meaning": "of"
+        },
+        {
+          "word": "はな",
+          "reading": "はな",
+          "meaning": "flower",
+          "chinese_cognate_note": "Equivalent to Chinese '花'."
+        },
+        {
+          "word": "なれ",
+          "reading": "なれ",
+          "meaning": "familiarity, custom"
+        },
+        {
+          "word": "ば",
+          "reading": "ば",
+          "meaning": "since, because"
+        },
+        {
+          "word": "いま",
+          "reading": "いま",
+          "meaning": "now"
+        },
+        {
+          "word": "は",
+          "reading": "は",
+          "meaning": "topic marker"
+        },
+        {
+          "word": "この",
+          "reading": "この",
+          "meaning": "this"
+        },
+        {
+          "word": "み",
+          "reading": "み",
+          "meaning": "body, self",
+          "chinese_cognate_note": "Equivalent to Chinese '身'."
+        },
+        {
+          "word": "を",
+          "reading": "を",
+          "meaning": "object marker"
+        },
+        {
+          "word": "にし",
+          "reading": "にし",
+          "meaning": "West",
+          "chinese_cognate_note": "Equivalent to Chinese '西'."
+        },
+        {
+          "word": "に",
+          "reading": "に",
+          "meaning": "to/at"
+        },
+        {
+          "word": "もとめ",
+          "reading": "もとめ",
+          "meaning": "seek, request",
+          "chinese_cognate_note": "Equivalent to Chinese '求'."
+        },
+        {
+          "word": "む",
+          "reading": "む",
+          "meaning": "will (volitional auxiliary)"
+        }
+      ],
+      "focus_highlight": [
+        7,
+        9
+      ]
+    },
+    {
+      "type": "comprehension_check",
+      "question": "In the phrase 'ならぬ' (naranu) from Poem 3, which part is the Mizenkei base, and what does the whole phrase mean logically?",
+      "answer": "The Mizenkei base is 'なら' (nara), derived from the copula 'nari' (to be). Combined with the negative auxiliary 'ぬ' (nu), it means 'is not' or 'not being.'",
+      "hint": "Think back to Unit 3 where we learned 'nari' means 'is'. How does it change before 'not'?"
+    }
+  ],
+  "reference_card": {
+    "point": "Mizenkei (未然形)",
+    "one_liner": "The 'Unrealized Base' used to attach negative (not) or volitional (will) meanings to a verb.",
+    "example": "逢は + で (awa + de) = Without meeting",
+    "see_also": [
+      "conjugation_rentaikei",
+      "auxiliary_zu",
+      "auxiliary_mu"
+    ]
+  },
+  "forward_references": [
+    {
+      "point": "auxiliary_mu",
+      "note": "We will take a closer look at the volitional 'mu' (will/shall) in Lesson 4.3."
+    },
+    {
+      "point": "auxiliary_zu",
+      "note": "The negative auxiliary 'zu' (and its form 'nu') will be the focus of Lesson 4.2."
+    }
+  ]
+}

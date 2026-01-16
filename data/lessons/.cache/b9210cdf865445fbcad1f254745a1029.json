@@ -1,0 +1,224 @@
+{
+  "lesson_title": "The Poetic Pause: Mastering the Exclamatory 'Ya' (や)",
+  "lesson_summary": "In this final unit, we move beyond logical syntax to poetic texture. We explore 'ya' (や) not as a question marker, but as a 'cutting word' (kireji) that creates emotional emphasis and structural pauses.",
+  "grammar_explanation": {
+    "concept": "While you previously learned 'ya' as a particle of doubt or rhetorical inquiry, in poetry it often functions as a 'Kireji' (切字) or 'cutting word.' It acts like a logical 'break' in a line of code, pausing the flow to highlight a specific image or emotion. For a Chinese speaker, think of it as the poetic '兮' (xī) or an emphatic '啊' (a) that isolates a concept for contemplation.",
+    "formation": "Attached directly to nouns or the end of a clause to create a 'cut' in the poem's rhythm.",
+    "variations": [
+      "ya wa (やは) - Combined emphasis",
+      "ya to (やと) - Exclamatory thought followed by a quotation marker"
+    ],
+    "common_confusions": [
+      "Rhetorical 'ya' vs. Exclamatory 'ya': Rhetorical 'ya' expects a logical answer or reversal; Exclamatory 'ya' simply 'zooms in' on an image."
+    ]
+  },
+  "teaching_sequence": [
+    {
+      "type": "introduction",
+      "content": "You have mastered the 'grammatical glue' that holds Japanese sentences together. Now, we look at the 'punctuation of the heart.' In classical poetry, certain particles don't just link words—they create space. The particle 'ya' (や) is the most famous of these 'cutting words.' It tells the reader: 'Stop here. Look at this image. Feel this emotion.'"
+    },
+    {
+      "type": "poem_presentation",
+      "poem_id": "lapis_ea799cfe78d5a735",
+      "display": {
+        "text_with_furigana": "<ruby>水上<rt>みなかみ</rt></ruby>や<ruby>絶<rt>た</rt></ruby>え<ruby>絶<rt>だ</rt></ruby>え<ruby>凍<rt>こお</rt></ruby>る<ruby>岩間<rt>いわま</rt></ruby>より<ruby>清滝川<rt>きよたきがわ</rt></ruby>に<ruby>残<rt>のこ</rt></ruby>る<ruby>白波<rt>しらなみ</rt></ruby>",
+        "romaji": "minakami ya tae tae koho ru iwa ma yori kiyo taki kawa ni nokoru shiranami",
+        "translation": "The headwaters! From between the rocks where the ice is fitfully freezing, white waves remain on the Clear Cascade River."
+      },
+      "vocabulary": [
+        {
+          "word": "水上",
+          "reading": "みなかみ",
+          "meaning": "headwaters / source of a river",
+          "chinese_cognate_note": "Obvious from 'water' + 'above/up'"
+        },
+        {
+          "word": "や",
+          "reading": "や",
+          "meaning": "exclamatory particle (kireji)",
+          "chinese_cognate_note": "Similar to poetic 兮"
+        },
+        {
+          "word": "絶え絶え",
+          "reading": "たえたえ",
+          "meaning": "intermittently / faintly",
+          "chinese_cognate_note": "Related to 'extinguish/sever' (绝)"
+        },
+        {
+          "word": "凍る",
+          "reading": "こほる",
+          "meaning": "to freeze",
+          "chinese_cognate_note": "Cognate with 冻"
+        },
+        {
+          "word": "岩間",
+          "reading": "いわま",
+          "meaning": "between rocks",
+          "chinese_cognate_note": "Obvious from 'rock' + 'between'"
+        },
+        {
+          "word": "より",
+          "reading": "より",
+          "meaning": "from (origin marker)",
+          "chinese_cognate_note": null
+        },
+        {
+          "word": "清滝川",
+          "reading": "きよたきがわ",
+          "meaning": "Kiyotaki River (Clear Waterfall River)",
+          "chinese_cognate_note": "Clear (清) + Waterfall (滝) + River (川)"
+        },
+        {
+          "word": "に",
+          "reading": "に",
+          "meaning": "at/in (location marker)",
+          "chinese_cognate_note": null
+        },
+        {
+          "word": "残る",
+          "reading": "のこる",
+          "meaning": "to remain",
+          "chinese_cognate_note": "Cognate with 残 (left over)"
+        },
+        {
+          "word": "白波",
+          "reading": "しらなみ",
+          "meaning": "white waves",
+          "chinese_cognate_note": "Obvious from 'white' + 'wave'"
+        }
+      ],
+      "focus_highlight": [
+        4,
+        5
+      ]
+    },
+    {
+      "type": "grammar_spotlight",
+      "content": "In this poem, 'ya' (や) follows 'Minakami' (Headwaters). It doesn't ask a question. Instead, it acts like a cinematic 'cut.' It establishes the setting—the source of the river—and forces the reader to pause before describing the movement of the water. This is the 'Spatial Cut.' It isolates the subject to give it grandeur."
+    },
+    {
+      "type": "poem_presentation",
+      "poem_id": "lapis_136a51b745fb5a8e",
+      "display": {
+        "text_with_furigana": "<ruby>鶯<rt>うぐいす</rt></ruby>の<ruby>笠<rt>かさ</rt></ruby>に<ruby>縫<rt>ぬ</rt></ruby>ふといふ<ruby>梅花<rt>ばいか</rt></ruby><ruby>折<rt>お</rt></ruby>りてかささむ<ruby>老<rt>お</rt></ruby>い<ruby>隠<rt>かく</rt></ruby>るやと",
+        "romaji": "uguisu no kasa ni nufu to iu baika orite kasasamu oi kakuru ya to",
+        "translation": "Picking the plum blossoms said to be sewn into the warbler's hat, I shall wear them—wondering, 'will they hide my old age?'"
+      },
+      "vocabulary": [
+        {
+          "word": "鶯",
+          "reading": "うぐいす",
+          "meaning": "Japanese bush warbler",
+          "chinese_cognate_note": "The bird '莺'"
+        },
+        {
+          "word": "の",
+          "reading": "の",
+          "meaning": "possessive particle",
+          "chinese_cognate_note": null
+        },
+        {
+          "word": "笠",
+          "reading": "かさ",
+          "meaning": "traditional hat",
+          "chinese_cognate_note": "Same character as 'bamboo hat'"
+        },
+        {
+          "word": "に",
+          "reading": "に",
+          "meaning": "into/at (target marker)",
+          "chinese_cognate_note": null
+        },
+        {
+          "word": "縫ふ",
+          "reading": "ぬふ",
+          "meaning": "to sew",
+          "chinese_cognate_note": "Cognate with 缝"
+        },
+        {
+          "word": "と",
+          "reading": "と",
+          "meaning": "quotative particle",
+          "chinese_cognate_note": null
+        },
+        {
+          "word": "いふ",
+          "reading": "いふ",
+          "meaning": "to say/be called",
+          "chinese_cognate_note": "Cognate with 云/说"
+        },
+        {
+          "word": "梅花",
+          "reading": "ばいか",
+          "meaning": "plum blossom",
+          "chinese_cognate_note": "Identical to Chinese"
+        },
+        {
+          "word": "折りて",
+          "reading": "おりて",
+          "meaning": "picking and...",
+          "chinese_cognate_note": "折 (to break/pick)"
+        },
+        {
+          "word": "かささむ",
+          "reading": "かささむ",
+          "meaning": "will wear as a hat",
+          "chinese_cognate_note": null
+        },
+        {
+          "word": "老い",
+          "reading": "おい",
+          "meaning": "old age",
+          "chinese_cognate_note": "Cognate with 老"
+        },
+        {
+          "word": "隠る",
+          "reading": "かくる",
+          "meaning": "to hide",
+          "chinese_cognate_note": "Cognate with 隐"
+        },
+        {
+          "word": "や",
+          "reading": "や",
+          "meaning": "exclamatory/wondering particle",
+          "chinese_cognate_note": null
+        },
+        {
+          "word": "と",
+          "reading": "と",
+          "meaning": "quotative particle (marking the thought)",
+          "chinese_cognate_note": null
+        }
+      ],
+      "focus_highlight": [
+        23,
+        24
+      ]
+    },
+    {
+      "type": "grammar_spotlight",
+      "content": "Here, 'ya' is used within a thought (marked by 'to'). It expresses a hopeful, emotional exclamation: 'Will it hide my old age!?' It turns a simple statement into a moment of poignant reflection. Notice how 'ya' + 'to' (やと) functions like a 'thought bubble' in a comic, highlighting the speaker's internal yearning."
+    },
+    {
+      "type": "comprehension_check",
+      "question": "In Poem 3 (Minakami ya...), if we removed the 'ya', how would the logical relationship change for the reader?",
+      "answer": "The 'ya' creates a structural pause (kireji) that isolates 'the headwaters' as a standalone image of focus. Without it, 'minakami' would simply be a flat subject of the sentence, losing its emotional 'zoom-in' effect.",
+      "hint": "Think about the difference between 'The headwaters are...' and 'The headwaters! ...'"
+    }
+  ],
+  "reference_card": {
+    "point": "Kireji 'Ya' (や)",
+    "one_liner": "A poetic 'cutting word' used to create an emotional pause or highlight a specific image/concept.",
+    "example": "水上や (The headwaters!)",
+    "see_also": [
+      "particle_ya_doubt",
+      "kireji_kana"
+    ]
+  },
+  "forward_references": [
+    {
+      "point": "kireji_kana",
+      "note": "In the next lesson, we will look at 'kana', another cutting word often used at the very end of a poem to express deep emotion."
+    }
+  ]
+}

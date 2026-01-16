@@ -1,0 +1,388 @@
+{
+  "lesson_id": "lesson_auxiliary_da",
+  "lesson_title": "The Identifying Link: The Auxiliary/Particle な (na)",
+  "lesson_summary": "Building on the formal copula 'nari' (to be), we explore its 'adhesive' variant 'na' (な), which links nouns together or anchors emotional realizations at the end of a sentence.",
+  "grammar_point": "auxiliary_da",
+  "grammar_explanation": {
+    "concept": "The auxiliary/particle 'na' (な) acts as an 'Identifying Linker.' While 'no' (の) shows general possession, 'na' (な) asserts a closer, often inherent identity between two concepts. In programming terms, if 'nari' is an assignment (A = B), 'na' is like a type-definition or a property-binding (A_that_is_B).",
+    "formation": "It typically appears between two nouns (Noun + な + Noun) or at the end of a sentence following the question particle 'ka' (forming 'kana').",
+    "variations": [
+      "nari (conclusive/dictionary form)",
+      "naru (attributive form)",
+      "na (archaic/contracted attributive form)"
+    ],
+    "common_confusions": [
+      "vs. の (no): 'no' is the standard possessive (的); 'na' is archaic and specifically identifies the nature of the noun.",
+      "vs. に (ni): 'ni' marks a target or location; 'na' marks identity."
+    ]
+  },
+  "teaching_sequence": [
+    {
+      "type": "introduction",
+      "content": "In our previous lesson, we looked at 'nari' (なり), the classical way to say 'A is B.' However, classical Japanese often needs a more 'sticky' way to connect concepts without ending the sentence. This is where 'na' (な) comes in. For a Chinese speaker, you can think of this as a specialized version of '之' or '的' that doesn't just show possession, but defines what something *is*."
+    },
+    {
+      "type": "poem_presentation",
+      "poem_id": "lapis_dbe7a78b1649c675",
+      "display": {
+        "text_with_furigana": "<ruby>神<rt>かみ</rt></ruby><ruby>な<rt>な</rt></ruby><ruby>月<rt>づき</rt></ruby><ruby>時雨<rt>しぐれ</rt></ruby>もいまたふらなくに<ruby>かねて<rt>かねて</rt></ruby><ruby>うつろふ<rt>うつろふ</rt></ruby><ruby>神<rt>かみ</rt></ruby><ruby>な<rt>な</rt></ruby>ひの<ruby>もり<rt>もり</rt></ruby>",
+        "romaji": "kannazuki, shigure mo imada, furanaku ni, kanete utsurou, kanna hi no mori",
+        "translation": "In the Month of the Gods, though the winter rain has not yet fallen, the sacred grove of the gods has already begun to fade."
+      },
+      "vocabulary": [
+        {
+          "word": "神",
+          "reading": "かみ",
+          "meaning": "gods",
+          "span": [
+            0,
+            1
+          ],
+          "chinese_cognate_note": "Same as Chinese 神 (shén)"
+        },
+        {
+          "word": "な",
+          "reading": "な",
+          "meaning": "of / that is (identifying link)",
+          "span": [
+            1,
+            2
+          ],
+          "chinese_cognate_note": null
+        },
+        {
+          "word": "月",
+          "reading": "つき/づき",
+          "meaning": "month",
+          "span": [
+            2,
+            3
+          ],
+          "chinese_cognate_note": "Same as Chinese 月 (yuè)"
+        },
+        {
+          "word": "時雨",
+          "reading": "しぐれ",
+          "meaning": "late autumn/early winter rain",
+          "span": [
+            3,
+            5
+          ],
+          "chinese_cognate_note": null
+        },
+        {
+          "word": "も",
+          "reading": "も",
+          "meaning": "also/even",
+          "span": [
+            5,
+            6
+          ],
+          "chinese_cognate_note": null
+        },
+        {
+          "word": "いまだ",
+          "reading": "いまだ",
+          "meaning": "not yet",
+          "span": null,
+          "chinese_cognate_note": "Corresponds to 未 (wèi)"
+        },
+        {
+          "word": "ふら",
+          "reading": "ふら",
+          "meaning": "to fall (rain)",
+          "span": [
+            9,
+            11
+          ],
+          "chinese_cognate_note": null
+        },
+        {
+          "word": "なく",
+          "reading": "なく",
+          "meaning": "not (negative)",
+          "span": [
+            11,
+            13
+          ],
+          "chinese_cognate_note": null
+        },
+        {
+          "word": "に",
+          "reading": "に",
+          "meaning": "since / in the state of",
+          "span": [
+            13,
+            14
+          ],
+          "chinese_cognate_note": null
+        },
+        {
+          "word": "かねて",
+          "reading": "かねて",
+          "meaning": "previously / beforehand",
+          "span": [
+            14,
+            17
+          ],
+          "chinese_cognate_note": null
+        },
+        {
+          "word": "うつろふ",
+          "reading": "うつろふ",
+          "meaning": "to fade / to decay",
+          "span": [
+            17,
+            21
+          ],
+          "chinese_cognate_note": null
+        },
+        {
+          "word": "神な",
+          "reading": "かんな",
+          "meaning": "of the gods",
+          "span": [
+            21,
+            23
+          ],
+          "chinese_cognate_note": null
+        },
+        {
+          "word": "ひ",
+          "reading": "ひ",
+          "meaning": "sacred",
+          "span": [
+            23,
+            24
+          ],
+          "chinese_cognate_note": null
+        },
+        {
+          "word": "の",
+          "reading": "の",
+          "meaning": "of (possessive)",
+          "span": [
+            24,
+            25
+          ],
+          "chinese_cognate_note": null
+        },
+        {
+          "word": "もり",
+          "reading": "もり",
+          "meaning": "grove / forest",
+          "span": [
+            25,
+            27
+          ],
+          "chinese_cognate_note": null
+        }
+      ],
+      "focus_highlight": [
+        1,
+        2
+      ]
+    },
+    {
+      "type": "grammar_spotlight",
+      "content": "Look at the phrase <ruby>神<rt>かみ</rt></ruby>な<ruby>月<rt>づき</rt></ruby> (Kannazuki). This is the classical name for October. \n\nLogic: [神 God] + [な Link] + [月 Month]. \n\nIn Chinese, this is '神之月'. The 'na' identifies the month as belonging to or being characterized by the gods. It acts as an **attributive copula**, meaning it turns 'God' into a description for 'Month.' You see it again in '神なひ' (Kannahi), the sacred area of the gods.",
+      "evidence": "See the poem above."
+    },
+    {
+      "type": "poem_presentation",
+      "poem_id": "lapis_9398b4e23dae0a2e",
+      "display": {
+        "text_with_furigana": "<ruby>山里<rt>やまざと</rt></ruby>にひとりなかめておもふ<ruby>かな<rt>かな</rt></ruby><ruby>よ<rt>よ</rt></ruby>に<ruby>すむ<rt>すむ</rt></ruby><ruby>ひと<rt>ひと</rt></ruby>の<ruby>こころ<rt>こころ</rt></ruby><ruby>つよさ<rt>つよさ</rt></ruby>を",
+        "romaji": "yamazato ni, hitori nakamete, omou kana, yo ni sumu hito no, kokoro tsuyosa o",
+        "translation": "Gazing alone in the mountain village, I think—oh, the strength of the hearts of those who live in this world!"
+      },
+      "vocabulary": [
+        {
+          "word": "山里",
+          "reading": "やまざと",
+          "meaning": "mountain village",
+          "span": null,
+          "chinese_cognate_note": "Same as Chinese 山里 (shān lǐ)"
+        },
+        {
+          "word": "に",
+          "reading": "に",
+          "meaning": "in (location)",
+          "span": [
+            4,
+            5
+          ],
+          "chinese_cognate_note": null
+        },
+        {
+          "word": "ひとり",
+          "reading": "ひとり",
+          "meaning": "alone / one person",
+          "span": [
+            5,
+            8
+          ],
+          "chinese_cognate_note": null
+        },
+        {
+          "word": "なかめて",
+          "reading": "なかめて",
+          "meaning": "gazing",
+          "span": [
+            8,
+            12
+          ],
+          "chinese_cognate_note": null
+        },
+        {
+          "word": "おもふ",
+          "reading": "おもふ",
+          "meaning": "to think / to feel",
+          "span": [
+            12,
+            15
+          ],
+          "chinese_cognate_note": null
+        },
+        {
+          "word": "か",
+          "reading": "か",
+          "meaning": "question particle",
+          "span": [
+            15,
+            16
+          ],
+          "chinese_cognate_note": null
+        },
+        {
+          "word": "な",
+          "reading": "な",
+          "meaning": "exclamation / identifying link",
+          "span": [
+            16,
+            17
+          ],
+          "chinese_cognate_note": null
+        },
+        {
+          "word": "よ",
+          "reading": "よ",
+          "meaning": "world / society",
+          "span": [
+            17,
+            18
+          ],
+          "chinese_cognate_note": "Corresponds to 世 (shì)"
+        },
+        {
+          "word": "に",
+          "reading": "に",
+          "meaning": "in (location)",
+          "span": [
+            18,
+            19
+          ],
+          "chinese_cognate_note": null
+        },
+        {
+          "word": "すむ",
+          "reading": "すむ",
+          "meaning": "to reside / live",
+          "span": [
+            19,
+            21
+          ],
+          "chinese_cognate_note": null
+        },
+        {
+          "word": "ひと",
+          "reading": "ひと",
+          "meaning": "person",
+          "span": [
+            21,
+            23
+          ],
+          "chinese_cognate_note": "Corresponds to 人 (rén)"
+        },
+        {
+          "word": "の",
+          "reading": "の",
+          "meaning": "of (possessive)",
+          "span": [
+            23,
+            24
+          ],
+          "chinese_cognate_note": null
+        },
+        {
+          "word": "こころ",
+          "reading": "こころ",
+          "meaning": "heart / mind",
+          "span": [
+            24,
+            27
+          ],
+          "chinese_cognate_note": "Corresponds to 心 (xīn)"
+        },
+        {
+          "word": "つよさ",
+          "reading": "つよさ",
+          "meaning": "strength",
+          "span": [
+            27,
+            30
+          ],
+          "chinese_cognate_note": null
+        },
+        {
+          "word": "を",
+          "reading": "を",
+          "meaning": "object marker (here used for emphasis)",
+          "span": [
+            30,
+            31
+          ],
+          "chinese_cognate_note": null
+        }
+      ],
+      "focus_highlight": [
+        8,
+        9
+      ]
+    },
+    {
+      "type": "grammar_spotlight",
+      "content": "In this poem, 'na' appears in the combination **かな (kana)**. \n\n- **か (ka)**: A particle of doubt or questioning (like 吗 or 呢).\n- **な (na)**: Our identifying link.\n\nWhen combined at the end of a verb like 'omou' (to think), 'kana' creates an emotional exclamation. It's like saying: 'I wonder... [and it is so]!' The 'na' provides the 'is-ness' that grounds the emotion. In Chinese poetry, this is similar to ending a line with an emotional particle like '也' or '矣' to signal a realization.",
+      "evidence": "See the poem above."
+    },
+    {
+      "type": "comprehension_check",
+      "question": "In the phrase '神な月' (Kannazuki), what is the logical function of 'な' (na)?",
+      "answer": "It acts as a link that identifies the 'Month' (月) as being characterized by 'Gods' (神), similar to the Chinese '之' or '的' in an identifying sense.",
+      "hint": "Think about how it connects the two Kanji nouns."
+    },
+    {
+      "type": "summary",
+      "content": "We've seen 'na' (な) in two roles: \n1. **The Internal Link**: Connecting nouns to define their identity (神な月).\n2. **The Emotional Anchor**: Ending a thought with 'kana' to express a deep realization (おもふかな).\nIn both cases, 'na' is asserting a state of being or identity."
+    }
+  ],
+  "reference_card": {
+    "point": "な (na) - The Identifying Link",
+    "one_liner": "An auxiliary/particle used to link nouns by identity or to anchor emotional exclamations.",
+    "example": "神な月 (The month [that is] of the gods)",
+    "see_also": [
+      "auxiliary_nari",
+      "particle_no"
+    ]
+  },
+  "forward_references": [
+    {
+      "point": "なく (naku)",
+      "note": "In Poem 1, 'naku' is the negative auxiliary 'zu'. We will cover negation in Unit 4."
+    },
+    {
+      "point": "なかめて (nakamete)",
+      "note": "In Poem 3, this verb uses the 'te-form' for sequencing, which we touched on in Unit 2."
+    }
+  ]
+}

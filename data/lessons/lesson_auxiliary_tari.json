@@ -1,0 +1,554 @@
+{
+  "lesson_id": "lesson_auxiliary_tari",
+  "lesson_title": "The Resultative State: Auxiliary たり (tari)",
+  "lesson_summary": "In previous lessons, we explored 'nu' and 'tsu' to mark the completion of an action. Today, we introduce 'tari', which describes the state that remains after an action is finished—essentially 'Action + Existence'.",
+  "grammar_point": "auxiliary_tari",
+  "grammar_explanation": {
+    "concept": "The auxiliary たり (tari) indicates that an action has been completed and its result currently persists (Resultative/Perfective). Logically, it functions like a 'status flag' in programming: it doesn't just say the function ran; it says the variable is now in a specific state.",
+    "formation": "It attaches to the Ren'yōkei (Continuative Form). Etymologically, it is a contraction of the particle 'te' (linking) + 'ari' (to exist). Thus, 'V-te ari' → 'tari'.",
+    "variations": [
+      "たり (tari) - Conclusive (ends sentence)",
+      "たる (taru) - Attributive (modifies noun)",
+      "たれ (tare) - Realized (used with 'ba' for 'since/because')"
+    ],
+    "common_confusions": [
+      "vs. nu/tsu: 'nu' and 'tsu' focus on the moment of completion (the 'click'); 'tari' focuses on the state that follows (the 'on' light)."
+    ]
+  },
+  "teaching_sequence": [
+    {
+      "type": "introduction",
+      "content": "You have already mastered the 'Perfective' auxiliaries *nu* and *tsu*, which signal that an action is finished. However, classical Japanese often wants to emphasize the *result* of that action. Think of the difference between 'The door closed' (Action) and 'The door is closed' (State). In Classical Japanese, this 'State of Being' is handled by the auxiliary たり (*tari*). For a Chinese speaker, think of this as a more formal, structural version of the aspect marker '了' (le) or '着' (zhe) when they imply a resulting state."
+    },
+    {
+      "type": "poem_presentation",
+      "poem_id": "lapis_5a00ffed96c86e60",
+      "display": {
+        "text_with_furigana": "<ruby>ゆふくれ<rt>夕暮</rt></ruby>に<ruby>いのち<rt>命</rt></ruby><ruby>かけ<rt>懸</rt></ruby>たる<ruby>かけろふ<rt>蜉蝣</rt></ruby>の<ruby>あり<rt>有</rt></ruby>や<ruby>あらず<rt>不有</rt></ruby>や<ruby>とふ<rt>問</rt></ruby>も<ruby>はかな<rt>果敢</rt></ruby>し",
+        "romaji": "yufukure ni, inochi kaketaru, kagerō no ari, ya arasu ya tou, mo hakanashi",
+        "translation": "In the evening dusk, the mayfly that has staked its life—to ask if it exists or not is itself a fleeting thing."
+      },
+      "vocabulary": [
+        {
+          "word": "ゆふくれ",
+          "reading": "ゆふくれ",
+          "meaning": "evening dusk",
+          "span": [
+            0,
+            4
+          ],
+          "chinese_cognate_note": "夕暮 (xīmù) - identical meaning"
+        },
+        {
+          "word": "に",
+          "reading": "に",
+          "meaning": "at/in (time marker)",
+          "span": [
+            4,
+            5
+          ],
+          "chinese_cognate_note": null
+        },
+        {
+          "word": "いのち",
+          "reading": "いのち",
+          "meaning": "life",
+          "span": [
+            5,
+            8
+          ],
+          "chinese_cognate_note": "命 (mìng) - identical meaning"
+        },
+        {
+          "word": "かけ",
+          "reading": "かけ",
+          "meaning": "to hang/stake (Ren'yōkei of kaku)",
+          "span": [
+            8,
+            10
+          ],
+          "chinese_cognate_note": "懸 (xuán) - to hang/suspend"
+        },
+        {
+          "word": "たる",
+          "reading": "たる",
+          "meaning": "has (done) and remains so (tari in Rentaikei form)",
+          "span": [
+            10,
+            12
+          ],
+          "chinese_cognate_note": null
+        },
+        {
+          "word": "かけろふ",
+          "reading": "かけろふ",
+          "meaning": "mayfly",
+          "span": [
+            12,
+            16
+          ],
+          "chinese_cognate_note": "蜉蝣 (fúyóu) - identical meaning"
+        },
+        {
+          "word": "の",
+          "reading": "の",
+          "meaning": "subject marker (in relative clause)",
+          "span": [
+            16,
+            17
+          ],
+          "chinese_cognate_note": null
+        },
+        {
+          "word": "あり",
+          "reading": "あり",
+          "meaning": "exists/is",
+          "span": [
+            17,
+            19
+          ],
+          "chinese_cognate_note": "有 (yǒu) - identical meaning"
+        },
+        {
+          "word": "や",
+          "reading": "や",
+          "meaning": "question particle (or/whether)",
+          "span": [
+            19,
+            20
+          ],
+          "chinese_cognate_note": null
+        },
+        {
+          "word": "あらず",
+          "reading": "あらず",
+          "meaning": "does not exist",
+          "span": null,
+          "chinese_cognate_note": "不 (bù) + 有 (yǒu)"
+        },
+        {
+          "word": "や",
+          "reading": "や",
+          "meaning": "question particle (or/whether)",
+          "span": [
+            23,
+            24
+          ],
+          "chinese_cognate_note": null
+        },
+        {
+          "word": "とふ",
+          "reading": "とふ",
+          "meaning": "to ask",
+          "span": [
+            24,
+            26
+          ],
+          "chinese_cognate_note": "問 (wèn) - identical meaning"
+        },
+        {
+          "word": "も",
+          "reading": "も",
+          "meaning": "also/even",
+          "span": [
+            26,
+            27
+          ],
+          "chinese_cognate_note": null
+        },
+        {
+          "word": "はかなし",
+          "reading": "はかなし",
+          "meaning": "fleeting/transient",
+          "span": [
+            27,
+            31
+          ],
+          "chinese_cognate_note": null
+        }
+      ],
+      "focus_highlight": [
+        10,
+        12
+      ]
+    },
+    {
+      "type": "grammar_spotlight",
+      "content": "In the poem above, look at **かけたる** (*kake-taru*). \n1. **かけ** (*kake*) is the verb 'to stake/hang'.\n2. **たる** (*taru*) is the 'attributive' form of *tari*.\n\nBecause it is in the *Rentaikei* (attributive) form, it modifies the noun **かけろふ** (mayfly). It doesn't just mean the mayfly 'staked' its life in the past; it means the mayfly is currently in the state of having its life staked. \n\n**Logic Check:** \nAction: *kake* (stake) + Existence: *ari* = *kake-tari* (is in the state of having staked).",
+      "evidence": "See the poem above."
+    },
+    {
+      "type": "poem_presentation",
+      "poem_id": "lapis_be9670c7bd872601",
+      "display": {
+        "text_with_furigana": "<ruby>こふ<rt>恋</rt></ruby>と<ruby>いふ<rt>言</rt></ruby>はえもなつけたり<ruby>いふ<rt>言</rt></ruby>すへのたつきもなきはあかみなりけり",
+        "romaji": "ko futo iu, wa e mo natsuketari, ifusu e, no tatsuki mo naki, wa akaminari keri",
+        "translation": "That which we call 'love' has been given a name; yet having no way to describe its end, it is like a sudden bolt of thunder."
+      },
+      "vocabulary": [
+        {
+          "word": "こふ",
+          "reading": "こふ",
+          "meaning": "love",
+          "span": [
+            0,
+            2
+          ],
+          "chinese_cognate_note": "恋 (liàn) - identical meaning"
+        },
+        {
+          "word": "と",
+          "reading": "と",
+          "meaning": "quotative particle ('as')",
+          "span": [
+            2,
+            3
+          ],
+          "chinese_cognate_note": null
+        },
+        {
+          "word": "いふ",
+          "reading": "いふ",
+          "meaning": "to say/call",
+          "span": [
+            3,
+            5
+          ],
+          "chinese_cognate_note": "言 (yán) - identical meaning"
+        },
+        {
+          "word": "は",
+          "reading": "は",
+          "meaning": "topic marker",
+          "span": [
+            5,
+            6
+          ],
+          "chinese_cognate_note": null
+        },
+        {
+          "word": "えもなつけ",
+          "reading": "えもなつけ",
+          "meaning": "to give a name/to tame",
+          "span": [
+            6,
+            11
+          ],
+          "chinese_cognate_note": null
+        },
+        {
+          "word": "たり",
+          "reading": "たり",
+          "meaning": "has been (conclusive form)",
+          "span": [
+            11,
+            13
+          ],
+          "chinese_cognate_note": null
+        },
+        {
+          "word": "いふ",
+          "reading": "いふ",
+          "meaning": "to say",
+          "span": [
+            13,
+            15
+          ],
+          "chinese_cognate_note": "言 (yán)"
+        },
+        {
+          "word": "すへ",
+          "reading": "すへ",
+          "meaning": "end/future",
+          "span": [
+            15,
+            17
+          ],
+          "chinese_cognate_note": "末 (mò) - end/tip"
+        },
+        {
+          "word": "の",
+          "reading": "の",
+          "meaning": "possessive particle",
+          "span": [
+            17,
+            18
+          ],
+          "chinese_cognate_note": null
+        },
+        {
+          "word": "たつき",
+          "reading": "たつき",
+          "meaning": "means/way",
+          "span": [
+            18,
+            21
+          ],
+          "chinese_cognate_note": null
+        },
+        {
+          "word": "も",
+          "reading": "も",
+          "meaning": "even/also",
+          "span": [
+            21,
+            22
+          ],
+          "chinese_cognate_note": null
+        },
+        {
+          "word": "なき",
+          "reading": "なき",
+          "meaning": "not existing",
+          "span": [
+            22,
+            24
+          ],
+          "chinese_cognate_note": "無 (wú) - identical meaning"
+        },
+        {
+          "word": "は",
+          "reading": "は",
+          "meaning": "topic marker",
+          "span": [
+            24,
+            25
+          ],
+          "chinese_cognate_note": null
+        },
+        {
+          "word": "あかみなり",
+          "reading": "あかみなり",
+          "meaning": "thunder",
+          "span": [
+            25,
+            30
+          ],
+          "chinese_cognate_note": null
+        },
+        {
+          "word": "けり",
+          "reading": "けり",
+          "meaning": "past/realization auxiliary",
+          "span": [
+            30,
+            32
+          ],
+          "chinese_cognate_note": null
+        }
+      ],
+      "focus_highlight": [
+        11,
+        13
+      ]
+    },
+    {
+      "type": "contrast_example",
+      "content": "In Poem 2, we see **なつけたり** (*natsuketari*). Here, *tari* is in its conclusive form (*Shūshikei*). It ends the first thought. \n\nIf the poet used **なつけつ** (*natsuketsu* - using the perfective *tsu*), it would mean 'Someone finished naming it.' \nBy using **なつけたり** (*natsuketari*), it means 'It has been named (and that name sticks to it now).'"
+    },
+    {
+      "type": "poem_presentation",
+      "poem_id": "lapis_644a8505cb283fc4",
+      "display": {
+        "text_with_furigana": "<ruby>近江<rt>おうみ</rt></ruby>のや<ruby>かかみ<rt>鏡</rt></ruby>の<ruby>山<rt>やま</rt></ruby>をたてたれはかねてそ<ruby>見<rt>み</rt></ruby>ゆる<ruby>君<rt>きみ</rt></ruby>が<ruby>ちとせ<rt>千歳</rt></ruby>は",
+        "romaji": "oumi no ya, kakami no yama o, tatetare ha, kanete so miyuru, kimi ga chitose ha",
+        "translation": "Since Mount Kagami in Omi has been stood up (like a mirror), I can see your thousand-year life in advance."
+      },
+      "vocabulary": [
+        {
+          "word": "近江",
+          "reading": "おうみ",
+          "meaning": "Omi Province (place name)",
+          "span": [
+            0,
+            2
+          ],
+          "chinese_cognate_note": null
+        },
+        {
+          "word": "の",
+          "reading": "の",
+          "meaning": "possessive particle",
+          "span": [
+            2,
+            3
+          ],
+          "chinese_cognate_note": null
+        },
+        {
+          "word": "や",
+          "reading": "や",
+          "meaning": "interjection/particle",
+          "span": [
+            3,
+            4
+          ],
+          "chinese_cognate_note": null
+        },
+        {
+          "word": "かかみ",
+          "reading": "かかみ",
+          "meaning": "mirror",
+          "span": [
+            4,
+            7
+          ],
+          "chinese_cognate_note": "鏡 (jìng) - identical meaning"
+        },
+        {
+          "word": "の",
+          "reading": "の",
+          "meaning": "possessive particle",
+          "span": [
+            7,
+            8
+          ],
+          "chinese_cognate_note": null
+        },
+        {
+          "word": "山",
+          "reading": "やま",
+          "meaning": "mountain",
+          "span": [
+            8,
+            9
+          ],
+          "chinese_cognate_note": "山 (shān) - identical meaning"
+        },
+        {
+          "word": "を",
+          "reading": "を",
+          "meaning": "object marker",
+          "span": [
+            9,
+            10
+          ],
+          "chinese_cognate_note": null
+        },
+        {
+          "word": "たて",
+          "reading": "たて",
+          "meaning": "to stand up/erect (Ren'yōkei)",
+          "span": [
+            10,
+            12
+          ],
+          "chinese_cognate_note": "立 (lì) - identical meaning"
+        },
+        {
+          "word": "たれ",
+          "reading": "たれ",
+          "meaning": "has been (tari in Izentei form)",
+          "span": [
+            12,
+            14
+          ],
+          "chinese_cognate_note": null
+        },
+        {
+          "word": "は",
+          "reading": "は",
+          "meaning": "since/because (when following Izentei)",
+          "span": [
+            14,
+            15
+          ],
+          "chinese_cognate_note": null
+        },
+        {
+          "word": "かねて",
+          "reading": "かねて",
+          "meaning": "beforehand/already",
+          "span": [
+            15,
+            18
+          ],
+          "chinese_cognate_note": null
+        },
+        {
+          "word": "そ",
+          "reading": "そ",
+          "meaning": "emphasis particle (zo)",
+          "span": [
+            18,
+            19
+          ],
+          "chinese_cognate_note": null
+        },
+        {
+          "word": "見ゆる",
+          "reading": "みゆる",
+          "meaning": "can be seen/appears",
+          "span": [
+            19,
+            22
+          ],
+          "chinese_cognate_note": "見 (jiàn) - identical meaning"
+        },
+        {
+          "word": "君",
+          "reading": "きみ",
+          "meaning": "you (lord)",
+          "span": [
+            22,
+            23
+          ],
+          "chinese_cognate_note": "君 (jūn) - identical meaning"
+        },
+        {
+          "word": "が",
+          "reading": "が",
+          "meaning": "possessive particle",
+          "span": null,
+          "chinese_cognate_note": null
+        },
+        {
+          "word": "ちとせ",
+          "reading": "ちとせ",
+          "meaning": "thousand years",
+          "span": [
+            24,
+            27
+          ],
+          "chinese_cognate_note": "千歳 (qiānsuì) - identical meaning"
+        },
+        {
+          "word": "は",
+          "reading": "は",
+          "meaning": "topic marker",
+          "span": [
+            27,
+            28
+          ],
+          "chinese_cognate_note": null
+        }
+      ],
+      "focus_highlight": [
+        12,
+        14
+      ]
+    },
+    {
+      "type": "comprehension_check",
+      "question": "In Poem 3, the phrase is 'たてたれば' (tate-tare-ba). Based on your knowledge of 'ba' from previous lessons, why is 'tari' written as 'tare' here?",
+      "answer": "Because 'ba' (meaning 'since/because') requires the Izentei (Realized) form of the preceding word. 'Tare' is the Izentei form of 'tari'.",
+      "hint": "Recall the 'Logic of Ba' from Unit 2. What form must a word take before 'ba' to mean 'because'?"
+    }
+  ],
+  "reference_card": {
+    "point": "Auxiliary たり (tari)",
+    "one_liner": "Indicates a state resulting from a completed action (Action + Existence).",
+    "example": "なつけたり (natsuketari) = Has been named (and remains named).",
+    "see_also": [
+      "auxiliary_nu",
+      "auxiliary_tsu",
+      "auxiliary_nari"
+    ]
+  },
+  "forward_references": [
+    {
+      "point": "そ (so/zo) ... 見ゆる (miyuru)",
+      "note": "Notice how 'so' changes the ending of the verb to 'yuru'. This is a major rule called Kakari-Musubi, which we will cover in Unit 7."
+    }
+  ]
+}

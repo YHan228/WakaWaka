@@ -1,0 +1,345 @@
+{
+  "lesson_title": "The Logic of Exclusion: Restrictive Particle のみ (nomi)",
+  "lesson_summary": "In this final lesson of Unit 7, we explore the particle のみ (nomi), which acts as a logical 'filter' to isolate a specific subject or condition, functioning much like the Chinese character '唯' (wéi).",
+  "grammar_explanation": {
+    "concept": "The particle のみ (nomi) is a restrictive particle used to limit the scope of a statement to the word immediately preceding it. It translates to 'only,' 'just,' or 'nothing but.' In a logical sense, it creates a set where only one element satisfies the condition of the verb.",
+    "formation": "[Noun/Verb/Particle] + のみ",
+    "variations": [
+      "のみならず (not only... but also)",
+      "のみこそ (only indeed - combined with emphasis)"
+    ],
+    "common_confusions": [
+      "vs. ばかり (bakari): While both can mean 'only,' のみ is more formal and strictly restrictive in classical Japanese, whereas ばかり often implies 'approximately' or 'nothing but' in a more emotive sense."
+    ]
+  },
+  "teaching_sequence": [
+    {
+      "type": "introduction",
+      "content": "We have spent this unit looking at particles that add emotional weight or focus (like 'zo' and 'koso'). Now, we conclude with a particle that performs a precise logical operation: exclusion. The particle <span class='highlight'>のみ (nomi)</span> functions exactly like the Chinese '唯' (wéi) or '独' (dú). It tells the reader: 'Ignore everything else; the statement applies only to this specific thing.'"
+    },
+    {
+      "type": "poem_presentation",
+      "poem_id": "ogura100_ad42b89935dfcae0",
+      "display": {
+        "text_with_furigana": "<ruby>風<rt>かぜ</rt></ruby>をいたみ<ruby>岩<rt>いわ</rt></ruby>うつ<ruby>波<rt>なみ</rt></ruby>の<ruby>おのれ<rt>おのれ</rt></ruby><span class='highlight'>のみ</span><ruby>砕<rt>くだ</rt></ruby>けて<ruby>物<rt>もの</rt></ruby>を<ruby>思<rt>おも</rt></ruby>ふころかな",
+        "romaji": "kaze o itami iwa utsu nami no onore nomi kudakete mono o omou koro kana",
+        "translation": "Like a wave that hits the rock and shatters because the wind is fierce, I alone am broken-hearted as I lose myself in thought."
+      },
+      "vocabulary": [
+        {
+          "word": "風",
+          "reading": "かぜ",
+          "meaning": "wind",
+          "chinese_cognate_note": "Same meaning as 風"
+        },
+        {
+          "word": "を",
+          "reading": "を",
+          "meaning": "object marker (here used in a causal construction)"
+        },
+        {
+          "word": "いたみ",
+          "reading": "いたみ",
+          "meaning": "because of the intensity/painfulness (from adjective 'itashi')"
+        },
+        {
+          "word": "岩",
+          "reading": "いわ",
+          "meaning": "rock",
+          "chinese_cognate_note": "Same meaning as 岩"
+        },
+        {
+          "word": "うつ",
+          "reading": "うつ",
+          "meaning": "to hit/strike"
+        },
+        {
+          "word": "波",
+          "reading": "なみ",
+          "meaning": "wave",
+          "chinese_cognate_note": "Same meaning as 波"
+        },
+        {
+          "word": "の",
+          "reading": "の",
+          "meaning": "subject marker (in a relative clause)"
+        },
+        {
+          "word": "おのれ",
+          "reading": "おのれ",
+          "meaning": "oneself / I",
+          "chinese_cognate_note": "Similar to 己 (jǐ)"
+        },
+        {
+          "word": "のみ",
+          "reading": "のみ",
+          "meaning": "only / just"
+        },
+        {
+          "word": "砕けて",
+          "reading": "くだけて",
+          "meaning": "shattering / breaking",
+          "chinese_cognate_note": "Related to 砕 (suì)"
+        },
+        {
+          "word": "物",
+          "reading": "もの",
+          "meaning": "things / matters",
+          "chinese_cognate_note": "Same meaning as 物"
+        },
+        {
+          "word": "を",
+          "reading": "を",
+          "meaning": "object marker"
+        },
+        {
+          "word": "思ふ",
+          "reading": "おもう",
+          "meaning": "to think / to feel / to love",
+          "chinese_cognate_note": "Same meaning as 思"
+        },
+        {
+          "word": "ころ",
+          "reading": "ころ",
+          "meaning": "time / occasion"
+        },
+        {
+          "word": "かな",
+          "reading": "かな",
+          "meaning": "exclamatory particle (how...!)"
+        }
+      ],
+      "focus_highlight": [
+        13,
+        15
+      ]
+    },
+    {
+      "type": "grammar_spotlight",
+      "content": "In the poem above, the poet compares himself to a wave hitting a rock. While the rock remains whole, the wave shatters. By using <span class='highlight'>おのれのみ (onore nomi)</span>, the poet emphasizes that *only* he (the wave/himself) is the one breaking into pieces. It creates a stark contrast between the immovable object and the fragile subject."
+    },
+    {
+      "type": "poem_presentation",
+      "poem_id": "lapis_d0d2120a2aeccb49",
+      "display": {
+        "text_with_furigana": "ゆきかへり<ruby>空<rt>そら</rt></ruby>に<span class='highlight'>のみ</span>してふる<ruby>事<rt>こと</rt></ruby>はわか<ruby>ゐる<rt>いる</rt></ruby><ruby>山<rt>やま</rt></ruby>の<ruby>風<rt>かぜ</rt></ruby>はやみなり",
+        "romaji": "yukikaeri sora ni nomi shite furu koto wa waka iru yama no kaze wa yami nari",
+        "translation": "That the falling snow/rain only stays in the sky and never reaches the ground must be because the wind on the mountain where I dwell is so fierce."
+      },
+      "vocabulary": [
+        {
+          "word": "ゆき",
+          "reading": "ゆき",
+          "meaning": "going"
+        },
+        {
+          "word": "かへり",
+          "reading": "かえり",
+          "meaning": "returning",
+          "chinese_cognate_note": "Related to 帰 (guī)"
+        },
+        {
+          "word": "空",
+          "reading": "そら",
+          "meaning": "sky",
+          "chinese_cognate_note": "Same meaning as 空"
+        },
+        {
+          "word": "に",
+          "reading": "に",
+          "meaning": "in / at (location particle)"
+        },
+        {
+          "word": "のみ",
+          "reading": "のみ",
+          "meaning": "only"
+        },
+        {
+          "word": "して",
+          "reading": "して",
+          "meaning": "doing / being (conjunctive)"
+        },
+        {
+          "word": "ふる",
+          "reading": "ふる",
+          "meaning": "to fall (rain/snow)"
+        },
+        {
+          "word": "事",
+          "reading": "こと",
+          "meaning": "thing / fact / matter",
+          "chinese_cognate_note": "Same meaning as 事"
+        },
+        {
+          "word": "は",
+          "reading": "は",
+          "meaning": "topic marker"
+        },
+        {
+          "word": "わか",
+          "reading": "わか",
+          "meaning": "my (archaic 'waga')"
+        },
+        {
+          "word": "ゐる",
+          "reading": "いる",
+          "meaning": "to be / to exist"
+        },
+        {
+          "word": "山",
+          "reading": "やま",
+          "meaning": "mountain",
+          "chinese_cognate_note": "Same meaning as 山"
+        },
+        {
+          "word": "の",
+          "reading": "の",
+          "meaning": "genitive (of)"
+        },
+        {
+          "word": "かぜ",
+          "reading": "かぜ",
+          "meaning": "wind"
+        },
+        {
+          "word": "は",
+          "reading": "は",
+          "meaning": "topic marker"
+        },
+        {
+          "word": "やみ",
+          "reading": "やみ",
+          "meaning": "cessation / stopping"
+        },
+        {
+          "word": "なり",
+          "reading": "なり",
+          "meaning": "is (copula)"
+        }
+      ],
+      "focus_highlight": [
+        8,
+        10
+      ]
+    },
+    {
+      "type": "contrast_example",
+      "content": "Notice the placement of <span class='highlight'>のみ</span> in the second poem: <ruby>空<rt>そら</rt></ruby>に<span class='highlight'>のみ</span> (sora ni nomi). This means 'Only in the sky.' The limitation is applied to the location. The snow is 'doing' its falling, but the scope of that action is restricted to the sky, never touching the earth."
+    },
+    {
+      "type": "poem_presentation",
+      "poem_id": "lapis_cd5d70f4541ae68e",
+      "display": {
+        "text_with_furigana": "<ruby>紅<rt>くれない</rt></ruby>のふりいでつつなく<ruby>涙<rt>なみだ</rt></ruby>には<ruby>袂<rt>たもと</rt></ruby><span class='highlight'>のみこそ</span><ruby>色<rt>いろ</rt></ruby>まさりけれ",
+        "romaji": "kurenai no furiite tsutsunaku namida ni wa tamoto nomi koso iro masari kere",
+        "translation": "As crimson tears fall without ceasing, it is only on my sleeves that the color has truly deepened."
+      },
+      "vocabulary": [
+        {
+          "word": "紅",
+          "reading": "くれない",
+          "meaning": "crimson / deep red",
+          "chinese_cognate_note": "Same meaning as 紅"
+        },
+        {
+          "word": "の",
+          "reading": "の",
+          "meaning": "genitive (of)"
+        },
+        {
+          "word": "ふり",
+          "reading": "ふり",
+          "meaning": "falling (tears/rain)"
+        },
+        {
+          "word": "いで",
+          "reading": "いで",
+          "meaning": "coming out / emerging",
+          "chinese_cognate_note": "Related to 出 (chū)"
+        },
+        {
+          "word": "つつ",
+          "reading": "つつ",
+          "meaning": "while / continuously"
+        },
+        {
+          "word": "なく",
+          "reading": "なく",
+          "meaning": "to cry / weep"
+        },
+        {
+          "word": "涙",
+          "reading": "なみだ",
+          "meaning": "tears",
+          "chinese_cognate_note": "Same meaning as 涙/淚"
+        },
+        {
+          "word": "に",
+          "reading": "に",
+          "meaning": "in / at"
+        },
+        {
+          "word": "は",
+          "reading": "は",
+          "meaning": "topic marker"
+        },
+        {
+          "word": "袂",
+          "reading": "たもと",
+          "meaning": "sleeve (of a kimono)"
+        },
+        {
+          "word": "のみ",
+          "reading": "のみ",
+          "meaning": "only"
+        },
+        {
+          "word": "こそ",
+          "reading": "こそ",
+          "meaning": "indeed (strong emphasis particle)"
+        },
+        {
+          "word": "色",
+          "reading": "いろ",
+          "meaning": "color",
+          "chinese_cognate_note": "Same meaning as 色"
+        },
+        {
+          "word": "まさり",
+          "reading": "まさり",
+          "meaning": "to increase / to surpass"
+        },
+        {
+          "word": "けれ",
+          "reading": "けれ",
+          "meaning": "past-recollection / exclamation (keri)"
+        }
+      ],
+      "focus_highlight": [
+        16,
+        20
+      ]
+    },
+    {
+      "type": "comprehension_check",
+      "question": "In the third poem, the poet uses 'tamoto nomi koso'. Based on your knowledge of 'koso' from previous lessons, what is the logical effect of combining 'nomi' and 'koso'?",
+      "answer": "It combines limitation with intense emphasis. 'Nomi' restricts the deepening of the red color to the sleeves (excluding other things), and 'koso' emphasizes that this specific fact is what the poet wants the reader to notice.",
+      "hint": "Think of 'nomi' as a filter and 'koso' as a spotlight."
+    }
+  ],
+  "reference_card": {
+    "point": "Particle のみ (nomi)",
+    "one_liner": "A restrictive particle meaning 'only' or 'just,' equivalent to the Chinese '唯' (wéi).",
+    "example": "おのれのみ (onore nomi) = Only myself / I alone.",
+    "see_also": [
+      "particle_koso",
+      "particle_wa"
+    ]
+  },
+  "forward_references": [
+    {
+      "point": "いたみ (itami) as a causal form",
+      "note": "We will explore the 'Noun + o + Adj-stem + mi' construction for expressing 'because' in Unit 8."
+    }
+  ]
+}

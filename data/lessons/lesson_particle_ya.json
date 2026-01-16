@@ -1,0 +1,492 @@
+{
+  "lesson_id": "lesson_particle_ya",
+  "lesson_title": "The Rhetorical Inquiry: Particle や (ya) and the Logic of Doubt",
+  "lesson_summary": "In this lesson, we explore the particle 'ya', a logical marker used to express doubt, questions, or rhetorical emphasis, which forces the sentence's final verb into the Attributive form (Rentaikei).",
+  "grammar_point": "particle_ya",
+  "grammar_explanation": {
+    "concept": "The particle や (ya) acts as a 'logical query' marker. In Classical Japanese, it signals that the speaker is questioning a specific element of the sentence. Like the particle か (ka) we studied previously, や (ya) triggers a 'Kakari-musubi' (Focus-Link) effect: the verb at the end of the sentence must change from its standard 'Terminal' form to the 'Attributive' (Rentaikei) form to 'close' the logical loop opened by 'ya'.",
+    "formation": "[Focus Word] + や + ... + [Verb in Rentaikei]",
+    "variations": [
+      "やは (ya-ha): Stronger rhetorical question (often implying 'certainly not').",
+      "やも (ya-mo): Emphatic rhetorical doubt, often used at the very end of a poem."
+    ],
+    "common_confusions": [
+      "vs. か (ka): 'Ka' is generally a direct question (?), while 'ya' is often more rhetorical or emotive (?!)."
+    ]
+  },
+  "teaching_sequence": [
+    {
+      "type": "introduction",
+      "content": "In our previous lesson, we saw how the particle か (ka) creates a direct question. However, Japanese poetry often prefers a softer, more reflective kind of doubt. Enter the particle や (ya). Think of 'ya' as a 'logical hook.' Once you place it after a word, the sentence's energy is suspended until it reaches the verb, which must then take the Rentaikei (Attributive) form to 'knot' the thought together. For a Chinese speaker, this is very similar to the classical 乎 (hū) or 耶 (yé) used to turn a statement into a rhetorical inquiry."
+    },
+    {
+      "type": "poem_presentation",
+      "poem_id": "lapis_d78ecbcb440f54df",
+      "display": {
+        "text_with_furigana": "<ruby>秋<rt>あき</rt></ruby>の<ruby>田<rt>た</rt></ruby>の<ruby>穂<rt>ほ</rt></ruby>の<ruby>上<rt>うへ</rt></ruby>を<ruby>照<rt>て</rt></ruby>らす<ruby>稲妻<rt>いなづま</rt></ruby>の<ruby>光<rt>ひかり</rt></ruby>の<ruby>間<rt>ま</rt></ruby>にも<ruby>我<rt>われ</rt></ruby><span style='color: #ff4500;'>や</span><ruby>忘<rt>わす</rt></ruby>るる",
+        "romaji": "aki no ta no, ho no ue o terasu, inatsuma, no hikari no ma ni, mo ware ya wasururu",
+        "translation": "In the brief flash of lightning that shines over the ears of the autumn rice fields—in that tiny moment, could I ever forget you?"
+      },
+      "vocabulary": [
+        {
+          "word": "秋",
+          "reading": "あき",
+          "meaning": "autumn",
+          "span": null,
+          "chinese_cognate_note": "Identical to Chinese 秋"
+        },
+        {
+          "word": "の",
+          "reading": "の",
+          "meaning": "possessive particle (of)",
+          "span": [
+            2,
+            3
+          ],
+          "chinese_cognate_note": null
+        },
+        {
+          "word": "田",
+          "reading": "た",
+          "meaning": "rice field",
+          "span": null,
+          "chinese_cognate_note": "Identical to Chinese 田"
+        },
+        {
+          "word": "の",
+          "reading": "の",
+          "meaning": "possessive particle (of)",
+          "span": [
+            4,
+            5
+          ],
+          "chinese_cognate_note": null
+        },
+        {
+          "word": "穂",
+          "reading": "ほ",
+          "meaning": "ear of grain",
+          "span": null,
+          "chinese_cognate_note": "Identical to Chinese 穗"
+        },
+        {
+          "word": "の",
+          "reading": "の",
+          "meaning": "possessive particle (of)",
+          "span": [
+            6,
+            7
+          ],
+          "chinese_cognate_note": null
+        },
+        {
+          "word": "上",
+          "reading": "うへ",
+          "meaning": "top/above",
+          "span": null,
+          "chinese_cognate_note": "Identical to Chinese 上"
+        },
+        {
+          "word": "を",
+          "reading": "を",
+          "meaning": "object marker",
+          "span": [
+            9,
+            10
+          ],
+          "chinese_cognate_note": null
+        },
+        {
+          "word": "照らす",
+          "reading": "てらす",
+          "meaning": "to shine/illuminate",
+          "span": null,
+          "chinese_cognate_note": "Cognate with Chinese 照"
+        },
+        {
+          "word": "稲妻",
+          "reading": "いなづま",
+          "meaning": "lightning (lit. 'rice-wife')",
+          "span": null,
+          "chinese_cognate_note": "Uses Kanji 稲 (rice) and 妻 (wife)"
+        },
+        {
+          "word": "の",
+          "reading": "の",
+          "meaning": "possessive particle (of)",
+          "span": [
+            17,
+            18
+          ],
+          "chinese_cognate_note": null
+        },
+        {
+          "word": "光",
+          "reading": "ひかり",
+          "meaning": "light",
+          "span": null,
+          "chinese_cognate_note": "Identical to Chinese 光"
+        },
+        {
+          "word": "の",
+          "reading": "の",
+          "meaning": "possessive particle (of)",
+          "span": [
+            21,
+            22
+          ],
+          "chinese_cognate_note": null
+        },
+        {
+          "word": "間",
+          "reading": "ま",
+          "meaning": "interval/moment",
+          "span": null,
+          "chinese_cognate_note": "Identical to Chinese 間"
+        },
+        {
+          "word": "に",
+          "reading": "に",
+          "meaning": "time marker (at/in)",
+          "span": [
+            23,
+            24
+          ],
+          "chinese_cognate_note": null
+        },
+        {
+          "word": "も",
+          "reading": "も",
+          "meaning": "even/also",
+          "span": [
+            24,
+            25
+          ],
+          "chinese_cognate_note": null
+        },
+        {
+          "word": "我",
+          "reading": "われ",
+          "meaning": "I/me",
+          "span": [
+            25,
+            26
+          ],
+          "chinese_cognate_note": "Identical to Chinese 我"
+        },
+        {
+          "word": "や",
+          "reading": "や",
+          "meaning": "interrogative/rhetorical particle",
+          "span": [
+            26,
+            27
+          ],
+          "chinese_cognate_note": null
+        },
+        {
+          "word": "忘るる",
+          "reading": "わするる",
+          "meaning": "to forget (Attributive form)",
+          "span": null,
+          "chinese_cognate_note": "Cognate with Chinese 忘"
+        }
+      ],
+      "focus_highlight": [
+        26,
+        27
+      ]
+    },
+    {
+      "type": "grammar_spotlight",
+      "content": "Look at the end of the poem: **我やわするる** (ware ya wasururu). \n\n1. **The Focus**: The speaker places 'ya' after 'ware' (I). This highlights the subject: 'Is it *I* who...?'\n2. **The Link**: Because 'ya' is present, the verb 'to forget' cannot be the standard 'wasuru'. It must change to **わするる (wasururu)**, which is the **Rentaikei (Attributive form)**.\n3. **The Logic**: This creates a rhetorical question. The speaker is saying the moment of lightning is so short, yet even in that split second, 'Would I forget you?' (The implied answer is 'No').",
+      "evidence": "See the poem above."
+    },
+    {
+      "type": "poem_presentation",
+      "poem_id": "lapis_953fd1423e8c4ab4",
+      "display": {
+        "text_with_furigana": "<ruby>見<rt>み</rt></ruby>てのみ<span style='color: #ff4500;'>や</span><ruby>人<rt>ひと</rt></ruby>に<ruby>語<rt>かた</rt></ruby>らむ<ruby>桜花<rt>さくらばな</rt></ruby><ruby>手<rt>て</rt></ruby>ごとに<ruby>折<rt>を</rt></ruby>りて<ruby>家<rt>いへ</rt></ruby>つとにせむ",
+        "romaji": "mite nomi ya, hito ni kataramu, sakurabana, te koto ni orite, ihe tsuto ni semu",
+        "translation": "Should I only look at them and then just tell others? No, I shall pluck these cherry blossoms in my hands and take them home as a souvenir."
+      },
+      "vocabulary": [
+        {
+          "word": "見て",
+          "reading": "みて",
+          "meaning": "seeing (te-form of 'miru')",
+          "span": [
+            0,
+            2
+          ],
+          "chinese_cognate_note": "Cognate with Chinese 見"
+        },
+        {
+          "word": "のみ",
+          "reading": "のみ",
+          "meaning": "only",
+          "span": [
+            2,
+            4
+          ],
+          "chinese_cognate_note": null
+        },
+        {
+          "word": "や",
+          "reading": "や",
+          "meaning": "interrogative particle",
+          "span": [
+            4,
+            5
+          ],
+          "chinese_cognate_note": null
+        },
+        {
+          "word": "人",
+          "reading": "ひと",
+          "meaning": "person/others",
+          "span": [
+            5,
+            6
+          ],
+          "chinese_cognate_note": "Identical to Chinese 人"
+        },
+        {
+          "word": "に",
+          "reading": "に",
+          "meaning": "target marker (to)",
+          "span": [
+            6,
+            7
+          ],
+          "chinese_cognate_note": null
+        },
+        {
+          "word": "語らむ",
+          "reading": "かたらむ",
+          "meaning": "will tell/talk",
+          "span": null,
+          "chinese_cognate_note": "Cognate with Chinese 語"
+        },
+        {
+          "word": "桜花",
+          "reading": "さくらばな",
+          "meaning": "cherry blossoms",
+          "span": null,
+          "chinese_cognate_note": "Identical to Chinese 櫻花"
+        },
+        {
+          "word": "手",
+          "reading": "て",
+          "meaning": "hand",
+          "span": null,
+          "chinese_cognate_note": "Identical to Chinese 手"
+        },
+        {
+          "word": "ごとに",
+          "reading": "ごとに",
+          "meaning": "each/every",
+          "span": null,
+          "chinese_cognate_note": "Similar to Chinese 每"
+        },
+        {
+          "word": "折りて",
+          "reading": "をりて",
+          "meaning": "plucking/breaking (te-form)",
+          "span": null,
+          "chinese_cognate_note": "Cognate with Chinese 折"
+        },
+        {
+          "word": "家",
+          "reading": "いへ",
+          "meaning": "home/house",
+          "span": null,
+          "chinese_cognate_note": "Identical to Chinese 家"
+        },
+        {
+          "word": "つとに",
+          "reading": "つとに",
+          "meaning": "as a souvenir/gift",
+          "span": [
+            24,
+            27
+          ],
+          "chinese_cognate_note": null
+        },
+        {
+          "word": "せむ",
+          "reading": "せむ",
+          "meaning": "will do/make",
+          "span": [
+            27,
+            29
+          ],
+          "chinese_cognate_note": null
+        }
+      ],
+      "focus_highlight": [
+        4,
+        5
+      ]
+    },
+    {
+      "type": "contrast_example",
+      "content": "In the second poem, 'ya' follows 'nomi' (only). **見てのみや (mite nomi ya)** translates to 'Is it only by looking [that I should appreciate them]?' This 'ya' casts doubt on the idea of *only* looking, leading the speaker to the conclusion that they must actually pluck the flowers."
+    },
+    {
+      "type": "poem_presentation",
+      "poem_id": "lapis_c614f61d1a3043a2",
+      "display": {
+        "text_with_furigana": "<ruby>遠<rt>とほ</rt></ruby>くあれと<ruby>君<rt>きみ</rt></ruby>にそこふる<ruby>玉桙<rt>たまほこ</rt></ruby>の<ruby>里人<rt>さとひと</rt></ruby><ruby>皆<rt>みな</rt></ruby>に<ruby>我<rt>われ</rt></ruby><ruby>恋<rt>こ</rt></ruby>ひめ<span style='color: #ff4500;'>やも</span>",
+        "romaji": "tohoku are, to kimi ni soko furu, tamahoko, no satohito mina, ni ware kohime ya mo",
+        "translation": "Though you are far away, I long for you; how could I ever love any of the people in this village as I love you?"
+      },
+      "vocabulary": [
+        {
+          "word": "遠く",
+          "reading": "とほく",
+          "meaning": "far away",
+          "span": null,
+          "chinese_cognate_note": "Identical to Chinese 遠"
+        },
+        {
+          "word": "あれ",
+          "reading": "あれ",
+          "meaning": "to be (subjunctive/conditional)",
+          "span": [
+            3,
+            5
+          ],
+          "chinese_cognate_note": null
+        },
+        {
+          "word": "と",
+          "reading": "と",
+          "meaning": "even though/if",
+          "span": [
+            5,
+            6
+          ],
+          "chinese_cognate_note": null
+        },
+        {
+          "word": "君",
+          "reading": "きみ",
+          "meaning": "you",
+          "span": null,
+          "chinese_cognate_note": "Identical to Chinese 君"
+        },
+        {
+          "word": "に",
+          "reading": "に",
+          "meaning": "target marker",
+          "span": [
+            8,
+            9
+          ],
+          "chinese_cognate_note": null
+        },
+        {
+          "word": "そこ",
+          "reading": "そこ",
+          "meaning": "there",
+          "span": [
+            9,
+            11
+          ],
+          "chinese_cognate_note": null
+        },
+        {
+          "word": "ふる",
+          "reading": "ふる",
+          "meaning": "to pass (time/place)",
+          "span": [
+            11,
+            13
+          ],
+          "chinese_cognate_note": null
+        },
+        {
+          "word": "玉桙の",
+          "reading": "たまほこの",
+          "meaning": "pillow word for 'road' or 'village'",
+          "span": null,
+          "chinese_cognate_note": null
+        },
+        {
+          "word": "里人",
+          "reading": "さとひと",
+          "meaning": "villager",
+          "span": null,
+          "chinese_cognate_note": "里 (village) + 人 (person)"
+        },
+        {
+          "word": "皆",
+          "reading": "みな",
+          "meaning": "all/everyone",
+          "span": null,
+          "chinese_cognate_note": "Identical to Chinese 皆"
+        },
+        {
+          "word": "に",
+          "reading": "に",
+          "meaning": "target marker",
+          "span": [
+            24,
+            25
+          ],
+          "chinese_cognate_note": null
+        },
+        {
+          "word": "我",
+          "reading": "われ",
+          "meaning": "I",
+          "span": null,
+          "chinese_cognate_note": null
+        },
+        {
+          "word": "恋ひめ",
+          "reading": "こひめ",
+          "meaning": "would love (from 'kofu')",
+          "span": null,
+          "chinese_cognate_note": null
+        },
+        {
+          "word": "やも",
+          "reading": "やも",
+          "meaning": "strong rhetorical negative particle",
+          "span": [
+            30,
+            32
+          ],
+          "chinese_cognate_note": null
+        }
+      ],
+      "focus_highlight": [
+        30,
+        32
+      ]
+    },
+    {
+      "type": "comprehension_check",
+      "question": "In Poem 3, the phrase 'ware kohime ya mo' ends with 'ya mo'. Based on the context, does the speaker intend to love the villagers?",
+      "answer": "No. 'Ya mo' is a strong rhetorical negative. It implies 'How could I possibly love them? (I certainly won't).'",
+      "hint": "Think of 'ya mo' as a logical operator that flips the meaning of the verb into a 'certainly not' rhetorical question."
+    }
+  ],
+  "reference_card": {
+    "point": "Particle や (ya)",
+    "one_liner": "A focus particle used for questions or rhetorical doubt that requires the sentence to end in the Rentaikei (Attributive) form.",
+    "example": "我やわするる (Ware ya wasururu) - 'Will I forget?' (Rhetorical)",
+    "see_also": [
+      "particle_ka",
+      "lesson_conjugation_rentaikei"
+    ]
+  },
+  "forward_references": [
+    {
+      "point": "Kakari-Musubi with 'Koso'",
+      "note": "In Unit 7.5, we will see 'Koso', which is the emphatic cousin of 'Ya' and 'Ka', but requires a different verb ending."
+    }
+  ]
+}

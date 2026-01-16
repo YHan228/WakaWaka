@@ -1,0 +1,254 @@
+{
+  "lesson_title": "The Noun-Linker: Mastering the Rentaikei (Attributive Form)",
+  "lesson_summary": "In Classical Japanese, verbs and adjectives don't just sit next to nouns; they change their 'tail' to act as a modifier. This lesson introduces the Rentaikei (连体形), the specific form used to link descriptions to nouns.",
+  "grammar_explanation": {
+    "concept": "The Rentaikei (连体形) is the 'Attributive Form.' In Chinese, you use the particle '的' to link a verb or adjective to a noun (e.g., 跑*的*人, 美丽*的*花). In Classical Japanese, the word itself transforms its ending to perform this 'linking' function without needing a separate 'de'.",
+    "formation": "For adjectives, the ending often changes to '-ki' (き). For verbs, the ending often changes to '-u' or '-uru'.",
+    "variations": [
+      "Adjective Rentaikei: ~き (ki)",
+      "Verb Rentaikei: ~る (ru) or ~う (u)"
+    ],
+    "common_confusions": [
+      "Do not confuse Rentaikei with the Terminal form (Shuushikei) which ends a sentence. While they look identical for some verbs, their logical function is different: one modifies a noun, the other completes a statement."
+    ]
+  },
+  "teaching_sequence": [
+    {
+      "type": "introduction",
+      "content": "Think of the Rentaikei as a 'logical hook.' In previous lessons, we saw how particles like 'no' link nouns. But what if you want to link an action or a quality to a noun? Instead of adding a new word, Japanese modifies the 'tail' of the verb or adjective. If you are a programmer, think of this as a type-cast: we are casting a Verb/Adjective into an 'Attribute' type so it can be accepted by a Noun object."
+    },
+    {
+      "type": "poem_presentation",
+      "poem_id": "lapis_3fae4cc77d26129b",
+      "display": {
+        "text_with_furigana": "<ruby>大<rt>おほ</rt></ruby>の<ruby>浦<rt>うら</rt></ruby>のその<ruby>中<rt>なか</rt></ruby><ruby>滨<rt>はま</rt></ruby>に<ruby>寄<rt>よ</rt></ruby>する<ruby>浪<rt>なみ</rt></ruby><ruby>豊<rt>ゆた</rt></ruby>けき<ruby>君<rt>きみ</rt></ruby>を<ruby>思<rt>おも</rt></ruby>ふこの<ruby>頃<rt>ころ</rt></ruby>",
+        "romaji": "ohonoura no sono nakahama ni yosuru nami yutakeki kimi o omou kono koro",
+        "translation": "By the inner beach of the great bay, like the waves that approach the shore, I think of you and your generous heart these days."
+      },
+      "vocabulary": [
+        {
+          "word": "おほ",
+          "reading": "oho",
+          "meaning": "great/large",
+          "chinese_cognate_note": "Cognate with 大"
+        },
+        {
+          "word": "の",
+          "reading": "no",
+          "meaning": "possessive particle (of)"
+        },
+        {
+          "word": "うら",
+          "reading": "ura",
+          "meaning": "bay/inlet"
+        },
+        {
+          "word": "の",
+          "reading": "no",
+          "meaning": "possessive particle (of)"
+        },
+        {
+          "word": "その",
+          "reading": "sono",
+          "meaning": "that"
+        },
+        {
+          "word": "なか",
+          "reading": "naka",
+          "meaning": "middle/inner",
+          "chinese_cognate_note": "Cognate with 中"
+        },
+        {
+          "word": "はま",
+          "reading": "hama",
+          "meaning": "beach/shore",
+          "chinese_cognate_note": "Cognate with 滨"
+        },
+        {
+          "word": "に",
+          "reading": "ni",
+          "meaning": "at/to (location marker)"
+        },
+        {
+          "word": "よする",
+          "reading": "yosuru",
+          "meaning": "to approach/draw near (Rentaikei form)"
+        },
+        {
+          "word": "なみ",
+          "reading": "nami",
+          "meaning": "waves",
+          "chinese_cognate_note": "Cognate with 浪"
+        },
+        {
+          "word": "ゆたけき",
+          "reading": "yutakeki",
+          "meaning": "abundant/generous (Rentaikei form)"
+        },
+        {
+          "word": "きみ",
+          "reading": "kimi",
+          "meaning": "you/lord",
+          "chinese_cognate_note": "Cognate with 君"
+        },
+        {
+          "word": "を",
+          "reading": "o",
+          "meaning": "object marker"
+        },
+        {
+          "word": "おもふ",
+          "reading": "omou",
+          "meaning": "to think/love",
+          "chinese_cognate_note": "Cognate with 思"
+        },
+        {
+          "word": "この",
+          "reading": "kono",
+          "meaning": "this"
+        },
+        {
+          "word": "ころ",
+          "reading": "koro",
+          "meaning": "time/days"
+        }
+      ],
+      "focus_highlight": [
+        18,
+        22
+      ]
+    },
+    {
+      "type": "grammar_spotlight",
+      "content": "Look at 'yosuru nami' (寄する浪) and 'yutakeki kimi' (豊けき君). \n\n1. **Verb Linkage**: 'yosuru' is the Rentaikei of 'yosu' (to approach). It hooks directly onto 'nami' (waves). In Chinese, this is '涌向**的**浪'.\n2. **Adjective Linkage**: 'yutakeki' is the Rentaikei of 'yutakeshi' (generous/abundant). It hooks onto 'kimi' (you). In Chinese, this is '宽厚**的**君'.\n\nNotice the '-ki' ending on the adjective. Whenever you see an adjective ending in '-ki' followed by a noun, it is functioning exactly like the Chinese '的'."
+    },
+    {
+      "type": "poem_presentation",
+      "poem_id": "lapis_30203194c3b2dcfb",
+      "display": {
+        "text_with_furigana": "<ruby>世<rt>よ</rt></ruby>に<ruby>ふれ<rt>ふれ</rt></ruby>は<ruby>事<rt>こと</rt></ruby>の<ruby>はしけき<rt>はしけき</rt></ruby><ruby>呉竹<rt>くれたけ</rt></ruby>の<ruby>忧<rt>うき</rt></ruby><ruby>节<rt>ふし</rt></ruby>ごとに<ruby>莺<rt>うぐいす</rt></ruby>そなく",
+        "romaji": "yo ni fure ba koto no hashikeki kuretake no ukifushi koto ni uguisu so naku",
+        "translation": "As I pass through this world, at every painful joint of the dark bamboo—like the harshness of life—the warbler sings."
+      },
+      "vocabulary": [
+        {
+          "word": "世",
+          "reading": "yo",
+          "meaning": "world/life",
+          "chinese_cognate_note": "Cognate with 世"
+        },
+        {
+          "word": "に",
+          "reading": "ni",
+          "meaning": "in/at"
+        },
+        {
+          "word": "ふれ",
+          "reading": "fure",
+          "meaning": "to pass through/experience"
+        },
+        {
+          "word": "は",
+          "reading": "ba",
+          "meaning": "as/when (conditional)"
+        },
+        {
+          "word": "事",
+          "reading": "koto",
+          "meaning": "things/matters",
+          "chinese_cognate_note": "Cognate with 事"
+        },
+        {
+          "word": "の",
+          "reading": "no",
+          "meaning": "possessive particle"
+        },
+        {
+          "word": "はしけき",
+          "reading": "hashikeki",
+          "meaning": "severe/harsh (Rentaikei form)"
+        },
+        {
+          "word": "くれ竹",
+          "reading": "kuretake",
+          "meaning": "dark bamboo"
+        },
+        {
+          "word": "の",
+          "reading": "no",
+          "meaning": "possessive particle"
+        },
+        {
+          "word": "うき",
+          "reading": "uki",
+          "meaning": "sad/painful"
+        },
+        {
+          "word": "ふし",
+          "reading": "fushi",
+          "meaning": "joint (of bamboo) / event"
+        },
+        {
+          "word": "こと",
+          "reading": "koto",
+          "meaning": "every/each"
+        },
+        {
+          "word": "に",
+          "reading": "ni",
+          "meaning": "at"
+        },
+        {
+          "word": "莺",
+          "reading": "uguisu",
+          "meaning": "bush warbler",
+          "chinese_cognate_note": "Cognate with 莺"
+        },
+        {
+          "word": "そ",
+          "reading": "so",
+          "meaning": "emphasis particle"
+        },
+        {
+          "word": "なく",
+          "reading": "naku",
+          "meaning": "to sing/cry",
+          "chinese_cognate_note": "Cognate with 鸣 (but read as naku)"
+        }
+      ],
+      "focus_highlight": [
+        7,
+        11
+      ]
+    },
+    {
+      "type": "contrast_example",
+      "content": "In Poem 3, we see 'hashikeki kuretake' (harsh bamboo). \n\n- Adjective: はしけし (hashikeshi - 'is harsh')\n- Rentaikei: はしけき (hashikeki - 'harsh...')\n- Noun: くれ竹 (kuretake - 'bamboo')\n\nWithout the 'ki' ending, the adjective cannot 'stick' to the bamboo. It's the grammatical glue."
+    },
+    {
+      "type": "comprehension_check",
+      "question": "In Poem 1, identify the word that acts as the 'Rentaikei' (Attributive) form modifying the noun 'kimi' (君). What is its ending?",
+      "answer": "The word is 'yutakeki' (豊けき), and its ending is '-ki' (き).",
+      "hint": "Look for the adjective describing the person (君) right before the particle 'o'."
+    },
+    {
+      "type": "summary",
+      "content": "You have now mastered the 'Noun-Linker' logic. Whenever a verb or adjective modifies a noun in Classical Japanese, it must take the Rentaikei form. For adjectives, look for that distinctive '-ki' (き) tail. This allows complex descriptions to be built without the need for the Chinese 'de' (的)."
+    }
+  ],
+  "reference_card": {
+    "point": "Rentaikei (连体形)",
+    "one_liner": "The form of a verb or adjective used to modify a noun (Relative Clause).",
+    "example": "ゆたけき (Generous) + 君 (You) = Generous You",
+    "see_also": [
+      "auxiliary_nari",
+      "particle_no"
+    ]
+  },
+  "forward_references": [
+    {
+      "point": "Kakari-Musubi (Emphasis Concord)",
+      "note": "In Poem 2 and 3, you saw 'so' (そ) at the end. This particle 'forces' the final verb to also take the Rentaikei form, even if there is no noun to modify! We will explore this 'Emphasis Rule' in Unit 7."
+    }
+  ]
+}

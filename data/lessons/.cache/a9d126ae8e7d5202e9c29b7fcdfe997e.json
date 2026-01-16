@@ -1,0 +1,328 @@
+{
+  "lesson_title": "The Logic of 'Not': Negation with the Auxiliary ず (zu)",
+  "lesson_summary": "This lesson introduces the primary tool for negation in Classical Japanese. By attaching the auxiliary 'zu' to the Mizenkei (Unrealized Base) you learned in the previous lesson, you can flip the logical state of any action.",
+  "grammar_explanation": {
+    "concept": "The auxiliary 'zu' (ず) functions like a logical NOT operator (!). It negates the verb it attaches to. Because negation deals with something that 'has not happened,' it must always attach to the Mizenkei (未然形), the 'Unrealized Base' we established in Lesson 4.1.",
+    "formation": "Verb (Mizenkei Base) + ず (zu) / ぬ (nu)",
+    "variations": [
+      "ず (zu): The terminal form, used to end a sentence or a clause (like a semicolon).",
+      "ぬ (nu): The attributive form (Rentaikei), used when the negated verb modifies a noun or precedes certain particles."
+    ],
+    "common_confusions": [
+      "Do not confuse the negative 'nu' (ぬ) with the completion auxiliary 'nu' (which attaches to a different base). If it's on the Mizenkei, it's always 'NOT'."
+    ]
+  },
+  "teaching_sequence": [
+    {
+      "type": "introduction",
+      "content": "In the previous lesson, we identified the **Mizenkei (未然形)** as the 'Unrealized Base'—a version of the verb used for things that haven't occurred yet. Today, we apply the most common 'tag' to that base: the auxiliary **ず (zu)**. In programming terms, if the Mizenkei is the variable, 'zu' is the logical NOT operator that changes the boolean value from TRUE to FALSE."
+    },
+    {
+      "type": "poem_presentation",
+      "poem_id": "ogura100_5f7cf181bd94b71f",
+      "display": {
+        "text_with_furigana": "<ruby>こ<rt>こ</rt></ruby>の<ruby>たび<rt>たび</rt></ruby>は<ruby>幣<rt>みてぐら</rt></ruby>も<ruby>取<rt>と</rt></ruby>り<ruby>あへ<rt>あへ</rt></ruby><span style='color: #ff4500;'>ず</span><ruby>手向山<rt>たむけやま</rt></ruby><ruby>紅葉<rt>もみぢ</rt></ruby>の<ruby>錦<rt>にしき</rt></ruby><ruby>神<rt>かみ</rt></ruby>のまにまに",
+        "romaji": "konotabi wa mitegura mo toriaezu tamukeyama momiji no nishiki kami no manimani",
+        "translation": "On this occasion, I could not even prepare offerings; instead, I offer the brocade of autumn leaves on Mt. Tamuke, as the gods will."
+      },
+      "vocabulary": [
+        {
+          "word": "この",
+          "reading": "kono",
+          "meaning": "this",
+          "chinese_cognate_note": "Equivalent to 此の"
+        },
+        {
+          "word": "たび",
+          "reading": "tabi",
+          "meaning": "time / occasion",
+          "chinese_cognate_note": "Equivalent to 度"
+        },
+        {
+          "word": "は",
+          "reading": "wa",
+          "meaning": "[Topic Marker]"
+        },
+        {
+          "word": "幣",
+          "reading": "mitegura",
+          "meaning": "offerings to a deity",
+          "chinese_cognate_note": "Related to 幣 (currency/offering)"
+        },
+        {
+          "word": "も",
+          "reading": "mo",
+          "meaning": "also / even"
+        },
+        {
+          "word": "取りあへ",
+          "reading": "toriae",
+          "meaning": "to prepare/do fully (Mizenkei base)",
+          "chinese_cognate_note": "取 (take/handle)"
+        },
+        {
+          "word": "ず",
+          "reading": "zu",
+          "meaning": "not (negative auxiliary)"
+        },
+        {
+          "word": "手向山",
+          "reading": "tamukeyama",
+          "meaning": "Mt. Tamuke (Place name)",
+          "chinese_cognate_note": "山 (mountain)"
+        },
+        {
+          "word": "紅葉",
+          "reading": "momiji",
+          "meaning": "autumn leaves / maple",
+          "chinese_cognate_note": "Same characters used in Chinese"
+        },
+        {
+          "word": "の",
+          "reading": "no",
+          "meaning": "[Possessive/Genitive Particle]"
+        },
+        {
+          "word": "錦",
+          "reading": "nishiki",
+          "meaning": "brocade",
+          "chinese_cognate_note": "Same character/meaning as 錦"
+        },
+        {
+          "word": "神",
+          "reading": "kami",
+          "meaning": "god / deity",
+          "chinese_cognate_note": "Same character/meaning as 神"
+        },
+        {
+          "word": "の",
+          "reading": "no",
+          "meaning": "[Possessive/Genitive Particle]"
+        },
+        {
+          "word": "まにまに",
+          "reading": "manimani",
+          "meaning": "at the will of / according to"
+        }
+      ],
+      "focus_highlight": [
+        11,
+        12
+      ]
+    },
+    {
+      "type": "grammar_spotlight",
+      "content": "Look at **取りあへず (toriaezu)**. The verb is 'toriahu' (to do fully). To negate it, we change it to its Mizenkei (toriahe) and add **ず (zu)**. \n\nLogic: [Action: Prepare] + [Not] = [Did not prepare]. \n\nIn this poem, the author is traveling so suddenly he didn't have time to prepare ritual offerings, so he offers the autumn leaves instead."
+    },
+    {
+      "type": "poem_presentation",
+      "poem_id": "lapis_611ff94dbcc5ac83",
+      "display": {
+        "text_with_furigana": "つくはねの<ruby>峰<rt>みね</rt></ruby>のもみちはおちつもりしるも<ruby>しら<rt>しら</rt></ruby><span style='color: #ff4500;'>ぬ</span>もなへてかなしも",
+        "romaji": "tsukuhaneno minenomomijiha ochitsumorishirumoshiranumonahetekanashimo",
+        "translation": "The autumn leaves from the peaks of Tsukuba fall and pile up; those I know and those I do not know, all are equally sad."
+      },
+      "vocabulary": [
+        {
+          "word": "つくはね",
+          "reading": "tsukuhane",
+          "meaning": "Mt. Tsukuba's peak"
+        },
+        {
+          "word": "の",
+          "reading": "no",
+          "meaning": "[Possessive Particle]"
+        },
+        {
+          "word": "峰",
+          "reading": "mine",
+          "meaning": "peak / summit",
+          "chinese_cognate_note": "Same character/meaning as 峰"
+        },
+        {
+          "word": "の",
+          "reading": "no",
+          "meaning": "[Possessive Particle]"
+        },
+        {
+          "word": "もみち",
+          "reading": "momiji",
+          "meaning": "autumn leaves"
+        },
+        {
+          "word": "は",
+          "reading": "wa",
+          "meaning": "[Topic Marker]"
+        },
+        {
+          "word": "おちつもり",
+          "reading": "ochitsumori",
+          "meaning": "falling and piling up",
+          "chinese_cognate_note": "落 (fall) + 積 (pile)"
+        },
+        {
+          "word": "しる",
+          "reading": "shiru",
+          "meaning": "those who know / to know",
+          "chinese_cognate_note": "知 (know)"
+        },
+        {
+          "word": "も",
+          "reading": "mo",
+          "meaning": "also / and"
+        },
+        {
+          "word": "しら",
+          "reading": "shira",
+          "meaning": "to know (Mizenkei base)"
+        },
+        {
+          "word": "ぬ",
+          "reading": "nu",
+          "meaning": "not (negative auxiliary - attributive form)"
+        },
+        {
+          "word": "も",
+          "reading": "mo",
+          "meaning": "also / and"
+        },
+        {
+          "word": "なへて",
+          "reading": "nahete",
+          "meaning": "altogether / generally"
+        },
+        {
+          "word": "かなしも",
+          "reading": "kanashimo",
+          "meaning": "how sad"
+        }
+      ],
+      "focus_highlight": [
+        21,
+        22
+      ]
+    },
+    {
+      "type": "grammar_spotlight",
+      "content": "In the second poem, we see **しらぬ (shiranu)**. \n1. Verb: **しる** (shiru - to know / 知).\n2. Mizenkei: **しら** (shira).\n3. Negative: **ぬ** (nu).\n\nWhy **ぬ** instead of **ず**? Because it is acting as a noun ('those who do NOT know'). As we learned in Unit 3, the **Rentaikei** (Attributive form) is required to turn a verb into a noun-phrase or modify a noun. For the negative auxiliary, the Rentaikei is **ぬ**."
+    },
+    {
+      "type": "poem_presentation",
+      "poem_id": "lapis_cf692c16ec62ceea",
+      "display": {
+        "text_with_furigana": "<ruby>しもこほり<rt>しもこほり</rt></ruby><ruby>こころ<rt>こころ</rt></ruby>も<ruby>とけ<rt>とけ</rt></ruby><span style='color: #ff4500;'>ぬ</span><ruby>ふゆ<rt>ふゆ</rt></ruby>の<ruby>いけ<rt>いけ</rt></ruby>によふけてそなくをしのひとこゑ",
+        "romaji": "shimokōri kokoro mo tokenu fuyu no ike ni yofukete so naku o shi no hitokoe",
+        "translation": "In the winter pond where the ice is frozen and the core does not melt, the single cry of a mandarin duck as the night deepens."
+      },
+      "vocabulary": [
+        {
+          "word": "しもこほり",
+          "reading": "shimokōri",
+          "meaning": "frost-frozen / thin ice",
+          "chinese_cognate_note": "霜 (frost) + 氷 (ice)"
+        },
+        {
+          "word": "こころ",
+          "reading": "kokoro",
+          "meaning": "heart / center / core",
+          "chinese_cognate_note": "心 (heart/core)"
+        },
+        {
+          "word": "も",
+          "reading": "mo",
+          "meaning": "also / even"
+        },
+        {
+          "word": "とけ",
+          "reading": "toke",
+          "meaning": "to melt (Mizenkei base)",
+          "chinese_cognate_note": "解 (dissolve/melt)"
+        },
+        {
+          "word": "ぬ",
+          "reading": "nu",
+          "meaning": "not (negative auxiliary)"
+        },
+        {
+          "word": "ふゆ",
+          "reading": "fuyu",
+          "meaning": "winter",
+          "chinese_cognate_note": "冬 (winter)"
+        },
+        {
+          "word": "の",
+          "reading": "no",
+          "meaning": "[Possessive Particle]"
+        },
+        {
+          "word": "いけ",
+          "reading": "ike",
+          "meaning": "pond",
+          "chinese_cognate_note": "池 (pond)"
+        },
+        {
+          "word": "に",
+          "reading": "ni",
+          "meaning": "[Location Particle]"
+        },
+        {
+          "word": "よふけて",
+          "reading": "yofukete",
+          "meaning": "night deepening",
+          "chinese_cognate_note": "夜 (night) + 更 (grow late)"
+        },
+        {
+          "word": "そ",
+          "reading": "so",
+          "meaning": "[Emphasis Particle]"
+        },
+        {
+          "word": "なく",
+          "reading": "naku",
+          "meaning": "to cry (of an animal)",
+          "chinese_cognate_note": "鳴 (cry/chirp)"
+        },
+        {
+          "word": "をしの",
+          "reading": "oshino",
+          "meaning": "mandarin duck's"
+        },
+        {
+          "word": "ひとこゑ",
+          "reading": "hitokoe",
+          "meaning": "single voice / one cry",
+          "chinese_cognate_note": "一 (one) + 声 (voice)"
+        }
+      ],
+      "focus_highlight": [
+        11,
+        12
+      ]
+    },
+    {
+      "type": "comprehension_check",
+      "question": "In Poem 3, look at the phrase 'とけぬふゆのいけ' (tokenu fuyu no ike). Based on the grammar we just discussed, what is the logical relationship between 'melt' (toke) and 'winter pond' (fuyu no ike)?",
+      "answer": "The 'nu' negates 'toke' (melt), and because 'nu' is the attributive form, it modifies the 'winter pond.' Thus, it is a 'pond that does NOT melt.'",
+      "hint": "Identify the base of 'toke' and the function of 'nu' when it precedes a noun like 'fuyu' (winter)."
+    }
+  ],
+  "reference_card": {
+    "point": "Auxiliary ず (zu / nu)",
+    "one_liner": "The negative auxiliary that attaches to the Mizenkei (Unrealized) base to mean 'does not' or 'without'.",
+    "example": "しらぬ (shira-nu) = [Know: Mizenkei] + [Not] = Does not know.",
+    "see_also": [
+      "conjugation_mizenkei",
+      "conjugation_rentaikei"
+    ]
+  },
+  "forward_references": [
+    {
+      "point": "そ (so)",
+      "note": "In Poem 3, you see 'so naku'. This 'so' is an emphasis particle that will trigger a special verb ending called Kakari-musubi in Unit 7."
+    },
+    {
+      "point": "かなしも (kanashimo)",
+      "note": "The ending '-shi' in Poem 2 is the standard way to end an adjective in Classical Japanese. We will cover this in Unit 5."
+    }
+  ]
+}

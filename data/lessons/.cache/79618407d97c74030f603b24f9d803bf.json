@@ -1,0 +1,343 @@
+{
+  "lesson_title": "The Subtle Spotlight: Particle そ (so) and the Logic of Emphasis",
+  "lesson_summary": "This lesson introduces the particle 'so' (そ), a poetic variant of the emphatic 'zo'. You will learn how it highlights a specific word and 'locks' the sentence-ending verb into the Rentaikei form.",
+  "grammar_explanation": {
+    "concept": "The particle 'so' (そ) acts as a logical 'spotlight'. It identifies a specific noun or adverb as the most important piece of information in the sentence. Grammatically, it functions exactly like 'zo' (ぞ), triggering the 'Kakari-Musubi' (Binding) rule: the final verb must change from its standard ending to its 'Rentaikei' (Attributive) form.",
+    "formation": "[Highlighted Word] + そ (so) ... [Verb/Auxiliary in Rentaikei]",
+    "variations": [
+      "ぞ (zo) - The more common, stronger version of this emphasis.",
+      "こそ (koso) - An even stronger emphasis that requires the Izenkei ending."
+    ],
+    "common_confusions": [
+      "vs. ぞ (zo): 'So' is often considered more archaic or softer in tone, though the logical function is identical.",
+      "vs. the pronoun 'so' (that): In some contexts, 'so' can mean 'that thing', but when it follows a noun and changes the sentence ending, it is the emphatic particle."
+    ]
+  },
+  "teaching_sequence": [
+    {
+      "type": "introduction",
+      "content": "In previous lessons, we explored how 'zo' (ぞ) and 'koso' (こそ) create a 'logical lock' between a highlighted word and the end of a sentence. Today, we encounter 'so' (そ). Think of 'so' as a slightly more elegant, classical version of 'zo'. It serves the same purpose: it tells the reader, 'Pay attention to THIS word,' and then forces the sentence to conclude with a Rentaikei (Attributive) form to 'bind' that emphasis."
+    },
+    {
+      "type": "poem_presentation",
+      "poem_id": "lapis_aba5aabecf441996",
+      "display": {
+        "text_with_furigana": "<ruby>音羽山<rt>おとはやま</rt></ruby><ruby>今朝<rt>けさ</rt></ruby><ruby>越<rt>こ</rt></ruby>えくれば<ruby>郭公<rt>ほととぎす</rt></ruby><ruby>梢<rt>こすゑ</rt></ruby>はるかに<ruby>今<rt>いま</rt></ruby><ruby>そ<rt>そ</rt></ruby><ruby>鳴<rt>な</rt></ruby>くなる",
+        "romaji": "otowayama kesa koe kure ba hototogisu kosue haruka ni ima so nakunaru",
+        "translation": "Having crossed Mt. Otowa this morning, the cuckoo is singing now, far off in the treetops."
+      },
+      "vocabulary": [
+        {
+          "word": "音羽山",
+          "reading": "おとはやま",
+          "meaning": "Mt. Otowa",
+          "chinese_cognate_note": "Proper noun; 山 is mountain."
+        },
+        {
+          "word": "今朝",
+          "reading": "けさ",
+          "meaning": "this morning",
+          "chinese_cognate_note": "Same as Chinese '今朝' (jīnzhāo)."
+        },
+        {
+          "word": "越え",
+          "reading": "こえ",
+          "meaning": "to cross over",
+          "chinese_cognate_note": "Cognate with '越' (yuè)."
+        },
+        {
+          "word": "くれ",
+          "reading": "くれ",
+          "meaning": "to come (auxiliary-like usage here)",
+          "chinese_cognate_note": "From '来' (lái)."
+        },
+        {
+          "word": "ば",
+          "reading": "ば",
+          "meaning": "when/since (conditional)",
+          "chinese_cognate_note": null
+        },
+        {
+          "word": "郭公",
+          "reading": "ほととぎす",
+          "meaning": "cuckoo (bird)",
+          "chinese_cognate_note": "Classical name for the bird."
+        },
+        {
+          "word": "梢",
+          "reading": "こすゑ",
+          "meaning": "treetop",
+          "chinese_cognate_note": "Cognate with '梢' (shāo)."
+        },
+        {
+          "word": "はるかに",
+          "reading": "はるかに",
+          "meaning": "distantly",
+          "chinese_cognate_note": "Cognate with '遥' (yáo)."
+        },
+        {
+          "word": "今",
+          "reading": "いま",
+          "meaning": "now",
+          "chinese_cognate_note": "Same as Chinese '今' (jīn)."
+        },
+        {
+          "word": "そ",
+          "reading": "そ",
+          "meaning": "[Emphatic Particle]",
+          "chinese_cognate_note": "The target of this lesson."
+        },
+        {
+          "word": "なくなる",
+          "reading": "なくなる",
+          "meaning": "is singing",
+          "chinese_cognate_note": "鳴 (míng) = bird cry."
+        }
+      ],
+      "focus_highlight": [
+        21,
+        22
+      ]
+    },
+    {
+      "type": "grammar_spotlight",
+      "content": "Look at the end of the poem: `今そなくなる`. \n1. **The Spotlight**: The particle `そ` highlights `今` (Now). The poet isn't just saying the bird is singing; they are emphasizing that it is singing *right now*.\n2. **The Lock**: Because of `そ`, the verb `なくなる` (to sing) is in its **Rentaikei** form. Without `そ`, the sentence would end in the Shuushikei form `なかなり`."
+    },
+    {
+      "type": "poem_presentation",
+      "poem_id": "lapis_30203194c3b2dcfb",
+      "display": {
+        "text_with_furigana": "<ruby>世<rt>よ</rt></ruby>に<ruby>経<rt>ふ</rt></ruby>れば<ruby>言<rt>こと</rt></ruby>のはしけき<ruby>呉竹<rt>くれたけ</rt></ruby>のうき<ruby>節<rt>ふし</rt></ruby>ごとに<ruby>鶯<rt>うぐいす</rt></ruby><ruby>そ<rt>そ</rt></ruby><ruby>鳴<rt>な</rt></ruby>く",
+        "romaji": "yo ni fure ba koto no hashikeki kuretake no ukifushi koto ni uguisu so naku",
+        "translation": "As I pass through this world of harsh words, the bush warbler sings at every painful node of the dark bamboo."
+      },
+      "vocabulary": [
+        {
+          "word": "世",
+          "reading": "よ",
+          "meaning": "world/life",
+          "chinese_cognate_note": "Same as Chinese '世' (shì)."
+        },
+        {
+          "word": "に",
+          "reading": "に",
+          "meaning": "in/at (location)",
+          "chinese_cognate_note": null
+        },
+        {
+          "word": "経れば",
+          "reading": "ふれば",
+          "meaning": "as [time] passes",
+          "chinese_cognate_note": "Cognate with '经' (jīng)."
+        },
+        {
+          "word": "言",
+          "reading": "こと",
+          "meaning": "words",
+          "chinese_cognate_note": "Cognate with '言' (yán)."
+        },
+        {
+          "word": "の",
+          "reading": "の",
+          "meaning": "of (possessive)",
+          "chinese_cognate_note": null
+        },
+        {
+          "word": "はしけき",
+          "reading": "はしけき",
+          "meaning": "harsh/severe",
+          "chinese_cognate_note": null
+        },
+        {
+          "word": "呉竹",
+          "reading": "くれたけ",
+          "meaning": "dark bamboo",
+          "chinese_cognate_note": "竹 is bamboo."
+        },
+        {
+          "word": "の",
+          "reading": "の",
+          "meaning": "of",
+          "chinese_cognate_note": null
+        },
+        {
+          "word": "うき",
+          "reading": "うき",
+          "meaning": "painful/sad",
+          "chinese_cognate_note": "Cognate with '忧' (yōu)."
+        },
+        {
+          "word": "節",
+          "reading": "ふし",
+          "meaning": "node/joint (of bamboo)",
+          "chinese_cognate_note": "Same as Chinese '节' (jié)."
+        },
+        {
+          "word": "ごとに",
+          "reading": "ごとに",
+          "meaning": "every/each",
+          "chinese_cognate_note": "Cognate with '每' (měi)."
+        },
+        {
+          "word": "鶯",
+          "reading": "うぐいす",
+          "meaning": "bush warbler",
+          "chinese_cognate_note": "Same as Chinese '莺' (yīng)."
+        },
+        {
+          "word": "そ",
+          "reading": "そ",
+          "meaning": "[Emphatic Particle]",
+          "chinese_cognate_note": null
+        },
+        {
+          "word": "鳴く",
+          "reading": "なく",
+          "meaning": "sings",
+          "chinese_cognate_note": "鳴 (míng) = bird cry."
+        }
+      ],
+      "focus_highlight": [
+        23,
+        24
+      ]
+    },
+    {
+      "type": "grammar_spotlight",
+      "content": "In this poem, the spotlight `そ` is on the `鶯` (warbler). \n- **Logic**: It is the *warbler* (and nothing else) that sings amidst the painful nodes of life. \n- **Grammar**: The verb `鳴く` (naku) is the Rentaikei form. In this specific verb class, the Shuushikei and Rentaikei look identical, but the presence of `そ` tells us logically that this is a 'bound' Rentaikei ending."
+    },
+    {
+      "type": "poem_presentation",
+      "poem_id": "lapis_b6b7eb62342e0f4c",
+      "display": {
+        "text_with_furigana": "<ruby>暁<rt>あかつき</rt></ruby>のしきのはねがき<ruby>百<rt>もも</rt></ruby>はがき<ruby>君<rt>きみ</rt></ruby>がこぬ<ruby>夜<rt>よ</rt></ruby>は<ruby>我<rt>われ</rt></ruby><ruby>そ<rt>そ</rt></ruby><ruby>数<rt>かず</rt></ruby><ruby>書<rt>か</rt></ruby>く",
+        "romaji": "akatsuki no shiki no hanegaki momohagaki kimi ga konu yo wa ware so kazukaku",
+        "translation": "Like the frequent flapping of wings at dawn, on the nights you do not come, it is I who count the hours."
+      },
+      "vocabulary": [
+        {
+          "word": "暁",
+          "reading": "あかつき",
+          "meaning": "dawn",
+          "chinese_cognate_note": "Same as Chinese '晓' (xiǎo)."
+        },
+        {
+          "word": "の",
+          "reading": "の",
+          "meaning": "of",
+          "chinese_cognate_note": null
+        },
+        {
+          "word": "しきの",
+          "reading": "しきの",
+          "meaning": "frequent",
+          "chinese_cognate_note": "Cognate with 'しきり' (frequent)."
+        },
+        {
+          "word": "はねがき",
+          "reading": "はねがき",
+          "meaning": "flapping wings",
+          "chinese_cognate_note": "羽 (wing) + 掻く (scratch/beat)."
+        },
+        {
+          "word": "百",
+          "reading": "もも",
+          "meaning": "hundred (many)",
+          "chinese_cognate_note": "Same as Chinese '百' (bǎi)."
+        },
+        {
+          "word": "はがき",
+          "reading": "はがき",
+          "meaning": "wing-flapping",
+          "chinese_cognate_note": "羽 (wing)."
+        },
+        {
+          "word": "君",
+          "reading": "きみ",
+          "meaning": "you",
+          "chinese_cognate_note": "Same as Chinese '君' (jūn)."
+        },
+        {
+          "word": "が",
+          "reading": "が",
+          "meaning": "[Subject Marker]",
+          "chinese_cognate_note": null
+        },
+        {
+          "word": "こ",
+          "reading": "こ",
+          "meaning": "come",
+          "chinese_cognate_note": "来 (lái)."
+        },
+        {
+          "word": "ぬ",
+          "reading": "ぬ",
+          "meaning": "not (negative)",
+          "chinese_cognate_note": null
+        },
+        {
+          "word": "夜",
+          "reading": "よ",
+          "meaning": "night",
+          "chinese_cognate_note": "Same as Chinese '夜' (yè)."
+        },
+        {
+          "word": "は",
+          "reading": "は",
+          "meaning": "as for (topic)",
+          "chinese_cognate_note": null
+        },
+        {
+          "word": "我",
+          "reading": "われ",
+          "meaning": "I",
+          "chinese_cognate_note": "Same as Chinese '我' (wǒ)."
+        },
+        {
+          "word": "そ",
+          "reading": "そ",
+          "meaning": "[Emphatic Particle]",
+          "chinese_cognate_note": null
+        },
+        {
+          "word": "数",
+          "reading": "かず",
+          "meaning": "number/count",
+          "chinese_cognate_note": "Same as Chinese '数' (shù)."
+        },
+        {
+          "word": "書く",
+          "reading": "かく",
+          "meaning": "to write/draw (here: to count/mark)",
+          "chinese_cognate_note": "Same as Chinese '书' (shū)."
+        }
+      ],
+      "focus_highlight": [
+        21,
+        22
+      ]
+    },
+    {
+      "type": "comprehension_check",
+      "question": "In the third poem, what word is being highlighted by 'そ', and what is the logical effect on the sentence?",
+      "answer": "The word highlighted is '我' (I). The logical effect is to emphasize that the speaker themselves is the one counting the lonely hours, contrasting their active waiting with the 'you' who does not come.",
+      "hint": "Look at the word immediately preceding 'そ'."
+    }
+  ],
+  "reference_card": {
+    "point": "Particle そ (so)",
+    "one_liner": "An emphatic particle that highlights the preceding word and requires the sentence to end in the Rentaikei form.",
+    "example": "今そ鳴くなる (It is NOW that it sings.)",
+    "see_also": [
+      "particle_zo",
+      "particle_koso",
+      "conjugation_rentaikei"
+    ]
+  },
+  "forward_references": [
+    {
+      "point": "Kakari-Musubi (Binding Rule)",
+      "note": "We have seen this with 'zo', 'koso', and now 'so'. In our final lesson of this unit, we will summarize the complete logic of how these particles 'lock' sentence endings."
+    }
+  ]
+}

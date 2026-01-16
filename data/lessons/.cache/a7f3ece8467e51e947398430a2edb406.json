@@ -1,0 +1,273 @@
+{
+  "lesson_title": "The Logical Bridge: Particle て (te) — Linking Actions",
+  "lesson_summary": "In this lesson, we move beyond static nouns to dynamic actions. You will learn how the particle 'te' acts as a logical connector, allowing multiple verbs to flow together in a sequence or to describe the manner in which an action occurs.",
+  "grammar_explanation": {
+    "concept": "The particle 'te' (て) is a conjunctive particle (接続助詞). In Chinese, actions are often simply placed side-by-side (e.g., 花开落 - flowers bloom [and] fall). In Japanese, verbs require a 'logical glue' to connect. 'Te' functions like a programming semicolon (;) or a plus sign (+), indicating that the first action leads into or accompanies the second.",
+    "formation": "It attaches to the 'continuative form' (連用形) of a verb. For now, simply recognize it as the bridge between two action-words.",
+    "variations": [
+      "Sometimes appears as 'de' (で) after certain sounds, but 'te' is the standard classical form."
+    ],
+    "common_confusions": [
+      "Do not confuse with the particle 'to' (と). 'To' links nouns (A and B) or marks quotes. 'Te' links actions (Doing A, then B)."
+    ]
+  },
+  "teaching_sequence": [
+    {
+      "type": "introduction",
+      "content": "Up until now, we have focused on how nouns relate to each other (の) and how they interact with verbs (を, に). But what happens when a poem describes a series of events? In Classical Japanese, you cannot simply stack verbs. You need a 'Logic Gate' to show the flow. Think of 'te' as the 'AND THEN' operator in your code."
+    },
+    {
+      "type": "poem_presentation",
+      "poem_id": "lapis_33bf42aad14edd26",
+      "display": {
+        "text_with_furigana": "<ruby>うぐひす<rt>うぐひす</rt></ruby>の<ruby>音<rt>おと</rt></ruby><ruby>聞<rt>き</rt></ruby>くなへに<ruby>梅<rt>うめ</rt></ruby>の<ruby>花<rt>はな</rt></ruby><ruby>脇<rt>わき</rt></ruby>への<ruby>園<rt>その</rt></ruby>に<ruby>咲<rt>さ</rt></ruby>き<span style='color:red; font-weight:bold;'>て</span><ruby>散<rt>ち</rt></ruby>る<ruby>見<rt>み</rt></ruby>ゆ",
+        "romaji": "uguisu no oto kiku naheni ume no hana waki e no sono ni sakite chiru miyu",
+        "translation": "While hearing the voice of the bush warbler, the plum blossoms in the garden to the side are seen blooming and then falling."
+      },
+      "vocabulary": [
+        {
+          "word": "うぐひす",
+          "reading": "うぐひす",
+          "meaning": "Japanese bush warbler",
+          "chinese_cognate_note": "Often written as 莺 (yīng) in Chinese poetry."
+        },
+        {
+          "word": "の",
+          "reading": "の",
+          "meaning": "possessive particle (of)",
+          "chinese_cognate_note": "Equivalent to 的 (de)."
+        },
+        {
+          "word": "音",
+          "reading": "おと",
+          "meaning": "sound/voice",
+          "chinese_cognate_note": "Same as Chinese 音 (yīn)."
+        },
+        {
+          "word": "聞く",
+          "reading": "きく",
+          "meaning": "to hear",
+          "chinese_cognate_note": "Same as Chinese 闻 (wén) in classical context."
+        },
+        {
+          "word": "なへに",
+          "reading": "なへに",
+          "meaning": "while / at the same time as"
+        },
+        {
+          "word": "梅",
+          "reading": "うめ",
+          "meaning": "plum",
+          "chinese_cognate_note": "Same as Chinese 梅 (méi)."
+        },
+        {
+          "word": "の",
+          "reading": "の",
+          "meaning": "possessive particle (of)"
+        },
+        {
+          "word": "花",
+          "reading": "はな",
+          "meaning": "flower",
+          "chinese_cognate_note": "Same as Chinese 花 (huā)."
+        },
+        {
+          "word": "脇",
+          "reading": "わき",
+          "meaning": "side",
+          "chinese_cognate_note": "Same as Chinese 胁 (xié), meaning side of the body/flank."
+        },
+        {
+          "word": "へ",
+          "reading": "へ",
+          "meaning": "direction particle (toward)"
+        },
+        {
+          "word": "の",
+          "reading": "の",
+          "meaning": "possessive particle (of)"
+        },
+        {
+          "word": "園",
+          "reading": "その",
+          "meaning": "garden",
+          "chinese_cognate_note": "Same as Chinese 园 (yuán)."
+        },
+        {
+          "word": "に",
+          "reading": "に",
+          "meaning": "location particle (in/at)"
+        },
+        {
+          "word": "咲き",
+          "reading": "さき",
+          "meaning": "to bloom (stem form)"
+        },
+        {
+          "word": "て",
+          "reading": "て",
+          "meaning": "conjunctive particle (and/then)"
+        },
+        {
+          "word": "散る",
+          "reading": "ちる",
+          "meaning": "to fall/scatter",
+          "chinese_cognate_note": "Similar to Chinese 凋 (diāo)."
+        },
+        {
+          "word": "見ゆ",
+          "reading": "みゆ",
+          "meaning": "to be seen",
+          "chinese_cognate_note": "Root is 见 (jiàn)."
+        }
+      ],
+      "focus_highlight": [
+        26,
+        27
+      ]
+    },
+    {
+      "type": "grammar_spotlight",
+      "content": "Look at the sequence: **咲き (bloom) + て (and) + 散る (fall)**. \n\nIn Chinese, you might say '花开落'. In Japanese, the 'て' creates a temporal flow. It tells the reader that the blooming and the falling are part of a single continuous observation. Without 'て', the sentence would break logically."
+    },
+    {
+      "type": "poem_presentation",
+      "poem_id": "lapis_5871ee6d9ab64013",
+      "display": {
+        "text_with_furigana": "<ruby>世<rt>よ</rt></ruby>をいとひこの<ruby>本<rt>もと</rt></ruby>ことに<ruby>立<rt>た</rt></ruby>ち<ruby>寄<rt>よ</rt></ruby>り<span style='color:red; font-weight:bold;'>て</span>うつふし<ruby>染<rt>そ</rt></ruby>めの<ruby>朝<rt>あさ</rt></ruby>の<ruby>衣<rt>きぬ</rt></ruby>なり",
+        "romaji": "yo o itohi kono moto koto ni tachiyorite utsufushi some no asa no kinu nari",
+        "translation": "Weary of the world, I approach the foot of this tree, and [find] it is a robe of hemp dyed in the color of the utsufushi fruit."
+      },
+      "vocabulary": [
+        {
+          "word": "世",
+          "reading": "よ",
+          "meaning": "the world / society",
+          "chinese_cognate_note": "Same as Chinese 世 (shì)."
+        },
+        {
+          "word": "を",
+          "reading": "を",
+          "meaning": "object marker"
+        },
+        {
+          "word": "いとひ",
+          "reading": "いとひ",
+          "meaning": "to dislike / be weary of"
+        },
+        {
+          "word": "こ",
+          "reading": "こ",
+          "meaning": "this"
+        },
+        {
+          "word": "の",
+          "reading": "の",
+          "meaning": "possessive particle (of)"
+        },
+        {
+          "word": "本",
+          "reading": "もと",
+          "meaning": "base / foot (of a tree)",
+          "chinese_cognate_note": "Same as Chinese 本 (běn), meaning root/origin."
+        },
+        {
+          "word": "こと",
+          "reading": "こと",
+          "meaning": "especially / in particular"
+        },
+        {
+          "word": "に",
+          "reading": "に",
+          "meaning": "location particle (at)"
+        },
+        {
+          "word": "立ち寄り",
+          "reading": "たちより",
+          "meaning": "to approach / drop by"
+        },
+        {
+          "word": "て",
+          "reading": "て",
+          "meaning": "conjunctive particle (and/then)"
+        },
+        {
+          "word": "うつふし",
+          "reading": "うつふし",
+          "meaning": "a type of dye (from gallnuts)"
+        },
+        {
+          "word": "染め",
+          "reading": "そめ",
+          "meaning": "dyeing",
+          "chinese_cognate_note": "Same as Chinese 染 (rǎn)."
+        },
+        {
+          "word": "の",
+          "reading": "の",
+          "meaning": "possessive particle (of)"
+        },
+        {
+          "word": "朝",
+          "reading": "あさ",
+          "meaning": "hemp (often used for clothing)",
+          "chinese_cognate_note": "Note: In this context, it refers to hemp fabric (麻)."
+        },
+        {
+          "word": "の",
+          "reading": "の",
+          "meaning": "possessive particle (of)"
+        },
+        {
+          "word": "衣",
+          "reading": "きぬ",
+          "meaning": "clothing / robe",
+          "chinese_cognate_note": "Same as Chinese 衣 (yī)."
+        },
+        {
+          "word": "なり",
+          "reading": "なり",
+          "meaning": "is (copula)"
+        }
+      ],
+      "focus_highlight": [
+        16,
+        17
+      ]
+    },
+    {
+      "type": "contrast_example",
+      "content": "In the second poem, 'て' connects the action of 'approaching' (立ち寄り) to the final state of the sentence. \n\n**Structure:** [Action 1: Approach] + て + [Action 2/State: It is a robe]. \n\nThis is a 'Sequential Logic'. Action A must happen for Action B to be realized or observed."
+    },
+    {
+      "type": "comprehension_check",
+      "poem_id": "lapis_402126b3934b9c1b",
+      "question": "In the phrase 'わけておひいてくる' (wakete ohi-ide kuru), what is the function of 'て'?",
+      "answer": "It links the action of 'pushing through/dividing' (wake) with the action of 'growing out' (ohi-ide). It shows that the grass grows *by* pushing through the snow.",
+      "hint": "Look at the verbs on either side of 'te'. How does the first action relate to the second?"
+    }
+  ],
+  "reference_card": {
+    "point": "Particle て (te)",
+    "one_liner": "The 'Logical Bridge' that connects two verbs to show sequence, manner, or cause.",
+    "example": "咲きて散る (Saki-te chiru) = Bloom AND THEN fall.",
+    "see_also": [
+      "particle_to",
+      "particle_ni"
+    ]
+  },
+  "forward_references": [
+    {
+      "point": "なり (nari)",
+      "note": "We saw this at the end of Poem 2. It functions like 'is' (是) and will be covered in Unit 3."
+    },
+    {
+      "point": "なへに (naheni)",
+      "note": "A more complex temporal particle meaning 'at the same time as', which we will contrast with 'te' later."
+    },
+    {
+      "point": "し (shi)",
+      "note": "In Poem 3, this indicates past tense. We will learn this in the Auxiliaries unit."
+    }
+  ]
+}

@@ -1,0 +1,368 @@
+{
+  "lesson_id": "lesson_particle_he",
+  "lesson_title": "The Vector of Movement: Particle へ (he/e)",
+  "lesson_summary": "In this lesson, we transition from static locations to dynamic directions. You will learn how the particle へ (pronounced 'e') acts as a directional vector, pointing the way toward a destination.",
+  "grammar_point": "particle_he",
+  "grammar_explanation": {
+    "concept": "The particle へ (written as 'he' but pronounced 'e') indicates the direction of movement. While the particle に (ni) often marks a specific destination or point in time, へ emphasizes the 'path' or 'heading' toward a place. In programming terms, if に is an assignment to a specific memory address, へ is a vector pointing toward a range.",
+    "formation": "[Noun] + へ (Directional Marker)",
+    "variations": [
+      "へ + の: Used to describe a noun located in a certain direction (e.g., 'the garden in that direction').",
+      "へ + 行く: The most common pairing, meaning 'to go toward'."
+    ],
+    "common_confusions": [
+      "へ vs に: に is 'at' or 'to' (the target). へ is 'toward' (the direction). In many classical contexts, they are interchangeable, but へ feels more spatial and expansive."
+    ]
+  },
+  "teaching_sequence": [
+    {
+      "type": "introduction",
+      "content": "In Unit 1, we mastered the 'Case Markers' that identify the actors and objects in a sentence. Now, we begin Unit 2 by looking at 'Directionality.' In Chinese, you use '向' (xiàng) or '往' (wǎng) to show where someone is heading. In Classical Japanese, this 'vector' is handled by the particle へ."
+    },
+    {
+      "type": "poem_presentation",
+      "poem_id": "lapis_567dd6dbe5aab23d",
+      "display": {
+        "text_with_furigana": "<ruby>葦<rt>あし</rt></ruby><ruby>へ<rt>へ</rt></ruby><ruby>行<rt>ゆ</rt></ruby>く<ruby>鴨<rt>かも</rt></ruby>の<ruby>者<rt>は</rt></ruby>　<ruby>音<rt>おと</rt></ruby>の<ruby>音<rt>おと</rt></ruby>のみに　<ruby>聞<rt>き</rt></ruby>きつつ　もとな<ruby>恋<rt>こ</rt></ruby>ひわたるかも",
+        "romaji": "ashi e yuku, ka mono wa oto no, oto nomi ni, kikitsutsu moto na, koiwataru ka mo",
+        "translation": "Like the wild ducks going toward the reeds, I hear only the sound of your voice, and continue to long for you aimlessly."
+      },
+      "vocabulary": [
+        {
+          "word": "あし",
+          "reading": "あし",
+          "meaning": "reeds",
+          "span": [
+            0,
+            2
+          ],
+          "chinese_cognate_note": "Often written as 葦 (wěi)."
+        },
+        {
+          "word": "へ",
+          "reading": "え",
+          "meaning": "toward (direction marker)",
+          "span": [
+            2,
+            3
+          ],
+          "chinese_cognate_note": null
+        },
+        {
+          "word": "ゆく",
+          "reading": "ゆく",
+          "meaning": "to go",
+          "span": [
+            3,
+            5
+          ],
+          "chinese_cognate_note": "Cognate with 行 (xíng)."
+        },
+        {
+          "word": "かも",
+          "reading": "かも",
+          "meaning": "wild duck",
+          "span": [
+            5,
+            7
+          ],
+          "chinese_cognate_note": null
+        },
+        {
+          "word": "の",
+          "reading": "の",
+          "meaning": "possessive/genitive particle",
+          "span": [
+            7,
+            8
+          ],
+          "chinese_cognate_note": null
+        },
+        {
+          "word": "は",
+          "reading": "は",
+          "meaning": "topic marker (pronounced 'wa')",
+          "span": [
+            8,
+            9
+          ],
+          "chinese_cognate_note": null
+        },
+        {
+          "word": "おと",
+          "reading": "おと",
+          "meaning": "sound",
+          "span": [
+            9,
+            11
+          ],
+          "chinese_cognate_note": "Cognate with 音 (yīn)."
+        },
+        {
+          "word": "のみ",
+          "reading": "のみ",
+          "meaning": "only",
+          "span": [
+            14,
+            16
+          ],
+          "chinese_cognate_note": null
+        },
+        {
+          "word": "に",
+          "reading": "に",
+          "meaning": "at/by (location/agent marker)",
+          "span": [
+            16,
+            17
+          ],
+          "chinese_cognate_note": null
+        },
+        {
+          "word": "ききつつ",
+          "reading": "ききつつ",
+          "meaning": "while listening",
+          "span": [
+            17,
+            21
+          ],
+          "chinese_cognate_note": null
+        },
+        {
+          "word": "もとな",
+          "reading": "もとな",
+          "meaning": "aimlessly / for no reason",
+          "span": [
+            21,
+            24
+          ],
+          "chinese_cognate_note": null
+        },
+        {
+          "word": "こひわたる",
+          "reading": "こひわたる",
+          "meaning": "to continue longing",
+          "span": [
+            24,
+            29
+          ],
+          "chinese_cognate_note": "恋 (liàn) refers to romantic longing."
+        },
+        {
+          "word": "かも",
+          "reading": "かも",
+          "meaning": "exclamatory particle (expressing emotion)",
+          "span": [
+            29,
+            31
+          ],
+          "chinese_cognate_note": null
+        }
+      ],
+      "focus_highlight": [
+        2,
+        3
+      ]
+    },
+    {
+      "type": "grammar_spotlight",
+      "content": "Look at the first phrase: **あし (reeds) + へ (toward) + ゆく (go)**. \n\nThis is a perfect logical sequence. The particle へ creates a vector starting from the ducks and pointing toward the reeds. \n\n**Data Structure View:**\n`Movement { direction: \"reeds\", action: \"go\" }` \n\nIn Chinese, you would say '往苇丛去' (wǎng wěicóng qù). In Japanese, the 'direction tag' (へ) must follow the noun, just like the particles you learned in Unit 1.",
+      "evidence": "See the poem above."
+    },
+    {
+      "type": "poem_presentation",
+      "poem_id": "lapis_33bf42aad14edd26",
+      "display": {
+        "text_with_furigana": "<ruby>鶯<rt>うくひす</rt></ruby>の<ruby>音<rt>おと</rt></ruby><ruby>聞<rt>き</rt></ruby>くなへに<ruby>梅<rt>うめ</rt></ruby>の<ruby>花<rt>はな</rt></ruby>　<ruby>脇<rt>わき</rt></ruby><ruby>へ<rt>へ</rt></ruby>の<ruby>園<rt>その</rt></ruby>に<ruby>咲<rt>さ</rt></ruby>きて<ruby>散<rt>ち</rt></ruby>る<ruby>見<rt>み</rt></ruby>ゆ",
+        "romaji": "ukuhisuno, otokikuna heni, umeno hanawaki, eno sononi, sakitechirumiyu",
+        "translation": "As soon as I hear the bush warbler's cry, I see the plum blossoms in the garden to the side blooming and scattering."
+      },
+      "vocabulary": [
+        {
+          "word": "うぐひす",
+          "reading": "うぐひす",
+          "meaning": "Japanese bush warbler",
+          "span": null,
+          "chinese_cognate_note": "鶯 (yīng)."
+        },
+        {
+          "word": "の",
+          "reading": "の",
+          "meaning": "possessive particle",
+          "span": [
+            4,
+            5
+          ],
+          "chinese_cognate_note": null
+        },
+        {
+          "word": "おと",
+          "reading": "おと",
+          "meaning": "sound",
+          "span": [
+            5,
+            7
+          ],
+          "chinese_cognate_note": null
+        },
+        {
+          "word": "きく",
+          "reading": "きく",
+          "meaning": "to hear",
+          "span": [
+            7,
+            9
+          ],
+          "chinese_cognate_note": "聞 (wén)."
+        },
+        {
+          "word": "なへに",
+          "reading": "なへに",
+          "meaning": "as soon as / at the same time as",
+          "span": [
+            9,
+            12
+          ],
+          "chinese_cognate_note": null
+        },
+        {
+          "word": "うめ",
+          "reading": "うめ",
+          "meaning": "plum",
+          "span": [
+            12,
+            14
+          ],
+          "chinese_cognate_note": "梅 (méi)."
+        },
+        {
+          "word": "はな",
+          "reading": "はな",
+          "meaning": "flower",
+          "span": [
+            15,
+            17
+          ],
+          "chinese_cognate_note": "花 (huā)."
+        },
+        {
+          "word": "わき",
+          "reading": "わき",
+          "meaning": "side / flank",
+          "span": [
+            17,
+            19
+          ],
+          "chinese_cognate_note": "脇 (xié)."
+        },
+        {
+          "word": "へ",
+          "reading": "へ",
+          "meaning": "toward / direction",
+          "span": [
+            19,
+            20
+          ],
+          "chinese_cognate_note": null
+        },
+        {
+          "word": "の",
+          "reading": "の",
+          "meaning": "possessive particle (linking direction to noun)",
+          "span": [
+            20,
+            21
+          ],
+          "chinese_cognate_note": null
+        },
+        {
+          "word": "その",
+          "reading": "その",
+          "meaning": "garden",
+          "span": [
+            21,
+            23
+          ],
+          "chinese_cognate_note": "園 (yuán)."
+        },
+        {
+          "word": "に",
+          "reading": "に",
+          "meaning": "in/at (location marker)",
+          "span": [
+            23,
+            24
+          ],
+          "chinese_cognate_note": null
+        },
+        {
+          "word": "さきて",
+          "reading": "さきて",
+          "meaning": "blooming (and...)",
+          "span": [
+            24,
+            27
+          ],
+          "chinese_cognate_note": "咲 (xiào) in Japanese means bloom."
+        },
+        {
+          "word": "ちる",
+          "reading": "ちる",
+          "meaning": "to scatter/fall",
+          "span": [
+            27,
+            29
+          ],
+          "chinese_cognate_note": "散 (sàn)."
+        },
+        {
+          "word": "みゆ",
+          "reading": "みゆ",
+          "meaning": "to be seen / to appear",
+          "span": [
+            29,
+            31
+          ],
+          "chinese_cognate_note": "見 (jiàn)."
+        }
+      ],
+      "focus_highlight": [
+        10,
+        11
+      ]
+    },
+    {
+      "type": "contrast_example",
+      "content": "In the second poem, we see a compound use: **わき (side) + へ (direction) + の (of) + その (garden)**.\n\nThis translates to 'The garden [that is] in the direction of the side.' \n\nNotice the logic: \n1. **わきへ**: 'Toward the side' (Directional vector)\n2. **わきへの**: 'Which belongs to the direction of the side' (Adjectival phrase)\n3. **わきへのその**: 'The side-direction garden'\n\nThis shows how particles can be stacked to build complex spatial relationships."
+    },
+    {
+      "type": "comprehension_check",
+      "question": "In the phrase '京へゆく' (Kyo he yuku), what is the function of 'へ'?",
+      "answer": "It marks 'Kyoto' (京) as the direction toward which the subject is moving.",
+      "hint": "Think of the vector analogy. Is it a static point or a path?"
+    }
+  ],
+  "reference_card": {
+    "point": "Directional Particle へ (he/e)",
+    "one_liner": "Marks the direction or path toward a destination (Toward X).",
+    "example": "あしへゆく (Going toward the reeds)",
+    "see_also": [
+      "particle_ni",
+      "particle_no"
+    ]
+  },
+  "forward_references": [
+    {
+      "point": "つつ (tsutsu)",
+      "note": "We will learn this 'simultaneous action' marker (while...) later in Unit 2."
+    },
+    {
+      "point": "なへに (naheni)",
+      "note": "This complex conjunction meaning 'as soon as' will be covered in our study of temporal links."
+    },
+    {
+      "point": "みゆ (miyu)",
+      "note": "This is a passive/spontaneous verb form we will analyze in Unit 5."
+    }
+  ]
+}

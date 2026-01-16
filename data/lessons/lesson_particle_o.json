@@ -1,0 +1,360 @@
+{
+  "lesson_id": "lesson_particle_o",
+  "lesson_title": "Unit 1.6: The Object Marker を (o) — Identifying the Target",
+  "lesson_summary": "This lesson introduces the particle を (o), which functions as a 'target tag' for actions. For Chinese speakers, this marks the transition from SVO (Verb-Object) to the Japanese SOV (Object-Verb) logical flow.",
+  "grammar_point": "particle_o",
+  "grammar_explanation": {
+    "concept": "The particle を (pronounced 'o') is placed immediately after a noun to indicate that the noun is the direct object of the following verb. In programming terms, if a verb is a function, を identifies the argument being passed to it: Verb(Object) becomes [Object] を [Verb].",
+    "formation": "[Noun] + を + [Verb]",
+    "variations": [
+      "In classical texts, it is written as を, which you may have seen transcribed as 'wo', but it is functionally the object marker 'o'."
+    ],
+    "common_confusions": [
+      "Unlike Chinese, where the object follows the verb (e.g., 看书), in Japanese, the object marked by を must come before the verb (e.g., 书 を 看)."
+    ]
+  },
+  "teaching_sequence": [
+    {
+      "type": "introduction",
+      "content": "In our previous lessons, we looked at how 'no' (の) connects nouns and 'ni' (に) points to locations. Now, we tackle the most active 'function tag' in the Japanese language: を (o). While Chinese logic places the object after the action (我[吃]苹果), Japanese logic tags the object first, then performs the action (我 苹果[を]吃). Think of を as a pointer that says: 'The word I am attached to is what the verb is going to act upon.'"
+    },
+    {
+      "type": "poem_presentation",
+      "poem_id": "lapis_55f7d7f28f83a14a",
+      "display": {
+        "text_with_furigana": "<ruby>あかす<rt>akas-u</rt></ruby>して<ruby>わかるる<rt>wakaruru</rt></ruby><ruby>そて<rt>sode</rt></ruby>の<ruby>しらたま<rt>shiratama</rt></ruby><span style='color: #ff4500;'>を</span><ruby>君<rt>kimi</rt></ruby>か<ruby>かたみ<rt>katami</rt></ruby>と<ruby>つつみ<rt>tsutsumi</rt></ruby>てそ<ruby>行く<rt>yuku</rt></ruby>",
+        "romaji": "akasushite, wakaruru sode no, shiratama o, kimi ga katami to, tsutsumite so yuku",
+        "translation": "Without tiring of them, I wrap the white jewels (tears) of my parting sleeves as a memento of you and go."
+      },
+      "vocabulary": [
+        {
+          "word": "あかす",
+          "reading": "あかす",
+          "meaning": "to tire of, to be satisfied",
+          "span": [
+            0,
+            3
+          ],
+          "chinese_cognate_note": "Related to 飽 (bǎo) - to be full/satisfied"
+        },
+        {
+          "word": "して",
+          "reading": "して",
+          "meaning": "doing (conjunctive particle)",
+          "span": [
+            3,
+            5
+          ],
+          "chinese_cognate_note": null
+        },
+        {
+          "word": "わかるる",
+          "reading": "わかるる",
+          "meaning": "to part, to separate",
+          "span": [
+            5,
+            9
+          ],
+          "chinese_cognate_note": "The kanji is 別 (bié)"
+        },
+        {
+          "word": "そて",
+          "reading": "そで",
+          "meaning": "sleeve",
+          "span": [
+            9,
+            11
+          ],
+          "chinese_cognate_note": "In poetry, sleeves often catch tears"
+        },
+        {
+          "word": "の",
+          "reading": "の",
+          "meaning": "possessive particle (of)",
+          "span": [
+            11,
+            12
+          ],
+          "chinese_cognate_note": "Equivalent to 的 (de)"
+        },
+        {
+          "word": "しらたま",
+          "reading": "しらたま",
+          "meaning": "white jewel, pearl (metaphor for tears)",
+          "span": [
+            12,
+            16
+          ],
+          "chinese_cognate_note": "白玉 (báiyù) - literally 'white jade'"
+        },
+        {
+          "word": "を",
+          "reading": "を",
+          "meaning": "object marker (target tag)",
+          "span": [
+            16,
+            17
+          ],
+          "chinese_cognate_note": null
+        },
+        {
+          "word": "君",
+          "reading": "きみ",
+          "meaning": "you",
+          "span": [
+            17,
+            18
+          ],
+          "chinese_cognate_note": "君 (jūn) - used for 'you' or 'lord'"
+        },
+        {
+          "word": "か",
+          "reading": "が",
+          "meaning": "possessive particle (archaic 'ga')",
+          "span": [
+            18,
+            19
+          ],
+          "chinese_cognate_note": null
+        },
+        {
+          "word": "かたみ",
+          "reading": "かたみ",
+          "meaning": "memento, keepsake",
+          "span": [
+            19,
+            22
+          ],
+          "chinese_cognate_note": "形見 - something left behind"
+        },
+        {
+          "word": "と",
+          "reading": "と",
+          "meaning": "as, like (quotative/particle)",
+          "span": [
+            22,
+            23
+          ],
+          "chinese_cognate_note": null
+        },
+        {
+          "word": "つつみ",
+          "reading": "つつみ",
+          "meaning": "to wrap, to cover",
+          "span": [
+            23,
+            26
+          ],
+          "chinese_cognate_note": "包 (bāo)"
+        },
+        {
+          "word": "て",
+          "reading": "て",
+          "meaning": "and (linking particle)",
+          "span": [
+            26,
+            27
+          ],
+          "chinese_cognate_note": null
+        },
+        {
+          "word": "そ",
+          "reading": "ぞ",
+          "meaning": "emphasis particle",
+          "span": [
+            27,
+            28
+          ],
+          "chinese_cognate_note": null
+        },
+        {
+          "word": "行く",
+          "reading": "ゆく",
+          "meaning": "to go",
+          "span": [
+            28,
+            30
+          ],
+          "chinese_cognate_note": "行 (xíng)"
+        }
+      ],
+      "focus_highlight": [
+        16,
+        17
+      ]
+    },
+    {
+      "type": "grammar_spotlight",
+      "content": "Look at the phrase **しらたま (white jewel) を つつみ (wrap)**. In Chinese, you would say '包白玉' (Wrap the pearl). In this poem, the poet treats the 'white jewels' (tears) as the object. The particle **を** tells us exactly what is being wrapped. Without **を**, 'shiratama' and 'tsutsumi' would just be two floating concepts; with it, they form a logical 'Action -> Object' relationship.",
+      "evidence": "See the poem above."
+    },
+    {
+      "type": "poem_presentation",
+      "poem_id": "lapis_3fae4cc77d26129b",
+      "display": {
+        "text_with_furigana": "おほのうらのそのなかはまに<ruby>よする<rt>yosuru</rt></ruby><ruby>なみ<rt>nami</rt></ruby><ruby>ゆたけき<rt>yutakeki</rt></ruby><ruby>きみ<rt>kimi</rt></ruby><span style='color: #ff4500;'>を</span><ruby>おもふ<rt>omou</rt></ruby>このころ",
+        "romaji": "ohonoura, no sono naka wa ma, ni yosuru nami, yutakeki kimi, o omou kono koro",
+        "translation": "Like the waves approaching the middle beach of Ohonoura, I think of you deeply these days."
+      },
+      "vocabulary": [
+        {
+          "word": "おほのうら",
+          "reading": "おほのうら",
+          "meaning": "Ohonoura (a place name)",
+          "span": [
+            0,
+            5
+          ],
+          "chinese_cognate_note": "浦 (pǔ) means bay/inlet"
+        },
+        {
+          "word": "の",
+          "reading": "の",
+          "meaning": "possessive particle (of)",
+          "span": [
+            5,
+            6
+          ],
+          "chinese_cognate_note": null
+        },
+        {
+          "word": "その",
+          "reading": "その",
+          "meaning": "that",
+          "span": [
+            6,
+            8
+          ],
+          "chinese_cognate_note": null
+        },
+        {
+          "word": "なかはま",
+          "reading": "なかはま",
+          "meaning": "middle beach",
+          "span": [
+            8,
+            12
+          ],
+          "chinese_cognate_note": "中浜 (zhōng bāng)"
+        },
+        {
+          "word": "に",
+          "reading": "に",
+          "meaning": "at, to (location marker)",
+          "span": [
+            12,
+            13
+          ],
+          "chinese_cognate_note": null
+        },
+        {
+          "word": "よする",
+          "reading": "よする",
+          "meaning": "to approach, to wash ashore",
+          "span": [
+            13,
+            16
+          ],
+          "chinese_cognate_note": "寄 (jì)"
+        },
+        {
+          "word": "なみ",
+          "reading": "なみ",
+          "meaning": "wave",
+          "span": [
+            16,
+            18
+          ],
+          "chinese_cognate_note": "波 (bō)"
+        },
+        {
+          "word": "ゆたけき",
+          "reading": "ゆたけき",
+          "meaning": "abundant, plentiful",
+          "span": [
+            18,
+            22
+          ],
+          "chinese_cognate_note": "豊 (fēng)"
+        },
+        {
+          "word": "きみ",
+          "reading": "きみ",
+          "meaning": "you",
+          "span": [
+            22,
+            24
+          ],
+          "chinese_cognate_note": "君 (jūn)"
+        },
+        {
+          "word": "を",
+          "reading": "を",
+          "meaning": "object marker (target tag)",
+          "span": [
+            24,
+            25
+          ],
+          "chinese_cognate_note": null
+        },
+        {
+          "word": "おもふ",
+          "reading": "おもふ",
+          "meaning": "to think, to feel, to love",
+          "span": [
+            25,
+            28
+          ],
+          "chinese_cognate_note": "思 (sī)"
+        },
+        {
+          "word": "このころ",
+          "reading": "このころ",
+          "meaning": "these days, lately",
+          "span": [
+            28,
+            32
+          ],
+          "chinese_cognate_note": "頃 (qǐng) - time/period"
+        }
+      ],
+      "focus_highlight": [
+        24,
+        25
+      ]
+    },
+    {
+      "type": "contrast_example",
+      "content": "In Poem 2, we see **きみ (you) を おもふ (think)**. \n\nChinese: [思] 你 (Verb-Object)\nJapanese: [きみ] を [おもふ] (Object-Verb)\n\nThe particle **を** acts as the bridge. Even if the sentence is long and filled with descriptions of waves and bays, as soon as you see **を**, you know the word before it is the 'victim' or 'target' of the next verb you encounter."
+    },
+    {
+      "type": "comprehension_check",
+      "question": "In the phrase '世をいとひ' (yo o itohi), if '世' (yo) means 'world' and 'いとふ' (itofu) means 'to dislike/be weary of', what is the logical relationship?",
+      "answer": "The speaker is weary of the world. 'World' is the object being disliked.",
+      "hint": "Identify which word is the 'target' marked by を."
+    },
+    {
+      "type": "summary",
+      "content": "You have now mastered the 'Big Three' case markers of Unit 1: \n1. の (no) = Possession/Connection (的)\n2. に (ni) = Location/Direction (在/到)\n3. を (o) = Object Marker (Marks the target of a verb)\n\nWith these three, you can already decode the basic 'Who, Where, and What' of most classical poems."
+    }
+  ],
+  "reference_card": {
+    "point": "Particle を (o)",
+    "one_liner": "The 'Object Marker' that identifies the noun being acted upon by a verb.",
+    "example": "君を思ふ (Kimi o omou) = [You] (object) [Think] (verb) = Thinking of you.",
+    "see_also": [
+      "particle_no",
+      "particle_ni"
+    ]
+  },
+  "forward_references": [
+    {
+      "point": "nari",
+      "note": "In Poem 3, 'kinu nari' ends the sentence. We will learn this 'is/am/are' auxiliary in Unit 03."
+    },
+    {
+      "point": "rentaikei",
+      "note": "Notice 'wakaruru' and 'yosuru' end in -u/ru. This specific form for modifying nouns will be explained in Unit 03."
+    }
+  ]
+}

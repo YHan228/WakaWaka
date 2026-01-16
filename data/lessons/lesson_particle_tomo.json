@@ -1,0 +1,376 @@
+{
+  "lesson_id": "lesson_particle_tomo",
+  "lesson_title": "The Logic of Concession: Particle とも (tomo) — The 'Even If' Gate",
+  "lesson_summary": "This lesson introduces the particle とも (tomo), which functions as a logical 'concession' gate, indicating that a result remains true even if a specific condition is met.",
+  "grammar_point": "particle_tomo",
+  "grammar_explanation": {
+    "concept": "In the previous lesson, we learned how 'ba' (ば) creates a causal link (If A, then B). 'tomo' (とも) is the logical inverse: it creates a concessive link. It signals that the following statement holds true 'even if' or 'although' the preceding condition exists. In programming terms, it is a 'Despite' operator.",
+    "formation": "Usually attaches to the Shushikei (終止形 - Terminal Form) of verbs and adjectives. Note: In poetic texts, it may also appear as 'domo' (ども) when attached to the Izenkei, but the logical function remains the same.",
+    "variations": [
+      "ども (domo) - The voiced version, often used for 'although' (factual concession) rather than 'even if' (hypothetical)."
+    ],
+    "common_confusions": [
+      "vs. ば (ba): 'ba' creates a path; 'tomo' acknowledges a path but ignores its usual outcome.",
+      "vs. と (to): While 'to' can mean 'and' or 'if', 'tomo' specifically adds the 'even' (concessive) nuance."
+    ]
+  },
+  "teaching_sequence": [
+    {
+      "type": "introduction",
+      "content": "You have already mastered the 'ba' (ば) particle, which connects a condition to a result. However, poetry often deals with persistence in the face of obstacles. To express 'Even if X happens, Y remains,' Japanese uses the particle とも (tomo). Think of this as a logical filter that allows the sentence to proceed regardless of the 'input' condition."
+    },
+    {
+      "type": "poem_presentation",
+      "poem_id": "lapis_43e27905590c7570",
+      "display": {
+        "text_with_furigana": "<ruby>吉野河<rt>よしのがわ</rt></ruby><ruby>いはきり<rt>いはきり</rt></ruby><ruby>とほし<rt>とほし</rt></ruby><ruby>行<rt>ゆ</rt></ruby>く<ruby>水<rt>みず</rt></ruby>の<ruby>おと<rt>おと</rt></ruby>には<ruby>たて<rt>たて</rt></ruby>し<ruby>こひ<rt>こひ</rt></ruby>は<ruby>しぬ<rt>しぬ</rt></ruby><ruby>とも<rt>とも</rt></ruby>",
+        "romaji": "yoshinogawa, ihakiritōshi iku, mizu no oto, ni wa tateshi koi, wa shinutomo",
+        "translation": "Like the water of the Yoshino River flowing through distant rocks, my love—though it makes no sound—will persist even if I die."
+      },
+      "vocabulary": [
+        {
+          "word": "吉野河",
+          "reading": "よしのがわ",
+          "meaning": "Yoshino River",
+          "span": [
+            0,
+            3
+          ],
+          "chinese_cognate_note": "吉野河 (River name)"
+        },
+        {
+          "word": "いはきり",
+          "reading": "いはきり",
+          "meaning": "rocky/craggy",
+          "span": [
+            3,
+            7
+          ],
+          "chinese_cognate_note": "岩 (rock) + 切 (cut)"
+        },
+        {
+          "word": "とほし",
+          "reading": "とほし",
+          "meaning": "far/distant",
+          "span": [
+            7,
+            10
+          ],
+          "chinese_cognate_note": "遠 (distant)"
+        },
+        {
+          "word": "行く",
+          "reading": "ゆく",
+          "meaning": "to go/flow",
+          "span": [
+            10,
+            12
+          ],
+          "chinese_cognate_note": "行 (to go)"
+        },
+        {
+          "word": "水",
+          "reading": "みず",
+          "meaning": "water",
+          "span": [
+            12,
+            13
+          ],
+          "chinese_cognate_note": "水 (water)"
+        },
+        {
+          "word": "の",
+          "reading": "の",
+          "meaning": "possessive particle (of)",
+          "span": [
+            13,
+            14
+          ],
+          "chinese_cognate_note": "Equivalent to 之"
+        },
+        {
+          "word": "おと",
+          "reading": "おと",
+          "meaning": "sound",
+          "span": [
+            14,
+            16
+          ],
+          "chinese_cognate_note": "音 (sound)"
+        },
+        {
+          "word": "に",
+          "reading": "に",
+          "meaning": "location/target particle",
+          "span": [
+            16,
+            17
+          ],
+          "chinese_cognate_note": null
+        },
+        {
+          "word": "は",
+          "reading": "は",
+          "meaning": "topic marker",
+          "span": [
+            17,
+            18
+          ],
+          "chinese_cognate_note": null
+        },
+        {
+          "word": "たて",
+          "reading": "たて",
+          "meaning": "to stand/rise (here: to make a sound)",
+          "span": [
+            18,
+            20
+          ],
+          "chinese_cognate_note": "立 (to stand)"
+        },
+        {
+          "word": "し",
+          "reading": "し",
+          "meaning": "past tense attributive marker",
+          "span": [
+            20,
+            21
+          ],
+          "chinese_cognate_note": null
+        },
+        {
+          "word": "こひ",
+          "reading": "こひ",
+          "meaning": "love/longing",
+          "span": [
+            21,
+            23
+          ],
+          "chinese_cognate_note": "恋 (love)"
+        },
+        {
+          "word": "は",
+          "reading": "は",
+          "meaning": "topic marker",
+          "span": [
+            23,
+            24
+          ],
+          "chinese_cognate_note": null
+        },
+        {
+          "word": "しぬ",
+          "reading": "しぬ",
+          "meaning": "to die",
+          "span": [
+            24,
+            26
+          ],
+          "chinese_cognate_note": "死 (to die)"
+        },
+        {
+          "word": "とも",
+          "reading": "とも",
+          "meaning": "even if",
+          "span": [
+            26,
+            28
+          ],
+          "chinese_cognate_note": null
+        }
+      ],
+      "focus_highlight": [
+        26,
+        28
+      ]
+    },
+    {
+      "type": "grammar_spotlight",
+      "content": "Look at the end of the poem: **しぬとも** (shinu-tomo). \n\n1. **しぬ (Shinu)**: The verb 'to die' (死). \n2. **とも (Tomo)**: The concessive particle.\n\nIn Chinese, this logic is expressed as '纵使...也' (zòngshǐ... yě) or '即便...也' (jíbiàn... yě). The poet is saying: 'Even if [I] die (纵使死), the love (恋) remains.' The particle とも acts as a terminal point for the condition, allowing the emotional weight of the poem to override the physical reality of death.",
+      "evidence": "See the poem above."
+    },
+    {
+      "type": "poem_presentation",
+      "poem_id": "lapis_c8cd1ec937da3ef9",
+      "display": {
+        "text_with_furigana": "<ruby>ゆふされ<rt>ゆふされ</rt></ruby>は<ruby>蛍<rt>ほたる</rt></ruby>よりけにもゆれ<ruby>とも<rt>とも</rt></ruby><ruby>ひかり<rt>ひかり</rt></ruby><ruby>見<rt>み</rt></ruby>ねはや<ruby>人<rt>ひと</rt></ruby>のつれなき",
+        "romaji": "yufusareha, hotaru yori keni, mo yure tomo, hikari mine haya, hito no tsurenaki",
+        "translation": "When evening comes, I burn even more than the fireflies; yet, though I burn, you do not see the light—how heartless you are."
+      },
+      "vocabulary": [
+        {
+          "word": "ゆふされ",
+          "reading": "ゆふされ",
+          "meaning": "evening",
+          "span": [
+            0,
+            4
+          ],
+          "chinese_cognate_note": "夕 (evening)"
+        },
+        {
+          "word": "は",
+          "reading": "は",
+          "meaning": "topic marker",
+          "span": [
+            4,
+            5
+          ],
+          "chinese_cognate_note": null
+        },
+        {
+          "word": "蛍",
+          "reading": "ほたる",
+          "meaning": "firefly",
+          "span": [
+            5,
+            6
+          ],
+          "chinese_cognate_note": "萤 (firefly)"
+        },
+        {
+          "word": "より",
+          "reading": "より",
+          "meaning": "than (comparison)",
+          "span": [
+            6,
+            8
+          ],
+          "chinese_cognate_note": null
+        },
+        {
+          "word": "けに",
+          "reading": "けに",
+          "meaning": "particularly/more so",
+          "span": [
+            8,
+            10
+          ],
+          "chinese_cognate_note": null
+        },
+        {
+          "word": "もゆ",
+          "reading": "もゆ",
+          "meaning": "to burn",
+          "span": [
+            10,
+            12
+          ],
+          "chinese_cognate_note": "燃 (to burn)"
+        },
+        {
+          "word": "とも",
+          "reading": "とも",
+          "meaning": "although / even if",
+          "span": [
+            13,
+            15
+          ],
+          "chinese_cognate_note": null
+        },
+        {
+          "word": "ひかり",
+          "reading": "ひかり",
+          "meaning": "light",
+          "span": [
+            15,
+            18
+          ],
+          "chinese_cognate_note": "光 (light)"
+        },
+        {
+          "word": "見",
+          "reading": "み",
+          "meaning": "to see",
+          "span": [
+            18,
+            19
+          ],
+          "chinese_cognate_note": "见 (to see)"
+        },
+        {
+          "word": "ね",
+          "reading": "ね",
+          "meaning": "negative particle (not)",
+          "span": [
+            19,
+            20
+          ],
+          "chinese_cognate_note": null
+        },
+        {
+          "word": "はや",
+          "reading": "はや",
+          "meaning": "exclamatory particle (alas!)",
+          "span": [
+            20,
+            22
+          ],
+          "chinese_cognate_note": null
+        },
+        {
+          "word": "人",
+          "reading": "ひと",
+          "meaning": "person (the beloved)",
+          "span": [
+            22,
+            23
+          ],
+          "chinese_cognate_note": "人 (person)"
+        },
+        {
+          "word": "の",
+          "reading": "の",
+          "meaning": "subject marker in subordinate clause",
+          "span": [
+            23,
+            24
+          ],
+          "chinese_cognate_note": null
+        },
+        {
+          "word": "つれなき",
+          "reading": "つれなき",
+          "meaning": "cold-hearted/indifferent",
+          "span": [
+            24,
+            28
+          ],
+          "chinese_cognate_note": null
+        }
+      ],
+      "focus_highlight": [
+        13,
+        15
+      ]
+    },
+    {
+      "type": "contrast_example",
+      "content": "Compare these two logical structures:\n1. **もゆれば** (moyu-reba): **Since** I burn, [you should see the light].\n2. **もゆれとも** (moyu-re-tomo): **Although** I burn, [you do not see the light].\n\nThe poet uses 'tomo' to highlight the painful contradiction: the fire of passion is there, but the expected result (being noticed) is missing."
+    },
+    {
+      "type": "comprehension_check",
+      "question": "In Poem 3, 'おもへとも (omohe-tomo)' uses the verb 'omo-fu' (to think/feel). Based on the logic of 'tomo', what is the speaker saying?",
+      "answer": "The speaker is saying 'Even though I think/feel [this way]...' or 'Despite my thoughts...'",
+      "hint": "Think of 'tomo' as 'although' or 'even if'."
+    },
+    {
+      "type": "summary",
+      "content": "You have now added the 'Concessive Gate' to your grammatical toolkit. While 'ba' (ば) follows the flow of cause and effect, 'tomo' (とも) allows the poet to express resilience, contradiction, and the persistence of emotion against all odds."
+    }
+  ],
+  "reference_card": {
+    "point": "Particle とも (tomo)",
+    "one_liner": "A concessive particle meaning 'even if' or 'although,' used to show that a statement holds true despite a condition.",
+    "example": "しぬとも (Even if I die)",
+    "see_also": [
+      "particle_ba"
+    ]
+  },
+  "forward_references": [
+    {
+      "point": "もゆれ (moyu-re)",
+      "note": "This specific form of the verb is the Izenkei (Already-realized base), which we will explore further when we look at the 'domo' variation in Unit 9."
+    }
+  ]
+}

@@ -1,0 +1,550 @@
+{
+  "lesson_id": "lesson_auxiliary_keri",
+  "lesson_title": "The Poetic Discovery: The Auxiliary けり (keri)",
+  "lesson_summary": "This lesson introduces 'keri', a vital auxiliary used to express past recollection or a sudden, emotional realization—the 'Aha!' moment of Japanese poetry.",
+  "grammar_point": "auxiliary_keri",
+  "grammar_explanation": {
+    "concept": "In classical Japanese, 'keri' (けり) serves two primary logical functions: 1. Past Recollection (recalling something not witnessed directly or from a distance in time) and 2. Poetic Realization (詠嘆 - eitan). For the reader, it often acts like a 'Discovery Log'—marking the exact moment the poet realizes a truth about the world.",
+    "formation": "Attached to the Ren'yōkei (连用形 / Continuative Base) of verbs and other auxiliaries.",
+    "variations": [
+      "なりけり (nari-keri): 'It turns out to be...' (Copula + Realization)",
+      "にけり (ni-keri): 'It has become...' (Perfective + Realization)",
+      "なかりけり (nakari-keri): 'There never was...' (Negative + Realization)"
+    ],
+    "common_confusions": [
+      "vs. Simple Past: Unlike a dry historical record, 'keri' implies an emotional distance or a fresh discovery of a past state.",
+      "vs. 'zu': While 'zu' (negation) attaches to the Mizenkei (Unrealized base), 'keri' always attaches to the Ren'yōkei (Continuative base)."
+    ]
+  },
+  "teaching_sequence": [
+    {
+      "type": "introduction",
+      "content": "In previous lessons, we looked at how particles define the 'who' and 'where' of a sentence. Now, we move into the 'when' and 'how' of the poet's mind. Imagine you are looking at a landscape and suddenly notice a detail you missed before. In Chinese, you might use a sentence-final '了' (le) to indicate a change in state or a new realization. In Classical Japanese, this 'Aha!' moment is captured by the auxiliary けり (keri). It is the 'Render' button of a poetic scene, finalizing the logic with an emotional punch."
+    },
+    {
+      "type": "poem_presentation",
+      "poem_id": "ogura100_3ff8eec7c905cced",
+      "display": {
+        "text_with_furigana": "<ruby>嵐<rt>あらし</rt></ruby><ruby>吹<rt>ふ</rt></ruby>く<ruby>三室<rt>みむろ</rt></ruby>の<ruby>山<rt>やま</rt></ruby>の<ruby>もみぢ<rt>もみぢ</rt></ruby><ruby>葉<rt>ば</rt></ruby>は<ruby>竜田<rt>たつた</rt></ruby>の<ruby>川<rt>かわ</rt></ruby>の<ruby>錦<rt>にしき</rt></ruby>なりけり",
+        "romaji": "arashi fuku, mimuro no yama no, momijiba wa, tatsuta no kawa no, nishiki nari keri",
+        "translation": "The autumn leaves of Mount Mimuro, blown by the storm, have become a brocade upon the Tatsuta River."
+      },
+      "vocabulary": [
+        {
+          "word": "嵐",
+          "reading": "あらし",
+          "meaning": "storm",
+          "span": [
+            0,
+            1
+          ],
+          "chinese_cognate_note": "In Chinese 岚 usually means mountain mist, but in Japanese it is a storm."
+        },
+        {
+          "word": "吹く",
+          "reading": "ふく",
+          "meaning": "to blow",
+          "span": [
+            1,
+            3
+          ],
+          "chinese_cognate_note": "Cognate with 吹 (chuī)."
+        },
+        {
+          "word": "三室",
+          "reading": "みむろ",
+          "meaning": "Mimuro",
+          "span": [
+            3,
+            5
+          ],
+          "chinese_cognate_note": "Proper noun (Place name)."
+        },
+        {
+          "word": "の",
+          "reading": "の",
+          "meaning": "possessive particle",
+          "span": [
+            5,
+            6
+          ],
+          "chinese_cognate_note": "Equivalent to 的 (de)."
+        },
+        {
+          "word": "山",
+          "reading": "やま",
+          "meaning": "mountain",
+          "span": [
+            6,
+            7
+          ],
+          "chinese_cognate_note": "Identical to 山 (shān)."
+        },
+        {
+          "word": "の",
+          "reading": "の",
+          "meaning": "possessive particle",
+          "span": [
+            7,
+            8
+          ],
+          "chinese_cognate_note": "Equivalent to 的 (de)."
+        },
+        {
+          "word": "もみぢ葉",
+          "reading": "もみぢば",
+          "meaning": "autumn leaves",
+          "span": [
+            8,
+            12
+          ],
+          "chinese_cognate_note": "Leaves that have turned red (红叶)."
+        },
+        {
+          "word": "は",
+          "reading": "は",
+          "meaning": "topic marker",
+          "span": [
+            12,
+            13
+          ],
+          "chinese_cognate_note": "Defines the subject/scope."
+        },
+        {
+          "word": "竜田",
+          "reading": "たつた",
+          "meaning": "Tatsuta",
+          "span": [
+            13,
+            15
+          ],
+          "chinese_cognate_note": "Proper noun (River name)."
+        },
+        {
+          "word": "の",
+          "reading": "の",
+          "meaning": "possessive particle",
+          "span": [
+            15,
+            16
+          ],
+          "chinese_cognate_note": "Equivalent to 的 (de)."
+        },
+        {
+          "word": "川",
+          "reading": "かわ",
+          "meaning": "river",
+          "span": [
+            16,
+            17
+          ],
+          "chinese_cognate_note": "Identical to 川 (chuān)."
+        },
+        {
+          "word": "の",
+          "reading": "の",
+          "meaning": "possessive particle",
+          "span": [
+            17,
+            18
+          ],
+          "chinese_cognate_note": "Equivalent to 的 (de)."
+        },
+        {
+          "word": "錦",
+          "reading": "にしき",
+          "meaning": "brocade",
+          "span": [
+            18,
+            19
+          ],
+          "chinese_cognate_note": "Identical to 锦 (jǐn)."
+        },
+        {
+          "word": "なり",
+          "reading": "なり",
+          "meaning": "is (copula)",
+          "span": [
+            19,
+            21
+          ],
+          "chinese_cognate_note": "Equivalent to 是 (shì)."
+        },
+        {
+          "word": "けり",
+          "reading": "けり",
+          "meaning": "realization auxiliary",
+          "span": [
+            21,
+            23
+          ],
+          "chinese_cognate_note": "The 'Aha!' marker."
+        }
+      ],
+      "focus_highlight": [
+        21,
+        23
+      ]
+    },
+    {
+      "type": "grammar_spotlight",
+      "content": "Look at the end of the poem: **なりけり (nari-keri)**. \n\n1. **なり (nari)** is the copula ('is'), which you learned in Unit 3.\n2. **けり (keri)** is our new auxiliary.\n\nCombined, they don't just mean 'is brocade.' They mean 'I have just realized that it is brocade!' The poet looks at the river covered in red leaves and the logic clicks: 'This isn't just a messy river; it is a woven fabric!' \n\n**Data Analogy:** If `nari` is a variable assignment (`river = brocade`), then `keri` is the `print()` function that outputs the result to the console with an exclamation mark.",
+      "evidence": "See the poem above."
+    },
+    {
+      "type": "poem_presentation",
+      "poem_id": "lapis_2f817b0288ef500b",
+      "display": {
+        "text_with_furigana": "<ruby>心<rt>こころ</rt></ruby>にはわするるときもなかりけり<ruby>御代<rt>みよ</rt></ruby>の<ruby>昔<rt>むかし</rt></ruby>の<ruby>雲<rt>くも</rt></ruby>の<ruby>上<rt>うえ</rt></ruby>の<ruby>月<rt>つき</rt></ruby>",
+        "romaji": "kokoro ni wa, wasururu toki mo, nakari keri, miyo no mukashi no, kumo no ue no tsuki",
+        "translation": "In my heart, there has never been a moment I forgot: the moon above the clouds in the ancient days of that reign."
+      },
+      "vocabulary": [
+        {
+          "word": "心",
+          "reading": "こころ",
+          "meaning": "heart/mind",
+          "span": null,
+          "chinese_cognate_note": "Identical to 心 (xīn)."
+        },
+        {
+          "word": "に",
+          "reading": "に",
+          "meaning": "location particle",
+          "span": [
+            3,
+            4
+          ],
+          "chinese_cognate_note": "Equivalent to 在 (zài)."
+        },
+        {
+          "word": "は",
+          "reading": "は",
+          "meaning": "topic marker",
+          "span": [
+            4,
+            5
+          ],
+          "chinese_cognate_note": "Emphasizes 'In the heart...'"
+        },
+        {
+          "word": "わするる",
+          "reading": "わするる",
+          "meaning": "to forget",
+          "span": [
+            5,
+            9
+          ],
+          "chinese_cognate_note": "Cognate with 忘 (wàng)."
+        },
+        {
+          "word": "とき",
+          "reading": "とき",
+          "meaning": "time/moment",
+          "span": [
+            9,
+            11
+          ],
+          "chinese_cognate_note": "Cognate with 时 (shí)."
+        },
+        {
+          "word": "も",
+          "reading": "も",
+          "meaning": "even/also",
+          "span": [
+            11,
+            12
+          ],
+          "chinese_cognate_note": "Equivalent to 也 (yě)."
+        },
+        {
+          "word": "なかり",
+          "reading": "なかり",
+          "meaning": "not exist (continuative)",
+          "span": [
+            12,
+            15
+          ],
+          "chinese_cognate_note": "From 无 (wú)."
+        },
+        {
+          "word": "けり",
+          "reading": "けり",
+          "meaning": "past recollection",
+          "span": [
+            15,
+            17
+          ],
+          "chinese_cognate_note": "Recalling a continuous state."
+        },
+        {
+          "word": "御代",
+          "reading": "みよ",
+          "meaning": "reign/generation",
+          "span": null,
+          "chinese_cognate_note": "Honorific 'reign' (御代)."
+        },
+        {
+          "word": "の",
+          "reading": "の",
+          "meaning": "possessive particle",
+          "span": [
+            19,
+            20
+          ],
+          "chinese_cognate_note": "的 (de)."
+        },
+        {
+          "word": "昔",
+          "reading": "むかし",
+          "meaning": "ancient times",
+          "span": null,
+          "chinese_cognate_note": "Identical to 昔 (xī)."
+        },
+        {
+          "word": "の",
+          "reading": "の",
+          "meaning": "possessive particle",
+          "span": [
+            23,
+            24
+          ],
+          "chinese_cognate_note": "的 (de)."
+        },
+        {
+          "word": "雲",
+          "reading": "くも",
+          "meaning": "cloud",
+          "span": null,
+          "chinese_cognate_note": "Identical to 云 (yún)."
+        },
+        {
+          "word": "の",
+          "reading": "の",
+          "meaning": "possessive particle",
+          "span": [
+            26,
+            27
+          ],
+          "chinese_cognate_note": "的 (de)."
+        },
+        {
+          "word": "上",
+          "reading": "うえ",
+          "meaning": "above/on",
+          "span": null,
+          "chinese_cognate_note": "Identical to 上 (shàng)."
+        },
+        {
+          "word": "の",
+          "reading": "の",
+          "meaning": "possessive particle",
+          "span": [
+            29,
+            30
+          ],
+          "chinese_cognate_note": "的 (de)."
+        },
+        {
+          "word": "月",
+          "reading": "つき",
+          "meaning": "moon",
+          "span": null,
+          "chinese_cognate_note": "Identical to 月 (yuè)."
+        }
+      ],
+      "focus_highlight": [
+        15,
+        17
+      ]
+    },
+    {
+      "type": "contrast_example",
+      "content": "In this second poem, we see **なかりけり (nakari-keri)**. \n\n- **なかり (nakari)**: The 'continuative' form of 'not being' (无).\n- **けり (keri)**: Here, it functions as 'Past Recollection.' \n\nInstead of a sudden discovery, the poet is looking back over a long period. It translates logically to: 'Looking back, there [has been] no time that I forgot.' It connects the present 'heart' to the distant 'ancient times' (昔)."
+    },
+    {
+      "type": "poem_presentation",
+      "poem_id": "lapis_e0e1b00df494ff32",
+      "display": {
+        "text_with_furigana": "<ruby>白玉<rt>しらたま</rt></ruby>と<ruby>見<rt>み</rt></ruby>えし<ruby>涙<rt>なみだ</rt></ruby>も<ruby>年<rt>とし</rt></ruby>ふればから<ruby>紅<rt>くれない</rt></ruby>にうつろひにけり",
+        "romaji": "shiratama to, mie shi namida mo, toshi fure ha, kara kurenai ni, utsuro hi ni keri",
+        "translation": "The tears that once looked like white gems have, as years passed, changed into a deep crimson."
+      },
+      "vocabulary": [
+        {
+          "word": "白玉",
+          "reading": "しらたま",
+          "meaning": "white gem/pearl",
+          "span": [
+            0,
+            2
+          ],
+          "chinese_cognate_note": "Identical to 白玉 (báiyù)."
+        },
+        {
+          "word": "と",
+          "reading": "と",
+          "meaning": "as/like (comparison)",
+          "span": [
+            2,
+            3
+          ],
+          "chinese_cognate_note": "Logical 'as'."
+        },
+        {
+          "word": "見え",
+          "reading": "みえ",
+          "meaning": "to appear/seem",
+          "span": [
+            3,
+            5
+          ],
+          "chinese_cognate_note": "Cognate with 见 (jiàn)."
+        },
+        {
+          "word": "し",
+          "reading": "し",
+          "meaning": "past auxiliary",
+          "span": [
+            5,
+            6
+          ],
+          "chinese_cognate_note": "We will learn this soon; it marks a past state."
+        },
+        {
+          "word": "涙",
+          "reading": "なみだ",
+          "meaning": "tears",
+          "span": [
+            6,
+            7
+          ],
+          "chinese_cognate_note": "Identical to 泪 (lèi)."
+        },
+        {
+          "word": "も",
+          "reading": "も",
+          "meaning": "also/even",
+          "span": [
+            7,
+            8
+          ],
+          "chinese_cognate_note": "也 (yě)."
+        },
+        {
+          "word": "年",
+          "reading": "とし",
+          "meaning": "year",
+          "span": [
+            8,
+            9
+          ],
+          "chinese_cognate_note": "Identical to 年 (nián)."
+        },
+        {
+          "word": "ふれ",
+          "reading": "ふれ",
+          "meaning": "to pass (time)",
+          "span": [
+            9,
+            11
+          ],
+          "chinese_cognate_note": "To experience years."
+        },
+        {
+          "word": "は",
+          "reading": "は",
+          "meaning": "topic/condition",
+          "span": [
+            11,
+            12
+          ],
+          "chinese_cognate_note": "Here acting as a conditional 'as/when'."
+        },
+        {
+          "word": "から紅",
+          "reading": "からくれない",
+          "meaning": "deep crimson",
+          "span": [
+            12,
+            15
+          ],
+          "chinese_cognate_note": "唐红 (tánghóng) - a vibrant red."
+        },
+        {
+          "word": "に",
+          "reading": "に",
+          "meaning": "into (result)",
+          "span": [
+            15,
+            16
+          ],
+          "chinese_cognate_note": "Indicates the result of change."
+        },
+        {
+          "word": "うつろひ",
+          "reading": "うつろい",
+          "meaning": "to change/fade",
+          "span": [
+            16,
+            20
+          ],
+          "chinese_cognate_note": "Cognate with 移 (yí)."
+        },
+        {
+          "word": "に",
+          "reading": "に",
+          "meaning": "has (perfective)",
+          "span": [
+            20,
+            21
+          ],
+          "chinese_cognate_note": "Indicates completion."
+        },
+        {
+          "word": "けり",
+          "reading": "けり",
+          "meaning": "realization auxiliary",
+          "span": [
+            21,
+            23
+          ],
+          "chinese_cognate_note": "The final discovery of the change."
+        }
+      ],
+      "focus_highlight": [
+        21,
+        23
+      ]
+    },
+    {
+      "type": "comprehension_check",
+      "question": "In the third poem, the poet uses 'うつろひにけり' (utsuroi-ni-keri). Based on the meaning of 'keri', is the poet describing a change they are just now noticing, or a change they are planning for the future?",
+      "answer": "The poet is describing a change they are just now noticing (Realization). 'Keri' looks backward at a state that has already come to be, often with a sense of surprise or deep emotion.",
+      "hint": "Remember the 'Discovery Log' analogy. Does a log record what will happen, or what has already happened?"
+    },
+    {
+      "type": "summary",
+      "content": "You have now mastered the 'Poetic Discovery' marker. When you see けり at the end of a poem, look for the 'Aha!' moment. It tells you that the preceding Kanji (the '锦' brocade, the '无' absence, or the '移' change) is not just a fact, but a realization that has just struck the poet's heart."
+    }
+  ],
+  "reference_card": {
+    "point": "Auxiliary けり (keri)",
+    "one_liner": "The 'Aha!' marker used for past recollection or sudden poetic realization.",
+    "example": "錦なりけり (Nishiki nari keri) = '[I realize] it is indeed brocade!'",
+    "see_also": [
+      "auxiliary_nari",
+      "conjugation_renyoukei"
+    ]
+  },
+  "forward_references": [
+    {
+      "point": "し (shi) in Poem 3",
+      "note": "This is another past auxiliary (from 'ki'). While 'keri' is for discovery/recollection, 'ki' is for direct personal experience. We will compare them in Unit 5.2."
+    },
+    {
+      "point": "に (ni) before けり in Poem 3",
+      "note": "This 'ni' is the Ren'yōkei of the auxiliary 'nu' (completion). It emphasizes that the change is finished. We will cover perfective auxiliaries in Unit 6."
+    }
+  ]
+}

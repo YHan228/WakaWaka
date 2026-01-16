@@ -1,0 +1,268 @@
+{
+  "lesson_title": "The Logic of Inclusion: Particle も (mo)",
+  "lesson_summary": "In Unit 1, we learned how to isolate topics and objects. Now, we introduce the 'Inclusion' marker も (mo), which functions like the Chinese 也 (yě) to link concepts through similarity or addition.",
+  "grammar_explanation": {
+    "concept": "The particle も (mo) indicates that the preceding noun or phrase is being added to a previously established context. It signifies 'also', 'too', or 'even'.",
+    "formation": "[Noun] + も",
+    "variations": [
+      "Replaces は (topic marker) or を (object marker) entirely.",
+      "Can follow に (location) or と (quotation) to create にも or とも."
+    ],
+    "common_confusions": [
+      "Unlike Chinese 也, which usually precedes the verb, も must immediately follow the noun it modifies."
+    ]
+  },
+  "teaching_sequence": [
+    {
+      "type": "introduction",
+      "content": "Having mastered the 'Logical Tags' of Unit 1—where we used は (wa) to isolate a topic and を (o) to target an object—we now move to Unit 2: Sentence Linking. If は (wa) is a wall that separates a topic, も (mo) is a bridge. It tells the reader: 'This new thing behaves just like the thing we just talked about.' Think of it as the logical operator += in programming."
+    },
+    {
+      "type": "poem_presentation",
+      "poem_id": "lapis_54f700598246bf9c",
+      "display": {
+        "text_with_furigana": "<ruby>秋風<rt>あきかぜ</rt></ruby>に<ruby>山<rt>やま</rt></ruby>のこのはのうつろへは<ruby>人<rt>ひと</rt></ruby>の<ruby>心<rt>こころ</rt></ruby>もいかかとそ<ruby>思<rt>おも</rt></ruby>ふ",
+        "romaji": "akikaze ni yama no konoha no utsuroe wa hito no kokoro mo ika ka to so omou",
+        "translation": "When the mountain leaves change color in the autumn wind, I wonder if the human heart changes as well."
+      },
+      "vocabulary": [
+        {
+          "word": "秋風",
+          "reading": "あきかぜ",
+          "meaning": "autumn wind",
+          "chinese_cognate_note": "Identical to Chinese 秋風 (qiūfēng)."
+        },
+        {
+          "word": "に",
+          "reading": "に",
+          "meaning": "in/at (location/time particle)",
+          "chinese_cognate_note": "Learned in Unit 1.2."
+        },
+        {
+          "word": "山",
+          "reading": "やま",
+          "meaning": "mountain",
+          "chinese_cognate_note": "Identical to Chinese 山 (shān)."
+        },
+        {
+          "word": "の",
+          "reading": "の",
+          "meaning": "possessive particle ('s)",
+          "chinese_cognate_note": "Learned in Unit 1.1."
+        },
+        {
+          "word": "このは",
+          "reading": "このは",
+          "meaning": "leaves of trees",
+          "chinese_cognate_note": "The kanji 木の葉 is implied."
+        },
+        {
+          "word": "の",
+          "reading": "の",
+          "meaning": "possessive particle ('s)"
+        },
+        {
+          "word": "うつろへ",
+          "reading": "うつろえ",
+          "meaning": "to change/fade/shift"
+        },
+        {
+          "word": "は",
+          "reading": "は",
+          "meaning": "as for / when (topic/conditional)",
+          "chinese_cognate_note": "Learned in Unit 1.3."
+        },
+        {
+          "word": "人",
+          "reading": "ひと",
+          "meaning": "person/human",
+          "chinese_cognate_note": "Identical to Chinese 人 (rén)."
+        },
+        {
+          "word": "の",
+          "reading": "の",
+          "meaning": "possessive particle ('s)"
+        },
+        {
+          "word": "心",
+          "reading": "こころ",
+          "meaning": "heart/mind",
+          "chinese_cognate_note": "Identical to Chinese 心 (xīn)."
+        },
+        {
+          "word": "も",
+          "reading": "も",
+          "meaning": "also/too",
+          "chinese_cognate_note": "Equivalent to Chinese 也 (yě)."
+        },
+        {
+          "word": "いか",
+          "reading": "いか",
+          "meaning": "how/in what way"
+        },
+        {
+          "word": "か",
+          "reading": "か",
+          "meaning": "question particle"
+        },
+        {
+          "word": "と",
+          "reading": "と",
+          "meaning": "quotative particle (marks a thought)",
+          "chinese_cognate_note": "Learned in Unit 1.7."
+        },
+        {
+          "word": "そ",
+          "reading": "そ",
+          "meaning": "emphasis particle"
+        },
+        {
+          "word": "思ふ",
+          "reading": "おもう",
+          "meaning": "to think",
+          "chinese_cognate_note": "Cognate with Chinese 思 (sī)."
+        }
+      ],
+      "focus_highlight": [
+        17,
+        18
+      ]
+    },
+    {
+      "type": "grammar_spotlight",
+      "content": "In the poem above, the poet observes the mountain leaves changing (うつろへ). By using **心も (kokoro mo)**, the poet creates a logical parallel: 'The leaves change, and the [human heart] **also** (也) changes.' If the poet had used '心は' (kokoro wa), it would isolate the heart as a new, separate topic. By using 'も', the heart is pulled into the same fate as the leaves."
+    },
+    {
+      "type": "poem_presentation",
+      "poem_id": "lapis_86335a7962ff3078",
+      "display": {
+        "text_with_furigana": "<ruby>山<rt>やま</rt></ruby>かつの かきほにはへる あをつつら <ruby>人<rt>ひと</rt></ruby>はくれとも ことつてもなし",
+        "romaji": "yamakatsu no kakiho ni wa heru a wo tsutsura hito wa kure tomo koto tsute mo nashi",
+        "translation": "Like the green ivy growing on the mountain rustic's fence, the person does not come, and there is also no message."
+      },
+      "vocabulary": [
+        {
+          "word": "山",
+          "reading": "やま",
+          "meaning": "mountain",
+          "chinese_cognate_note": "Identical to Chinese 山."
+        },
+        {
+          "word": "かつ",
+          "reading": "かつ",
+          "meaning": "rustic/mountain dweller"
+        },
+        {
+          "word": "の",
+          "reading": "の",
+          "meaning": "possessive particle"
+        },
+        {
+          "word": "かきほ",
+          "reading": "かきほ",
+          "meaning": "fence"
+        },
+        {
+          "word": "に",
+          "reading": "に",
+          "meaning": "at/on (location)"
+        },
+        {
+          "word": "は",
+          "reading": "は",
+          "meaning": "topic marker"
+        },
+        {
+          "word": "はへる",
+          "reading": "はえる",
+          "meaning": "to grow/sprout"
+        },
+        {
+          "word": "あを",
+          "reading": "あお",
+          "meaning": "green/blue",
+          "chinese_cognate_note": "Cognate with Chinese 青 (qīng)."
+        },
+        {
+          "word": "つつら",
+          "reading": "つつら",
+          "meaning": "ivy/vine"
+        },
+        {
+          "word": "人",
+          "reading": "ひと",
+          "meaning": "person",
+          "chinese_cognate_note": "Identical to Chinese 人."
+        },
+        {
+          "word": "は",
+          "reading": "は",
+          "meaning": "topic marker"
+        },
+        {
+          "word": "くれ",
+          "reading": "くれ",
+          "meaning": "to come/give (here: to visit)"
+        },
+        {
+          "word": "とも",
+          "reading": "とも",
+          "meaning": "even if / although"
+        },
+        {
+          "word": "ことつて",
+          "reading": "ことつて",
+          "meaning": "message/word"
+        },
+        {
+          "word": "も",
+          "reading": "も",
+          "meaning": "also/even"
+        },
+        {
+          "word": "なし",
+          "reading": "なし",
+          "meaning": "is not / none",
+          "chinese_cognate_note": "Cognate with Chinese 無 (wú)."
+        }
+      ],
+      "focus_highlight": [
+        21,
+        22
+      ]
+    },
+    {
+      "type": "contrast_example",
+      "content": "Look at the negative logic in Poem 3. The poet says the person doesn't come, and **ことつてもなし (kototsute mo nashi)**—'even a message is non-existent.' Here, も emphasizes the total absence by adding the 'message' to the 'person' who didn't show up. In Chinese, this would be '人既不至，[也]無音信'."
+    },
+    {
+      "type": "comprehension_check",
+      "question": "In the phrase '心もいかかとそ思ふ' (Poem 1), if we replaced 'も' with the object marker 'を' (which we learned in Unit 1), how would the logical relationship between the 'leaves' and the 'heart' change?",
+      "answer": "The logical link of 'inclusion' would break. '心も' implies the heart is doing the same thing as the leaves (changing). '心を' would make the heart the direct object of 'thinking', losing the parallel that the heart itself is changing like the autumn wind.",
+      "hint": "Think about whether the heart is 'also' doing something or if it is just the 'target' of the verb 'think'."
+    },
+    {
+      "type": "summary",
+      "content": "You have now seen how も (mo) functions as a logical 'Inclusion' tag. It replaces は and を to show that a noun belongs to the same category or situation as what was previously mentioned. This is your first step in Unit 2's goal: understanding how Japanese poets link multiple ideas into a single 'flow'."
+    }
+  ],
+  "reference_card": {
+    "point": "Particle も (mo)",
+    "one_liner": "The inclusion marker (also/too/even), equivalent to Chinese 也 (yě); it replaces は (wa) and を (o).",
+    "example": "心も (Heart also / Even the heart)",
+    "see_also": [
+      "particle_wa",
+      "particle_wo"
+    ]
+  },
+  "forward_references": [
+    {
+      "point": "か (ka)",
+      "note": "This question marker seen in 'ika ka' will be explored in Unit 7 (Kakari-Musubi)."
+    },
+    {
+      "point": "思ふ (rentaikei)",
+      "note": "The specific ending of this verb is the 'Attributive Form', which we will master in Unit 3."
+    }
+  ]
+}

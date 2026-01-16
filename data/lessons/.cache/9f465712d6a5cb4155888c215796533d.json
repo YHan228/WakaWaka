@@ -1,0 +1,356 @@
+{
+  "lesson_title": "The 'Already So' Base: Mastering the Izenkei (已然形)",
+  "lesson_summary": "This lesson introduces the Izenkei (已然形), or 'Realized Base,' which represents established facts and is used to express causality ('since/because') or emphatic certainty.",
+  "grammar_explanation": {
+    "concept": "The Izenkei (已然形) literally translates to the 'Already-So Form' (已 = already, 然 = so/thus). In programming terms, if Mizenkei (未然形) is a 'Conditional/Null' state, Izenkei is a 'Boolean TRUE' or 'Executed' state. It describes actions that have actually happened or states that currently exist.",
+    "formation": "For most verbs, the Izenkei ends in an '-e' sound (e.g., Miru -> Mire). For adjectives, it typically ends in '-kere' (e.g., Tooki -> Tookere).",
+    "variations": [
+      "Izenkei + ば (ba): Since/Because/When (Factual conditional)",
+      "Izenkei + ど (do): Although (Concessive)",
+      "Koso ... Izenkei: Emphatic sentence ending (Kakari-Musubi)"
+    ],
+    "common_confusions": [
+      "Mizenkei + ば (ba) means 'IF' (hypothetical), while Izenkei + ば (ba) means 'SINCE/WHEN' (factual). This is a critical distinction in classical logic."
+    ]
+  },
+  "teaching_sequence": [
+    {
+      "type": "introduction",
+      "content": "You have already mastered the 'Unrealized' (未然形) base for things that haven't happened yet. Now, we move to its logical opposite: the **Izenkei (已然形)**. As a Chinese speaker, the characters 已然 (yǐrán) immediately tell you the story—this is the base for things that are 'already so.' While modern Japanese uses the '-ba' form for simple 'if' statements, in Classical Japanese, attaching 'ba' to this 'Already-So' base creates a logical 'Since' or 'Because' relationship. It treats the action as a completed fact that triggers a result."
+    },
+    {
+      "type": "poem_presentation",
+      "poem_id": "ogura100_9ac02ed9904e8f9c",
+      "display": {
+        "text_with_furigana": "<ruby>田子<rt>たご</rt></ruby>の<ruby>浦<rt>うら</rt></ruby>にうち<ruby>出<rt>い</rt></ruby>でて<ruby>見<rt>み</rt></ruby>れば<ruby>白妙<rt>しろたえ</rt></ruby>の<ruby>富士<rt>ふじ</rt></ruby>の<ruby>高嶺<rt>たかね</rt></ruby>に<ruby>雪<rt>ゆき</rt></ruby>は<ruby>降<rt>ふ</rt></ruby>りつつ",
+        "romaji": "tago no ura ni uchi idete mireba shirotae no fuji no takane ni yuki wa furitsutsu",
+        "translation": "When I go out to the shore of Tago and look, I see the snow is falling on the high peak of Fuji, pure white."
+      },
+      "vocabulary": [
+        {
+          "word": "田子の浦",
+          "reading": "たごのうら",
+          "meaning": "Tago Bay (place name)",
+          "chinese_cognate_note": "Proper noun; 浦 means bay/shore in both languages."
+        },
+        {
+          "word": "の",
+          "reading": "の",
+          "meaning": "possessive particle (of)"
+        },
+        {
+          "word": "に",
+          "reading": "ni",
+          "meaning": "location marker (at/to)"
+        },
+        {
+          "word": "うち出でて",
+          "reading": "うちいでて",
+          "meaning": "to go out / to set out",
+          "chinese_cognate_note": "出 is 'exit/out'."
+        },
+        {
+          "word": "見れ",
+          "reading": "みれ",
+          "meaning": "to see (Izenkei form)",
+          "chinese_cognate_note": "見 is 'to see'."
+        },
+        {
+          "word": "ば",
+          "reading": "ば",
+          "meaning": "since / when (factual conditional)"
+        },
+        {
+          "word": "白妙",
+          "reading": "しろたえ",
+          "meaning": "pure white / white cloth",
+          "chinese_cognate_note": "白 is 'white'."
+        },
+        {
+          "word": "の",
+          "reading": "の",
+          "meaning": "possessive particle (of)"
+        },
+        {
+          "word": "富士",
+          "reading": "ふじ",
+          "meaning": "Mount Fuji"
+        },
+        {
+          "word": "の",
+          "reading": "の",
+          "meaning": "possessive particle (of)"
+        },
+        {
+          "word": "高嶺",
+          "reading": "たかね",
+          "meaning": "high peak",
+          "chinese_cognate_note": "高嶺 (gāolǐng) is identical in meaning to Chinese."
+        },
+        {
+          "word": "に",
+          "reading": "ni",
+          "meaning": "location marker (on)"
+        },
+        {
+          "word": "雪",
+          "reading": "ゆき",
+          "meaning": "snow",
+          "chinese_cognate_note": "Identical kanji."
+        },
+        {
+          "word": "は",
+          "reading": "は",
+          "meaning": "topic marker"
+        },
+        {
+          "word": "降り",
+          "reading": "ふり",
+          "meaning": "falling (snow/rain)"
+        },
+        {
+          "word": "つつ",
+          "reading": "つつ",
+          "meaning": "continuous action marker (while/keep on)"
+        }
+      ],
+      "focus_highlight": [
+        10,
+        13
+      ]
+    },
+    {
+      "type": "grammar_spotlight",
+      "content": "Look at the word **見れば (mireba)**. \n1. The verb is **見る (miru)** (to see).\n2. Its Izenkei (Realized Base) is **見れ (mire)**.\n3. By adding **ば (ba)**, we get 'Since I looked' or 'When I looked.'\n\nBecause the poet *actually* looked (the action is 'realized'), the snow on Mt. Fuji is revealed. If he had used the Mizenkei (Miba), it would mean 'If I were to look (but I haven't yet).'"
+    },
+    {
+      "type": "poem_presentation",
+      "poem_id": "ogura100_71744305011a8c60",
+      "display": {
+        "text_with_furigana": "<ruby>大江山<rt>おおえやま</rt></ruby>いく<ruby>野<rt>の</rt></ruby>の<ruby>道<rt>みち</rt></ruby>の<ruby>遠<rt>とお</rt></ruby>ければまだふみもみず<ruby>天<rt>あま</rt></ruby>の<ruby>橋立<rt>はしだて</rt></ruby>",
+        "romaji": "ooe yama iku no no michi no tookere ba mada fumi mo mizu ama no hashidate",
+        "translation": "Because the road to Ikuno across Mount Oe is so far, I have not yet seen a letter from my mother, nor have I been to Ama-no-Hashidate."
+      },
+      "vocabulary": [
+        {
+          "word": "大江山",
+          "reading": "おおえやま",
+          "meaning": "Mount Oe (place name)"
+        },
+        {
+          "word": "いく",
+          "reading": "いく",
+          "meaning": "to go / to pass through",
+          "chinese_cognate_note": "Often written as 行く (xíng)."
+        },
+        {
+          "word": "野",
+          "reading": "の",
+          "meaning": "field/plain",
+          "chinese_cognate_note": "Identical meaning."
+        },
+        {
+          "word": "の",
+          "reading": "の",
+          "meaning": "possessive particle"
+        },
+        {
+          "word": "道",
+          "reading": "みち",
+          "meaning": "road/path",
+          "chinese_cognate_note": "Identical meaning (dào)."
+        },
+        {
+          "word": "の",
+          "reading": "の",
+          "meaning": "subject marker (in subordinate clauses)"
+        },
+        {
+          "word": "遠けれ",
+          "reading": "とおけれ",
+          "meaning": "far (adjective Izenkei)",
+          "chinese_cognate_note": "遠 (yuǎn) means far."
+        },
+        {
+          "word": "ば",
+          "reading": "ば",
+          "meaning": "because / since"
+        },
+        {
+          "word": "まだ",
+          "reading": "まだ",
+          "meaning": "not yet"
+        },
+        {
+          "word": "ふみ",
+          "reading": "ふみ",
+          "meaning": "letter / footstep",
+          "chinese_cognate_note": "Often written as 文 (wén) for letter."
+        },
+        {
+          "word": "も",
+          "reading": "も",
+          "meaning": "also / even"
+        },
+        {
+          "word": "み",
+          "reading": "み",
+          "meaning": "to see"
+        },
+        {
+          "word": "ず",
+          "reading": "ず",
+          "meaning": "negative auxiliary (not)"
+        },
+        {
+          "word": "天の橋立",
+          "reading": "あまのはしだて",
+          "meaning": "Ama-no-Hashidate (place name)"
+        }
+      ],
+      "focus_highlight": [
+        9,
+        13
+      ]
+    },
+    {
+      "type": "grammar_spotlight",
+      "content": "In this poem, we see an adjective in the Izenkei: **遠ければ (tookereba)**.\n- Base adjective: **遠し (tooshi)** (far).\n- Izenkei: **遠けれ (tookere)**.\n- Logical result: **Because** it is far (an established fact), the poet hasn't received a letter. This is a clear 'Cause -> Effect' relationship powered by the Izenkei."
+    },
+    {
+      "type": "poem_presentation",
+      "poem_id": "ogura100_28563908709d966c",
+      "display": {
+        "text_with_furigana": "<ruby>月<rt>つき</rt></ruby><ruby>見<rt>み</rt></ruby>ればちぢにものこそ<ruby>悲<rt>かな</rt></ruby>しけれわが<ruby>身<rt>み</rt></ruby><ruby>一<rt>ひと</rt></ruby>つの<ruby>秋<rt>あき</rt></ruby>にはあらねど",
+        "romaji": "tsuki mireba chiji ni mono koso kanashikere wagami hitotsu no aki ni wa aranedo",
+        "translation": "When I look at the moon, a thousand things become sad; though it is not an autumn that comes for me alone."
+      },
+      "vocabulary": [
+        {
+          "word": "月",
+          "reading": "つき",
+          "meaning": "moon",
+          "chinese_cognate_note": "Identical kanji."
+        },
+        {
+          "word": "見れ",
+          "reading": "みれ",
+          "meaning": "to see (Izenkei)"
+        },
+        {
+          "word": "ば",
+          "reading": "ば",
+          "meaning": "when / since"
+        },
+        {
+          "word": "ちぢに",
+          "reading": "ちぢに",
+          "meaning": "into a thousand pieces / manifold"
+        },
+        {
+          "word": "もの",
+          "reading": "もの",
+          "meaning": "things",
+          "chinese_cognate_note": "物 (wù)."
+        },
+        {
+          "word": "こそ",
+          "reading": "こそ",
+          "meaning": "emphatic particle"
+        },
+        {
+          "word": "悲しけれ",
+          "reading": "かなしけれ",
+          "meaning": "sad (adjective Izenkei)",
+          "chinese_cognate_note": "悲 (bēi) means sad."
+        },
+        {
+          "word": "わが",
+          "reading": "わが",
+          "meaning": "my"
+        },
+        {
+          "word": "身",
+          "reading": "み",
+          "meaning": "self / body",
+          "chinese_cognate_note": "身 (shēn) means body/self."
+        },
+        {
+          "word": "一つ",
+          "reading": "ひとつ",
+          "meaning": "one / alone"
+        },
+        {
+          "word": "の",
+          "reading": "の",
+          "meaning": "possessive particle"
+        },
+        {
+          "word": "秋",
+          "reading": "あき",
+          "meaning": "autumn",
+          "chinese_cognate_note": "Identical kanji."
+        },
+        {
+          "word": "に",
+          "reading": "に",
+          "meaning": "particle (part of 'ni wa')"
+        },
+        {
+          "word": "は",
+          "reading": "は",
+          "meaning": "topic marker"
+        },
+        {
+          "word": "あら",
+          "reading": "あら",
+          "meaning": "to be (exist)"
+        },
+        {
+          "word": "ね",
+          "reading": "ね",
+          "meaning": "not (negative auxiliary Izenkei)"
+        },
+        {
+          "word": "ど",
+          "reading": "ど",
+          "meaning": "although"
+        }
+      ],
+      "focus_highlight": [
+        9,
+        15
+      ]
+    },
+    {
+      "type": "grammar_spotlight",
+      "content": "This poem demonstrates the second major use of Izenkei: **Kakari-Musubi**. \nWhen the emphatic particle **こそ (koso)** appears, the verb at the end of that clause *must* change to Izenkei. \n- Normal: ...もの悲し (Things are sad).\n- Emphatic: ...もの**こそ**悲し**けれ** (Things are *truly* sad).\n\nThink of 'koso' as a function that forces the sentence to resolve in the 'Realized' state to emphasize its truth."
+    },
+    {
+      "type": "comprehension_check",
+      "question": "In the phrase '月見れば' (Tsuki mireba), why is 'mire' used instead of the standard 'miru'?",
+      "answer": "Because it is followed by the particle 'ba' to indicate a factual condition ('When/Since I look'). In Classical Japanese, 'ba' requires the Izenkei (Realized Base) to express that the action is an established fact or cause.",
+      "hint": "Think about the difference between 'If I look' (hypothetical) and 'When I look' (factual)."
+    }
+  ],
+  "reference_card": {
+    "point": "Izenkei (已然形)",
+    "one_liner": "The 'Realized Base' used for established facts, causality (with -ba), and emphasis (with koso).",
+    "example": "見れば (Mire-ba) = Since/When I look.",
+    "see_also": [
+      "conjugation_mizenkei",
+      "particle_ba",
+      "kakari_musubi"
+    ]
+  },
+  "forward_references": [
+    {
+      "point": "Kakari-Musubi (こそ...已然形)",
+      "note": "We will explore the full logic of emphasis rules in Unit 07, Lesson 4."
+    },
+    {
+      "point": "Concessive particle ど (do)",
+      "note": "The 'although' meaning seen in 'aranedo' also relies on the Izenkei and will be covered in Lesson 3."
+    }
+  ]
+}

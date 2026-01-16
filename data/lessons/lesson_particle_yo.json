@@ -1,0 +1,424 @@
+{
+  "lesson_id": "lesson_particle_yo",
+  "lesson_title": "The Emotional Call: Particle よ (yo)",
+  "lesson_summary": "This lesson introduces the particle 'よ' (yo), which functions as a 'vocative' marker to address someone or an 'emphatic' marker to add emotional weight to a statement.",
+  "grammar_point": "particle_yo",
+  "grammar_explanation": {
+    "concept": "In Classical Japanese, the particle 'よ' (yo) acts like a 'broadcast' tag. It either identifies the recipient of a message (Vocative: 'Oh, [Person]!') or adds a layer of emotional insistence to the preceding phrase (Emphatic).",
+    "formation": "Attached directly to nouns (for vocative use) or to the end of a phrase/verb (for emphasis).",
+    "variations": [
+      "Vocative: Noun + よ (e.g., 'People of the capital!')",
+      "Emphatic: Phrase + よ (e.g., 'Pass the time!')"
+    ],
+    "common_confusions": [
+      "Modern Japanese 'yo' is almost exclusively sentence-final emphasis. In Classical Japanese, its use as a 'vocative' (calling out to someone) is much more prominent."
+    ]
+  },
+  "teaching_sequence": [
+    {
+      "type": "introduction",
+      "content": "In previous lessons, we've looked at particles that define logical relationships (like 'no' for possession or 'ni' for location). Today, we move into the 'emotional' layer of the sentence. Think of the particle 'よ' (yo) as a high-priority interrupt signal in a program. It stops the flow to say: 'Hey, you!' or 'I really mean this!'"
+    },
+    {
+      "type": "poem_presentation",
+      "poem_id": "lapis_389d4e84d69fbcae",
+      "display": {
+        "text_with_furigana": "<ruby>なかむれ<rt>naka mure</rt></ruby>は<ruby>わかやま<rt>waka yama</rt></ruby>の<ruby>は<rt>ha</rt></ruby>に<ruby>ゆき<rt>yuki</rt></ruby><ruby>しろし<rt>shiroshi</rt></ruby><ruby>みやこ<rt>miyako</rt></ruby>の<ruby>ひと<rt>hito</rt></ruby><span style='color: #ff4500; font-weight: bold;'>よ</span><ruby>あはれ<rt>aware</rt></ruby>とも<ruby>みよ<rt>miyo</rt></ruby>",
+        "romaji": "nakamure wa, wakayama no ha ni, yuki shiroshi, miyako no hito yo, aware to mo miyo",
+        "translation": "When I look, the snow is white on the leaves of Waka Mountain; Oh, people of the capital, look upon this with deep feeling!"
+      },
+      "vocabulary": [
+        {
+          "word": "なかむれ",
+          "reading": "なかむれ",
+          "meaning": "when looking (conditional form of 'to look')",
+          "span": [
+            0,
+            4
+          ],
+          "chinese_cognate_note": "Cognate with 眺 (tiào) - to look from afar."
+        },
+        {
+          "word": "は",
+          "reading": "は",
+          "meaning": "topic marker (learned in Unit 1)",
+          "span": [
+            4,
+            5
+          ],
+          "chinese_cognate_note": null
+        },
+        {
+          "word": "わかやま",
+          "reading": "わかやま",
+          "meaning": "Waka Mountain (proper noun)",
+          "span": [
+            5,
+            9
+          ],
+          "chinese_cognate_note": "和歌山 (Mountain of Poetry)."
+        },
+        {
+          "word": "の",
+          "reading": "の",
+          "meaning": "possessive particle (learned in Unit 1)",
+          "span": [
+            9,
+            10
+          ],
+          "chinese_cognate_note": null
+        },
+        {
+          "word": "は",
+          "reading": "は",
+          "meaning": "leaves",
+          "span": [
+            10,
+            11
+          ],
+          "chinese_cognate_note": "葉 (yè)."
+        },
+        {
+          "word": "に",
+          "reading": "に",
+          "meaning": "location marker (learned in Unit 1)",
+          "span": [
+            11,
+            12
+          ],
+          "chinese_cognate_note": null
+        },
+        {
+          "word": "ゆき",
+          "reading": "ゆき",
+          "meaning": "snow",
+          "span": [
+            12,
+            14
+          ],
+          "chinese_cognate_note": "雪 (xuě)."
+        },
+        {
+          "word": "しろし",
+          "reading": "しろし",
+          "meaning": "is white",
+          "span": [
+            14,
+            17
+          ],
+          "chinese_cognate_note": "白 (bái)."
+        },
+        {
+          "word": "みやこ",
+          "reading": "みやこ",
+          "meaning": "capital city",
+          "span": [
+            17,
+            20
+          ],
+          "chinese_cognate_note": "都 (dū)."
+        },
+        {
+          "word": "の",
+          "reading": "の",
+          "meaning": "possessive particle",
+          "span": [
+            20,
+            21
+          ],
+          "chinese_cognate_note": null
+        },
+        {
+          "word": "ひと",
+          "reading": "ひと",
+          "meaning": "person/people",
+          "span": [
+            21,
+            23
+          ],
+          "chinese_cognate_note": "人 (rén)."
+        },
+        {
+          "word": "よ",
+          "reading": "よ",
+          "meaning": "vocative particle (Oh...!)",
+          "span": [
+            23,
+            24
+          ],
+          "chinese_cognate_note": null
+        },
+        {
+          "word": "あはれ",
+          "reading": "あはれ",
+          "meaning": "pathos / deep emotion",
+          "span": [
+            24,
+            27
+          ],
+          "chinese_cognate_note": null
+        },
+        {
+          "word": "と",
+          "reading": "と",
+          "meaning": "quotative/logical wrapper (learned in Unit 1)",
+          "span": [
+            27,
+            28
+          ],
+          "chinese_cognate_note": null
+        },
+        {
+          "word": "も",
+          "reading": "も",
+          "meaning": "emphasis particle (learned in Unit 1)",
+          "span": [
+            28,
+            29
+          ],
+          "chinese_cognate_note": null
+        },
+        {
+          "word": "みよ",
+          "reading": "みよ",
+          "meaning": "look! (imperative form)",
+          "span": [
+            29,
+            31
+          ],
+          "chinese_cognate_note": "見 (jiàn)."
+        }
+      ],
+      "focus_highlight": [
+        23,
+        24
+      ]
+    },
+    {
+      "type": "grammar_spotlight",
+      "content": "In the poem above, look at the phrase <ruby>みやこ<rt>miyako</rt></ruby>の<ruby>ひと<rt>hito</rt></ruby><span style='color: #ff4500; font-weight: bold;'>よ</span>. \n\n1. **みやこのひと** = People of the capital.\n2. **よ** = Vocative marker.\n\nThis creates a direct address. The poet is not just talking *about* the people; he is shouting *to* them. In programming terms, this is like setting the `recipient` field in a message header.",
+      "evidence": "See the poem above."
+    },
+    {
+      "type": "poem_presentation",
+      "poem_id": "ogura100_c90a499f0a279460",
+      "display": {
+        "text_with_furigana": "<ruby>難波潟<rt>nanihagata</rt></ruby><ruby>短<rt>mijikaki</rt></ruby>き<ruby>蘆<rt>ashi</rt></ruby>のふしの<ruby>間<rt>ma</rt></ruby>も<ruby>逢<rt>awa</rt></ruby>はでこの<ruby>世<rt>yo</rt></ruby>を<ruby>過<rt>sugu</rt></ruby>して<span style='color: #ff4500; font-weight: bold;'>よ</span>とや",
+        "romaji": "nanihagata, mijikaki ashi no, fushi no ma mo, awade konoyo o, sugushite yo to ya",
+        "translation": "Without meeting even for a moment as short as a reed joint at Naniwa Lagoon, are you telling me to just pass through this life?"
+      },
+      "vocabulary": [
+        {
+          "word": "難波潟",
+          "reading": "なにはがた",
+          "meaning": "Naniwa Lagoon",
+          "span": [
+            0,
+            3
+          ],
+          "chinese_cognate_note": "難波 (Nánbō) is an old name for Osaka."
+        },
+        {
+          "word": "短き",
+          "reading": "みじかき",
+          "meaning": "short",
+          "span": [
+            3,
+            5
+          ],
+          "chinese_cognate_note": "短 (duǎn)."
+        },
+        {
+          "word": "蘆",
+          "reading": "あし",
+          "meaning": "reed",
+          "span": [
+            5,
+            6
+          ],
+          "chinese_cognate_note": "蘆 (lú)."
+        },
+        {
+          "word": "の",
+          "reading": "の",
+          "meaning": "possessive particle",
+          "span": [
+            6,
+            7
+          ],
+          "chinese_cognate_note": null
+        },
+        {
+          "word": "ふし",
+          "reading": "ふし",
+          "meaning": "node/joint of a plant",
+          "span": [
+            7,
+            9
+          ],
+          "chinese_cognate_note": "節 (jié)."
+        },
+        {
+          "word": "の",
+          "reading": "の",
+          "meaning": "possessive particle",
+          "span": [
+            9,
+            10
+          ],
+          "chinese_cognate_note": null
+        },
+        {
+          "word": "間",
+          "reading": "ま",
+          "meaning": "interval/space",
+          "span": [
+            10,
+            11
+          ],
+          "chinese_cognate_note": "間 (jiān)."
+        },
+        {
+          "word": "も",
+          "reading": "も",
+          "meaning": "even/also",
+          "span": [
+            11,
+            12
+          ],
+          "chinese_cognate_note": null
+        },
+        {
+          "word": "逢は",
+          "reading": "あは",
+          "meaning": "to meet (unrealized form)",
+          "span": [
+            12,
+            14
+          ],
+          "chinese_cognate_note": "逢 (féng)."
+        },
+        {
+          "word": "で",
+          "reading": "で",
+          "meaning": "without (negative connective)",
+          "span": [
+            14,
+            15
+          ],
+          "chinese_cognate_note": null
+        },
+        {
+          "word": "この",
+          "reading": "この",
+          "meaning": "this",
+          "span": [
+            15,
+            17
+          ],
+          "chinese_cognate_note": null
+        },
+        {
+          "word": "世",
+          "reading": "よ",
+          "meaning": "world/life",
+          "span": [
+            17,
+            18
+          ],
+          "chinese_cognate_note": "世 (shì)."
+        },
+        {
+          "word": "を",
+          "reading": "を",
+          "meaning": "object marker",
+          "span": [
+            18,
+            19
+          ],
+          "chinese_cognate_note": null
+        },
+        {
+          "word": "過ぐし",
+          "reading": "すぐし",
+          "meaning": "to pass/spend time",
+          "span": [
+            19,
+            22
+          ],
+          "chinese_cognate_note": "過 (guò)."
+        },
+        {
+          "word": "て",
+          "reading": "て",
+          "meaning": "conjunctive particle (linking actions)",
+          "span": [
+            22,
+            23
+          ],
+          "chinese_cognate_note": null
+        },
+        {
+          "word": "よ",
+          "reading": "よ",
+          "meaning": "emphatic particle",
+          "span": [
+            23,
+            24
+          ],
+          "chinese_cognate_note": null
+        },
+        {
+          "word": "と",
+          "reading": "と",
+          "meaning": "quotative particle",
+          "span": [
+            24,
+            25
+          ],
+          "chinese_cognate_note": null
+        },
+        {
+          "word": "や",
+          "reading": "や",
+          "meaning": "interrogative/rhetorical particle",
+          "span": [
+            25,
+            26
+          ],
+          "chinese_cognate_note": null
+        }
+      ],
+      "focus_highlight": [
+        23,
+        24
+      ]
+    },
+    {
+      "type": "grammar_spotlight",
+      "content": "In this second poem, notice <ruby>過<rt>sugu</rt></ruby>して<span style='color: #ff4500; font-weight: bold;'>よ</span>. \n\nHere, 'よ' is not addressing a person. Instead, it is attached to the verb 'to pass/spend time' (<ruby>過<rt>sugu</rt></ruby>して). It adds a sense of **insistence** or **finality**. The speaker is repeating a command or a harsh reality: '[You say I should] just pass through [this life]!?'",
+      "evidence": "See the poem above."
+    },
+    {
+      "type": "comprehension_check",
+      "question": "In Poem 1, what is the grammatical function of 'よ' in the phrase 'miyako no hito yo'?",
+      "answer": "It is a vocative particle used to address or call out to the 'people of the capital'.",
+      "hint": "Is the poet talking *about* the people, or *to* the people?"
+    }
+  ],
+  "reference_card": {
+    "point": "Particle よ (yo)",
+    "one_liner": "A particle used to call out to someone (Vocative) or to add emotional emphasis to a phrase.",
+    "example": "みやこのひとよ (Miyako no hito yo) = Oh, people of the capital!",
+    "see_also": [
+      "kireji_kana",
+      "kireji_ya"
+    ]
+  },
+  "forward_references": [
+    {
+      "point": "Imperative form (miyo)",
+      "note": "We see 'miyo' (look!) in Poem 1. We will study the full imperative conjugation in the next unit."
+    }
+  ]
+}

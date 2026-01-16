@@ -1,0 +1,573 @@
+{
+  "lesson_id": "lesson_auxiliary_mu",
+  "lesson_title": "The Intentional 'Mu': Expressing Will and Future",
+  "lesson_summary": "This lesson introduces the auxiliary verb む (mu), the primary tool for expressing a speaker's intention or a future possibility, always building upon the 'Unrealized Base' (Mizenkei) you learned previously.",
+  "grammar_point": "auxiliary_mu",
+  "grammar_explanation": {
+    "concept": "In Classical Japanese, actions that haven't happened yet but are intended or expected are marked with む (mu). Think of it as a 'Future/Intent' flag. For a Chinese speaker, it functions similarly to '想' (intention) or '会/吧' (conjecture/suggestion) depending on the context.",
+    "formation": "Attached to the 未然形 (Mizenkei - Unrealized Base) of a verb.",
+    "variations": [
+      "ん (n) - In later periods and some manuscripts, 'mu' is written or pronounced as 'n'."
+    ],
+    "common_confusions": [
+      "Volition (I will): Used when the subject is the 1st person.",
+      "Conjecture (It might): Used when the subject is the 3rd person.",
+      "The student should look for context clues to decide if it's 'I want to' or 'It probably will'."
+    ]
+  },
+  "teaching_sequence": [
+    {
+      "type": "introduction",
+      "content": "In the previous lesson, we mastered the **Mizenkei (未然形)**—the 'Unrealized Base' used for things that haven't occurred. However, a base alone doesn't tell us *why* the action is unrealized. Is it forbidden? Is it denied? Or is it something we *intend* to do? Today, we add the auxiliary **む (mu)**. In our programming analogy, if the verb is a function, adding `.mu` is like setting the execution mode to `FUTURE_INTENT`."
+    },
+    {
+      "type": "poem_presentation",
+      "poem_id": "lapis_49879da4daf738a9",
+      "display": {
+        "text_with_furigana": "<ruby>岩<rt>いは</rt></ruby><ruby>走<rt>はし</rt></ruby>り<ruby>滝<rt>たき</rt></ruby>なかるる<ruby>初瀬<rt>はつせ</rt></ruby><ruby>川<rt>かは</rt></ruby><ruby>絶<rt>た</rt></ruby>ゆることなくまたも<ruby>来<rt>き</rt></ruby>て<ruby>見<rt>み</rt></ruby>む",
+        "romaji": "ihahashiri, taki chi nakaruru, hatsusekaha, tayuru koto naku, mata mo kite mimu",
+        "translation": "The Hatsuse River where water surges over rocks like a waterfall—without ever ceasing, I will come to see it again."
+      },
+      "vocabulary": [
+        {
+          "word": "いは",
+          "reading": "いわ",
+          "meaning": "rock/stone",
+          "span": [
+            0,
+            2
+          ],
+          "chinese_cognate_note": "岩 (yán)"
+        },
+        {
+          "word": "はしり",
+          "reading": "はしり",
+          "meaning": "running/surging",
+          "span": [
+            2,
+            5
+          ],
+          "chinese_cognate_note": "走 (zǒu) - In classical Chinese/Japanese, this means 'to run'."
+        },
+        {
+          "word": "たき",
+          "reading": "たき",
+          "meaning": "waterfall",
+          "span": [
+            5,
+            7
+          ],
+          "chinese_cognate_note": "滝 (Japanese-made Kanji for waterfall)"
+        },
+        {
+          "word": "きち",
+          "reading": "きち",
+          "meaning": "place (suffix/contextual)",
+          "span": [
+            6,
+            8
+          ],
+          "chinese_cognate_note": null
+        },
+        {
+          "word": "なか",
+          "reading": "なか",
+          "meaning": "middle/inside",
+          "span": [
+            8,
+            10
+          ],
+          "chinese_cognate_note": "中 (zhōng)"
+        },
+        {
+          "word": "るる",
+          "reading": "るる",
+          "meaning": "flowing (attributive ending)",
+          "span": [
+            10,
+            12
+          ],
+          "chinese_cognate_note": null
+        },
+        {
+          "word": "はつせ",
+          "reading": "はつせ",
+          "meaning": "Hatsuse (Place name)",
+          "span": [
+            12,
+            15
+          ],
+          "chinese_cognate_note": null
+        },
+        {
+          "word": "かは",
+          "reading": "かわ",
+          "meaning": "river",
+          "span": [
+            15,
+            17
+          ],
+          "chinese_cognate_note": "川 (chuān)"
+        },
+        {
+          "word": "たゆる",
+          "reading": "たゆる",
+          "meaning": "to cease/stop",
+          "span": [
+            17,
+            20
+          ],
+          "chinese_cognate_note": "絶 (jué)"
+        },
+        {
+          "word": "こと",
+          "reading": "こと",
+          "meaning": "thing/fact",
+          "span": [
+            20,
+            22
+          ],
+          "chinese_cognate_note": "事 (shì)"
+        },
+        {
+          "word": "なく",
+          "reading": "なく",
+          "meaning": "without/not",
+          "span": [
+            22,
+            24
+          ],
+          "chinese_cognate_note": "無 (wú)"
+        },
+        {
+          "word": "また",
+          "reading": "また",
+          "meaning": "again",
+          "span": [
+            24,
+            26
+          ],
+          "chinese_cognate_note": "又 (yòu)"
+        },
+        {
+          "word": "も",
+          "reading": "も",
+          "meaning": "also/even",
+          "span": [
+            26,
+            27
+          ],
+          "chinese_cognate_note": null
+        },
+        {
+          "word": "きて",
+          "reading": "きて",
+          "meaning": "coming (te-form)",
+          "span": [
+            27,
+            29
+          ],
+          "chinese_cognate_note": "来 (lái)"
+        },
+        {
+          "word": "み",
+          "reading": "み",
+          "meaning": "to see (Mizenkei base)",
+          "span": [
+            29,
+            30
+          ],
+          "chinese_cognate_note": "見 (jiàn)"
+        },
+        {
+          "word": "む",
+          "reading": "む",
+          "meaning": "will/intend to (auxiliary)",
+          "span": [
+            30,
+            31
+          ],
+          "chinese_cognate_note": null
+        }
+      ],
+      "focus_highlight": [
+        30,
+        31
+      ]
+    },
+    {
+      "type": "grammar_spotlight",
+      "content": "Look at the end of the poem: **見む (mi-mu)**. \n1. **見 (mi)** is the Mizenkei (Unrealized Base) of the verb 'to see'.\n2. **む (mu)** is our target auxiliary.\n\nBecause the poet is talking about their own future action ('I will come again'), **む** functions as **Volition (Intention)**. It transforms 'see' into 'intend to see' or 'will see'.",
+      "evidence": "See the poem above."
+    },
+    {
+      "type": "poem_presentation",
+      "poem_id": "lapis_cff97fd82384bdb6",
+      "display": {
+        "text_with_furigana": "<ruby>深雪<rt>みゆき</rt></ruby><ruby>降<rt>ふ</rt></ruby>る<ruby>越<rt>こし</rt></ruby>の<ruby>大山<rt>おほやま</rt></ruby><ruby>行<rt>ゆ</rt></ruby>き<ruby>過<rt>す</rt></ruby>ぎていづれの<ruby>日<rt>ひ</rt></ruby>にかわが<ruby>里<rt>さと</rt></ruby>を<ruby>見<rt>み</rt></ruby>む",
+        "romaji": "miyuki furu, koshi no ooyama, yuki sukite, itsure no hi ni ka, waga sato o mimu",
+        "translation": "After passing the Great Mountains of Koshi where deep snow falls, on what day shall I see my home village again?"
+      },
+      "vocabulary": [
+        {
+          "word": "みゆき",
+          "reading": "みゆき",
+          "meaning": "deep snow",
+          "span": [
+            0,
+            3
+          ],
+          "chinese_cognate_note": "深雪 (shēn xuě)"
+        },
+        {
+          "word": "ふる",
+          "reading": "ふる",
+          "meaning": "to fall (snow/rain)",
+          "span": [
+            3,
+            5
+          ],
+          "chinese_cognate_note": "降 (jiàng)"
+        },
+        {
+          "word": "こし",
+          "reading": "こし",
+          "meaning": "Koshi (Ancient province name)",
+          "span": [
+            5,
+            7
+          ],
+          "chinese_cognate_note": "越 (yuè)"
+        },
+        {
+          "word": "の",
+          "reading": "の",
+          "meaning": "possessive particle",
+          "span": [
+            7,
+            8
+          ],
+          "chinese_cognate_note": "的 (de)"
+        },
+        {
+          "word": "おほやま",
+          "reading": "おおやま",
+          "meaning": "big mountain",
+          "span": [
+            8,
+            12
+          ],
+          "chinese_cognate_note": "大山 (dà shān)"
+        },
+        {
+          "word": "ゆき",
+          "reading": "ゆき",
+          "meaning": "going",
+          "span": [
+            12,
+            14
+          ],
+          "chinese_cognate_note": "行 (xíng)"
+        },
+        {
+          "word": "すきて",
+          "reading": "すぎて",
+          "meaning": "passing/exceeding",
+          "span": [
+            14,
+            17
+          ],
+          "chinese_cognate_note": "過 (guò)"
+        },
+        {
+          "word": "いつれ",
+          "reading": "いづれ",
+          "meaning": "which",
+          "span": [
+            17,
+            20
+          ],
+          "chinese_cognate_note": "何 (hé)"
+        },
+        {
+          "word": "の",
+          "reading": "の",
+          "meaning": "possessive particle",
+          "span": [
+            20,
+            21
+          ],
+          "chinese_cognate_note": "的 (de)"
+        },
+        {
+          "word": "ひ",
+          "reading": "ひ",
+          "meaning": "day",
+          "span": [
+            21,
+            22
+          ],
+          "chinese_cognate_note": "日 (rì)"
+        },
+        {
+          "word": "に",
+          "reading": "に",
+          "meaning": "time particle (at/on)",
+          "span": [
+            22,
+            23
+          ],
+          "chinese_cognate_note": null
+        },
+        {
+          "word": "か",
+          "reading": "か",
+          "meaning": "question particle",
+          "span": [
+            23,
+            24
+          ],
+          "chinese_cognate_note": null
+        },
+        {
+          "word": "わか",
+          "reading": "わが",
+          "meaning": "my",
+          "span": [
+            24,
+            26
+          ],
+          "chinese_cognate_note": "我 (wǒ)"
+        },
+        {
+          "word": "さと",
+          "reading": "さと",
+          "meaning": "village/hometown",
+          "span": [
+            26,
+            28
+          ],
+          "chinese_cognate_note": "里 (lǐ)"
+        },
+        {
+          "word": "を",
+          "reading": "を",
+          "meaning": "object marker",
+          "span": [
+            28,
+            29
+          ],
+          "chinese_cognate_note": null
+        },
+        {
+          "word": "み",
+          "reading": "み",
+          "meaning": "to see (Mizenkei base)",
+          "span": [
+            29,
+            30
+          ],
+          "chinese_cognate_note": "見 (jiàn)"
+        },
+        {
+          "word": "む",
+          "reading": "む",
+          "meaning": "shall/will (auxiliary)",
+          "span": [
+            30,
+            31
+          ],
+          "chinese_cognate_note": null
+        }
+      ],
+      "focus_highlight": [
+        30,
+        31
+      ]
+    },
+    {
+      "type": "contrast_example",
+      "content": "In Poem 2, we see **見む (mi-mu)** again. However, notice the particle **か (ka)** earlier in the line. This is a question marker. When **む** is used in a question about the future, it shifts from 'I will' to 'Shall I?' or 'When might I?'. This is the **Conjecture** aspect of **む**."
+    },
+    {
+      "type": "poem_presentation",
+      "poem_id": "lapis_2d77c6a450ace46d",
+      "display": {
+        "text_with_furigana": "<ruby>花<rt>はな</rt></ruby>ちらす<ruby>風<rt>かぜ</rt></ruby>の<ruby>宿<rt>やど</rt></ruby>りはたれか<ruby>知<rt>し</rt></ruby>る<ruby>我<rt>われ</rt></ruby>にをしへよ<ruby>行<rt>ゆ</rt></ruby>きてうらみむ",
+        "romaji": "hana chirasu, kaze no yadori wa, tare ka shiru, ware ni o shie yo, ikite uramimu",
+        "translation": "Who knows the dwelling place of the wind that scatters the flowers? Tell me, so I may go there and find fault with it."
+      },
+      "vocabulary": [
+        {
+          "word": "はな",
+          "reading": "はな",
+          "meaning": "flower",
+          "span": null,
+          "chinese_cognate_note": "花 (huā)"
+        },
+        {
+          "word": "ちらす",
+          "reading": "ちらす",
+          "meaning": "to scatter",
+          "span": [
+            1,
+            4
+          ],
+          "chinese_cognate_note": "散 (sàn)"
+        },
+        {
+          "word": "かぜ",
+          "reading": "かぜ",
+          "meaning": "wind",
+          "span": null,
+          "chinese_cognate_note": "風 (fēng)"
+        },
+        {
+          "word": "の",
+          "reading": "の",
+          "meaning": "possessive particle",
+          "span": [
+            5,
+            6
+          ],
+          "chinese_cognate_note": "的 (de)"
+        },
+        {
+          "word": "やどり",
+          "reading": "やどり",
+          "meaning": "lodging/dwelling",
+          "span": null,
+          "chinese_cognate_note": "宿 (sù)"
+        },
+        {
+          "word": "は",
+          "reading": "は",
+          "meaning": "topic marker",
+          "span": [
+            9,
+            10
+          ],
+          "chinese_cognate_note": null
+        },
+        {
+          "word": "たれ",
+          "reading": "たれ",
+          "meaning": "who",
+          "span": [
+            10,
+            12
+          ],
+          "chinese_cognate_note": "誰 (shéi)"
+        },
+        {
+          "word": "か",
+          "reading": "か",
+          "meaning": "question particle",
+          "span": [
+            12,
+            13
+          ],
+          "chinese_cognate_note": null
+        },
+        {
+          "word": "しる",
+          "reading": "しる",
+          "meaning": "to know",
+          "span": [
+            13,
+            15
+          ],
+          "chinese_cognate_note": "知 (zhī)"
+        },
+        {
+          "word": "われ",
+          "reading": "われ",
+          "meaning": "I/me",
+          "span": null,
+          "chinese_cognate_note": "我 (wǒ)"
+        },
+        {
+          "word": "に",
+          "reading": "に",
+          "meaning": "to (indirect object)",
+          "span": [
+            16,
+            17
+          ],
+          "chinese_cognate_note": null
+        },
+        {
+          "word": "をしへ",
+          "reading": "おしえ",
+          "meaning": "teach/tell (imperative)",
+          "span": [
+            17,
+            20
+          ],
+          "chinese_cognate_note": "教 (jiāo)"
+        },
+        {
+          "word": "よ",
+          "reading": "よ",
+          "meaning": "imperative particle",
+          "span": [
+            20,
+            21
+          ],
+          "chinese_cognate_note": null
+        },
+        {
+          "word": "いきて",
+          "reading": "いきて",
+          "meaning": "going (te-form)",
+          "span": null,
+          "chinese_cognate_note": "行 (xíng)"
+        },
+        {
+          "word": "うらみ",
+          "reading": "うらみ",
+          "meaning": "to resent/blame (Mizenkei)",
+          "span": [
+            24,
+            27
+          ],
+          "chinese_cognate_note": "怨 (yuàn)"
+        },
+        {
+          "word": "む",
+          "reading": "む",
+          "meaning": "will/intend to (auxiliary)",
+          "span": [
+            27,
+            28
+          ],
+          "chinese_cognate_note": null
+        }
+      ],
+      "focus_highlight": [
+        27,
+        28
+      ]
+    },
+    {
+      "type": "comprehension_check",
+      "question": "In Poem 3, the poet says 'うらみむ' (urami-mu). Based on the context 'Tell me [where the wind lives], I will go and...', what is the logical function of 'mu' here?",
+      "answer": "Volition (Intention). The poet is expressing a personal will to go and confront the wind for scattering the flowers.",
+      "hint": "Is the poet talking about themselves or someone else? Is it a statement of fact or a plan?"
+    }
+  ],
+  "reference_card": {
+    "point": "Auxiliary む (mu)",
+    "one_liner": "The 'Future/Intent' tag attached to the Mizenkei base to express volition ('I will') or conjecture ('It might').",
+    "example": "見む (mi-mu) = I will see / Shall I see?",
+    "see_also": [
+      "conjugation_mizenkei"
+    ]
+  },
+  "forward_references": [
+    {
+      "point": "Kakari-Musubi (か...む)",
+      "note": "In Poem 2, notice how 'ka' in the middle of the sentence changes the feeling of 'mu' at the end. We will study this 'linking' rule in Unit 7."
+    }
+  ]
+}

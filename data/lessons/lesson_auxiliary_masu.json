@@ -1,0 +1,519 @@
+{
+  "lesson_id": "lesson_auxiliary_masu",
+  "lesson_title": "The Politeness Bit: The Auxiliary ます (masu)",
+  "lesson_summary": "This lesson introduces the auxiliary 'masu', which functions as a 'social logic gate' to elevate the tone of a verb, indicating respect or formal politeness toward the subject or the listener.",
+  "grammar_point": "auxiliary_masu",
+  "grammar_explanation": {
+    "concept": "In Classical Japanese, 'masu' (ます) is an auxiliary verb that adds a layer of politeness or honorific respect to the action. Think of it as a 'politeness bit' in a data packet; the core data (the verb's meaning) remains the same, but the 'header' changes how the receiver perceives the tone. It is the ancestor of the modern Japanese polite form.",
+    "formation": "It typically attaches to the Ren'yokei (Continuative Form) of verbs.",
+    "variations": [
+      "ませ (mase) - The Imperative or Subjunctive form, often used in prayers, wishes, or commands to a superior."
+    ],
+    "common_confusions": [
+      "Do not confuse 'masu' with the similar-sounding 'mashi' (counterfactual). 'Masu' is about social register, while 'mashi' is about hypothetical logic."
+    ]
+  },
+  "teaching_sequence": [
+    {
+      "type": "introduction",
+      "content": "Up until now, we have focused on the 'what' and 'when' of actions—negation, past tense, and completion. However, language also carries a 'social vector.' In Classical Japanese, verbs often carry markers to indicate the status of the person performing the action or the person being addressed. The auxiliary <span style='color: #e67e22;'>ます (masu)</span> is the primary tool for this, functioning much like the distinction between '你' (nǐ) and '您' (nín) in Chinese, but applied directly to the verb structure."
+    },
+    {
+      "type": "poem_presentation",
+      "poem_id": "lapis_ae7c772891b633e9",
+      "display": {
+        "text_with_furigana": "<ruby>一<rt>ひと</rt></ruby><ruby>年<rt>とせ</rt></ruby>に<ruby>一<rt>ひと</rt></ruby><ruby>度<rt>たび</rt></ruby><span style='color: #e67e22;'>きます</span><ruby>君<rt>きみ</rt></ruby>まてはやとかす<ruby>人<rt>ひと</rt></ruby>もあらしとぞ<ruby>思<rt>おも</rt></ruby>ふ",
+        "romaji": "hitotose ni, hitotabi kimasu, kimi mate haya, tokasu hito mo, arashi to zo omou",
+        "translation": "I wait for you, who comes but once a year; I think there will be no one who would let this time pass like a storm."
+      },
+      "vocabulary": [
+        {
+          "word": "ひととせ",
+          "reading": "hitotose",
+          "meaning": "one year",
+          "span": [
+            0,
+            4
+          ],
+          "chinese_cognate_note": "一年 (yī nián)"
+        },
+        {
+          "word": "に",
+          "reading": "ni",
+          "meaning": "in/at (time marker)",
+          "span": [
+            4,
+            5
+          ],
+          "chinese_cognate_note": null
+        },
+        {
+          "word": "ひとたび",
+          "reading": "hitotabi",
+          "meaning": "one time / once",
+          "span": null,
+          "chinese_cognate_note": "一度 (yī dù)"
+        },
+        {
+          "word": "きます",
+          "reading": "kimasu",
+          "meaning": "comes (polite)",
+          "span": [
+            9,
+            12
+          ],
+          "chinese_cognate_note": "来 (lái) + polite auxiliary"
+        },
+        {
+          "word": "君",
+          "reading": "kimi",
+          "meaning": "you / lord",
+          "span": [
+            12,
+            13
+          ],
+          "chinese_cognate_note": "君 (jūn) - used for a person of status or a lover"
+        },
+        {
+          "word": "まて",
+          "reading": "mate",
+          "meaning": "wait",
+          "span": [
+            13,
+            15
+          ],
+          "chinese_cognate_note": null
+        },
+        {
+          "word": "はや",
+          "reading": "haya",
+          "meaning": "already / soon",
+          "span": [
+            15,
+            17
+          ],
+          "chinese_cognate_note": null
+        },
+        {
+          "word": "とかす",
+          "reading": "tokasu",
+          "meaning": "to let pass / to allow to go by",
+          "span": [
+            17,
+            20
+          ],
+          "chinese_cognate_note": null
+        },
+        {
+          "word": "人",
+          "reading": "hito",
+          "meaning": "person",
+          "span": [
+            20,
+            21
+          ],
+          "chinese_cognate_note": "人 (rén)"
+        },
+        {
+          "word": "も",
+          "reading": "mo",
+          "meaning": "also / even",
+          "span": [
+            21,
+            22
+          ],
+          "chinese_cognate_note": null
+        },
+        {
+          "word": "あらし",
+          "reading": "arashi",
+          "meaning": "storm",
+          "span": [
+            22,
+            25
+          ],
+          "chinese_cognate_note": null
+        },
+        {
+          "word": "と",
+          "reading": "to",
+          "meaning": "quotative particle (like 'that')",
+          "span": [
+            25,
+            26
+          ],
+          "chinese_cognate_note": null
+        },
+        {
+          "word": "ぞ",
+          "reading": "zo",
+          "meaning": "emphasis particle",
+          "span": null,
+          "chinese_cognate_note": null
+        },
+        {
+          "word": "思ふ",
+          "reading": "omou",
+          "meaning": "to think / to feel",
+          "span": [
+            27,
+            29
+          ],
+          "chinese_cognate_note": "思 (sī)"
+        }
+      ],
+      "focus_highlight": [
+        10,
+        12
+      ]
+    },
+    {
+      "type": "grammar_spotlight",
+      "content": "In the poem above, notice the word <span style='color: #e67e22;'>きます (kimasu)</span>. \n\n1. **Core Verb**: き (ki) is the continuative form of 'to come'.\n2. **Polite Tag**: ます (masu) is added to show respect to the '君' (Lord/You) who is coming.\n\nWithout 'masu', the verb would simply be 'kuru' (comes). By adding 'masu', the poet acknowledges the importance of the visitor. In programming terms, this is like calling a function with a `priority=high` or `access=formal` flag.",
+      "evidence": "See the poem above."
+    },
+    {
+      "type": "poem_presentation",
+      "poem_id": "lapis_2994a742ea6726d5",
+      "display": {
+        "text_with_furigana": "<ruby>命<rt>いのち</rt></ruby>を<ruby>為<rt>し</rt></ruby><span style='color: #e67e22;'>ませ</span>ひさしくもかもなほり<ruby>病<rt>やまい</rt></ruby>はふみならしまたまたもこむ",
+        "romaji": "inochi o shimase, hisashiku mo, kamo na hori, yamai wa fuminarashi, matamata mo komu",
+        "translation": "May you live a long life! May the illness be trampled down and heal, and I shall come again and again."
+      },
+      "vocabulary": [
+        {
+          "word": "命",
+          "reading": "inochi",
+          "meaning": "life",
+          "span": null,
+          "chinese_cognate_note": "命 (mìng)"
+        },
+        {
+          "word": "を",
+          "reading": "o",
+          "meaning": "direct object marker",
+          "span": [
+            3,
+            4
+          ],
+          "chinese_cognate_note": null
+        },
+        {
+          "word": "し",
+          "reading": "shi",
+          "meaning": "to do / to make",
+          "span": [
+            4,
+            5
+          ],
+          "chinese_cognate_note": null
+        },
+        {
+          "word": "ませ",
+          "reading": "mase",
+          "meaning": "polite auxiliary (imperative/desiderative form)",
+          "span": [
+            5,
+            7
+          ],
+          "chinese_cognate_note": null
+        },
+        {
+          "word": "ひさしく",
+          "reading": "hisashiku",
+          "meaning": "for a long time",
+          "span": [
+            7,
+            11
+          ],
+          "chinese_cognate_note": "久 (jiǔ)"
+        },
+        {
+          "word": "も",
+          "reading": "mo",
+          "meaning": "emphasis particle",
+          "span": [
+            11,
+            12
+          ],
+          "chinese_cognate_note": null
+        },
+        {
+          "word": "かも",
+          "reading": "kamo",
+          "meaning": "exclamation of wonder/desire",
+          "span": [
+            12,
+            14
+          ],
+          "chinese_cognate_note": null
+        },
+        {
+          "word": "な",
+          "reading": "na",
+          "meaning": "exclamation particle",
+          "span": [
+            14,
+            15
+          ],
+          "chinese_cognate_note": null
+        },
+        {
+          "word": "ほり",
+          "reading": "hori",
+          "meaning": "to heal / to recover",
+          "span": [
+            15,
+            17
+          ],
+          "chinese_cognate_note": null
+        },
+        {
+          "word": "病",
+          "reading": "yamai",
+          "meaning": "illness / sickness",
+          "span": null,
+          "chinese_cognate_note": "病 (bìng)"
+        },
+        {
+          "word": "は",
+          "reading": "wa",
+          "meaning": "topic marker",
+          "span": [
+            20,
+            21
+          ],
+          "chinese_cognate_note": null
+        },
+        {
+          "word": "ふみならし",
+          "reading": "fuminarashi",
+          "meaning": "to trample down / to level",
+          "span": [
+            21,
+            26
+          ],
+          "chinese_cognate_note": null
+        },
+        {
+          "word": "またまた",
+          "reading": "matamata",
+          "meaning": "again and again",
+          "span": [
+            26,
+            30
+          ],
+          "chinese_cognate_note": null
+        },
+        {
+          "word": "も",
+          "reading": "mo",
+          "meaning": "also",
+          "span": [
+            30,
+            31
+          ],
+          "chinese_cognate_note": null
+        },
+        {
+          "word": "こむ",
+          "reading": "komu",
+          "meaning": "will come (future/intent)",
+          "span": [
+            31,
+            33
+          ],
+          "chinese_cognate_note": null
+        }
+      ],
+      "focus_highlight": [
+        5,
+        7
+      ]
+    },
+    {
+      "type": "contrast_example",
+      "content": "In Poem 2, we see the form <span style='color: #e67e22;'>ませ (mase)</span>. This is the 'Imperative' form of 'masu'. However, when used in poetry addressed to a superior or in a prayer, it doesn't function as a harsh command. Instead, it functions as a **formal wish** or **supplication**. \n\n- **し (shi)**: Do/Make\n- **ませ (mase)**: [Please] do (Polite/Formal Wish)\n\nThis is logically equivalent to the Chinese '请' (qǐng) or '愿' (yuàn) used in formal contexts."
+    },
+    {
+      "type": "poem_presentation",
+      "poem_id": "lapis_955d6dc9ae4489e9",
+      "display": {
+        "text_with_furigana": "<ruby>春<rt>はる</rt></ruby><ruby>草<rt>くさ</rt></ruby>はのちはちりやすしいはほなすときはに<span style='color: #e67e22;'>いませ</span>たふときあかきみ",
+        "romaji": "harukusawa, nochihachiriyasushiiwahonasutokiwa, ni, imasetahutokiakakimi, ",
+        "translation": "Spring grasses soon scatter and fade; may you, noble and pure, exist eternally like a solid rock."
+      },
+      "vocabulary": [
+        {
+          "word": "春",
+          "reading": "haru",
+          "meaning": "spring",
+          "span": null,
+          "chinese_cognate_note": "春 (chūn)"
+        },
+        {
+          "word": "草",
+          "reading": "kusa",
+          "meaning": "grass",
+          "span": null,
+          "chinese_cognate_note": "草 (cǎo)"
+        },
+        {
+          "word": "は",
+          "reading": "ha",
+          "meaning": "topic marker",
+          "span": [
+            0,
+            1
+          ],
+          "chinese_cognate_note": null
+        },
+        {
+          "word": "のち",
+          "reading": "nochi",
+          "meaning": "after / later",
+          "span": [
+            5,
+            7
+          ],
+          "chinese_cognate_note": null
+        },
+        {
+          "word": "は",
+          "reading": "ha",
+          "meaning": "topic marker",
+          "span": [
+            7,
+            8
+          ],
+          "chinese_cognate_note": null
+        },
+        {
+          "word": "ちり",
+          "reading": "chiri",
+          "meaning": "to scatter / to fall",
+          "span": [
+            8,
+            10
+          ],
+          "chinese_cognate_note": null
+        },
+        {
+          "word": "やすし",
+          "reading": "yasushi",
+          "meaning": "easy to (suffix)",
+          "span": [
+            10,
+            13
+          ],
+          "chinese_cognate_note": "易 (yì)"
+        },
+        {
+          "word": "いはほ",
+          "reading": "iwaho",
+          "meaning": "boulder / rock",
+          "span": [
+            13,
+            16
+          ],
+          "chinese_cognate_note": null
+        },
+        {
+          "word": "なす",
+          "reading": "nasu",
+          "meaning": "to be like / to act as",
+          "span": [
+            16,
+            18
+          ],
+          "chinese_cognate_note": null
+        },
+        {
+          "word": "ときは",
+          "reading": "tokiwa",
+          "meaning": "eternity / everlasting",
+          "span": [
+            18,
+            21
+          ],
+          "chinese_cognate_note": null
+        },
+        {
+          "word": "に",
+          "reading": "ni",
+          "meaning": "in (location/state marker)",
+          "span": [
+            21,
+            22
+          ],
+          "chinese_cognate_note": null
+        },
+        {
+          "word": "いませ",
+          "reading": "imase",
+          "meaning": "to be / to exist (polite/honorific)",
+          "span": [
+            22,
+            25
+          ],
+          "chinese_cognate_note": null
+        },
+        {
+          "word": "たふとき",
+          "reading": "tafutoki",
+          "meaning": "noble / precious",
+          "span": [
+            25,
+            29
+          ],
+          "chinese_cognate_note": null
+        },
+        {
+          "word": "あかき",
+          "reading": "akaki",
+          "meaning": "bright / pure / red",
+          "span": [
+            29,
+            32
+          ],
+          "chinese_cognate_note": null
+        },
+        {
+          "word": "み",
+          "reading": "mi",
+          "meaning": "person / body / self",
+          "span": [
+            32,
+            33
+          ],
+          "chinese_cognate_note": "身 (shēn)"
+        }
+      ],
+      "focus_highlight": [
+        23,
+        25
+      ]
+    },
+    {
+      "type": "comprehension_check",
+      "question": "In Poem 3, the poet uses 'imase' (いませ) instead of the plain verb for 'to be'. Based on the context of the poem, why is this polite form used?",
+      "answer": "The poet is addressing a 'noble and pure person' (tahutoki akaki mi) and expressing a wish for their eternal existence. The polite form 'imase' reflects the high status of the person being addressed and the formal, prayer-like nature of the wish.",
+      "hint": "Look at the final words of the poem: 'noble and pure person'."
+    }
+  ],
+  "reference_card": {
+    "point": "auxiliary_masu (ます/ませ)",
+    "one_liner": "A politeness auxiliary that elevates the verb's social register, often used for respect or formal wishes.",
+    "example": "きます (kimasu) = [He/You] respectfully come.",
+    "see_also": [
+      "auxiliary_su",
+      "auxiliary_ru"
+    ]
+  },
+  "forward_references": [
+    {
+      "point": "Honorific Verbs (tamau, obosu)",
+      "note": "While 'masu' is an auxiliary, Classical Japanese also uses specific honorific verbs. We will see how these combine in the final unit."
+    }
+  ]
+}

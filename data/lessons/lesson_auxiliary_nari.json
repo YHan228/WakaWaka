@@ -1,0 +1,565 @@
+{
+  "lesson_id": "lesson_auxiliary_nari",
+  "lesson_title": "The Classical 'Is': The Copula なり (nari)",
+  "lesson_summary": "In this lesson, we introduce the auxiliary verb 'nari', the classical equivalent of the Chinese '是' (shì). It functions as a logical anchor that identifies or describes the state of a noun.",
+  "grammar_point": "auxiliary_nari",
+  "grammar_explanation": {
+    "concept": "The auxiliary 'nari' (なり) is the primary tool for assertion (断定). It functions like a mathematical equals sign (=), linking a subject to a predicate. In Chinese terms, it is the functional equivalent of '是'.",
+    "formation": "Noun + なり (nari) / Noun + なる (naru)",
+    "variations": [
+      "なり (nari): Terminal form (Shuushikei) used to end a sentence.",
+      "なる (naru): Attributive form (Rentaikei) used to modify a following noun (e.g., 'the X that is Y')."
+    ],
+    "common_confusions": [
+      "Unlike Chinese '是', 'nari' comes at the end of the phrase (SOV logic).",
+      "Do not confuse 'nari' with the particle 'ni' (location); 'nari' is a complete declaration of identity."
+    ]
+  },
+  "teaching_sequence": [
+    {
+      "type": "introduction",
+      "content": "Having mastered the 'tags' (particles) that define the roles of nouns, we now move to the 'glue' that defines existence and identity. In Classical Japanese, when you want to say 'A is B', you use the auxiliary <span class='highlight'>なり (nari)</span>. Think of this as the logical 'Return' statement in a function—it concludes the thought by declaring what the subject actually is."
+    },
+    {
+      "type": "poem_presentation",
+      "poem_id": "ogura100_3ff8eec7c905cced",
+      "display": {
+        "text_with_furigana": "<ruby>嵐<rt>あらし</rt></ruby><ruby>吹<rt>ふ</rt></ruby>く<ruby>三室<rt>みむろ</rt></ruby>の<ruby>山<rt>やま</rt></ruby>の<ruby>もみぢ<rt>もみぢ</rt></ruby><ruby>葉<rt>ば</rt></ruby>は<ruby>竜田<rt>たつた</rt></ruby>の<ruby>川<rt>かわ</rt></ruby>の<ruby>錦<rt>にしき</rt></ruby><span class='highlight'>なり</span>けり",
+        "romaji": "arashi fuku, mimuro no yama no, momijiba wa, tatsuta no kawa no, nishiki nari keri",
+        "translation": "The autumn leaves of Mount Mimuro, blown by the storm, are (nari) the brocade of the Tatsuta River."
+      },
+      "vocabulary": [
+        {
+          "word": "嵐",
+          "reading": "あらし",
+          "meaning": "storm",
+          "span": [
+            0,
+            1
+          ],
+          "chinese_cognate_note": "Same meaning as 嵐 (mountain mist/storm)."
+        },
+        {
+          "word": "吹く",
+          "reading": "ふく",
+          "meaning": "to blow",
+          "span": [
+            1,
+            3
+          ],
+          "chinese_cognate_note": "Cognate with 吹 (chuī)."
+        },
+        {
+          "word": "三室",
+          "reading": "みむろ",
+          "meaning": "Mimuro (place name)",
+          "span": [
+            3,
+            5
+          ],
+          "chinese_cognate_note": null
+        },
+        {
+          "word": "の",
+          "reading": "の",
+          "meaning": "possessive particle (of)",
+          "span": [
+            5,
+            6
+          ],
+          "chinese_cognate_note": "Functions like 的 (de)."
+        },
+        {
+          "word": "山",
+          "reading": "やま",
+          "meaning": "mountain",
+          "span": [
+            6,
+            7
+          ],
+          "chinese_cognate_note": "Identical to 山 (shān)."
+        },
+        {
+          "word": "の",
+          "reading": "の",
+          "meaning": "possessive particle (of)",
+          "span": [
+            7,
+            8
+          ],
+          "chinese_cognate_note": null
+        },
+        {
+          "word": "もみぢ葉",
+          "reading": "もみぢば",
+          "meaning": "autumn leaves",
+          "span": [
+            8,
+            12
+          ],
+          "chinese_cognate_note": "紅葉 (hóngyè)."
+        },
+        {
+          "word": "は",
+          "reading": "は",
+          "meaning": "topic marker",
+          "span": [
+            12,
+            13
+          ],
+          "chinese_cognate_note": "Learned in Unit 1; defines the scope."
+        },
+        {
+          "word": "竜田",
+          "reading": "たつた",
+          "meaning": "Tatsuta (place name)",
+          "span": [
+            13,
+            15
+          ],
+          "chinese_cognate_note": null
+        },
+        {
+          "word": "の",
+          "reading": "の",
+          "meaning": "possessive particle (of)",
+          "span": [
+            15,
+            16
+          ],
+          "chinese_cognate_note": null
+        },
+        {
+          "word": "川",
+          "reading": "かわ",
+          "meaning": "river",
+          "span": [
+            16,
+            17
+          ],
+          "chinese_cognate_note": "Identical to 川 (chuān)."
+        },
+        {
+          "word": "の",
+          "reading": "の",
+          "meaning": "possessive particle (of)",
+          "span": [
+            17,
+            18
+          ],
+          "chinese_cognate_note": null
+        },
+        {
+          "word": "錦",
+          "reading": "にしき",
+          "meaning": "brocade",
+          "span": [
+            18,
+            19
+          ],
+          "chinese_cognate_note": "Identical to 錦 (jǐn)."
+        },
+        {
+          "word": "なり",
+          "reading": "なり",
+          "meaning": "is (copula)",
+          "span": [
+            19,
+            21
+          ],
+          "chinese_cognate_note": "Equivalent to 是 (shì)."
+        },
+        {
+          "word": "けり",
+          "reading": "けり",
+          "meaning": "past/exclamatory auxiliary",
+          "span": [
+            21,
+            23
+          ],
+          "chinese_cognate_note": null
+        }
+      ],
+      "focus_highlight": [
+        19,
+        21
+      ]
+    },
+    {
+      "type": "grammar_spotlight",
+      "content": "In the poem above, look at the structure: [Autumn leaves] は [Brocade] <span class='highlight'>なり</span>. The 'nari' acts as the 'is'. Even though 'keri' follows it (which adds a sense of realization), the core logical identity is established by 'nari'. Without it, the sentence would just be a list of nouns.",
+      "evidence": "See the poem above."
+    },
+    {
+      "type": "poem_presentation",
+      "poem_id": "lapis_5871ee6d9ab64013",
+      "display": {
+        "text_with_furigana": "<ruby>世<rt>よ</rt></ruby>をいとひこのもとことにたちよりてうつふしそめのあさの<ruby>衣<rt>きぬ</rt></ruby><span class='highlight'>なり</span>",
+        "romaji": "yo o itohi, kono moto koto ni, tachiyorite, utsufushi some no, asa no kinu nari",
+        "translation": "Weary of the world, I stopped by the base of this tree; it is (nari) a garment of hemp dyed in light red."
+      },
+      "vocabulary": [
+        {
+          "word": "世",
+          "reading": "よ",
+          "meaning": "the world",
+          "span": [
+            0,
+            1
+          ],
+          "chinese_cognate_note": "Cognate with 世 (shì)."
+        },
+        {
+          "word": "を",
+          "reading": "を",
+          "meaning": "object marker",
+          "span": [
+            1,
+            2
+          ],
+          "chinese_cognate_note": null
+        },
+        {
+          "word": "いとひ",
+          "reading": "いとひ",
+          "meaning": "to dislike/be weary of",
+          "span": [
+            2,
+            5
+          ],
+          "chinese_cognate_note": null
+        },
+        {
+          "word": "こ",
+          "reading": "こ",
+          "meaning": "child/offspring (here: small/this)",
+          "span": [
+            5,
+            6
+          ],
+          "chinese_cognate_note": null
+        },
+        {
+          "word": "の",
+          "reading": "の",
+          "meaning": "possessive particle (of)",
+          "span": [
+            6,
+            7
+          ],
+          "chinese_cognate_note": null
+        },
+        {
+          "word": "もと",
+          "reading": "もと",
+          "meaning": "origin/base",
+          "span": [
+            7,
+            9
+          ],
+          "chinese_cognate_note": "Cognate with 本 (běn)."
+        },
+        {
+          "word": "こと",
+          "reading": "こと",
+          "meaning": "especially",
+          "span": [
+            9,
+            11
+          ],
+          "chinese_cognate_note": null
+        },
+        {
+          "word": "に",
+          "reading": "に",
+          "meaning": "location marker",
+          "span": [
+            11,
+            12
+          ],
+          "chinese_cognate_note": null
+        },
+        {
+          "word": "たちより",
+          "reading": "たちより",
+          "meaning": "to approach/drop by",
+          "span": [
+            12,
+            16
+          ],
+          "chinese_cognate_note": null
+        },
+        {
+          "word": "て",
+          "reading": "て",
+          "meaning": "conjunctive particle (and/then)",
+          "span": [
+            16,
+            17
+          ],
+          "chinese_cognate_note": null
+        },
+        {
+          "word": "うつふし",
+          "reading": "うつふし",
+          "meaning": "beautiful/light red color",
+          "span": [
+            17,
+            21
+          ],
+          "chinese_cognate_note": null
+        },
+        {
+          "word": "そめ",
+          "reading": "そめ",
+          "meaning": "dyed",
+          "span": [
+            21,
+            23
+          ],
+          "chinese_cognate_note": "Cognate with 染 (rǎn)."
+        },
+        {
+          "word": "の",
+          "reading": "の",
+          "meaning": "possessive particle (of)",
+          "span": [
+            23,
+            24
+          ],
+          "chinese_cognate_note": null
+        },
+        {
+          "word": "あさ",
+          "reading": "あさ",
+          "meaning": "hemp (textile)",
+          "span": [
+            24,
+            26
+          ],
+          "chinese_cognate_note": "Cognate with 麻 (má)."
+        },
+        {
+          "word": "の",
+          "reading": "の",
+          "meaning": "possessive particle (of)",
+          "span": [
+            26,
+            27
+          ],
+          "chinese_cognate_note": null
+        },
+        {
+          "word": "衣",
+          "reading": "きぬ",
+          "meaning": "garment/silk",
+          "span": null,
+          "chinese_cognate_note": "Cognate with 衣 (yī)."
+        },
+        {
+          "word": "なり",
+          "reading": "なり",
+          "meaning": "is (copula)",
+          "span": [
+            29,
+            31
+          ],
+          "chinese_cognate_note": null
+        }
+      ],
+      "focus_highlight": [
+        29,
+        31
+      ]
+    },
+    {
+      "type": "grammar_spotlight",
+      "content": "When 'nari' appears at the very end of a poem, it provides a definitive conclusion. In this poem, after describing the journey and the material, the poet ends with <span class='highlight'>きぬなり</span> (It is a garment). This is the 'Terminal Form' (Shuushikei).",
+      "evidence": "See the poem above."
+    },
+    {
+      "type": "poem_presentation",
+      "poem_id": "lapis_ce22c35957c135a1",
+      "display": {
+        "text_with_furigana": "さやか<span class='highlight'>なる</span>わしのたかねのくもゐよりかけやはらくるつきよみのもり",
+        "romaji": "sayakanaru, washi no takane no, kumoi yori, kake ya harakuru, tsuki yomi no mori",
+        "translation": "From the clouds of the high peak that is (naru) clear, the moonlight clears the forest."
+      },
+      "vocabulary": [
+        {
+          "word": "さやか",
+          "reading": "さやか",
+          "meaning": "clear/bright",
+          "span": [
+            0,
+            3
+          ],
+          "chinese_cognate_note": null
+        },
+        {
+          "word": "なる",
+          "reading": "なる",
+          "meaning": "is (attributive form of nari)",
+          "span": [
+            3,
+            5
+          ],
+          "chinese_cognate_note": null
+        },
+        {
+          "word": "わし",
+          "reading": "わし",
+          "meaning": "eagle (or humble 'I')",
+          "span": [
+            5,
+            7
+          ],
+          "chinese_cognate_note": null
+        },
+        {
+          "word": "の",
+          "reading": "の",
+          "meaning": "possessive particle (of)",
+          "span": [
+            7,
+            8
+          ],
+          "chinese_cognate_note": null
+        },
+        {
+          "word": "たかね",
+          "reading": "たかね",
+          "meaning": "high peak",
+          "span": [
+            8,
+            11
+          ],
+          "chinese_cognate_note": "高嶺 (gāolǐng)."
+        },
+        {
+          "word": "の",
+          "reading": "の",
+          "meaning": "possessive particle (of)",
+          "span": [
+            11,
+            12
+          ],
+          "chinese_cognate_note": null
+        },
+        {
+          "word": "くもゐ",
+          "reading": "くもゐ",
+          "meaning": "clouds/sky",
+          "span": [
+            12,
+            15
+          ],
+          "chinese_cognate_note": "雲 (yún)."
+        },
+        {
+          "word": "より",
+          "reading": "より",
+          "meaning": "from (origin particle)",
+          "span": [
+            15,
+            17
+          ],
+          "chinese_cognate_note": null
+        },
+        {
+          "word": "かけ",
+          "reading": "かけ",
+          "meaning": "light/shadow",
+          "span": [
+            17,
+            19
+          ],
+          "chinese_cognate_note": null
+        },
+        {
+          "word": "や",
+          "reading": "や",
+          "meaning": "exclamatory particle",
+          "span": [
+            19,
+            20
+          ],
+          "chinese_cognate_note": null
+        },
+        {
+          "word": "はらくる",
+          "reading": "はらくる",
+          "meaning": "to clear up",
+          "span": [
+            20,
+            24
+          ],
+          "chinese_cognate_note": null
+        },
+        {
+          "word": "つきよみ",
+          "reading": "つきよみ",
+          "meaning": "moon-viewing",
+          "span": [
+            24,
+            28
+          ],
+          "chinese_cognate_note": null
+        },
+        {
+          "word": "の",
+          "reading": "の",
+          "meaning": "possessive particle (of)",
+          "span": [
+            28,
+            29
+          ],
+          "chinese_cognate_note": null
+        },
+        {
+          "word": "もり",
+          "reading": "もり",
+          "meaning": "forest",
+          "span": [
+            29,
+            31
+          ],
+          "chinese_cognate_note": "Cognate with 森 (sēn)."
+        }
+      ],
+      "focus_highlight": [
+        3,
+        5
+      ]
+    },
+    {
+      "type": "contrast_example",
+      "content": "Notice the difference: In the first two poems, we used <span class='highlight'>なり (nari)</span> to end the sentence. In this poem, we use <span class='highlight'>なる (naru)</span>. Why? Because it is modifying the noun 'washi' (eagle/peak). 'Sayaka-naru washi' = 'The peak that is clear'. This is the 'Attributive Form' (Rentaikei). In Chinese, this is like using '...的' to describe a noun (清澈的...)."
+    },
+    {
+      "type": "comprehension_check",
+      "question": "In the phrase '錦なり' (nishiki nari), what is the logical relationship between the subject and 'nishiki'?",
+      "answer": "Identity/Assertion. It means '[Subject] IS brocade'.",
+      "hint": "Think of the Chinese word '是'."
+    }
+  ],
+  "reference_card": {
+    "point": "Auxiliary なり (nari)",
+    "one_liner": "The declarative copula used to state that 'A is B' (Assertion).",
+    "example": "錦なり (It is brocade) / さやかなる山 (The mountain that is clear)",
+    "see_also": [
+      "lesson_particle_no",
+      "lesson_conjugation_rentaikei"
+    ]
+  },
+  "forward_references": [
+    {
+      "point": "けり (keri)",
+      "note": "We saw this in Poem 1. It often follows 'nari' to express a past state or a sudden realization. We will cover this in Unit 4."
+    },
+    {
+      "point": "連体形 (Rentaikei)",
+      "note": "The 'naru' form is our first encounter with the Attributive base. We will explore this systematically later in Unit 3."
+    }
+  ]
+}

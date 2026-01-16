@@ -1,0 +1,380 @@
+{
+  "lesson_title": "The Logic of Prohibition: The Auxiliary な (na)",
+  "lesson_summary": "In this final lesson of our journey, we examine the 'Stop' command of classical Japanese—the prohibitive auxiliary な (na), which functions like a logical 'NOT' applied to an action.",
+  "grammar_explanation": {
+    "concept": "The auxiliary な (na) is placed after a verb in its terminal form (Shuushikei) to create a strong negative command or prohibition. In poetry, it is frequently paired with the word 'yume' (ゆめ) at the end of the sentence to strengthen the meaning to 'Never' or 'By no means.'",
+    "formation": "[Verb (Terminal Form)] + な (+ ゆめ)",
+    "variations": [
+      "な...そ (A more polite/softened prohibition, though not the focus here)"
+    ],
+    "common_confusions": [
+      "vs. Particle な (na): Previously we saw 'na' as a noun-linker or emotional anchor. Context is key: if it follows a Verb's dictionary form, it is almost always prohibitive."
+    ]
+  },
+  "teaching_sequence": [
+    {
+      "type": "introduction",
+      "content": "We have spent ten units building the machinery of classical Japanese—learning how to describe states, past events, and future intentions. To conclude our curriculum, we look at the 'Override' switch. Just as a programmer might use a 'break' or a 'deny' rule, the auxiliary な (na) allows a poet to forbid an action. When you see a verb followed immediately by な, the poet is not describing what is happening, but demanding what must NOT happen."
+    },
+    {
+      "type": "poem_presentation",
+      "poem_id": "lapis_563c7db02e15fbed",
+      "display": {
+        "text_with_furigana": "<ruby>海原<rt>うなはら</rt></ruby>を <ruby>遠<rt>とお</rt></ruby>く<ruby>渡<rt>わた</rt></ruby>りて <ruby>年<rt>とし</rt></ruby><ruby>経<rt>ふ</rt></ruby>とも <ruby>児<rt>こ</rt></ruby>らが<ruby>結<rt>むす</rt></ruby>べる <ruby>紐<rt>ひも</rt></ruby><ruby>解<rt>と</rt></ruby>くな <ruby>夢<rt>ゆめ</rt></ruby>",
+        "romaji": "unahara wo tooku watarite toshi futomo kora ga musuberu himotoku na yume",
+        "translation": "Though years may pass as I cross the far-off sea, never untie the cord that my girl has tied."
+      },
+      "vocabulary": [
+        {
+          "word": "うなはら",
+          "reading": "うなはら",
+          "meaning": "sea, ocean",
+          "chinese_cognate_note": "海原 - 'Plain of the sea'"
+        },
+        {
+          "word": "を",
+          "reading": "を",
+          "meaning": "object marker (Particle)",
+          "chinese_cognate_note": null
+        },
+        {
+          "word": "とほく",
+          "reading": "とおく",
+          "meaning": "far away",
+          "chinese_cognate_note": "遠 - same meaning"
+        },
+        {
+          "word": "わたり",
+          "reading": "わたり",
+          "meaning": "to cross, traverse",
+          "chinese_cognate_note": "渡 - same meaning"
+        },
+        {
+          "word": "て",
+          "reading": "て",
+          "meaning": "conjunctive particle (and/then)",
+          "chinese_cognate_note": null
+        },
+        {
+          "word": "とし",
+          "reading": "とし",
+          "meaning": "year/years",
+          "chinese_cognate_note": "年 - same meaning"
+        },
+        {
+          "word": "ふ",
+          "reading": "ふ",
+          "meaning": "to pass (time)",
+          "chinese_cognate_note": "経 - same meaning"
+        },
+        {
+          "word": "とも",
+          "reading": "とも",
+          "meaning": "even if / although (Particle)",
+          "chinese_cognate_note": null
+        },
+        {
+          "word": "こら",
+          "reading": "こら",
+          "meaning": "beloved girl / children",
+          "chinese_cognate_note": "児 - child/youth"
+        },
+        {
+          "word": "が",
+          "reading": "が",
+          "meaning": "subject marker (Particle)",
+          "chinese_cognate_note": null
+        },
+        {
+          "word": "むすべる",
+          "reading": "むすべる",
+          "meaning": "has tied (Perfective + Attributive)",
+          "chinese_cognate_note": "結 - same meaning"
+        },
+        {
+          "word": "ひも",
+          "reading": "ひも",
+          "meaning": "cord, string",
+          "chinese_cognate_note": "紐 - same meaning"
+        },
+        {
+          "word": "とく",
+          "reading": "とく",
+          "meaning": "to untie, to undo",
+          "chinese_cognate_note": "解 - same meaning"
+        },
+        {
+          "word": "な",
+          "reading": "な",
+          "meaning": "do not (Prohibitive Auxiliary)",
+          "chinese_cognate_note": "Similar to 勿 or 莫"
+        },
+        {
+          "word": "ゆめ",
+          "reading": "ゆめ",
+          "meaning": "never (used with 'na' for emphasis)",
+          "chinese_cognate_note": "Literally 'dream', but here a grammatical intensifier"
+        }
+      ],
+      "focus_highlight": [
+        31,
+        35
+      ]
+    },
+    {
+      "type": "grammar_spotlight",
+      "content": "Look at the end of the poem: **とくな ゆめ** (toku na yume). \n\n1. **とく (Toku)**: The verb 'to untie' in its terminal form.\n2. **な (Na)**: The prohibitive auxiliary. It acts as a logical gate: [Action] + [Forbidden].\n3. **ゆめ (Yume)**: While it literally means 'dream', when it follows 'na', it functions like an exclamation point or the word 'Never'. \n\nIn Chinese terms, this is the equivalent of saying **'莫解'** (Do not untie). The poet is crossing the sea and begs his beloved not to untie the sash she wore when they parted, symbolizing fidelity."
+    },
+    {
+      "type": "poem_presentation",
+      "poem_id": "lapis_6db355f437baba94",
+      "display": {
+        "text_with_furigana": "<ruby>思<rt>おも</rt></ruby>ひ<ruby>出<rt>い</rt></ruby>でて <ruby>寝<rt>ね</rt></ruby>には<ruby>泣<rt>な</rt></ruby>くとも <ruby>顕<rt>いちしろ</rt></ruby>く <ruby>人<rt>ひと</rt></ruby>の<ruby>知<rt>し</rt></ruby>るべく <ruby>嘆<rt>なげ</rt></ruby>かすな <ruby>夢<rt>ゆめ</rt></ruby>",
+        "romaji": "omoiidete ne ni wa nakutomo ichishiroku hito no shirubeku nagekasu na yume",
+        "translation": "Even if you weep in your sleep remembering me, never let your sighs be heard so clearly that others might know."
+      },
+      "vocabulary": [
+        {
+          "word": "おもひいで",
+          "reading": "おもいいで",
+          "meaning": "remembering, recalling",
+          "chinese_cognate_note": "思出 - thinking/emerging"
+        },
+        {
+          "word": "て",
+          "reading": "て",
+          "meaning": "conjunctive particle",
+          "chinese_cognate_note": null
+        },
+        {
+          "word": "ね",
+          "reading": "ね",
+          "meaning": "sleep",
+          "chinese_cognate_note": "寝 - same meaning"
+        },
+        {
+          "word": "に",
+          "reading": "に",
+          "meaning": "location marker",
+          "chinese_cognate_note": null
+        },
+        {
+          "word": "は",
+          "reading": "は",
+          "meaning": "topic/emphasis marker",
+          "chinese_cognate_note": null
+        },
+        {
+          "word": "なく",
+          "reading": "なく",
+          "meaning": "to cry, weep",
+          "chinese_cognate_note": "泣 - same meaning"
+        },
+        {
+          "word": "とも",
+          "reading": "とも",
+          "meaning": "even if",
+          "chinese_cognate_note": null
+        },
+        {
+          "word": "いちしろく",
+          "reading": "いちしろく",
+          "meaning": "clearly, plainly",
+          "chinese_cognate_note": "顕 - manifest/clear"
+        },
+        {
+          "word": "ひと",
+          "reading": "ひと",
+          "meaning": "person / others",
+          "chinese_cognate_note": "人 - same meaning"
+        },
+        {
+          "word": "の",
+          "reading": "の",
+          "meaning": "subject marker in relative clause",
+          "chinese_cognate_note": null
+        },
+        {
+          "word": "しる",
+          "reading": "しる",
+          "meaning": "to know",
+          "chinese_cognate_note": "知 - same meaning"
+        },
+        {
+          "word": "べく",
+          "reading": "べく",
+          "meaning": "likely to / in a way that",
+          "chinese_cognate_note": "可 - should/likely"
+        },
+        {
+          "word": "なげかす",
+          "reading": "なげかす",
+          "meaning": "to cause to sigh / let be heard",
+          "chinese_cognate_note": "嘆 - sigh/lament"
+        },
+        {
+          "word": "な",
+          "reading": "な",
+          "meaning": "do not (Prohibitive)",
+          "chinese_cognate_note": null
+        },
+        {
+          "word": "ゆめ",
+          "reading": "ゆめ",
+          "meaning": "never",
+          "chinese_cognate_note": null
+        }
+      ],
+      "focus_highlight": [
+        32,
+        36
+      ]
+    },
+    {
+      "type": "contrast_example",
+      "content": "In the second poem, the verb is **なげかす** (nagekasu - to let a sigh be heard). \n\n- **なげかす** (Action: Sighing)\n- **な** (Logic: Forbidden)\n- **ゆめ** (Intensity: Never)\n\nResult: **'Never let [your sighs] be heard.'** \n\nNotice the logical flow: The poet acknowledges the feeling (weeping while sleeping) using **とも** (even if), but sets a hard boundary on the outward manifestation using **な**."
+    },
+    {
+      "type": "poem_presentation",
+      "poem_id": "lapis_5ce57521193e69c2",
+      "display": {
+        "text_with_furigana": "<ruby>白妙<rt>しろたへ</rt></ruby>の <ruby>衣<rt>ころも</rt></ruby>の<ruby>袖<rt>そで</rt></ruby>を <ruby>枕<rt>まくら</rt></ruby>かよ <ruby>海人<rt>あま</rt></ruby><ruby>漕<rt>こ</rt></ruby>ぎ<ruby>来<rt>く</rt></ruby>みゆ <ruby>波<rt>なみ</rt></ruby><ruby>立<rt>た</rt></ruby>つな <ruby>夢<rt>ゆめ</rt></ruby>",
+        "romaji": "shirotae no koromo no sode o makura ka yo ama kogikumi yu nami tatsu na yume",
+        "translation": "Is that a sleeve of white cloth used as a pillow? I see the fisherman rowing near; O waves, never rise up!"
+      },
+      "vocabulary": [
+        {
+          "word": "しろたへ",
+          "reading": "しろたえ",
+          "meaning": "white cloth (epithet for sleeves/robes)",
+          "chinese_cognate_note": "白妙"
+        },
+        {
+          "word": "の",
+          "reading": "の",
+          "meaning": "possessive marker",
+          "chinese_cognate_note": null
+        },
+        {
+          "word": "ころも",
+          "reading": "ころも",
+          "meaning": "clothing",
+          "chinese_cognate_note": "衣 - same meaning"
+        },
+        {
+          "word": "の",
+          "reading": "の",
+          "meaning": "possessive marker",
+          "chinese_cognate_note": null
+        },
+        {
+          "word": "そで",
+          "reading": "そで",
+          "meaning": "sleeve",
+          "chinese_cognate_note": "袖 - same meaning"
+        },
+        {
+          "word": "を",
+          "reading": "を",
+          "meaning": "object marker",
+          "chinese_cognate_note": null
+        },
+        {
+          "word": "まくら",
+          "reading": "まくら",
+          "meaning": "pillow",
+          "chinese_cognate_note": "枕 - same meaning"
+        },
+        {
+          "word": "か",
+          "reading": "か",
+          "meaning": "question particle",
+          "chinese_cognate_note": null
+        },
+        {
+          "word": "よ",
+          "reading": "よ",
+          "meaning": "exclamatory particle",
+          "chinese_cognate_note": null
+        },
+        {
+          "word": "あま",
+          "reading": "あま",
+          "meaning": "fisherman",
+          "chinese_cognate_note": "海人 - person of the sea"
+        },
+        {
+          "word": "こぎ",
+          "reading": "こぎ",
+          "meaning": "rowing",
+          "chinese_cognate_note": "漕 - same meaning"
+        },
+        {
+          "word": "く",
+          "reading": "く",
+          "meaning": "to come",
+          "chinese_cognate_note": "来 - same meaning"
+        },
+        {
+          "word": "みゆ",
+          "reading": "みゆ",
+          "meaning": "is seen / visible",
+          "chinese_cognate_note": "見 - same meaning"
+        },
+        {
+          "word": "なみ",
+          "reading": "なみ",
+          "meaning": "wave",
+          "chinese_cognate_note": "波 - same meaning"
+        },
+        {
+          "word": "たつ",
+          "reading": "たつ",
+          "meaning": "to rise / stand",
+          "chinese_cognate_note": "立 - same meaning"
+        },
+        {
+          "word": "な",
+          "reading": "な",
+          "meaning": "do not (Prohibitive)",
+          "chinese_cognate_note": null
+        },
+        {
+          "word": "ゆめ",
+          "reading": "ゆめ",
+          "meaning": "never",
+          "chinese_cognate_note": null
+        }
+      ],
+      "focus_highlight": [
+        30,
+        34
+      ]
+    },
+    {
+      "type": "comprehension_check",
+      "question": "In the phrase '波立つな ゆめ' (nami tatsu na yume), what is the specific action being forbidden, and who/what is being commanded?",
+      "answer": "The action is 'tatsu' (rising/standing), and the command is directed at the 'nami' (waves). The poet is commanding the waves NOT to rise.",
+      "hint": "Identify the noun before the verb and the verb immediately preceding 'na'."
+    },
+    {
+      "type": "summary",
+      "content": "You have now mastered the 'Prohibitive Na'. By placing this single character after a verb, you transform a description into a command. Combined with 'yume', it becomes the strongest possible plea in the poetic world. This concludes our study of the grammatical 'glue' of classical Japanese. You can now see the logical skeleton beneath the kanji of any poem."
+    }
+  ],
+  "reference_card": {
+    "point": "Prohibitive Auxiliary な (na)",
+    "one_liner": "Follows a verb in terminal form to mean 'Do not [Verb]'; often paired with 'yume' for 'Never'.",
+    "example": "立つな ゆめ (Tatsu na yume) = Never rise.",
+    "see_also": [
+      "particle_yo",
+      "particle_kana"
+    ]
+  },
+  "forward_references": [
+    {
+      "point": "Honorific Prohibitions (na...so)",
+      "note": "While 'na' is a direct command, classical Japanese often uses 'na...so' for a gentler, more refined prohibition. This is a stylistic variation of the logic you learned today."
+    }
+  ]
+}

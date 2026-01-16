@@ -1,0 +1,371 @@
+{
+  "lesson_title": "The Causative Command: Mastering 'seru' (せる)",
+  "lesson_summary": "In this lesson, we explore the auxiliary 'seru', which functions like the Chinese '使' (shǐ) or '让' (ràng), transforming a simple action into a causative one (to make or let someone do something).",
+  "grammar_explanation": {
+    "concept": "The auxiliary 'seru' (せる) is a causative marker. It indicates that the subject is causing or allowing an action to happen, rather than performing the action directly. In programming terms, it acts as a 'wrapper function' that takes an action and adds a 'cause' instruction.",
+    "formation": "It attaches to the Mizenkei (Unrealized Base) of specific verb groups (primarily those that do not end in the 'a' sound in their base form, like Kami-nidan or Shimo-nidan verbs).",
+    "variations": [
+      "せ (se) - The linking form (Ren'youkei) used before particles like 'te'.",
+      "せる (seru) - The dictionary or noun-modifying form (Shuushikei/Rentaikei)."
+    ],
+    "common_confusions": [
+      "vs. 'su' (す): Both mean 'cause', but 'su' attaches to verbs ending in 'a' (Yodan), while 'seru' attaches to others. Think of them as two versions of the same '使' logic for different verb shapes."
+    ]
+  },
+  "teaching_sequence": [
+    {
+      "type": "introduction",
+      "content": "In previous lessons, we looked at how verbs describe actions. But what if the subject isn't the one doing the action, but the one *causing* it? In Chinese, you use '使' (shǐ) or '令' (lìng). In Classical Japanese, we use the auxiliary 'seru'. This lesson will show you how this 'grammatical glue' shifts the responsibility of an action from the subject to another party."
+    },
+    {
+      "type": "poem_presentation",
+      "poem_id": "lapis_b93891cc239fd352",
+      "display": {
+        "text_with_furigana": "<ruby>古<rt>いにしへ</rt></ruby>に<ruby>猶<rt>なほ</rt></ruby><ruby>立帰<rt>たちかへ</rt></ruby>る<ruby>心<rt>こころ</rt></ruby>かな<ruby>恋<rt>こひ</rt></ruby>しきことに<ruby>物忘<rt>ものわす</rt></ruby>れ<span style='color: #ff4500;'>せて</span>",
+        "romaji": "inishie ni nao tachikaeru kokoro kana koishiki koto ni mono wasure sete",
+        "translation": "My heart still returns to the ancient past; because of my longing, it makes me forget everything else."
+      },
+      "vocabulary": [
+        {
+          "word": "いにしへ",
+          "reading": "いにしへ",
+          "meaning": "ancient times / the past",
+          "chinese_cognate_note": "Corresponds to '古' (gǔ)."
+        },
+        {
+          "word": "に",
+          "reading": "に",
+          "meaning": "to / toward (direction)",
+          "chinese_cognate_note": null
+        },
+        {
+          "word": "猶",
+          "reading": "なほ",
+          "meaning": "still / yet",
+          "chinese_cognate_note": "Same character as '犹' (yóu)."
+        },
+        {
+          "word": "立帰る",
+          "reading": "たちかへる",
+          "meaning": "to return / to go back",
+          "chinese_cognate_note": "立 (stand) + 帰 (return)."
+        },
+        {
+          "word": "心",
+          "reading": "こころ",
+          "meaning": "heart / mind",
+          "chinese_cognate_note": "Same as '心' (xīn)."
+        },
+        {
+          "word": "かな",
+          "reading": "かな",
+          "meaning": "exclamatory particle (alas/indeed)",
+          "chinese_cognate_note": null
+        },
+        {
+          "word": "こひしき",
+          "reading": "こひしき",
+          "meaning": "longing / yearning",
+          "chinese_cognate_note": "Related to '恋' (liàn)."
+        },
+        {
+          "word": "ことに",
+          "reading": "ことに",
+          "meaning": "because of the fact / due to",
+          "chinese_cognate_note": "こと (thing/fact) + に (reason marker)."
+        },
+        {
+          "word": "物",
+          "reading": "もの",
+          "meaning": "things / objects",
+          "chinese_cognate_note": "Same as '物' (wù)."
+        },
+        {
+          "word": "わすれ",
+          "reading": "わすれ",
+          "meaning": "forget",
+          "chinese_cognate_note": "Same as '忘' (wàng)."
+        },
+        {
+          "word": "せ",
+          "reading": "せ",
+          "meaning": "make / cause (causative)",
+          "chinese_cognate_note": "Functions like '使' (shǐ)."
+        },
+        {
+          "word": "て",
+          "reading": "て",
+          "meaning": "and (conjunctive)",
+          "chinese_cognate_note": null
+        }
+      ],
+      "focus_highlight": [
+        23,
+        25
+      ]
+    },
+    {
+      "type": "grammar_spotlight",
+      "content": "Look at the end of the poem: **わすれ (forget) + せ (make) + て (and)**. \n\nInstead of just saying 'I forget' (wasurete), the poet uses 'wasure-se-te'. This implies that the 'longing' (koishiki koto) is the force *making* the heart forget everything else. \n\nLogic: [Action: 忘] + [Causative: 使] = [Result: 使忘 (Make forget)]."
+    },
+    {
+      "type": "poem_presentation",
+      "poem_id": "lapis_71fc21883c753be0",
+      "display": {
+        "text_with_furigana": "<ruby>雪<rt>ゆき</rt></ruby>ふれば<ruby>冬<rt>ふゆ</rt></ruby>こもり<span style='color: #ff4500;'>せる</span><ruby>草<rt>くさ</rt></ruby>も<ruby>木<rt>き</rt></ruby>も<ruby>春<rt>はる</rt></ruby>にしられぬ<ruby>花<rt>はな</rt></ruby>ぞさきける",
+        "romaji": "yukifureba fuyu komoriseru kusa mo ki mo haru ni shirarenu hana zo sakikeru",
+        "translation": "When snow falls, the grasses and trees that winter had made seclude themselves now bloom with flowers unknown to the spring."
+      },
+      "vocabulary": [
+        {
+          "word": "雪",
+          "reading": "ゆき",
+          "meaning": "snow",
+          "chinese_cognate_note": "Same as '雪' (xuě)."
+        },
+        {
+          "word": "ふれ",
+          "reading": "ふれ",
+          "meaning": "fall (rain/snow)",
+          "chinese_cognate_note": "降 (jiàng)."
+        },
+        {
+          "word": "ば",
+          "reading": "ば",
+          "meaning": "when / because",
+          "chinese_cognate_note": null
+        },
+        {
+          "word": "冬",
+          "reading": "ふゆ",
+          "meaning": "winter",
+          "chinese_cognate_note": "Same as '冬' (dōng)."
+        },
+        {
+          "word": "こもり",
+          "reading": "こもり",
+          "meaning": "to seclude / to stay inside",
+          "chinese_cognate_note": "Related to '笼' (lóng) or '藏' (cáng)."
+        },
+        {
+          "word": "せる",
+          "reading": "せる",
+          "meaning": "make / cause (causative)",
+          "chinese_cognate_note": "Functions like '使' (shǐ)."
+        },
+        {
+          "word": "草",
+          "reading": "くさ",
+          "meaning": "grass",
+          "chinese_cognate_note": "Same as '草' (cǎo)."
+        },
+        {
+          "word": "も",
+          "reading": "も",
+          "meaning": "also / even",
+          "chinese_cognate_note": null
+        },
+        {
+          "word": "木",
+          "reading": "き",
+          "meaning": "tree",
+          "chinese_cognate_note": "Same as '木' (mù)."
+        },
+        {
+          "word": "春",
+          "reading": "はる",
+          "meaning": "spring",
+          "chinese_cognate_note": "Same as '春' (chūn)."
+        },
+        {
+          "word": "に",
+          "reading": "に",
+          "meaning": "by / in (agent/time)",
+          "chinese_cognate_note": null
+        },
+        {
+          "word": "しられ",
+          "reading": "しられ",
+          "meaning": "be known (passive of know)",
+          "chinese_cognate_note": "知 (zhī)."
+        },
+        {
+          "word": "ぬ",
+          "reading": "ぬ",
+          "meaning": "not (negative)",
+          "chinese_cognate_note": "不 (bù)."
+        },
+        {
+          "word": "花",
+          "reading": "はな",
+          "meaning": "flower",
+          "chinese_cognate_note": "Same as '花' (huā)."
+        },
+        {
+          "word": "ぞ",
+          "reading": "ぞ",
+          "meaning": "emphatic particle",
+          "chinese_cognate_note": null
+        },
+        {
+          "word": "さき",
+          "reading": "さき",
+          "meaning": "bloom",
+          "chinese_cognate_note": "Related to '咲' (xiào/bloom)."
+        },
+        {
+          "word": "ける",
+          "reading": "ける",
+          "meaning": "past / realized",
+          "chinese_cognate_note": null
+        }
+      ],
+      "focus_highlight": [
+        8,
+        10
+      ]
+    },
+    {
+      "type": "grammar_spotlight",
+      "content": "In this poem, we see **こもり (seclude) + せる (make)**. \n\nWinter (冬) is the subject that 'makes' the plants seclude themselves. Here, 'seru' is in its attributive form (Rentaikei), modifying the nouns 'grass and trees' (草も木も). \n\nStructure: [Winter] [Seclude + Make] [Grass and Trees]. \nTranslation logic: 'The grass and trees that winter *made* stay inside.'"
+    },
+    {
+      "type": "poem_presentation",
+      "poem_id": "lapis_30221cc36645a105",
+      "display": {
+        "text_with_furigana": "かきくらしことはふらなむ<ruby>春雨<rt>はるさめ</rt></ruby>に<ruby>濡<rt>ぬ</rt></ruby>れ<ruby>衣<rt>きぬ</rt></ruby><ruby>着<rt>き</rt></ruby><span style='color: #ff4500;'>せて</span><ruby>君<rt>きみ</rt></ruby>をととめむ",
+        "romaji": "kakikurashi koto wa furanamu harusame ni nurekinu kisete kimi o to tomemu",
+        "translation": "I wish the spring rain would fall and darken the sky, so that I might make you wear wet clothes and thus keep you here."
+      },
+      "vocabulary": [
+        {
+          "word": "かきくらし",
+          "reading": "かきくらし",
+          "meaning": "to darken / to obscure",
+          "chinese_cognate_note": "Related to '暗' (àn)."
+        },
+        {
+          "word": "ことは",
+          "reading": "ことは",
+          "meaning": "the fact that / as for",
+          "chinese_cognate_note": null
+        },
+        {
+          "word": "ふら",
+          "reading": "ふら",
+          "meaning": "fall (rain)",
+          "chinese_cognate_note": "降 (jiàng)."
+        },
+        {
+          "word": "なむ",
+          "reading": "なむ",
+          "meaning": "desire/wish (particle)",
+          "chinese_cognate_note": null
+        },
+        {
+          "word": "春雨",
+          "reading": "はるさめ",
+          "meaning": "spring rain",
+          "chinese_cognate_note": "春 (spring) + 雨 (rain)."
+        },
+        {
+          "word": "に",
+          "reading": "に",
+          "meaning": "in / by (agent/context)",
+          "chinese_cognate_note": null
+        },
+        {
+          "word": "ぬれ",
+          "reading": "ぬれ",
+          "meaning": "get wet",
+          "chinese_cognate_note": "濡 (rú)."
+        },
+        {
+          "word": "きぬ",
+          "reading": "きぬ",
+          "meaning": "clothes / silk",
+          "chinese_cognate_note": "衣 (yī)."
+        },
+        {
+          "word": "き",
+          "reading": "き",
+          "meaning": "wear / put on",
+          "chinese_cognate_note": "着 (zhuó)."
+        },
+        {
+          "word": "せ",
+          "reading": "せ",
+          "meaning": "make / cause (causative)",
+          "chinese_cognate_note": "使 (shǐ)."
+        },
+        {
+          "word": "て",
+          "reading": "て",
+          "meaning": "and (conjunctive)",
+          "chinese_cognate_note": null
+        },
+        {
+          "word": "君",
+          "reading": "きみ",
+          "meaning": "you / lord",
+          "chinese_cognate_note": "Same as '君' (jūn)."
+        },
+        {
+          "word": "を",
+          "reading": "を",
+          "meaning": "object marker",
+          "chinese_cognate_note": null
+        },
+        {
+          "word": "ととめ",
+          "reading": "ととめ",
+          "meaning": "stop / detain",
+          "chinese_cognate_note": "止 (zhǐ) or 留 (liú)."
+        },
+        {
+          "word": "む",
+          "reading": "む",
+          "meaning": "will / intend to",
+          "chinese_cognate_note": null
+        }
+      ],
+      "focus_highlight": [
+        20,
+        22
+      ]
+    },
+    {
+      "type": "grammar_spotlight",
+      "content": "Here, **き (wear) + せ (make) + て (and)** creates a specific causative action: 'to make someone wear'. \n\nIn Chinese, '使之着衣' (make him wear clothes). The poet wants the rain to soak the guest's clothes, effectively 'making' them wear wet clothes so they cannot leave. It's a clever poetic use of the causative to show intent."
+    },
+    {
+      "type": "comprehension_check",
+      "question": "In the phrase '物わすれせて' (mono wasure sete), what is the role of 'se' (せ)?",
+      "answer": "It is the causative auxiliary (seru), indicating that something (the longing) is 'making' the subject forget things.",
+      "hint": "Think of the Chinese word '使' (shǐ)."
+    },
+    {
+      "type": "summary",
+      "content": "You've now seen how 'seru' functions as a causative tag. It doesn't change the meaning of the verb itself, but rather the 'logic of agency'—shifting the action from 'doing' to 'causing to do'. This is a vital tool for poets to express how external forces (like seasons or emotions) act upon them."
+    }
+  ],
+  "reference_card": {
+    "point": "Auxiliary 'seru' (せる)",
+    "one_liner": "The causative suffix that means 'to make' or 'to let' someone perform an action.",
+    "example": "わすれせて (wasure-se-te) = 'making [me] forget'",
+    "see_also": [
+      "auxiliary_su",
+      "mizenkei_intro"
+    ]
+  },
+  "forward_references": [
+    {
+      "point": "なむ (namu)",
+      "note": "We saw this in Poem 3; it expresses a strong wish or desire. We will cover this in Unit 10."
+    },
+    {
+      "point": "しられ (shirare)",
+      "note": "This is the passive form of 'to know'. We will explore the passive auxiliary 'reru' later in this unit."
+    }
+  ]
+}

@@ -1,0 +1,388 @@
+{
+  "lesson_id": "lesson_particle_no",
+  "lesson_title": "The Logical Bridge: Particle の (no)",
+  "lesson_summary": "In this first lesson, we identify the most common 'grammatical glue' in Japanese poetry: the particle の. For a Chinese speaker, this is the functional equivalent of the character '的', acting as a possessive or descriptive link between two nouns.",
+  "grammar_point": "particle_no",
+  "grammar_explanation": {
+    "concept": "The particle の (no) functions as a 'Genitive' or 'Possessive' marker. It connects two nouns (Noun A + の + Noun B) to indicate that Noun B belongs to, is part of, or is described by Noun A.",
+    "formation": "[Noun A] + の + [Noun B]",
+    "variations": [
+      "In poetry, the second noun (Noun B) is sometimes omitted if it is understood from context.",
+      "It can link multiple nouns in a chain: A の B の C."
+    ],
+    "common_confusions": [
+      "Unlike Chinese '的', 'の' is strictly used between nouns in this unit. It does not follow verbs to create adjectives yet."
+    ]
+  },
+  "teaching_sequence": [
+    {
+      "type": "introduction",
+      "content": "Welcome to your first step into Classical Japanese. Think of a poem as a data structure. The **Kanji** are your 'objects' (nouns and verbs) which you already recognize from Chinese. The **Hiragana** characters are the 'operators' or 'logic gates' that tell you how these objects relate to one another. Today, we focus on the most fundamental operator: **の (no)**. In programming terms, if you see `山 の 木`, think `Mountain.tree` or `Mountain -> tree`. In Chinese terms, it is simply **的**."
+    },
+    {
+      "type": "poem_presentation",
+      "poem_id": "lapis_54f700598246bf9c",
+      "display": {
+        "text_with_furigana": "<ruby>秋風<rt>あきかぜ</rt></ruby>に<ruby>山<rt>やま</rt></ruby>のこのはのうつろへは<ruby>人<rt>ひと</rt></ruby>の<ruby>心<rt>こころ</rt></ruby>もいかかとそ<ruby>思<rt>おも</rt></ruby>ふ",
+        "romaji": "akikaze ni, yama no konoha no, utsuroe wa, hito no kokoro mo, ika ka to so omou",
+        "translation": "As the autumn wind blows and the leaves of the mountain trees fade, I wonder if the hearts of people change as well."
+      },
+      "vocabulary": [
+        {
+          "word": "秋風",
+          "reading": "あきかぜ",
+          "meaning": "autumn wind",
+          "span": [
+            0,
+            2
+          ],
+          "chinese_cognate_note": "Identical to Chinese 秋风"
+        },
+        {
+          "word": "に",
+          "reading": "に",
+          "meaning": "in/at (indicates time or cause)",
+          "span": [
+            2,
+            3
+          ],
+          "chinese_cognate_note": null
+        },
+        {
+          "word": "山",
+          "reading": "やま",
+          "meaning": "mountain",
+          "span": [
+            3,
+            4
+          ],
+          "chinese_cognate_note": "Identical to Chinese 山"
+        },
+        {
+          "word": "の",
+          "reading": "の",
+          "meaning": "of (possessive particle)",
+          "span": [
+            4,
+            5
+          ],
+          "chinese_cognate_note": "Equivalent to Chinese 的"
+        },
+        {
+          "word": "このは",
+          "reading": "このは",
+          "meaning": "leaves of trees",
+          "span": [
+            5,
+            8
+          ],
+          "chinese_cognate_note": "Kanji: 木の葉 (Tree's leaves)"
+        },
+        {
+          "word": "の",
+          "reading": "の",
+          "meaning": "of (possessive particle)",
+          "span": [
+            8,
+            9
+          ],
+          "chinese_cognate_note": null
+        },
+        {
+          "word": "うつろへ",
+          "reading": "うつろえ",
+          "meaning": "to change color / to fade",
+          "span": [
+            9,
+            13
+          ],
+          "chinese_cognate_note": null
+        },
+        {
+          "word": "は",
+          "reading": "は",
+          "meaning": "as for (topic marker)",
+          "span": [
+            13,
+            14
+          ],
+          "chinese_cognate_note": null
+        },
+        {
+          "word": "人",
+          "reading": "ひと",
+          "meaning": "person",
+          "span": [
+            14,
+            15
+          ],
+          "chinese_cognate_note": "Identical to Chinese 人"
+        },
+        {
+          "word": "の",
+          "reading": "の",
+          "meaning": "of (possessive particle)",
+          "span": [
+            15,
+            16
+          ],
+          "chinese_cognate_note": null
+        },
+        {
+          "word": "心",
+          "reading": "こころ",
+          "meaning": "heart/mind",
+          "span": [
+            16,
+            17
+          ],
+          "chinese_cognate_note": "Identical to Chinese 心"
+        },
+        {
+          "word": "も",
+          "reading": "も",
+          "meaning": "also/too",
+          "span": [
+            17,
+            18
+          ],
+          "chinese_cognate_note": "Equivalent to Chinese 也"
+        },
+        {
+          "word": "いか",
+          "reading": "いか",
+          "meaning": "how",
+          "span": [
+            18,
+            20
+          ],
+          "chinese_cognate_note": null
+        },
+        {
+          "word": "か",
+          "reading": "か",
+          "meaning": "question marker",
+          "span": [
+            20,
+            21
+          ],
+          "chinese_cognate_note": null
+        },
+        {
+          "word": "と",
+          "reading": "と",
+          "meaning": "quotative particle (like 'that')",
+          "span": [
+            21,
+            22
+          ],
+          "chinese_cognate_note": null
+        },
+        {
+          "word": "そ",
+          "reading": "そ",
+          "meaning": "emphasis particle",
+          "span": [
+            22,
+            23
+          ],
+          "chinese_cognate_note": null
+        },
+        {
+          "word": "思ふ",
+          "reading": "おもう",
+          "meaning": "to think",
+          "span": [
+            23,
+            25
+          ],
+          "chinese_cognate_note": "Identical to Chinese 思"
+        }
+      ],
+      "focus_highlight": [
+        4,
+        5
+      ]
+    },
+    {
+      "type": "grammar_spotlight",
+      "content": "Look at the phrase **<ruby>山<rt>やま</rt></ruby>のこのはの** (yama no konoha no). \n\n1. **山 (Mountain) + の (的) + このは (Leaves)** = 山的树叶 (Mountain's leaves).\n2. **[山的树叶] + の (的) + うつろへ (Fading)** = Here, the 'の' links the leaves to the action of fading. \n\nLater in the poem, we see **<ruby>人<rt>ひと</rt></ruby>の<ruby>心<rt>こころ</rt></ruby>** (hito no kokoro). \n**人 (Person) + の (的) + 心 (Heart)** = 人的心 (Person's heart).\n\nNotice how the Kanji provide the meaning, and **の** provides the logical connection.",
+      "evidence": "See the poem above."
+    },
+    {
+      "type": "comprehension_check",
+      "question": "In the phrase '住の江の松' (Suminoe no matsu), if '住の江' is a place name and '松' means 'pine tree', what is the logical relationship created by 'の'?",
+      "answer": "It indicates that the pine tree belongs to or is located at Suminoe (Suminoe's pine tree / 住之江的松树).",
+      "hint": "Think of the Chinese '的'."
+    },
+    {
+      "type": "poem_presentation",
+      "poem_id": "lapis_e3e90d72c51fcea6",
+      "display": {
+        "text_with_furigana": "<ruby>住<rt>すみ</rt></ruby>の<ruby>江<rt>え</rt></ruby>の<ruby>松<rt>まつ</rt></ruby>を<ruby>秋風<rt>あきかぜ</rt></ruby><ruby>吹<rt>ふ</rt></ruby>くからにこゑうちそふるおきつ<ruby>白浪<rt>しらなみ</rt></ruby>",
+        "romaji": "suminoe no, matsu o akikaze, fuku kara ni, koe uchi so furu, okitsu shiranami",
+        "translation": "Because the autumn wind blows through the pines of Suminoe, their voice is added to the white waves offshore."
+      },
+      "vocabulary": [
+        {
+          "word": "住の江",
+          "reading": "すみのえ",
+          "meaning": "Suminoe (a coastal place name)",
+          "span": [
+            0,
+            3
+          ],
+          "chinese_cognate_note": null
+        },
+        {
+          "word": "の",
+          "reading": "の",
+          "meaning": "of (possessive particle)",
+          "span": [
+            3,
+            4
+          ],
+          "chinese_cognate_note": null
+        },
+        {
+          "word": "松",
+          "reading": "まつ",
+          "meaning": "pine tree",
+          "span": [
+            4,
+            5
+          ],
+          "chinese_cognate_note": "Identical to Chinese 松"
+        },
+        {
+          "word": "を",
+          "reading": "を",
+          "meaning": "object marker (indicates the target of an action)",
+          "span": [
+            5,
+            6
+          ],
+          "chinese_cognate_note": null
+        },
+        {
+          "word": "秋風",
+          "reading": "あきかぜ",
+          "meaning": "autumn wind",
+          "span": [
+            6,
+            8
+          ],
+          "chinese_cognate_note": "Chinese: 秋风"
+        },
+        {
+          "word": "吹く",
+          "reading": "ふく",
+          "meaning": "to blow",
+          "span": [
+            8,
+            10
+          ],
+          "chinese_cognate_note": "Chinese: 吹"
+        },
+        {
+          "word": "から",
+          "reading": "から",
+          "meaning": "because/since",
+          "span": [
+            10,
+            12
+          ],
+          "chinese_cognate_note": null
+        },
+        {
+          "word": "に",
+          "reading": "に",
+          "meaning": "conjunctional particle",
+          "span": [
+            12,
+            13
+          ],
+          "chinese_cognate_note": null
+        },
+        {
+          "word": "こゑ",
+          "reading": "こえ",
+          "meaning": "voice",
+          "span": [
+            13,
+            15
+          ],
+          "chinese_cognate_note": "Chinese: 声"
+        },
+        {
+          "word": "うちそふる",
+          "reading": "うちそふる",
+          "meaning": "to add to / to join",
+          "span": [
+            15,
+            20
+          ],
+          "chinese_cognate_note": null
+        },
+        {
+          "word": "おき",
+          "reading": "おき",
+          "meaning": "offshore/open sea",
+          "span": [
+            20,
+            22
+          ],
+          "chinese_cognate_note": null
+        },
+        {
+          "word": "つ",
+          "reading": "つ",
+          "meaning": "of (an archaic version of 'no')",
+          "span": [
+            22,
+            23
+          ],
+          "chinese_cognate_note": null
+        },
+        {
+          "word": "白浪",
+          "reading": "しらなみ",
+          "meaning": "white waves",
+          "span": [
+            23,
+            25
+          ],
+          "chinese_cognate_note": "Chinese: 白浪"
+        }
+      ],
+      "focus_highlight": [
+        1,
+        2
+      ]
+    },
+    {
+      "type": "summary",
+      "content": "You have successfully identified your first Japanese particle! By leveraging your knowledge of Kanji, you can now see that **の** is not just a random character, but a precise tool for building noun phrases. Whether it's 'Mountain's leaves' or 'Person's heart', **の** is the bridge."
+    }
+  ],
+  "reference_card": {
+    "point": "Particle の (no)",
+    "one_liner": "The possessive/genitive marker, equivalent to Chinese '的'.",
+    "example": "人の心 (hito no kokoro) = 人的心 (Person's heart)",
+    "see_also": []
+  },
+  "forward_references": [
+    {
+      "point": "particle_ni",
+      "note": "We saw '秋風に' (in the wind). We will learn how 'ni' marks location and cause in Lesson 2."
+    },
+    {
+      "point": "particle_wo",
+      "note": "We saw '松を' (pine tree [object]). We will learn how 'wo' marks the object of a verb in Lesson 3."
+    },
+    {
+      "point": "particle_wa",
+      "note": "We saw 'うつろへは'. This 'wa' marks the topic or a condition, which we'll cover in Unit 2."
+    }
+  ]
+}

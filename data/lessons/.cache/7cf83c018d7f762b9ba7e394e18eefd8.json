@@ -1,0 +1,345 @@
+{
+  "lesson_title": "The Past as a Descriptor: The Attributive Auxiliary し (shi)",
+  "lesson_summary": "In the previous lesson, we used 'ki' to end a sentence in the past tense. Today, we learn its partner 'shi', which allows us to turn a past action into a description for a noun.",
+  "grammar_explanation": {
+    "concept": "The auxiliary 'shi' (し) is the 'Rentaikei' (attributive form) of the past-tense marker 'ki' (き). While 'ki' ends a sentence, 'shi' is used to modify a noun that follows it, effectively acting like the Chinese '的' in a past-tense relative clause (e.g., 'the person I met' -> 'met-shi person').",
+    "formation": "Verb (Ren'yōkei/Continuative Base) + し (shi) + Noun.",
+    "variations": [
+      "しか (shika) - used in specific 'logic gate' structures we will see later."
+    ],
+    "common_confusions": [
+      "Do not confuse with the particle 'shi' used for listing; in poetry, if it follows a verb and precedes a noun, it is almost always the past tense marker."
+    ]
+  },
+  "teaching_sequence": [
+    {
+      "type": "introduction",
+      "content": "You've already mastered the 'Direct Past' marker き (ki), which functions like a period at the end of a memory. But what if you want to describe a specific noun using a past action? In Chinese, you might say '见过的别离' (the parting that I saw). In Classical Japanese, we swap the sentence-ending き (ki) for its attributive form し (shi) to bridge the verb to the noun."
+    },
+    {
+      "type": "poem_presentation",
+      "poem_id": "ogura100_3f00df63c0743f62",
+      "display": {
+        "text_with_furigana": "<ruby>有明<rt>ありあけ</rt></ruby>のつれなく<ruby>見<rt>み</rt></ruby>えし<ruby>別<rt>わか</rt></ruby>れより<ruby>暁<rt>あかつき</rt></ruby>ばかり<ruby>憂<rt>う</rt></ruby>きものはなし",
+        "romaji": "ariake no tsurenaku mieshi wakare yori akatsuki bakari uki mono wa nashi",
+        "translation": "Since that parting where the dawn moon appeared so heartless, there is nothing as melancholy as the first light of day."
+      },
+      "vocabulary": [
+        {
+          "word": "有明",
+          "reading": "ありあけ",
+          "meaning": "the moon remaining in the sky after dawn",
+          "chinese_cognate_note": "Identical meaning: the moon at dawn."
+        },
+        {
+          "word": "の",
+          "reading": "の",
+          "meaning": "possessive/subject marker (Unit 1.1)"
+        },
+        {
+          "word": "つれなく",
+          "reading": "つれなく",
+          "meaning": "coldly / indifferently"
+        },
+        {
+          "word": "見え",
+          "reading": "みえ",
+          "meaning": "to appear / to be seen"
+        },
+        {
+          "word": "し",
+          "reading": "し",
+          "meaning": "PAST TENSE (attributive form)",
+          "chinese_cognate_note": "Functions like '的' in '见过的'."
+        },
+        {
+          "word": "別れ",
+          "reading": "わかれ",
+          "meaning": "parting / separation",
+          "chinese_cognate_note": "Cognate with '别' (separation)."
+        },
+        {
+          "word": "より",
+          "reading": "より",
+          "meaning": "since / from (Unit 2.5)"
+        },
+        {
+          "word": "暁",
+          "reading": "あかつき",
+          "meaning": "dawn",
+          "chinese_cognate_note": "Cognate with '晓' (dawn)."
+        },
+        {
+          "word": "ばかり",
+          "reading": "ばかり",
+          "meaning": "to the extent of / as much as"
+        },
+        {
+          "word": "憂き",
+          "reading": "うき",
+          "meaning": "sad / sorrowful"
+        },
+        {
+          "word": "もの",
+          "reading": "もの",
+          "meaning": "thing",
+          "chinese_cognate_note": "Cognate with '物'."
+        },
+        {
+          "word": "は",
+          "reading": "は",
+          "meaning": "topic marker (Unit 1.3)"
+        },
+        {
+          "word": "なし",
+          "reading": "なし",
+          "meaning": "is not / does not exist",
+          "chinese_cognate_note": "Cognate with '无'."
+        }
+      ],
+      "focus_highlight": [
+        9,
+        10
+      ]
+    },
+    {
+      "type": "grammar_spotlight",
+      "content": "Look at the phrase **見えし別れ** (mieshi wakare). \n1. **見え** (mie) = to appear\n2. **し** (shi) = past tense marker (attributive)\n3. **別れ** (wakare) = parting (noun)\n\nBecause 'shi' is used, the action 'appeared' becomes a descriptor for 'parting'. It is not just 'a parting,' but 'the parting that **appeared** [cold].' If the poet had used 'ki', the sentence would have had to end there."
+    },
+    {
+      "type": "poem_presentation",
+      "poem_id": "lapis_5b3666bea72e5572",
+      "display": {
+        "text_with_furigana": "<ruby>今<rt>いま</rt></ruby>こむといひてわかれし<ruby>朝<rt>あさ</rt></ruby>より<ruby>思<rt>おも</rt></ruby>ひくらしのねをのみそなく",
+        "romaji": "imakomu to ihite wakareshi asa yori omoi kurashi no ne o nomiso naku",
+        "translation": "Since the morning when we parted after you said 'I will come soon,' I have done nothing but weep as the days pass."
+      },
+      "vocabulary": [
+        {
+          "word": "今",
+          "reading": "いま",
+          "meaning": "now / soon",
+          "chinese_cognate_note": "Cognate with '今'."
+        },
+        {
+          "word": "こむ",
+          "reading": "こむ",
+          "meaning": "will come"
+        },
+        {
+          "word": "と",
+          "reading": "と",
+          "meaning": "quotation marker (Unit 1.7)"
+        },
+        {
+          "word": "いひ",
+          "reading": "いひ",
+          "meaning": "to say"
+        },
+        {
+          "word": "て",
+          "reading": "て",
+          "meaning": "and (linking particle, Unit 2.1)"
+        },
+        {
+          "word": "わかれ",
+          "reading": "わかれ",
+          "meaning": "parting / separating"
+        },
+        {
+          "word": "し",
+          "reading": "し",
+          "meaning": "PAST TENSE (attributive form)"
+        },
+        {
+          "word": "朝",
+          "reading": "あさ",
+          "meaning": "morning",
+          "chinese_cognate_note": "Cognate with '朝'."
+        },
+        {
+          "word": "より",
+          "reading": "より",
+          "meaning": "since (Unit 2.5)"
+        },
+        {
+          "word": "思ひ",
+          "reading": "おもひ",
+          "meaning": "thinking / longing"
+        },
+        {
+          "word": "くらし",
+          "reading": "くらし",
+          "meaning": "spending time / living"
+        },
+        {
+          "word": "の",
+          "reading": "の",
+          "meaning": "possessive marker"
+        },
+        {
+          "word": "ね",
+          "reading": "ね",
+          "meaning": "sound / voice (here: sound of weeping)",
+          "chinese_cognate_note": "Cognate with '音'."
+        },
+        {
+          "word": "を",
+          "reading": "を",
+          "meaning": "object marker (Unit 1.6)"
+        },
+        {
+          "word": "のみ",
+          "reading": "のみ",
+          "meaning": "only"
+        },
+        {
+          "word": "そ",
+          "reading": "そ",
+          "meaning": "emphasis particle (variant of 'zo')"
+        },
+        {
+          "word": "なく",
+          "reading": "なく",
+          "meaning": "to cry / to weep"
+        }
+      ],
+      "focus_highlight": [
+        10,
+        11
+      ]
+    },
+    {
+      "type": "comprehension_check",
+      "question": "In the phrase 'わかれし朝' (wakareshi asa), what is the grammatical relationship between 'wakare' (to part) and 'asa' (morning)?",
+      "answer": "The auxiliary 'shi' turns the verb 'wakare' into a past-tense adjective, describing 'asa'. It means 'the morning [on which we] parted'.",
+      "hint": "Think of 'shi' as the bridge that carries the past action over to the noun."
+    },
+    {
+      "type": "poem_presentation",
+      "poem_id": "lapis_de18bdc17cfc2cc8",
+      "display": {
+        "text_with_furigana": "つひにゆく<ruby>道<rt>みち</rt></ruby>とはかねてききしかとき<ruby>昨日今日<rt>きのふけふ</rt></ruby>とはおもはざりしを",
+        "romaji": "tsuini yuku michi to wa kanete kikishi ka toki no fu kefu to wa omo wa sarishi o",
+        "translation": "Though I had heard long ago that this is the path we must all finally take, I did not think it would be my 'yesterday' or 'today'."
+      },
+      "vocabulary": [
+        {
+          "word": "つひに",
+          "reading": "つひに",
+          "meaning": "finally / in the end"
+        },
+        {
+          "word": "ゆく",
+          "reading": "ゆく",
+          "meaning": "to go"
+        },
+        {
+          "word": "道",
+          "reading": "みち",
+          "meaning": "road / path",
+          "chinese_cognate_note": "Cognate with '道'."
+        },
+        {
+          "word": "と",
+          "reading": "と",
+          "meaning": "quotation marker"
+        },
+        {
+          "word": "は",
+          "reading": "は",
+          "meaning": "topic marker"
+        },
+        {
+          "word": "かねて",
+          "reading": "かねて",
+          "meaning": "previously / for a long time"
+        },
+        {
+          "word": "きき",
+          "reading": "きき",
+          "meaning": "to hear"
+        },
+        {
+          "word": "し",
+          "reading": "し",
+          "meaning": "PAST TENSE (attributive form)"
+        },
+        {
+          "word": "かとき",
+          "reading": "かとき",
+          "meaning": "at the time when (provided text variant)"
+        },
+        {
+          "word": "昨日",
+          "reading": "きのふ",
+          "meaning": "yesterday",
+          "chinese_cognate_note": "Cognate with '昨日'."
+        },
+        {
+          "word": "今日",
+          "reading": "けふ",
+          "meaning": "today",
+          "chinese_cognate_note": "Cognate with '今日'."
+        },
+        {
+          "word": "と",
+          "reading": "と",
+          "meaning": "quotation marker"
+        },
+        {
+          "word": "は",
+          "reading": "は",
+          "meaning": "topic marker"
+        },
+        {
+          "word": "おもは",
+          "reading": "おもは",
+          "meaning": "to think"
+        },
+        {
+          "word": "ざり",
+          "reading": "ざり",
+          "meaning": "not (negative auxiliary)"
+        },
+        {
+          "word": "し",
+          "reading": "し",
+          "meaning": "PAST TENSE (attributive form)"
+        },
+        {
+          "word": "を",
+          "reading": "を",
+          "meaning": "conjunction: although / even though"
+        }
+      ],
+      "focus_highlight": [
+        14,
+        15
+      ]
+    },
+    {
+      "type": "summary",
+      "content": "In this lesson, we saw 'shi' appearing twice in the final poem. In 'ききし' (kikishi), it modifies the time/circumstance of hearing. In 'おもはざりし' (omohazarishi), it modifies the unspoken situation before the particle 'o' (which can act like a noun-placeholder). In both cases, 'shi' anchors a memory to a specific concept or moment."
+    }
+  ],
+  "reference_card": {
+    "point": "Auxiliary し (shi)",
+    "one_liner": "The attributive (noun-modifying) form of the past tense auxiliary 'ki'.",
+    "example": "見えし別れ (The parting that [I] saw)",
+    "see_also": [
+      "auxiliary_ki",
+      "lesson_conjugation_rentaikei"
+    ]
+  },
+  "forward_references": [
+    {
+      "point": "しか (shika)",
+      "note": "This is the 'Izentity' form of the same past tense marker, used for 'if' statements or emphasis, which we will cover in Unit 7."
+    },
+    {
+      "point": "ざり (zari)",
+      "note": "This is a negative form we will explore further in the Negation review."
+    }
+  ]
+}

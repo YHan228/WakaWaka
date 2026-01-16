@@ -1,0 +1,335 @@
+{
+  "lesson_title": "The 'Invisible Present': Speculating with らむ (ramu)",
+  "lesson_summary": "In this lesson, we move from speculating about the future (む) to speculating about the present. You will learn how to use the auxiliary 'ramu' to infer events happening out of sight or to explain the logical 'why' behind a situation.",
+  "grammar_explanation": {
+    "concept": "The auxiliary らむ (ramu) is the 'Present Tense' counterpart to the む (mu) you learned previously. While む deals with the future or intent, らむ deals with the 'here and now' that the speaker cannot directly see. It functions like a logical inference engine: 'Based on what I see here, [X] must be happening elsewhere' or '[X] must be the reason why this is so.'",
+    "formation": "Attached to the Shuushikei (Terminal Form) of verbs. For most verbs you've seen, this is the standard dictionary form ending in a 'u' sound.",
+    "variations": [
+      "Reasoning: 'That must be why...' (often paired with 'why' words or 'because' structures)",
+      "Present Speculation: 'It is probably [doing] right now' (referring to a distant place)"
+    ],
+    "common_confusions": [
+      "らむ (Present Inference) vs. む (Future/Will): らむ is for things happening NOW; む is for things that WILL happen.",
+      "らむ (Inference) vs. けむ (Past Inference): We will cover the past version in a later unit."
+    ]
+  },
+  "teaching_sequence": [
+    {
+      "type": "introduction",
+      "content": "In Unit 4.3, we saw how む (mu) acts as a 'probability' or 'will' tag for the future. But what if you want to guess about something happening *right now*? In classical poetry, poets often hear a sound or see a result and infer a cause. Think of らむ (ramu) as a 'Present Inference' logic gate: Input (Evidence) -> Process (Inference) -> Output (らむ)."
+    },
+    {
+      "type": "poem_presentation",
+      "poem_id": "ogura100_c66f30a30a5205f6",
+      "display": {
+        "text_with_furigana": "<ruby>吹<rt>ふ</rt></ruby>くからに<ruby>秋<rt>あき</rt></ruby>の<ruby>草木<rt>くさき</rt></ruby>のしをるれば<ruby>むべ<rt>むべ</rt></ruby><ruby>山風<rt>やまかぜ</rt></ruby>を<ruby>嵐<rt>あらし</rt></ruby>といふらむ",
+        "romaji": "fuku kara ni aki no kusaki no shiorureba mube yamakaze o arashi to ifuramu",
+        "translation": "As soon as it blows, the autumn plants wither; that must be why they call the mountain wind (山風) a storm (嵐)."
+      },
+      "vocabulary": [
+        {
+          "word": "吹く",
+          "reading": "ふく",
+          "meaning": "to blow",
+          "chinese_cognate_note": "Cognate with 吹 (chuī)."
+        },
+        {
+          "word": "からに",
+          "reading": "からに",
+          "meaning": "as soon as / because of"
+        },
+        {
+          "word": "秋",
+          "reading": "あき",
+          "meaning": "autumn",
+          "chinese_cognate_note": "Cognate with 秋 (qiū)."
+        },
+        {
+          "word": "の",
+          "reading": "の",
+          "meaning": "possessive particle (of)"
+        },
+        {
+          "word": "草木",
+          "reading": "くさき",
+          "meaning": "plants and trees",
+          "chinese_cognate_note": "Cognate with 草木 (cǎomù)."
+        },
+        {
+          "word": "の",
+          "reading": "の",
+          "meaning": "subject marker (in this context, identifying what is withering)"
+        },
+        {
+          "word": "しをるれば",
+          "reading": "しをるれば",
+          "meaning": "because [they] wither",
+          "chinese_cognate_note": "The 'reba' ending indicates a causal relationship (since/because)."
+        },
+        {
+          "word": "むべ",
+          "reading": "むべ",
+          "meaning": "indeed / no wonder"
+        },
+        {
+          "word": "山風",
+          "reading": "やまかぜ",
+          "meaning": "mountain wind",
+          "chinese_cognate_note": "Cognate with 山風 (shānfēng)."
+        },
+        {
+          "word": "を",
+          "reading": "を",
+          "meaning": "object marker (marks 'mountain wind')"
+        },
+        {
+          "word": "嵐",
+          "reading": "あらし",
+          "meaning": "storm / tempest",
+          "chinese_cognate_note": "Cognate with 嵐 (lán), though in Japanese it specifically means storm."
+        },
+        {
+          "word": "と",
+          "reading": "と",
+          "meaning": "quotation particle (as)"
+        },
+        {
+          "word": "いふ",
+          "reading": "いふ",
+          "meaning": "to say / to call",
+          "chinese_cognate_note": "Cognate with 言 (yán)."
+        },
+        {
+          "word": "らむ",
+          "reading": "らむ",
+          "meaning": "must be why / probably",
+          "chinese_cognate_note": "The target grammar point: present inference."
+        }
+      ],
+      "focus_highlight": [
+        24,
+        26
+      ]
+    },
+    {
+      "type": "grammar_spotlight",
+      "content": "In the poem above, the poet uses a visual pun. The Kanji for 'Storm' (嵐) is composed of 'Mountain' (山) on top of 'Wind' (風). \n\n1. **Evidence:** The wind blows and plants wither immediately.\n2. **Inference:** This is why people call it 'Arashi' (Mountain-Wind).\n\nHere, **いふらむ (ifu-ramu)** doesn't mean 'they will say,' but rather 'that must be why they call it [right now/generally].' It explains the *reason* for a known fact."
+    },
+    {
+      "type": "poem_presentation",
+      "poem_id": "lapis_0acc1b80b37ce7e7",
+      "display": {
+        "text_with_furigana": "おほつかな<ruby>霞<rt>かすみ</rt></ruby><ruby>立<rt>た</rt></ruby>つらむたけくまの<ruby>松<rt>まつ</rt></ruby>の<ruby>間<rt>ま</rt></ruby>もる<ruby>春<rt>はる</rt></ruby>の<ruby>夜<rt>よ</rt></ruby>の<ruby>月<rt>つき</rt></ruby>",
+        "romaji": "ootsutsunaka sumi tatsu ramu takekuma no matsu no kuma moru haru no yo no tsuki",
+        "translation": "How indistinct it is; the mist must be rising (now) as the spring night moon shines through the pines of Takekuma."
+      },
+      "vocabulary": [
+        {
+          "word": "おほつかな",
+          "reading": "おほつかな",
+          "meaning": "vague / indistinct / uncertain"
+        },
+        {
+          "word": "霞",
+          "reading": "かすみ",
+          "meaning": "mist / haze",
+          "chinese_cognate_note": "Cognate with 霞 (xiá)."
+        },
+        {
+          "word": "立つ",
+          "reading": "たつ",
+          "meaning": "to rise / to stand",
+          "chinese_cognate_note": "Cognate with 立 (lì)."
+        },
+        {
+          "word": "らむ",
+          "reading": "らむ",
+          "meaning": "must be / is likely (present inference)"
+        },
+        {
+          "word": "たけくま",
+          "reading": "たけくま",
+          "meaning": "Takekuma (a place name)"
+        },
+        {
+          "word": "の",
+          "reading": "の",
+          "meaning": "possessive particle (of)"
+        },
+        {
+          "word": "松",
+          "reading": "まつ",
+          "meaning": "pine tree",
+          "chinese_cognate_note": "Cognate with 松 (sōng)."
+        },
+        {
+          "word": "の",
+          "reading": "の",
+          "meaning": "possessive particle (of)"
+        },
+        {
+          "word": "間",
+          "reading": "ま",
+          "meaning": "space / interval",
+          "chinese_cognate_note": "Cognate with 間 (jiān)."
+        },
+        {
+          "word": "もる",
+          "reading": "もる",
+          "meaning": "to leak through / to shine through"
+        },
+        {
+          "word": "春",
+          "reading": "はる",
+          "meaning": "spring",
+          "chinese_cognate_note": "Cognate with 春 (chūn)."
+        },
+        {
+          "word": "の",
+          "reading": "の",
+          "meaning": "possessive particle (of)"
+        },
+        {
+          "word": "夜",
+          "reading": "よ",
+          "meaning": "night",
+          "chinese_cognate_note": "Cognate with 夜 (yè)."
+        },
+        {
+          "word": "の",
+          "reading": "の",
+          "meaning": "possessive particle (of)"
+        },
+        {
+          "word": "月",
+          "reading": "つき",
+          "meaning": "moon",
+          "chinese_cognate_note": "Cognate with 月 (yuè)."
+        }
+      ],
+      "focus_highlight": [
+        10,
+        12
+      ]
+    },
+    {
+      "type": "grammar_spotlight",
+      "content": "In this second poem, the poet is looking at the moon, but it looks 'vague' (おほつかな). \n\n**Logic:** If the moon looks blurry, then *right now*, mist must be rising (立つらむ). \n\nThis is the 'Present Speculation' use of らむ. The poet isn't seeing the mist directly, but they are inferring its presence based on the blurry appearance of the moon."
+    },
+    {
+      "type": "comprehension_check",
+      "question": "In Poem 3 (below), look for the word 'ikani' (如何 - how/why). If 'yadoru' means 'to dwell/stay', what does 'yadoru ramu' imply in a question?",
+      "poem_id": "lapis_4dff348fc1a17e6d",
+      "display": {
+        "text_with_furigana": "いかにして<ruby>袖<rt>そで</rt></ruby>に<ruby>光<rt>ひかり</rt></ruby>の<ruby>宿<rt>やど</rt></ruby>るらむ<ruby>雲居<rt>くもゐ</rt></ruby>の<ruby>月<rt>つき</rt></ruby>は<ruby>隔<rt>へだ</rt></ruby>てこしみを",
+        "romaji": "ikanishite sode ni hikari no yadoru ramu kumoi no tsuki wa hedate koshimi o",
+        "translation": "How is it that the light (of the moon) dwells upon my sleeves, even though the moon in the heavens is so far away?"
+      },
+      "vocabulary": [
+        {
+          "word": "いかに",
+          "reading": "いかに",
+          "meaning": "how / in what way",
+          "chinese_cognate_note": "Cognate with 如何 (rúhé)."
+        },
+        {
+          "word": "して",
+          "reading": "して",
+          "meaning": "by doing / through"
+        },
+        {
+          "word": "袖",
+          "reading": "そで",
+          "meaning": "sleeve",
+          "chinese_cognate_note": "Cognate with 袖 (xiù)."
+        },
+        {
+          "word": "に",
+          "reading": "に",
+          "meaning": "location particle (on/in)"
+        },
+        {
+          "word": "光",
+          "reading": "ひかり",
+          "meaning": "light",
+          "chinese_cognate_note": "Cognate with 光 (guāng)."
+        },
+        {
+          "word": "の",
+          "reading": "の",
+          "meaning": "subject marker (the light)"
+        },
+        {
+          "word": "宿る",
+          "reading": "やどる",
+          "meaning": "to dwell / to lodge",
+          "chinese_cognate_note": "Cognate with 宿 (sù)."
+        },
+        {
+          "word": "らむ",
+          "reading": "らむ",
+          "meaning": "is it that... (present inference in a question)"
+        },
+        {
+          "word": "雲居",
+          "reading": "くもゐ",
+          "meaning": "the distant sky / the clouds",
+          "chinese_cognate_note": "Literally 'where clouds are' (雲居)."
+        },
+        {
+          "word": "の",
+          "reading": "の",
+          "meaning": "possessive particle (of)"
+        },
+        {
+          "word": "月",
+          "reading": "つき",
+          "meaning": "moon",
+          "chinese_cognate_note": "Cognate with 月 (yuè)."
+        },
+        {
+          "word": "は",
+          "reading": "は",
+          "meaning": "topic marker"
+        },
+        {
+          "word": "隔て",
+          "reading": "へだて",
+          "meaning": "separation / distance",
+          "chinese_cognate_note": "Cognate with 隔 (gé)."
+        },
+        {
+          "word": "こし",
+          "reading": "こし",
+          "meaning": "past tense marker (has come to be)"
+        },
+        {
+          "word": "みを",
+          "reading": "みを",
+          "meaning": "even though / despite"
+        }
+      ],
+      "answer": "It implies a question about the current state: 'How is it [possible] that the light is dwelling [on my sleeves right now]?'",
+      "hint": "Think of 'ramu' as adding a layer of 'I wonder why' or 'it seems' to the verb 'dwell'."
+    }
+  ],
+  "reference_card": {
+    "point": "Auxiliary らむ (ramu)",
+    "one_liner": "Speculates about a present action that is not directly visible or explains the reason for a current state.",
+    "example": "いふらむ (ifu-ramu) = 'must be why they call it' or 'is likely saying right now'.",
+    "see_also": [
+      "auxiliary_mu",
+      "conjugation_izenkei"
+    ]
+  },
+  "forward_references": [
+    {
+      "point": "しをるれば (shiorureba)",
+      "note": "The 'reba' ending is the Izenkei + ba construction meaning 'because/since'. We will master this 'Reasoning Base' in Unit 5."
+    },
+    {
+      "point": "こし (koshi)",
+      "note": "This is a past tense auxiliary. We will cover the 'Past Speculation' (けむ) and 'Past Recollection' (き/けり) in Unit 6."
+    }
+  ]
+}

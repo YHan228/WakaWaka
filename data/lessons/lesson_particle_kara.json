@@ -1,0 +1,510 @@
+{
+  "lesson_id": "lesson_particle_kara",
+  "lesson_title": "The Source and the Cause: Particle から (kara)",
+  "lesson_summary": "In this lesson, we explore the particle 'kara', which functions as a logical 'origin' marker—identifying either a starting point in time/space or the causal reason behind an event.",
+  "grammar_point": "particle_kara",
+  "grammar_explanation": {
+    "concept": "The particle 'kara' (から) acts like a 'Source' tag. In a spatial/temporal context, it marks where something begins (From). In a logical context, it marks the reason or cause (Because). Think of it as the 'Input' to a process.",
+    "formation": "Noun + から (From [Point/Time]); Verb/Adjective + から (Because [Action/State])",
+    "variations": [
+      "からに (kara ni): Often emphasizes an immediate causal link (Because... then immediately).",
+      "ものから (mono kara): A compound meaning 'although' or 'because', often used to link a feeling to a situation."
+    ],
+    "common_confusions": [
+      "vs より (yori): While both can mean 'from', 'yori' is often more formal or used for comparison, whereas 'kara' focuses strictly on the starting point or reason."
+    ]
+  },
+  "teaching_sequence": [
+    {
+      "type": "introduction",
+      "content": "In previous lessons, we looked at 'he' (へ) and 'yori' (より) to describe movement and direction. Now, we turn to 'kara' (から). If 'he' is the destination, 'kara' is the origin. For a Chinese speaker, think of 'kara' as the character '从' (cóng) when dealing with time, and '由于' (yóuyú) when dealing with logic. It identifies the 'source' of the current situation."
+    },
+    {
+      "type": "poem_presentation",
+      "poem_id": "lapis_dc3f7306867d015e",
+      "display": {
+        "text_with_furigana": "<ruby>あす<rt>明日</rt></ruby>からは<ruby>わかな<rt>若菜</rt></ruby><ruby>つまむ<rt>摘まむ</rt></ruby>と<ruby>しめし<rt>標めし</rt></ruby>のに<ruby>きのふ<rt>昨日</rt></ruby>も<ruby>けふ<rt>今日</rt></ruby>も<ruby>ゆき<rt>雪</rt></ruby>は<ruby>ふりつつ<rt>降りつつ</rt></ruby>",
+        "romaji": "asukara wa, wakana tsumamu to, shimeshi no ni, kinou mo kyou mo, yuki wa furitsutsu",
+        "translation": "Though I marked the field to pick young greens from tomorrow, the snow keeps falling yesterday and today."
+      },
+      "vocabulary": [
+        {
+          "word": "あす",
+          "reading": "あす",
+          "meaning": "tomorrow",
+          "span": [
+            0,
+            2
+          ],
+          "chinese_cognate_note": "明日 (míngrì)"
+        },
+        {
+          "word": "から",
+          "reading": "から",
+          "meaning": "from (starting point)",
+          "span": [
+            2,
+            4
+          ],
+          "chinese_cognate_note": "Equivalent to 从 (cóng)"
+        },
+        {
+          "word": "は",
+          "reading": "は",
+          "meaning": "topic marker",
+          "span": [
+            4,
+            5
+          ],
+          "chinese_cognate_note": "Learned in Unit 1"
+        },
+        {
+          "word": "わかな",
+          "reading": "わかな",
+          "meaning": "young herbs/greens",
+          "span": [
+            5,
+            8
+          ],
+          "chinese_cognate_note": "若菜"
+        },
+        {
+          "word": "つまむ",
+          "reading": "つまむ",
+          "meaning": "to pick/pluck",
+          "span": [
+            8,
+            11
+          ],
+          "chinese_cognate_note": "摘 (zhāi)"
+        },
+        {
+          "word": "と",
+          "reading": "と",
+          "meaning": "quotative particle (marks intent)",
+          "span": [
+            11,
+            12
+          ],
+          "chinese_cognate_note": "Learned in Unit 1"
+        },
+        {
+          "word": "しめし",
+          "reading": "しめし",
+          "meaning": "marked/indicated",
+          "span": [
+            12,
+            15
+          ],
+          "chinese_cognate_note": "示 (shì)"
+        },
+        {
+          "word": "の",
+          "reading": "の",
+          "meaning": "possessive/genitive particle",
+          "span": [
+            15,
+            16
+          ],
+          "chinese_cognate_note": "Learned in Unit 1"
+        },
+        {
+          "word": "に",
+          "reading": "に",
+          "meaning": "adversative particle (though/but)",
+          "span": [
+            16,
+            17
+          ],
+          "chinese_cognate_note": "Contextual usage of に"
+        },
+        {
+          "word": "きのふ",
+          "reading": "きのふ",
+          "meaning": "yesterday",
+          "span": [
+            17,
+            20
+          ],
+          "chinese_cognate_note": "昨日 (zuórì)"
+        },
+        {
+          "word": "も",
+          "reading": "も",
+          "meaning": "also/even",
+          "span": [
+            20,
+            21
+          ],
+          "chinese_cognate_note": "Learned in Unit 1"
+        },
+        {
+          "word": "けふ",
+          "reading": "けふ",
+          "meaning": "today",
+          "span": [
+            21,
+            23
+          ],
+          "chinese_cognate_note": "今日 (jīnrì)"
+        },
+        {
+          "word": "も",
+          "reading": "も",
+          "meaning": "also/even",
+          "span": [
+            23,
+            24
+          ],
+          "chinese_cognate_note": null
+        },
+        {
+          "word": "ゆき",
+          "reading": "ゆき",
+          "meaning": "snow",
+          "span": [
+            24,
+            26
+          ],
+          "chinese_cognate_note": "雪 (xuě)"
+        },
+        {
+          "word": "は",
+          "reading": "は",
+          "meaning": "topic marker",
+          "span": [
+            26,
+            27
+          ],
+          "chinese_cognate_note": null
+        },
+        {
+          "word": "ふりつつ",
+          "reading": "ふりつつ",
+          "meaning": "continuously falling",
+          "span": [
+            27,
+            31
+          ],
+          "chinese_cognate_note": null
+        }
+      ],
+      "focus_highlight": [
+        2,
+        4
+      ]
+    },
+    {
+      "type": "grammar_spotlight",
+      "content": "In the poem above, 'asu kara' (あすから) marks the temporal starting point. The speaker intended to pick greens *starting from* tomorrow. Notice how 'kara' attaches directly to the noun 'asu' (tomorrow), just like the Chinese '从明天起'.",
+      "evidence": "See the poem above."
+    },
+    {
+      "type": "poem_presentation",
+      "poem_id": "lapis_e3e90d72c51fcea6",
+      "display": {
+        "text_with_furigana": "<ruby>住の江<rt>すみのえ</rt></ruby>の<ruby>松<rt>まつ</rt></ruby>を<ruby>秋風<rt>あきかぜ</rt></ruby><ruby>吹く<rt>ふく</rt></ruby>からにこゑうちそふるおきつ<ruby>白浪<rt>しらなみ</rt></ruby>",
+        "romaji": "suminoe no, matsu o akikaze, fuku kara ni, koe uchi so furu, okitsu shiranami",
+        "translation": "Because the autumn wind blows through the pines of Suminoe, the offshore white waves add their voices to the sound."
+      },
+      "vocabulary": [
+        {
+          "word": "住の江",
+          "reading": "すみのえ",
+          "meaning": "Suminoye (place name)",
+          "span": [
+            0,
+            3
+          ],
+          "chinese_cognate_note": null
+        },
+        {
+          "word": "の",
+          "reading": "の",
+          "meaning": "possessive particle",
+          "span": [
+            3,
+            4
+          ],
+          "chinese_cognate_note": null
+        },
+        {
+          "word": "松",
+          "reading": "まつ",
+          "meaning": "pine tree",
+          "span": [
+            4,
+            5
+          ],
+          "chinese_cognate_note": "松 (sōng)"
+        },
+        {
+          "word": "を",
+          "reading": "を",
+          "meaning": "object marker",
+          "span": [
+            5,
+            6
+          ],
+          "chinese_cognate_note": null
+        },
+        {
+          "word": "秋風",
+          "reading": "あきかぜ",
+          "meaning": "autumn wind",
+          "span": [
+            6,
+            8
+          ],
+          "chinese_cognate_note": "秋风 (qiūfēng)"
+        },
+        {
+          "word": "吹く",
+          "reading": "ふく",
+          "meaning": "to blow",
+          "span": [
+            8,
+            10
+          ],
+          "chinese_cognate_note": "吹 (chuī)"
+        },
+        {
+          "word": "から",
+          "reading": "から",
+          "meaning": "because/since (reason)",
+          "span": [
+            10,
+            12
+          ],
+          "chinese_cognate_note": null
+        },
+        {
+          "word": "に",
+          "reading": "に",
+          "meaning": "particle (here emphasizing the result)",
+          "span": [
+            12,
+            13
+          ],
+          "chinese_cognate_note": null
+        },
+        {
+          "word": "こゑ",
+          "reading": "こゑ",
+          "meaning": "voice/sound",
+          "span": [
+            13,
+            15
+          ],
+          "chinese_cognate_note": "声 (shēng)"
+        },
+        {
+          "word": "うちそふる",
+          "reading": "うちそふる",
+          "meaning": "to add/join together",
+          "span": [
+            15,
+            20
+          ],
+          "chinese_cognate_note": null
+        },
+        {
+          "word": "おきつ",
+          "reading": "おきつ",
+          "meaning": "offshore",
+          "span": [
+            20,
+            23
+          ],
+          "chinese_cognate_note": null
+        },
+        {
+          "word": "白浪",
+          "reading": "しらなみ",
+          "meaning": "white waves",
+          "span": [
+            23,
+            25
+          ],
+          "chinese_cognate_note": "白浪 (báilàng)"
+        }
+      ],
+      "focus_highlight": [
+        10,
+        12
+      ]
+    },
+    {
+      "type": "grammar_spotlight",
+      "content": "Here, 'kara' follows the verb 'fuku' (to blow). This is the logical usage: 'Because the wind blows...' (吹くから). The addition of 'ni' (からに) creates a stronger link, implying that the waves 'add their voice' *as a direct result* of the wind blowing. Think of this as a trigger-action sequence in code: `if (wind_blows) { waves_add_voice(); }`.",
+      "evidence": "See the poem above."
+    },
+    {
+      "type": "poem_presentation",
+      "poem_id": "lapis_f88c83a70729a9f0",
+      "display": {
+        "text_with_furigana": "ほとときすなかなく<ruby>里<rt>さと</rt></ruby>のあまたあれは<ruby>猶<rt>なほ</rt></ruby>うとまれぬ<ruby>思ふ<rt>おもふ</rt></ruby>ものから",
+        "romaji": "hototogisu, naku sato no amata, areba nao, utomarenu omou, mono kara",
+        "translation": "Though there are many villages where the cuckoo sings, I still cannot help but feel estranged, even while I think of it."
+      },
+      "vocabulary": [
+        {
+          "word": "ほとときす",
+          "reading": "ほとときす",
+          "meaning": "cuckoo (bird)",
+          "span": [
+            0,
+            5
+          ],
+          "chinese_cognate_note": null
+        },
+        {
+          "word": "なかなく",
+          "reading": "なかなく",
+          "meaning": "singing inside/among",
+          "span": [
+            5,
+            9
+          ],
+          "chinese_cognate_note": null
+        },
+        {
+          "word": "里",
+          "reading": "さと",
+          "meaning": "village",
+          "span": null,
+          "chinese_cognate_note": "里 (lǐ)"
+        },
+        {
+          "word": "の",
+          "reading": "の",
+          "meaning": "possessive particle",
+          "span": [
+            11,
+            12
+          ],
+          "chinese_cognate_note": null
+        },
+        {
+          "word": "あまた",
+          "reading": "あまた",
+          "meaning": "many/numerous",
+          "span": [
+            12,
+            15
+          ],
+          "chinese_cognate_note": null
+        },
+        {
+          "word": "あれ",
+          "reading": "あれ",
+          "meaning": "to exist/be",
+          "span": [
+            15,
+            17
+          ],
+          "chinese_cognate_note": null
+        },
+        {
+          "word": "は",
+          "reading": "は",
+          "meaning": "topic/conditional marker",
+          "span": [
+            17,
+            18
+          ],
+          "chinese_cognate_note": null
+        },
+        {
+          "word": "猶",
+          "reading": "なほ",
+          "meaning": "still/yet",
+          "span": [
+            18,
+            19
+          ],
+          "chinese_cognate_note": "犹 (yóu)"
+        },
+        {
+          "word": "うとまれ",
+          "reading": "うとまれ",
+          "meaning": "to be estranged/disliked",
+          "span": [
+            19,
+            23
+          ],
+          "chinese_cognate_note": "疏 (shū)"
+        },
+        {
+          "word": "ぬ",
+          "reading": "ぬ",
+          "meaning": "not (negative auxiliary)",
+          "span": [
+            23,
+            24
+          ],
+          "chinese_cognate_note": null
+        },
+        {
+          "word": "思ふ",
+          "reading": "おもふ",
+          "meaning": "to think/feel",
+          "span": [
+            24,
+            26
+          ],
+          "chinese_cognate_note": "思 (sī)"
+        },
+        {
+          "word": "もの",
+          "reading": "もの",
+          "meaning": "thing/matter",
+          "span": [
+            26,
+            28
+          ],
+          "chinese_cognate_note": "物 (wù)"
+        },
+        {
+          "word": "から",
+          "reading": "から",
+          "meaning": "since/while (reason/contrast)",
+          "span": [
+            28,
+            30
+          ],
+          "chinese_cognate_note": null
+        }
+      ],
+      "focus_highlight": [
+        28,
+        30
+      ]
+    },
+    {
+      "type": "comprehension_check",
+      "question": "In the phrase 'asu kara wa' (あすからは), what is the specific function of 'kara'?",
+      "answer": "It marks the temporal starting point (from tomorrow).",
+      "hint": "Look at the word preceding it: 'asu' (tomorrow). Is it a place, a time, or a reason?"
+    }
+  ],
+  "reference_card": {
+    "point": "Particle から (kara)",
+    "one_liner": "Marks the 'Source'—either a starting point in time/space (from) or a logical cause (because).",
+    "example": "秋風吹くから (Because the autumn wind blows)",
+    "see_also": [
+      "particle_yori",
+      "particle_ni"
+    ]
+  },
+  "forward_references": [
+    {
+      "point": "ふりつつ (furitsutsu)",
+      "note": "The 'tsutsu' ending indicates a continuous action. We will cover this in Unit 5."
+    },
+    {
+      "point": "うとまれぬ (utomarenu)",
+      "note": "The 'nu' here is a negative marker. We will learn negation in Unit 4."
+    }
+  ]
+}

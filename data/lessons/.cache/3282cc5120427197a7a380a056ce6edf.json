@@ -1,0 +1,360 @@
+{
+  "lesson_title": "The Ultimate Emphasis: Particle こそ (koso) and the Izenkei 'Lock'",
+  "lesson_summary": "This lesson introduces 'koso', the strongest emphatic particle in classical Japanese, and explains how it forces the sentence-final verb into the Izenkei (Realized Base) through the logic of Kakari-Musubi.",
+  "grammar_explanation": {
+    "concept": "The particle こそ (koso) is used to single out one thing and emphasize it above all others. In programming terms, it acts like a 'High Priority' flag. When this flag is raised, the sentence cannot end normally; it triggers a 'Kakari-Musubi' (Linking and Binding) rule that forces the final verb or auxiliary to switch to its Izenkei (已然形 - Realized Base) form.",
+    "formation": "[Noun/Particle] + こそ + ... + [Verb/Auxiliary in Izenkei]",
+    "variations": [
+      "Often used with 'nomi' (only) as 'nomi koso' for 'only and specifically'."
+    ],
+    "common_confusions": [
+      "Unlike 'zo' or 'ya' which trigger the Rentaikei (Attributive Form), 'koso' is the ONLY particle that triggers the Izenkei (Realized Base) at the end of a sentence."
+    ]
+  },
+  "teaching_sequence": [
+    {
+      "type": "introduction",
+      "content": "In previous lessons, we saw how particles like 'zo' and 'ya' change the ending of a sentence to the Rentaikei. Today, we encounter the most powerful emphatic particle: こそ (koso). Think of 'koso' as a logical 'Override' command. When 'koso' appears, the sentence-final verb is 'locked' into the Izenkei (已然形). Since you already know the Izenkei represents 'realized' or 'established' facts, using it with 'koso' creates a sense of absolute, undeniable certainty."
+    },
+    {
+      "type": "poem_presentation",
+      "poem_id": "ogura100_2eaba95627b91dd3",
+      "display": {
+        "text_with_furigana": "<ruby>御垣守<rt>みかきもり</rt></ruby><ruby>衛士<rt>えじ</rt></ruby>のたく<ruby>火<rt>ひ</rt></ruby>の<ruby>夜<rt>よる</rt></ruby>は<ruby>燃<rt>も</rt></ruby>え<ruby>昼<rt>ひる</rt></ruby>は<ruby>消<rt>き</rt></ruby>えつつ<ruby>物<rt>もの</rt></ruby>を<span style='color: #ff4500; font-weight: bold;'>こそ</span><ruby>思<rt>おも</rt></ruby>へ",
+        "romaji": "mikakimori eji no taku hi no yoru wa moe hiru wa kie tsutsu mono o koso omoe",
+        "translation": "Like the fires kept by the imperial guards, burning by night and fading by day, I too am consumed by my thoughts."
+      },
+      "vocabulary": [
+        {
+          "word": "御垣守",
+          "reading": "みかきもり",
+          "meaning": "imperial palace guards",
+          "chinese_cognate_note": "御 (imperial) + 垣 (fence/wall) + 守 (guard)"
+        },
+        {
+          "word": "衛士",
+          "reading": "えじ",
+          "meaning": "guardsman",
+          "chinese_cognate_note": "Identical to Chinese 卫士 (wèishì)"
+        },
+        {
+          "word": "の",
+          "reading": "の",
+          "meaning": "possessive particle (of)"
+        },
+        {
+          "word": "たく",
+          "reading": "たく",
+          "meaning": "to burn/kindle",
+          "chinese_cognate_note": "Cognate with 炊 (chuī)"
+        },
+        {
+          "word": "火",
+          "reading": "ひ",
+          "meaning": "fire",
+          "chinese_cognate_note": "Identical to Chinese 火 (huǒ)"
+        },
+        {
+          "word": "の",
+          "reading": "の",
+          "meaning": "subject marker (in relative clause)"
+        },
+        {
+          "word": "夜",
+          "reading": "よる",
+          "meaning": "night",
+          "chinese_cognate_note": "Identical to Chinese 夜 (yè)"
+        },
+        {
+          "word": "は",
+          "reading": "は",
+          "meaning": "topic marker"
+        },
+        {
+          "word": "燃え",
+          "reading": "もえ",
+          "meaning": "burning",
+          "chinese_cognate_note": "Cognate with 燃 (rán)"
+        },
+        {
+          "word": "昼",
+          "reading": "ひる",
+          "meaning": "daytime",
+          "chinese_cognate_note": "Identical to Chinese 昼 (zhòu)"
+        },
+        {
+          "word": "は",
+          "reading": "は",
+          "meaning": "topic marker"
+        },
+        {
+          "word": "消え",
+          "reading": "きえ",
+          "meaning": "extinguishing/fading",
+          "chinese_cognate_note": "Cognate with 消 (xiāo)"
+        },
+        {
+          "word": "つつ",
+          "reading": "つつ",
+          "meaning": "while/continuously"
+        },
+        {
+          "word": "物",
+          "reading": "もの",
+          "meaning": "things/thoughts",
+          "chinese_cognate_note": "Identical to Chinese 物 (wù)"
+        },
+        {
+          "word": "を",
+          "reading": "を",
+          "meaning": "object marker"
+        },
+        {
+          "word": "こそ",
+          "reading": "koso",
+          "meaning": "emphasis marker"
+        },
+        {
+          "word": "思へ",
+          "reading": "おもえ",
+          "meaning": "to think/long for (Izenkei form)",
+          "chinese_cognate_note": "Cognate with 思 (sī)"
+        }
+      ],
+      "focus_highlight": [
+        22,
+        26
+      ]
+    },
+    {
+      "type": "grammar_spotlight",
+      "content": "Look at the end of the poem: 物を**こそ**思**へ** (mono o koso omoe). \n\n1. The verb is 思ふ (omofu - to think). \n2. Normally, the sentence would end in 'omofu' (Shuushikei).\n3. However, because **こそ** (koso) is present, the verb is forced into the **Izenkei** (Realized Base).\n4. For this verb, the Izenkei is **思へ** (omoe).\n\nThis doesn't change the basic meaning ('I think'), but it adds a heavy emotional weight, as if saying: 'It is specifically these thoughts that I am feeling!'"
+    },
+    {
+      "type": "poem_presentation",
+      "poem_id": "ogura100_28563908709d966c",
+      "display": {
+        "text_with_furigana": "<ruby>月<rt>つき</rt></ruby><ruby>見<rt>み</rt></ruby>ればちぢにもの<span style='color: #ff4500; font-weight: bold;'>こそ</span><ruby>悲<rt>かな</rt></ruby>しけれわが<ruby>身<rt>み</rt></ruby><ruby>一<rt>ひと</rt></ruby>つの<ruby>秋<rt>あき</rt></ruby>にはあらねど",
+        "romaji": "tsukimireba chiji ni mono koso kanashikere wagami hitotsu no aki ni wa aranedo",
+        "translation": "When I look at the moon, a thousand things become truly sad, though it is not an autumn for me alone."
+      },
+      "vocabulary": [
+        {
+          "word": "月",
+          "reading": "つき",
+          "meaning": "moon",
+          "chinese_cognate_note": "Identical to Chinese 月 (yuè)"
+        },
+        {
+          "word": "見れば",
+          "reading": "みれば",
+          "meaning": "when/since I see (Mire + ba)"
+        },
+        {
+          "word": "ちぢに",
+          "reading": "ちぢに",
+          "meaning": "in a thousand ways / manifold"
+        },
+        {
+          "word": "もの",
+          "reading": "もの",
+          "meaning": "things",
+          "chinese_cognate_note": "物 (wù)"
+        },
+        {
+          "word": "こそ",
+          "reading": "koso",
+          "meaning": "emphasis marker"
+        },
+        {
+          "word": "悲しけれ",
+          "reading": "かなしけれ",
+          "meaning": "sad (Izenkei form of adjective)",
+          "chinese_cognate_note": "悲 (bēi)"
+        },
+        {
+          "word": "わが",
+          "reading": "わが",
+          "meaning": "my"
+        },
+        {
+          "word": "身",
+          "reading": "み",
+          "meaning": "body/self",
+          "chinese_cognate_note": "身 (shēn)"
+        },
+        {
+          "word": "一つ",
+          "reading": "ひとつ",
+          "meaning": "one",
+          "chinese_cognate_note": "一 (yī)"
+        },
+        {
+          "word": "の",
+          "reading": "の",
+          "meaning": "possessive particle"
+        },
+        {
+          "word": "秋",
+          "reading": "あき",
+          "meaning": "autumn",
+          "chinese_cognate_note": "秋 (qiū)"
+        },
+        {
+          "word": "に",
+          "reading": "に",
+          "meaning": "in/at"
+        },
+        {
+          "word": "は",
+          "reading": "は",
+          "meaning": "topic marker"
+        },
+        {
+          "word": "あら",
+          "reading": "あら",
+          "meaning": "to be (exist)"
+        },
+        {
+          "word": "ね",
+          "reading": "ね",
+          "meaning": "not (Izenkei of negative auxiliary 'zu')"
+        },
+        {
+          "word": "ど",
+          "reading": "ど",
+          "meaning": "although"
+        }
+      ],
+      "focus_highlight": [
+        9,
+        15
+      ]
+    },
+    {
+      "type": "grammar_spotlight",
+      "content": "In this poem, 'koso' emphasizes the noun 'mono' (things). \n\nThe adjective is **悲し** (kanashi - sad). \nIn classical Japanese, adjectives also have an Izenkei form ending in **~けれ** (~kere). \n\nTherefore, **こそ** (koso) triggers **悲しけれ** (kanashikere). This highlights the intense, undeniable sadness the poet feels upon seeing the moon."
+    },
+    {
+      "type": "poem_presentation",
+      "poem_id": "lapis_cd5d70f4541ae68e",
+      "display": {
+        "text_with_furigana": "<ruby>紅<rt>くれない</rt></ruby>のふりいでつつなく<ruby>涙<rt>なみだ</rt></ruby>にはたもとのみ<span style='color: #ff4500; font-weight: bold;'>こそ</span><ruby>色<rt>いろ</rt></ruby>まさりけれ",
+        "romaji": "kurenai no furiite tsutsunaku namida ni wa tamoto nomi koso iro masari kere",
+        "translation": "In the tears that fall like crimson rain, it is my sleeves alone whose color has deepened."
+      },
+      "vocabulary": [
+        {
+          "word": "紅",
+          "reading": "くれない",
+          "meaning": "crimson/deep red",
+          "chinese_cognate_note": "红 (hóng)"
+        },
+        {
+          "word": "の",
+          "reading": "の",
+          "meaning": "possessive particle"
+        },
+        {
+          "word": "ふり",
+          "reading": "ふり",
+          "meaning": "falling (tears/rain)"
+        },
+        {
+          "word": "いで",
+          "reading": "いで",
+          "meaning": "out"
+        },
+        {
+          "word": "つつ",
+          "reading": "つつ",
+          "meaning": "while/continuously"
+        },
+        {
+          "word": "なく",
+          "reading": "なく",
+          "meaning": "crying/weeping",
+          "chinese_cognate_note": "泣 (qì)"
+        },
+        {
+          "word": "涙",
+          "reading": "なみだ",
+          "meaning": "tears",
+          "chinese_cognate_note": "泪 (lèi)"
+        },
+        {
+          "word": "に",
+          "reading": "に",
+          "meaning": "in/at"
+        },
+        {
+          "word": "は",
+          "reading": "は",
+          "meaning": "topic marker"
+        },
+        {
+          "word": "たもと",
+          "reading": "たもと",
+          "meaning": "sleeve (of a kimono)"
+        },
+        {
+          "word": "のみ",
+          "reading": "のみ",
+          "meaning": "only"
+        },
+        {
+          "word": "こそ",
+          "reading": "koso",
+          "meaning": "emphasis marker"
+        },
+        {
+          "word": "色",
+          "reading": "いろ",
+          "meaning": "color",
+          "chinese_cognate_note": "色 (sè)"
+        },
+        {
+          "word": "まさり",
+          "reading": "まさり",
+          "meaning": "to increase/surpass",
+          "chinese_cognate_note": "胜 (shèng)"
+        },
+        {
+          "word": "けれ",
+          "reading": "kere",
+          "meaning": "past recollection auxiliary (Izenkei form)"
+        }
+      ],
+      "focus_highlight": [
+        18,
+        26
+      ]
+    },
+    {
+      "type": "grammar_spotlight",
+      "content": "Here we see **のみこそ** (nomi koso). 'Nomi' means 'only'. Adding 'koso' makes it 'ONLY and specifically'. \n\nThe sentence ends with the auxiliary **けり** (keri - past/discovery). \nAs we learned in Unit 5, the Izenkei of 'keri' is **けれ** (kere). \n\nBecause of **こそ**, the sentence must end in **けれ**."
+    },
+    {
+      "type": "comprehension_check",
+      "question": "In the phrase '物こそ悲しけれ', why does the word '悲し' (sad) end in 'けれ' instead of its standard form?",
+      "answer": "Because the emphatic particle 'koso' triggers the Kakari-Musubi rule, which requires the sentence-final word to be in the Izenkei (Realized Base). 'Kanashikere' is the Izenkei form of the adjective 'kanashi'.",
+      "hint": "Recall the 'Izenkei Lock' triggered by the strongest emphatic particle."
+    }
+  ],
+  "reference_card": {
+    "point": "Particle こそ (koso)",
+    "one_liner": "The strongest emphatic particle; it triggers the Kakari-Musubi rule, forcing the final verb/auxiliary into the Izenkei (已然形).",
+    "example": "物こそ思へ (It is specifically [these] things that I think of.)",
+    "see_also": [
+      "particle_zo",
+      "particle_ya",
+      "conjugation_izenkei"
+    ]
+  },
+  "forward_references": [
+    {
+      "point": "Izenkei + ba",
+      "note": "In Poem 2, we saw '見れば' (mire-ba). While 'koso' uses Izenkei to end a sentence, the particle 'ba' uses it to create 'since/because' clauses. We will contrast these uses in the next unit."
+    }
+  ]
+}

@@ -1,0 +1,457 @@
+{
+  "lesson_id": "lesson_particle_wo",
+  "lesson_title": "The Direct Object Marker: Identifying the Target of Action",
+  "lesson_summary": "This lesson introduces the particle を (wo), which identifies the direct object of a verb. It completes our basic understanding of how nouns interact with actions in the SOV (Subject-Object-Verb) structure.",
+  "grammar_point": "particle_wo",
+  "grammar_explanation": {
+    "concept": "The particle を (wo) is a 'case marker' that identifies the noun immediately preceding it as the direct object of the verb. In logical terms, if the verb is an operation, を marks the data being operated upon.",
+    "formation": "[Noun] + を + [Verb]",
+    "variations": [
+      "In some contexts, を can also mark a space through which movement occurs (e.g., 'walking [through] a gate')."
+    ],
+    "common_confusions": [
+      "Unlike the particle に (ni), which marks a destination or indirect recipient, を (wo) marks the thing directly affected by the action."
+    ]
+  },
+  "teaching_sequence": [
+    {
+      "type": "introduction",
+      "content": "In previous lessons, we learned how 'no' links nouns and 'ni' establishes location. However, a sentence often describes an action performed on something. In Chinese, we put the object after the verb (SVO). In Classical Japanese, we place the object before the verb and tag it with 'wo' (SOV). Think of 'wo' as a logical pointer that says: 'The noun I am attached to is the target of the upcoming action.'"
+    },
+    {
+      "type": "poem_presentation",
+      "poem_id": "lapis_e3e90d72c51fcea6",
+      "display": {
+        "text_with_furigana": "<ruby>住<rt>すみ</rt></ruby>の<ruby>江<rt>え</rt></ruby>の<ruby>松<rt>まつ</rt></ruby>を<ruby>秋風<rt>あきかぜ</rt></ruby><ruby>吹<rt>ふ</rt></ruby>くからにこゑうちそふるおきつ<ruby>白浪<rt>しらなみ</rt></ruby>",
+        "romaji": "suminoe no, matsu o akikaze, fuku kara ni, koe uchi so furu, okitsu shiranami",
+        "translation": "Because the autumn wind blows through the pines of Suminoe, the offshore white waves add their voices to the sound."
+      },
+      "vocabulary": [
+        {
+          "word": "住の江",
+          "reading": "すみのえ",
+          "meaning": "Suminoye (a famous coastal place name)",
+          "span": [
+            0,
+            3
+          ],
+          "chinese_cognate_note": "The character 江 (jiāng) suggests a body of water."
+        },
+        {
+          "word": "の",
+          "reading": "の",
+          "meaning": "Possessive/Genitive particle (of)",
+          "span": [
+            3,
+            4
+          ],
+          "chinese_cognate_note": null
+        },
+        {
+          "word": "松",
+          "reading": "まつ",
+          "meaning": "Pine tree",
+          "span": [
+            4,
+            5
+          ],
+          "chinese_cognate_note": "Identical to Chinese 松 (sōng)."
+        },
+        {
+          "word": "を",
+          "reading": "を",
+          "meaning": "Direct object marker",
+          "span": [
+            5,
+            6
+          ],
+          "chinese_cognate_note": null
+        },
+        {
+          "word": "秋風",
+          "reading": "あきかぜ",
+          "meaning": "Autumn wind",
+          "span": [
+            6,
+            8
+          ],
+          "chinese_cognate_note": "Identical to Chinese 秋风 (qiūfēng)."
+        },
+        {
+          "word": "吹く",
+          "reading": "ふく",
+          "meaning": "To blow",
+          "span": [
+            8,
+            10
+          ],
+          "chinese_cognate_note": "Identical to Chinese 吹 (chuī)."
+        },
+        {
+          "word": "から",
+          "reading": "から",
+          "meaning": "Because / Since",
+          "span": [
+            10,
+            12
+          ],
+          "chinese_cognate_note": null
+        },
+        {
+          "word": "に",
+          "reading": "に",
+          "meaning": "Particle (working with 'kara' to mean 'because')",
+          "span": [
+            12,
+            13
+          ],
+          "chinese_cognate_note": null
+        },
+        {
+          "word": "こゑ",
+          "reading": "こえ",
+          "meaning": "Voice / Sound",
+          "span": [
+            13,
+            15
+          ],
+          "chinese_cognate_note": null
+        },
+        {
+          "word": "うちそふる",
+          "reading": "うちそふる",
+          "meaning": "To add to / To join with",
+          "span": [
+            15,
+            20
+          ],
+          "chinese_cognate_note": null
+        },
+        {
+          "word": "おきつ",
+          "reading": "おきつ",
+          "meaning": "Offshore",
+          "span": [
+            20,
+            23
+          ],
+          "chinese_cognate_note": null
+        },
+        {
+          "word": "白浪",
+          "reading": "しらなみ",
+          "meaning": "White waves",
+          "span": [
+            23,
+            25
+          ],
+          "chinese_cognate_note": "Identical to Chinese 白浪 (báilàng)."
+        }
+      ],
+      "focus_highlight": [
+        5,
+        6
+      ]
+    },
+    {
+      "type": "grammar_spotlight",
+      "content": "Look at the phrase <ruby>松<rt>まつ</rt></ruby>を<ruby>吹<rt>ふ</rt></ruby>く. In Chinese, you would say 吹松 (chuī sōng). In Japanese, the order is reversed: 松 (Pine) + を (Object Marker) + 吹く (Blows). The particle を tells us that the wind isn't just blowing *at* the pines, but that the pines are the direct recipient of the blowing action.",
+      "evidence": "See the poem above."
+    },
+    {
+      "type": "poem_presentation",
+      "poem_id": "lapis_39f78f91bac9f0c5",
+      "display": {
+        "text_with_furigana": "くもまよりほしあひの<ruby>空<rt>そら</rt></ruby>を<ruby>見渡<rt>みわた</rt></ruby>せばしつこころなきあまのかはなみ",
+        "romaji": "kumoma yori, hoshi ai no sora, o miwatase, ba shitsukokoro naki, ama no kawa nami",
+        "translation": "When I look out over the sky where the stars meet through the gaps in the clouds, I see the waves of the Milky Way."
+      },
+      "vocabulary": [
+        {
+          "word": "くもま",
+          "reading": "くもま",
+          "meaning": "Gaps between clouds",
+          "span": [
+            0,
+            3
+          ],
+          "chinese_cognate_note": "Composed of 雲 (cloud) and 間 (between)."
+        },
+        {
+          "word": "より",
+          "reading": "より",
+          "meaning": "From",
+          "span": [
+            3,
+            5
+          ],
+          "chinese_cognate_note": null
+        },
+        {
+          "word": "ほしあひ",
+          "reading": "ほしあひ",
+          "meaning": "The meeting of the stars (Tanabata festival)",
+          "span": [
+            5,
+            9
+          ],
+          "chinese_cognate_note": null
+        },
+        {
+          "word": "の",
+          "reading": "の",
+          "meaning": "Possessive particle (of)",
+          "span": [
+            9,
+            10
+          ],
+          "chinese_cognate_note": null
+        },
+        {
+          "word": "そら",
+          "reading": "そら",
+          "meaning": "Sky",
+          "span": [
+            10,
+            12
+          ],
+          "chinese_cognate_note": "Identical to Chinese 空 (kōng)."
+        },
+        {
+          "word": "を",
+          "reading": "を",
+          "meaning": "Direct object marker",
+          "span": [
+            12,
+            13
+          ],
+          "chinese_cognate_note": null
+        },
+        {
+          "word": "みわたせ",
+          "reading": "みわたせ",
+          "meaning": "To look out over / To survey",
+          "span": [
+            13,
+            17
+          ],
+          "chinese_cognate_note": "見 (see) + 渡 (cross)."
+        },
+        {
+          "word": "は",
+          "reading": "ば",
+          "meaning": "When / Since (conditional marker)",
+          "span": [
+            17,
+            18
+          ],
+          "chinese_cognate_note": null
+        },
+        {
+          "word": "しつこころ",
+          "reading": "しつこころ",
+          "meaning": "Longing / Attachment",
+          "span": [
+            18,
+            23
+          ],
+          "chinese_cognate_note": null
+        },
+        {
+          "word": "なき",
+          "reading": "なき",
+          "meaning": "Without / Non-existent",
+          "span": [
+            23,
+            25
+          ],
+          "chinese_cognate_note": "Equivalent to Chinese 無 (wú)."
+        },
+        {
+          "word": "あまのかは",
+          "reading": "あまのかは",
+          "meaning": "The Milky Way (Heaven's River)",
+          "span": [
+            25,
+            30
+          ],
+          "chinese_cognate_note": "天 (heaven) + 川 (river)."
+        },
+        {
+          "word": "なみ",
+          "reading": "なみ",
+          "meaning": "Waves",
+          "span": [
+            30,
+            32
+          ],
+          "chinese_cognate_note": null
+        }
+      ],
+      "focus_highlight": [
+        12,
+        13
+      ]
+    },
+    {
+      "type": "poem_presentation",
+      "poem_id": "lapis_71e6b5939bd77f4e",
+      "display": {
+        "text_with_furigana": "おほきみのみことかしこみいそにふりうのはらわたる<ruby>父母<rt>ちちはは</rt></ruby>を<ruby>置<rt>お</rt></ruby>きて",
+        "romaji": "ohokimi no, mikoto kashikomi, iso ni furi, unohara wataru, chichihaha wo okite",
+        "translation": "Revering the Emperor's decree, I pass the rocky shores and cross the sea, leaving my father and mother behind."
+      },
+      "vocabulary": [
+        {
+          "word": "おほきみ",
+          "reading": "おおきみ",
+          "meaning": "Emperor / Sovereign",
+          "span": [
+            0,
+            4
+          ],
+          "chinese_cognate_note": "大君 (Dàjūn)."
+        },
+        {
+          "word": "の",
+          "reading": "の",
+          "meaning": "Possessive particle (of)",
+          "span": [
+            4,
+            5
+          ],
+          "chinese_cognate_note": null
+        },
+        {
+          "word": "みこと",
+          "reading": "みこと",
+          "meaning": "Decree / Word",
+          "span": [
+            5,
+            8
+          ],
+          "chinese_cognate_note": "御言 (Yùyán)."
+        },
+        {
+          "word": "かしこみ",
+          "reading": "かしこみ",
+          "meaning": "Revering / Fearing",
+          "span": [
+            8,
+            12
+          ],
+          "chinese_cognate_note": null
+        },
+        {
+          "word": "いそ",
+          "reading": "いそ",
+          "meaning": "Seashore / Beach",
+          "span": [
+            12,
+            14
+          ],
+          "chinese_cognate_note": null
+        },
+        {
+          "word": "に",
+          "reading": "に",
+          "meaning": "At / In (location marker)",
+          "span": [
+            14,
+            15
+          ],
+          "chinese_cognate_note": null
+        },
+        {
+          "word": "ふり",
+          "reading": "ふり",
+          "meaning": "Passing (time/space)",
+          "span": [
+            15,
+            17
+          ],
+          "chinese_cognate_note": null
+        },
+        {
+          "word": "うのはら",
+          "reading": "うのはら",
+          "meaning": "The sea / Ocean plain",
+          "span": [
+            17,
+            21
+          ],
+          "chinese_cognate_note": "海原 (Hǎiyuán)."
+        },
+        {
+          "word": "わたる",
+          "reading": "わたる",
+          "meaning": "To cross",
+          "span": [
+            21,
+            24
+          ],
+          "chinese_cognate_note": "渡 (dù)."
+        },
+        {
+          "word": "ちちはは",
+          "reading": "ちちはは",
+          "meaning": "Father and mother",
+          "span": [
+            24,
+            28
+          ],
+          "chinese_cognate_note": "父母 (fùmǔ)."
+        },
+        {
+          "word": "を",
+          "reading": "を",
+          "meaning": "Direct object marker",
+          "span": [
+            28,
+            29
+          ],
+          "chinese_cognate_note": null
+        },
+        {
+          "word": "おきて",
+          "reading": "おきて",
+          "meaning": "Leaving behind",
+          "span": [
+            29,
+            32
+          ],
+          "chinese_cognate_note": "置 (zhì)."
+        }
+      ],
+      "focus_highlight": [
+        28,
+        29
+      ]
+    },
+    {
+      "type": "comprehension_check",
+      "question": "In the phrase '父母を置きて' (chichihaha wo okite), which word is the 'Target' and which is the 'Action'?",
+      "answer": "'父母' (father and mother) is the Target, and '置きて' (leaving behind) is the Action. The particle 'を' links them.",
+      "hint": "Look for the word immediately before 'を' to find the target."
+    }
+  ],
+  "reference_card": {
+    "point": "Particle を (wo)",
+    "one_liner": "Marks the direct object (the 'what') of a verb in an SOV sentence structure.",
+    "example": "松を吹く (Blows the pine)",
+    "see_also": [
+      "particle_no",
+      "particle_ni"
+    ]
+  },
+  "forward_references": [
+    {
+      "point": "kara ni",
+      "note": "We will learn how this links two full clauses in Unit 02."
+    },
+    {
+      "point": "te",
+      "note": "The 'te' in 'okite' is a linking particle we will cover in the next unit."
+    }
+  ]
+}

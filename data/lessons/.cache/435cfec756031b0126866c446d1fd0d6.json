@@ -1,0 +1,285 @@
+{
+  "lesson_title": "The Spotlight Particle: Pure Emphasis with 'Shi' (し)",
+  "lesson_summary": "In this lesson, we explore the particle 'shi' (し), which acts as a logical 'highlighter' to emphasize a specific word without changing the sentence's grammatical structure.",
+  "grammar_explanation": {
+    "concept": "The particle 'shi' (し) is an emphatic particle (副助詞). Its sole purpose is to put a 'spotlight' on the word preceding it. In programming terms, think of it as a 'priority flag' or a 'bold' tag that doesn't change the data type but tells the processor to pay extra attention to that specific variable.",
+    "formation": "Noun/Particle/Verb + し (shi)",
+    "variations": [
+      "しも (shimo): A combination of 'shi' (emphasis) and 'mo' (also/even), creating an even stronger 'double emphasis'."
+    ],
+    "common_confusions": [
+      "vs. Auxiliary 'shi': Do not confuse this with the past-tense auxiliary 'shi' (the attributive form of 'ki') learned in Unit 5. The auxiliary 'shi' follows the Ren'yokei of a verb, whereas the particle 'shi' can follow almost any word and does not indicate tense."
+    ]
+  },
+  "teaching_sequence": [
+    {
+      "type": "introduction",
+      "content": "By now, you have mastered the 'logical glue' that holds Japanese sentences together—particles that mark subjects, objects, and directions. However, poetry often requires more than just logic; it requires focus. Just as we use bold text or italics in English, or the character '亦' or '甚' in Classical Chinese for nuance, Classical Japanese uses the particle 'し' (shi) to isolate and emphasize a specific element of the poem. It doesn't change 'who' did 'what,' but it tells you 'this' is the person or thing that matters most in this moment."
+    },
+    {
+      "type": "poem_presentation",
+      "poem_id": "lapis_0e5046055c1dc0ae",
+      "display": {
+        "text_with_furigana": "<ruby>な<rt>な</rt></ruby>に<ruby>は<rt>は</rt></ruby><ruby>かた<rt>かた</rt></ruby><ruby>しほひ<rt>しほひ</rt></ruby>の<ruby>なこり<rt>なこり</rt></ruby><ruby>あく<rt>あく</rt></ruby>まてに<ruby>ひと<rt>ひと</rt></ruby>の<ruby>みる<rt>みる</rt></ruby><ruby>こ<rt>こ</rt></ruby>を<ruby>われ<rt>われ</rt></ruby><span style='color:red; font-weight:bold;'>し</span><ruby>ともし<rt>ともし</rt></ruby>も",
+        "romaji": "nani wa kata shiohi no nakori akuma te ni hito no miru ko o ware shi tomoshi mo",
+        "translation": "The tide recedes at Naniwa lagoon, leaving a lingering beauty; while others merely look at the girl, I am the one who feels such deep envy."
+      },
+      "vocabulary": [
+        {
+          "word": "な",
+          "reading": "na",
+          "meaning": "to be (classical copula)",
+          "chinese_cognate_note": "Similar function to '也' or '是'"
+        },
+        {
+          "word": "に",
+          "reading": "ni",
+          "meaning": "at/in (location marker)"
+        },
+        {
+          "word": "は",
+          "reading": "wa",
+          "meaning": "topic marker",
+          "chinese_cognate_note": "Marks the scope, like '至于'"
+        },
+        {
+          "word": "かた",
+          "reading": "kata",
+          "meaning": "lagoon/beach"
+        },
+        {
+          "word": "しほひ",
+          "reading": "shiohi",
+          "meaning": "ebb tide/low tide",
+          "chinese_cognate_note": "潮干 (tide dries up)"
+        },
+        {
+          "word": "の",
+          "reading": "no",
+          "meaning": "possessive particle",
+          "chinese_cognate_note": "Equivalent to '之'"
+        },
+        {
+          "word": "なこり",
+          "reading": "nakori",
+          "meaning": "remains/aftermath",
+          "chinese_cognate_note": "残 (remnant)"
+        },
+        {
+          "word": "あく",
+          "reading": "aku",
+          "meaning": "to be satisfied/to open"
+        },
+        {
+          "word": "まて",
+          "reading": "mate",
+          "meaning": "until"
+        },
+        {
+          "word": "に",
+          "reading": "ni",
+          "meaning": "particle indicating state/time"
+        },
+        {
+          "word": "ひと",
+          "reading": "hito",
+          "meaning": "person/others",
+          "chinese_cognate_note": "人"
+        },
+        {
+          "word": "の",
+          "reading": "no",
+          "meaning": "subject marker (in relative clause)"
+        },
+        {
+          "word": "みる",
+          "reading": "miru",
+          "meaning": "to see/look at",
+          "chinese_cognate_note": "见/看"
+        },
+        {
+          "word": "こ",
+          "reading": "ko",
+          "meaning": "child/girl",
+          "chinese_cognate_note": "子"
+        },
+        {
+          "word": "を",
+          "reading": "wo",
+          "meaning": "direct object marker"
+        },
+        {
+          "word": "われ",
+          "reading": "ware",
+          "meaning": "I/me",
+          "chinese_cognate_note": "我"
+        },
+        {
+          "word": "し",
+          "reading": "shi",
+          "meaning": "emphatic particle (the target of this lesson)"
+        },
+        {
+          "word": "ともし",
+          "reading": "tomoshi",
+          "meaning": "envious/jealous"
+        },
+        {
+          "word": "も",
+          "reading": "mo",
+          "meaning": "emphasis particle"
+        }
+      ],
+      "focus_highlight": [
+        25,
+        26
+      ]
+    },
+    {
+      "type": "grammar_spotlight",
+      "content": "In the poem above, look at the phrase **われし** (ware shi). \n\n1. **われ (Ware)** = 'I'.\n2. **し (Shi)** = Emphasis.\n\nThe poet isn't just saying 'I am envious.' By adding **し**, they are saying 'It is **I** (specifically) who feels this way,' contrasting their deep emotion with the 'others' (hito) who are just looking. The 'shi' acts as a logical pointer, singling out the speaker from the crowd."
+    },
+    {
+      "type": "poem_presentation",
+      "poem_id": "lapis_cbc3d61a0ec23a30",
+      "display": {
+        "text_with_furigana": "<ruby>しなの<rt>しなの</rt></ruby><ruby>なる<rt>なる</rt></ruby><ruby>ちくま<rt>ちくま</rt></ruby>の<ruby>かは<rt>かは</rt></ruby>の<ruby>さされ<rt>さされ</rt></ruby><span style='color:blue; font-weight:bold;'>しも</span><ruby>きみ<rt>きみ</rt></ruby><span style='color:red; font-weight:bold;'>し</span><ruby>ふみ<rt>ふみ</rt></ruby>ては<ruby>たま<rt>たま</rt></ruby>と<ruby>ひろ<rt>ひろ</rt></ruby>はむ",
+        "romaji": "shinano naru chikuma no kawa no sasare shimo kimi shi fumite wa tama to hirohamu",
+        "translation": "In the Chikuma River of Shinano, even the pebbles being struck by the water... if it is YOU who steps on them, I shall pick them up as if they were jewels."
+      },
+      "vocabulary": [
+        {
+          "word": "しなの",
+          "reading": "shinano",
+          "meaning": "Shinano (ancient province name)"
+        },
+        {
+          "word": "なる",
+          "reading": "naru",
+          "meaning": "to be (attributive copula)",
+          "chinese_cognate_note": "Equivalent to '在...的'"
+        },
+        {
+          "word": "ちくま",
+          "reading": "chikuma",
+          "meaning": "Chikuma (river name)"
+        },
+        {
+          "word": "の",
+          "reading": "no",
+          "meaning": "possessive particle",
+          "chinese_cognate_note": "之"
+        },
+        {
+          "word": "かは",
+          "reading": "kawa",
+          "meaning": "river",
+          "chinese_cognate_note": "川/河"
+        },
+        {
+          "word": "の",
+          "reading": "no",
+          "meaning": "possessive particle"
+        },
+        {
+          "word": "さされ",
+          "reading": "sasare",
+          "meaning": "to be pierced/struck (passive of sasu)",
+          "chinese_cognate_note": "刺 (pierce)"
+        },
+        {
+          "word": "しも",
+          "reading": "shimo",
+          "meaning": "strong emphasis (shi + mo)"
+        },
+        {
+          "word": "きみ",
+          "reading": "kimi",
+          "meaning": "you (polite)",
+          "chinese_cognate_note": "君"
+        },
+        {
+          "word": "し",
+          "reading": "shi",
+          "meaning": "emphatic particle"
+        },
+        {
+          "word": "ふみ",
+          "reading": "fumi",
+          "meaning": "to step on",
+          "chinese_cognate_note": "踏"
+        },
+        {
+          "word": "て",
+          "reading": "te",
+          "meaning": "conjunctive particle (linking actions)"
+        },
+        {
+          "word": "は",
+          "reading": "wa",
+          "meaning": "contrast/topic marker"
+        },
+        {
+          "word": "たま",
+          "reading": "tama",
+          "meaning": "jewel/gem",
+          "chinese_cognate_note": "玉"
+        },
+        {
+          "word": "と",
+          "reading": "to",
+          "meaning": "as/like (quotative/comparative)"
+        },
+        {
+          "word": "ひろは",
+          "reading": "hiroha",
+          "meaning": "to pick up",
+          "chinese_cognate_note": "拾"
+        },
+        {
+          "word": "む",
+          "reading": "mu",
+          "meaning": "will/volition (auxiliary)"
+        }
+      ],
+      "focus_highlight": [
+        18,
+        19
+      ]
+    },
+    {
+      "type": "contrast_example",
+      "content": "Notice the two types of emphasis in the second poem:\n1. **さされしも (sasare-shimo)**: The 'shimo' emphasizes the action of the water striking the stones. It adds a layer of 'even the stones that are [struck]'.\n2. **きみし (kimi-shi)**: This is the critical focus. The poet doesn't care about anyone else stepping on the stones. 'If **YOU** (indeed) step on them...' \n\nWithout 'shi', the sentence is grammatically complete, but the poetic 'heart'—the focus on the specific person—would be weakened."
+    },
+    {
+      "type": "comprehension_check",
+      "question": "In the phrase 'Kimi shi fumite wa' (きみしふみては), if we removed the 'shi' (し), would the basic meaning of 'You step on [them]' change?",
+      "answer": "No. The basic logical relationship (You = Subject, Step = Action) remains the same. Only the emphasis/intensity on 'You' is lost.",
+      "hint": "Think of 'shi' as a highlighter. If you remove the yellow ink, can you still read the words?"
+    },
+    {
+      "type": "summary",
+      "content": "The particle 'し' (shi) is a non-functional emphasis marker. It does not change the case of a noun (like 'wo' or 'ni') nor the tense of a verb. It simply acts as a spotlight for the reader's attention. When combined with 'mo' to form 'shimo', the emphasis becomes even more pronounced."
+    }
+  ],
+  "reference_card": {
+    "point": "Particle Shi (し)",
+    "one_liner": "An emphatic particle used to 'spotlight' the preceding word without changing the sentence structure.",
+    "example": "われし (Ware shi) = 'I, indeed' / 'It is I who...'",
+    "see_also": [
+      "particle_mo",
+      "particle_zo",
+      "particle_koso"
+    ]
+  },
+  "forward_references": [
+    {
+      "point": "さされ (sasare)",
+      "note": "This is the passive form of 'sasu'. We will cover the passive auxiliary 'reru/rareru' in Unit 9."
+    },
+    {
+      "point": "ひろはむ (hirohamu)",
+      "note": "The 'mu' at the end indicates the speaker's intention. We will refine our understanding of volitional endings in the next unit."
+    }
+  ]
+}

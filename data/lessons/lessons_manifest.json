@@ -1,0 +1,256 @@
+{
+  "generated_at": "2026-01-16T17:52:48.223354",
+  "total_lessons": 50,
+  "lessons": [
+    {
+      "lesson_id": "lesson_auxiliary_ru",
+      "lesson_title": "The 'State' Suffix: Mastering the Versatile る (ru)",
+      "grammar_point": "auxiliary_ru"
+    },
+    {
+      "lesson_id": "lesson_auxiliary_tari",
+      "lesson_title": "The Resultative State: Auxiliary たり (tari)",
+      "grammar_point": "auxiliary_tari"
+    },
+    {
+      "lesson_id": "lesson_particle_ba",
+      "lesson_title": "The Logic Gate: Mastering the Conditional Particle ば (ba)",
+      "grammar_point": "particle_ba"
+    },
+    {
+      "lesson_id": "lesson_particle_zo",
+      "lesson_title": "The Emphatic Spotlight: Particle ぞ (zo) and the Logic of Binding",
+      "grammar_point": "particle_zo"
+    },
+    {
+      "lesson_id": "lesson_particle_ya",
+      "lesson_title": "The Rhetorical Inquiry: Particle や (ya) and the Logic of Doubt",
+      "grammar_point": "particle_ya"
+    },
+    {
+      "lesson_id": "lesson_auxiliary_da",
+      "lesson_title": "The Identifying Link: The Auxiliary/Particle な (na)",
+      "grammar_point": "auxiliary_da"
+    },
+    {
+      "lesson_id": "lesson_particle_nomi",
+      "lesson_title": "The Logic of Exclusion: Restrictive Particle のみ (nomi)",
+      "grammar_point": "particle_nomi"
+    },
+    {
+      "lesson_id": "lesson_kireji_kana",
+      "lesson_title": "The Poetic Sigh: Mastering the Exclamatory 'Kana' (かな)",
+      "grammar_point": "kireji_kana"
+    },
+    {
+      "lesson_id": "lesson_auxiliary_masi",
+      "lesson_title": "The 'What If' Logic: Counterfactuals with まし (masi)",
+      "grammar_point": "auxiliary_masi"
+    },
+    {
+      "lesson_id": "lesson_particle_ha",
+      "lesson_title": "The Logic of Isolation: Particle は (ha)",
+      "grammar_point": "particle_ha"
+    },
+    {
+      "lesson_id": "lesson_particle_wa",
+      "lesson_title": "The Topic Marker: Defining the Scope with 'Wa' (は)",
+      "grammar_point": "particle_wa"
+    },
+    {
+      "lesson_id": "lesson_particle_e",
+      "lesson_title": "The Vector of Direction: Particle へ (e)",
+      "grammar_point": "particle_e"
+    },
+    {
+      "lesson_id": "lesson_particle_na",
+      "lesson_title": "The Emotional Anchor: Particle な (na)",
+      "grammar_point": "particle_na"
+    },
+    {
+      "lesson_id": "lesson_particle_so",
+      "lesson_title": "The Subtle Spotlight: Particle そ (so) and the Logic of Emphasis",
+      "grammar_point": "particle_so"
+    },
+    {
+      "lesson_id": "lesson_auxiliary_ramu",
+      "lesson_title": "The 'Invisible Present': Speculating with らむ (ramu)",
+      "grammar_point": "auxiliary_ramu"
+    },
+    {
+      "lesson_id": "lesson_particle_tsutsu",
+      "lesson_title": "The 'Loop' Particle: Continuous and Simultaneous Action with つつ (tsutsu)",
+      "grammar_point": "particle_tsutsu"
+    },
+    {
+      "lesson_id": "lesson_particle_he",
+      "lesson_title": "The Vector of Movement: Particle へ (he/e)",
+      "grammar_point": "particle_he"
+    },
+    {
+      "lesson_id": "lesson_particle_o",
+      "lesson_title": "Unit 1.6: The Object Marker を (o) — Identifying the Target",
+      "grammar_point": "particle_o"
+    },
+    {
+      "lesson_id": "lesson_particle_no",
+      "lesson_title": "The Logical Bridge: Particle の (no)",
+      "grammar_point": "particle_no"
+    },
+    {
+      "lesson_id": "lesson_particle_to",
+      "lesson_title": "The Logical Wrapper: Particle と (to)",
+      "grammar_point": "particle_to"
+    },
+    {
+      "lesson_id": "lesson_conjugation_izenkei",
+      "lesson_title": "The 'Already So' Base: Mastering the Izenkei (已然形)",
+      "grammar_point": "conjugation_izenkei"
+    },
+    {
+      "lesson_id": "lesson_auxiliary_shi",
+      "lesson_title": "The Past as a Descriptor: The Attributive Auxiliary し (shi)",
+      "grammar_point": "auxiliary_shi"
+    },
+    {
+      "lesson_id": "lesson_conjugation_te",
+      "lesson_title": "The Logical Semicolon: Connecting Actions with て (te)",
+      "grammar_point": "conjugation_te"
+    },
+    {
+      "lesson_id": "lesson_kireji_ya",
+      "lesson_title": "The Poetic Pause: Mastering the Exclamatory 'Ya' (や)",
+      "grammar_point": "kireji_ya"
+    },
+    {
+      "lesson_id": "lesson_particle_mo",
+      "lesson_title": "The Logic of Inclusion: Particle も (mo)",
+      "grammar_point": "particle_mo"
+    },
+    {
+      "lesson_id": "lesson_auxiliary_ta",
+      "lesson_title": "The Marker of Completion: Auxiliary た (ta)",
+      "grammar_point": "auxiliary_ta"
+    },
+    {
+      "lesson_id": "lesson_particle_yo",
+      "lesson_title": "The Emotional Call: Particle よ (yo)",
+      "grammar_point": "particle_yo"
+    },
+    {
+      "lesson_id": "lesson_auxiliary_zu",
+      "lesson_title": "The Logic of 'Not': Negation with the Auxiliary ず (zu)",
+      "grammar_point": "auxiliary_zu"
+    },
+    {
+      "lesson_id": "lesson_particle_yori",
+      "lesson_title": "The Vector Particle: より (yori) — Origin and Comparison",
+      "grammar_point": "particle_yori"
+    },
+    {
+      "lesson_id": "lesson_particle_ni",
+      "lesson_title": "The Targeting Tag: Particle に (ni)",
+      "grammar_point": "particle_ni"
+    },
+    {
+      "lesson_id": "lesson_auxiliary_ki",
+      "lesson_title": "The Eyewitness Past: Personal Memory with き (ki)",
+      "grammar_point": "auxiliary_ki"
+    },
+    {
+      "lesson_id": "lesson_auxiliary_nu",
+      "lesson_title": "The Logic of the 'Nu' Switch: Completion vs. Negation",
+      "grammar_point": "auxiliary_nu"
+    },
+    {
+      "lesson_id": "lesson_particle_te",
+      "lesson_title": "The Logical Bridge: Particle て (te) — Linking Actions",
+      "grammar_point": "particle_te"
+    },
+    {
+      "lesson_id": "lesson_particle_ka",
+      "lesson_title": "The Logic of Inquiry: The Interrogative Particle か (ka)",
+      "grammar_point": "particle_ka"
+    },
+    {
+      "lesson_id": "lesson_auxiliary_masu",
+      "lesson_title": "The Politeness Bit: The Auxiliary ます (masu)",
+      "grammar_point": "auxiliary_masu"
+    },
+    {
+      "lesson_id": "lesson_auxiliary_keri",
+      "lesson_title": "The Poetic Discovery: The Auxiliary けり (keri)",
+      "grammar_point": "auxiliary_keri"
+    },
+    {
+      "lesson_id": "lesson_particle_shi",
+      "lesson_title": "The Spotlight Particle: Pure Emphasis with 'Shi' (し)",
+      "grammar_point": "particle_shi"
+    },
+    {
+      "lesson_id": "lesson_particle_kara",
+      "lesson_title": "The Source and the Cause: Particle から (kara)",
+      "grammar_point": "particle_kara"
+    },
+    {
+      "lesson_id": "lesson_auxiliary_tsu",
+      "lesson_title": "The Intentional Finish: Completing Actions with つ (tsu)",
+      "grammar_point": "auxiliary_tsu"
+    },
+    {
+      "lesson_id": "lesson_particle_wo",
+      "lesson_title": "The Direct Object Marker: Identifying the Target of Action",
+      "grammar_point": "particle_wo"
+    },
+    {
+      "lesson_id": "lesson_auxiliary_su",
+      "lesson_title": "The Versatile Operator: Mastering the Auxiliary す (su)",
+      "grammar_point": "auxiliary_su"
+    },
+    {
+      "lesson_id": "lesson_particle_tomo",
+      "lesson_title": "The Logic of Concession: Particle とも (tomo) — The 'Even If' Gate",
+      "grammar_point": "particle_tomo"
+    },
+    {
+      "lesson_id": "lesson_auxiliary_seru",
+      "lesson_title": "The Causative Command: Mastering 'seru' (せる)",
+      "grammar_point": "auxiliary_seru"
+    },
+    {
+      "lesson_id": "lesson_auxiliary_nari",
+      "lesson_title": "The Classical 'Is': The Copula なり (nari)",
+      "grammar_point": "auxiliary_nari"
+    },
+    {
+      "lesson_id": "lesson_auxiliary_na",
+      "lesson_title": "The Logic of Prohibition: The Auxiliary な (na)",
+      "grammar_point": "auxiliary_na"
+    },
+    {
+      "lesson_id": "lesson_conjugation_rentaikei",
+      "lesson_title": "The Noun-Linker: Mastering the Rentaikei (Attributive Form)",
+      "grammar_point": "conjugation_rentaikei"
+    },
+    {
+      "lesson_id": "lesson_particle_koso",
+      "lesson_title": "The Ultimate Emphasis: Particle こそ (koso) and the Izenkei 'Lock'",
+      "grammar_point": "particle_koso"
+    },
+    {
+      "lesson_id": "lesson_conjugation_mizenkei",
+      "lesson_title": "The 'Unrealized' Base: Introduction to Mizenkei (未然形)",
+      "grammar_point": "conjugation_mizenkei"
+    },
+    {
+      "lesson_id": "lesson_auxiliary_ri",
+      "lesson_title": "The Persistence Flag: The Auxiliary り (ri)",
+      "grammar_point": "auxiliary_ri"
+    },
+    {
+      "lesson_id": "lesson_auxiliary_mu",
+      "lesson_title": "The Intentional 'Mu': Expressing Will and Future",
+      "grammar_point": "auxiliary_mu"
+    }
+  ]
+}

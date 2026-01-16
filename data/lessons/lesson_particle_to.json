@@ -1,0 +1,622 @@
+{
+  "lesson_id": "lesson_particle_to",
+  "lesson_title": "The Logical Wrapper: Particle と (to)",
+  "lesson_summary": "In this final lesson of Unit 1, we introduce the particle と (to), which acts as a 'logical wrapper' or 'quotative marker,' defining the content of thoughts, names, or comparisons.",
+  "grammar_point": "particle_to",
+  "grammar_explanation": {
+    "concept": "The particle と (to) functions like quotation marks in English or the word '说'/'认为' in Chinese logic. It 'wraps' a phrase or a noun to indicate that it is the content of a verb (like 'thinking', 'saying', or 'becoming'). In programming terms, it converts a sequence of characters into a string literal to be passed as an argument to a function.",
+    "formation": "[Content/Noun] + と + [Verb of cognition/action]",
+    "variations": [
+      "Quotative: Marks what someone thinks or says.",
+      "Comparative/Resultative: Marks what something is 'as' or what it 'becomes'."
+    ],
+    "common_confusions": [
+      "vs. に (ni): に marks a destination or target; と marks the identity or content. If you change INTO something, use に; if you act AS something, use と."
+    ]
+  },
+  "teaching_sequence": [
+    {
+      "type": "introduction",
+      "content": "You have already mastered the 'tags' for subjects (は), objects (を), and locations (に). However, language often requires us to describe abstract thoughts or comparisons. How do we say 'I think *that*...' or 'It looks *like*...'? In Classical Japanese, we use the particle と (to) to wrap these ideas. Think of it as a logical container that tells the reader: 'Everything inside this container is the specific content of the action that follows.'"
+    },
+    {
+      "type": "poem_presentation",
+      "poem_id": "lapis_54f700598246bf9c",
+      "display": {
+        "text_with_furigana": "<ruby>秋風<rt>あきかぜ</rt></ruby>に<ruby>山<rt>やま</rt></ruby>のこのはのうつろへは<ruby>人<rt>ひと</rt></ruby>の<ruby>心<rt>こころ</rt></ruby>もいかかとそ<ruby>思<rt>おも</rt></ruby>ふ",
+        "romaji": "akikaze ni, yama no konoha no, utsuroe wa, hito no kokoro mo, ika ka to so omou",
+        "translation": "When the autumn wind blows and the mountain leaves change color, I wonder: what will become of the human heart?"
+      },
+      "vocabulary": [
+        {
+          "word": "秋風",
+          "reading": "あきかぜ",
+          "meaning": "autumn wind",
+          "span": [
+            0,
+            2
+          ],
+          "chinese_cognate_note": "Identical to Chinese 秋风."
+        },
+        {
+          "word": "に",
+          "reading": "に",
+          "meaning": "at/by (particle marking cause/time)",
+          "span": [
+            2,
+            3
+          ],
+          "chinese_cognate_note": null
+        },
+        {
+          "word": "山",
+          "reading": "やま",
+          "meaning": "mountain",
+          "span": [
+            3,
+            4
+          ],
+          "chinese_cognate_note": "Identical to Chinese 山."
+        },
+        {
+          "word": "の",
+          "reading": "の",
+          "meaning": "of (possessive particle)",
+          "span": [
+            4,
+            5
+          ],
+          "chinese_cognate_note": null
+        },
+        {
+          "word": "このは",
+          "reading": "このは",
+          "meaning": "leaves of trees",
+          "span": [
+            5,
+            8
+          ],
+          "chinese_cognate_note": "木之叶 (leaves of wood/trees)."
+        },
+        {
+          "word": "の",
+          "reading": "の",
+          "meaning": "of (possessive particle)",
+          "span": [
+            8,
+            9
+          ],
+          "chinese_cognate_note": null
+        },
+        {
+          "word": "うつろ",
+          "reading": "うつろ",
+          "meaning": "to change color / fade / be transient",
+          "span": [
+            9,
+            12
+          ],
+          "chinese_cognate_note": null
+        },
+        {
+          "word": "へ",
+          "reading": "へ",
+          "meaning": "direction/towards (particle)",
+          "span": [
+            12,
+            13
+          ],
+          "chinese_cognate_note": null
+        },
+        {
+          "word": "は",
+          "reading": "は",
+          "meaning": "topic/contrast marker",
+          "span": [
+            13,
+            14
+          ],
+          "chinese_cognate_note": null
+        },
+        {
+          "word": "人",
+          "reading": "ひと",
+          "meaning": "person/human",
+          "span": [
+            14,
+            15
+          ],
+          "chinese_cognate_note": "Identical to Chinese 人."
+        },
+        {
+          "word": "の",
+          "reading": "の",
+          "meaning": "of (possessive particle)",
+          "span": [
+            15,
+            16
+          ],
+          "chinese_cognate_note": null
+        },
+        {
+          "word": "心",
+          "reading": "こころ",
+          "meaning": "heart/mind",
+          "span": [
+            16,
+            17
+          ],
+          "chinese_cognate_note": "Identical to Chinese 心."
+        },
+        {
+          "word": "も",
+          "reading": "も",
+          "meaning": "also/too",
+          "span": [
+            17,
+            18
+          ],
+          "chinese_cognate_note": null
+        },
+        {
+          "word": "いか",
+          "reading": "いか",
+          "meaning": "how/in what way",
+          "span": [
+            18,
+            20
+          ],
+          "chinese_cognate_note": null
+        },
+        {
+          "word": "か",
+          "reading": "か",
+          "meaning": "question marker",
+          "span": [
+            20,
+            21
+          ],
+          "chinese_cognate_note": null
+        },
+        {
+          "word": "と",
+          "reading": "と",
+          "meaning": "quotative particle (wrapping the thought)",
+          "span": [
+            21,
+            22
+          ],
+          "chinese_cognate_note": null
+        },
+        {
+          "word": "そ",
+          "reading": "そ",
+          "meaning": "emphasis particle",
+          "span": [
+            22,
+            23
+          ],
+          "chinese_cognate_note": null
+        },
+        {
+          "word": "思ふ",
+          "reading": "おもう",
+          "meaning": "to think",
+          "span": [
+            23,
+            25
+          ],
+          "chinese_cognate_note": "Cognate with Chinese 思."
+        }
+      ],
+      "focus_highlight": [
+        21,
+        22
+      ]
+    },
+    {
+      "type": "grammar_spotlight",
+      "content": "In the poem above, look at the phrase **いかか と 思ふ** (ika ka to omou). \n\n1. **いかか (ika ka)**: 'How?' (a question).\n2. **と (to)**: The wrapper.\n3. **思ふ (omou)**: 'To think'.\n\nThe particle **と** tells us exactly *what* is being thought. Without it, the sentence would be a jumble of nouns. It functions exactly like the Chinese '...之想' or '认为...'. It captures the internal state 'How?' and presents it to the verb 'think'.",
+      "evidence": "See the poem above."
+    },
+    {
+      "type": "poem_presentation",
+      "poem_id": "lapis_b8e6240d655af0e3",
+      "display": {
+        "text_with_furigana": "<ruby>秋<rt>あき</rt></ruby>くれは<ruby>月<rt>つき</rt></ruby>のかつらの<ruby>みや<rt>みや</rt></ruby>はなるひかりを<ruby>花<rt>はな</rt></ruby>とちらすはかりを",
+        "romaji": "aki kure wa, tsuki no katsura no, miya wa naru, hikari o hana to, chirasu hakari o",
+        "translation": "As autumn ends, the light from the moon's laurel palace scatters just like falling flower petals."
+      },
+      "vocabulary": [
+        {
+          "word": "秋",
+          "reading": "あき",
+          "meaning": "autumn",
+          "span": [
+            0,
+            1
+          ],
+          "chinese_cognate_note": "Identical to Chinese 秋."
+        },
+        {
+          "word": "くれ",
+          "reading": "くれ",
+          "meaning": "to end/to darken",
+          "span": [
+            1,
+            3
+          ],
+          "chinese_cognate_note": "Cognate with Chinese 暮 (evening/end)."
+        },
+        {
+          "word": "は",
+          "reading": "は",
+          "meaning": "topic marker",
+          "span": [
+            3,
+            4
+          ],
+          "chinese_cognate_note": null
+        },
+        {
+          "word": "月",
+          "reading": "つき",
+          "meaning": "moon",
+          "span": [
+            4,
+            5
+          ],
+          "chinese_cognate_note": "Identical to Chinese 月."
+        },
+        {
+          "word": "の",
+          "reading": "の",
+          "meaning": "of (possessive)",
+          "span": [
+            5,
+            6
+          ],
+          "chinese_cognate_note": null
+        },
+        {
+          "word": "かつら",
+          "reading": "かつら",
+          "meaning": "Japanese Judas-tree / Laurel",
+          "span": [
+            6,
+            9
+          ],
+          "chinese_cognate_note": "Refers to the mythical 桂 tree on the moon."
+        },
+        {
+          "word": "の",
+          "reading": "の",
+          "meaning": "of (possessive)",
+          "span": [
+            9,
+            10
+          ],
+          "chinese_cognate_note": null
+        },
+        {
+          "word": "みや",
+          "reading": "みや",
+          "meaning": "palace",
+          "span": [
+            10,
+            12
+          ],
+          "chinese_cognate_note": "Cognate with Chinese 宫."
+        },
+        {
+          "word": "は",
+          "reading": "は",
+          "meaning": "topic marker",
+          "span": [
+            12,
+            13
+          ],
+          "chinese_cognate_note": null
+        },
+        {
+          "word": "なる",
+          "reading": "なる",
+          "meaning": "to be / to become",
+          "span": [
+            13,
+            15
+          ],
+          "chinese_cognate_note": null
+        },
+        {
+          "word": "ひかり",
+          "reading": "ひかり",
+          "meaning": "light",
+          "span": [
+            15,
+            18
+          ],
+          "chinese_cognate_note": "Cognate with Chinese 光."
+        },
+        {
+          "word": "を",
+          "reading": "を",
+          "meaning": "object marker",
+          "span": [
+            18,
+            19
+          ],
+          "chinese_cognate_note": null
+        },
+        {
+          "word": "花",
+          "reading": "はな",
+          "meaning": "flower",
+          "span": [
+            19,
+            20
+          ],
+          "chinese_cognate_note": "Identical to Chinese 花."
+        },
+        {
+          "word": "と",
+          "reading": "と",
+          "meaning": "as / in the manner of (comparison)",
+          "span": [
+            20,
+            21
+          ],
+          "chinese_cognate_note": null
+        },
+        {
+          "word": "ちらす",
+          "reading": "ちらす",
+          "meaning": "to scatter",
+          "span": [
+            21,
+            24
+          ],
+          "chinese_cognate_note": "Cognate with Chinese 散."
+        },
+        {
+          "word": "はかり",
+          "reading": "はかり",
+          "meaning": "only / to the extent of",
+          "span": [
+            24,
+            27
+          ],
+          "chinese_cognate_note": null
+        },
+        {
+          "word": "を",
+          "reading": "を",
+          "meaning": "object marker / exclamation",
+          "span": [
+            27,
+            28
+          ],
+          "chinese_cognate_note": null
+        }
+      ],
+      "focus_highlight": [
+        20,
+        21
+      ]
+    },
+    {
+      "type": "contrast_example",
+      "content": "In the second poem, we see **花 と ちらす** (hana to chirasu). Here, **と** isn't marking a thought, but a *state*. The light is being scattered **as** flowers. \n\n- **花 を ちらす**: Scatters the flowers (Flowers are the object).\n- **花 と ちらす**: Scatters [something] *as if they were* flowers (Flowers are the mode/identity).\n\nThis is the 'Comparative' use of **と**. It defines the identity of the action's result."
+    },
+    {
+      "type": "poem_presentation",
+      "poem_id": "lapis_1c808be76eeca83a",
+      "display": {
+        "text_with_furigana": "かかみにもかけみたらしの<ruby>みつ<rt>みつ</rt></ruby>の<ruby>おも<rt>おも</rt></ruby>にうつるはかりの<ruby>こころ<rt>こころ</rt></ruby>とをしれ",
+        "romaji": "kakamini mo, kake mitarashi no, mitsu no omo, ni utsuru hakari, no kokoro to o shire",
+        "translation": "Know that your heart is like the reflection cast upon the surface of the purification pool."
+      },
+      "vocabulary": [
+        {
+          "word": "かかみ",
+          "reading": "かかみ",
+          "meaning": "mirror",
+          "span": [
+            0,
+            3
+          ],
+          "chinese_cognate_note": "Cognate with Chinese 镜."
+        },
+        {
+          "word": "に",
+          "reading": "に",
+          "meaning": "in/on (location)",
+          "span": [
+            3,
+            4
+          ],
+          "chinese_cognate_note": null
+        },
+        {
+          "word": "も",
+          "reading": "も",
+          "meaning": "also/even",
+          "span": [
+            4,
+            5
+          ],
+          "chinese_cognate_note": null
+        },
+        {
+          "word": "かけ",
+          "reading": "かけ",
+          "meaning": "shadow/reflection",
+          "span": [
+            5,
+            7
+          ],
+          "chinese_cognate_note": "Cognate with Chinese 影."
+        },
+        {
+          "word": "みたらし",
+          "reading": "みたらし",
+          "meaning": "purification pool (at a shrine)",
+          "span": [
+            7,
+            11
+          ],
+          "chinese_cognate_note": null
+        },
+        {
+          "word": "の",
+          "reading": "の",
+          "meaning": "of (possessive)",
+          "span": [
+            11,
+            12
+          ],
+          "chinese_cognate_note": null
+        },
+        {
+          "word": "みつ",
+          "reading": "みつ",
+          "meaning": "water",
+          "span": [
+            12,
+            14
+          ],
+          "chinese_cognate_note": "Cognate with Chinese 水."
+        },
+        {
+          "word": "の",
+          "reading": "の",
+          "meaning": "of (possessive)",
+          "span": [
+            14,
+            15
+          ],
+          "chinese_cognate_note": null
+        },
+        {
+          "word": "おも",
+          "reading": "おも",
+          "meaning": "surface/face",
+          "span": [
+            15,
+            17
+          ],
+          "chinese_cognate_note": "Cognate with Chinese 面."
+        },
+        {
+          "word": "に",
+          "reading": "に",
+          "meaning": "on (location)",
+          "span": [
+            17,
+            18
+          ],
+          "chinese_cognate_note": null
+        },
+        {
+          "word": "うつる",
+          "reading": "うつる",
+          "meaning": "to be reflected",
+          "span": [
+            18,
+            21
+          ],
+          "chinese_cognate_note": "Cognate with Chinese 映."
+        },
+        {
+          "word": "はかり",
+          "reading": "はかり",
+          "meaning": "measure/extent",
+          "span": [
+            21,
+            24
+          ],
+          "chinese_cognate_note": null
+        },
+        {
+          "word": "の",
+          "reading": "の",
+          "meaning": "of (possessive)",
+          "span": [
+            24,
+            25
+          ],
+          "chinese_cognate_note": null
+        },
+        {
+          "word": "こころ",
+          "reading": "こころ",
+          "meaning": "heart",
+          "span": [
+            25,
+            28
+          ],
+          "chinese_cognate_note": "Cognate with Chinese 心."
+        },
+        {
+          "word": "と",
+          "reading": "と",
+          "meaning": "quotative/definitional wrapper",
+          "span": [
+            28,
+            29
+          ],
+          "chinese_cognate_note": null
+        },
+        {
+          "word": "を",
+          "reading": "を",
+          "meaning": "object marker",
+          "span": [
+            29,
+            30
+          ],
+          "chinese_cognate_note": null
+        },
+        {
+          "word": "しれ",
+          "reading": "しれ",
+          "meaning": "know! (imperative)",
+          "span": [
+            30,
+            32
+          ],
+          "chinese_cognate_note": "Cognate with Chinese 知."
+        }
+      ],
+      "focus_highlight": [
+        28,
+        29
+      ]
+    },
+    {
+      "type": "comprehension_check",
+      "question": "In Poem 3, the phrase is 'こころ と を しれ' (kokoro to o shire). Based on the particles you've learned, what is the 'content' that the speaker wants you to 'know'?",
+      "answer": "The content is 'こころ' (heart). The particle 'と' wraps 'heart' as the definition/content of the knowledge, and 'を' marks that entire wrapped concept as the object of the verb 'know' (しれ).",
+      "hint": "Look at what comes immediately before 'と'. That is the 'wrapped' content."
+    }
+  ],
+  "reference_card": {
+    "point": "Particle と (to)",
+    "one_liner": "A logical 'wrapper' used to mark the content of thoughts, speech, or comparisons (like 'that' or 'as').",
+    "example": "花とちらす (hana to chirasu) = Scatters [light] *as* flowers.",
+    "see_also": [
+      "particle_wo",
+      "particle_ni"
+    ]
+  },
+  "forward_references": [
+    {
+      "point": "そ (so)",
+      "note": "In Poem 1, 'so' is an emphasis particle that often works with specific verb forms. We will explore this 'Kakari-musubi' system in Unit 7."
+    },
+    {
+      "point": "しれ (shire)",
+      "note": "This is a command form (imperative) of the verb 'to know'. We will learn verb conjugations starting in Unit 3."
+    }
+  ]
+}

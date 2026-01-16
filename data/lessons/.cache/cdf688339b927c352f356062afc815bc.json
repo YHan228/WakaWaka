@@ -1,0 +1,264 @@
+{
+  "lesson_title": "The Logic of Inquiry: The Interrogative Particle か (ka)",
+  "lesson_summary": "This lesson introduces the particle か (ka), which functions as a logical 'question tag' to indicate doubt, inquiry, or rhetorical questions, often triggering a specific grammatical harmony in the sentence.",
+  "grammar_explanation": {
+    "concept": "The particle か (ka) acts as an interrogative marker. In a logical flow, it functions like a '?' operator or a boolean flag that shifts the sentence from a statement to a query. It can appear at the end of a sentence or in the middle to create interrogative words (like 'what' or 'why').",
+    "formation": "Noun/Verb/Adjective + か",
+    "variations": [
+      "なに + か (nani ka - what?)",
+      "なと + か (nato ka - why/how?)"
+    ],
+    "common_confusions": [
+      "In modern Japanese, 'ka' is almost always at the end. In classical poetry, it frequently appears in the middle, which forces the final verb into the Rentaikei (Attributive form) — a rule called Kakari-Musubi."
+    ]
+  },
+  "teaching_sequence": [
+    {
+      "type": "introduction",
+      "content": "In previous units, we explored how particles define the roles of nouns and how auxiliaries color the timing of actions. Now, we enter the realm of **Interrogative Logic**. Just as a programmer uses a boolean flag to change the flow of a function, the particle **か (ka)** shifts a sentence from a statement of fact to a query. For a Chinese speaker, think of this as the equivalent of adding '吗' (ma) or using '何' (hé) to signal an inquiry."
+    },
+    {
+      "type": "poem_presentation",
+      "poem_id": "lapis_bf42fa36439264f2",
+      "display": {
+        "text_with_furigana": "<ruby>秋山<rt>あきやま</rt></ruby>のしたひかしたに<ruby>鳴<rt>な</rt></ruby>く<ruby>鳥<rt>とり</rt></ruby>の<ruby>声<rt>こゑ</rt></ruby>たにきかはなにか<ruby>嘆<rt>なけ</rt></ruby>かむ",
+        "romaji": "akiyama no shita hikashita ni naku tori no koe tani ki ka wa nani ka nakekamu",
+        "translation": "Hearing the voice of the bird singing in the valley of the autumn mountain, what is there to lament?"
+      },
+      "vocabulary": [
+        {
+          "word": "あきやま",
+          "reading": "あきやま",
+          "meaning": "autumn mountain",
+          "chinese_cognate_note": "Identical to 秋山 (qiū shān)"
+        },
+        {
+          "word": "の",
+          "reading": "の",
+          "meaning": "possessive particle (of)"
+        },
+        {
+          "word": "した",
+          "reading": "した",
+          "meaning": "did (past action)"
+        },
+        {
+          "word": "ひかした",
+          "reading": "ひかした",
+          "meaning": "to wet / moisten"
+        },
+        {
+          "word": "に",
+          "reading": "に",
+          "meaning": "location marker (in/at)"
+        },
+        {
+          "word": "なく",
+          "reading": "なく",
+          "meaning": "to sing (of birds)",
+          "chinese_cognate_note": "Similar to 鸣 (míng)"
+        },
+        {
+          "word": "とり",
+          "reading": "とり",
+          "meaning": "bird",
+          "chinese_cognate_note": "Identical to 鸟 (niǎo)"
+        },
+        {
+          "word": "の",
+          "reading": "の",
+          "meaning": "possessive particle (of)"
+        },
+        {
+          "word": "こゑ",
+          "reading": "こゑ",
+          "meaning": "voice",
+          "chinese_cognate_note": "Identical to 声 (shēng)"
+        },
+        {
+          "word": "たに",
+          "reading": "たに",
+          "meaning": "valley",
+          "chinese_cognate_note": "Identical to 谷 (gǔ)"
+        },
+        {
+          "word": "き",
+          "reading": "き",
+          "meaning": "hear",
+          "chinese_cognate_note": "Related to 听/闻"
+        },
+        {
+          "word": "か",
+          "reading": "か",
+          "meaning": "interrogative particle (question marker)"
+        },
+        {
+          "word": "は",
+          "reading": "は",
+          "meaning": "topic marker"
+        },
+        {
+          "word": "なに",
+          "reading": "なに",
+          "meaning": "what",
+          "chinese_cognate_note": "Identical to 何 (hé)"
+        },
+        {
+          "word": "か",
+          "reading": "か",
+          "meaning": "interrogative particle (question marker)"
+        },
+        {
+          "word": "なけかむ",
+          "reading": "なけかむ",
+          "meaning": "will lament/cry"
+        }
+      ],
+      "focus_highlight": [
+        25,
+        27
+      ]
+    },
+    {
+      "type": "grammar_spotlight",
+      "content": "Look at the phrase **なにか (nani ka)**. In Chinese, '何' (hé) itself implies a question. In Japanese, the noun **なに (what)** is combined with the particle **か (ka)** to explicitly flag the sentence as an inquiry. \n\nNotice a logical 'side effect': when **か** appears in the middle of the sentence, the final verb **なけかむ** is forced into its **Rentaikei (Attributive form)**. You learned this form in Unit 3 as the 'Noun-Linker.' Here, it doesn't link to a noun; it links back to the particle **か** to close the logical loop of the question."
+    },
+    {
+      "type": "poem_presentation",
+      "poem_id": "lapis_7b8b5088aef3ea36",
+      "display": {
+        "text_with_furigana": "<ruby>闇<rt>やみ</rt></ruby>の<ruby>夜<rt>よ</rt></ruby>はくるしきものをいつしかとわかまつ<ruby>月<rt>つき</rt></ruby>もはやもてらぬか",
+        "romaji": "yami no yo wa kurushiki mono o itsushika to wakamatsu tsuki mo haya mo tera nu ka",
+        "translation": "The dark night is a painful thing; I wonder when the moon will finally shine through the young pines."
+      },
+      "vocabulary": [
+        {
+          "word": "やみ",
+          "reading": "やみ",
+          "meaning": "darkness",
+          "chinese_cognate_note": "Related to 闇/暗 (àn)"
+        },
+        {
+          "word": "の",
+          "reading": "の",
+          "meaning": "possessive particle (of)"
+        },
+        {
+          "word": "よ",
+          "reading": "よ",
+          "meaning": "night",
+          "chinese_cognate_note": "Identical to 夜 (yè)"
+        },
+        {
+          "word": "は",
+          "reading": "は",
+          "meaning": "topic marker"
+        },
+        {
+          "word": "くるしき",
+          "reading": "くるしき",
+          "meaning": "painful/distressing",
+          "chinese_cognate_note": "Identical to 苦 (kǔ)"
+        },
+        {
+          "word": "もの",
+          "reading": "もの",
+          "meaning": "thing",
+          "chinese_cognate_note": "Identical to 物 (wù)"
+        },
+        {
+          "word": "を",
+          "reading": "を",
+          "meaning": "object marker / conjunction"
+        },
+        {
+          "word": "いつしか",
+          "reading": "いつしか",
+          "meaning": "at what time / when"
+        },
+        {
+          "word": "と",
+          "reading": "と",
+          "meaning": "quotative particle"
+        },
+        {
+          "word": "わかまつ",
+          "reading": "わかまつ",
+          "meaning": "young pine tree",
+          "chinese_cognate_note": "若松 (ruò sōng)"
+        },
+        {
+          "word": "つき",
+          "reading": "つき",
+          "meaning": "moon",
+          "chinese_cognate_note": "Identical to 月 (yuè)"
+        },
+        {
+          "word": "も",
+          "reading": "も",
+          "meaning": "also/even"
+        },
+        {
+          "word": "はや",
+          "reading": "はや",
+          "meaning": "already/now",
+          "chinese_cognate_note": "Identical to 早 (zǎo)"
+        },
+        {
+          "word": "も",
+          "reading": "も",
+          "meaning": "emphasis particle"
+        },
+        {
+          "word": "てら",
+          "reading": "てら",
+          "meaning": "to shine",
+          "chinese_cognate_note": "Identical to 照 (zhào)"
+        },
+        {
+          "word": "ぬ",
+          "reading": "ぬ",
+          "meaning": "negative auxiliary (not)"
+        },
+        {
+          "word": "か",
+          "reading": "か",
+          "meaning": "interrogative particle (question marker)"
+        }
+      ],
+      "focus_highlight": [
+        30,
+        31
+      ]
+    },
+    {
+      "type": "contrast_example",
+      "content": "In the second poem, **か (ka)** appears at the very end: **てらぬか (tera-nu-ka)**. \n\n1. **てら** (Shine) \n2. **ぬ** (Not - Negative Auxiliary) \n3. **か** (?)\n\nLogical Translation: 'Does it not shine?' \n\nWhen **か** is at the end, it functions exactly like the Chinese sentence-final particle **吗 (ma)**. It turns the preceding statement into a direct question."
+    },
+    {
+      "type": "comprehension_check",
+      "question": "In the phrase 'なとか (nato ka)' from the third poem, what is the logical function of 'ka'?",
+      "answer": "It marks 'nato' (why/how) as an interrogative, turning the phrase into a question.",
+      "hint": "Think about how 'nani' (what) became a question in the first poem."
+    },
+    {
+      "type": "summary",
+      "content": "You have now mastered the **Interrogative Logic Gate**. Whether it is embedded in a word like 'nani-ka' (what) or placed at the end of a sentence like 'tera-nu-ka' (does it not shine?), the particle **か** is your primary tool for identifying questions in classical texts."
+    }
+  ],
+  "reference_card": {
+    "point": "Particle か (ka)",
+    "one_liner": "The universal interrogative marker used to indicate questions, doubt, or rhetorical inquiry.",
+    "example": "なに か (nani ka) = What? / てらぬ か (teranu ka) = Does it not shine?",
+    "see_also": [
+      "lesson_conjugation_rentaikei",
+      "particle_wa"
+    ]
+  },
+  "forward_references": [
+    {
+      "point": "Kakari-Musubi (Linked Forms)",
+      "note": "We will soon see how 'ka' and other particles 'pull' the end of the sentence into the Rentaikei form in Unit 7.4."
+    }
+  ]
+}

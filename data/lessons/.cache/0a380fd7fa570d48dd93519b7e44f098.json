@@ -1,0 +1,239 @@
+{
+  "lesson_title": "The 'What If' Logic: Counterfactuals with まし (masi)",
+  "lesson_summary": "This lesson introduces the auxiliary verb 'masi', which functions as a logical operator for counterfactual statements—expressing what would happen if reality were different than it actually is.",
+  "grammar_explanation": {
+    "concept": "The auxiliary 'masi' (まし) expresses a 'contrary-to-fact' hypothetical. It is the classical Japanese equivalent of the English 'would' in 'If I were you, I would...'. It creates a logical world that exists only in the mind, specifically contrasting with the current reality.",
+    "formation": "Attaches to the Mizenkei (未然形 - Unrealized Base). This is logically consistent: since the event hasn't happened (or is the opposite of reality), it must use the 'unrealized' form.",
+    "variations": [
+      "ませば...まし (maseba... masi): If it were..., then it would...",
+      "ましかば...まし (masikaba... masi): If it had been..., then it would have...",
+      "ませ...まし (mase... masi): (Same as above, archaic)"
+    ],
+    "common_confusions": [
+      "vs. む (mu): 'mu' expresses a simple future or intent (will/shall), while 'masi' specifically implies the condition is NOT true in reality."
+    ]
+  },
+  "teaching_sequence": [
+    {
+      "type": "introduction",
+      "content": "In previous lessons of Unit 4, we explored the 'Unrealized Base' (Mizenkei) to express negation (zu) and simple speculation (mu). Today, we conclude this unit by looking at the most sophisticated use of the Mizenkei: the counterfactual. In programming terms, 'masi' is like a simulation block: `if (condition == false) { result_would_be(); }`. For a Chinese speaker, think of this as the '要是...就好了' or '若...则...矣' structure, where the speaker knows the 'if' part is currently impossible."
+    },
+    {
+      "type": "poem_presentation",
+      "poem_id": "lapis_8d884da9e1755cf5",
+      "display": {
+        "text_with_furigana": "<ruby>うぐひす<rt>ukuhisu</rt></ruby>の<ruby>谷<rt>たに</rt></ruby>より<ruby>いつる<rt>izuru</rt></ruby><ruby>こゑ<rt>kowe</rt></ruby><ruby>なく<rt>naku</rt></ruby>は<ruby>春<rt>はる</rt></ruby><ruby>くる<rt>kuru</rt></ruby>ことを<ruby>たれ<rt>tare</rt></ruby>か<ruby>しら<rt>shira</rt></ruby><ruby>まし<rt>mashi</rt></ruby>",
+        "romaji": "ukuhisuno tani yori izuru kowe naku wa haru kuru koto o tare ka shiramashi",
+        "translation": "If the voice of the bush warbler emerging from the valley did not exist, who would know that spring has come?"
+      },
+      "vocabulary": [
+        {
+          "word": "うぐひす",
+          "reading": "うぐいす",
+          "meaning": "Japanese bush warbler (a bird whose song signals spring)"
+        },
+        {
+          "word": "の",
+          "reading": "の",
+          "meaning": "possessive particle (Genitive)",
+          "chinese_cognate_note": "Equivalent to 的 (de)"
+        },
+        {
+          "word": "谷",
+          "reading": "たに",
+          "meaning": "valley",
+          "chinese_cognate_note": "Same character/meaning as Chinese 谷"
+        },
+        {
+          "word": "より",
+          "reading": "より",
+          "meaning": "from (starting point particle)"
+        },
+        {
+          "word": "いつる",
+          "reading": "いづる",
+          "meaning": "to emerge / come out"
+        },
+        {
+          "word": "こゑ",
+          "reading": "こえ",
+          "meaning": "voice / song",
+          "chinese_cognate_note": "Classical form of 声"
+        },
+        {
+          "word": "なく",
+          "reading": "なく",
+          "meaning": "not exist / to be without"
+        },
+        {
+          "word": "は",
+          "reading": "は",
+          "meaning": "if / topic marker (here used for conditional 'if')"
+        },
+        {
+          "word": "春",
+          "reading": "はる",
+          "meaning": "spring",
+          "chinese_cognate_note": "Same character/meaning as Chinese 春"
+        },
+        {
+          "word": "くる",
+          "reading": "くる",
+          "meaning": "to come",
+          "chinese_cognate_note": "Same character/meaning as Chinese 来"
+        },
+        {
+          "word": "こと",
+          "reading": "こと",
+          "meaning": "thing / fact",
+          "chinese_cognate_note": "Equivalent to 事 (shì)"
+        },
+        {
+          "word": "を",
+          "reading": "を",
+          "meaning": "object marker"
+        },
+        {
+          "word": "たれ",
+          "reading": "たれ",
+          "meaning": "who",
+          "chinese_cognate_note": "Equivalent to 谁 (shéi)"
+        },
+        {
+          "word": "か",
+          "reading": "か",
+          "meaning": "interrogative particle (question marker)"
+        },
+        {
+          "word": "しら",
+          "reading": "しら",
+          "meaning": "to know (Mizenkei base)",
+          "chinese_cognate_note": "Root of 知 (zhī)"
+        },
+        {
+          "word": "まし",
+          "reading": "まし",
+          "meaning": "would (counterfactual auxiliary)"
+        }
+      ],
+      "focus_highlight": [
+        27,
+        29
+      ]
+    },
+    {
+      "type": "grammar_spotlight",
+      "content": "Look at the end of the poem: **しらまし (shira-masi)**. \n1. **しら (shira)** is the Mizenkei (Unrealized Base) of 'shiru' (to know). \n2. **まし (masi)** adds the 'would' logic. \n\nThe poem says: 'If the bird's voice didn't exist (but it does!), who would know spring is here?' Because the bird *is* singing, the speaker *does* know spring is here. The 'masi' creates the hypothetical world where the bird is silent to emphasize how important its song is."
+    },
+    {
+      "type": "poem_presentation",
+      "poem_id": "lapis_dd41a0e642a3f819",
+      "display": {
+        "text_with_furigana": "<ruby>いつはり<rt>itsuwari</rt></ruby>の<ruby>なき<rt>naki</rt></ruby><ruby>世<rt>よ</rt></ruby><ruby>なり<rt>nari</rt></ruby><ruby>せ<rt>se</rt></ruby>は<ruby>いかはかり<rt>ikahakari</rt></ruby><ruby>人<rt>ひと</rt></ruby>の<ruby>ことのは<rt>kotonoha</rt></ruby><ruby>うれしから<rt>ureshikara</rt></ruby><ruby>まし<rt>mashi</rt></ruby>",
+        "romaji": "itsuwari no naki yo nariseba ikahakari hito no koto no ha ureshikaramashi",
+        "translation": "If this were a world without lies, how happy I would be at the words of others."
+      },
+      "vocabulary": [
+        {
+          "word": "いつはり",
+          "reading": "いつわり",
+          "meaning": "falsehood / lie",
+          "chinese_cognate_note": "Related to 伪 (wěi)"
+        },
+        {
+          "word": "の",
+          "reading": "の",
+          "meaning": "possessive particle"
+        },
+        {
+          "word": "なき",
+          "reading": "なき",
+          "meaning": "non-existent (negative adjective)"
+        },
+        {
+          "word": "世",
+          "reading": "よ",
+          "meaning": "world / age",
+          "chinese_cognate_note": "Same character/meaning as Chinese 世"
+        },
+        {
+          "word": "なり",
+          "reading": "なり",
+          "meaning": "to be (copula)",
+          "chinese_cognate_note": "Learned in Unit 3"
+        },
+        {
+          "word": "せ",
+          "reading": "せ",
+          "meaning": "Mizenkei of 'su' (to do/be), used for conditional"
+        },
+        {
+          "word": "は",
+          "reading": "は",
+          "meaning": "if (conditional marker)"
+        },
+        {
+          "word": "いかはかり",
+          "reading": "いかばかり",
+          "meaning": "how much / to what extent"
+        },
+        {
+          "word": "人",
+          "reading": "ひと",
+          "meaning": "person / others",
+          "chinese_cognate_note": "Same character/meaning as Chinese 人"
+        },
+        {
+          "word": "の",
+          "reading": "の",
+          "meaning": "possessive particle"
+        },
+        {
+          "word": "ことのは",
+          "reading": "ことのは",
+          "meaning": "words / language (literally 'leaves of speech')",
+          "chinese_cognate_note": "言の葉"
+        },
+        {
+          "word": "うれしから",
+          "reading": "うれしから",
+          "meaning": "happy (adjective base)"
+        },
+        {
+          "word": "まし",
+          "reading": "まし",
+          "meaning": "would be (counterfactual)"
+        }
+      ],
+      "focus_highlight": [
+        28,
+        30
+      ]
+    },
+    {
+      "type": "contrast_example",
+      "content": "Compare these two logical structures:\n1. **うれしからむ (ureshikaramu)**: I *will* likely be happy. (Speculation about the future).\n2. **うれしからまし (ureshikaramashi)**: I *would* be happy (if things were different). (Counterfactual).\n\nIn Poem 2, the speaker uses **まし** because they know the world *is* full of lies. The happiness is purely hypothetical."
+    },
+    {
+      "type": "comprehension_check",
+      "question": "In Poem 3, the speaker says: '...yoki yo to iwamashi' (I would say it is a good world). Based on the use of 'masi', does the speaker actually believe the world is currently 'good' in this context?",
+      "answer": "No. The use of 'masi' implies that the condition (the wind being controllable) is not true, therefore the conclusion (it being a good world) is also not currently true in the speaker's reality.",
+      "hint": "Remember that 'masi' is a counterfactual—it describes what *would* be, not what *is*."
+    }
+  ],
+  "reference_card": {
+    "point": "Auxiliary まし (masi)",
+    "one_liner": "The counterfactual 'would': expresses what would happen if reality were different.",
+    "example": "なからましかば...まし (If it did not exist... it would be...)",
+    "see_also": [
+      "auxiliary_mu",
+      "conjugation_mizenkei"
+    ]
+  },
+  "forward_references": [
+    {
+      "point": "たれか...まし (tare ka... masi)",
+      "note": "In Poem 1, the 'ka' in the middle changes the ending to 'masi'. This is a preview of 'Kakari-Musubi' (Emphasis Concordance) which we will study in Unit 7."
+    }
+  ]
+}

@@ -1,0 +1,623 @@
+{
+  "lesson_id": "lesson_auxiliary_su",
+  "lesson_title": "The Versatile Operator: Mastering the Auxiliary す (su)",
+  "lesson_summary": "In this lesson, we introduce the auxiliary 'su' (す), a multi-functional 'logic driver' that attaches to the Unrealized Base (Mizenkei) to indicate causation, potential, or to transform a concept into an active process.",
+  "grammar_point": "auxiliary_su",
+  "grammar_explanation": {
+    "concept": "The auxiliary 'su' (す) acts like a functional wrapper in programming. It takes a verb and 'drives' it in a specific direction—either making the action happen (causative), showing respect (honorific), or enabling the action (potential). In many contexts, it simply functions as the classical ancestor of the modern verb 'suru' (to do).",
+    "formation": "Attaches to the Mizenkei (未然形 - Unrealized Base) of verbs.",
+    "variations": [
+      "せ (se) - Mizenkei / Ren'yokei form",
+      "す (su) - Shuushikei (Terminal) form",
+      "する (suru) - Rentaikei (Attributive) form"
+    ],
+    "common_confusions": [
+      "Do not confuse the auxiliary 'su' with the final 'su' in negative verbs like 'zu' (ず). Look for the base it attaches to: 'su' follows the Mizenkei."
+    ]
+  },
+  "teaching_sequence": [
+    {
+      "type": "introduction",
+      "content": "Having mastered the 'Unrealized Base' (Mizenkei) in Unit 4, you are now ready to see how it powers one of the most flexible tools in the Japanese language: the auxiliary す (su). Think of 'su' as a **logic driver**. Just as a driver can steer a car in different directions, 'su' can turn a verb into a command, a possibility, or a respectful gesture. Because you already understand Kanji, you will see that 'su' often acts as the 'grammatical engine' that puts a Kanji's meaning into motion."
+    },
+    {
+      "type": "poem_presentation",
+      "poem_id": "lapis_ac7bcf57833883dd",
+      "display": {
+        "text_with_furigana": "<ruby>花<rt>はな</rt></ruby>の<ruby>色<rt>いろ</rt></ruby>は<ruby>かすみ<rt>かすみ</rt></ruby>に<ruby>こめて<rt>こめて</rt></ruby><ruby>見<rt>み</rt></ruby>せ<span style='color: #ff4500;'>す</span>とも<ruby>か<rt>か</rt></ruby>をたに<ruby>ぬすめ<rt>ぬすめ</rt></ruby><ruby>春<rt>はる</rt></ruby>の<ruby>山<rt>やま</rt></ruby><ruby>かせ<rt>かぜ</rt></ruby>",
+        "romaji": "hana no iro, wa kasumi ni komete, misesu tomo, ka o ta ni nusume, haru no yama kase",
+        "translation": "Even if the mist hides the colors of the flowers and does not let them be seen, let the mountain wind of spring at least steal their fragrance."
+      },
+      "vocabulary": [
+        {
+          "word": "花",
+          "reading": "はな",
+          "meaning": "flower",
+          "span": [
+            0,
+            1
+          ],
+          "chinese_cognate_note": "Identical to Chinese 花 (huā)"
+        },
+        {
+          "word": "の",
+          "reading": "の",
+          "meaning": "possessive particle (of)",
+          "span": [
+            1,
+            2
+          ],
+          "chinese_cognate_note": "Functions like Chinese 的 (de)"
+        },
+        {
+          "word": "色",
+          "reading": "いろ",
+          "meaning": "color",
+          "span": [
+            2,
+            3
+          ],
+          "chinese_cognate_note": "Identical to Chinese 色 (sè)"
+        },
+        {
+          "word": "は",
+          "reading": "は",
+          "meaning": "topic marker",
+          "span": [
+            3,
+            4
+          ],
+          "chinese_cognate_note": null
+        },
+        {
+          "word": "かすみ",
+          "reading": "かすみ",
+          "meaning": "mist/haze",
+          "span": [
+            4,
+            7
+          ],
+          "chinese_cognate_note": null
+        },
+        {
+          "word": "に",
+          "reading": "に",
+          "meaning": "location/target particle (in)",
+          "span": [
+            7,
+            8
+          ],
+          "chinese_cognate_note": null
+        },
+        {
+          "word": "こめて",
+          "reading": "こめて",
+          "meaning": "to include/envelop",
+          "span": [
+            8,
+            11
+          ],
+          "chinese_cognate_note": null
+        },
+        {
+          "word": "見せ",
+          "reading": "みせ",
+          "meaning": "to show (causative of 'to see')",
+          "span": [
+            11,
+            13
+          ],
+          "chinese_cognate_note": null
+        },
+        {
+          "word": "す",
+          "reading": "す",
+          "meaning": "auxiliary (here: humble/causative driver)",
+          "span": [
+            13,
+            14
+          ],
+          "chinese_cognate_note": null
+        },
+        {
+          "word": "とも",
+          "reading": "とも",
+          "meaning": "concessive particle (even if)",
+          "span": [
+            14,
+            16
+          ],
+          "chinese_cognate_note": null
+        },
+        {
+          "word": "か",
+          "reading": "か",
+          "meaning": "fragrance",
+          "span": [
+            16,
+            17
+          ],
+          "chinese_cognate_note": "Cognate with Chinese 香 (xiāng)"
+        },
+        {
+          "word": "を",
+          "reading": "を",
+          "meaning": "direct object marker",
+          "span": [
+            17,
+            18
+          ],
+          "chinese_cognate_note": null
+        },
+        {
+          "word": "たに",
+          "reading": "だに",
+          "meaning": "at least",
+          "span": [
+            18,
+            20
+          ],
+          "chinese_cognate_note": null
+        },
+        {
+          "word": "ぬすめ",
+          "reading": "ぬすめ",
+          "meaning": "to steal (imperative form)",
+          "span": [
+            20,
+            23
+          ],
+          "chinese_cognate_note": null
+        },
+        {
+          "word": "春",
+          "reading": "はる",
+          "meaning": "spring",
+          "span": [
+            23,
+            24
+          ],
+          "chinese_cognate_note": "Identical to Chinese 春 (chūn)"
+        },
+        {
+          "word": "の",
+          "reading": "の",
+          "meaning": "possessive particle",
+          "span": [
+            24,
+            25
+          ],
+          "chinese_cognate_note": null
+        },
+        {
+          "word": "山",
+          "reading": "やま",
+          "meaning": "mountain",
+          "span": [
+            25,
+            26
+          ],
+          "chinese_cognate_note": "Identical to Chinese 山 (shān)"
+        },
+        {
+          "word": "かせ",
+          "reading": "かぜ",
+          "meaning": "wind",
+          "span": [
+            26,
+            28
+          ],
+          "chinese_cognate_note": "Cognate with Chinese 風 (fēng)"
+        }
+      ],
+      "focus_highlight": [
+        14,
+        15
+      ]
+    },
+    {
+      "type": "grammar_spotlight",
+      "content": "In the phrase **見せす (misesu)**, we see the verb 'to see' (miru) transformed. The 'su' here acts as a **causative driver**. \n\n1. **見 (mi)**: The core concept (See).\n2. **見せ (mise)**: The Mizenkei base (Unrealized).\n3. **す (su)**: The driver that adds the logic of 'making' or 'letting' happen.\n\nCombined with 'tomo' (even if), it creates the logic: 'Even if [the mist] does not **let** [the flowers] be seen...'",
+      "evidence": "See the poem above."
+    },
+    {
+      "type": "poem_presentation",
+      "poem_id": "lapis_9e980d4885e7d03b",
+      "display": {
+        "text_with_furigana": "おきも<span style='color: #ff4500;'>せ</span>すねも<span style='color: #ff4500;'>せ</span>てよるをあかしては<ruby>春<rt>はる</rt></ruby>の<ruby>物<rt>もの</rt></ruby>とてなかめくらしつ",
+        "romaji": "okimosesu, nemosete yoru o, akashite wa, haru no mono tote, nakamekurasu",
+        "translation": "Neither fully awake nor fully asleep, I spend the night gazing out, thinking of it as a thing of spring."
+      },
+      "vocabulary": [
+        {
+          "word": "おき",
+          "reading": "おき",
+          "meaning": "waking/arising",
+          "span": [
+            0,
+            2
+          ],
+          "chinese_cognate_note": "Cognate with Chinese 起 (qǐ)"
+        },
+        {
+          "word": "も",
+          "reading": "も",
+          "meaning": "emphasis/also",
+          "span": [
+            2,
+            3
+          ],
+          "chinese_cognate_note": null
+        },
+        {
+          "word": "せ",
+          "reading": "せ",
+          "meaning": "to do (Mizenkei of 'su')",
+          "span": [
+            3,
+            4
+          ],
+          "chinese_cognate_note": null
+        },
+        {
+          "word": "す",
+          "reading": "す",
+          "meaning": "negative auxiliary (here acting as 'not doing')",
+          "span": [
+            4,
+            5
+          ],
+          "chinese_cognate_note": null
+        },
+        {
+          "word": "ね",
+          "reading": "ね",
+          "meaning": "sleeping",
+          "span": [
+            5,
+            6
+          ],
+          "chinese_cognate_note": "Cognate with Chinese 寐 (mèi)"
+        },
+        {
+          "word": "も",
+          "reading": "も",
+          "meaning": "emphasis/also",
+          "span": [
+            6,
+            7
+          ],
+          "chinese_cognate_note": null
+        },
+        {
+          "word": "せ",
+          "reading": "せ",
+          "meaning": "to do (Mizenkei of 'su')",
+          "span": [
+            7,
+            8
+          ],
+          "chinese_cognate_note": null
+        },
+        {
+          "word": "て",
+          "reading": "て",
+          "meaning": "conjunctive particle (and)",
+          "span": [
+            8,
+            9
+          ],
+          "chinese_cognate_note": null
+        },
+        {
+          "word": "よる",
+          "reading": "よる",
+          "meaning": "night",
+          "span": [
+            9,
+            11
+          ],
+          "chinese_cognate_note": "Cognate with Chinese 夜 (yè)"
+        },
+        {
+          "word": "を",
+          "reading": "を",
+          "meaning": "direct object marker",
+          "span": [
+            11,
+            12
+          ],
+          "chinese_cognate_note": null
+        },
+        {
+          "word": "あかして",
+          "reading": "あかして",
+          "meaning": "to spend (the night) until dawn",
+          "span": [
+            12,
+            16
+          ],
+          "chinese_cognate_note": null
+        },
+        {
+          "word": "は",
+          "reading": "は",
+          "meaning": "topic marker",
+          "span": [
+            16,
+            17
+          ],
+          "chinese_cognate_note": null
+        },
+        {
+          "word": "春",
+          "reading": "はる",
+          "meaning": "spring",
+          "span": [
+            17,
+            18
+          ],
+          "chinese_cognate_note": null
+        },
+        {
+          "word": "の",
+          "reading": "の",
+          "meaning": "possessive particle",
+          "span": [
+            18,
+            19
+          ],
+          "chinese_cognate_note": null
+        },
+        {
+          "word": "物",
+          "reading": "もの",
+          "meaning": "thing",
+          "span": [
+            19,
+            20
+          ],
+          "chinese_cognate_note": "Identical to Chinese 物 (wù)"
+        },
+        {
+          "word": "とて",
+          "reading": "とて",
+          "meaning": "thinking that / as",
+          "span": [
+            20,
+            22
+          ],
+          "chinese_cognate_note": null
+        },
+        {
+          "word": "なかめくらし",
+          "reading": "なかめくらし",
+          "meaning": "to spend time gazing idly",
+          "span": [
+            22,
+            28
+          ],
+          "chinese_cognate_note": null
+        },
+        {
+          "word": "つ",
+          "reading": "つ",
+          "meaning": "perfective auxiliary (completed action)",
+          "span": [
+            28,
+            29
+          ],
+          "chinese_cognate_note": null
+        }
+      ],
+      "focus_highlight": [
+        3,
+        4
+      ]
+    },
+    {
+      "type": "contrast_example",
+      "content": "In this second poem, **せ (se)** is the Mizenkei form of our auxiliary. Notice the pattern: **[Noun/Stem] + も (mo) + せ (se)**. This is a common logical structure in classical poetry to say 'Neither X-ing [nor Y-ing]'. Here, 'se' is the 'Action Driver' that turns the state of 'waking' (oki) or 'sleeping' (ne) into an active process that is then negated."
+    },
+    {
+      "type": "poem_presentation",
+      "poem_id": "lapis_e7924f681ba94606",
+      "display": {
+        "text_with_furigana": "あすかかはせくとしり<span style='color: #ff4500;'>せ</span>はあまたよもゐねてこましをせくとしり<span style='color: #ff4500;'>せ</span>は",
+        "romaji": "asukakawa, sekuto shirise wa, amata yomo, wite komashi wo sekuto, shirise wa",
+        "translation": "If I had known the Asuka River would be dammed, I would have come to sleep here many nights; if only I had known."
+      },
+      "vocabulary": [
+        {
+          "word": "あすか",
+          "reading": "あすか",
+          "meaning": "Asuka (place name)",
+          "span": [
+            0,
+            3
+          ],
+          "chinese_cognate_note": null
+        },
+        {
+          "word": "かは",
+          "reading": "かわ",
+          "meaning": "river",
+          "span": [
+            3,
+            5
+          ],
+          "chinese_cognate_note": "Identical to Chinese 川 (chuān)"
+        },
+        {
+          "word": "せく",
+          "reading": "せく",
+          "meaning": "to block/dam up",
+          "span": [
+            5,
+            7
+          ],
+          "chinese_cognate_note": null
+        },
+        {
+          "word": "と",
+          "reading": "と",
+          "meaning": "quotative particle (that)",
+          "span": [
+            7,
+            8
+          ],
+          "chinese_cognate_note": null
+        },
+        {
+          "word": "しり",
+          "reading": "しり",
+          "meaning": "to know",
+          "span": [
+            8,
+            10
+          ],
+          "chinese_cognate_note": "Cognate with Chinese 知 (zhī)"
+        },
+        {
+          "word": "せ",
+          "reading": "せ",
+          "meaning": "auxiliary (here: potential/hypothetical driver)",
+          "span": [
+            10,
+            11
+          ],
+          "chinese_cognate_note": null
+        },
+        {
+          "word": "は",
+          "reading": "は",
+          "meaning": "conditional particle (if)",
+          "span": [
+            11,
+            12
+          ],
+          "chinese_cognate_note": null
+        },
+        {
+          "word": "あまた",
+          "reading": "あまた",
+          "meaning": "many/much",
+          "span": [
+            12,
+            15
+          ],
+          "chinese_cognate_note": null
+        },
+        {
+          "word": "よ",
+          "reading": "よ",
+          "meaning": "nights",
+          "span": [
+            15,
+            16
+          ],
+          "chinese_cognate_note": null
+        },
+        {
+          "word": "も",
+          "reading": "も",
+          "meaning": "even",
+          "span": [
+            16,
+            17
+          ],
+          "chinese_cognate_note": null
+        },
+        {
+          "word": "ゐ",
+          "reading": "ゐ",
+          "meaning": "to be/stay",
+          "span": [
+            17,
+            18
+          ],
+          "chinese_cognate_note": null
+        },
+        {
+          "word": "ね",
+          "reading": "ね",
+          "meaning": "sleep",
+          "span": [
+            18,
+            19
+          ],
+          "chinese_cognate_note": null
+        },
+        {
+          "word": "て",
+          "reading": "て",
+          "meaning": "linking particle",
+          "span": [
+            19,
+            20
+          ],
+          "chinese_cognate_note": null
+        },
+        {
+          "word": "こ",
+          "reading": "こ",
+          "meaning": "to come",
+          "span": [
+            20,
+            21
+          ],
+          "chinese_cognate_note": "Cognate with Chinese 来 (lái)"
+        },
+        {
+          "word": "まし",
+          "reading": "まし",
+          "meaning": "counterfactual auxiliary (would have)",
+          "span": [
+            21,
+            23
+          ],
+          "chinese_cognate_note": null
+        },
+        {
+          "word": "を",
+          "reading": "を",
+          "meaning": "particle of exclamation/object",
+          "span": [
+            23,
+            24
+          ],
+          "chinese_cognate_note": null
+        }
+      ],
+      "focus_highlight": [
+        8,
+        9
+      ]
+    },
+    {
+      "type": "comprehension_check",
+      "question": "In the phrase 'shiri-se-ba' (しりせは), what is the role of 'se' (せ)?",
+      "answer": "It acts as a driver for the verb 'shiri' (to know), specifically in a hypothetical or potential sense, which then connects to the conditional 'ba' (if).",
+      "hint": "Look at the word coming before it (shiri = know) and after it (ba = if)."
+    },
+    {
+      "type": "summary",
+      "content": "You've now seen the auxiliary **す (su)** in three roles: as a causative driver (making something happen), as a simple action driver (doing), and as a hypothetical driver (if one could do). Its primary job is to take a concept and provide the 'grammatical energy' needed to link it to other logic gates like 'tomo' (even if) or 'ba' (if)."
+    }
+  ],
+  "reference_card": {
+    "point": "Auxiliary す (su)",
+    "one_liner": "A versatile 'action driver' that attaches to the Mizenkei to express causation, potential, or active doing.",
+    "example": "見せす (misesu) = To let/make see",
+    "see_also": [
+      "auxiliary_zu",
+      "lesson_mizenkei"
+    ]
+  },
+  "forward_references": [
+    {
+      "point": "Honorific usage of su",
+      "note": "In higher-difficulty poems, 'su' combined with other auxiliaries creates supreme respect levels. We will see this in Unit 10."
+    }
+  ]
+}

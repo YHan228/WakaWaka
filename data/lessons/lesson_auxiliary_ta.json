@@ -1,0 +1,556 @@
+{
+  "lesson_id": "lesson_auxiliary_ta",
+  "lesson_title": "The Marker of Completion: Auxiliary た (ta)",
+  "lesson_summary": "Having explored the past of personal memory (ki) and hearsay (keri), we now examine 'ta'—the auxiliary that signals an action is fully completed and its result remains.",
+  "grammar_point": "auxiliary_ta",
+  "grammar_explanation": {
+    "concept": "The auxiliary 'ta' (た) functions similarly to the Chinese aspect marker '了' (le). While 'ki' and 'keri' focus on the 'pastness' of an event, 'ta' emphasizes the completion of the act or the state that exists because the act finished.",
+    "formation": "Attached to the Ren'yokei (Continuative form) of verbs. In classical texts, it often appears as a contraction of 'te-ari' (has become/is in the state of).",
+    "variations": [
+      "tari (the uncontracted formal version)",
+      "te (the conjunctive form often preceding it)"
+    ],
+    "common_confusions": [
+      "vs. ki (き): 'ki' is for things you personally remember; 'ta' is for the objective fact of completion.",
+      "vs. keri (けり): 'keri' is for realization or hearsay; 'ta' is more direct and factual."
+    ]
+  },
+  "teaching_sequence": [
+    {
+      "type": "introduction",
+      "content": "In previous lessons, we looked at how classical poets recall the past through the lens of memory (ki) or sudden realization (keri). However, sometimes a poet simply needs to state that an action is *finished*—the logical 'done' state. This is where 'ta' (た) comes in. Think of it as the 'Completion Tag.' If 'ki' is 'I remember crossing,' 'ta' is 'I have crossed (and am now on the other side).'"
+    },
+    {
+      "type": "poem_presentation",
+      "poem_id": "lapis_6c3d7cf2dca87bad",
+      "display": {
+        "text_with_furigana": "<ruby>日<rt>ひ</rt></ruby>な<ruby>曇<rt>くも</rt></ruby>り<ruby>薄日<rt>うすひ</rt></ruby>の<ruby>坂<rt>さか</rt></ruby>を<ruby>越<rt>こ</rt></ruby>えしたに<ruby>妹<rt>いも</rt></ruby>が<ruby>恋<rt>こひ</rt></ruby>しく<ruby>忘<rt>わす</rt></ruby>らえぬかも",
+        "romaji": "hinakumori, usuhi no saka o, koeshita ni, imo ga kohishiku, wasuraenu kamo",
+        "translation": "When I had crossed the slope in the faint sun of a cloudy day, I found myself longing for my beloved, unable to forget her."
+      },
+      "vocabulary": [
+        {
+          "word": "ひなくもり",
+          "reading": "ひなくもり",
+          "meaning": "cloudy weather",
+          "span": [
+            0,
+            5
+          ],
+          "chinese_cognate_note": "日曇 - sun is clouded"
+        },
+        {
+          "word": "うすひ",
+          "reading": "うすひ",
+          "meaning": "faint/thin sunlight",
+          "span": [
+            5,
+            8
+          ],
+          "chinese_cognate_note": "薄日 - thin sun"
+        },
+        {
+          "word": "の",
+          "reading": "の",
+          "meaning": "possessive particle (of)",
+          "span": [
+            8,
+            9
+          ],
+          "chinese_cognate_note": null
+        },
+        {
+          "word": "さか",
+          "reading": "さか",
+          "meaning": "slope/hill",
+          "span": [
+            9,
+            11
+          ],
+          "chinese_cognate_note": "坂 - same meaning"
+        },
+        {
+          "word": "を",
+          "reading": "を",
+          "meaning": "object marker",
+          "span": [
+            11,
+            12
+          ],
+          "chinese_cognate_note": null
+        },
+        {
+          "word": "こえ",
+          "reading": "こえ",
+          "meaning": "to cross",
+          "span": [
+            12,
+            14
+          ],
+          "chinese_cognate_note": null
+        },
+        {
+          "word": "し",
+          "reading": "し",
+          "meaning": "past/perfective base",
+          "span": [
+            14,
+            15
+          ],
+          "chinese_cognate_note": null
+        },
+        {
+          "word": "た",
+          "reading": "た",
+          "meaning": "completed action marker (past/perfective)",
+          "span": [
+            15,
+            16
+          ],
+          "chinese_cognate_note": null
+        },
+        {
+          "word": "に",
+          "reading": "に",
+          "meaning": "at the time/when",
+          "span": [
+            16,
+            17
+          ],
+          "chinese_cognate_note": null
+        },
+        {
+          "word": "いも",
+          "reading": "いも",
+          "meaning": "beloved/wife",
+          "span": [
+            17,
+            19
+          ],
+          "chinese_cognate_note": "妹 - in ancient Japan, used for female loved ones, not just sisters"
+        },
+        {
+          "word": "が",
+          "reading": "が",
+          "meaning": "subject marker",
+          "span": null,
+          "chinese_cognate_note": null
+        },
+        {
+          "word": "こひしく",
+          "reading": "こひしく",
+          "meaning": "longing for/dearly",
+          "span": [
+            20,
+            24
+          ],
+          "chinese_cognate_note": null
+        },
+        {
+          "word": "わすらえ",
+          "reading": "わすらえ",
+          "meaning": "to be forgotten",
+          "span": [
+            24,
+            28
+          ],
+          "chinese_cognate_note": null
+        },
+        {
+          "word": "ぬ",
+          "reading": "ぬ",
+          "meaning": "not (negation)",
+          "span": [
+            28,
+            29
+          ],
+          "chinese_cognate_note": null
+        },
+        {
+          "word": "かも",
+          "reading": "かも",
+          "meaning": "exclamation of emotion",
+          "span": [
+            29,
+            31
+          ],
+          "chinese_cognate_note": null
+        }
+      ],
+      "focus_highlight": [
+        15,
+        16
+      ]
+    },
+    {
+      "type": "grammar_spotlight",
+      "content": "Look at the phrase <ruby>越<rt>こ</rt></ruby>えした (koeshita). The verb is 'koe' (cross). By adding 'ta', the poet isn't just saying they were crossing; they are saying the crossing is *behind them*. The 'ni' (at/when) that follows marks the specific moment *after* the completion. \n\nLogic: [Action: Cross] + [Status: Completed (た)] + [Time: When (に)] = 'At the moment I had finished crossing...'",
+      "evidence": "See the poem above."
+    },
+    {
+      "type": "poem_presentation",
+      "poem_id": "lapis_9329bc84b2645c5e",
+      "display": {
+        "text_with_furigana": "<ruby>今<rt>いま</rt></ruby>そこれ<ruby>入<rt>い</rt></ruby>り<ruby>日<rt>ひ</rt></ruby>を<ruby>見<rt>み</rt></ruby>ても<ruby>思<rt>おも</rt></ruby>ひこし<ruby>見<rt>み</rt></ruby>たの<ruby>御国<rt>みくに</rt></ruby>の<ruby>夕暮<rt>ゆふくれ</rt></ruby>の<ruby>空<rt>そら</rt></ruby>",
+        "romaji": "imasoko reiri, hi o mite mo, omohi koshimita, no mi kuni no, yufukure no sora",
+        "translation": "Even now as I watch the setting sun, I think back to the evening sky of the land I have seen."
+      },
+      "vocabulary": [
+        {
+          "word": "いま",
+          "reading": "いま",
+          "meaning": "now",
+          "span": [
+            0,
+            2
+          ],
+          "chinese_cognate_note": "今 - same meaning"
+        },
+        {
+          "word": "そ",
+          "reading": "そ",
+          "meaning": "emphasis particle",
+          "span": [
+            2,
+            3
+          ],
+          "chinese_cognate_note": null
+        },
+        {
+          "word": "これ",
+          "reading": "これ",
+          "meaning": "this",
+          "span": [
+            3,
+            5
+          ],
+          "chinese_cognate_note": null
+        },
+        {
+          "word": "いりひ",
+          "reading": "いりひ",
+          "meaning": "setting sun",
+          "span": [
+            5,
+            8
+          ],
+          "chinese_cognate_note": "入日 - sun entering (the horizon)"
+        },
+        {
+          "word": "を",
+          "reading": "を",
+          "meaning": "object marker",
+          "span": [
+            8,
+            9
+          ],
+          "chinese_cognate_note": null
+        },
+        {
+          "word": "み",
+          "reading": "み",
+          "meaning": "to see",
+          "span": [
+            9,
+            10
+          ],
+          "chinese_cognate_note": "見 - same meaning"
+        },
+        {
+          "word": "て",
+          "reading": "て",
+          "meaning": "and (linking)",
+          "span": [
+            10,
+            11
+          ],
+          "chinese_cognate_note": null
+        },
+        {
+          "word": "も",
+          "reading": "も",
+          "meaning": "even/also",
+          "span": [
+            11,
+            12
+          ],
+          "chinese_cognate_note": null
+        },
+        {
+          "word": "おもひこし",
+          "reading": "おもひこし",
+          "meaning": "to think back/deeply feel",
+          "span": [
+            12,
+            17
+          ],
+          "chinese_cognate_note": "思 - same meaning"
+        },
+        {
+          "word": "み",
+          "reading": "み",
+          "meaning": "to see",
+          "span": [
+            17,
+            18
+          ],
+          "chinese_cognate_note": null
+        },
+        {
+          "word": "た",
+          "reading": "た",
+          "meaning": "completed action marker (past/perfective)",
+          "span": [
+            18,
+            19
+          ],
+          "chinese_cognate_note": null
+        },
+        {
+          "word": "の",
+          "reading": "の",
+          "meaning": "possessive particle (of)",
+          "span": [
+            19,
+            20
+          ],
+          "chinese_cognate_note": null
+        },
+        {
+          "word": "みくに",
+          "reading": "みくに",
+          "meaning": "honorable country/land",
+          "span": [
+            20,
+            23
+          ],
+          "chinese_cognate_note": "御国 - honorable nation"
+        },
+        {
+          "word": "の",
+          "reading": "の",
+          "meaning": "possessive particle (of)",
+          "span": [
+            23,
+            24
+          ],
+          "chinese_cognate_note": null
+        },
+        {
+          "word": "ゆふくれ",
+          "reading": "ゆふくれ",
+          "meaning": "evening/sunset",
+          "span": [
+            24,
+            28
+          ],
+          "chinese_cognate_note": "夕暮 - same meaning"
+        },
+        {
+          "word": "の",
+          "reading": "の",
+          "meaning": "possessive particle (of)",
+          "span": [
+            28,
+            29
+          ],
+          "chinese_cognate_note": null
+        },
+        {
+          "word": "そら",
+          "reading": "そら",
+          "meaning": "sky",
+          "span": [
+            29,
+            31
+          ],
+          "chinese_cognate_note": "空 - same meaning"
+        }
+      ],
+      "focus_highlight": [
+        18,
+        19
+      ]
+    },
+    {
+      "type": "contrast_example",
+      "content": "In the second poem, we see <ruby>見<rt>み</rt></ruby>た (mita). This is the verb 'to see' plus the completion marker. It doesn't just mean 'saw' in a vague sense; it implies 'the land that I have seen' (and thus know). It establishes a completed experience that informs the current emotion."
+    },
+    {
+      "type": "poem_presentation",
+      "poem_id": "lapis_f4340be4bacd3567",
+      "display": {
+        "text_with_furigana": "<ruby>引馬野<rt>ひくまの</rt></ruby>ににほふ<ruby>榛原<rt>はりはら</rt></ruby><ruby>入<rt>い</rt></ruby>りみたれ<ruby>衣<rt>ころも</rt></ruby>にほはせ<ruby>旅<rt>たひ</rt></ruby>のしるしに",
+        "romaji": "hikuma no ni, niofu hari harai, rimi tare, koromo ni ho haseta, hi no shirushi ni",
+        "translation": "I have entered the fragrant alder fields of Hikuma; let my robes be stained by them as a token of my journey."
+      },
+      "vocabulary": [
+        {
+          "word": "ひくまの",
+          "reading": "ひくまの",
+          "meaning": "Hikuma Field (place name)",
+          "span": [
+            0,
+            4
+          ],
+          "chinese_cognate_note": null
+        },
+        {
+          "word": "に",
+          "reading": "に",
+          "meaning": "in/at",
+          "span": [
+            4,
+            5
+          ],
+          "chinese_cognate_note": null
+        },
+        {
+          "word": "にほふ",
+          "reading": "にほふ",
+          "meaning": "to be fragrant/colorful",
+          "span": [
+            5,
+            8
+          ],
+          "chinese_cognate_note": null
+        },
+        {
+          "word": "はりはら",
+          "reading": "はりはら",
+          "meaning": "field of alder trees",
+          "span": [
+            8,
+            12
+          ],
+          "chinese_cognate_note": "榛原 - field of hazel/alder"
+        },
+        {
+          "word": "いり",
+          "reading": "いり",
+          "meaning": "to enter",
+          "span": [
+            12,
+            14
+          ],
+          "chinese_cognate_note": "入 - same meaning"
+        },
+        {
+          "word": "み",
+          "reading": "み",
+          "meaning": "to see/try",
+          "span": [
+            14,
+            15
+          ],
+          "chinese_cognate_note": null
+        },
+        {
+          "word": "た",
+          "reading": "た",
+          "meaning": "completed action marker (past/perfective)",
+          "span": [
+            15,
+            16
+          ],
+          "chinese_cognate_note": null
+        },
+        {
+          "word": "れ",
+          "reading": "れ",
+          "meaning": "perfective ending (variant of ta/tari)",
+          "span": [
+            16,
+            17
+          ],
+          "chinese_cognate_note": null
+        },
+        {
+          "word": "ころも",
+          "reading": "ころも",
+          "meaning": "clothes/robes",
+          "span": [
+            17,
+            20
+          ],
+          "chinese_cognate_note": "衣 - same meaning"
+        },
+        {
+          "word": "にほはせ",
+          "reading": "にほはせ",
+          "meaning": "to cause to be stained/fragrant",
+          "span": [
+            20,
+            24
+          ],
+          "chinese_cognate_note": null
+        },
+        {
+          "word": "たひ",
+          "reading": "たひ",
+          "meaning": "journey",
+          "span": [
+            24,
+            26
+          ],
+          "chinese_cognate_note": "旅 - same meaning"
+        },
+        {
+          "word": "の",
+          "reading": "の",
+          "meaning": "possessive particle (of)",
+          "span": [
+            26,
+            27
+          ],
+          "chinese_cognate_note": null
+        },
+        {
+          "word": "しるし",
+          "reading": "しるし",
+          "meaning": "sign/token",
+          "span": [
+            27,
+            30
+          ],
+          "chinese_cognate_note": "印 - mark/sign"
+        },
+        {
+          "word": "に",
+          "reading": "に",
+          "meaning": "as/for",
+          "span": [
+            30,
+            31
+          ],
+          "chinese_cognate_note": null
+        }
+      ],
+      "focus_highlight": [
+        15,
+        16
+      ]
+    },
+    {
+      "type": "comprehension_check",
+      "question": "In Poem 3, the poet uses 'iri-mi-ta' (入ってみた). Based on our logic, does this mean the poet is currently walking into the field, or that they have already stepped inside?",
+      "answer": "They have already stepped inside. The 'ta' indicates the action of entering is complete, which is why they can now talk about the robes being stained by the plants they are already among.",
+      "hint": "Think of 'ta' as the 'Resultative' state."
+    }
+  ],
+  "reference_card": {
+    "point": "Auxiliary た (ta)",
+    "one_liner": "The marker of completed action or a resulting state (the 'Done' tag).",
+    "example": "越えした (koeshita) = Had finished crossing.",
+    "see_also": [
+      "auxiliary_ki",
+      "auxiliary_keri"
+    ]
+  },
+  "forward_references": [
+    {
+      "point": "nu (negation)",
+      "note": "In Poem 1, we saw 'wasuraenu' (cannot forget). We will dive deeper into how negation interacts with potentiality in Unit 6."
+    }
+  ]
+}

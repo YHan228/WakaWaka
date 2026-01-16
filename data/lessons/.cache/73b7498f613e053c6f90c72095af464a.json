@@ -1,0 +1,340 @@
+{
+  "lesson_title": "The Intentional Finish: Completing Actions with つ (tsu)",
+  "lesson_summary": "Building on the concept of completion (Perfective Aspect) introduced with 'nu', we now examine 'tsu'—an auxiliary that marks the definitive end of an action, typically one involving human intent or a transitive verb.",
+  "grammar_explanation": {
+    "concept": "The auxiliary 'tsu' (つ) indicates that an action has been completed. While 'nu' (ぬ), which you learned previously, often describes natural or spontaneous changes (like flowers falling), 'tsu' is typically used for intentional actions or transitive verbs (actions done to something). Think of it as the 'active' version of the perfective aspect.",
+    "formation": "Attached to the Ren'yokei (Continuative Base) of verbs.",
+    "variations": [
+      "つ (tsu) - Conclusive (ends a sentence)",
+      "つる (tsuru) - Attributive (modifies a noun)",
+      "つれ (tsure) - Perfective (used with 'ba' for 'since/when...')"
+    ],
+    "common_confusions": [
+      "vs. ぬ (nu): 'nu' is for natural/intransitive events; 'tsu' is for intentional/transitive actions.",
+      "vs. particle つ (tsu): In very archaic texts, 'tsu' can be a genitive particle like 'no', but in the classical corpus, it is almost always this perfective auxiliary."
+    ]
+  },
+  "teaching_sequence": [
+    {
+      "type": "introduction",
+      "content": "In the last lesson, we saw how 'nu' (ぬ) marks a state of 'having become.' However, poetry often describes deliberate actions—crying out, looking, or leaving something behind. For these 'active' completions, classical Japanese uses 'tsu' (つ). If 'nu' is a leaf falling naturally, 'tsu' is a person intentionally placing that leaf on the ground."
+    },
+    {
+      "type": "poem_presentation",
+      "poem_id": "ogura100_3918ff2aefc7d4ab",
+      "display": {
+        "text_with_furigana": "<ruby>ほととぎす</ruby><ruby>鳴</ruby>（な）き<ruby>つる</ruby><ruby>方</ruby>（かた）を<ruby>ながむれば</ruby>ただ<ruby>有明</ruby>（ありあけ）の<ruby>月</ruby>（つき）ぞ<ruby>残</ruby>（のこ）れる",
+        "romaji": "hototogisu nakitsuru kata o nagamureba tada ariake no tsuki zo nokoreru",
+        "translation": "When I gaze toward the direction where the cuckoo has cried, only the dawn moon remains."
+      },
+      "vocabulary": [
+        {
+          "word": "ほととぎす",
+          "reading": "hototogisu",
+          "meaning": "lesser cuckoo (a bird whose cry is a staple of summer poetry)"
+        },
+        {
+          "word": "鳴き",
+          "reading": "naki",
+          "meaning": "to cry/sing (bird)",
+          "chinese_cognate_note": "鳴 (míng) - same meaning"
+        },
+        {
+          "word": "つる",
+          "reading": "tsuru",
+          "meaning": "did/has finished (perfective auxiliary, attributive form)"
+        },
+        {
+          "word": "方",
+          "reading": "kata",
+          "meaning": "direction",
+          "chinese_cognate_note": "方 (fāng) - direction/side"
+        },
+        {
+          "word": "を",
+          "reading": "o",
+          "meaning": "object marker (learned in Unit 1)"
+        },
+        {
+          "word": "ながむれば",
+          "reading": "nagamureba",
+          "meaning": "when I gaze at (nagamuru + ba)"
+        },
+        {
+          "word": "ただ",
+          "reading": "tada",
+          "meaning": "only / simply",
+          "chinese_cognate_note": "只 (zhǐ) in meaning"
+        },
+        {
+          "word": "有明",
+          "reading": "ariake",
+          "meaning": "dawn (specifically the moon remaining at dawn)",
+          "chinese_cognate_note": "有明 (yǒumíng) - recognizable as 'having light'"
+        },
+        {
+          "word": "の",
+          "reading": "no",
+          "meaning": "possessive particle (learned in Unit 1)"
+        },
+        {
+          "word": "月",
+          "reading": "tsuki",
+          "meaning": "moon",
+          "chinese_cognate_note": "月 (yuè) - same meaning"
+        },
+        {
+          "word": "ぞ",
+          "reading": "zo",
+          "meaning": "emphatic particle"
+        },
+        {
+          "word": "残れる",
+          "reading": "nokoreru",
+          "meaning": "is remaining"
+        }
+      ],
+      "focus_highlight": [
+        11,
+        16
+      ]
+    },
+    {
+      "type": "grammar_spotlight",
+      "content": "Look at 'naki-tsuru' (鳴きつる). Here, 'naki' is the action of the bird crying. By adding 'tsuru' (the attributive form of 'tsu'), the poet indicates the cry is *finished*. Because 'tsuru' is in the Rentaikei (Attributive form), it directly modifies the noun 'kata' (direction). \n\nLogic: [Crying] + [Finished] + [Direction] = 'The direction where the cry has finished/happened.' This creates a sharp temporal contrast: the sound is gone (tsu), but the moon remains."
+    },
+    {
+      "type": "poem_presentation",
+      "poem_id": "lapis_e4716f999ff12f1b",
+      "display": {
+        "text_with_furigana": "<ruby>立帰</ruby>（たちかえ）りあはれとそ<ruby>思</ruby>（おも）ふよそにても<ruby>人</ruby>（ひと）に<ruby>心</ruby>（こころ）を<ruby>おきつ</ruby><ruby>白浪</ruby>（しらなみ）",
+        "romaji": "tachikaeri aware to so omou yoso nite mo hito ni kokoro o okitsu shiranami",
+        "translation": "Looking back, I think 'alas'; even from a distance, I have left my heart with that person, like white waves on the shore."
+      },
+      "vocabulary": [
+        {
+          "word": "立帰り",
+          "reading": "tachikaeri",
+          "meaning": "returning / looking back",
+          "chinese_cognate_note": "立 (stand) + 帰 (return)"
+        },
+        {
+          "word": "あはれ",
+          "reading": "aware",
+          "meaning": "alas / pathos / deep emotion"
+        },
+        {
+          "word": "と",
+          "reading": "to",
+          "meaning": "quotation particle (learned in Unit 1)"
+        },
+        {
+          "word": "そ",
+          "reading": "so",
+          "meaning": "emphatic particle (variant of 'zo')"
+        },
+        {
+          "word": "思ふ",
+          "reading": "omou",
+          "meaning": "to think",
+          "chinese_cognate_note": "思 (sī) - same meaning"
+        },
+        {
+          "word": "よそ",
+          "reading": "yoso",
+          "meaning": "elsewhere / a distant place"
+        },
+        {
+          "word": "にて",
+          "reading": "nite",
+          "meaning": "at / in (compound particle)"
+        },
+        {
+          "word": "も",
+          "reading": "mo",
+          "meaning": "even / also"
+        },
+        {
+          "word": "人",
+          "reading": "hito",
+          "meaning": "person",
+          "chinese_cognate_note": "人 (rén) - same meaning"
+        },
+        {
+          "word": "に",
+          "reading": "ni",
+          "meaning": "target/location particle (learned in Unit 1)"
+        },
+        {
+          "word": "心",
+          "reading": "kokoro",
+          "meaning": "heart / mind",
+          "chinese_cognate_note": "心 (xīn) - same meaning"
+        },
+        {
+          "word": "を",
+          "reading": "o",
+          "meaning": "object marker"
+        },
+        {
+          "word": "おき",
+          "reading": "oki",
+          "meaning": "to place / to leave behind",
+          "chinese_cognate_note": "置 (zhì) - same meaning"
+        },
+        {
+          "word": "つ",
+          "reading": "tsu",
+          "meaning": "have finished (perfective auxiliary, conclusive form)"
+        },
+        {
+          "word": "白浪",
+          "reading": "shiranami",
+          "meaning": "white waves",
+          "chinese_cognate_note": "白 (white) + 浪 (waves)"
+        }
+      ],
+      "focus_highlight": [
+        55,
+        57
+      ]
+    },
+    {
+      "type": "grammar_spotlight",
+      "content": "In 'kokoro o okitsu' (心を置きて/おきつ), the poet uses 'tsu' to show the definitive act of leaving the heart behind. This is a classic 'intentional' use. \n\nData Note: In this poem, 'okitsu' is also a 'Kakekotoba' (pivot word). It means 'I have left (my heart)' AND it sounds like 'Okitsu', a famous coastal place name. The 'tsu' auxiliary provides the perfect grammatical ending to make this pun work."
+    },
+    {
+      "type": "poem_presentation",
+      "poem_id": "lapis_9e980d4885e7d03b",
+      "display": {
+        "text_with_furigana": "おきもせすねもせてよるをあかしては<ruby>春</ruby>（はる）の<ruby>物</ruby>（もの）とてなかめくらしつ",
+        "romaji": "okimosesu nemosete yoru o akashite wa haru no mono tote nakamekurasitsu",
+        "translation": "Neither waking nor sleeping, I spend the night; then, as if it were a thing of spring, I have spent the whole day gazing idly."
+      },
+      "vocabulary": [
+        {
+          "word": "おき",
+          "reading": "oki",
+          "meaning": "waking up"
+        },
+        {
+          "word": "も",
+          "reading": "mo",
+          "meaning": "even / also"
+        },
+        {
+          "word": "せ",
+          "reading": "se",
+          "meaning": "to do"
+        },
+        {
+          "word": "す",
+          "reading": "su",
+          "meaning": "not (negative auxiliary variant)"
+        },
+        {
+          "word": "ね",
+          "reading": "ne",
+          "meaning": "sleeping"
+        },
+        {
+          "word": "も",
+          "reading": "mo",
+          "meaning": "even / also"
+        },
+        {
+          "word": "せ",
+          "reading": "se",
+          "meaning": "to do"
+        },
+        {
+          "word": "て",
+          "reading": "te",
+          "meaning": "linking particle (learned in Unit 2)"
+        },
+        {
+          "word": "よる",
+          "reading": "yoru",
+          "meaning": "night",
+          "chinese_cognate_note": "夜 (yè) - same meaning"
+        },
+        {
+          "word": "を",
+          "reading": "o",
+          "meaning": "object marker"
+        },
+        {
+          "word": "あかして",
+          "reading": "akashite",
+          "meaning": "spending the night until dawn"
+        },
+        {
+          "word": "は",
+          "reading": "wa",
+          "meaning": "topic marker"
+        },
+        {
+          "word": "春",
+          "reading": "haru",
+          "meaning": "spring",
+          "chinese_cognate_note": "春 (chūn) - same meaning"
+        },
+        {
+          "word": "の",
+          "reading": "no",
+          "meaning": "possessive particle"
+        },
+        {
+          "word": "物",
+          "reading": "mono",
+          "meaning": "thing",
+          "chinese_cognate_note": "物 (wù) - same meaning"
+        },
+        {
+          "word": "とて",
+          "reading": "tote",
+          "meaning": "thinking that / as"
+        },
+        {
+          "word": "なかめくらし",
+          "reading": "nakamekurashi",
+          "meaning": "to spend time gazing idly"
+        },
+        {
+          "word": "つ",
+          "reading": "tsu",
+          "meaning": "have finished (perfective auxiliary, conclusive form)"
+        }
+      ],
+      "focus_highlight": [
+        66,
+        67
+      ]
+    },
+    {
+      "type": "comprehension_check",
+      "question": "In the phrase 'nakamekurasitsu' (なかめくらしつ), why did the poet choose 'tsu' instead of 'nu'?",
+      "answer": "Because 'nakamekurasu' (to spend time gazing) is an intentional, active verb. The poet is describing a deliberate act they have completed, rather than a natural phenomenon occurring on its own.",
+      "hint": "Think about who is doing the 'gazing'—is it a person or a natural force?"
+    }
+  ],
+  "reference_card": {
+    "point": "Auxiliary つ (tsu)",
+    "one_liner": "Indicates the completion of an intentional or transitive action (Perfective Aspect).",
+    "example": "鳴きつる方 (The direction where [it] has finished crying)",
+    "see_also": [
+      "auxiliary_nu",
+      "lesson_conjugation_rentaikei"
+    ]
+  },
+  "forward_references": [
+    {
+      "point": "nokoreru (残れる)",
+      "note": "The 're' here is a different auxiliary indicating a state of being, which we will cover in Unit 8."
+    },
+    {
+      "point": "tote (とて)",
+      "note": "This is a compound particle meaning 'thinking that' or 'as', which we will explore in the next unit on complex linking."
+    }
+  ]
+}

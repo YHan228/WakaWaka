@@ -1,0 +1,369 @@
+{
+  "lesson_title": "The Persistence Flag: The Auxiliary り (ri)",
+  "lesson_summary": "In this lesson, we explore the auxiliary 'ri', which indicates a state resulting from a completed action. It functions like a 'status flag' in programming, telling us that an action happened and its effect still remains in the present.",
+  "grammar_explanation": {
+    "concept": "The auxiliary 'ri' (り) expresses the 'Resultative State' or 'Perfective'. It signifies that an action has been completed and the resulting state continues to exist. In Chinese, it is often comparable to '着' (zhe) or '了' (le) depending on whether the focus is on the ongoing state or the completion.",
+    "formation": "Visually, 'ri' (or its forms 'ru'/'re') almost always attaches to a verb ending in an 'e' sound (the Izentei or Mizenkei of specific verb classes). For example: Furu (fall) becomes Fure-ru (has fallen and is now there).",
+    "variations": [
+      "り (ri) - Sentence-ending form",
+      "る (ru) - Noun-modifying form (Rentaikei)",
+      "れ (re) - Realized/Conditional form"
+    ],
+    "common_confusions": [
+      "vs. たり (tari): Both indicate a resultative state. However, 'ri' is more archaic and elegant, and it only attaches to specific verb types (Yodan and Sa-hen), whereas 'tari' is more versatile."
+    ]
+  },
+  "teaching_sequence": [
+    {
+      "type": "introduction",
+      "content": "You have already learned 'tari' (たり) to describe a state. Today, we look at its more classical and 'strict' cousin: 'ri' (り). Think of 'ri' as a logical toggle. Once a verb is 'toggled' by 'ri', the action is finished, but the consequence is visible. If 'to fall' is the action, 'fure-ru' is the state of the snow lying on the ground."
+    },
+    {
+      "type": "poem_presentation",
+      "poem_id": "ogura100_e577ea67c50fc78c",
+      "display": {
+        "text_with_furigana": "<ruby>朝<rt>あさ</rt></ruby>ぼらけ<ruby>有明<rt>ありあけ</rt></ruby>の<ruby>月<rt>つき</rt></ruby>と<ruby>見<rt>み</rt></ruby>るまでに<ruby>吉野<rt>よしの</rt></ruby>の<ruby>里<rt>さと</rt></ruby>に<ruby>降<rt>ふ</rt></ruby>れる<ruby>白雪<rt>しらゆき</rt></ruby>",
+        "romaji": "asaborake ariake no tsuki to miru made ni yoshino no sato ni fureru shirayuki",
+        "translation": "At the break of dawn, the white snow falling in the village of Yoshino is so bright that I mistake it for the light of the late-setting moon."
+      },
+      "vocabulary": [
+        {
+          "word": "朝ぼらけ",
+          "reading": "あさぼらけ",
+          "meaning": "dawn",
+          "chinese_cognate_note": "朝 (zhāo) refers to morning."
+        },
+        {
+          "word": "有明",
+          "reading": "ありあけ",
+          "meaning": "daybreak moon",
+          "chinese_cognate_note": "The moon that remains in the sky at dawn."
+        },
+        {
+          "word": "の",
+          "reading": "の",
+          "meaning": "possessive particle (of)"
+        },
+        {
+          "word": "月",
+          "reading": "つき",
+          "meaning": "moon",
+          "chinese_cognate_note": "Identical to Chinese 月 (yuè)."
+        },
+        {
+          "word": "と",
+          "reading": "と",
+          "meaning": "comparison particle (as/like)"
+        },
+        {
+          "word": "見る",
+          "reading": "みる",
+          "meaning": "to see/perceive",
+          "chinese_cognate_note": "Identical to Chinese 見 (jiàn)."
+        },
+        {
+          "word": "までに",
+          "reading": "までに",
+          "meaning": "to the extent that"
+        },
+        {
+          "word": "吉野",
+          "reading": "よしの",
+          "meaning": "Yoshino (a place famous for snow and cherries)"
+        },
+        {
+          "word": "の",
+          "reading": "の",
+          "meaning": "possessive particle (of)"
+        },
+        {
+          "word": "里",
+          "reading": "さと",
+          "meaning": "village",
+          "chinese_cognate_note": "Identical to Chinese 里 (lǐ)."
+        },
+        {
+          "word": "に",
+          "reading": "に",
+          "meaning": "location marker (in)"
+        },
+        {
+          "word": "降れ",
+          "reading": "ふれ",
+          "meaning": "to fall (snow/rain)",
+          "chinese_cognate_note": "降 (jiàng) means to descend/fall."
+        },
+        {
+          "word": "る",
+          "reading": "る",
+          "meaning": "auxiliary 'ri' (resultative state)"
+        },
+        {
+          "word": "白雪",
+          "reading": "しらゆき",
+          "meaning": "white snow",
+          "chinese_cognate_note": "Identical to Chinese 白雪 (bái xuě)."
+        }
+      ],
+      "focus_highlight": [
+        19,
+        21
+      ]
+    },
+    {
+      "type": "grammar_spotlight",
+      "content": "Look at the word <ruby>降<rt>ふ</rt></ruby>れる (fure-ru). The base verb is 'furu' (to fall). By changing the vowel to 'e' and adding 'ru', the poet isn't just saying 'snow falls.' They are describing the **state** of the snow that has fallen and is now covering the village. It is the 'fallen-and-now-present' snow. Because it modifies the noun 'shirayuki' (white snow), 'ri' takes the form 'ru'."
+    },
+    {
+      "type": "poem_presentation",
+      "poem_id": "lapis_c1636ada463705af",
+      "display": {
+        "text_with_furigana": "<ruby>神<rt>かむ</rt></ruby>なひの<ruby>山<rt>やま</rt></ruby>をすき<ruby>行<rt>ゆ</rt></ruby>く<ruby>秋<rt>あき</rt></ruby>なればたつた<ruby>河<rt>かわ</rt></ruby>にそぬさはたむくる",
+        "romaji": "kamunahi no yama o suki yuku aki nare ha tatsuta kawa ni so nusa hata mukuru",
+        "translation": "Since it is autumn passing through the sacred mountains, offerings are being made even to the Tatsuta River."
+      },
+      "vocabulary": [
+        {
+          "word": "神なひ",
+          "reading": "かむなひ",
+          "meaning": "divine/sacred",
+          "chinese_cognate_note": "神 (shén) means deity."
+        },
+        {
+          "word": "の",
+          "reading": "の",
+          "meaning": "possessive particle"
+        },
+        {
+          "word": "山",
+          "reading": "やま",
+          "meaning": "mountain",
+          "chinese_cognate_note": "Identical to Chinese 山 (shān)."
+        },
+        {
+          "word": "を",
+          "reading": "を",
+          "meaning": "object marker (through/space)"
+        },
+        {
+          "word": "すき",
+          "reading": "すき",
+          "meaning": "to pass through"
+        },
+        {
+          "word": "行く",
+          "reading": "ゆく",
+          "meaning": "to go",
+          "chinese_cognate_note": "Identical to Chinese 行 (xíng)."
+        },
+        {
+          "word": "秋",
+          "reading": "あき",
+          "meaning": "autumn",
+          "chinese_cognate_note": "Identical to Chinese 秋 (qiū)."
+        },
+        {
+          "word": "なれ",
+          "reading": "なれ",
+          "meaning": "to be (copula nari)"
+        },
+        {
+          "word": "は",
+          "reading": "は",
+          "meaning": "topic/reason marker"
+        },
+        {
+          "word": "たつた",
+          "reading": "たつた",
+          "meaning": "Tatsuta (place name)"
+        },
+        {
+          "word": "河",
+          "reading": "かわ",
+          "meaning": "river",
+          "chinese_cognate_note": "Identical to Chinese 河 (hé)."
+        },
+        {
+          "word": "に",
+          "reading": "に",
+          "meaning": "target marker (to)"
+        },
+        {
+          "word": "そ",
+          "reading": "そ",
+          "meaning": "emphasis particle (archaic 'zo')"
+        },
+        {
+          "word": "ぬさ",
+          "reading": "ぬさ",
+          "meaning": "cloth offerings to gods"
+        },
+        {
+          "word": "はた",
+          "reading": "はた",
+          "meaning": "also/moreover"
+        },
+        {
+          "word": "たむく",
+          "reading": "たむく",
+          "meaning": "to offer (to a deity)"
+        },
+        {
+          "word": "る",
+          "reading": "る",
+          "meaning": "auxiliary 'ri' (resultative/ongoing state)"
+        }
+      ],
+      "focus_highlight": [
+        26,
+        27
+      ]
+    },
+    {
+      "type": "grammar_spotlight",
+      "content": "In 'tamuku-ru', the 'ru' indicates that the act of offering is not just a momentary flash, but a state that has been established. The offerings have been placed and remain there as the autumn passes."
+    },
+    {
+      "type": "poem_presentation",
+      "poem_id": "lapis_9363708ca0b19b0d",
+      "display": {
+        "text_with_furigana": "<ruby>月日<rt>つきひ</rt></ruby>えりあひてしあればわかれむのをしかる<ruby>君<rt>きみ</rt></ruby>はあすさへもかも",
+        "romaji": "tsuki hie ri a hi te shi are ha wakare mu no o shikaru kimi ha asu sae mo ka mo",
+        "translation": "Months and days have passed since we met; now that we must part, I wish you could stay even until tomorrow."
+      },
+      "vocabulary": [
+        {
+          "word": "月日",
+          "reading": "つきひ",
+          "meaning": "months and days/time",
+          "chinese_cognate_note": "Identical to Chinese 月日 (yuè rì)."
+        },
+        {
+          "word": "え",
+          "reading": "え",
+          "meaning": "to pass/elapse"
+        },
+        {
+          "word": "り",
+          "reading": "り",
+          "meaning": "auxiliary 'ri' (completed state)"
+        },
+        {
+          "word": "あひ",
+          "reading": "あひ",
+          "meaning": "to meet",
+          "chinese_cognate_note": "会 (huì) in Chinese."
+        },
+        {
+          "word": "て",
+          "reading": "て",
+          "meaning": "linking particle"
+        },
+        {
+          "word": "し",
+          "reading": "し",
+          "meaning": "past auxiliary"
+        },
+        {
+          "word": "あれ",
+          "reading": "あれ",
+          "meaning": "to be"
+        },
+        {
+          "word": "は",
+          "reading": "は",
+          "meaning": "topic/reason marker"
+        },
+        {
+          "word": "わかれ",
+          "reading": "わかれ",
+          "meaning": "to part/separate",
+          "chinese_cognate_note": "別 (bié) in Chinese."
+        },
+        {
+          "word": "む",
+          "reading": "む",
+          "meaning": "volitional/future auxiliary"
+        },
+        {
+          "word": "の",
+          "reading": "の",
+          "meaning": "particle"
+        },
+        {
+          "word": "を",
+          "reading": "を",
+          "meaning": "object/conjunction marker"
+        },
+        {
+          "word": "しかる",
+          "reading": "しかる",
+          "meaning": "to be so/that way"
+        },
+        {
+          "word": "君",
+          "reading": "きみ",
+          "meaning": "you/lord",
+          "chinese_cognate_note": "Identical to Chinese 君 (jūn)."
+        },
+        {
+          "word": "は",
+          "reading": "は",
+          "meaning": "topic marker"
+        },
+        {
+          "word": "あす",
+          "reading": "あす",
+          "meaning": "tomorrow"
+        },
+        {
+          "word": "さへ",
+          "reading": "さへ",
+          "meaning": "even"
+        },
+        {
+          "word": "も",
+          "reading": "も",
+          "meaning": "also/even"
+        },
+        {
+          "word": "かも",
+          "reading": "かも",
+          "meaning": "emotional exclamation"
+        }
+      ],
+      "focus_highlight": [
+        4,
+        5
+      ]
+    },
+    {
+      "type": "comprehension_check",
+      "question": "In the phrase '月日えり' (tsukihi e-ri), the verb 'e' means 'to pass (time)'. What does the 'ri' tell us about the time?",
+      "answer": "It tells us that the time has already passed and we are now in the resulting state (the present moment after that time has elapsed).",
+      "hint": "Think of 'ri' as a status flag that marks an action as 'Done, and here is the result'."
+    },
+    {
+      "type": "summary",
+      "content": "The auxiliary 'ri' is a powerful tool in Waka to bridge the past and the present. It doesn't just say something happened; it describes the world as it looks *because* something happened. Remember the 'e-sound' visual cue: Fure-ru, Tamuku-ru, E-ri."
+    }
+  ],
+  "reference_card": {
+    "point": "Auxiliary り (ri)",
+    "one_liner": "Indicates a state resulting from a completed action (Resultative/Perfective).",
+    "example": "降れる (fure-ru) = Has fallen (and is now lying there).",
+    "see_also": [
+      "auxiliary_tari"
+    ]
+  },
+  "forward_references": [
+    {
+      "point": "ぞ (zo/so)",
+      "note": "We will learn how this particle forces a specific ending on the verb in Unit 7 (Kakari-musubi)."
+    },
+    {
+      "point": "ば (ba)",
+      "note": "We will explore how this creates 'since' or 'if' logic in Unit 8."
+    }
+  ]
+}

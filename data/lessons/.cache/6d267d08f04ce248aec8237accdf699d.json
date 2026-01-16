@@ -1,0 +1,220 @@
+{
+  "lesson_title": "The Emotional Anchor: Particle な (na)",
+  "lesson_summary": "In this lesson, we explore the particle な (na), the final 'emotional exhale' of a poem. We will see how it anchors a thought, often turning a question into a deep realization or a sigh of wonder.",
+  "grammar_explanation": {
+    "concept": "The particle な (na) is a sentence-final particle used to express deep emotion, exclamation, or a lingering realization. In Classical Japanese, it is most frequently encountered as the second half of the compound particle かな (kana). While か (ka) asks a question or expresses doubt, adding な (na) turns that doubt inward, creating a 'rhetorical sigh' or an exclamation of 'Ah, I realize...!'",
+    "formation": "Typically follows the Rentaikei (Attributive form) of verbs/adjectives or follows a Noun directly. Most commonly seen as [Base] + か + な.",
+    "variations": [
+      "かな (kana) - The most common form, expressing a sigh of realization.",
+      "な (na) - Used alone at the end of a sentence for pure exclamation (less common in the Kokinshu than kana)."
+    ],
+    "common_confusions": [
+      "vs. Prohibitive な: A different 'na' placed after the Terminal form means 'Do not...', but in the context of these emotional poems, it is almost always the exclamatory 'na'.",
+      "vs. Copula な: The 'na' used in 'nari' (to be) is a linking tool; the exclamatory 'na' is a terminal emotional tag."
+    ]
+  },
+  "teaching_sequence": [
+    {
+      "type": "introduction",
+      "content": "You have already mastered the logic of the 'Question' with か (ka) and the 'Spotlight' with ぞ (zo). Now, we reach the final emotional layer. Think of な (na) as the 'Emotional Metadata' of a sentence. If a poem were a line of code, な would be the final `!` that tells the reader: 'This is not just data; this is a feeling.' It anchors the preceding imagery into the poet's heart."
+    },
+    {
+      "type": "poem_presentation",
+      "poem_id": "lapis_ee7837c0cf599ce5",
+      "display": {
+        "text_with_furigana": "<ruby>君<rt>きみ</rt></ruby>まさて<ruby>煙<rt>けむた</rt></ruby>えにし<ruby>しほかま<rt>しほかま</rt></ruby>の<ruby>浦<rt>うら</rt></ruby><ruby>さびしく<rt>さびしく</rt></ruby>も<ruby>見え渡る<rt>みえわたる</rt></ruby>か<ruby>な<rt>な</rt></ruby>",
+        "romaji": "kimi masate kemuta enishi shi hokama no ura sabishiku mo miewataru kana",
+        "translation": "Since you are gone, the smoke has ceased; how lonely the bay of Shiogama appears as I gaze across it!"
+      },
+      "vocabulary": [
+        {
+          "word": "君",
+          "reading": "きみ",
+          "meaning": "you",
+          "chinese_cognate_note": "Same as Chinese 君 (jūn)."
+        },
+        {
+          "word": "まさて",
+          "reading": "まさて",
+          "meaning": "not being here / in your absence"
+        },
+        {
+          "word": "煙",
+          "reading": "けむた",
+          "meaning": "smoke / smoky",
+          "chinese_cognate_note": "Same as Chinese 烟 (yān)."
+        },
+        {
+          "word": "えにし",
+          "reading": "えにし",
+          "meaning": "fate / bond / connection",
+          "chinese_cognate_note": "Same as Chinese 缘 (yuán)."
+        },
+        {
+          "word": "しほかま",
+          "reading": "しほかま",
+          "meaning": "Shiogama (a famous coastal location)"
+        },
+        {
+          "word": "の",
+          "reading": "の",
+          "meaning": "possessive particle (of)"
+        },
+        {
+          "word": "浦",
+          "reading": "うら",
+          "meaning": "bay / inlet",
+          "chinese_cognate_note": "Same as Chinese 浦 (pǔ)."
+        },
+        {
+          "word": "さびしく",
+          "reading": "さびしく",
+          "meaning": "lonely / desolate",
+          "chinese_cognate_note": "Related to Chinese 寂 (jì)."
+        },
+        {
+          "word": "も",
+          "reading": "も",
+          "meaning": "emphasis particle (even/also)"
+        },
+        {
+          "word": "見え渡る",
+          "reading": "みえわたる",
+          "meaning": "to be visible far and wide / to gaze across",
+          "chinese_cognate_note": "见 (see) + 渡 (across)."
+        },
+        {
+          "word": "かな",
+          "reading": "かな",
+          "meaning": "exclamatory particle (how...!)"
+        }
+      ],
+      "focus_highlight": [
+        25,
+        27
+      ]
+    },
+    {
+      "type": "grammar_spotlight",
+      "content": "In the poem above, look at the end: **見え渡るかな (miewataru kana)**. \n\n1. **見え渡る (miewataru)** is the action: 'to gaze across.'\n2. **か (ka)** adds a sense of 'is it so?' or wonder.\n3. **な (na)** provides the emotional closure.\n\nWithout the **な**, it might sound like a simple observation. With **な**, it becomes a sigh of grief. The poet isn't just seeing the bay; they are feeling the weight of the emptiness where the smoke (and the person) used to be."
+    },
+    {
+      "type": "poem_presentation",
+      "poem_id": "lapis_9398b4e23dae0a2e",
+      "display": {
+        "text_with_furigana": "<ruby>山里<rt>やまさとに</rt></ruby>にひとり<ruby>なかめて<rt>なかめて</rt></ruby><ruby>おもふ<rt>おもふ</rt></ruby>か<ruby>な<rt>な</rt></ruby><ruby>よ<rt>よ</rt></ruby>に<ruby>すむ<rt>すむ</rt></ruby><ruby>ひと<rt>ひと</rt></ruby>の<ruby>こころ<rt>こころ</rt></ruby><ruby>つよさ<rt>つよさ</rt></ruby>を",
+        "romaji": "yamazato ni hitori nakamete omou kana yo ni sumu hito no kokoro tsuyosa o",
+        "translation": "Gazing alone in the mountain village, I realize—how heartless (strong-willed) are the hearts of those who live in this world!"
+      },
+      "vocabulary": [
+        {
+          "word": "山里",
+          "reading": "やまざと",
+          "meaning": "mountain village",
+          "chinese_cognate_note": "山 (mountain) + 里 (village/place)."
+        },
+        {
+          "word": "に",
+          "reading": "に",
+          "meaning": "location particle (in)"
+        },
+        {
+          "word": "ひとり",
+          "reading": "ひとり",
+          "meaning": "alone / one person",
+          "chinese_cognate_note": "一人 (yī rén)."
+        },
+        {
+          "word": "なかめて",
+          "reading": "なかめて",
+          "meaning": "gazing / looking"
+        },
+        {
+          "word": "おもふ",
+          "reading": "おもふ",
+          "meaning": "to think / to feel",
+          "chinese_cognate_note": "Same as Chinese 思 (sī)."
+        },
+        {
+          "word": "かな",
+          "reading": "かな",
+          "meaning": "exclamatory particle (how...!)"
+        },
+        {
+          "word": "よ",
+          "reading": "よ",
+          "meaning": "the world / society",
+          "chinese_cognate_note": "Same as Chinese 世 (shì)."
+        },
+        {
+          "word": "に",
+          "reading": "に",
+          "meaning": "location particle (in)"
+        },
+        {
+          "word": "すむ",
+          "reading": "すむ",
+          "meaning": "to live / to reside",
+          "chinese_cognate_note": "Related to Chinese 住 (zhù)."
+        },
+        {
+          "word": "ひと",
+          "reading": "ひと",
+          "meaning": "person",
+          "chinese_cognate_note": "Same as Chinese 人 (rén)."
+        },
+        {
+          "word": "の",
+          "reading": "の",
+          "meaning": "possessive particle ('s)"
+        },
+        {
+          "word": "こころ",
+          "reading": "こころ",
+          "meaning": "heart / mind",
+          "chinese_cognate_note": "Same as Chinese 心 (xīn)."
+        },
+        {
+          "word": "つよさ",
+          "reading": "つよさ",
+          "meaning": "strength / hardness",
+          "chinese_cognate_note": "Same as Chinese 强 (qiáng)."
+        },
+        {
+          "word": "を",
+          "reading": "を",
+          "meaning": "object marker (here used for emphasis at the end)"
+        }
+      ],
+      "focus_highlight": [
+        14,
+        16
+      ]
+    },
+    {
+      "type": "grammar_spotlight",
+      "content": "Notice the structure **おもふかな (omou kana)**. \n\nIn this poem, the 'sigh' happens in the middle of the sentence (a technique called *kire* or 'cutting'). The poet says 'I think... (sigh)' and then explains *what* they are thinking about: the strength/coldness of people's hearts. The **な (na)** here acts like a logical break where the emotion overflows before the thought is even finished."
+    },
+    {
+      "type": "comprehension_check",
+      "question": "In the phrase 'いのちかな' (inochi kana), what is the function of 'na'?",
+      "answer": "It acts as an emotional anchor or exclamation, turning the noun 'life' (inochi) into an emotional realization like 'Oh, this life!'",
+      "hint": "Think about how 'ka' (question) and 'na' (emotion) work together to create a sigh."
+    }
+  ],
+  "reference_card": {
+    "point": "Particle な (na)",
+    "one_liner": "An exclamatory particle that anchors emotion and creates a lingering 'sigh' of realization, usually paired with 'ka'.",
+    "example": "をしきいのちかな (oshiki inochi kana) = 'Oh, how precious this life is!'",
+    "see_also": [
+      "particle_ka",
+      "kireji_kana"
+    ]
+  },
+  "forward_references": [
+    {
+      "point": "倒置法 (touchihou) - Inversion",
+      "note": "In Poem 2, the object (tsuyosa o) comes AFTER the verb and the particle 'kana'. We will see more of this poetic word-order flipping in the final review."
+    }
+  ]
+}

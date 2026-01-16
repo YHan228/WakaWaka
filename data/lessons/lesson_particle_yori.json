@@ -1,0 +1,457 @@
+{
+  "lesson_id": "lesson_particle_yori",
+  "lesson_title": "The Vector Particle: より (yori) — Origin and Comparison",
+  "lesson_summary": "In this lesson, we explore the particle 'yori', which functions as a logical vector. It identifies either the starting point of an action ('from') or the baseline for a comparison ('than').",
+  "grammar_point": "particle_yori",
+  "grammar_explanation": {
+    "concept": "The particle より (yori) defines a point of departure. In a spatial context, it marks the 'source' (from). In a logical context, it marks the 'standard of comparison' (than).",
+    "formation": "[Noun] + より",
+    "variations": [
+      "In some contexts, it can also mean 'immediately after' or 'except for' (when paired with negatives)."
+    ],
+    "common_confusions": [
+      "vs. から (kara): In modern Japanese, 'kara' is the standard 'from'. In classical poetry, 'yori' is much more frequent for both 'from' and 'than'."
+    ]
+  },
+  "teaching_sequence": [
+    {
+      "type": "introduction",
+      "content": "Having mastered the destination particles (he/e) and the location particle (ni), we now look at the opposite end of the vector. If 'he' is the arrow pointing toward a goal, 'yori' is the tail of the arrow, marking where the movement begins. For a Chinese speaker, think of this as the functional equivalent of '自' (zì) or '从' (cóng) when indicating space, and '比' (bǐ) when comparing two things."
+    },
+    {
+      "type": "poem_presentation",
+      "poem_id": "ogura100_0efc609713b735b9",
+      "display": {
+        "text_with_furigana": "<ruby>秋風<rt>あきかぜ</rt></ruby>にたなびく<ruby>雲<rt>くも</rt></ruby>の<ruby>絶<rt>た</rt></ruby>え<ruby>間<rt>ま</rt></ruby>より<ruby>もれ<rt>もれ</rt></ruby><ruby>出<rt>い</rt></ruby>づる<ruby>月<rt>つき</rt></ruby>の<ruby>影<rt>かげ</rt></ruby>のさやけさ",
+        "romaji": "akikaze ni, tanabiku kumo no, taema yori, moreizuru tsuki, no kage no sayakesa",
+        "translation": "From the gaps of the clouds trailing in the autumn wind, how clear is the light of the moon leaking through."
+      },
+      "vocabulary": [
+        {
+          "word": "秋風",
+          "reading": "あきかぜ",
+          "meaning": "autumn wind",
+          "span": [
+            0,
+            2
+          ],
+          "chinese_cognate_note": "Identical meaning: 秋风"
+        },
+        {
+          "word": "に",
+          "reading": "に",
+          "meaning": "in/by (particle)",
+          "span": [
+            2,
+            3
+          ],
+          "chinese_cognate_note": "Learned in Unit 1"
+        },
+        {
+          "word": "たなびく",
+          "reading": "たなびく",
+          "meaning": "to trail, to hang low (of clouds)",
+          "span": [
+            3,
+            7
+          ],
+          "chinese_cognate_note": null
+        },
+        {
+          "word": "雲",
+          "reading": "くも",
+          "meaning": "cloud",
+          "span": [
+            7,
+            8
+          ],
+          "chinese_cognate_note": "Identical meaning: 云"
+        },
+        {
+          "word": "の",
+          "reading": "の",
+          "meaning": "possessive/genitive particle",
+          "span": [
+            8,
+            9
+          ],
+          "chinese_cognate_note": "Learned in Unit 1 (的)"
+        },
+        {
+          "word": "絶え間",
+          "reading": "たえま",
+          "meaning": "interruption, break, gap",
+          "span": [
+            9,
+            12
+          ],
+          "chinese_cognate_note": "Meaning of 'break' is clear from 绝 and 间"
+        },
+        {
+          "word": "より",
+          "reading": "より",
+          "meaning": "from (source particle)",
+          "span": [
+            12,
+            14
+          ],
+          "chinese_cognate_note": null
+        },
+        {
+          "word": "もれ出づる",
+          "reading": "もれいづる",
+          "meaning": "to leak out, to shine through",
+          "span": [
+            14,
+            19
+          ],
+          "chinese_cognate_note": null
+        },
+        {
+          "word": "月",
+          "reading": "つき",
+          "meaning": "moon",
+          "span": [
+            19,
+            20
+          ],
+          "chinese_cognate_note": "Identical meaning: 月"
+        },
+        {
+          "word": "影",
+          "reading": "かげ",
+          "meaning": "light / reflection",
+          "span": [
+            21,
+            22
+          ],
+          "chinese_cognate_note": "Note: In classical Japanese, 影 often refers to the light/form of the moon, not just a shadow."
+        },
+        {
+          "word": "さやけさ",
+          "reading": "さやけさ",
+          "meaning": "clearness, brightness",
+          "span": [
+            23,
+            27
+          ],
+          "chinese_cognate_note": null
+        }
+      ],
+      "focus_highlight": [
+        31,
+        35
+      ]
+    },
+    {
+      "type": "grammar_spotlight",
+      "content": "In the poem above, 'taema yori' (絶え間より) functions as a spatial source. The moonlight is 'leaking out' (moreizuru) **from** the gaps. \n\nLogic: [Source] + より + [Movement/Action]. \nAnalogy: `source_path = \"taema\";`",
+      "evidence": "See the poem above."
+    },
+    {
+      "type": "poem_presentation",
+      "poem_id": "ogura100_c79e9cdd643095ab",
+      "display": {
+        "text_with_furigana": "もろともにあはれと<ruby>思<rt>おも</rt></ruby>へ<ruby>山桜<rt>やまざくら</rt></ruby><ruby>花<rt>はな</rt></ruby>よりほかに<ruby>知<rt>し</rt></ruby>る<ruby>人<rt>ひと</rt></ruby>もなし",
+        "romaji": "morotomo ni, aware to omoe, yamazakura, hana yori hoka ni, shiru hito mo nashi",
+        "translation": "Let us feel the pathos of things together, mountain cherry blossoms; other than your flowers, there is no one I know."
+      },
+      "vocabulary": [
+        {
+          "word": "もろともに",
+          "reading": "もろともに",
+          "meaning": "together, with",
+          "span": [
+            0,
+            5
+          ],
+          "chinese_cognate_note": null
+        },
+        {
+          "word": "あはれ",
+          "reading": "あはれ",
+          "meaning": "pathos, deep emotion",
+          "span": [
+            5,
+            8
+          ],
+          "chinese_cognate_note": null
+        },
+        {
+          "word": "と",
+          "reading": "と",
+          "meaning": "quotative particle",
+          "span": [
+            8,
+            9
+          ],
+          "chinese_cognate_note": "Learned in Unit 1"
+        },
+        {
+          "word": "思へ",
+          "reading": "おもへ",
+          "meaning": "think (imperative form)",
+          "span": [
+            9,
+            11
+          ],
+          "chinese_cognate_note": "Cognate: 思"
+        },
+        {
+          "word": "山桜",
+          "reading": "やまざくら",
+          "meaning": "mountain cherry blossoms",
+          "span": [
+            11,
+            13
+          ],
+          "chinese_cognate_note": "Cognate: 山樱"
+        },
+        {
+          "word": "花",
+          "reading": "はな",
+          "meaning": "flower/blossom",
+          "span": [
+            13,
+            14
+          ],
+          "chinese_cognate_note": "Cognate: 花"
+        },
+        {
+          "word": "より",
+          "reading": "より",
+          "meaning": "than (comparison particle)",
+          "span": [
+            14,
+            16
+          ],
+          "chinese_cognate_note": null
+        },
+        {
+          "word": "ほか",
+          "reading": "ほか",
+          "meaning": "other, another",
+          "span": [
+            16,
+            18
+          ],
+          "chinese_cognate_note": "Cognate: 外"
+        },
+        {
+          "word": "に",
+          "reading": "に",
+          "meaning": "at/in (particle)",
+          "span": [
+            18,
+            19
+          ],
+          "chinese_cognate_note": null
+        },
+        {
+          "word": "知る",
+          "reading": "しる",
+          "meaning": "to know",
+          "span": [
+            19,
+            21
+          ],
+          "chinese_cognate_note": "Cognate: 知"
+        },
+        {
+          "word": "人",
+          "reading": "ひと",
+          "meaning": "person",
+          "span": [
+            21,
+            22
+          ],
+          "chinese_cognate_note": "Cognate: 人"
+        },
+        {
+          "word": "も",
+          "reading": "も",
+          "meaning": "also/even (particle)",
+          "span": [
+            22,
+            23
+          ],
+          "chinese_cognate_note": "Learned in Unit 1"
+        },
+        {
+          "word": "なし",
+          "reading": "なし",
+          "meaning": "does not exist / none",
+          "span": [
+            23,
+            25
+          ],
+          "chinese_cognate_note": "Cognate: 无/无し"
+        }
+      ],
+      "focus_highlight": [
+        38,
+        42
+      ]
+    },
+    {
+      "type": "grammar_spotlight",
+      "content": "Here, 'yori' is used for comparison or exclusion. 'Hana yori hoka' (花よりほか) literally means 'other than the flowers.' \n\nLogic: [Standard] + より + [Difference]. \nIn Chinese grammar, this is the '比' (bǐ) structure: '比起花 (besides the flowers), 没有其他人 (there is no one else).'",
+      "evidence": "See the poem above."
+    },
+    {
+      "type": "poem_presentation",
+      "poem_id": "lapis_10ed866b3dbed126",
+      "display": {
+        "text_with_furigana": "まこもかるよとのさは<ruby>水<rt>みず</rt></ruby><ruby>雨<rt>あめ</rt></ruby>ふれば<ruby>常<rt>つね</rt></ruby>よりことに<ruby>勝<rt>まさ</rt></ruby>るわが<ruby>恋<rt>こい</rt></ruby>",
+        "romaji": "makomokaru, yoto no sawamizu, ame fureba, tsune yori koto ni, masaru waga koi",
+        "translation": "Like the marsh water of Yoto where reeds are cut, when the rain falls, my love increases even more than usual."
+      },
+      "vocabulary": [
+        {
+          "word": "まこも",
+          "reading": "まこも",
+          "meaning": "wild rice / reed",
+          "span": [
+            0,
+            3
+          ],
+          "chinese_cognate_note": null
+        },
+        {
+          "word": "かる",
+          "reading": "かる",
+          "meaning": "to reap/cut",
+          "span": [
+            3,
+            5
+          ],
+          "chinese_cognate_note": "Cognate: 刈"
+        },
+        {
+          "word": "よと",
+          "reading": "よと",
+          "meaning": "Yoto (a place name)",
+          "span": [
+            5,
+            7
+          ],
+          "chinese_cognate_note": null
+        },
+        {
+          "word": "の",
+          "reading": "の",
+          "meaning": "possessive particle",
+          "span": [
+            7,
+            8
+          ],
+          "chinese_cognate_note": null
+        },
+        {
+          "word": "さは水",
+          "reading": "さわみず",
+          "meaning": "marsh water",
+          "span": [
+            8,
+            11
+          ],
+          "chinese_cognate_note": "水 is identical"
+        },
+        {
+          "word": "雨",
+          "reading": "あめ",
+          "meaning": "rain",
+          "span": [
+            11,
+            12
+          ],
+          "chinese_cognate_note": "Identical meaning: 雨"
+        },
+        {
+          "word": "ふれば",
+          "reading": "ふれば",
+          "meaning": "when/because it falls",
+          "span": null,
+          "chinese_cognate_note": null
+        },
+        {
+          "word": "常",
+          "reading": "つね",
+          "meaning": "usual / ordinary",
+          "span": null,
+          "chinese_cognate_note": "Cognate: 常 (normal/always)"
+        },
+        {
+          "word": "より",
+          "reading": "より",
+          "meaning": "than (comparison particle)",
+          "span": [
+            17,
+            19
+          ],
+          "chinese_cognate_note": null
+        },
+        {
+          "word": "ことに",
+          "reading": "ことに",
+          "meaning": "especially / particularly",
+          "span": [
+            19,
+            22
+          ],
+          "chinese_cognate_note": "Cognate: 殊 (distinct/special)"
+        },
+        {
+          "word": "勝る",
+          "reading": "まさる",
+          "meaning": "to exceed / surpass",
+          "span": null,
+          "chinese_cognate_note": "Cognate: 胜 (to win/surpass)"
+        },
+        {
+          "word": "わが",
+          "reading": "わが",
+          "meaning": "my",
+          "span": null,
+          "chinese_cognate_note": "Cognate: 我"
+        },
+        {
+          "word": "恋",
+          "reading": "こい",
+          "meaning": "love / longing",
+          "span": null,
+          "chinese_cognate_note": "Cognate: 恋"
+        }
+      ],
+      "focus_highlight": [
+        43,
+        47
+      ]
+    },
+    {
+      "type": "comprehension_check",
+      "question": "In the third poem, what is the 'baseline' that the poet's love is being compared to?",
+      "answer": "The baseline is 'tsune' (常), meaning 'usual' or 'ordinary'. The phrase 'tsune yori' means 'than usual'.",
+      "hint": "Look for the word immediately preceding 'yori'."
+    }
+  ],
+  "reference_card": {
+    "point": "Particle より (yori)",
+    "one_liner": "Indicates the starting point (from) or the baseline for comparison (than).",
+    "example": "常より勝る (tsune yori masaru) = Surpasses [than] the usual.",
+    "see_also": [
+      "particle_he",
+      "particle_ni"
+    ]
+  },
+  "forward_references": [
+    {
+      "point": "ふれば (fureba)",
+      "note": "The 'ba' ending indicates a conditional or causal relationship ('when/because'). We will cover this in Unit 5: Conjunctive Particles."
+    },
+    {
+      "point": "思へ (omoe)",
+      "note": "This is the imperative form of the verb 'to think'. Verb conjugations will be introduced starting in Unit 3."
+    }
+  ]
+}

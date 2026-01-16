@@ -1,0 +1,568 @@
+{
+  "lesson_id": "lesson_particle_wa",
+  "lesson_title": "The Topic Marker: Defining the Scope with 'Wa' (は)",
+  "lesson_summary": "In this lesson, we introduce the particle 'wa' (は), which functions as a 'logic tag' to identify the topic of a sentence, similar to the Chinese '至于' or the implicit topic-comment structure.",
+  "grammar_point": "particle_wa",
+  "grammar_explanation": {
+    "concept": "The particle 'wa' (は) marks the 'Topic' of the sentence. It tells the reader: 'Regarding this specific thing, here is what I am about to say.' While it often marks the subject (the 'doer'), its primary role is to set the stage or scope for the rest of the statement.",
+    "formation": "[Noun] + は (wa)",
+    "variations": [
+      "に + は (ni wa): Regarding [at/in this place/time]..."
+    ],
+    "common_confusions": [
+      "In Chinese, the topic is often just placed at the start of the sentence without a marker (e.g., '那个人，我不认识'). In Japanese, 'wa' (は) explicitly flags that '那个人' is the topic."
+    ]
+  },
+  "teaching_sequence": [
+    {
+      "type": "introduction",
+      "content": "In our previous lessons, we looked at 'no' (の) for possession and 'ni' (に) for location. These particles define relationships between specific words. Today, we move to a 'macro' level. The particle 'wa' (は) acts like a spotlight, shining on a specific concept to let us know that the rest of the poem will be a comment or observation about that topic."
+    },
+    {
+      "type": "poem_presentation",
+      "poem_id": "lapis_8989aa2cde50c93d",
+      "display": {
+        "text_with_furigana": "<ruby>吹<rt>ふ</rt></ruby>きまよふ<ruby>野風<rt>のかぜ</rt></ruby>をさむみ<ruby>秋<rt>あき</rt></ruby><span style='color: #ff4500;'>は</span><ruby>きのう<rt>きのう</rt></ruby><ruby>つり<rt>つり</rt></ruby>も<ruby>行<rt>ゆ</rt></ruby>くか<ruby>人<rt>ひと</rt></ruby>の<ruby>心<rt>こころ</rt></ruby>の",
+        "romaji": "fukimayofu, nokaze o samumi, aki wa kinou, tsuri mo yuku ka, hito no kokoro no",
+        "translation": "The field winds blow wildly and cold; as for autumn, has it passed away yesterday? Or is it the heart of the person that changed?"
+      },
+      "vocabulary": [
+        {
+          "word": "吹きまよふ",
+          "reading": "ふきまよふ",
+          "meaning": "to blow about wildly",
+          "span": [
+            0,
+            5
+          ],
+          "chinese_cognate_note": null
+        },
+        {
+          "word": "野風",
+          "reading": "のかぜ",
+          "meaning": "wind in the fields",
+          "span": [
+            5,
+            7
+          ],
+          "chinese_cognate_note": "野 + 風: Meaning is identical to Chinese."
+        },
+        {
+          "word": "を",
+          "reading": "を",
+          "meaning": "object marker (indicates the target of an action)",
+          "span": [
+            7,
+            8
+          ],
+          "chinese_cognate_note": null
+        },
+        {
+          "word": "さむみ",
+          "reading": "さむみ",
+          "meaning": "because it is cold / the coldness",
+          "span": [
+            8,
+            11
+          ],
+          "chinese_cognate_note": null
+        },
+        {
+          "word": "秋",
+          "reading": "あき",
+          "meaning": "autumn",
+          "span": [
+            11,
+            12
+          ],
+          "chinese_cognate_note": "Identical to Chinese '秋'."
+        },
+        {
+          "word": "は",
+          "reading": "は",
+          "meaning": "topic marker (as for...)",
+          "span": [
+            12,
+            13
+          ],
+          "chinese_cognate_note": null
+        },
+        {
+          "word": "きのう",
+          "reading": "きのう",
+          "meaning": "yesterday",
+          "span": [
+            13,
+            16
+          ],
+          "chinese_cognate_note": "Written as 昨日 in Kanji."
+        },
+        {
+          "word": "つり",
+          "reading": "つり",
+          "meaning": "change, alteration",
+          "span": [
+            16,
+            18
+          ],
+          "chinese_cognate_note": "Related to 移り (change/shift)."
+        },
+        {
+          "word": "も",
+          "reading": "も",
+          "meaning": "also, even",
+          "span": [
+            18,
+            19
+          ],
+          "chinese_cognate_note": null
+        },
+        {
+          "word": "行く",
+          "reading": "ゆく",
+          "meaning": "to go, to pass",
+          "span": [
+            19,
+            21
+          ],
+          "chinese_cognate_note": "Identical to Chinese '行'."
+        },
+        {
+          "word": "か",
+          "reading": "か",
+          "meaning": "question marker",
+          "span": [
+            21,
+            22
+          ],
+          "chinese_cognate_note": null
+        },
+        {
+          "word": "人",
+          "reading": "ひと",
+          "meaning": "person",
+          "span": [
+            22,
+            23
+          ],
+          "chinese_cognate_note": "Identical to Chinese '人'."
+        },
+        {
+          "word": "の",
+          "reading": "の",
+          "meaning": "possessive particle (learned in Lesson 1)",
+          "span": [
+            23,
+            24
+          ],
+          "chinese_cognate_note": null
+        },
+        {
+          "word": "心",
+          "reading": "こころ",
+          "meaning": "heart/mind",
+          "span": [
+            24,
+            25
+          ],
+          "chinese_cognate_note": "Identical to Chinese '心'."
+        },
+        {
+          "word": "の",
+          "reading": "の",
+          "meaning": "possessive particle (trailing)",
+          "span": [
+            25,
+            26
+          ],
+          "chinese_cognate_note": null
+        }
+      ],
+      "focus_highlight": [
+        12,
+        13
+      ]
+    },
+    {
+      "type": "grammar_spotlight",
+      "content": "Look at 'aki wa' (秋は) in the poem above. The poet is setting 'Autumn' as the topic. \n\nLogic breakdown:\n1. **Topic**: 秋 (Autumn)\n2. **Marker**: は (As for...)\n3. **Comment**: Has it already changed/passed?\n\nIn Chinese, you might say '至于秋天...' or simply start the sentence with '秋天...'. In Japanese, 'wa' (は) makes this logical relationship explicit. Note that although it is written as 'ha' (は), it is pronounced 'wa' when used as a particle.",
+      "evidence": "See the poem above."
+    },
+    {
+      "type": "poem_presentation",
+      "poem_id": "lapis_402126b3934b9c1b",
+      "display": {
+        "text_with_furigana": "かすかのの<ruby>ゆきま<rt>ゆきま</rt></ruby>をわけておひいてくる<ruby>草<rt>くさ</rt></ruby>のはつかに<ruby>見<rt>み</rt></ruby>えしきみ<span style='color: #ff4500;'>は</span>も",
+        "romaji": "kasuka no no, yukima o wakete, ohiitekuru, kusa no hatsuka, ni mieshikimi wa mo",
+        "translation": "Like the grass growing through the gaps in the snow on the faint fields, I caught a glimpse of you—as for you, oh..."
+      },
+      "vocabulary": [
+        {
+          "word": "かすか",
+          "reading": "かすか",
+          "meaning": "faint, indistinct",
+          "span": [
+            0,
+            3
+          ],
+          "chinese_cognate_note": "Written as 幽か or 微か."
+        },
+        {
+          "word": "の",
+          "reading": "の",
+          "meaning": "possessive particle",
+          "span": [
+            3,
+            4
+          ],
+          "chinese_cognate_note": null
+        },
+        {
+          "word": "野",
+          "reading": "の",
+          "meaning": "field",
+          "span": null,
+          "chinese_cognate_note": "Identical to Chinese '野'."
+        },
+        {
+          "word": "の",
+          "reading": "の",
+          "meaning": "possessive particle",
+          "span": [
+            4,
+            5
+          ],
+          "chinese_cognate_note": null
+        },
+        {
+          "word": "ゆきま",
+          "reading": "ゆきま",
+          "meaning": "snowy interval, space between snow",
+          "span": [
+            5,
+            8
+          ],
+          "chinese_cognate_note": "雪 + 間."
+        },
+        {
+          "word": "を",
+          "reading": "を",
+          "meaning": "object marker",
+          "span": [
+            8,
+            9
+          ],
+          "chinese_cognate_note": null
+        },
+        {
+          "word": "わけて",
+          "reading": "わけて",
+          "meaning": "pushing through / especially",
+          "span": [
+            9,
+            12
+          ],
+          "chinese_cognate_note": null
+        },
+        {
+          "word": "おひいてくる",
+          "reading": "おひいてくる",
+          "meaning": "to grow out",
+          "span": [
+            12,
+            18
+          ],
+          "chinese_cognate_note": null
+        },
+        {
+          "word": "草",
+          "reading": "くさ",
+          "meaning": "grass",
+          "span": [
+            18,
+            19
+          ],
+          "chinese_cognate_note": "Identical to Chinese '草'."
+        },
+        {
+          "word": "の",
+          "reading": "の",
+          "meaning": "possessive particle",
+          "span": [
+            19,
+            20
+          ],
+          "chinese_cognate_note": null
+        },
+        {
+          "word": "はつかに",
+          "reading": "はつかに",
+          "meaning": "barely, faintly",
+          "span": [
+            20,
+            24
+          ],
+          "chinese_cognate_note": null
+        },
+        {
+          "word": "見え",
+          "reading": "みえ",
+          "meaning": "to be seen / to appear",
+          "span": [
+            24,
+            26
+          ],
+          "chinese_cognate_note": "From 見 (to see)."
+        },
+        {
+          "word": "し",
+          "reading": "し",
+          "meaning": "past tense marker",
+          "span": [
+            26,
+            27
+          ],
+          "chinese_cognate_note": null
+        },
+        {
+          "word": "きみ",
+          "reading": "きみ",
+          "meaning": "you (honorific/intimate)",
+          "span": [
+            27,
+            29
+          ],
+          "chinese_cognate_note": "Written as 君."
+        },
+        {
+          "word": "は",
+          "reading": "は",
+          "meaning": "topic marker",
+          "span": [
+            29,
+            30
+          ],
+          "chinese_cognate_note": null
+        },
+        {
+          "word": "も",
+          "reading": "も",
+          "meaning": "exclamatory particle / emphasis",
+          "span": [
+            30,
+            31
+          ],
+          "chinese_cognate_note": null
+        }
+      ],
+      "focus_highlight": [
+        31,
+        32
+      ]
+    },
+    {
+      "type": "contrast_example",
+      "content": "Sometimes, 'wa' (は) follows another particle to narrow the scope of a location or time. In Poem 3, we see 'ni wa' (には). \n\n- 'ni' (に) = in/at (Location)\n- 'wa' (は) = as for (Topic)\n- 'ni wa' (には) = 'As for [what is happening] in [this place]...'"
+    },
+    {
+      "type": "poem_presentation",
+      "poem_id": "lapis_7ec488958a1fbf94",
+      "display": {
+        "text_with_furigana": "みよしののきさやまのまの<ruby>こぬれ<rt>こぬれ</rt></ruby><span style='color: #ff4500;'>には</span>ここたもさわく<ruby>とり<rt>とり</rt></ruby>の<ruby>こゑ<rt>こゑ</rt></ruby>かも",
+        "romaji": "miyoshino no, kisayama no ma no, konure ni wa, koko ta mo sawaku, tori no koe kamo",
+        "translation": "In the treetops of the mountains of Yoshino—as for that place—the voices of the birds are clamoring greatly."
+      },
+      "vocabulary": [
+        {
+          "word": "みよしの",
+          "reading": "みよしの",
+          "meaning": "Beautiful Yoshino (place name)",
+          "span": [
+            0,
+            4
+          ],
+          "chinese_cognate_note": "美 + 吉野."
+        },
+        {
+          "word": "の",
+          "reading": "の",
+          "meaning": "possessive particle",
+          "span": [
+            4,
+            5
+          ],
+          "chinese_cognate_note": null
+        },
+        {
+          "word": "きさやま",
+          "reading": "きさやま",
+          "meaning": "Mt. Kisa (place name)",
+          "span": [
+            5,
+            9
+          ],
+          "chinese_cognate_note": "象山."
+        },
+        {
+          "word": "の",
+          "reading": "の",
+          "meaning": "possessive particle",
+          "span": [
+            9,
+            10
+          ],
+          "chinese_cognate_note": null
+        },
+        {
+          "word": "ま",
+          "reading": "ま",
+          "meaning": "interval, space",
+          "span": [
+            10,
+            11
+          ],
+          "chinese_cognate_note": "Identical to Chinese '間'."
+        },
+        {
+          "word": "の",
+          "reading": "の",
+          "meaning": "possessive particle",
+          "span": [
+            11,
+            12
+          ],
+          "chinese_cognate_note": null
+        },
+        {
+          "word": "こぬれ",
+          "reading": "こぬれ",
+          "meaning": "treetops, branches of trees",
+          "span": [
+            12,
+            15
+          ],
+          "chinese_cognate_note": null
+        },
+        {
+          "word": "に",
+          "reading": "に",
+          "meaning": "at/in (Location particle learned in Lesson 2)",
+          "span": [
+            15,
+            16
+          ],
+          "chinese_cognate_note": null
+        },
+        {
+          "word": "は",
+          "reading": "は",
+          "meaning": "topic marker",
+          "span": [
+            16,
+            17
+          ],
+          "chinese_cognate_note": null
+        },
+        {
+          "word": "ここた",
+          "reading": "ここた",
+          "meaning": "many, greatly",
+          "span": [
+            17,
+            20
+          ],
+          "chinese_cognate_note": null
+        },
+        {
+          "word": "も",
+          "reading": "も",
+          "meaning": "even, also",
+          "span": [
+            20,
+            21
+          ],
+          "chinese_cognate_note": null
+        },
+        {
+          "word": "さわく",
+          "reading": "さわく",
+          "meaning": "to make noise, to clamor",
+          "span": [
+            21,
+            24
+          ],
+          "chinese_cognate_note": "Written as 騒ぐ."
+        },
+        {
+          "word": "とり",
+          "reading": "とり",
+          "meaning": "bird",
+          "span": [
+            24,
+            26
+          ],
+          "chinese_cognate_note": "Written as 鳥."
+        },
+        {
+          "word": "の",
+          "reading": "の",
+          "meaning": "possessive particle",
+          "span": [
+            26,
+            27
+          ],
+          "chinese_cognate_note": null
+        },
+        {
+          "word": "こゑ",
+          "reading": "こゑ",
+          "meaning": "voice",
+          "span": [
+            27,
+            29
+          ],
+          "chinese_cognate_note": "Written as 声."
+        },
+        {
+          "word": "かも",
+          "reading": "かも",
+          "meaning": "exclamation of wonder",
+          "span": [
+            29,
+            31
+          ],
+          "chinese_cognate_note": null
+        }
+      ],
+      "focus_highlight": [
+        15,
+        17
+      ]
+    },
+    {
+      "type": "comprehension_check",
+      "question": "In the phrase 'aki wa' (秋は), if 'aki' means 'Autumn', what is the logical function of 'wa'?",
+      "answer": "It marks 'Autumn' as the topic of the sentence, signaling that the following words will provide information or a comment about Autumn.",
+      "hint": "Think of it as the 'As for...' tag."
+    }
+  ],
+  "reference_card": {
+    "point": "particle_wa (は)",
+    "one_liner": "The topic marker that sets the scope of the sentence (As for X...).",
+    "example": "秋は (Aki wa) = As for autumn...",
+    "see_also": [
+      "particle_no",
+      "particle_ni"
+    ]
+  },
+  "forward_references": [
+    {
+      "point": "particle_o",
+      "note": "We saw 'o' (を) in these poems; it marks the direct object of an action. We will cover this in Lesson 4."
+    },
+    {
+      "point": "particle_mo",
+      "note": "We saw 'mo' (も) meaning 'also/even'. This is a focus particle we will explore in Unit 2."
+    }
+  ]
+}

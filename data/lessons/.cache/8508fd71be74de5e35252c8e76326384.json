@@ -1,0 +1,275 @@
+{
+  "lesson_title": "The Targeting Tag: Particle に (ni)",
+  "lesson_summary": "Having mastered the 'possessive' link (no), we now introduce the 'targeting' tag (ni), which identifies the specific location, time, or recipient where an action occurs.",
+  "grammar_explanation": {
+    "concept": "The particle に (ni) acts as a logical pointer. It marks the 'target' of a state or action. In Chinese, it often maps to '在' (at/in), '到' (to), or '给' (for/to).",
+    "formation": "[Noun] + に",
+    "variations": [
+      "Location: Where something is (In the wind)",
+      "Target: Who receives an action (To me)",
+      "Time: When something happens (At night)"
+    ],
+    "common_confusions": [
+      "vs の (no): 'no' connects two nouns (A's B), while 'ni' connects a noun to the surrounding logic of the sentence (At A, [Action])."
+    ]
+  },
+  "teaching_sequence": [
+    {
+      "type": "introduction",
+      "content": "In our previous lesson, we used the particle の (no) to link nouns together. However, a poem isn't just a list of things; things happen in specific places and to specific people. To define these 'targets,' Japanese uses the particle に (ni). Think of it as a **pointer variable** in programming that specifies the address where the data (the action) is being processed."
+    },
+    {
+      "type": "poem_presentation",
+      "poem_id": "lapis_54f700598246bf9c",
+      "display": {
+        "text_with_furigana": "<ruby>秋風<rt>あきかぜ</rt></ruby><span style='color: #ff4500; font-weight: bold;'>に</span><ruby>山<rt>やま</rt></ruby>のこのはのうつろへは<ruby>人<rt>ひと</rt></ruby>の<ruby>心<rt>こころ</rt></ruby>もいかかとそ<ruby>思<rt>おも</rt></ruby>ふ",
+        "romaji": "akikaze ni yama no konoha no utsuroe wa hito no kokoro mo ika ka to so omou",
+        "translation": "In the autumn wind, the leaves of the mountain fade; I wonder what becomes of the hearts of people."
+      },
+      "vocabulary": [
+        {
+          "word": "秋風",
+          "reading": "あきかぜ",
+          "meaning": "autumn wind",
+          "chinese_cognate_note": "Identical to Chinese 秋风."
+        },
+        {
+          "word": "に",
+          "reading": "に",
+          "meaning": "in / at (location/cause particle)",
+          "chinese_cognate_note": "Similar to 在."
+        },
+        {
+          "word": "山",
+          "reading": "やま",
+          "meaning": "mountain",
+          "chinese_cognate_note": "Identical to Chinese 山."
+        },
+        {
+          "word": "の",
+          "reading": "の",
+          "meaning": "of (possessive particle)",
+          "chinese_cognate_note": "Learned in previous lesson; similar to 的."
+        },
+        {
+          "word": "このは",
+          "reading": "このは",
+          "meaning": "leaves of trees",
+          "chinese_cognate_note": "木(ko) + の(no) + 葉(ha)."
+        },
+        {
+          "word": "の",
+          "reading": "の",
+          "meaning": "of (possessive particle)"
+        },
+        {
+          "word": "うつろへ",
+          "reading": "うつろえ",
+          "meaning": "to change / to fade / transient"
+        },
+        {
+          "word": "は",
+          "reading": "は",
+          "meaning": "as for (topic particle)"
+        },
+        {
+          "word": "人",
+          "reading": "ひと",
+          "meaning": "person",
+          "chinese_cognate_note": "Identical to Chinese 人."
+        },
+        {
+          "word": "の",
+          "reading": "の",
+          "meaning": "of (possessive particle)"
+        },
+        {
+          "word": "心",
+          "reading": "こころ",
+          "meaning": "heart / mind",
+          "chinese_cognate_note": "Identical to Chinese 心."
+        },
+        {
+          "word": "も",
+          "reading": "も",
+          "meaning": "also / too",
+          "chinese_cognate_note": "Similar to 也."
+        },
+        {
+          "word": "いか",
+          "reading": "いか",
+          "meaning": "how"
+        },
+        {
+          "word": "か",
+          "reading": "か",
+          "meaning": "question particle"
+        },
+        {
+          "word": "と",
+          "reading": "と",
+          "meaning": "quotative particle (marks a thought/statement)"
+        },
+        {
+          "word": "そ",
+          "reading": "そ",
+          "meaning": "emphasis particle"
+        },
+        {
+          "word": "思ふ",
+          "reading": "おもう",
+          "meaning": "to think",
+          "chinese_cognate_note": "Identical to Chinese 思."
+        }
+      ],
+      "focus_highlight": [
+        3,
+        4
+      ]
+    },
+    {
+      "type": "grammar_spotlight",
+      "content": "Look at the first phrase: **秋風に (akikaze ni)**. \n\nBecause you know the Kanji 秋風 (Autumn Wind), the particle **に** tells you that the wind is the *environment* or *cause* for the rest of the sentence. Without **に**, it would just be a noun floating in space. With **に**, it becomes 'In the autumn wind...' or 'Due to the autumn wind...'. \n\nNotice how it contrasts with **山のこのは (yama no konoha)**. Here, **の** is used because the leaves *belong* to the mountain. **に** is used because the action of fading happens *within* the wind."
+    },
+    {
+      "type": "poem_presentation",
+      "poem_id": "lapis_7fa5900994ae438b",
+      "display": {
+        "text_with_furigana": "ひしほす<span style='color: #ff4500; font-weight: bold;'>に</span>ひるつきあへてたひねかふわれ<span style='color: #ff4500; font-weight: bold;'>に</span>なみえそなきのあつもの",
+        "romaji": "hishihosu ni hirutsuki aete tahinekau ware ni nami eso naki no atsumono",
+        "translation": "Leeches attach to the drying water chestnuts; to me, there is no thick soup of lizardfish."
+      },
+      "vocabulary": [
+        {
+          "word": "ひし",
+          "reading": "ひし",
+          "meaning": "water chestnut",
+          "chinese_cognate_note": "Chinese 菱 (líng)."
+        },
+        {
+          "word": "ほす",
+          "reading": "ほす",
+          "meaning": "to dry"
+        },
+        {
+          "word": "に",
+          "reading": "に",
+          "meaning": "in / at (location particle)"
+        },
+        {
+          "word": "ひる",
+          "reading": "ひる",
+          "meaning": "leech"
+        },
+        {
+          "word": "つき",
+          "reading": "つき",
+          "meaning": "attached to"
+        },
+        {
+          "word": "あへて",
+          "reading": "あえて",
+          "meaning": "daringly / purposely"
+        },
+        {
+          "word": "た",
+          "reading": "た",
+          "meaning": "past tense marker"
+        },
+        {
+          "word": "ひね",
+          "reading": "ひね",
+          "meaning": "old rice"
+        },
+        {
+          "word": "か",
+          "reading": "か",
+          "meaning": "question particle"
+        },
+        {
+          "word": "ふ",
+          "reading": "ふ",
+          "meaning": "house"
+        },
+        {
+          "word": "われ",
+          "reading": "われ",
+          "meaning": "I / me",
+          "chinese_cognate_note": "Chinese 我 (wǒ)."
+        },
+        {
+          "word": "に",
+          "reading": "に",
+          "meaning": "to / for (recipient particle)"
+        },
+        {
+          "word": "なみ",
+          "reading": "なみ",
+          "meaning": "wave"
+        },
+        {
+          "word": "えそ",
+          "reading": "えそ",
+          "meaning": "lizardfish"
+        },
+        {
+          "word": "なき",
+          "reading": "なき",
+          "meaning": "not existing / none",
+          "chinese_cognate_note": "Chinese 无 (wú)."
+        },
+        {
+          "word": "の",
+          "reading": "の",
+          "meaning": "of (possessive particle)"
+        },
+        {
+          "word": "あつもの",
+          "reading": "あつもの",
+          "meaning": "thick soup",
+          "chinese_cognate_note": "Chinese 羹 (gēng)."
+        }
+      ],
+      "focus_highlight": [
+        4,
+        5
+      ]
+    },
+    {
+      "type": "contrast_example",
+      "content": "In this second poem, we see **に** used in two different ways:\n1. **ひしほすに (hishihosu ni)**: 'In the drying chestnuts' (Location).\n2. **われに (ware ni)**: 'To me' (Recipient/Target).\n\nIn both cases, **に** acts as a pointer. In the first, it points to a physical location. In the second, it points to the person affected by the lack of soup. If you are a programmer, think of `ware` as the object and `ni` as the pointer `&ware` being passed into a function."
+    },
+    {
+      "type": "comprehension_check",
+      "question": "In the phrase '秋風に' (akikaze ni), if we replaced 'に' with 'の' (akikaze no), how would the logical relationship between 'Autumn Wind' and the next word change?",
+      "answer": "Replacing 'ni' with 'no' would change the relationship from 'In/By the wind' (location/cause) to 'The wind's...' (possession). Instead of an action happening in the wind, the next word would become a property or object belonging to the wind.",
+      "hint": "Remember that 'no' links two nouns into one unit, while 'ni' points to a target for an action."
+    },
+    {
+      "type": "summary",
+      "content": "You have now learned the two most fundamental 'glue' pieces of Japanese: **の (no)** for possession/connection and **に (ni)** for targeting location, time, or recipients. With just these two, you can already begin to parse the 'who, where, and whose' of a classical poem."
+    }
+  ],
+  "reference_card": {
+    "point": "Particle に (ni)",
+    "one_liner": "The 'Targeting Tag' used to mark location (at/in), time (on/at), or recipient (to/for).",
+    "example": "われに (ware ni) = To me / For me",
+    "see_also": [
+      "particle_no"
+    ]
+  },
+  "forward_references": [
+    {
+      "point": "particle_wa",
+      "note": "We will learn how 'wa' sets the overall topic of the poem in the next lesson."
+    },
+    {
+      "point": "particle_mo",
+      "note": "We will learn how to say 'also' or 'even' using 'mo' in Lesson 4."
+    },
+    {
+      "point": "particle_ka",
+      "note": "The question marker 'ka' seen in these poems will be covered in Unit 7."
+    }
+  ]
+}

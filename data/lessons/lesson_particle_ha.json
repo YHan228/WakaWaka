@@ -1,0 +1,381 @@
+{
+  "lesson_id": "lesson_particle_ha",
+  "lesson_title": "The Logic of Isolation: Particle は (ha)",
+  "lesson_summary": "Building on the basic topic marker, we explore how は (ha) functions as a 'logic gate' to isolate specific concepts, often creating a contrast between two different states or subjects.",
+  "grammar_point": "particle_ha",
+  "grammar_explanation": {
+    "concept": "In programming terms, は (ha) acts like a 'scope' or 'filter' declaration. It tells the reader: 'Regarding this specific item (and perhaps not others), the following logic applies.' When it follows another particle like に (ni), it sharpens the focus on a specific location or time.",
+    "formation": "[Noun] + は | [Particle] + は",
+    "variations": [
+      "には (ni-ha): Specifically at/in...",
+      "とは (to-ha): Specifically with/as..."
+    ],
+    "common_confusions": [
+      "Unlike the subject marker (which simply identifies who does an action), は (ha) sets the stage. If you see two は in one poem, the poet is likely comparing two different things."
+    ]
+  },
+  "teaching_sequence": [
+    {
+      "type": "introduction",
+      "content": "In our previous lessons, we looked at how の (no) connects nouns and に (ni) targets locations. Now, we look at は (ha) not just as a 'topic' marker, but as a tool for **contrastive logic**. Think of it as a highlighter: it isolates one part of the sentence to say, 'As for this specific thing, here is the situation,' often implying that the situation might be different for something else."
+    },
+    {
+      "type": "poem_presentation",
+      "poem_id": "lapis_86335a7962ff3078",
+      "display": {
+        "text_with_furigana": "<ruby>山<rt>やま</rt></ruby>かつのかきほに<ruby>は<rt>は</rt></ruby>へるあをつつら<ruby>人<rt>ひと</rt></ruby>はくれともことつてもなし",
+        "romaji": "yamakatsu no, kakiho ni wa heru, a wo tsutsura, hito wa kure tomo, koto tsute mo nashi",
+        "translation": "The green ivy grows upon the rustic's fence; but as for the person, though they come, there is no message."
+      },
+      "vocabulary": [
+        {
+          "word": "山",
+          "reading": "やま",
+          "meaning": "mountain",
+          "span": [
+            0,
+            1
+          ],
+          "chinese_cognate_note": "Identical to Chinese 山 (shān)."
+        },
+        {
+          "word": "かつ",
+          "reading": "かつ",
+          "meaning": "or, moreover",
+          "span": [
+            1,
+            3
+          ],
+          "chinese_cognate_note": "Similar to Chinese 且 (qiě)."
+        },
+        {
+          "word": "の",
+          "reading": "の",
+          "meaning": "possessive particle (of)",
+          "span": [
+            3,
+            4
+          ],
+          "chinese_cognate_note": "Functions like Chinese 的 (de)."
+        },
+        {
+          "word": "かきほ",
+          "reading": "かきほ",
+          "meaning": "fence",
+          "span": [
+            4,
+            7
+          ],
+          "chinese_cognate_note": null
+        },
+        {
+          "word": "に",
+          "reading": "に",
+          "meaning": "at, in (location marker)",
+          "span": [
+            7,
+            8
+          ],
+          "chinese_cognate_note": null
+        },
+        {
+          "word": "は",
+          "reading": "は",
+          "meaning": "topic/contrast marker",
+          "span": [
+            8,
+            9
+          ],
+          "chinese_cognate_note": "Sets the scope, similar to starting a sentence with '至于...' (as for)."
+        },
+        {
+          "word": "はへる",
+          "reading": "はへる",
+          "meaning": "to grow, to sprout",
+          "span": [
+            8,
+            11
+          ],
+          "chinese_cognate_note": null
+        },
+        {
+          "word": "あを",
+          "reading": "あを",
+          "meaning": "blue/green",
+          "span": [
+            11,
+            13
+          ],
+          "chinese_cognate_note": "Cognate with 青 (qīng)."
+        },
+        {
+          "word": "つつら",
+          "reading": "つつら",
+          "meaning": "ivy",
+          "span": [
+            13,
+            16
+          ],
+          "chinese_cognate_note": null
+        },
+        {
+          "word": "人",
+          "reading": "ひと",
+          "meaning": "person",
+          "span": [
+            16,
+            17
+          ],
+          "chinese_cognate_note": "Identical to Chinese 人 (rén)."
+        },
+        {
+          "word": "は",
+          "reading": "は",
+          "meaning": "topic/contrast marker",
+          "span": [
+            17,
+            18
+          ],
+          "chinese_cognate_note": null
+        },
+        {
+          "word": "くれ",
+          "reading": "くれ",
+          "meaning": "to give",
+          "span": [
+            18,
+            20
+          ],
+          "chinese_cognate_note": null
+        },
+        {
+          "word": "とも",
+          "reading": "とも",
+          "meaning": "although",
+          "span": [
+            20,
+            22
+          ],
+          "chinese_cognate_note": null
+        },
+        {
+          "word": "ことつて",
+          "reading": "ことつて",
+          "meaning": "message, news",
+          "span": [
+            22,
+            26
+          ],
+          "chinese_cognate_note": null
+        },
+        {
+          "word": "も",
+          "reading": "も",
+          "meaning": "also, even",
+          "span": [
+            26,
+            27
+          ],
+          "chinese_cognate_note": null
+        },
+        {
+          "word": "なし",
+          "reading": "なし",
+          "meaning": "does not exist, is not",
+          "span": [
+            27,
+            29
+          ],
+          "chinese_cognate_note": "Cognate with 無 (wú)."
+        }
+      ],
+      "focus_highlight": [
+        8,
+        9
+      ]
+    },
+    {
+      "type": "grammar_spotlight",
+      "content": "Look at the structure of Poem 1. We see two instances of は (ha):\n1. **かきほには (kakiho ni wa)**: Here, は follows the location marker に. It isolates the 'fence' as the specific place where the ivy grows.\n2. **人は (hito wa)**: This isolates the 'person'. \n\nBy using は twice, the poet creates a logical contrast: 'The ivy is doing its job growing on the fence, **BUT** the person (specifically) is not giving any news.' It functions like a comparison operator in a script.",
+      "evidence": "See the poem above."
+    },
+    {
+      "type": "poem_presentation",
+      "poem_id": "lapis_aba5aabecf441996",
+      "display": {
+        "text_with_furigana": "おと<ruby>は<rt>は</rt></ruby><ruby>山<rt>やま</rt></ruby>けさこえくれ<ruby>は<rt>は</rt></ruby><ruby>郭公<rt>ほととぎす</rt></ruby>こすゑはるかに<ruby>今<rt>いま</rt></ruby>そなくなる",
+        "romaji": "otowayama, kesa koe kure ha, hototogisu, kosu e haruka ni, ima so nakunaru",
+        "translation": "Crossing Otowa Mountain this morning, the cuckoo sings from the distant treetops."
+      },
+      "vocabulary": [
+        {
+          "word": "おと",
+          "reading": "おと",
+          "meaning": "sound",
+          "span": [
+            0,
+            2
+          ],
+          "chinese_cognate_note": "Cognate with 音 (yīn)."
+        },
+        {
+          "word": "は",
+          "reading": "は",
+          "meaning": "topic marker (embedded in name)",
+          "span": [
+            2,
+            3
+          ],
+          "chinese_cognate_note": null
+        },
+        {
+          "word": "山",
+          "reading": "やま",
+          "meaning": "mountain",
+          "span": [
+            3,
+            4
+          ],
+          "chinese_cognate_note": "Cognate with 山 (shān)."
+        },
+        {
+          "word": "けさ",
+          "reading": "けさ",
+          "meaning": "this morning",
+          "span": [
+            4,
+            6
+          ],
+          "chinese_cognate_note": "Written as 今朝 (jīn zhāo)."
+        },
+        {
+          "word": "こえ",
+          "reading": "こえ",
+          "meaning": "to cross",
+          "span": [
+            6,
+            8
+          ],
+          "chinese_cognate_note": null
+        },
+        {
+          "word": "くれ",
+          "reading": "くれ",
+          "meaning": "to come",
+          "span": [
+            8,
+            10
+          ],
+          "chinese_cognate_note": null
+        },
+        {
+          "word": "は",
+          "reading": "は",
+          "meaning": "when/since (conditional scope marker)",
+          "span": [
+            10,
+            11
+          ],
+          "chinese_cognate_note": null
+        },
+        {
+          "word": "郭公",
+          "reading": "ほととぎす",
+          "meaning": "cuckoo",
+          "span": [
+            11,
+            13
+          ],
+          "chinese_cognate_note": "Identical to Chinese 郭公 (guō gōng)."
+        },
+        {
+          "word": "こすゑ",
+          "reading": "こすゑ",
+          "meaning": "treetop",
+          "span": [
+            13,
+            16
+          ],
+          "chinese_cognate_note": null
+        },
+        {
+          "word": "はるかに",
+          "reading": "はるかに",
+          "meaning": "far away",
+          "span": [
+            16,
+            20
+          ],
+          "chinese_cognate_note": "Cognate with 遥 (yáo)."
+        },
+        {
+          "word": "今",
+          "reading": "いま",
+          "meaning": "now",
+          "span": [
+            20,
+            21
+          ],
+          "chinese_cognate_note": "Identical to Chinese 今 (jīn)."
+        },
+        {
+          "word": "そ",
+          "reading": "そ",
+          "meaning": "emphatic particle",
+          "span": [
+            21,
+            22
+          ],
+          "chinese_cognate_note": null
+        },
+        {
+          "word": "なくなる",
+          "reading": "なくなる",
+          "meaning": "to sing (of birds)",
+          "span": [
+            22,
+            26
+          ],
+          "chinese_cognate_note": "Cognate with 鳴 (míng)."
+        }
+      ],
+      "focus_highlight": [
+        2,
+        3
+      ]
+    },
+    {
+      "type": "contrast_example",
+      "content": "In Poem 2, notice 'Otowa-yama' (おとは山). The name itself contains は. Poetically, this suggests 'The Mountain where Sound (音) is the Topic.' \n\nLater, we see 'kure ha' (くれは). When は follows a verb base like this, it sets the **temporal scope**: 'Now that [I] have come...' It isolates this specific moment in time as the condition for hearing the cuckoo."
+    },
+    {
+      "type": "comprehension_check",
+      "question": "In the phrase 'kakiho ni wa' (かきほには), what is the logical effect of adding 'ha' after 'ni'?",
+      "answer": "It isolates the 'fence' as the specific location being discussed, often to contrast it with other locations or subjects in the poem.",
+      "hint": "Think about how 'ni' marks a location, and 'ha' acts like a spotlight."
+    },
+    {
+      "type": "summary",
+      "content": "You've now seen は (ha) as more than just a subject marker. It is a logical operator used to isolate nouns, locations (ni-wa), or even actions (kure-ha) to define the specific scope of the poet's observation."
+    }
+  ],
+  "reference_card": {
+    "point": "Particle は (ha)",
+    "one_liner": "A scope-defining particle that isolates a noun or phrase for emphasis or contrast.",
+    "example": "人はくれとも (Hito wa kure tomo) -> 'As for the person, although they come...'",
+    "see_also": [
+      "particle_ni",
+      "particle_no"
+    ]
+  },
+  "forward_references": [
+    {
+      "point": "とも (tomo)",
+      "note": "This conjunction meaning 'although' will be covered in Unit 2 when we study sentence linking."
+    },
+    {
+      "point": "そ (so)",
+      "note": "This emphatic particle is part of the 'Kakari-Musubi' system we will master in Unit 7."
+    }
+  ]
+}

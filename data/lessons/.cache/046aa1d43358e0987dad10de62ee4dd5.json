@@ -1,0 +1,329 @@
+{
+  "lesson_title": "The Poetic Sigh: Mastering the Exclamatory 'Kana' (かな)",
+  "lesson_summary": "This lesson introduces 'kana', a terminal particle known as a 'kireji' (cutting word) that acts as an emotional exclamation mark, signaling a moment of deep realization or wonder.",
+  "grammar_explanation": {
+    "concept": "The particle かな (kana) is used at the end of a poem to express a sigh of emotion, admiration, or poignant realization. In programming terms, it is like an 'EOF' (End of File) marker that also carries an emotional metadata tag. In Classical Chinese, it functions similarly to the exclamatory particles '哉' (zāi) or '也' (yě) used to conclude a thought with emphasis.",
+    "formation": "It typically follows a Noun or a Verb/Auxiliary in its Rentaikei (Attributive) form.",
+    "variations": [
+      "Often appears as '...nuru kana' (has become...!) or '...keri kana' (alas, I realize...!)."
+    ],
+    "common_confusions": [
+      "Do not confuse with the modern Japanese 'kana' which expresses doubt or uncertainty ('I wonder?'). In classical poetry, it is almost always a definitive exclamation of feeling."
+    ]
+  },
+  "teaching_sequence": [
+    {
+      "type": "introduction",
+      "content": "Having explored how particles link nouns and how auxiliaries modify time, we now reach the 'emotional terminal.' In classical poetry, the poet often needs a way to 'cut' the flow of the poem and let the accumulated emotion resonate. This is the role of the kireji (切れ字). Think of 'kana' as a linguistic sigh—a way to say 'Ah, it is so!' or 'How beautiful/sad it is!'"
+    },
+    {
+      "type": "poem_presentation",
+      "poem_id": "ogura100_ad42b89935dfcae0",
+      "display": {
+        "text_with_furigana": "<ruby>風<rt>かぜ</rt></ruby>をいたみ<ruby>岩<rt>いわ</rt></ruby>うつ<ruby>波<rt>なみ</rt></ruby>の<ruby>おのれ<rt>おのれ</rt></ruby>のみ<ruby>くだけ<rt>くだけ</rt></ruby>て<ruby>物<rt>もの</rt></ruby>を<ruby>思<rt>おも</rt></ruby>ふころ<span style='color: #ff4500;'>かな</span>",
+        "romaji": "kaze o itami iwa utsu nami no onore nomi kudakete mono o omou koro kana",
+        "translation": "Like the waves that smash against the rocks because the wind is so fierce, it is a time when I alone am broken by my thoughts!"
+      },
+      "vocabulary": [
+        {
+          "word": "風",
+          "reading": "かぜ",
+          "meaning": "wind",
+          "chinese_cognate_note": "Identical to Chinese '風'"
+        },
+        {
+          "word": "を",
+          "reading": "を",
+          "meaning": "object marker (here used in a causal structure)"
+        },
+        {
+          "word": "いたみ",
+          "reading": "いたみ",
+          "meaning": "fierceness / because of the strength of"
+        },
+        {
+          "word": "岩",
+          "reading": "いわ",
+          "meaning": "rock",
+          "chinese_cognate_note": "Identical to Chinese '岩'"
+        },
+        {
+          "word": "うつ",
+          "reading": "うつ",
+          "meaning": "to strike / to hit"
+        },
+        {
+          "word": "波",
+          "reading": "なみ",
+          "meaning": "wave",
+          "chinese_cognate_note": "Identical to Chinese '波'"
+        },
+        {
+          "word": "の",
+          "reading": "の",
+          "meaning": "genitive particle (subject marker in relative clause)"
+        },
+        {
+          "word": "おのれ",
+          "reading": "おのれ",
+          "meaning": "oneself",
+          "chinese_cognate_note": "Similar to '己' (jǐ)"
+        },
+        {
+          "word": "のみ",
+          "reading": "のみ",
+          "meaning": "only"
+        },
+        {
+          "word": "くだけて",
+          "reading": "くだけて",
+          "meaning": "being broken / shattered"
+        },
+        {
+          "word": "物",
+          "reading": "もの",
+          "meaning": "things / matters",
+          "chinese_cognate_note": "Identical to Chinese '物'"
+        },
+        {
+          "word": "を",
+          "reading": "を",
+          "meaning": "object marker"
+        },
+        {
+          "word": "思ふ",
+          "reading": "おもふ",
+          "meaning": "to think / to feel / to love",
+          "chinese_cognate_note": "Cognate with '思' (sī)"
+        },
+        {
+          "word": "ころ",
+          "reading": "ころ",
+          "meaning": "time / occasion"
+        },
+        {
+          "word": "かな",
+          "reading": "かな",
+          "meaning": "exclamatory particle (kana)"
+        }
+      ],
+      "focus_highlight": [
+        25,
+        27
+      ]
+    },
+    {
+      "type": "grammar_spotlight",
+      "content": "In the poem above, notice how the entire sequence of imagery—the wind, the rocks, and the shattered waves—leads to the noun 'koro' (time). By adding 'kana' at the very end, the poet transforms a simple statement ('It is a time of thinking') into a cry of emotional distress ('What a time this is!'). It functions as a 'logical closer' that wraps the preceding imagery into a single emotional realization."
+    },
+    {
+      "type": "poem_presentation",
+      "poem_id": "ogura100_5aa90a4c251a8c77",
+      "display": {
+        "text_with_furigana": "<ruby>由良<rt>ゆら</rt></ruby>の<ruby>門<rt>と</rt></ruby>を<ruby>渡<rt>わた</rt></ruby>る<ruby>舟人<rt>ふなびと</rt></ruby>かぢを<ruby>絶<rt>た</rt></ruby>え<ruby>行<rt>ゆ</rt></ruby>くへも<ruby>知<rt>し</rt></ruby>らぬ<ruby>恋<rt>こい</rt></ruby>の<ruby>道<rt>みち</rt></ruby><span style='color: #ff4500;'>かな</span>",
+        "romaji": "yura no to o wataru funabito kaji o tae yuku e mo shiranu koi no michi kana",
+        "translation": "Like a boatman crossing the Yura straits who has lost his rudder, I know not where I go on this path of love!"
+      },
+      "vocabulary": [
+        {
+          "word": "由良",
+          "reading": "ゆら",
+          "meaning": "Yura (place name)"
+        },
+        {
+          "word": "の",
+          "reading": "の",
+          "meaning": "genitive particle"
+        },
+        {
+          "word": "門",
+          "reading": "と",
+          "meaning": "strait / channel",
+          "chinese_cognate_note": "Cognate with '門' (gate)"
+        },
+        {
+          "word": "を",
+          "reading": "を",
+          "meaning": "object marker"
+        },
+        {
+          "word": "渡る",
+          "reading": "わたる",
+          "meaning": "to cross",
+          "chinese_cognate_note": "Cognate with '渡' (dù)"
+        },
+        {
+          "word": "舟人",
+          "reading": "ふなびと",
+          "meaning": "boatman",
+          "chinese_cognate_note": "Cognate with '舟人' (zhōurén)"
+        },
+        {
+          "word": "かぢ",
+          "reading": "かぢ",
+          "meaning": "rudder"
+        },
+        {
+          "word": "を",
+          "reading": "を",
+          "meaning": "object marker"
+        },
+        {
+          "word": "絶え",
+          "reading": "たえ",
+          "meaning": "to snap / to lose / to end",
+          "chinese_cognate_note": "Cognate with '絶' (jué)"
+        },
+        {
+          "word": "行くへ",
+          "reading": "ゆくへ",
+          "meaning": "whereabouts / destination"
+        },
+        {
+          "word": "も",
+          "reading": "も",
+          "meaning": "even / also"
+        },
+        {
+          "word": "知ら",
+          "reading": "しら",
+          "meaning": "to know (mizenkei form)"
+        },
+        {
+          "word": "ぬ",
+          "reading": "ぬ",
+          "meaning": "negative auxiliary (zu)"
+        },
+        {
+          "word": "恋",
+          "reading": "こい",
+          "meaning": "love / romance",
+          "chinese_cognate_note": "Cognate with '恋' (liàn)"
+        },
+        {
+          "word": "の",
+          "reading": "の",
+          "meaning": "genitive particle"
+        },
+        {
+          "word": "道",
+          "reading": "みち",
+          "meaning": "path / way",
+          "chinese_cognate_note": "Identical to Chinese '道'"
+        },
+        {
+          "word": "かな",
+          "reading": "かな",
+          "meaning": "exclamatory particle (kana)"
+        }
+      ],
+      "focus_highlight": [
+        25,
+        26
+      ]
+    },
+    {
+      "type": "poem_presentation",
+      "poem_id": "ogura100_fdb9c7d5ae4dfbd2",
+      "display": {
+        "text_with_furigana": "いにしへの<ruby>奈良<rt>なら</rt></ruby>の<ruby>都<rt>みやこ</rt></ruby>の<ruby>八重桜<rt>やえざくら</rt></ruby>けふ<ruby>九重<rt>ここのえ</rt></ruby>ににほひぬる<span style='color: #ff4500;'>かな</span>",
+        "romaji": "inishie no nara no miyako no yaezakura kefu kokonoe ni nioi nuru kana",
+        "translation": "The double-layered cherry blossoms from the ancient capital of Nara—today, they have come to bloom in full beauty in the Imperial Palace!"
+      },
+      "vocabulary": [
+        {
+          "word": "いにしへ",
+          "reading": "いにしへ",
+          "meaning": "ancient times / the past"
+        },
+        {
+          "word": "の",
+          "reading": "の",
+          "meaning": "genitive particle"
+        },
+        {
+          "word": "奈良",
+          "reading": "なら",
+          "meaning": "Nara (ancient capital)"
+        },
+        {
+          "word": "の",
+          "reading": "の",
+          "meaning": "genitive particle"
+        },
+        {
+          "word": "都",
+          "reading": "みやこ",
+          "meaning": "capital",
+          "chinese_cognate_note": "Identical to Chinese '都' (dū)"
+        },
+        {
+          "word": "の",
+          "reading": "の",
+          "meaning": "genitive particle"
+        },
+        {
+          "word": "八重桜",
+          "reading": "やえざくら",
+          "meaning": "double-layered cherry blossoms"
+        },
+        {
+          "word": "けふ",
+          "reading": "きょう",
+          "meaning": "today"
+        },
+        {
+          "word": "九重",
+          "reading": "ここのえ",
+          "meaning": "The Imperial Palace",
+          "chinese_cognate_note": "Literally 'nine-layered', a Chinese poetic term for the palace"
+        },
+        {
+          "word": "に",
+          "reading": "に",
+          "meaning": "location marker"
+        },
+        {
+          "word": "にほひ",
+          "reading": "にほひ",
+          "meaning": "to bloom beautifully / to be fragrant"
+        },
+        {
+          "word": "ぬる",
+          "reading": "ぬる",
+          "meaning": "perfective auxiliary (nu) in Rentaikei form"
+        },
+        {
+          "word": "かな",
+          "reading": "かな",
+          "meaning": "exclamatory particle (kana)"
+        }
+      ],
+      "focus_highlight": [
+        23,
+        25
+      ]
+    },
+    {
+      "type": "comprehension_check",
+      "question": "In the third poem, 'kana' follows the word 'nuru' (ぬる). Based on your knowledge of Unit 3 and Unit 8, why is the form 'nuru' used instead of the standard 'nu'?",
+      "answer": "Because 'kana' requires the preceding verb or auxiliary to be in the Rentaikei (Attributive) form. 'Nuru' is the Rentaikei of the perfective auxiliary 'nu'.",
+      "hint": "Recall the 'Noun-Linker' lesson. Certain particles 'pull' the preceding word into the Rentaikei form."
+    }
+  ],
+  "reference_card": {
+    "point": "kireji_kana (かな)",
+    "one_liner": "A terminal exclamatory particle used to express deep emotion or realization, similar to '...哉' in Classical Chinese.",
+    "example": "道かな (michi kana) = 'Oh, what a path!'",
+    "see_also": [
+      "kireji_ya",
+      "conjugation_rentaikei"
+    ]
+  },
+  "forward_references": [
+    {
+      "point": "kireji_ya",
+      "note": "While 'kana' usually ends a poem, the kireji 'ya' often appears in the middle to create a pause. We will compare them in the final review."
+    }
+  ]
+}

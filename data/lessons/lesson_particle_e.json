@@ -1,0 +1,591 @@
+{
+  "lesson_id": "lesson_particle_e",
+  "lesson_title": "The Vector of Direction: Particle へ (e)",
+  "lesson_summary": "This lesson introduces the particle へ (e), which functions as a directional vector. While 'ni' marks a specific point, 'he' (pronounced 'e') indicates the direction or orientation towards a destination.",
+  "grammar_point": "particle_e",
+  "grammar_explanation": {
+    "concept": "The particle へ (written as 'he' but pronounced 'e') indicates direction. In a logical framework, if 'ni' is a specific coordinate (a point), 'he' is a vector (an arrow pointing towards a target). It is often used with verbs of motion or to describe spatial orientation.",
+    "formation": "[Noun] + へ (e)",
+    "variations": [
+      "Often paired with other particles like 'wa' (へは) for emphasis or 'yori' (へより) to indicate 'from the direction of'."
+    ],
+    "common_confusions": [
+      "vs に (ni): 'ni' is the destination or static location (At/To). 'he' is the direction (Towards)."
+    ]
+  },
+  "teaching_sequence": [
+    {
+      "type": "introduction",
+      "content": "In previous lessons, we looked at particles that define static roles: the subject (wa), the object (wo), and the location (ni). Now, we move from 'points' to 'vectors.' In Classical Japanese, when a poet wants to emphasize the movement or the orientation towards a distant place—like the open sea or a loved one's side—they use the particle へ (e). Think of it as the 'Towards' operator in your spatial logic."
+    },
+    {
+      "type": "poem_presentation",
+      "poem_id": "lapis_41dd6dc4d714b265",
+      "display": {
+        "text_with_furigana": "<ruby>たまも<rt>aquatic plants</rt></ruby><ruby>かる<rt>harvest</rt></ruby><ruby>おき<rt>offshore</rt></ruby><ruby>へ<rt>towards</rt></ruby>は<ruby>こかし<rt>long for</rt></ruby><ruby>しきたへの<rt>pillow-epithet</rt></ruby><ruby>まくら<rt>pillow</rt></ruby>の<ruby>へ<rt>direction</rt></ruby>の<ruby>ひと<rt>person</rt></ruby><ruby>わすれ<rt>forget</rt></ruby><ruby>かねつ<rt>cannot</rt></ruby>も",
+        "romaji": "tamamo karu, oki e wa kokashi, shi kitae no, makura no e no hito, wasure kanetsu mo",
+        "translation": "I yearn towards the offshore where seaweed is harvested; I cannot forget the person who was at the side of my pillow."
+      },
+      "vocabulary": [
+        {
+          "word": "たまも",
+          "reading": "たまも",
+          "meaning": "aquatic plants, seaweed",
+          "span": [
+            0,
+            3
+          ],
+          "chinese_cognate_note": "Similar to 藻"
+        },
+        {
+          "word": "かる",
+          "reading": "かる",
+          "meaning": "to harvest/cut",
+          "span": [
+            3,
+            5
+          ],
+          "chinese_cognate_note": "刈 (yì) in Chinese"
+        },
+        {
+          "word": "おき",
+          "reading": "おき",
+          "meaning": "offshore, open sea",
+          "span": [
+            5,
+            7
+          ],
+          "chinese_cognate_note": "冲 (chōng) - open water"
+        },
+        {
+          "word": "へ",
+          "reading": "え",
+          "meaning": "towards (direction particle)",
+          "span": [
+            7,
+            8
+          ],
+          "chinese_cognate_note": null
+        },
+        {
+          "word": "は",
+          "reading": "は",
+          "meaning": "topic marker",
+          "span": [
+            8,
+            9
+          ],
+          "chinese_cognate_note": null
+        },
+        {
+          "word": "こかし",
+          "reading": "こかし",
+          "meaning": "to long for, yearn",
+          "span": [
+            9,
+            12
+          ],
+          "chinese_cognate_note": null
+        },
+        {
+          "word": "しきたへの",
+          "reading": "しきたへの",
+          "meaning": "epithet for pillows (fine cloth)",
+          "span": [
+            12,
+            17
+          ],
+          "chinese_cognate_note": null
+        },
+        {
+          "word": "まくら",
+          "reading": "まくら",
+          "meaning": "pillow",
+          "span": [
+            17,
+            20
+          ],
+          "chinese_cognate_note": "枕 (zhěn)"
+        },
+        {
+          "word": "の",
+          "reading": "の",
+          "meaning": "possessive particle (of)",
+          "span": [
+            20,
+            21
+          ],
+          "chinese_cognate_note": null
+        },
+        {
+          "word": "へ",
+          "reading": "え",
+          "meaning": "side/direction/area",
+          "span": [
+            21,
+            22
+          ],
+          "chinese_cognate_note": null
+        },
+        {
+          "word": "の",
+          "reading": "の",
+          "meaning": "possessive particle (of)",
+          "span": [
+            22,
+            23
+          ],
+          "chinese_cognate_note": null
+        },
+        {
+          "word": "ひと",
+          "reading": "ひと",
+          "meaning": "person",
+          "span": [
+            23,
+            25
+          ],
+          "chinese_cognate_note": "人 (rén)"
+        },
+        {
+          "word": "わすれ",
+          "reading": "わすれ",
+          "meaning": "forgetting",
+          "span": [
+            25,
+            28
+          ],
+          "chinese_cognate_note": "忘 (wàng)"
+        },
+        {
+          "word": "かねつ",
+          "reading": "かねつ",
+          "meaning": "cannot / difficult to do",
+          "span": [
+            28,
+            31
+          ],
+          "chinese_cognate_note": null
+        },
+        {
+          "word": "も",
+          "reading": "も",
+          "meaning": "emphasis particle",
+          "span": [
+            31,
+            32
+          ],
+          "chinese_cognate_note": null
+        }
+      ],
+      "focus_highlight": [
+        7,
+        8
+      ]
+    },
+    {
+      "type": "grammar_spotlight",
+      "content": "Notice how へ (e) appears twice in this poem. First, in 'oki e' (towards the offshore), it acts as a directional particle. Second, in 'makura no e', it functions almost like a noun meaning 'the side' or 'the direction of'. This highlights the origin of the particle: it comes from a word meaning 'side' or 'area.' When you see へ, visualize an arrow pointing from the subject toward the noun.",
+      "evidence": "See the poem above."
+    },
+    {
+      "type": "poem_presentation",
+      "poem_id": "lapis_681744f8b11dd879",
+      "display": {
+        "text_with_furigana": "<ruby>わか<rt>young</rt></ruby><ruby>には<rt>garden</rt></ruby>の<ruby>ふゆき<rt>winter trees</rt></ruby>の<ruby>う<rt>top</rt></ruby><ruby>へ<rt>direction</rt></ruby>に<ruby>ふる<rt>falling</rt></ruby><ruby>ゆき<rt>snow</rt></ruby>を<ruby>うめ<rt>plum</rt></ruby>の<ruby>はな<rt>flower</rt></ruby>かと<ruby>うちみつる<rt>look at</rt></ruby>かも",
+        "romaji": "waka niwa no, fuyuki no ue ni, furu yuki wo, ume no hana ka to, uchimitsuru kamo",
+        "translation": "Looking at the snow falling upon the winter trees in the young garden, I wonder if they are plum blossoms."
+      },
+      "vocabulary": [
+        {
+          "word": "わか",
+          "reading": "わか",
+          "meaning": "young",
+          "span": [
+            0,
+            2
+          ],
+          "chinese_cognate_note": "若 (ruò)"
+        },
+        {
+          "word": "には",
+          "reading": "には",
+          "meaning": "garden",
+          "span": [
+            2,
+            4
+          ],
+          "chinese_cognate_note": "庭 (tíng)"
+        },
+        {
+          "word": "の",
+          "reading": "の",
+          "meaning": "possessive particle (of)",
+          "span": [
+            4,
+            5
+          ],
+          "chinese_cognate_note": null
+        },
+        {
+          "word": "ふゆき",
+          "reading": "ふゆき",
+          "meaning": "winter trees",
+          "span": [
+            5,
+            8
+          ],
+          "chinese_cognate_note": "冬木 (dōng mù)"
+        },
+        {
+          "word": "の",
+          "reading": "の",
+          "meaning": "possessive particle (of)",
+          "span": [
+            8,
+            9
+          ],
+          "chinese_cognate_note": null
+        },
+        {
+          "word": "う",
+          "reading": "う",
+          "meaning": "upper (base noun)",
+          "span": [
+            9,
+            10
+          ],
+          "chinese_cognate_note": null
+        },
+        {
+          "word": "へ",
+          "reading": "え",
+          "meaning": "direction/side",
+          "span": [
+            10,
+            11
+          ],
+          "chinese_cognate_note": null
+        },
+        {
+          "word": "に",
+          "reading": "に",
+          "meaning": "at/on (location particle)",
+          "span": [
+            11,
+            12
+          ],
+          "chinese_cognate_note": null
+        },
+        {
+          "word": "ふる",
+          "reading": "ふる",
+          "meaning": "to fall (rain/snow)",
+          "span": [
+            12,
+            14
+          ],
+          "chinese_cognate_note": "降 (jiàng)"
+        },
+        {
+          "word": "ゆき",
+          "reading": "ゆき",
+          "meaning": "snow",
+          "span": [
+            14,
+            16
+          ],
+          "chinese_cognate_note": "雪 (xuě)"
+        },
+        {
+          "word": "を",
+          "reading": "を",
+          "meaning": "object marker",
+          "span": [
+            16,
+            17
+          ],
+          "chinese_cognate_note": null
+        },
+        {
+          "word": "うめ",
+          "reading": "うめ",
+          "meaning": "plum",
+          "span": [
+            17,
+            19
+          ],
+          "chinese_cognate_note": "梅 (méi)"
+        },
+        {
+          "word": "の",
+          "reading": "の",
+          "meaning": "possessive particle (of)",
+          "span": [
+            19,
+            20
+          ],
+          "chinese_cognate_note": null
+        },
+        {
+          "word": "はな",
+          "reading": "はな",
+          "meaning": "flower",
+          "span": [
+            20,
+            22
+          ],
+          "chinese_cognate_note": "花 (huā)"
+        },
+        {
+          "word": "か",
+          "reading": "か",
+          "meaning": "question particle",
+          "span": [
+            22,
+            23
+          ],
+          "chinese_cognate_note": null
+        },
+        {
+          "word": "と",
+          "reading": "と",
+          "meaning": "quotation/logical wrapper (as)",
+          "span": [
+            23,
+            24
+          ],
+          "chinese_cognate_note": null
+        },
+        {
+          "word": "うちみつる",
+          "reading": "うちみつる",
+          "meaning": "to look at / to fill the gaze",
+          "span": [
+            24,
+            29
+          ],
+          "chinese_cognate_note": null
+        },
+        {
+          "word": "かも",
+          "reading": "かも",
+          "meaning": "exclamatory particle (I wonder/alas)",
+          "span": [
+            29,
+            31
+          ],
+          "chinese_cognate_note": null
+        }
+      ],
+      "focus_highlight": [
+        10,
+        11
+      ]
+    },
+    {
+      "type": "contrast_example",
+      "content": "In the phrase 'ue ni' (うへに), we see the evolution of へ. 'U' (top) + 'he' (direction) + 'ni' (at) = 'At the top direction' (Above). While 'ni' tells us the snow is *at* a location, the 'he' inside the word 'ue' provides the spatial orientation (upwards). In Classical Japanese, many spatial nouns are built this way."
+    },
+    {
+      "type": "poem_presentation",
+      "poem_id": "lapis_95ad6afb7550bde1",
+      "display": {
+        "text_with_furigana": "<ruby>おき<rt>offshore</rt></ruby><ruby>へ<rt>towards</rt></ruby><ruby>より<rt>from</rt></ruby><ruby>みちくる<rt>rising</rt></ruby><ruby>しほ<rt>tide</rt></ruby>の<ruby>いやまし<rt>increasingly</rt></ruby>に<ruby>あか<rt>bilge</rt></ruby>も<ruby>ふき<rt>wipe</rt></ruby><ruby>み<rt>see</rt></ruby><ruby>かみ<rt>upper</rt></ruby><ruby>ふね<rt>ship</rt></ruby>かもかれ",
+        "romaji": "oki e yori, michikuru shio no, iyamashi ni, aka mo fukimi kami, fune ka mo kare",
+        "translation": "From the direction of the offshore, the tide comes rising increasingly; look at the bilge water being wiped from that ship."
+      },
+      "vocabulary": [
+        {
+          "word": "おき",
+          "reading": "おき",
+          "meaning": "offshore; open sea",
+          "span": [
+            0,
+            2
+          ],
+          "chinese_cognate_note": null
+        },
+        {
+          "word": "へ",
+          "reading": "え",
+          "meaning": "direction/towards",
+          "span": [
+            2,
+            3
+          ],
+          "chinese_cognate_note": null
+        },
+        {
+          "word": "より",
+          "reading": "より",
+          "meaning": "from (source particle)",
+          "span": [
+            3,
+            5
+          ],
+          "chinese_cognate_note": null
+        },
+        {
+          "word": "みちくる",
+          "reading": "みちくる",
+          "meaning": "to rise/fill (of tide)",
+          "span": [
+            5,
+            9
+          ],
+          "chinese_cognate_note": "满 (mǎn)"
+        },
+        {
+          "word": "しほ",
+          "reading": "しほ",
+          "meaning": "tide; salt",
+          "span": [
+            9,
+            11
+          ],
+          "chinese_cognate_note": "潮 (cháo)"
+        },
+        {
+          "word": "の",
+          "reading": "の",
+          "meaning": "subject marker in relative clause (of)",
+          "span": [
+            11,
+            12
+          ],
+          "chinese_cognate_note": null
+        },
+        {
+          "word": "いやまし",
+          "reading": "いやまし",
+          "meaning": "increasingly",
+          "span": [
+            12,
+            16
+          ],
+          "chinese_cognate_note": "愈益 (yù yì)"
+        },
+        {
+          "word": "に",
+          "reading": "に",
+          "meaning": "adverbial marker (ly)",
+          "span": [
+            16,
+            17
+          ],
+          "chinese_cognate_note": null
+        },
+        {
+          "word": "あか",
+          "reading": "あか",
+          "meaning": "bilge water (water in the boat)",
+          "span": [
+            17,
+            19
+          ],
+          "chinese_cognate_note": null
+        },
+        {
+          "word": "も",
+          "reading": "も",
+          "meaning": "emphasis/also",
+          "span": [
+            19,
+            20
+          ],
+          "chinese_cognate_note": null
+        },
+        {
+          "word": "ふき",
+          "reading": "ふき",
+          "meaning": "to wipe/blow",
+          "span": [
+            20,
+            22
+          ],
+          "chinese_cognate_note": "拭 (shì)"
+        },
+        {
+          "word": "み",
+          "reading": "み",
+          "meaning": "to see",
+          "span": [
+            22,
+            23
+          ],
+          "chinese_cognate_note": "见 (jiàn)"
+        },
+        {
+          "word": "かみ",
+          "reading": "かみ",
+          "meaning": "upper/god",
+          "span": [
+            23,
+            25
+          ],
+          "chinese_cognate_note": "上 (shàng)"
+        },
+        {
+          "word": "ふね",
+          "reading": "ふね",
+          "meaning": "ship; boat",
+          "span": [
+            25,
+            27
+          ],
+          "chinese_cognate_note": "船 (chuán)"
+        },
+        {
+          "word": "かも",
+          "reading": "かも",
+          "meaning": "exclamation",
+          "span": [
+            27,
+            29
+          ],
+          "chinese_cognate_note": null
+        },
+        {
+          "word": "かれ",
+          "reading": "かれ",
+          "meaning": "that/he",
+          "span": [
+            29,
+            31
+          ],
+          "chinese_cognate_note": "彼 (bǐ)"
+        }
+      ],
+      "focus_highlight": [
+        2,
+        3
+      ]
+    },
+    {
+      "type": "comprehension_check",
+      "question": "In Poem 3, the phrase is 'oki e yori' (おきへより). Based on the particles, what is the logical flow of the tide?",
+      "answer": "The tide is coming 'from' (yori) the 'direction of' (e) the 'offshore' (oki).",
+      "hint": "Break it down: Oki (Offshore) + e (Towards) + yori (From)."
+    }
+  ],
+  "reference_card": {
+    "point": "Particle へ (e)",
+    "one_liner": "A directional particle indicating 'towards' or 'in the direction of' a noun.",
+    "example": "おきへ (Towards the open sea)",
+    "see_also": [
+      "particle_ni",
+      "particle_yori"
+    ]
+  },
+  "forward_references": [
+    {
+      "point": "より (yori)",
+      "note": "We saw 'yori' in Poem 3. It marks the starting point or source, often paired with 'e' to define a path. We will cover it in the next lesson."
+    },
+    {
+      "point": "みちくる (michikuru)",
+      "note": "This is a verb in its 'Rentaikei' (attributive) form, which we will analyze in Unit 3."
+    }
+  ]
+}
