@@ -55,6 +55,7 @@ Thumbs.db
 
 # Claude Code / AI agents
 .claude/
+CLAUDE.md
+SCAFFOLD_PLAN.md
 WakaWaka_PROMPT*.md
 WakaWaka_RESOURCES.md
-SCAFFOLD_PLAN.md
