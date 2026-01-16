@@ -10,8 +10,8 @@ Provides:
 import html
 from typing import Optional
 
-from wakadecoder.schemas import ReferenceCard, LessonContent
-from wakadecoder.classroom import GrammarPointData
+from wakawaka.schemas import ReferenceCard, LessonContent
+from wakawaka.classroom import GrammarPointData
 
 
 def get_reference_css() -> str:

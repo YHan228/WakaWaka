@@ -18,11 +18,12 @@ system: |
   TASK: Select the 2-3 best poems from a candidate pool for teaching a specific grammar point.
 
   SELECTION CRITERIA (in priority order):
-  1. CLARITY: The grammar point usage is clear and unambiguous
-  2. ISOLATION: Few other difficult grammar points that would confuse the student
-  3. CONTEXT: The meaning is understandable even without full grammar knowledge
-  4. KANJI: Contains kanji the student can leverage from Chinese
-  5. BEAUTY: All else equal, prefer aesthetically compelling poems
+  1. NOVELTY: STRONGLY prefer poems NOT already used in previous lessons
+  2. CLARITY: The grammar point usage is clear and unambiguous
+  3. ISOLATION: Few other difficult grammar points that would confuse the student
+  4. CONTEXT: The meaning is understandable even without full grammar knowledge
+  5. KANJI: Contains kanji the student can leverage from Chinese
+  6. BEAUTY: All else equal, prefer aesthetically compelling poems
 
   STRICT OUTPUT RULES:
   - Output ONLY valid JSON, no explanatory text before or after
@@ -49,6 +50,9 @@ user_template: |
   - ID: {grammar_point_id}
   - Category: {category}
   - Description: {description}
+
+  ALREADY USED POEMS (AVOID selecting these unless absolutely necessary):
+  {used_poems}
 
   CANDIDATE POEMS (select 2-3 from these):
   {candidates_json}

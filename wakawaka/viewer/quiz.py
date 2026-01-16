@@ -11,7 +11,7 @@ import html
 from dataclasses import dataclass
 from typing import Optional
 
-from wakadecoder.schemas import ComprehensionCheckStep, LessonContent
+from wakawaka.schemas import ComprehensionCheckStep, LessonContent
 
 
 @dataclass

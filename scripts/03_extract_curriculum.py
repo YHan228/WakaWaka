@@ -33,7 +33,7 @@ sys.path.insert(0, str(PROJECT_ROOT))
 import pandas as pd
 import networkx as nx
 
-from wakadecoder.schemas.curriculum import (
+from wakawaka.schemas.curriculum import (
     STOPLIST_CANONICAL_IDS,
     GrammarIndexEntry,
     SenseEntry,

@@ -12,7 +12,7 @@ from dataclasses import dataclass
 from enum import Enum
 from typing import Optional
 
-from wakadecoder.schemas import LessonStatus, LessonContent
+from wakawaka.schemas import LessonStatus, LessonContent
 
 from .loader import ClassroomLoader, LessonSummary, UnitData
 from .progress import ProgressTracker

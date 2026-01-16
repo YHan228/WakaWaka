@@ -59,7 +59,7 @@ except ImportError:
     print("ERROR: google-genai not installed. Run: pip install google-genai")
     sys.exit(1)
 
-from wakadecoder.schemas.annotation import (
+from wakawaka.schemas.annotation import (
     PoemAnnotation,
     FugashiToken,
     TokenReading,
@@ -68,7 +68,7 @@ from wakadecoder.schemas.annotation import (
     DifficultyFactor,
     compute_difficulty_score,
 )
-from wakadecoder.utils.prompt_loader import load_prompt, format_prompt
+from wakawaka.utils.prompt_loader import load_prompt, format_prompt
 
 # Setup logging
 logging.basicConfig(

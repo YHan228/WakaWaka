@@ -1,5 +1,5 @@
 """
-WakaDecoder - Classical Japanese Poetry Learning Platform
+WakaWaka - Classical Japanese Poetry Learning Platform
 
 Streamlit application for learning classical Japanese through poetry.
 Designed for Chinese speakers leveraging kanji knowledge.
@@ -11,13 +11,13 @@ Usage:
 import streamlit as st
 from pathlib import Path
 
-from wakadecoder.classroom import (
+from wakawaka.classroom import (
     ClassroomLoader,
     ProgressTracker,
     Navigator,
     LessonAvailability,
 )
-from wakadecoder.viewer import (
+from wakawaka.viewer import (
     render_lesson,
     get_vocab_css,
     extract_quiz_questions,
@@ -27,7 +27,7 @@ from wakadecoder.viewer import (
     get_reference_css,
     markdown_to_html,
 )
-from wakadecoder.schemas import LessonStatus
+from wakawaka.schemas import LessonStatus
 import json
 
 
@@ -39,7 +39,7 @@ DEFAULT_DB_PATH = Path("data/classroom.db")
 INTRODUCTION_PATH = Path("data/introduction.json")
 
 st.set_page_config(
-    page_title="WakaDecoder",
+    page_title="WakaWaka",
     page_icon="📜",
     layout="wide",
     initial_sidebar_state="expanded",
@@ -345,7 +345,7 @@ def init_session_state():
 def render_sidebar():
     """Render the sidebar with curriculum tree and progress."""
     with st.sidebar:
-        st.markdown("# 📜 WakaDecoder")
+        st.markdown("# 📜 WakaWaka")
         st.caption("Classical Japanese Poetry")
 
         if not st.session_state.loader:
@@ -471,7 +471,7 @@ python scripts/05_compile_classroom.py --output data/classroom.db
 
     lesson_id = st.session_state.current_lesson_id
     if not lesson_id:
-        st.markdown("## Welcome to WakaDecoder")
+        st.markdown("## Welcome to WakaWaka")
         st.markdown("Select a lesson from the sidebar to begin your journey into classical Japanese poetry.")
         return
 
@@ -834,7 +834,7 @@ def render_cover_page():
     st.markdown(f"""
     <div class="cover-container">
         <div class="cover-title">和歌デコーダー</div>
-        <div class="cover-subtitle">WakaDecoder</div>
+        <div class="cover-subtitle">WakaWaka</div>
         <div class="cover-tagline">
             A learning platform for Chinese speakers to master classical Japanese poetry.
             Leverage your kanji knowledge to unlock the beauty of waka (和歌).

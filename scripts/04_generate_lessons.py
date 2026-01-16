@@ -51,7 +51,7 @@ except ImportError:
     print("ERROR: google-genai not installed. Run: pip install google-genai")
     sys.exit(1)
 
-from wakadecoder.schemas.lesson import (
+from wakawaka.schemas.lesson import (
     LessonContent,
     GrammarExplanation,
     PoemDisplay,
@@ -65,7 +65,7 @@ from wakadecoder.schemas.lesson import (
     ForwardReference,
     VocabularyItem,
 )
-from wakadecoder.utils.prompt_loader import load_prompt
+from wakawaka.utils.prompt_loader import load_prompt
 
 # Setup logging
 logging.basicConfig(
@@ -275,6 +275,67 @@ def get_prerequisite_summaries(
     return "\n".join(summaries) if summaries else "None"
 
 
+def get_lesson_position(lesson: dict, lesson_graph: dict) -> tuple[int, int, int, int, str]:
+    """
+    Get lesson position in curriculum.
+
+    Returns:
+        Tuple of (unit_num, unit_total, lesson_num, lessons_in_unit, unit_theme)
+    """
+    units = lesson_graph.get("units", [])
+    lesson_id = lesson["id"]
+
+    for unit_idx, unit in enumerate(units, 1):
+        lessons = unit.get("lessons", [])
+        for lesson_idx, l in enumerate(lessons, 1):
+            if l["id"] == lesson_id:
+                unit_theme = unit.get("theme", unit.get("id", f"Unit {unit_idx}"))
+                return (unit_idx, len(units), lesson_idx, len(lessons), unit_theme)
+
+    return (1, 1, 1, 1, "Unknown")
+
+
+def get_lessons_completed_before(lesson: dict, lesson_graph: dict, generated_lessons: dict) -> str:
+    """
+    Get summary of ALL lessons completed before this one in curriculum order.
+
+    Args:
+        lesson: Current lesson
+        lesson_graph: Full lesson graph
+        generated_lessons: Dict of already generated lesson content
+
+    Returns:
+        String summarizing completed lessons
+    """
+    units = lesson_graph.get("units", [])
+    lesson_id = lesson["id"]
+    completed = []
+
+    # Walk through curriculum in order until we hit the current lesson
+    found = False
+    for unit in units:
+        if found:
+            break
+        unit_theme = unit.get("theme", unit.get("id", ""))
+        for l in unit.get("lessons", []):
+            if l["id"] == lesson_id:
+                found = True
+                break
+            # This lesson comes before our target
+            lid = l["id"]
+            gp = l.get("canonical_grammar_point", lid)
+            if lid in generated_lessons:
+                content = generated_lessons[lid]
+                completed.append(f"- {content.get('lesson_title', gp)}")
+            else:
+                completed.append(f"- {gp}")
+
+    if not completed:
+        return "None - this is the first lesson in the curriculum."
+
+    return "\n".join(completed)
+
+
 # -----------------------------------------------------------------------------
 # LLM Poem Selection
 # -----------------------------------------------------------------------------
@@ -329,7 +390,8 @@ def select_poems_llm(
     candidates: list[dict],
     grammar_index: dict,
     client: GeminiClient,
-    selection_prompt_config: dict
+    selection_prompt_config: dict,
+    used_poem_ids: set[str] | None = None
 ) -> list[str]:
     """
     Use LLM to select the best poems from candidates.
@@ -340,12 +402,16 @@ def select_poems_llm(
         grammar_index: Grammar index data
         client: Gemini client
         selection_prompt_config: Loaded select_poems.yaml config
+        used_poem_ids: Set of poem IDs already used in previous lessons
 
     Returns:
         List of selected poem IDs (2-3 poems)
     """
     canonical_id = lesson["canonical_grammar_point"]
     grammar_info = grammar_index.get("entries", {}).get(canonical_id, {})
+
+    # Format used poems list
+    used_poems_str = "None yet (this is the first lesson)" if not used_poem_ids else "\n".join(f"- {pid}" for pid in sorted(used_poem_ids))
 
     # Build prompt
     system_prompt = selection_prompt_config.get("system", "")
@@ -355,6 +421,7 @@ def select_poems_llm(
         grammar_point_id=canonical_id,
         category=grammar_info.get("category", "unknown"),
         description=grammar_info.get("senses", [{}])[0].get("description", "") if grammar_info.get("senses") else "",
+        used_poems=used_poems_str,
         candidates_json=format_candidates_for_selection(candidates, canonical_id)
     )
 
@@ -454,8 +521,7 @@ def validate_and_fix_lesson(llm_response: dict, lesson: dict) -> dict:
             "concept": f"The {lesson['canonical_grammar_point']} grammar point",
             "formation": None,
             "variations": [],
-            "common_confusions": [],
-            "logic_analogy": None
+            "common_confusions": []
         }
     else:
         ge = llm_response["grammar_explanation"]
@@ -570,8 +636,7 @@ def build_lesson_content(lesson: dict, llm_response: dict) -> LessonContent:
         concept=ge_data.get("concept", ""),
         formation=ge_data.get("formation"),
         variations=ge_data.get("variations", []),
-        common_confusions=ge_data.get("common_confusions", []),
-        logic_analogy=ge_data.get("logic_analogy")
+        common_confusions=ge_data.get("common_confusions", [])
     )
 
     # Build teaching sequence
@@ -793,8 +858,9 @@ def generate_lesson(
     generated_lessons: dict,
     use_cache: bool = True,
     selection_prompt_config: dict | None = None,
-    skip_poem_selection: bool = False
-) -> LessonContent | None:
+    skip_poem_selection: bool = False,
+    used_poem_ids: set[str] | None = None
+) -> tuple[LessonContent | None, list[str]]:
     """
     Generate content for a single lesson.
 
@@ -809,9 +875,10 @@ def generate_lesson(
         use_cache: Whether to use response caching
         selection_prompt_config: Config for LLM poem selection (None to skip)
         skip_poem_selection: If True, use pre-selected poem_ids directly
+        used_poem_ids: Set of poem IDs already used in previous lessons
 
     Returns:
-        LessonContent or None on failure
+        Tuple of (LessonContent or None, list of poem IDs used in this lesson)
     """
     lesson_id = lesson["id"]
     canonical_id = lesson["canonical_grammar_point"]
@@ -825,7 +892,8 @@ def generate_lesson(
             logger.debug(f"Using cached response for {lesson_id}")
             try:
                 fixed = validate_and_fix_lesson(cached, lesson)
-                return build_lesson_content(lesson, fixed)
+                # Note: cached responses don't track which poems were used
+                return build_lesson_content(lesson, fixed), []
             except Exception as e:
                 logger.warning(f"Cached response invalid for {lesson_id}: {e}")
 
@@ -833,35 +901,49 @@ def generate_lesson(
     grammar_info = grammar_index.get("entries", {}).get(canonical_id, {})
 
     # Get poems for this lesson
+    poems_used_ids = []
     if skip_poem_selection or lesson.get("poem_ids"):
         # Use pre-selected poems (either from curriculum or previous selection)
         poems = get_selected_poems_for_lesson(lesson, poems_df)
         if not poems:
             # Fallback to candidates
             poems = get_candidate_poems_for_lesson(lesson, poems_df)[:3]
+        poems_used_ids = [p.get("poem_id") for p in poems if p.get("poem_id")]
     else:
         # LLM poem selection from candidate pool
         candidates = get_candidate_poems_for_lesson(lesson, poems_df)
         if not candidates:
             logger.warning(f"No candidate poems found for lesson {lesson_id}")
-            return None
+            return None, []
 
         if selection_prompt_config and len(candidates) > 3:
             logger.info(f"Selecting poems for {lesson_id} from {len(candidates)} candidates...")
             selected_ids = select_poems_llm(
-                lesson, candidates, grammar_index, client, selection_prompt_config
+                lesson, candidates, grammar_index, client, selection_prompt_config,
+                used_poem_ids=used_poem_ids
             )
             poems = get_poems_by_ids(selected_ids, poems_df)
+            poems_used_ids = selected_ids
             logger.info(f"  Selected {len(poems)} poems: {selected_ids}")
         else:
             # Use first 3 candidates (sorted by difficulty)
             poems = candidates[:3]
+            poems_used_ids = [p.get("poem_id") for p in poems if p.get("poem_id")]
 
     if not poems:
         logger.warning(f"No poems found for lesson {lesson_id}")
 
     # Get prerequisite summaries
     prereq_summary = get_prerequisite_summaries(lesson, lesson_graph, generated_lessons)
+
+    # Get lesson position context
+    unit_num, unit_total, lesson_num, lessons_in_unit, unit_theme = get_lesson_position(lesson, lesson_graph)
+    lesson_position = f"""- Unit {unit_num} of {unit_total}: "{unit_theme}"
+- Lesson {lesson_num} of {lessons_in_unit} in this unit
+- Overall progress: This is {'the FIRST lesson in the entire course' if (unit_num == 1 and lesson_num == 1) else 'NOT the first lesson - student has prior context'}"""
+
+    # Get lessons completed before this one
+    lessons_completed = get_lessons_completed_before(lesson, lesson_graph, generated_lessons)
 
     # Build prompt
     system_prompt = prompt_config.get("system", "")
@@ -872,6 +954,8 @@ def generate_lesson(
         category=grammar_info.get("category", "unknown"),
         frequency=grammar_info.get("frequency", 0),
         avg_difficulty=f"{grammar_info.get('avg_difficulty', 0):.2f}",
+        lesson_position=lesson_position,
+        lessons_completed=lessons_completed,
         prerequisites_summary=prereq_summary,
         poems_json=format_poems_for_prompt(poems)
     )
@@ -892,11 +976,11 @@ def generate_lesson(
         fixed = validate_and_fix_lesson(llm_response, lesson)
 
         # Build lesson content
-        return build_lesson_content(lesson, fixed)
+        return build_lesson_content(lesson, fixed), poems_used_ids
 
     except Exception as e:
         logger.error(f"Failed to generate lesson {lesson_id}: {e}")
-        return None
+        return None, poems_used_ids
 
 
 def save_lesson(lesson_content: LessonContent, output_dir: Path):
@@ -1113,6 +1197,7 @@ def main():
     generated = []
     failed = []
     total = len(lessons_to_generate)
+    used_poem_ids: set[str] = set()  # Track poems used across lessons
 
     if args.parallel > 1:
         # Parallel generation
@@ -1122,7 +1207,7 @@ def main():
         lock = threading.Lock()
         counter = [0]  # Mutable container for thread-safe counter
 
-        def generate_single_lesson(lesson: dict) -> tuple[str, LessonContent | None]:
+        def generate_single_lesson(lesson: dict) -> tuple[str, LessonContent | None, list[str]]:
             """Worker function for parallel generation."""
             lesson_id = lesson["id"]
             # Create thread-local client
@@ -1131,7 +1216,8 @@ def main():
                 sleep_seconds=args.api_sleep
             )
             try:
-                content = generate_lesson(
+                # Note: used_poem_ids not passed in parallel mode (cross-thread tracking complex)
+                content, poems_used = generate_lesson(
                     lesson=lesson,
                     grammar_index=grammar_index,
                     lesson_graph=lesson_graph,
@@ -1141,22 +1227,25 @@ def main():
                     generated_lessons=generated_lessons,
                     use_cache=not args.no_cache,
                     selection_prompt_config=selection_prompt_config,
-                    skip_poem_selection=args.skip_poem_selection
+                    skip_poem_selection=args.skip_poem_selection,
+                    used_poem_ids=None  # Parallel mode doesn't track cross-lesson poem usage
                 )
-                return lesson_id, content
+                return lesson_id, content, poems_used
             except Exception as e:
                 logger.error(f"  ✗ Error generating {lesson_id}: {e}")
-                return lesson_id, None
+                return lesson_id, None, []
 
         with ThreadPoolExecutor(max_workers=args.parallel) as executor:
             futures = {executor.submit(generate_single_lesson, lesson): lesson for lesson in lessons_to_generate}
 
             try:
                 for future in as_completed(futures):
-                    lesson_id, lesson_content = future.result()
+                    lesson_id, lesson_content, poems_used = future.result()
                     with lock:
                         counter[0] += 1
                         progress = counter[0]
+                        # Track poems used (even in parallel, helps for logging)
+                        used_poem_ids.update(poems_used)
 
                     if lesson_content:
                         save_lesson(lesson_content, args.output_dir)
@@ -1179,7 +1268,7 @@ def main():
             logger.info(f"[{i}/{total}] Generating {lesson_id}...")
 
             try:
-                lesson_content = generate_lesson(
+                lesson_content, poems_used = generate_lesson(
                     lesson=lesson,
                     grammar_index=grammar_index,
                     lesson_graph=lesson_graph,
@@ -1189,8 +1278,12 @@ def main():
                     generated_lessons=generated_lessons,
                     use_cache=not args.no_cache,
                     selection_prompt_config=selection_prompt_config,
-                    skip_poem_selection=args.skip_poem_selection
+                    skip_poem_selection=args.skip_poem_selection,
+                    used_poem_ids=used_poem_ids  # Pass tracked poems to avoid reuse
                 )
+
+                # Track poems used in this lesson
+                used_poem_ids.update(poems_used)
 
                 if lesson_content:
                     save_lesson(lesson_content, args.output_dir)

@@ -1,5 +1,5 @@
 """
-ProgressTracker - Track student progress in ~/.wakadecoder/progress.db.
+ProgressTracker - Track student progress in ~/.wakawaka/progress.db.
 
 Stores user progress separately from content database:
 - Lesson completion status
@@ -13,10 +13,10 @@ from datetime import datetime
 from pathlib import Path
 from typing import Optional
 
-from wakadecoder.schemas import LessonStatus, LessonProgress, StudentProgress
+from wakawaka.schemas import LessonStatus, LessonProgress, StudentProgress
 
 
-DEFAULT_PROGRESS_DIR = Path.home() / ".wakadecoder"
+DEFAULT_PROGRESS_DIR = Path.home() / ".wakawaka"
 DEFAULT_PROGRESS_DB = DEFAULT_PROGRESS_DIR / "progress.db"
 
 
@@ -34,7 +34,7 @@ class ProgressTracker:
         Initialize progress tracker.
 
         Args:
-            db_path: Path to progress.db (default: ~/.wakadecoder/progress.db)
+            db_path: Path to progress.db (default: ~/.wakawaka/progress.db)
             student_id: Student identifier for multi-user support
         """
         self.db_path = db_path or DEFAULT_PROGRESS_DB

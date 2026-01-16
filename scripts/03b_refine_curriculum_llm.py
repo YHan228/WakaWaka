@@ -38,7 +38,7 @@ sys.path.insert(0, str(PROJECT_ROOT))
 from dotenv import load_dotenv
 load_dotenv(PROJECT_ROOT / ".env")
 
-from wakadecoder.utils.prompt_loader import load_prompt
+from wakawaka.utils.prompt_loader import load_prompt
 
 # Import Google GenAI
 try:

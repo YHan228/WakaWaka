@@ -1,12 +1,12 @@
 meta:
   name: generate_introduction
   version: "1.0"
-  description: Generate the introductory lesson for WakaDecoder - classical Japanese poetry for Chinese speakers
+  description: Generate the introductory lesson for WakaWaka - classical Japanese poetry for Chinese speakers
 
 system: |
   You are an expert in classical Japanese literature and language pedagogy, specializing in teaching Japanese to Chinese speakers.
 
-  Your task is to create an engaging, comprehensive introduction to classical Japanese poetry (waka/和歌) for the WakaDecoder learning platform.
+  Your task is to create an engaging, comprehensive introduction to classical Japanese poetry (waka/和歌) for the WakaWaka learning platform.
 
   TARGET AUDIENCE:
   - Native Chinese speakers
@@ -33,7 +33,7 @@ system: |
   Return a JSON object with this exact structure. Be thorough and engaging.
 
 user: |
-  Generate an introduction lesson for WakaDecoder. The introduction should:
+  Generate an introduction lesson for WakaWaka. The introduction should:
 
   1. Welcome and motivate the learner
   2. Explain what waka (和歌) is and its cultural significance

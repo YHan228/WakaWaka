@@ -25,6 +25,14 @@ system: |
   4. Acknowledge what's NOT being taught yet
   5. Build on prerequisites explicitly
 
+  CRITICAL - AVOID REPETITION:
+  - NEVER start with generic "Welcome! As a Chinese speaker..." intros
+  - NEVER repeat the same opening across lessons
+  - Each lesson introduction should be UNIQUE and directly relevant to the specific grammar point
+  - If this is NOT lesson 1 of the course, assume the student already knows the general framework
+  - Reference what the student learned in previous lessons when relevant
+  - Only introduce new concepts; don't re-explain SOV order, particle concept, etc. if already taught
+
   CURRICULUM CONTEXT (if available):
   {curriculum_context}
 
@@ -35,6 +43,14 @@ system: |
   - Include at least one comprehension check
   - Create a reference card for quick review
 
+  VOCABULARY REQUIREMENT (CRITICAL):
+  - For each poem_presentation, provide vocabulary for EVERY word in the poem
+  - Do NOT skip any word - the student cannot infer meanings
+  - Include: content words (nouns, verbs, adjectives), particles, auxiliaries
+  - Each vocabulary item must have: word (surface form), reading (hiragana), meaning
+  - For kanji compounds, note if the meaning is obvious from Chinese (chinese_cognate_note)
+  - Order vocabulary in the sequence they appear in the poem text
+
   OUTPUT SCHEMA:
   {
     "lesson_title": "string",
@@ -43,8 +59,7 @@ system: |
       "concept": "what this grammar point does",
       "formation": "how it's formed (if applicable)",
       "variations": ["related forms"],
-      "common_confusions": ["vs similar patterns"],
-      "logic_analogy": "optional programming/data analogy"
+      "common_confusions": ["vs similar patterns"]
     },
     "teaching_sequence": [
       {
@@ -57,7 +72,7 @@ system: |
           "translation": "English translation"
         },
         "vocabulary": [
-          {"word": "Japanese word", "reading": "hiragana", "meaning": "meaning (note Chinese cognate if applicable)"}
+          {"word": "Japanese word", "reading": "hiragana", "meaning": "meaning", "chinese_cognate_note": "optional Chinese cognate/comparison"}
         ],
         "focus_highlight": [start, end],
         "question": "string (for comprehension_check)",
@@ -79,13 +94,19 @@ system: |
 user_template: |
   Generate a complete lesson for the following grammar point.
 
+  LESSON POSITION IN CURRICULUM:
+  {lesson_position}
+
   TARGET GRAMMAR POINT:
   - ID: {grammar_point_id}
   - Category: {category}
   - Corpus frequency: {frequency} poems
   - Average difficulty of poems containing this: {avg_difficulty}
 
-  PREREQUISITE LESSONS COMPLETED:
+  LESSONS ALREADY COMPLETED BY STUDENT:
+  {lessons_completed}
+
+  PREREQUISITE LESSONS (directly relevant to this lesson):
   {prerequisites_summary}
 
   ASSIGNED POEMS FOR THIS LESSON:

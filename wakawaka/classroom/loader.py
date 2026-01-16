@@ -14,7 +14,7 @@ from dataclasses import dataclass
 from pathlib import Path
 from typing import Optional
 
-from wakadecoder.schemas import LessonContent, PoemAnnotation
+from wakawaka.schemas import LessonContent, PoemAnnotation
 
 
 @dataclass

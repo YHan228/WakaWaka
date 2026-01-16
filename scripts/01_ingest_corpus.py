@@ -51,7 +51,7 @@ from dotenv import load_dotenv
 
 load_dotenv(PROJECT_ROOT / ".env")
 
-from wakadecoder.utils.treebank_parser import parse_oncoj_file, parse_simple_bracketed
+from wakawaka.utils.treebank_parser import parse_oncoj_file, parse_simple_bracketed
 
 # Setup logging
 logging.basicConfig(

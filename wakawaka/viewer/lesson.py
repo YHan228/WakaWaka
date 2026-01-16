@@ -31,7 +31,7 @@ def markdown_to_html(text: str) -> str:
 
     return text
 
-from wakadecoder.schemas import (
+from wakawaka.schemas import (
     LessonContent,
     VocabularyItem,
     PoemPresentationStep,

@@ -17,7 +17,6 @@ class GrammarExplanation(BaseModel):
     formation: Optional[str] = None
     variations: list[str] = []
     common_confusions: list[str] = []
-    logic_analogy: Optional[str] = None
 
 
 class PoemDisplay(BaseModel):

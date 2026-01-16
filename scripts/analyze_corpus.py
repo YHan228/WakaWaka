@@ -43,8 +43,8 @@ except ImportError:
 # Add project root to path
 sys.path.insert(0, str(Path(__file__).parent.parent))
 
-from wakadecoder.schemas.annotation import PoemAnnotation
-from wakadecoder.schemas.curriculum import LessonGraph, GrammarIndex
+from wakawaka.schemas.annotation import PoemAnnotation
+from wakawaka.schemas.curriculum import LessonGraph, GrammarIndex
 
 
 def load_poems(poems_path: Path) -> pd.DataFrame:

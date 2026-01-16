@@ -7,7 +7,7 @@ Tests all Pydantic models to ensure they validate correctly.
 import pytest
 from datetime import datetime
 
-from wakadecoder.schemas import (
+from wakawaka.schemas import (
     # Annotation
     FugashiToken,
     TokenReading,
@@ -461,8 +461,8 @@ class TestProgressSchemas:
 class TestSchemaImports:
     """Test that all schemas can be imported from the main module."""
 
-    def test_import_from_wakadecoder_schemas(self):
-        from wakadecoder.schemas import (
+    def test_import_from_wakawaka_schemas(self):
+        from wakawaka.schemas import (
             PoemAnnotation,
             LessonGraph,
             LessonContent,
