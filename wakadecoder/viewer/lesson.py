@@ -12,6 +12,25 @@ from typing import Optional
 import html
 import re
 
+
+def markdown_to_html(text: str) -> str:
+    """
+    Convert basic markdown to HTML.
+    Handles: **bold**, *italic*, `code`, and newlines.
+    """
+    # Escape HTML first (but preserve intentional HTML like <ruby>)
+    # Don't escape if it contains ruby tags
+    if '<ruby>' not in text and '<span' not in text:
+        text = html.escape(text)
+
+    # Convert markdown
+    text = re.sub(r'\*\*([^*]+)\*\*', r'<strong>\1</strong>', text)  # **bold**
+    text = re.sub(r'\*([^*]+)\*', r'<em>\1</em>', text)  # *italic*
+    text = re.sub(r'`([^`]+)`', r'<code>\1</code>', text)  # `code`
+    text = text.replace('\n', '<br>')  # newlines
+
+    return text
+
 from wakadecoder.schemas import (
     LessonContent,
     VocabularyItem,
@@ -27,173 +46,411 @@ from wakadecoder.schemas import (
 
 # Word type to CSS class mapping for color coding
 WORD_TYPE_COLORS = {
-    "particle": "vocab-particle",      # Blue
-    "verb": "vocab-verb",              # Green
-    "auxiliary": "vocab-auxiliary",    # Purple
-    "adjective": "vocab-adjective",    # Orange
-    "noun": "vocab-noun",              # Default
+    "particle": "vocab-particle",      # Indigo blue
+    "verb": "vocab-verb",              # Pine green
+    "auxiliary": "vocab-auxiliary",    # Plum purple
+    "adjective": "vocab-adjective",    # Autumn orange
+    "noun": "vocab-noun",              # Ink black
 }
 
 
 def get_vocab_css() -> str:
-    """Get CSS styles for vocabulary display."""
+    """Get CSS styles for the 'Ink & Paper' theme."""
     return """
     <style>
-    .poem-text {
-        font-size: 1.4em;
-        line-height: 2.2em;
-        margin: 1em 0;
-        font-family: "Noto Serif JP", "Yu Mincho", serif;
+    /* ============================================
+       INK & PAPER THEME - Classical Japanese Aesthetic
+       ============================================ */
+
+    /* -- Color Variables -- */
+    :root {
+        --washi-cream: #FAF8F5;
+        --washi-warm: #F5F2ED;
+        --sumi-ink: #2D2D2D;
+        --sumi-light: #4A4A4A;
+        --vermillion: #C53D43;
+        --indigo: #4A5568;
+        --pine-green: #5B8A72;
+        --plum: #8B687F;
+        --autumn-orange: #C17F59;
+        --gold-accent: #D4A84B;
+        --soft-blue: #6B8CAE;
     }
-    .vocab-word {
-        cursor: pointer;
-        border-radius: 3px;
-        padding: 0 2px;
-        transition: background-color 0.2s;
+
+    /* -- Typography -- */
+    @import url('https://fonts.googleapis.com/css2?family=Noto+Serif+JP:wght@400;500;600;700&display=swap');
+
+    /* -- Poem Display -- */
+    .poem-text {
+        font-size: 1.6em;
+        line-height: 2.4em;
+        margin: 1.5em 0;
+        font-family: "Noto Serif JP", "Yu Mincho", "Hiragino Mincho Pro", serif;
+        color: var(--sumi-ink);
+        letter-spacing: 0.05em;
+    }
+
+    .poem-container {
+        background: linear-gradient(145deg, var(--washi-cream) 0%, var(--washi-warm) 100%);
+        border: 1px solid #E8E4DE;
+        border-left: 3px solid var(--vermillion);
+        padding: 2em 2.5em;
+        margin: 1.5em 0;
+        border-radius: 2px 8px 8px 2px;
+        box-shadow: 0 2px 12px rgba(0,0,0,0.06);
         position: relative;
     }
+
+    .poem-container::before {
+        content: '';
+        position: absolute;
+        top: 0;
+        left: 0;
+        right: 0;
+        bottom: 0;
+        background: url("data:image/svg+xml,%3Csvg width='60' height='60' viewBox='0 0 60 60' xmlns='http://www.w3.org/2000/svg'%3E%3Cg fill='none' fill-rule='evenodd'%3E%3Cg fill='%23000000' fill-opacity='0.02'%3E%3Cpath d='M36 34v-4h-2v4h-4v2h4v4h2v-4h4v-2h-4zm0-30V0h-2v4h-4v2h4v4h2V6h4V4h-4zM6 34v-4H4v4H0v2h4v4h2v-4h4v-2H6zM6 4V0H4v4H0v2h4v4h2V6h4V4H6z'/%3E%3C/g%3E%3C/g%3E%3C/svg%3E");
+        pointer-events: none;
+        border-radius: inherit;
+    }
+
+    .poem-romaji {
+        font-size: 0.95em;
+        color: var(--sumi-light);
+        font-style: italic;
+        margin-top: 1em;
+        padding-top: 1em;
+        border-top: 1px solid #E8E4DE;
+        letter-spacing: 0.02em;
+    }
+
+    .poem-translation {
+        font-size: 1.05em;
+        color: var(--sumi-ink);
+        margin-top: 1em;
+        padding: 1em;
+        background: rgba(255,255,255,0.5);
+        border-radius: 4px;
+        line-height: 1.7;
+    }
+
+    /* -- Vocabulary Highlighting -- */
+    .vocab-word {
+        cursor: pointer;
+        border-radius: 2px;
+        padding: 2px 4px;
+        margin: 0 1px;
+        transition: all 0.2s ease;
+        position: relative;
+        display: inline-block;
+    }
+
     .vocab-word:hover {
-        background-color: rgba(100, 100, 100, 0.15);
+        transform: translateY(-1px);
+        box-shadow: 0 2px 8px rgba(0,0,0,0.1);
     }
+
     .vocab-particle {
-        color: #1976D2;
-        text-decoration: underline dotted #1976D2;
+        color: var(--soft-blue);
+        background: rgba(107, 140, 174, 0.1);
+        border-bottom: 2px solid var(--soft-blue);
     }
+
     .vocab-verb {
-        color: #388E3C;
-        text-decoration: underline dotted #388E3C;
+        color: var(--pine-green);
+        background: rgba(91, 138, 114, 0.1);
+        border-bottom: 2px solid var(--pine-green);
     }
+
     .vocab-auxiliary {
-        color: #7B1FA2;
-        text-decoration: underline dotted #7B1FA2;
+        color: var(--plum);
+        background: rgba(139, 104, 127, 0.1);
+        border-bottom: 2px solid var(--plum);
     }
+
     .vocab-adjective {
-        color: #F57C00;
-        text-decoration: underline dotted #F57C00;
+        color: var(--autumn-orange);
+        background: rgba(193, 127, 89, 0.1);
+        border-bottom: 2px solid var(--autumn-orange);
     }
+
     .vocab-noun {
-        color: #455A64;
+        color: var(--sumi-ink);
+        background: rgba(45, 45, 45, 0.05);
+        border-bottom: 2px dotted var(--sumi-light);
     }
+
+    /* -- Vocabulary Tooltip -- */
     .vocab-tooltip {
         position: absolute;
-        bottom: 100%;
+        bottom: calc(100% + 8px);
         left: 50%;
         transform: translateX(-50%);
         background: white;
-        border: 1px solid #ccc;
-        border-radius: 6px;
-        padding: 8px 12px;
-        box-shadow: 0 2px 8px rgba(0,0,0,0.15);
+        border: 1px solid #E8E4DE;
+        border-radius: 8px;
+        padding: 12px 16px;
+        box-shadow: 0 4px 20px rgba(0,0,0,0.12);
         z-index: 1000;
         white-space: nowrap;
         display: none;
-        font-size: 0.85em;
-        line-height: 1.4;
+        font-size: 0.9em;
+        line-height: 1.5;
+        min-width: 150px;
     }
+
+    .vocab-tooltip::after {
+        content: '';
+        position: absolute;
+        top: 100%;
+        left: 50%;
+        transform: translateX(-50%);
+        border: 8px solid transparent;
+        border-top-color: white;
+    }
+
     .vocab-word:hover .vocab-tooltip {
         display: block;
+        animation: tooltipFadeIn 0.2s ease;
     }
+
+    @keyframes tooltipFadeIn {
+        from { opacity: 0; transform: translateX(-50%) translateY(4px); }
+        to { opacity: 1; transform: translateX(-50%) translateY(0); }
+    }
+
     .tooltip-reading {
-        font-size: 1.1em;
-        color: #333;
-        font-weight: 500;
+        font-size: 1.2em;
+        color: var(--sumi-ink);
+        font-weight: 600;
+        font-family: "Noto Serif JP", serif;
+        margin-bottom: 4px;
     }
+
     .tooltip-meaning {
-        color: #666;
-        margin-top: 2px;
-    }
-    .tooltip-cognate {
-        color: #1976D2;
-        font-size: 0.9em;
-        margin-top: 4px;
-        font-style: italic;
-    }
-    .focus-highlight {
-        background-color: rgba(255, 235, 59, 0.4);
-        border-radius: 3px;
-        padding: 0 2px;
-    }
-    .poem-container {
-        background: #fafafa;
-        border-left: 4px solid #1976D2;
-        padding: 1em 1.5em;
-        margin: 1em 0;
-        border-radius: 0 8px 8px 0;
-    }
-    .poem-romaji {
-        font-size: 0.9em;
-        color: #666;
-        font-style: italic;
-        margin-top: 0.5em;
-    }
-    .poem-translation {
-        font-size: 1em;
-        color: #333;
-        margin-top: 0.8em;
-        padding-top: 0.8em;
-        border-top: 1px dashed #ddd;
-    }
-    .vocab-list {
-        margin-top: 1em;
-        padding: 1em;
-        background: #f5f5f5;
-        border-radius: 8px;
-    }
-    .vocab-list-item {
-        display: flex;
-        margin: 0.5em 0;
+        color: var(--sumi-light);
         font-size: 0.95em;
     }
+
+    .tooltip-cognate {
+        color: var(--vermillion);
+        font-size: 0.9em;
+        margin-top: 6px;
+        padding-top: 6px;
+        border-top: 1px dashed #E8E4DE;
+    }
+
+    .focus-highlight {
+        background: linear-gradient(180deg, transparent 60%, rgba(212, 168, 75, 0.3) 60%);
+        padding: 0 2px;
+    }
+
+    /* -- Vocabulary List -- */
+    .vocab-list {
+        margin-top: 1.5em;
+        padding: 1.2em 1.5em;
+        background: var(--washi-warm);
+        border-radius: 8px;
+        border: 1px solid #E8E4DE;
+    }
+
+    .vocab-list strong {
+        color: var(--sumi-ink);
+        font-size: 0.9em;
+        text-transform: uppercase;
+        letter-spacing: 0.1em;
+    }
+
+    .vocab-list-item {
+        display: flex;
+        align-items: baseline;
+        margin: 0.6em 0;
+        padding: 0.4em 0;
+        font-size: 0.95em;
+        border-bottom: 1px dotted #E8E4DE;
+    }
+
+    .vocab-list-item:last-child {
+        border-bottom: none;
+    }
+
     .vocab-list-word {
-        font-weight: 500;
+        font-weight: 600;
         min-width: 80px;
+        color: var(--sumi-ink);
+        font-family: "Noto Serif JP", serif;
     }
+
     .vocab-list-reading {
-        color: #666;
-        min-width: 80px;
+        color: var(--sumi-light);
+        min-width: 90px;
+        font-size: 0.9em;
     }
+
     .vocab-list-meaning {
         flex: 1;
+        color: var(--indigo);
     }
+
+    /* -- Grammar Box -- */
     .grammar-box {
-        background: linear-gradient(135deg, #e3f2fd 0%, #f3e5f5 100%);
+        background: var(--washi-cream);
+        border: 1px solid #E8E4DE;
         border-radius: 8px;
-        padding: 1.2em;
-        margin: 1em 0;
-    }
-    .grammar-title {
-        font-weight: 600;
-        color: #1565C0;
-        margin-bottom: 0.5em;
-    }
-    .step-container {
+        padding: 1.5em 2em;
         margin: 1.5em 0;
-        padding: 1em;
+        position: relative;
+    }
+
+    .grammar-box::before {
+        content: '文法';
+        position: absolute;
+        top: -10px;
+        left: 20px;
+        background: var(--vermillion);
+        color: white;
+        font-size: 0.75em;
+        padding: 2px 12px;
+        border-radius: 4px;
+        font-weight: 600;
+        letter-spacing: 0.1em;
+    }
+
+    .grammar-title {
+        font-weight: 700;
+        color: var(--sumi-ink);
+        font-size: 1.2em;
+        margin-bottom: 0.8em;
+        margin-top: 0.5em;
+    }
+
+    .grammar-box p {
+        margin: 0.8em 0;
+        line-height: 1.7;
+    }
+
+    .grammar-box code {
+        background: rgba(107, 140, 174, 0.15);
+        color: var(--indigo);
+        padding: 2px 8px;
+        border-radius: 4px;
+        font-family: "Noto Serif JP", monospace;
+        font-size: 1.1em;
+    }
+
+    .grammar-box ul, .grammar-box ol {
+        margin: 0.8em 0;
+        padding-left: 1.5em;
+    }
+
+    .grammar-box li {
+        margin: 0.4em 0;
+        line-height: 1.6;
+    }
+
+    /* -- Step Containers -- */
+    .step-container {
+        margin: 2em 0;
+        padding: 1.5em 2em;
         border-radius: 8px;
+        line-height: 1.8;
     }
+
+    .step-container strong {
+        color: var(--sumi-ink);
+    }
+
+    .step-container code {
+        background: rgba(0,0,0,0.06);
+        padding: 2px 6px;
+        border-radius: 3px;
+        font-size: 0.95em;
+    }
+
     .step-introduction {
-        background: #e8f5e9;
-        border-left: 4px solid #4CAF50;
+        background: linear-gradient(135deg, #F0F7F4 0%, #E8F4EC 100%);
+        border-left: 4px solid var(--pine-green);
     }
+
     .step-grammar {
-        background: #e3f2fd;
-        border-left: 4px solid #2196F3;
+        background: linear-gradient(135deg, #F0F4F8 0%, #E8EEF4 100%);
+        border-left: 4px solid var(--soft-blue);
     }
+
     .step-contrast {
-        background: #fff3e0;
-        border-left: 4px solid #FF9800;
+        background: linear-gradient(135deg, #FDF8F4 0%, #FAF0E8 100%);
+        border-left: 4px solid var(--autumn-orange);
     }
+
     .step-summary {
-        background: #f3e5f5;
-        border-left: 4px solid #9C27B0;
+        background: linear-gradient(135deg, #F8F4F7 0%, #F2ECF0 100%);
+        border-left: 4px solid var(--plum);
+        position: relative;
     }
+
+    .step-summary::before {
+        content: '📝';
+        position: absolute;
+        top: 1em;
+        right: 1em;
+        font-size: 1.5em;
+        opacity: 0.3;
+    }
+
+    /* -- Ruby (Furigana) -- */
     ruby {
         ruby-align: center;
     }
+
     rt {
-        font-size: 0.6em;
-        color: #888;
+        font-size: 0.55em;
+        color: var(--sumi-light);
+        font-weight: 400;
     }
+
+    /* -- Forward References -- */
+    .forward-refs {
+        margin-top: 2em;
+        padding: 1.2em 1.5em;
+        background: linear-gradient(135deg, #FFFCF5 0%, #FFF8E8 100%);
+        border: 1px solid #F0E6D0;
+        border-radius: 8px;
+    }
+
+    .forward-refs strong {
+        color: var(--gold-accent);
+    }
+
+    .forward-refs ul {
+        margin: 0.8em 0;
+        padding-left: 1.2em;
+    }
+
+    .forward-refs li {
+        margin: 0.5em 0;
+        color: var(--sumi-light);
+    }
+
+    /* -- Details/Summary -- */
+    details {
+        margin-top: 1em;
+    }
+
+    details summary {
+        cursor: pointer;
+        color: var(--indigo);
+        font-size: 0.9em;
+        padding: 0.5em 0;
+        transition: color 0.2s;
+    }
+
+    details summary:hover {
+        color: var(--vermillion);
+    }
+
+    details[open] summary {
+        margin-bottom: 0.5em;
+    }
+
     </style>
     """
 
@@ -340,22 +597,21 @@ def render_vocab_list(vocabulary: list[VocabularyItem]) -> str:
 
 
 def render_poem_presentation(step: PoemPresentationStep) -> str:
-    """Render a poem presentation step."""
+    """Render a poem presentation step with interactive colored vocabulary."""
     parts = ['<div class="poem-container">']
 
-    # Furigana text (already has ruby tags)
-    parts.append(f'<div class="poem-text">{step.display.text_with_furigana}</div>')
-
-    # Interactive vocabulary version (plain text with spans)
-    # Extract plain text from furigana HTML for vocabulary highlighting
+    # Extract plain text from furigana HTML
     plain_text = re.sub(r'<ruby>([^<]+)<rt>[^<]+</rt></ruby>', r'\1', step.display.text_with_furigana)
     plain_text = re.sub(r'<[^>]+>', '', plain_text)
 
-    # Only show vocabulary-highlighted version if we have spans
+    # Main display: colored poem with hover tooltips
     vocab_with_spans = [v for v in step.vocabulary if v.span]
     if vocab_with_spans:
-        interactive = render_poem_with_vocabulary(plain_text, step.vocabulary, step.focus_highlight)
-        parts.append(f'<details><summary>Interactive vocabulary view</summary>{interactive}</details>')
+        # Interactive colored poem as main display
+        parts.append(render_poem_with_vocabulary(plain_text, step.vocabulary, step.focus_highlight))
+    else:
+        # Fallback to furigana if no spans
+        parts.append(f'<div class="poem-text">{step.display.text_with_furigana}</div>')
 
     # Romaji
     parts.append(f'<div class="poem-romaji">{html.escape(step.display.romaji)}</div>')
@@ -365,35 +621,37 @@ def render_poem_presentation(step: PoemPresentationStep) -> str:
 
     parts.append('</div>')
 
-    # Vocabulary list (always shown as reference)
+    # Collapsible vocabulary list as reference
     if step.vocabulary:
+        parts.append('<details><summary style="cursor:pointer;color:#666;">Show vocabulary list</summary>')
         parts.append(render_vocab_list(step.vocabulary))
+        parts.append('</details>')
 
     return ''.join(parts)
 
 
 def render_introduction(step: IntroductionStep) -> str:
     """Render an introduction step."""
-    content = step.content.replace('\n', '<br>')
+    content = markdown_to_html(step.content)
     return f'<div class="step-container step-introduction">{content}</div>'
 
 
 def render_grammar_spotlight(step: GrammarSpotlightStep) -> str:
     """Render a grammar spotlight step."""
-    content = step.content.replace('\n', '<br>')
+    content = markdown_to_html(step.content)
     evidence = f'<p style="font-size:0.9em;color:#666;margin-top:0.5em;"><em>{html.escape(step.evidence)}</em></p>' if step.evidence else ''
     return f'<div class="step-container step-grammar">{content}{evidence}</div>'
 
 
 def render_contrast_example(step: ContrastExampleStep) -> str:
     """Render a contrast example step."""
-    content = step.content.replace('\n', '<br>')
+    content = markdown_to_html(step.content)
     return f'<div class="step-container step-contrast"><strong>Contrast:</strong><br>{content}</div>'
 
 
 def render_summary(step: SummaryStep) -> str:
     """Render a summary step."""
-    content = step.content.replace('\n', '<br>')
+    content = markdown_to_html(step.content)
     return f'<div class="step-container step-summary"><strong>Summary:</strong><br>{content}</div>'
 
 
