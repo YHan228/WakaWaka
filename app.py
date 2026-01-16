@@ -597,12 +597,32 @@ def render_quiz_section(lesson):
             # Self-assessment
             st.markdown("**How did you do?**")
             assess_col1, assess_col2, assess_col3 = st.columns(3)
+
+            # Track assessment in session state
+            assessment_key = f"assessment_{quiz_key}"
+            if assessment_key not in st.session_state:
+                st.session_state[assessment_key] = None
+
             with assess_col1:
-                st.button("😊 Got it!", key=f"assess_good_{quiz_key}", use_container_width=True)
+                if st.button("😊 Got it!", key=f"assess_good_{quiz_key}", use_container_width=True):
+                    st.session_state[assessment_key] = "good"
+                    st.rerun()
             with assess_col2:
-                st.button("🤔 Partially", key=f"assess_partial_{quiz_key}", use_container_width=True)
+                if st.button("🤔 Partially", key=f"assess_partial_{quiz_key}", use_container_width=True):
+                    st.session_state[assessment_key] = "partial"
+                    st.rerun()
             with assess_col3:
-                st.button("😅 Need review", key=f"assess_review_{quiz_key}", use_container_width=True)
+                if st.button("😅 Need review", key=f"assess_review_{quiz_key}", use_container_width=True):
+                    st.session_state[assessment_key] = "review"
+                    st.rerun()
+
+            # Show feedback based on assessment
+            if st.session_state[assessment_key] == "good":
+                st.success("Great job! You've mastered this concept.")
+            elif st.session_state[assessment_key] == "partial":
+                st.info("Good progress! Consider reviewing this section again later.")
+            elif st.session_state[assessment_key] == "review":
+                st.warning("No worries! Take your time and revisit this concept.")
 
         st.markdown("<br>", unsafe_allow_html=True)
 
