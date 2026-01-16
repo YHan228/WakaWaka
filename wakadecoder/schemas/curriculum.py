@@ -89,7 +89,8 @@ class LessonNode(BaseModel):
     senses_covered: list[str] = []  # which senses this lesson introduces
     prerequisites: list[str]  # lesson IDs
     difficulty_tier: int = Field(..., ge=1, le=5)  # 1=easiest, 5=hardest
-    poem_ids: list[str]
+    candidate_poem_ids: list[str]  # larger pool for LLM to select from (10 poems)
+    poem_ids: list[str] = []  # final selected poems (populated by LLM selection step)
 
 
 class Unit(BaseModel):

@@ -1,0 +1,91 @@
+# prompts/curriculum_synthesis.yaml
+# Used by: 03b_refine_curriculum_llm.py (ensemble synthesis phase)
+# Purpose: Synthesize final curriculum from multiple independent trials
+
+meta:
+  version: "1.0"
+  model: "gemini-3-pro-preview"
+  temperature: 0.3  # Lower temperature for consistent synthesis
+
+system: |
+  You are a master curriculum architect synthesizing multiple curriculum proposals.
+
+  TASK: Create the BEST possible curriculum by analyzing multiple independent designs.
+
+  SYNTHESIS STRATEGY:
+  1. IDENTIFY CONSENSUS: Where do most trials agree on ordering/grouping?
+  2. EVALUATE TRADE-OFFS: When trials disagree, choose the more pedagogically sound option
+  3. CHERRY-PICK STRENGTHS: Take the best unit organization from one trial, best prerequisites from another
+  4. RESOLVE CONFLICTS: If trial A puts X before Y, but trial B does opposite, reason about which is better
+  5. PRESERVE INVARIANTS: First unit should always be foundational particles
+
+  QUALITY CRITERIA FOR FINAL CURRICULUM:
+  - Smooth difficulty progression within and across units
+  - Logical prerequisite chains (no circular dependencies)
+  - Thematic coherence within units
+  - No orphan lessons (every lesson in exactly one unit)
+
+  STRICT OUTPUT RULES:
+  - Output ONLY valid JSON, no explanatory text
+  - Use ONLY lesson IDs from the provided master list
+  - Every lesson ID must appear in EXACTLY ONE unit
+  - Prerequisites must reference lessons appearing EARLIER
+  - Unit IDs: unit_01, unit_02, ... (zero-padded, sequential)
+
+  OUTPUT SCHEMA:
+  {
+    "synthesis_notes": {
+      "consensus_points": ["What most trials agreed on"],
+      "key_decisions": ["Where you chose one approach over another and why"],
+      "improvements": ["What your synthesis improves over any single trial"]
+    },
+    "units": [
+      {
+        "id": "unit_01",
+        "title": "Short Descriptive Title",
+        "theme": "Unifying concept for this unit",
+        "lessons": ["lesson_id_1", "lesson_id_2", ...]
+      }
+    ],
+    "prerequisites": {
+      "lesson_id": ["prereq_lesson_id"]
+    }
+  }
+
+user_template: |
+  Synthesize the best curriculum from these {num_trials} independent proposals.
+
+  MASTER LESSON LIST (all lessons that must be included):
+  {master_lessons_json}
+
+  TRIAL PROPOSALS:
+  {trials_json}
+
+  Each trial includes:
+  - curriculum_id: trial identifier
+  - design_philosophy: the organizing principle used
+  - units: how lessons were grouped
+  - prerequisites: dependency relationships
+
+  ANALYSIS HINTS:
+  - Look for lessons that consistently appear early across trials (likely foundational)
+  - Look for lessons that consistently appear together (likely conceptually related)
+  - Look for prerequisite relationships that appear in multiple trials (likely valid)
+  - Be skeptical of outlier placements that only one trial proposed
+
+  Create the synthesized curriculum as JSON only.
+
+validation:
+  required_fields:
+    - synthesis_notes
+    - units
+    - prerequisites
+  synthesis_notes_required:
+    - consensus_points
+    - key_decisions
+    - improvements
+  unit_required_fields:
+    - id
+    - title
+    - theme
+    - lessons

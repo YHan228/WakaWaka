@@ -28,6 +28,7 @@ import os
 import re
 import sys
 import time
+from concurrent.futures import ThreadPoolExecutor, as_completed
 from datetime import datetime
 from pathlib import Path
 from typing import Any
@@ -206,9 +207,8 @@ def convert_numpy_to_python(obj):
         return obj
 
 
-def get_poems_for_lesson(lesson: dict, poems_df: pd.DataFrame) -> list[dict]:
-    """Get poem data for a lesson's assigned poems."""
-    poem_ids = lesson.get("poem_ids", [])
+def get_poems_by_ids(poem_ids: list[str], poems_df: pd.DataFrame) -> list[dict]:
+    """Get poem data for a list of poem IDs."""
     poems = []
 
     for poem_id in poem_ids:
@@ -220,6 +220,21 @@ def get_poems_for_lesson(lesson: dict, poems_df: pd.DataFrame) -> list[dict]:
             poems.append(poem)
 
     return poems
+
+
+def get_candidate_poems_for_lesson(lesson: dict, poems_df: pd.DataFrame) -> list[dict]:
+    """Get candidate poem pool for LLM selection."""
+    candidate_ids = lesson.get("candidate_poem_ids", [])
+    # Fallback to poem_ids for backwards compatibility
+    if not candidate_ids:
+        candidate_ids = lesson.get("poem_ids", [])
+    return get_poems_by_ids(candidate_ids, poems_df)
+
+
+def get_selected_poems_for_lesson(lesson: dict, poems_df: pd.DataFrame) -> list[dict]:
+    """Get final selected poems for a lesson."""
+    selected_ids = lesson.get("poem_ids", [])
+    return get_poems_by_ids(selected_ids, poems_df)
 
 
 def get_prerequisite_summaries(
@@ -258,6 +273,118 @@ def get_prerequisite_summaries(
                 summaries.append(f"- {prereq_id}: (content not yet generated)")
 
     return "\n".join(summaries) if summaries else "None"
+
+
+# -----------------------------------------------------------------------------
+# LLM Poem Selection
+# -----------------------------------------------------------------------------
+
+def format_candidates_for_selection(candidates: list[dict], grammar_point_id: str) -> str:
+    """Format candidate poems for LLM selection prompt."""
+    formatted = []
+
+    for poem in candidates:
+        poem_id = poem.get("poem_id", "")
+        text = poem.get("text", "")
+        romaji = poem.get("reading_romaji", "")
+        difficulty = poem.get("difficulty_score", poem.get("difficulty_score_computed", 0))
+
+        # Count grammar points
+        gp_list = poem.get("grammar_points", [])
+        target_gp_count = sum(
+            1 for gp in gp_list
+            if isinstance(gp, dict) and gp.get("canonical_id") == grammar_point_id
+        )
+        total_gp_count = len(gp_list)
+
+        # Get vocabulary
+        vocab = poem.get("vocabulary", [])
+        vocab_preview = ", ".join(
+            v.get("word", "") for v in vocab[:3] if isinstance(v, dict)
+        )
+
+        formatted.append({
+            "poem_id": poem_id,
+            "text": text,
+            "reading_romaji": romaji,
+            "difficulty_score": round(difficulty, 2),
+            "target_grammar_occurrences": target_gp_count,
+            "total_grammar_points": total_gp_count,
+            "vocabulary_preview": vocab_preview,
+            "grammar_points": [
+                {
+                    "canonical_id": gp.get("canonical_id", ""),
+                    "sense_id": gp.get("sense_id"),
+                    "surface": gp.get("surface", "")
+                }
+                for gp in gp_list if isinstance(gp, dict)
+            ]
+        })
+
+    return json.dumps(formatted, ensure_ascii=False, indent=2)
+
+
+def select_poems_llm(
+    lesson: dict,
+    candidates: list[dict],
+    grammar_index: dict,
+    client: GeminiClient,
+    selection_prompt_config: dict
+) -> list[str]:
+    """
+    Use LLM to select the best poems from candidates.
+
+    Args:
+        lesson: Lesson dict from curriculum
+        candidates: List of candidate poem dicts
+        grammar_index: Grammar index data
+        client: Gemini client
+        selection_prompt_config: Loaded select_poems.yaml config
+
+    Returns:
+        List of selected poem IDs (2-3 poems)
+    """
+    canonical_id = lesson["canonical_grammar_point"]
+    grammar_info = grammar_index.get("entries", {}).get(canonical_id, {})
+
+    # Build prompt
+    system_prompt = selection_prompt_config.get("system", "")
+    user_template = selection_prompt_config.get("user_template", "")
+
+    user_prompt = user_template.format(
+        grammar_point_id=canonical_id,
+        category=grammar_info.get("category", "unknown"),
+        description=grammar_info.get("senses", [{}])[0].get("description", "") if grammar_info.get("senses") else "",
+        candidates_json=format_candidates_for_selection(candidates, canonical_id)
+    )
+
+    # Call LLM
+    try:
+        response_text = client.generate(system_prompt, user_prompt)
+        llm_response = extract_json_from_response(response_text)
+
+        # Extract selected poem IDs
+        selected_poems = llm_response.get("selected_poems", [])
+
+        # Validate and extract IDs
+        candidate_ids = {p.get("poem_id") for p in candidates}
+        selected_ids = []
+
+        for sp in selected_poems:
+            pid = sp.get("poem_id")
+            if pid and pid in candidate_ids:
+                selected_ids.append(pid)
+
+        # Ensure we have at least 2 poems
+        if len(selected_ids) < 2:
+            logger.warning(f"LLM selected fewer than 2 valid poems, using first 3 candidates")
+            selected_ids = [p.get("poem_id") for p in candidates[:3]]
+
+        return selected_ids[:3]  # Max 3 poems
+
+    except Exception as e:
+        logger.error(f"Poem selection failed: {e}, using first 3 candidates")
+        return [p.get("poem_id") for p in candidates[:3]]
 
 
 # -----------------------------------------------------------------------------
@@ -664,7 +791,9 @@ def generate_lesson(
     client: GeminiClient,
     prompt_config: dict,
     generated_lessons: dict,
-    use_cache: bool = True
+    use_cache: bool = True,
+    selection_prompt_config: dict | None = None,
+    skip_poem_selection: bool = False
 ) -> LessonContent | None:
     """
     Generate content for a single lesson.
@@ -678,6 +807,8 @@ def generate_lesson(
         prompt_config: Loaded prompt configuration
         generated_lessons: Dict of already generated lessons
         use_cache: Whether to use response caching
+        selection_prompt_config: Config for LLM poem selection (None to skip)
+        skip_poem_selection: If True, use pre-selected poem_ids directly
 
     Returns:
         LessonContent or None on failure
@@ -702,7 +833,30 @@ def generate_lesson(
     grammar_info = grammar_index.get("entries", {}).get(canonical_id, {})
 
     # Get poems for this lesson
-    poems = get_poems_for_lesson(lesson, poems_df)
+    if skip_poem_selection or lesson.get("poem_ids"):
+        # Use pre-selected poems (either from curriculum or previous selection)
+        poems = get_selected_poems_for_lesson(lesson, poems_df)
+        if not poems:
+            # Fallback to candidates
+            poems = get_candidate_poems_for_lesson(lesson, poems_df)[:3]
+    else:
+        # LLM poem selection from candidate pool
+        candidates = get_candidate_poems_for_lesson(lesson, poems_df)
+        if not candidates:
+            logger.warning(f"No candidate poems found for lesson {lesson_id}")
+            return None
+
+        if selection_prompt_config and len(candidates) > 3:
+            logger.info(f"Selecting poems for {lesson_id} from {len(candidates)} candidates...")
+            selected_ids = select_poems_llm(
+                lesson, candidates, grammar_index, client, selection_prompt_config
+            )
+            poems = get_poems_by_ids(selected_ids, poems_df)
+            logger.info(f"  Selected {len(poems)} poems: {selected_ids}")
+        else:
+            # Use first 3 candidates (sorted by difficulty)
+            poems = candidates[:3]
+
     if not poems:
         logger.warning(f"No poems found for lesson {lesson_id}")
 
@@ -842,6 +996,23 @@ def main():
         default=DEFAULT_API_SLEEP,
         help=f"Sleep between API calls (default: {DEFAULT_API_SLEEP}s)"
     )
+    parser.add_argument(
+        "--select-poems",
+        action="store_true",
+        help="Enable LLM poem selection from candidate pool (requires candidate_poem_ids in curriculum)"
+    )
+    parser.add_argument(
+        "--skip-poem-selection",
+        action="store_true",
+        help="Skip poem selection, use pre-assigned poem_ids directly"
+    )
+    parser.add_argument(
+        "--parallel",
+        type=int,
+        default=1,
+        metavar="P",
+        help="Max parallel lesson generation (default: 1, sequential)"
+    )
 
     args = parser.parse_args()
 
@@ -857,9 +1028,34 @@ def main():
     poems_df = load_poems(args.poems)
     logger.info(f"  Loaded {len(poems_df)} poems")
 
-    # Load prompt
-    logger.info("Loading prompt template...")
+    # Load prompts
+    logger.info("Loading prompt templates...")
     prompt_config = load_prompt("generate_lesson")
+
+    # Load lesson context if available
+    lesson_context = ""
+    context_file = args.curriculum / "lesson_context.yaml"
+    if context_file.exists():
+        with open(context_file, "r", encoding="utf-8") as f:
+            lesson_context = f.read()
+        logger.info(f"  Loaded lesson context from {context_file}")
+    else:
+        logger.info("  No lesson_context.yaml found, using default context")
+
+    # Inject context into system prompt
+    if "{curriculum_context}" in prompt_config.get("system", ""):
+        if lesson_context:
+            # Extract key sections for injection (avoid making prompt too long)
+            context_summary = lesson_context[:2000] + "..." if len(lesson_context) > 2000 else lesson_context
+        else:
+            context_summary = "No specific curriculum context provided."
+        prompt_config["system"] = prompt_config["system"].replace("{curriculum_context}", context_summary)
+
+    # Load poem selection prompt if enabled
+    selection_prompt_config = None
+    if args.select_poems:
+        selection_prompt_config = load_prompt("select_poems")
+        logger.info("  LLM poem selection enabled")
 
     # Get lessons to generate
     all_lessons = get_all_lessons(lesson_graph)
@@ -916,39 +1112,102 @@ def main():
     # Generate lessons
     generated = []
     failed = []
+    total = len(lessons_to_generate)
 
-    for i, lesson in enumerate(lessons_to_generate, 1):
-        lesson_id = lesson["id"]
-        logger.info(f"[{i}/{len(lessons_to_generate)}] Generating {lesson_id}...")
+    if args.parallel > 1:
+        # Parallel generation
+        logger.info(f"Using parallel generation with {args.parallel} workers...")
 
-        try:
-            lesson_content = generate_lesson(
-                lesson=lesson,
-                grammar_index=grammar_index,
-                lesson_graph=lesson_graph,
-                poems_df=poems_df,
-                client=client,
-                prompt_config=prompt_config,
-                generated_lessons=generated_lessons,
-                use_cache=not args.no_cache
+        import threading
+        lock = threading.Lock()
+        counter = [0]  # Mutable container for thread-safe counter
+
+        def generate_single_lesson(lesson: dict) -> tuple[str, LessonContent | None]:
+            """Worker function for parallel generation."""
+            lesson_id = lesson["id"]
+            # Create thread-local client
+            thread_client = GeminiClient(
+                model=args.model,
+                sleep_seconds=args.api_sleep
             )
+            try:
+                content = generate_lesson(
+                    lesson=lesson,
+                    grammar_index=grammar_index,
+                    lesson_graph=lesson_graph,
+                    poems_df=poems_df,
+                    client=thread_client,
+                    prompt_config=prompt_config,
+                    generated_lessons=generated_lessons,
+                    use_cache=not args.no_cache,
+                    selection_prompt_config=selection_prompt_config,
+                    skip_poem_selection=args.skip_poem_selection
+                )
+                return lesson_id, content
+            except Exception as e:
+                logger.error(f"  ✗ Error generating {lesson_id}: {e}")
+                return lesson_id, None
 
-            if lesson_content:
-                save_lesson(lesson_content, args.output_dir)
-                save_checkpoint(checkpoint_file, lesson_id)
-                generated.append(lesson_content)
-                generated_lessons[lesson_id] = lesson_content.model_dump()
-                logger.info(f"  ✓ Generated: {lesson_content.lesson_title}")
-            else:
+        with ThreadPoolExecutor(max_workers=args.parallel) as executor:
+            futures = {executor.submit(generate_single_lesson, lesson): lesson for lesson in lessons_to_generate}
+
+            try:
+                for future in as_completed(futures):
+                    lesson_id, lesson_content = future.result()
+                    with lock:
+                        counter[0] += 1
+                        progress = counter[0]
+
+                    if lesson_content:
+                        save_lesson(lesson_content, args.output_dir)
+                        save_checkpoint(checkpoint_file, lesson_id)
+                        with lock:
+                            generated.append(lesson_content)
+                            generated_lessons[lesson_id] = lesson_content.model_dump()
+                        logger.info(f"[{progress}/{total}] ✓ {lesson_content.lesson_title}")
+                    else:
+                        with lock:
+                            failed.append(lesson_id)
+                        logger.error(f"[{progress}/{total}] ✗ Failed: {lesson_id}")
+            except KeyboardInterrupt:
+                logger.info("\nInterrupted by user. Cancelling remaining tasks...")
+                executor.shutdown(wait=False, cancel_futures=True)
+    else:
+        # Sequential generation (original behavior)
+        for i, lesson in enumerate(lessons_to_generate, 1):
+            lesson_id = lesson["id"]
+            logger.info(f"[{i}/{total}] Generating {lesson_id}...")
+
+            try:
+                lesson_content = generate_lesson(
+                    lesson=lesson,
+                    grammar_index=grammar_index,
+                    lesson_graph=lesson_graph,
+                    poems_df=poems_df,
+                    client=client,
+                    prompt_config=prompt_config,
+                    generated_lessons=generated_lessons,
+                    use_cache=not args.no_cache,
+                    selection_prompt_config=selection_prompt_config,
+                    skip_poem_selection=args.skip_poem_selection
+                )
+
+                if lesson_content:
+                    save_lesson(lesson_content, args.output_dir)
+                    save_checkpoint(checkpoint_file, lesson_id)
+                    generated.append(lesson_content)
+                    generated_lessons[lesson_id] = lesson_content.model_dump()
+                    logger.info(f"  ✓ Generated: {lesson_content.lesson_title}")
+                else:
+                    failed.append(lesson_id)
+                    logger.error(f"  ✗ Failed: {lesson_id}")
+
+            except KeyboardInterrupt:
+                logger.info("\nInterrupted by user. Progress saved.")
+                break
+            except Exception as e:
+                logger.error(f"  ✗ Error generating {lesson_id}: {e}")
                 failed.append(lesson_id)
-                logger.error(f"  ✗ Failed: {lesson_id}")
-
-        except KeyboardInterrupt:
-            logger.info("\nInterrupted by user. Progress saved.")
-            break
-        except Exception as e:
-            logger.error(f"  ✗ Error generating {lesson_id}: {e}")
-            failed.append(lesson_id)
 
     # Generate manifest
     if generated:

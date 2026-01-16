@@ -11,9 +11,11 @@ Key features:
 - LLM reviews: unit themes, lesson ordering, prerequisites, groupings
 - Outputs refined curriculum to data/curriculum_refined/
 - Uses high-quality model (gemini-3-pro-preview) for pedagogical reasoning
+- Ensemble mode: run multiple trials and synthesize best curriculum
 
 Usage:
   python scripts/03b_refine_curriculum_llm.py
+  python scripts/03b_refine_curriculum_llm.py --ensemble 5
   python scripts/03b_refine_curriculum_llm.py --model gemini-2.5-pro
   python scripts/03b_refine_curriculum_llm.py --output-dir data/curriculum_v2
 """
@@ -25,6 +27,7 @@ import os
 import re
 import sys
 import time
+from concurrent.futures import ThreadPoolExecutor, as_completed
 from datetime import datetime
 from pathlib import Path
 
@@ -34,6 +37,8 @@ sys.path.insert(0, str(PROJECT_ROOT))
 
 from dotenv import load_dotenv
 load_dotenv(PROJECT_ROOT / ".env")
+
+from wakadecoder.utils.prompt_loader import load_prompt
 
 # Import Google GenAI
 try:
@@ -353,6 +358,280 @@ def fix_missing_lessons(refinements: dict, valid_ids: set[str]) -> dict:
     return refinements
 
 
+# -----------------------------------------------------------------------------
+# Ensemble Mode Functions
+# -----------------------------------------------------------------------------
+
+def format_lessons_for_trial(lesson_graph: dict, grammar_index: dict) -> str:
+    """Format lessons as JSON for trial prompt."""
+    lessons = []
+    for unit in lesson_graph.get("units", []):
+        for lesson in unit.get("lessons", []):
+            lid = lesson.get("id", "")
+            gp = lesson.get("canonical_grammar_point", "")
+            gp_info = grammar_index.get("entries", {}).get(gp, {})
+
+            lessons.append({
+                "id": lid,
+                "grammar_point": gp,
+                "category": gp_info.get("category", "unknown"),
+                "frequency": gp_info.get("frequency", 0),
+                "difficulty_tier": lesson.get("difficulty_tier", 3),
+                "surfaces": gp_info.get("surfaces", [])[:3]
+            })
+
+    return json.dumps(lessons, ensure_ascii=False, indent=2)
+
+
+def format_grammar_summary(grammar_index: dict) -> str:
+    """Format grammar relationships for LLM context."""
+    lines = []
+    entries = grammar_index.get("entries", {})
+
+    # Group by category
+    by_category = {}
+    for gid, info in entries.items():
+        cat = info.get("category", "other")
+        if cat not in by_category:
+            by_category[cat] = []
+        by_category[cat].append(f"{gid} (freq={info.get('frequency', 0)})")
+
+    for cat, items in sorted(by_category.items()):
+        lines.append(f"[{cat}]: {', '.join(items[:10])}")
+        if len(items) > 10:
+            lines.append(f"  ... and {len(items) - 10} more")
+
+    return "\n".join(lines)
+
+
+def run_ensemble_trial(
+    trial_num: int,
+    lesson_graph: dict,
+    grammar_index: dict,
+    client: GeminiClient,
+    trial_prompt_config: dict,
+    valid_ids: set[str]
+) -> dict | None:
+    """Run a single ensemble trial."""
+    logger.info(f"  Running trial {trial_num}...")
+
+    lessons_json = format_lessons_for_trial(lesson_graph, grammar_index)
+    grammar_summary = format_grammar_summary(grammar_index)
+
+    system_prompt = trial_prompt_config.get("system", "")
+    user_template = trial_prompt_config.get("user_template", "")
+
+    user_prompt = user_template.format(
+        num_lessons=len(valid_ids),
+        trial_number=trial_num,
+        lessons_json=lessons_json,
+        grammar_summary=grammar_summary
+    )
+
+    try:
+        response_text = client.generate(system_prompt, user_prompt)
+        trial_result = extract_json_from_response(response_text)
+
+        # Validate
+        is_valid, errors = validate_refinements(trial_result, valid_ids)
+        if not is_valid:
+            logger.warning(f"  Trial {trial_num} validation errors: {errors[:3]}")
+            # Try to fix
+            if any("Missing lessons" in e for e in errors):
+                trial_result = fix_missing_lessons(trial_result, valid_ids)
+
+        return trial_result
+
+    except Exception as e:
+        logger.error(f"  Trial {trial_num} failed: {e}")
+        return None
+
+
+def synthesize_trials(
+    trials: list[dict],
+    valid_ids: set[str],
+    client: GeminiClient,
+    synthesis_prompt_config: dict
+) -> dict:
+    """Synthesize final curriculum from multiple trials."""
+    logger.info("Synthesizing final curriculum from trials...")
+
+    # Format trials for synthesis prompt
+    master_lessons = [{"id": lid} for lid in sorted(valid_ids)]
+
+    # Clean up trials for JSON
+    trials_data = []
+    for i, trial in enumerate(trials):
+        if trial:
+            trials_data.append({
+                "curriculum_id": trial.get("curriculum_id", f"trial_{i+1}"),
+                "design_philosophy": trial.get("design_philosophy", "Not specified"),
+                "units": trial.get("units", []),
+                "prerequisites": trial.get("prerequisites", {})
+            })
+
+    system_prompt = synthesis_prompt_config.get("system", "")
+    user_template = synthesis_prompt_config.get("user_template", "")
+
+    user_prompt = user_template.format(
+        num_trials=len(trials_data),
+        master_lessons_json=json.dumps(master_lessons, indent=2),
+        trials_json=json.dumps(trials_data, ensure_ascii=False, indent=2)
+    )
+
+    response_text = client.generate(system_prompt, user_prompt)
+    synthesis = extract_json_from_response(response_text)
+
+    # Validate
+    is_valid, errors = validate_refinements(synthesis, valid_ids)
+    if not is_valid:
+        logger.warning(f"Synthesis validation errors: {errors[:5]}")
+        if any("Missing lessons" in e for e in errors):
+            synthesis = fix_missing_lessons(synthesis, valid_ids)
+
+    return synthesis
+
+
+def generate_lesson_context(
+    refined_graph: dict,
+    synthesis: dict,
+    client: GeminiClient
+) -> str:
+    """
+    Generate lesson context YAML based on finalized curriculum.
+
+    Args:
+        refined_graph: The final refined lesson graph
+        synthesis: The synthesis result (with notes if available)
+        client: Gemini client
+
+    Returns:
+        YAML string with lesson generation context
+    """
+    logger.info("Generating lesson context for lesson generation...")
+
+    context_prompt = load_prompt("lesson_context")
+
+    # Format curriculum for prompt
+    curriculum_summary = {
+        "units": [
+            {
+                "id": unit.get("id"),
+                "title": unit.get("title"),
+                "lessons": [
+                    {
+                        "id": lesson.get("id"),
+                        "grammar_point": lesson.get("canonical_grammar_point"),
+                        "prerequisites": lesson.get("prerequisites", [])
+                    }
+                    for lesson in unit.get("lessons", [])
+                ]
+            }
+            for unit in refined_graph.get("units", [])
+        ]
+    }
+
+    # Get synthesis notes if available
+    synthesis_notes = synthesis.get("synthesis_notes", {})
+    synthesis_notes_str = json.dumps(synthesis_notes, indent=2) if synthesis_notes else "Not available"
+
+    system_prompt = context_prompt.get("system", "")
+    user_template = context_prompt.get("user_template", "")
+
+    user_prompt = user_template.format(
+        curriculum_json=json.dumps(curriculum_summary, indent=2, ensure_ascii=False),
+        synthesis_notes=synthesis_notes_str
+    )
+
+    response_text = client.generate(system_prompt, user_prompt)
+
+    # Clean up response (remove markdown code blocks if present)
+    response_text = response_text.strip()
+    if response_text.startswith("```"):
+        lines = response_text.split("\n")
+        # Remove first and last lines (code block markers)
+        lines = [l for l in lines if not l.startswith("```")]
+        response_text = "\n".join(lines)
+
+    return response_text
+
+
+def run_ensemble(
+    lesson_graph: dict,
+    grammar_index: dict,
+    client: GeminiClient,
+    num_trials: int = 5,
+    max_parallel: int = 3
+) -> tuple[dict, list[dict]]:
+    """
+    Run ensemble curriculum generation with parallel trials.
+
+    Args:
+        lesson_graph: Original curriculum
+        grammar_index: Grammar index
+        client: Gemini client
+        num_trials: Number of independent trials
+        max_parallel: Maximum parallel API calls
+
+    Returns:
+        Tuple of (synthesized_curriculum, all_trials)
+    """
+    # Load prompts
+    trial_prompt = load_prompt("curriculum_trial")
+    synthesis_prompt = load_prompt("curriculum_synthesis")
+
+    valid_ids = set(get_all_lesson_ids(lesson_graph))
+    trial_temp = trial_prompt.get("meta", {}).get("temperature", 0.7)
+
+    logger.info(f"Running ensemble with {num_trials} trials (max {max_parallel} parallel)...")
+
+    # Run trials in parallel
+    trials = [None] * num_trials  # Pre-allocate to maintain order
+
+    def run_single_trial(trial_num: int) -> tuple[int, dict | None]:
+        """Worker function for parallel execution."""
+        # Create a new client for each thread to avoid race conditions
+        thread_client = GeminiClient(
+            model=client.model_name,
+            temperature=trial_temp
+        )
+        result = run_ensemble_trial(
+            trial_num=trial_num,
+            lesson_graph=lesson_graph,
+            grammar_index=grammar_index,
+            client=thread_client,
+            trial_prompt_config=trial_prompt,
+            valid_ids=valid_ids
+        )
+        return trial_num, result
+
+    with ThreadPoolExecutor(max_workers=max_parallel) as executor:
+        futures = {
+            executor.submit(run_single_trial, i): i
+            for i in range(1, num_trials + 1)
+        }
+
+        for future in as_completed(futures):
+            trial_num, result = future.result()
+            if result:
+                trials[trial_num - 1] = result
+                logger.info(f"  Trial {trial_num}: {len(result.get('units', []))} units")
+            else:
+                logger.warning(f"  Trial {trial_num}: FAILED")
+
+    # Filter out None values (failed trials)
+    valid_trials = [t for t in trials if t is not None]
+
+    if len(valid_trials) < 2:
+        raise ValueError(f"Only {len(valid_trials)} trials succeeded, need at least 2 for synthesis")
+
+    # Synthesize with lower temperature
+    client.temperature = synthesis_prompt.get("meta", {}).get("temperature", 0.3)
+    synthesis = synthesize_trials(valid_trials, valid_ids, client, synthesis_prompt)
+
+    return synthesis, valid_trials
+
+
 def apply_refinements(
     original_graph: dict,
     grammar_index: dict,
@@ -481,7 +760,13 @@ def generate_report(refined_graph: dict, output_dir: Path):
 def main():
     parser = argparse.ArgumentParser(
         description="LLM-assisted curriculum refinement",
-        formatter_class=argparse.RawDescriptionHelpFormatter
+        formatter_class=argparse.RawDescriptionHelpFormatter,
+        epilog="""
+Examples:
+  python scripts/03b_refine_curriculum_llm.py                    # Single-shot refinement
+  python scripts/03b_refine_curriculum_llm.py --ensemble 5       # Ensemble with 5 trials
+  python scripts/03b_refine_curriculum_llm.py --ensemble 10      # Ensemble with 10 trials
+"""
     )
     parser.add_argument(
         "--input-dir",
@@ -501,6 +786,20 @@ def main():
         default=DEFAULT_MODEL,
         help=f"Gemini model (default: {DEFAULT_MODEL})"
     )
+    parser.add_argument(
+        "--ensemble",
+        type=int,
+        default=0,
+        metavar="N",
+        help="Run N independent trials and synthesize (recommended: 5-10)"
+    )
+    parser.add_argument(
+        "--parallel",
+        type=int,
+        default=3,
+        metavar="P",
+        help="Max parallel API calls for ensemble mode (default: 3)"
+    )
 
     args = parser.parse_args()
 
@@ -514,9 +813,20 @@ def main():
     # Initialize client
     client = GeminiClient(model=args.model)
 
-    # Get LLM refinements
+    # Get LLM refinements (single-shot or ensemble)
+    trials = None
     try:
-        refinements = refine_curriculum(lesson_graph, grammar_index, client)
+        if args.ensemble > 0:
+            # Ensemble mode
+            logger.info(f"Using ENSEMBLE mode with {args.ensemble} trials")
+            refinements, trials = run_ensemble(
+                lesson_graph, grammar_index, client,
+                num_trials=args.ensemble,
+                max_parallel=args.parallel
+            )
+        else:
+            # Single-shot mode
+            refinements = refine_curriculum(lesson_graph, grammar_index, client)
     except Exception as e:
         logger.error(f"Failed to get LLM refinements: {e}")
         return 1
@@ -524,6 +834,11 @@ def main():
     logger.info("LLM refinement received:")
     logger.info(f"  Units: {len(refinements.get('units', []))}")
     logger.info(f"  Prerequisites defined: {len(refinements.get('prerequisites', {}))}")
+    if refinements.get("synthesis_notes"):
+        notes = refinements["synthesis_notes"]
+        logger.info("  Synthesis notes:")
+        for decision in notes.get("key_decisions", [])[:3]:
+            logger.info(f"    - {decision}")
 
     # Apply refinements
     logger.info("Applying refinements...")
@@ -535,15 +850,38 @@ def main():
     # Save
     save_refined_curriculum(refined_graph, grammar_index, args.output_dir, refinements)
 
+    # Save trials if ensemble mode
+    if trials:
+        trials_dir = args.output_dir / "trials"
+        trials_dir.mkdir(parents=True, exist_ok=True)
+        for i, trial in enumerate(trials):
+            if trial:
+                trial_file = trials_dir / f"trial_{i+1}.json"
+                with open(trial_file, "w", encoding="utf-8") as f:
+                    json.dump(trial, f, ensure_ascii=False, indent=2)
+        logger.info(f"  Saved {len(trials)} trial proposals to {trials_dir}")
+
+    # Generate lesson context for lesson generation
+    try:
+        lesson_context_yaml = generate_lesson_context(refined_graph, refinements, client)
+        context_file = args.output_dir / "lesson_context.yaml"
+        with open(context_file, "w", encoding="utf-8") as f:
+            f.write(lesson_context_yaml)
+        logger.info(f"  Generated lesson context: {context_file}")
+    except Exception as e:
+        logger.warning(f"Failed to generate lesson context: {e}")
+
     logger.info("")
     logger.info("=" * 50)
     logger.info("CURRICULUM REFINEMENT COMPLETE")
     logger.info("=" * 50)
     logger.info(f"Original: {args.input_dir}")
     logger.info(f"Refined:  {args.output_dir}")
+    if args.ensemble > 0:
+        logger.info(f"Mode:     Ensemble ({args.ensemble} trials + synthesis)")
     logger.info("")
     logger.info("To use refined curriculum for lesson generation:")
-    logger.info(f"  python scripts/04_generate_lessons.py --curriculum {args.output_dir} --all")
+    logger.info(f"  python scripts/04_generate_lessons.py --curriculum {args.output_dir} --all --select-poems")
 
     return 0
 

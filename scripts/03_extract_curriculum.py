@@ -57,6 +57,7 @@ DEFAULT_MIN_POEMS_PER_LESSON = 2
 DEFAULT_MAX_LESSONS = 50
 DEFAULT_DIFFICULTY_TIERS = 5
 DEFAULT_POEMS_PER_LESSON = 3
+DEFAULT_CANDIDATE_POOL_SIZE = 10  # Larger pool for LLM poem selection
 
 # Prerequisite inference thresholds
 CO_RATIO_THRESHOLD = 0.7      # 70% co-occurrence required
@@ -348,7 +349,7 @@ def build_lesson_graph(
     poems_df: pd.DataFrame,
     min_poems_per_lesson: int = DEFAULT_MIN_POEMS_PER_LESSON,
     max_lessons: int = DEFAULT_MAX_LESSONS,
-    poems_per_lesson: int = DEFAULT_POEMS_PER_LESSON,
+    candidate_pool_size: int = DEFAULT_CANDIDATE_POOL_SIZE,
     difficulty_tiers: int = DEFAULT_DIFFICULTY_TIERS
 ) -> tuple[list[Unit], dict[str, list[str]]]:
     """
@@ -360,7 +361,7 @@ def build_lesson_graph(
         poems_df: Annotated poems DataFrame
         min_poems_per_lesson: Minimum poems required per lesson
         max_lessons: Maximum number of lessons
-        poems_per_lesson: Target poems per lesson
+        candidate_pool_size: Number of candidate poems per lesson (for LLM selection)
         difficulty_tiers: Number of difficulty tiers (1-5)
 
     Returns:
@@ -419,12 +420,12 @@ def build_lesson_graph(
             max(1, int(entry.avg_difficulty * difficulty_tiers) + 1)
         )
 
-        # Select poems for this lesson
-        poem_ids = select_poems_for_lesson(
-            canonical_id, poems_df, poem_to_canonical, poems_per_lesson
+        # Select candidate poems for this lesson (larger pool for LLM selection)
+        candidate_poem_ids = select_poems_for_lesson(
+            canonical_id, poems_df, poem_to_canonical, candidate_pool_size
         )
 
-        if not poem_ids:
+        if not candidate_poem_ids:
             logger.debug(f"No poems for {canonical_id}, skipping")
             continue
 
@@ -434,14 +435,15 @@ def build_lesson_graph(
             if pid in grammar_index and grammar_index[pid].frequency >= min_poems_per_lesson
         ]
 
-        # Create lesson node
+        # Create lesson node with candidate pool (poem_ids populated by LLM selection later)
         lesson = LessonNode(
             id=f"lesson_{canonical_id}",
             canonical_grammar_point=canonical_id,
             senses_covered=[s.sense_id for s in entry.senses[:2]],  # First 2 senses
             prerequisites=prereq_lesson_ids,
             difficulty_tier=difficulty_tier,
-            poem_ids=poem_ids
+            candidate_poem_ids=candidate_poem_ids,
+            poem_ids=[]  # Will be populated by LLM poem selection step
         )
 
         unit_id = f"unit_{entry.category}"
@@ -506,7 +508,7 @@ def extract_curriculum(
     output_dir: Path,
     min_poems_per_lesson: int = DEFAULT_MIN_POEMS_PER_LESSON,
     max_lessons: int = DEFAULT_MAX_LESSONS,
-    poems_per_lesson: int = DEFAULT_POEMS_PER_LESSON,
+    candidate_pool_size: int = DEFAULT_CANDIDATE_POOL_SIZE,
     difficulty_tiers: int = DEFAULT_DIFFICULTY_TIERS
 ) -> LessonGraph:
     """
@@ -517,7 +519,7 @@ def extract_curriculum(
         output_dir: Directory for output files
         min_poems_per_lesson: Minimum poems per lesson
         max_lessons: Maximum lessons to generate
-        poems_per_lesson: Target poems per lesson
+        candidate_pool_size: Number of candidate poems per lesson (for LLM selection)
         difficulty_tiers: Number of difficulty tiers
 
     Returns:
@@ -550,7 +552,7 @@ def extract_curriculum(
         poems_df,
         min_poems_per_lesson=min_poems_per_lesson,
         max_lessons=max_lessons,
-        poems_per_lesson=poems_per_lesson,
+        candidate_pool_size=candidate_pool_size,
         difficulty_tiers=difficulty_tiers
     )
 
@@ -574,7 +576,7 @@ def extract_curriculum(
         'config': {
             'min_poems_per_lesson': min_poems_per_lesson,
             'max_lessons': max_lessons,
-            'poems_per_lesson': poems_per_lesson,
+            'candidate_pool_size': candidate_pool_size,
             'difficulty_tiers': difficulty_tiers,
             'co_ratio_threshold': CO_RATIO_THRESHOLD,
             'difficulty_gap_threshold': DIFFICULTY_GAP_THRESHOLD,
@@ -662,7 +664,7 @@ def generate_curriculum_report(
             lines.append(f"  - Grammar: `{lesson.canonical_grammar_point}` ({surfaces})")
             lines.append(f"  - Frequency: {freq} poems")
             lines.append(f"  - Prerequisites: {prereqs}")
-            lines.append(f"  - Poems: {len(lesson.poem_ids)}")
+            lines.append(f"  - Candidate poems: {len(lesson.candidate_poem_ids)}")
             lines.append("")
 
     lines.extend([
@@ -736,10 +738,10 @@ Examples:
         help=f"Maximum number of lessons (default: {DEFAULT_MAX_LESSONS})",
     )
     parser.add_argument(
-        "--poems-per-lesson",
+        "--candidate-pool-size",
         type=int,
-        default=DEFAULT_POEMS_PER_LESSON,
-        help=f"Target poems per lesson (default: {DEFAULT_POEMS_PER_LESSON})",
+        default=DEFAULT_CANDIDATE_POOL_SIZE,
+        help=f"Number of candidate poems per lesson for LLM selection (default: {DEFAULT_CANDIDATE_POOL_SIZE})",
     )
     parser.add_argument(
         "--difficulty-tiers",
@@ -761,7 +763,7 @@ Examples:
         output_dir=args.output_dir,
         min_poems_per_lesson=args.min_poems_per_lesson,
         max_lessons=args.max_lessons,
-        poems_per_lesson=args.poems_per_lesson,
+        candidate_pool_size=args.candidate_pool_size,
         difficulty_tiers=args.difficulty_tiers
     )
 

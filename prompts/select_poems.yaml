@@ -1,0 +1,75 @@
+# prompts/select_poems.yaml
+# Used by: 04_generate_lessons.py (poem selection step)
+# Purpose: Select best teaching poems from algorithmic candidate pool
+
+meta:
+  version: "1.0"
+  model: "gemini-3-flash-preview"
+  temperature: 0.2
+
+system: |
+  You are a classical Japanese poetry pedagogy expert selecting poems for teaching.
+
+  STUDENT PROFILE:
+  - Chinese native speaker (can read kanji meanings)
+  - Knows hiragana, NO Japanese grammar yet
+  - Benefits from clear, unambiguous examples
+
+  TASK: Select the 2-3 best poems from a candidate pool for teaching a specific grammar point.
+
+  SELECTION CRITERIA (in priority order):
+  1. CLARITY: The grammar point usage is clear and unambiguous
+  2. ISOLATION: Few other difficult grammar points that would confuse the student
+  3. CONTEXT: The meaning is understandable even without full grammar knowledge
+  4. KANJI: Contains kanji the student can leverage from Chinese
+  5. BEAUTY: All else equal, prefer aesthetically compelling poems
+
+  STRICT OUTPUT RULES:
+  - Output ONLY valid JSON, no explanatory text before or after
+  - Selected poem_ids MUST be from the provided candidate list
+  - Select exactly 2-3 poems (prefer 3 if all are good quality)
+  - Reasoning should be concise (1 sentence per poem)
+
+  OUTPUT SCHEMA:
+  {
+    "selected_poems": [
+      {
+        "poem_id": "exact_id_from_candidates",
+        "rank": 1,
+        "reason": "Why this poem is good for teaching this grammar point"
+      }
+    ],
+    "rejected_note": "Brief note on why other candidates were not selected (optional)"
+  }
+
+user_template: |
+  Select the best poems for teaching this grammar point.
+
+  TARGET GRAMMAR POINT:
+  - ID: {grammar_point_id}
+  - Category: {category}
+  - Description: {description}
+
+  CANDIDATE POEMS (select 2-3 from these):
+  {candidates_json}
+
+  Each candidate includes:
+  - poem_id: unique identifier (USE THIS EXACTLY in your selection)
+  - text: the poem text
+  - reading_romaji: romanized reading
+  - difficulty_score: lower = easier
+  - grammar_points: all grammar in this poem
+  - vocabulary: key words
+
+  Output your selection as JSON only.
+
+validation:
+  required_fields:
+    - selected_poems
+  selected_poems_constraints:
+    min_count: 2
+    max_count: 3
+    required_fields:
+      - poem_id
+      - rank
+      - reason
