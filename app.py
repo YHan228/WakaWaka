@@ -745,99 +745,25 @@ def render_cover_page():
         total_poems = 1000
         total_grammar = 264
 
-    st.markdown("""
+    # Combined CSS and HTML in single markdown call for reliable rendering
+    cover_html = f"""
     <style>
-    .cover-container {
-        text-align: center;
-        padding: 2em 0;
-    }
-    .cover-title {
-        font-family: 'Noto Serif JP', serif;
-        font-size: 3.5em;
-        font-weight: 700;
-        color: #2D2D2D;
-        margin-bottom: 0.2em;
-        letter-spacing: 0.05em;
-    }
-    .cover-subtitle {
-        font-family: 'Noto Serif JP', serif;
-        font-size: 1.4em;
-        color: #4A5568;
-        margin-bottom: 2em;
-    }
-    .cover-tagline {
-        font-size: 1.1em;
-        color: #666;
-        max-width: 600px;
-        margin: 0 auto 2em auto;
-        line-height: 1.8;
-    }
-    .cover-stats {
-        display: flex;
-        justify-content: center;
-        gap: 3em;
-        margin: 2em 0;
-        flex-wrap: wrap;
-    }
-    .cover-stat {
-        text-align: center;
-    }
-    .cover-stat-value {
-        font-size: 2.5em;
-        font-weight: 700;
-        color: #C53D43;
-    }
-    .cover-stat-label {
-        font-size: 0.9em;
-        color: #666;
-        text-transform: uppercase;
-        letter-spacing: 0.1em;
-    }
-    .cover-poem {
-        font-family: 'Noto Serif JP', serif;
-        font-size: 1.3em;
-        color: #2D2D2D;
-        background: linear-gradient(145deg, #FAF8F5 0%, #F5F2ED 100%);
-        border-left: 3px solid #C53D43;
-        padding: 1.5em 2em;
-        margin: 2em auto;
-        max-width: 500px;
-        border-radius: 0 8px 8px 0;
-    }
-    .cover-poem-trans {
-        font-size: 0.85em;
-        color: #666;
-        font-style: italic;
-        margin-top: 1em;
-    }
-    .cover-features {
-        display: flex;
-        justify-content: center;
-        gap: 2em;
-        margin: 3em 0;
-        flex-wrap: wrap;
-    }
-    .cover-feature {
-        text-align: center;
-        max-width: 200px;
-    }
-    .cover-feature-icon {
-        font-size: 2em;
-        margin-bottom: 0.5em;
-    }
-    .cover-feature-title {
-        font-weight: 600;
-        color: #2D2D2D;
-        margin-bottom: 0.3em;
-    }
-    .cover-feature-desc {
-        font-size: 0.9em;
-        color: #666;
-    }
+    .cover-container {{ text-align: center; padding: 2em 0; }}
+    .cover-title {{ font-family: 'Noto Serif JP', serif; font-size: 3.5em; font-weight: 700; color: #2D2D2D; margin-bottom: 0.2em; letter-spacing: 0.05em; }}
+    .cover-subtitle {{ font-family: 'Noto Serif JP', serif; font-size: 1.4em; color: #4A5568; margin-bottom: 2em; }}
+    .cover-tagline {{ font-size: 1.1em; color: #666; max-width: 600px; margin: 0 auto 2em auto; line-height: 1.8; }}
+    .cover-stats {{ display: flex; justify-content: center; gap: 3em; margin: 2em 0; flex-wrap: wrap; }}
+    .cover-stat {{ text-align: center; }}
+    .cover-stat-value {{ font-size: 2.5em; font-weight: 700; color: #C53D43; }}
+    .cover-stat-label {{ font-size: 0.9em; color: #666; text-transform: uppercase; letter-spacing: 0.1em; }}
+    .cover-poem {{ font-family: 'Noto Serif JP', serif; font-size: 1.3em; color: #2D2D2D; background: linear-gradient(145deg, #FAF8F5 0%, #F5F2ED 100%); border-left: 3px solid #C53D43; padding: 1.5em 2em; margin: 2em auto; max-width: 500px; border-radius: 0 8px 8px 0; }}
+    .cover-poem-trans {{ font-size: 0.85em; color: #666; font-style: italic; margin-top: 1em; }}
+    .cover-features {{ display: flex; justify-content: center; gap: 2em; margin: 3em 0; flex-wrap: wrap; }}
+    .cover-feature {{ text-align: center; max-width: 200px; }}
+    .cover-feature-icon {{ font-size: 2em; margin-bottom: 0.5em; }}
+    .cover-feature-title {{ font-weight: 600; color: #2D2D2D; margin-bottom: 0.3em; }}
+    .cover-feature-desc {{ font-size: 0.9em; color: #666; }}
     </style>
-    """, unsafe_allow_html=True)
-
-    st.markdown(f"""
     <div class="cover-container">
         <div class="cover-title">和歌デコーダー</div>
         <div class="cover-subtitle">WakaWaka</div>
@@ -888,7 +814,8 @@ def render_cover_page():
             </div>
         </div>
     </div>
-    """, unsafe_allow_html=True)
+    """
+    st.markdown(cover_html, unsafe_allow_html=True)
 
     # Start button
     col1, col2, col3 = st.columns([1, 2, 1])
