@@ -746,8 +746,8 @@ def render_cover_page():
         total_grammar = 264
 
     # Title section
-    st.markdown("# 和歌デコーダー")
-    st.markdown("### WakaWaka")
+    st.markdown("# WakaWaka 🎋")
+    st.markdown("### 和歌の世界へようこそ")
     st.markdown("""
     *A learning platform for Chinese speakers to master classical Japanese poetry.
     Leverage your kanji knowledge to unlock the beauty of waka (和歌).*
