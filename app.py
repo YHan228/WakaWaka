@@ -13,6 +13,7 @@ from pathlib import Path
 
 from wakawaka.classroom import (
     ClassroomLoader,
+    LiteraryLoader,
     ProgressTracker,
     Navigator,
     LessonAvailability,
@@ -27,11 +28,12 @@ from wakawaka.viewer import (
     get_reference_css,
     markdown_to_html,
     get_audio_for_lesson,
-    has_any_audio,
     get_audio_path,
     render_teaching_step,
     render_grammar_explanation,
     render_forward_references,
+    get_literary_css,
+    render_literary_analysis,
 )
 from wakawaka.schemas import LessonStatus
 import json
@@ -44,6 +46,7 @@ import json
 DEFAULT_DB_PATH = Path("data/classroom.db")
 INTRODUCTION_PATH = Path("data/introduction.json")
 DATA_DIR = Path("data")
+LITERARY_PATH = Path("data/literary/poems_literary.parquet")
 
 st.set_page_config(
     page_title="WakaWaka",
@@ -316,6 +319,12 @@ def init_session_state():
         else:
             st.session_state.loader = None
 
+    if "literary_loader" not in st.session_state:
+        if LITERARY_PATH.exists():
+            st.session_state.literary_loader = LiteraryLoader(LITERARY_PATH)
+        else:
+            st.session_state.literary_loader = None
+
     if "progress" not in st.session_state:
         st.session_state.progress = ProgressTracker()
 
@@ -517,6 +526,10 @@ python scripts/05_compile_classroom.py --output data/classroom.db
 
     # Inject CSS
     st.markdown(get_vocab_css(), unsafe_allow_html=True)
+    st.markdown(get_literary_css(), unsafe_allow_html=True)
+
+    # Get literary loader
+    literary_loader = st.session_state.literary_loader
 
     # Render lesson header
     st.markdown(f'<h1>{lesson.lesson_title}</h1>', unsafe_allow_html=True)
@@ -525,16 +538,24 @@ python scripts/05_compile_classroom.py --output data/classroom.db
     # Grammar explanation
     st.markdown(render_grammar_explanation(lesson), unsafe_allow_html=True)
 
-    # Teaching sequence - render step by step to allow inline audio
+    # Teaching sequence - render step by step to allow inline audio and literary analysis
     for step in lesson.teaching_sequence:
         step_html = render_teaching_step(step, poem_metadata=poem_metadata)
         if step_html:
             st.markdown(step_html, unsafe_allow_html=True)
 
-            # Add audio right after poem
-            if isinstance(step, PoemPresentationStep) and step.poem_id in audio_files:
-                audio_path = audio_files[step.poem_id]
-                st.audio(str(audio_path), format="audio/mp3")
+            # Add audio and literary analysis after poem
+            if isinstance(step, PoemPresentationStep) and step.poem_id:
+                # Audio player
+                if step.poem_id in audio_files:
+                    audio_path = audio_files[step.poem_id]
+                    st.audio(str(audio_path), format="audio/mp3")
+
+                # Literary analysis panel (collapsible)
+                if literary_loader:
+                    analysis = literary_loader.get_analysis(step.poem_id)
+                    if analysis:
+                        st.markdown(render_literary_analysis(analysis), unsafe_allow_html=True)
 
     # Forward references
     st.markdown(render_forward_references(lesson), unsafe_allow_html=True)
@@ -749,7 +770,11 @@ def render_poems_view():
 
     st.markdown("# 🎋 Poem Anthology")
 
+    # Inject literary CSS
+    st.markdown(get_literary_css(), unsafe_allow_html=True)
+
     loader = st.session_state.loader
+    literary_loader = st.session_state.literary_loader
     total_poems = loader.get_poem_count()
 
     st.caption(f"{total_poems} classical Japanese poems")
@@ -791,6 +816,12 @@ def render_poems_view():
             audio_path = get_audio_path(poem.id, DATA_DIR)
             if audio_path:
                 st.audio(str(audio_path), format="audio/mp3")
+
+            # Literary analysis (expanded by default in anthology)
+            if literary_loader:
+                analysis = literary_loader.get_analysis(poem.id)
+                if analysis:
+                    st.markdown(render_literary_analysis(analysis, collapsed=False), unsafe_allow_html=True)
 
 
 # -----------------------------------------------------------------------------

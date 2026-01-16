@@ -51,9 +51,12 @@ from .reference import (
 
 from .audio import (
     get_audio_path,
-    get_poem_ids_from_lesson,
     get_audio_for_lesson,
-    has_any_audio,
+)
+
+from .literary import (
+    get_literary_css,
+    render_literary_analysis,
 )
 
 __all__ = [
@@ -95,7 +98,8 @@ __all__ = [
     "filter_grammar_points",
     # Audio
     "get_audio_path",
-    "get_poem_ids_from_lesson",
     "get_audio_for_lesson",
-    "has_any_audio",
+    # Literary
+    "get_literary_css",
+    "render_literary_analysis",
 ]

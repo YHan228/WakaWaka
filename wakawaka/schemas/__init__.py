@@ -58,6 +58,15 @@ from .progress import (
     StudentProgress,
 )
 
+# Literary analysis schemas
+from .literary import (
+    PoeticDevice,
+    Allusion,
+    ImageryNote,
+    PoemLiteraryAnalysis,
+    LiteraryAnalysisBatch,
+)
+
 __all__ = [
     # Annotation
     'FugashiToken',
@@ -97,4 +106,10 @@ __all__ = [
     'LessonStatus',
     'LessonProgress',
     'StudentProgress',
+    # Literary
+    'PoeticDevice',
+    'Allusion',
+    'ImageryNote',
+    'PoemLiteraryAnalysis',
+    'LiteraryAnalysisBatch',
 ]

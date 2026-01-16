@@ -1,12 +1,9 @@
 """
-Audio viewer - Functions for displaying audio playback controls.
-
-Provides utilities for rendering audio players for poems and vocabulary.
+Audio viewer - Utilities for audio file paths.
 """
 
 from pathlib import Path
 from typing import Optional
-import json
 
 
 def get_audio_path(poem_id: str, data_dir: Path) -> Optional[Path]:
@@ -67,19 +64,3 @@ def get_audio_for_lesson(lesson_content, data_dir: Path) -> dict[str, Path]:
             audio_files[poem_id] = audio_path
 
     return audio_files
-
-
-def has_any_audio(data_dir: Path) -> bool:
-    """
-    Check if any audio files have been generated.
-
-    Args:
-        data_dir: Base data directory
-
-    Returns:
-        True if audio directory exists and contains MP3 files
-    """
-    audio_dir = data_dir / "audio"
-    if not audio_dir.exists():
-        return False
-    return len(list(audio_dir.glob("*.mp3"))) > 0

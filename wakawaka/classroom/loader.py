@@ -6,6 +6,7 @@ Provides read-only access to:
 - Poems with annotations
 - Grammar points
 - Lesson-poem relationships
+- Literary analysis (from parquet)
 """
 
 import json
@@ -13,6 +14,8 @@ import sqlite3
 from dataclasses import dataclass
 from pathlib import Path
 from typing import Optional
+
+import pandas as pd
 
 from wakawaka.schemas import LessonContent, PoemAnnotation
 
@@ -462,3 +465,85 @@ class ClassroomLoader:
                 "lessons": lessons,
             })
         return tree
+
+
+class LiteraryLoader:
+    """
+    Load literary analysis data from parquet file.
+
+    Provides read-only access to pre-generated literary analysis for poems.
+    Data is loaded once and cached in memory for fast lookups.
+    """
+
+    def __init__(self, parquet_path: str | Path):
+        """
+        Initialize loader with path to literary analysis parquet.
+
+        Args:
+            parquet_path: Path to poems_literary.parquet file
+        """
+        self.parquet_path = Path(parquet_path)
+        self._cache: dict[str, dict] = {}
+        self._loaded = False
+
+    def _ensure_loaded(self):
+        """Load data from parquet if not already loaded."""
+        if self._loaded:
+            return
+
+        if not self.parquet_path.exists():
+            self._loaded = True
+            return
+
+        df = pd.read_parquet(self.parquet_path)
+
+        # Convert each row to a dictionary, handling list columns
+        for _, row in df.iterrows():
+            poem_id = row["poem_id"]
+            analysis = {}
+            for col in df.columns:
+                val = row[col]
+                # Handle list/dict columns (stored as objects)
+                if isinstance(val, (list, dict)):
+                    analysis[col] = val
+                # Handle scalar NaN values
+                elif pd.isna(val) if not hasattr(val, '__len__') or isinstance(val, str) else False:
+                    continue
+                else:
+                    analysis[col] = val
+            self._cache[poem_id] = analysis
+
+        self._loaded = True
+
+    def get_analysis(self, poem_id: str) -> Optional[dict]:
+        """
+        Get literary analysis for a poem.
+
+        Args:
+            poem_id: The poem ID
+
+        Returns:
+            Dictionary with analysis fields, or None if not found
+        """
+        self._ensure_loaded()
+        return self._cache.get(poem_id)
+
+    def get_all_analyses(self) -> dict[str, dict]:
+        """
+        Get all literary analyses.
+
+        Returns:
+            Dictionary mapping poem_id to analysis dict
+        """
+        self._ensure_loaded()
+        return self._cache.copy()
+
+    def has_analysis(self, poem_id: str) -> bool:
+        """Check if literary analysis exists for a poem."""
+        self._ensure_loaded()
+        return poem_id in self._cache
+
+    def get_count(self) -> int:
+        """Get total number of poems with literary analysis."""
+        self._ensure_loaded()
+        return len(self._cache)

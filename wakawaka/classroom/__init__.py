@@ -9,6 +9,7 @@ This module provides:
 
 from .loader import (
     ClassroomLoader,
+    LiteraryLoader,
     UnitData,
     LessonSummary,
     PoemData,
@@ -31,6 +32,7 @@ from .navigator import (
 __all__ = [
     # Loader
     "ClassroomLoader",
+    "LiteraryLoader",
     "UnitData",
     "LessonSummary",
     "PoemData",
