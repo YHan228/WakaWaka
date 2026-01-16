@@ -74,7 +74,7 @@ logging.basicConfig(
 logger = logging.getLogger(__name__)
 
 # Constants
-DEFAULT_MODEL = "gemini-2.0-flash"
+DEFAULT_MODEL = "gemini-3-flash-preview"
 DEFAULT_API_SLEEP = 1.0
 CHECKPOINT_DIR = PROJECT_ROOT / "data" / "lessons" / ".checkpoints"
 CACHE_DIR = PROJECT_ROOT / "data" / "lessons" / ".cache"
