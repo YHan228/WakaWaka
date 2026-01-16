@@ -460,8 +460,8 @@ Each lesson now contains:
 ### LLM Generates (per lesson)
 - `lesson_title` — human-readable title
 - `lesson_summary` — 1-2 sentences
-- `grammar_explanation` — concept, formation, variations, common_confusions, logic_analogy
-- `teaching_sequence` — ordered steps: introduction, poem_presentation (with vocabulary, focus_highlight), grammar_spotlight, contrast_example, comprehension_check, summary
+- `grammar_explanation` — concept, formation, variations, common_confusions
+- `teaching_sequence` — ordered steps: introduction, poem_presentation (with **complete vocabulary for every word**, focus_highlight), grammar_spotlight, contrast_example, comprehension_check, summary
 - `reference_card` — quick reference for review (point, one_liner, example, see_also)
 - `forward_references` — grammar in poems not yet taught (e.g., "We'll learn けり in Unit 3")
 
@@ -577,6 +577,20 @@ print(f'First lesson: {nav.get_first_lesson().lesson_title}')
 - [ ] Create `wakadecoder/viewer/quiz.py` (render comprehension checks)
 - [ ] Create `wakadecoder/viewer/reference.py` (grammar reference cards)
 - [ ] Implement deterministic ruby generation from tokens
+- [ ] Implement interactive vocabulary hover system
+
+### Interactive Vocabulary Hover (UI Design)
+Each word in poem text should be interactive:
+- **Color coding by word type**: particles (blue), verbs (green), nouns (default), auxiliaries (purple)
+- **Hover/tap popup**: Shows reading (hiragana) + meaning + Chinese cognate note
+- **Span-based highlighting**: Uses `vocabulary[].span` to map words to text positions
+- **Fallback**: Words without spans shown in separate vocabulary list below poem
+
+Implementation approach:
+1. Parse poem text and vocabulary spans
+2. Generate HTML with `<span class="vocab-word" data-idx="N">` wrappers
+3. Attach hover/click handlers to show tooltip with vocab info
+4. Style with CSS: color by word type, hover highlight
 
 ### Verification
 ```bash
@@ -662,8 +676,8 @@ Update this section as phases complete:
 | 5.5 | Complete | 2026-01-16 | NLP analysis scripts (lexical, collections, networks, phonetics, POS) |
 | 5.5b | Complete | 2026-01-16 | 03b_refine_curriculum_llm.py; LLM redesigns to 7 thematic units |
 | 6 | Complete | 2026-01-16 | 04_generate_lessons.py with checkpointing, caching, schema validation |
-| 7 | Not Started | | |
-| 8 | Not Started | | |
+| 7 | Complete | 2026-01-16 | 05_compile_classroom.py; 50 lessons, 1000 poems, 264 grammar points compiled |
+| 8 | Complete | 2026-01-16 | loader.py, progress.py, navigator.py; full curriculum navigation |
 | 9 | Not Started | | |
 | 10 | Not Started | | |
 | 11 | Not Started | | |
