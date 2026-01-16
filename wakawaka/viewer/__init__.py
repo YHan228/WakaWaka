@@ -49,6 +49,13 @@ from .reference import (
     filter_grammar_points,
 )
 
+from .audio import (
+    get_audio_path,
+    get_poem_ids_from_lesson,
+    get_audio_for_lesson,
+    has_any_audio,
+)
+
 __all__ = [
     # Lesson rendering
     "get_vocab_css",
@@ -86,4 +93,9 @@ __all__ = [
     "render_learned_reference_cards",
     "render_mini_reference_cards",
     "filter_grammar_points",
+    # Audio
+    "get_audio_path",
+    "get_poem_ids_from_lesson",
+    "get_audio_for_lesson",
+    "has_any_audio",
 ]

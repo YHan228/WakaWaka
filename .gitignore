@@ -2,11 +2,12 @@
 .env
 
 # Generated data (rebuild from pipeline)
-data/
+data/*
 # But include runtime files needed for deployment
 !data/classroom.db
 !data/introduction.json
-
+!data/audio/
+!data/audio/*
 # Python
 __pycache__/
 *.py[cod]
@@ -59,3 +60,4 @@ CLAUDE.md
 SCAFFOLD_PLAN.md
 WakaWaka_PROMPT*.md
 WakaWaka_RESOURCES.md
+gen-lang-client*.json

@@ -3,6 +3,7 @@
 
 # Build pipeline
 fugashi>=1.3.0
+google-cloud-texttospeech>=2.14.0
 unidic-lite>=1.0.8
 pandas>=2.0.0
 polars>=0.20.0

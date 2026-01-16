@@ -26,6 +26,9 @@ from wakawaka.viewer import (
     filter_grammar_points,
     get_reference_css,
     markdown_to_html,
+    get_audio_for_lesson,
+    has_any_audio,
+    get_audio_path,
 )
 from wakawaka.schemas import LessonStatus
 import json
@@ -37,6 +40,7 @@ import json
 
 DEFAULT_DB_PATH = Path("data/classroom.db")
 INTRODUCTION_PATH = Path("data/introduction.json")
+DATA_DIR = Path("data")
 
 st.set_page_config(
     page_title="WakaWaka",
@@ -497,6 +501,9 @@ python scripts/05_compile_classroom.py --output data/classroom.db
     st.markdown(get_vocab_css(), unsafe_allow_html=True)
     st.markdown(render_lesson(lesson), unsafe_allow_html=True)
 
+    # Audio player (if audio files exist)
+    render_audio_player(lesson)
+
     # Quiz section with text input
     render_quiz_section(lesson)
 
@@ -533,6 +540,26 @@ def render_navigation_bar(lesson_id: str):
         if next_id and nav.is_lesson_available(next_id):
             if st.button("Next →", use_container_width=True):
                 select_lesson(next_id)
+
+
+def render_audio_player(lesson):
+    """Render audio players for poems in the lesson."""
+    audio_files = get_audio_for_lesson(lesson, DATA_DIR)
+
+    if not audio_files:
+        return
+
+    st.markdown("### 🔊 Listen to the Poems")
+    st.caption("Audio pronunciation (slightly slower for learning)")
+
+    for poem_id, audio_path in audio_files.items():
+        # Get a display label for the poem
+        display_id = poem_id.split("_")[-1] if "_" in poem_id else poem_id
+        col1, col2 = st.columns([1, 4])
+        with col1:
+            st.markdown(f"**Poem {display_id}**")
+        with col2:
+            st.audio(str(audio_path), format="audio/mp3")
 
 
 def render_quiz_section(lesson):
@@ -744,6 +771,11 @@ def render_poems_view():
 
             if poem.reading_romaji:
                 st.caption(f"Romaji: {poem.reading_romaji}")
+
+            # Audio player if available
+            audio_path = get_audio_path(poem.id, DATA_DIR)
+            if audio_path:
+                st.audio(str(audio_path), format="audio/mp3")
 
 
 # -----------------------------------------------------------------------------
