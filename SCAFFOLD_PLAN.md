@@ -679,7 +679,7 @@ Update this section as phases complete:
 | 7 | Complete | 2026-01-16 | 05_compile_classroom.py; 50 lessons, 1000 poems, 264 grammar points compiled |
 | 8 | Complete | 2026-01-16 | loader.py, progress.py, navigator.py; full curriculum navigation |
 | 9 | Complete | 2026-01-16 | lesson.py, quiz.py, reference.py; interactive vocabulary hover |
-| 10 | Not Started | | |
+| 10 | Complete | 2026-01-16 | app.py Streamlit; sidebar curriculum tree, lesson viewer, reference mode |
 | 11 | Not Started | | |
 
 ---
