@@ -29,6 +29,9 @@ from wakawaka.viewer import (
     get_audio_for_lesson,
     has_any_audio,
     get_audio_path,
+    render_teaching_step,
+    render_grammar_explanation,
+    render_forward_references,
 )
 from wakawaka.schemas import LessonStatus
 import json
@@ -497,12 +500,33 @@ python scripts/05_compile_classroom.py --output data/classroom.db
     # Navigation bar
     render_navigation_bar(lesson_id)
 
-    # Inject CSS and render lesson
-    st.markdown(get_vocab_css(), unsafe_allow_html=True)
-    st.markdown(render_lesson(lesson), unsafe_allow_html=True)
+    # Get audio paths for poems in this lesson
+    audio_files = get_audio_for_lesson(lesson, DATA_DIR)
 
-    # Audio player (if audio files exist)
-    render_audio_player(lesson)
+    # Inject CSS
+    st.markdown(get_vocab_css(), unsafe_allow_html=True)
+
+    # Render lesson header
+    st.markdown(f'<h1>{lesson.lesson_title}</h1>', unsafe_allow_html=True)
+    st.markdown(f'<p style="color:#666;font-style:italic;">{lesson.lesson_summary}</p>', unsafe_allow_html=True)
+
+    # Grammar explanation
+    st.markdown(render_grammar_explanation(lesson), unsafe_allow_html=True)
+
+    # Teaching sequence - render step by step to allow inline audio
+    from wakawaka.schemas import PoemPresentationStep
+    for step in lesson.teaching_sequence:
+        step_html = render_teaching_step(step)
+        if step_html:
+            st.markdown(step_html, unsafe_allow_html=True)
+
+            # Add audio right after poem
+            if isinstance(step, PoemPresentationStep) and step.poem_id in audio_files:
+                audio_path = audio_files[step.poem_id]
+                st.audio(str(audio_path), format="audio/mp3")
+
+    # Forward references
+    st.markdown(render_forward_references(lesson), unsafe_allow_html=True)
 
     # Quiz section with text input
     render_quiz_section(lesson)
@@ -540,26 +564,6 @@ def render_navigation_bar(lesson_id: str):
         if next_id and nav.is_lesson_available(next_id):
             if st.button("Next →", use_container_width=True):
                 select_lesson(next_id)
-
-
-def render_audio_player(lesson):
-    """Render audio players for poems in the lesson."""
-    audio_files = get_audio_for_lesson(lesson, DATA_DIR)
-
-    if not audio_files:
-        return
-
-    st.markdown("### 🔊 Listen to the Poems")
-    st.caption("Audio pronunciation (slightly slower for learning)")
-
-    for poem_id, audio_path in audio_files.items():
-        # Get a display label for the poem
-        display_id = poem_id.split("_")[-1] if "_" in poem_id else poem_id
-        col1, col2 = st.columns([1, 4])
-        with col1:
-            st.markdown(f"**Poem {display_id}**")
-        with col2:
-            st.audio(str(audio_path), format="audio/mp3")
 
 
 def render_quiz_section(lesson):
