@@ -386,43 +386,38 @@ def fetch_with_rate_limit(url: str, sleep: float = DEFAULT_SLEEP) -> str:
         raise
 
 
-def parse_lapis_poem_page(html: str, url: str) -> dict | None:
-    """Parse a single poem page from Lapis."""
-    # Extract poem text - look for specific patterns in the HTML
-    # This is a simplified parser - actual HTML structure may vary
+def extract_poems_from_lapis_work_page(html: str, url: str) -> Iterator[dict]:
+    """
+    Extract poems from a Lapis work page.
 
-    # Try to find poem text in common patterns
-    # Pattern 1: <div class="poem">...</div>
-    poem_match = re.search(r'<div[^>]*class="[^"]*poem[^"]*"[^>]*>(.*?)</div>', html, re.DOTALL | re.IGNORECASE)
-    if not poem_match:
-        # Pattern 2: Look for Japanese text blocks
-        poem_match = re.search(r'<td[^>]*>([ぁ-んァ-ン一-龯々ー]{10,})</td>', html)
-
-    if not poem_match:
-        return None
-
-    text = re.sub(r'<[^>]+>', '', poem_match.group(1)).strip()
-    if not text or len(text) < 10:
-        return None
-
-    # Try to extract author
-    author = None
-    author_match = re.search(r'作者[：:]\s*([^<\n]+)', html)
-    if author_match:
-        author = author_match.group(1).strip()
-
-    # Try to extract collection
+    Lapis format:
+    - Collection name in <h1> tag
+    - Poems in <div align="left"> blocks
+    - Poem text is hiragana with − separators: きのふこそ−としはくれしか−...
+    """
+    # Extract collection name from <h1>
     collection = None
-    collection_match = re.search(r'出典[：:]\s*([^<\n]+)', html)
-    if collection_match:
-        collection = collection_match.group(1).strip()
+    h1_match = re.search(r'<h1>(.*?)</h1>', html, re.DOTALL)
+    if h1_match:
+        collection = re.sub(r'<[^>]+>', '', h1_match.group(1)).strip()
 
-    return {
-        "text": text,
-        "author": author,
-        "collection": collection,
-        "url": url,
-    }
+    # Find all poem texts - they're in div align="left" with hiragana and − separators
+    # Pattern: hiragana text with − separators (5 parts = traditional waka structure)
+    poem_pattern = r'<div[^>]*align="left"[^>]*>\s*([ぁ-んァ-ヶー−\s]+(?:−[ぁ-んァ-ヶー−\s]+){2,})\s*<'
+
+    for match in re.finditer(poem_pattern, html, re.IGNORECASE):
+        poem_text = match.group(1).strip()
+
+        # Clean up: remove − separators and extra whitespace
+        poem_text = poem_text.replace('−', '').replace(' ', '').replace('\n', '').replace('<br>', '')
+
+        # Must be reasonable length (waka is typically 31 morae)
+        if len(poem_text) >= 20 and len(poem_text) <= 100:
+            yield {
+                "text": poem_text,
+                "collection": collection,
+                "url": url,
+            }
 
 
 def load_lapis_poems(
@@ -433,6 +428,7 @@ def load_lapis_poems(
     """
     Scrape poems from Nichibunken Lapis waka database.
 
+    Poems are embedded directly in work pages (not separate poem pages).
     Respects rate limiting and robots.txt guidelines.
     """
     logger.info(f"Starting Lapis scrape (index: {index_type}, max: {max_poems or 'unlimited'})")
@@ -440,7 +436,7 @@ def load_lapis_poems(
     count = 0
     seen_texts = set()
     errors = 0
-    max_errors = 10
+    max_errors = 50  # Higher tolerance since we're scraping many pages
 
     try:
         # Fetch the index page
@@ -448,65 +444,54 @@ def load_lapis_poems(
         logger.info(f"Fetching index: {index_url}")
         index_html = fetch_with_rate_limit(index_url, sleep)
 
-        # Extract links to collection/work pages
-        # Pattern: href="xxx.html" within the index
-        links = re.findall(r'href="([^"]+\.html)"', index_html)
-        work_links = [f"{LAPIS_BASE_URL}/{link}" for link in links if not link.startswith('http')]
+        # Extract links to work pages (waka_iXXX.html pattern)
+        links = re.findall(r'href="(waka_i\d+\.html)"', index_html)
+        work_links = list(set(links))  # Dedupe
+        logger.info(f"Found {len(work_links)} unique work pages")
 
-        logger.info(f"Found {len(work_links)} work links")
-
-        for work_url in work_links:
+        for i, work_link in enumerate(work_links):
             if max_poems and count >= max_poems:
                 break
             if errors >= max_errors:
                 logger.error(f"Too many errors ({errors}), stopping")
                 break
 
+            work_url = f"{LAPIS_BASE_URL}/{work_link}"
+
             try:
                 work_html = fetch_with_rate_limit(work_url, sleep)
 
-                # Extract poem links from work page
-                poem_links = re.findall(r'href="([^"]*poem[^"]*\.html)"', work_html, re.IGNORECASE)
-                if not poem_links:
-                    # Try to find inline poems
-                    poem_links = re.findall(r'href="([^"]+\.html)"', work_html)
-
-                for poem_link in poem_links[:50]:  # Limit per work
+                # Extract poems directly from the work page
+                poems_on_page = 0
+                for poem_data in extract_poems_from_lapis_work_page(work_html, work_url):
                     if max_poems and count >= max_poems:
                         break
 
-                    poem_url = poem_link if poem_link.startswith('http') else f"{LAPIS_BASE_URL}/{poem_link}"
+                    if poem_data["text"] not in seen_texts:
+                        seen_texts.add(poem_data["text"])
+                        yield make_poem_record(
+                            text=poem_data["text"],
+                            source="lapis",
+                            collection=poem_data.get("collection"),
+                            source_url=work_url,
+                        )
+                        count += 1
+                        poems_on_page += 1
 
-                    try:
-                        poem_html = fetch_with_rate_limit(poem_url, sleep)
-                        poem_data = parse_lapis_poem_page(poem_html, poem_url)
+                if poems_on_page > 0:
+                    logger.debug(f"Extracted {poems_on_page} poems from {work_link}")
 
-                        if poem_data and poem_data["text"] not in seen_texts:
-                            seen_texts.add(poem_data["text"])
-                            yield make_poem_record(
-                                text=poem_data["text"],
-                                source="lapis",
-                                author=poem_data.get("author"),
-                                collection=poem_data.get("collection"),
-                                source_url=poem_url,
-                            )
-                            count += 1
-
-                            if count % 50 == 0:
-                                logger.info(f"Progress: {count} poems scraped")
-
-                    except Exception as e:
-                        errors += 1
-                        logger.warning(f"Error fetching poem {poem_url}: {e}")
+                if count % 100 == 0 and count > 0:
+                    logger.info(f"Progress: {count} poems scraped from {i+1}/{len(work_links)} pages")
 
             except Exception as e:
                 errors += 1
-                logger.warning(f"Error fetching work {work_url}: {e}")
+                logger.warning(f"Error fetching {work_url}: {e}")
 
     except Exception as e:
         logger.error(f"Failed to scrape Lapis: {e}")
 
-    logger.info(f"Lapis scrape complete: {count} poems, {errors} errors")
+    logger.info(f"Lapis scrape complete: {count} poems from {len(work_links)} pages, {errors} errors")
 
 
 # -----------------------------------------------------------------------------
