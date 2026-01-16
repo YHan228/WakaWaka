@@ -23,6 +23,7 @@ from .lesson import (
     render_forward_references,
     render_lesson,
     get_comprehension_checks,
+    markdown_to_html,
     WORD_TYPE_COLORS,
 )
 
@@ -65,6 +66,7 @@ __all__ = [
     "render_forward_references",
     "render_lesson",
     "get_comprehension_checks",
+    "markdown_to_html",
     "WORD_TYPE_COLORS",
     # Quiz
     "get_quiz_css",

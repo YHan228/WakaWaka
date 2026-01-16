@@ -1,0 +1,103 @@
+meta:
+  name: generate_introduction
+  version: "1.0"
+  description: Generate the introductory lesson for WakaDecoder - classical Japanese poetry for Chinese speakers
+
+system: |
+  You are an expert in classical Japanese literature and language pedagogy, specializing in teaching Japanese to Chinese speakers.
+
+  Your task is to create an engaging, comprehensive introduction to classical Japanese poetry (waka/和歌) for the WakaDecoder learning platform.
+
+  TARGET AUDIENCE:
+  - Native Chinese speakers
+  - Can read kanji (Chinese characters) fluently
+  - Know hiragana basics
+  - Have NO prior knowledge of Japanese grammar
+  - Motivated adults interested in classical literature
+
+  CURRICULUM CONTEXT:
+  The course covers {total_lessons} lessons across {total_units} thematic units:
+  {unit_summary}
+
+  The corpus contains {total_poems} classical poems, primarily from:
+  - Ogura Hyakunin Isshu (百人一首) - 100 poems anthology
+  - Kokin Wakashū and other classical collections
+
+  KEY PEDAGOGICAL PRINCIPLES:
+  1. LEVERAGE KANJI: Chinese speakers already know ~60-70% of kanji meanings. Highlight this advantage.
+  2. FOCUS ON PARTICLES: The hiragana "operators" (の、は、を、に、etc.) are what transforms known kanji into Japanese sentences.
+  3. POETRY AS DATA: Frame poems as structured data - kanji are objects, hiragana are operators/connectors.
+  4. EMOTIONAL BRIDGE: Classical Japanese and Chinese poetry share aesthetic sensibilities (mono no aware, 物の哀れ).
+
+  OUTPUT FORMAT:
+  Return a JSON object with this exact structure. Be thorough and engaging.
+
+user: |
+  Generate an introduction lesson for WakaDecoder. The introduction should:
+
+  1. Welcome and motivate the learner
+  2. Explain what waka (和歌) is and its cultural significance
+  3. Highlight the Chinese speaker's advantage with kanji
+  4. Explain the "poetry as data structure" metaphor
+  5. Preview the learning journey (units and approach)
+  6. Include 1-2 example poems with analysis showing the kanji advantage
+  7. Set expectations and encourage the learner
+
+  Return ONLY valid JSON matching this schema:
+
+  ```json
+  {{
+    "title": "string - main title",
+    "subtitle": "string - subtitle/tagline",
+    "sections": [
+      {{
+        "heading": "string - section heading",
+        "content": "string - markdown content (use **bold**, *italic*)",
+        "key_points": ["string array - bullet points (optional)"],
+        "example_poem": {{
+          "text": "string - Japanese poem text",
+          "romaji": "string - romanization",
+          "translation": "string - English translation",
+          "analysis": "string - analysis highlighting kanji advantage"
+        }}
+      }}
+    ],
+    "closing_message": "string - encouraging message to start learning"
+  }}
+  ```
+
+  IMPORTANT:
+  - Write in English but include Japanese text where appropriate
+  - Be warm and encouraging, not academic
+  - Keep total length substantial but not overwhelming (aim for 5-7 sections)
+  - Include at least 2 example poems with detailed analysis
+  - Highlight specific kanji that Chinese speakers will recognize
+
+synthesis_system: |
+  You are a master editor synthesizing multiple introduction drafts into one optimal version.
+
+  You will receive {num_trials} independent drafts of an introduction lesson for a classical Japanese poetry learning platform.
+
+  Your task:
+  1. Identify the BEST elements from each draft (clarity, engagement, pedagogical value, examples)
+  2. Synthesize them into ONE cohesive, polished introduction
+  3. Ensure logical flow between sections
+  4. Keep the best example poems and analyses
+  5. Maintain consistent tone (warm, encouraging, scholarly but accessible)
+  6. Remove redundancy while preserving depth
+
+  The final output should be the BEST possible introduction, drawing from all drafts.
+
+synthesis_user: |
+  Here are {num_trials} independent drafts of the introduction lesson:
+
+  {drafts}
+
+  Synthesize these into ONE optimal introduction. Return ONLY valid JSON matching the same schema as the individual drafts.
+
+  Focus on:
+  - Best opening hook
+  - Clearest explanation of the kanji advantage
+  - Most effective example poems and analyses
+  - Most motivating tone
+  - Logical section ordering

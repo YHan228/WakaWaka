@@ -25,8 +25,10 @@ from wakadecoder.viewer import (
     render_grammar_index,
     filter_grammar_points,
     get_reference_css,
+    markdown_to_html,
 )
 from wakadecoder.schemas import LessonStatus
+import json
 
 
 # -----------------------------------------------------------------------------
@@ -34,6 +36,7 @@ from wakadecoder.schemas import LessonStatus
 # -----------------------------------------------------------------------------
 
 DEFAULT_DB_PATH = Path("data/classroom.db")
+INTRODUCTION_PATH = Path("data/introduction.json")
 
 st.set_page_config(
     page_title="WakaDecoder",
@@ -316,19 +319,23 @@ def init_session_state():
         )
 
     if "current_lesson_id" not in st.session_state:
-        if st.session_state.loader:
-            st.session_state.current_lesson_id = st.session_state.navigator.get_recommended_lesson_id()
-        else:
-            st.session_state.current_lesson_id = None
+        st.session_state.current_lesson_id = None  # Start with cover page
 
     if "view_mode" not in st.session_state:
-        st.session_state.view_mode = "lesson"
+        st.session_state.view_mode = "cover"  # Start with cover page
 
     if "quiz_revealed" not in st.session_state:
         st.session_state.quiz_revealed = set()
 
     if "quiz_answers" not in st.session_state:
         st.session_state.quiz_answers = {}
+
+    if "introduction" not in st.session_state:
+        if INTRODUCTION_PATH.exists():
+            with open(INTRODUCTION_PATH) as f:
+                st.session_state.introduction = json.load(f)
+        else:
+            st.session_state.introduction = None
 
 
 # -----------------------------------------------------------------------------
@@ -354,16 +361,38 @@ def render_sidebar():
 
         st.divider()
 
+        # Navigation buttons for cover and intro
+        col1, col2 = st.columns(2)
+        with col1:
+            if st.button("🏠 Home", use_container_width=True,
+                        type="primary" if st.session_state.view_mode == "cover" else "secondary"):
+                st.session_state.view_mode = "cover"
+                st.rerun()
+        with col2:
+            if st.button("📖 Intro", use_container_width=True,
+                        type="primary" if st.session_state.view_mode == "introduction" else "secondary"):
+                st.session_state.view_mode = "introduction"
+                st.rerun()
+
+        st.divider()
+
         # View mode selector
         mode_map = {"lesson": 0, "reference": 1, "poems": 2}
+        current_mode = st.session_state.view_mode if st.session_state.view_mode in mode_map else "lesson"
         view_mode = st.radio(
-            "View Mode",
+            "Browse",
             ["📖 Lessons", "📚 Reference", "🎋 Poems"],
-            index=mode_map.get(st.session_state.view_mode, 0),
+            index=mode_map.get(current_mode, 0),
             horizontal=False,
         )
         reverse_map = {"📖 Lessons": "lesson", "📚 Reference": "reference", "🎋 Poems": "poems"}
-        st.session_state.view_mode = reverse_map.get(view_mode, "lesson")
+        new_mode = reverse_map.get(view_mode, "lesson")
+
+        # Only update if clicking the radio (not cover/intro buttons)
+        if st.session_state.view_mode not in ["cover", "introduction"]:
+            st.session_state.view_mode = new_mode
+        elif view_mode:  # User clicked a radio option
+            st.session_state.view_mode = new_mode
 
         if st.session_state.view_mode == "lesson":
             st.divider()
@@ -692,6 +721,250 @@ def render_poems_view():
 
 
 # -----------------------------------------------------------------------------
+# Cover Page
+# -----------------------------------------------------------------------------
+
+def render_cover_page():
+    """Render the welcome cover page."""
+    # Get stats if available
+    if st.session_state.loader:
+        loader = st.session_state.loader
+        nav = st.session_state.navigator
+        stats = nav.get_progress_summary()
+        total_lessons = stats['total_lessons']
+        total_poems = loader.get_poem_count()
+        total_grammar = loader.get_grammar_point_count()
+    else:
+        total_lessons = 50
+        total_poems = 1000
+        total_grammar = 264
+
+    st.markdown("""
+    <style>
+    .cover-container {
+        text-align: center;
+        padding: 2em 0;
+    }
+    .cover-title {
+        font-family: 'Noto Serif JP', serif;
+        font-size: 3.5em;
+        font-weight: 700;
+        color: #2D2D2D;
+        margin-bottom: 0.2em;
+        letter-spacing: 0.05em;
+    }
+    .cover-subtitle {
+        font-family: 'Noto Serif JP', serif;
+        font-size: 1.4em;
+        color: #4A5568;
+        margin-bottom: 2em;
+    }
+    .cover-tagline {
+        font-size: 1.1em;
+        color: #666;
+        max-width: 600px;
+        margin: 0 auto 2em auto;
+        line-height: 1.8;
+    }
+    .cover-stats {
+        display: flex;
+        justify-content: center;
+        gap: 3em;
+        margin: 2em 0;
+        flex-wrap: wrap;
+    }
+    .cover-stat {
+        text-align: center;
+    }
+    .cover-stat-value {
+        font-size: 2.5em;
+        font-weight: 700;
+        color: #C53D43;
+    }
+    .cover-stat-label {
+        font-size: 0.9em;
+        color: #666;
+        text-transform: uppercase;
+        letter-spacing: 0.1em;
+    }
+    .cover-poem {
+        font-family: 'Noto Serif JP', serif;
+        font-size: 1.3em;
+        color: #2D2D2D;
+        background: linear-gradient(145deg, #FAF8F5 0%, #F5F2ED 100%);
+        border-left: 3px solid #C53D43;
+        padding: 1.5em 2em;
+        margin: 2em auto;
+        max-width: 500px;
+        border-radius: 0 8px 8px 0;
+    }
+    .cover-poem-trans {
+        font-size: 0.85em;
+        color: #666;
+        font-style: italic;
+        margin-top: 1em;
+    }
+    .cover-features {
+        display: flex;
+        justify-content: center;
+        gap: 2em;
+        margin: 3em 0;
+        flex-wrap: wrap;
+    }
+    .cover-feature {
+        text-align: center;
+        max-width: 200px;
+    }
+    .cover-feature-icon {
+        font-size: 2em;
+        margin-bottom: 0.5em;
+    }
+    .cover-feature-title {
+        font-weight: 600;
+        color: #2D2D2D;
+        margin-bottom: 0.3em;
+    }
+    .cover-feature-desc {
+        font-size: 0.9em;
+        color: #666;
+    }
+    </style>
+    """, unsafe_allow_html=True)
+
+    st.markdown(f"""
+    <div class="cover-container">
+        <div class="cover-title">和歌デコーダー</div>
+        <div class="cover-subtitle">WakaDecoder</div>
+        <div class="cover-tagline">
+            A learning platform for Chinese speakers to master classical Japanese poetry.
+            Leverage your kanji knowledge to unlock the beauty of waka (和歌).
+        </div>
+
+        <div class="cover-stats">
+            <div class="cover-stat">
+                <div class="cover-stat-value">{total_lessons}</div>
+                <div class="cover-stat-label">Lessons</div>
+            </div>
+            <div class="cover-stat">
+                <div class="cover-stat-value">{total_poems}</div>
+                <div class="cover-stat-label">Poems</div>
+            </div>
+            <div class="cover-stat">
+                <div class="cover-stat-value">{total_grammar}</div>
+                <div class="cover-stat-label">Grammar Points</div>
+            </div>
+        </div>
+
+        <div class="cover-poem">
+            秋の田の かりほの庵の 苫をあらみ<br>
+            わが衣手は 露にぬれつつ
+            <div class="cover-poem-trans">
+                In the autumn field's temporary hut, the thatched roof is rough—<br>
+                my sleeves are wet with dew.
+            </div>
+        </div>
+
+        <div class="cover-features">
+            <div class="cover-feature">
+                <div class="cover-feature-icon">🔤</div>
+                <div class="cover-feature-title">Kanji Advantage</div>
+                <div class="cover-feature-desc">Use your Chinese knowledge as a foundation</div>
+            </div>
+            <div class="cover-feature">
+                <div class="cover-feature-icon">🎯</div>
+                <div class="cover-feature-title">Grammar Focus</div>
+                <div class="cover-feature-desc">Master classical particles and auxiliaries</div>
+            </div>
+            <div class="cover-feature">
+                <div class="cover-feature-icon">📜</div>
+                <div class="cover-feature-title">Real Poetry</div>
+                <div class="cover-feature-desc">Learn from authentic waka masterpieces</div>
+            </div>
+        </div>
+    </div>
+    """, unsafe_allow_html=True)
+
+    # Start button
+    col1, col2, col3 = st.columns([1, 2, 1])
+    with col2:
+        if st.button("📖 Start with Introduction", type="primary", use_container_width=True):
+            st.session_state.view_mode = "introduction"
+            st.rerun()
+
+        if st.button("⏭️ Jump to First Lesson", use_container_width=True):
+            st.session_state.view_mode = "lesson"
+            if st.session_state.navigator:
+                st.session_state.current_lesson_id = st.session_state.navigator.get_first_lesson_id()
+            st.rerun()
+
+
+# -----------------------------------------------------------------------------
+# Introduction View
+# -----------------------------------------------------------------------------
+
+def render_introduction_view():
+    """Render the general introduction lesson."""
+    intro = st.session_state.introduction
+
+    if not intro:
+        st.warning("Introduction lesson not yet generated.")
+        st.markdown("""
+        Run the introduction generation script:
+        ```bash
+        python scripts/06_generate_introduction.py
+        ```
+        """)
+        return
+
+    st.markdown(get_vocab_css(), unsafe_allow_html=True)
+
+    # Title
+    st.markdown(f"# {intro.get('title', 'Introduction to Classical Japanese Poetry')}")
+    st.markdown(f"*{intro.get('subtitle', '')}*")
+
+    # Sections
+    for section in intro.get('sections', []):
+        st.markdown(f"## {section.get('heading', '')}")
+
+        content = section.get('content', '')
+        # Convert markdown to HTML using the shared function
+        content_html = markdown_to_html(content)
+        st.markdown(content_html, unsafe_allow_html=True)
+
+        # Example poem if present
+        if section.get('example_poem'):
+            poem = section['example_poem']
+            st.markdown(f"""
+            <div class="poem-container">
+                <div class="poem-text" style="font-size:1.4em;">{poem.get('text', '')}</div>
+                <div class="poem-romaji">{poem.get('romaji', '')}</div>
+                <div class="poem-translation">{poem.get('translation', '')}</div>
+            </div>
+            """, unsafe_allow_html=True)
+
+            # Analysis with markdown conversion
+            if poem.get('analysis'):
+                analysis_html = markdown_to_html(poem['analysis'])
+                st.markdown(f"<p class='poem-analysis'>{analysis_html}</p>", unsafe_allow_html=True)
+
+        # Key points if present
+        if section.get('key_points'):
+            st.markdown("**Key Points:**")
+            for point in section['key_points']:
+                st.markdown(f"- {point}")
+
+    # Navigation to first lesson
+    st.divider()
+    col1, col2 = st.columns([3, 1])
+    with col2:
+        if st.button("Start Learning →", type="primary", use_container_width=True):
+            st.session_state.view_mode = "lesson"
+            if st.session_state.navigator:
+                st.session_state.current_lesson_id = st.session_state.navigator.get_first_lesson_id()
+            st.rerun()
+
+
+# -----------------------------------------------------------------------------
 # Main
 # -----------------------------------------------------------------------------
 
@@ -701,7 +974,11 @@ def main():
     inject_global_css()
     render_sidebar()
 
-    if st.session_state.view_mode == "lesson":
+    if st.session_state.view_mode == "cover":
+        render_cover_page()
+    elif st.session_state.view_mode == "introduction":
+        render_introduction_view()
+    elif st.session_state.view_mode == "lesson":
         render_lesson_view()
     elif st.session_state.view_mode == "reference":
         render_reference_view()
