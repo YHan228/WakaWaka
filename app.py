@@ -731,7 +731,7 @@ def render_poems_view():
 # -----------------------------------------------------------------------------
 
 def render_cover_page():
-    """Render the welcome cover page."""
+    """Render the welcome cover page using native Streamlit components."""
     # Get stats if available
     if st.session_state.loader:
         loader = st.session_state.loader
@@ -745,79 +745,57 @@ def render_cover_page():
         total_poems = 1000
         total_grammar = 264
 
-    # Combined CSS and HTML in single markdown call for reliable rendering
-    cover_html = f"""
-    <style>
-    .cover-container {{ text-align: center; padding: 2em 0; }}
-    .cover-title {{ font-family: 'Noto Serif JP', serif; font-size: 3.5em; font-weight: 700; color: #2D2D2D; margin-bottom: 0.2em; letter-spacing: 0.05em; }}
-    .cover-subtitle {{ font-family: 'Noto Serif JP', serif; font-size: 1.4em; color: #4A5568; margin-bottom: 2em; }}
-    .cover-tagline {{ font-size: 1.1em; color: #666; max-width: 600px; margin: 0 auto 2em auto; line-height: 1.8; }}
-    .cover-stats {{ display: flex; justify-content: center; gap: 3em; margin: 2em 0; flex-wrap: wrap; }}
-    .cover-stat {{ text-align: center; }}
-    .cover-stat-value {{ font-size: 2.5em; font-weight: 700; color: #C53D43; }}
-    .cover-stat-label {{ font-size: 0.9em; color: #666; text-transform: uppercase; letter-spacing: 0.1em; }}
-    .cover-poem {{ font-family: 'Noto Serif JP', serif; font-size: 1.3em; color: #2D2D2D; background: linear-gradient(145deg, #FAF8F5 0%, #F5F2ED 100%); border-left: 3px solid #C53D43; padding: 1.5em 2em; margin: 2em auto; max-width: 500px; border-radius: 0 8px 8px 0; }}
-    .cover-poem-trans {{ font-size: 0.85em; color: #666; font-style: italic; margin-top: 1em; }}
-    .cover-features {{ display: flex; justify-content: center; gap: 2em; margin: 3em 0; flex-wrap: wrap; }}
-    .cover-feature {{ text-align: center; max-width: 200px; }}
-    .cover-feature-icon {{ font-size: 2em; margin-bottom: 0.5em; }}
-    .cover-feature-title {{ font-weight: 600; color: #2D2D2D; margin-bottom: 0.3em; }}
-    .cover-feature-desc {{ font-size: 0.9em; color: #666; }}
-    </style>
-    <div class="cover-container">
-        <div class="cover-title">和歌デコーダー</div>
-        <div class="cover-subtitle">WakaWaka</div>
-        <div class="cover-tagline">
-            A learning platform for Chinese speakers to master classical Japanese poetry.
-            Leverage your kanji knowledge to unlock the beauty of waka (和歌).
-        </div>
+    # Title section
+    st.markdown("# 和歌デコーダー")
+    st.markdown("### WakaWaka")
+    st.markdown("""
+    *A learning platform for Chinese speakers to master classical Japanese poetry.
+    Leverage your kanji knowledge to unlock the beauty of waka (和歌).*
+    """)
 
-        <div class="cover-stats">
-            <div class="cover-stat">
-                <div class="cover-stat-value">{total_lessons}</div>
-                <div class="cover-stat-label">Lessons</div>
-            </div>
-            <div class="cover-stat">
-                <div class="cover-stat-value">{total_poems}</div>
-                <div class="cover-stat-label">Poems</div>
-            </div>
-            <div class="cover-stat">
-                <div class="cover-stat-value">{total_grammar}</div>
-                <div class="cover-stat-label">Grammar Points</div>
-            </div>
-        </div>
+    st.divider()
 
-        <div class="cover-poem">
-            秋の田の かりほの庵の 苫をあらみ<br>
-            わが衣手は 露にぬれつつ
-            <div class="cover-poem-trans">
-                In the autumn field's temporary hut, the thatched roof is rough—<br>
-                my sleeves are wet with dew.
-            </div>
-        </div>
+    # Stats using columns
+    col1, col2, col3 = st.columns(3)
+    with col1:
+        st.metric(label="Lessons", value=total_lessons)
+    with col2:
+        st.metric(label="Poems", value=total_poems)
+    with col3:
+        st.metric(label="Grammar Points", value=total_grammar)
 
-        <div class="cover-features">
-            <div class="cover-feature">
-                <div class="cover-feature-icon">🔤</div>
-                <div class="cover-feature-title">Kanji Advantage</div>
-                <div class="cover-feature-desc">Use your Chinese knowledge as a foundation</div>
-            </div>
-            <div class="cover-feature">
-                <div class="cover-feature-icon">🎯</div>
-                <div class="cover-feature-title">Grammar Focus</div>
-                <div class="cover-feature-desc">Master classical particles and auxiliaries</div>
-            </div>
-            <div class="cover-feature">
-                <div class="cover-feature-icon">📜</div>
-                <div class="cover-feature-title">Real Poetry</div>
-                <div class="cover-feature-desc">Learn from authentic waka masterpieces</div>
-            </div>
-        </div>
-    </div>
-    """
-    st.markdown(cover_html, unsafe_allow_html=True)
+    st.divider()
 
-    # Start button
+    # Featured poem
+    st.markdown("#### Featured Poem")
+    st.markdown("""
+    > 秋の田の かりほの庵の 苫をあらみ
+    > わが衣手は 露にぬれつつ
+
+    *In the autumn field's temporary hut, the thatched roof is rough—
+    my sleeves are wet with dew.*
+
+    — Emperor Tenji (天智天皇)
+    """)
+
+    st.divider()
+
+    # Features using columns
+    st.markdown("#### Why WakaWaka?")
+    col1, col2, col3 = st.columns(3)
+    with col1:
+        st.markdown("**🔤 Kanji Advantage**")
+        st.caption("Use your Chinese knowledge as a foundation")
+    with col2:
+        st.markdown("**🎯 Grammar Focus**")
+        st.caption("Master classical particles and auxiliaries")
+    with col3:
+        st.markdown("**📜 Real Poetry**")
+        st.caption("Learn from authentic waka masterpieces")
+
+    st.divider()
+
+    # Start buttons
     col1, col2, col3 = st.columns([1, 2, 1])
     with col2:
         if st.button("📖 Start with Introduction", type="primary", use_container_width=True):
@@ -836,7 +814,7 @@ def render_cover_page():
 # -----------------------------------------------------------------------------
 
 def render_introduction_view():
-    """Render the general introduction lesson."""
+    """Render the general introduction lesson using native Streamlit components."""
     intro = st.session_state.introduction
 
     if not intro:
@@ -849,8 +827,6 @@ def render_introduction_view():
         """)
         return
 
-    st.markdown(get_vocab_css(), unsafe_allow_html=True)
-
     # Title
     st.markdown(f"# {intro.get('title', 'Introduction to Classical Japanese Poetry')}")
     st.markdown(f"*{intro.get('subtitle', '')}*")
@@ -860,25 +836,23 @@ def render_introduction_view():
         st.markdown(f"## {section.get('heading', '')}")
 
         content = section.get('content', '')
-        # Convert markdown to HTML using the shared function
-        content_html = markdown_to_html(content)
-        st.markdown(content_html, unsafe_allow_html=True)
+        # Render content as markdown (Streamlit handles basic markdown natively)
+        st.markdown(content)
 
         # Example poem if present
         if section.get('example_poem'):
             poem = section['example_poem']
             st.markdown(f"""
-            <div class="poem-container">
-                <div class="poem-text" style="font-size:1.4em;">{poem.get('text', '')}</div>
-                <div class="poem-romaji">{poem.get('romaji', '')}</div>
-                <div class="poem-translation">{poem.get('translation', '')}</div>
-            </div>
-            """, unsafe_allow_html=True)
+> **{poem.get('text', '')}**
 
-            # Analysis with markdown conversion
+> *{poem.get('romaji', '')}*
+
+> {poem.get('translation', '')}
+            """)
+
+            # Analysis
             if poem.get('analysis'):
-                analysis_html = markdown_to_html(poem['analysis'])
-                st.markdown(f"<p class='poem-analysis'>{analysis_html}</p>", unsafe_allow_html=True)
+                st.info(poem['analysis'])
 
         # Key points if present
         if section.get('key_points'):
