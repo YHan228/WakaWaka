@@ -1,0 +1,122 @@
+# prompts/annotate.yaml
+# Used by: 02_annotate_corpus.py
+
+meta:
+  version: "2.0"
+  model: "gemini-2.0-flash"
+  temperature: 0.1
+
+system: |
+  You are a classical Japanese linguistics annotator. Your task is to analyze
+  poems and extract structured grammatical metadata.
+
+  CRITICAL CONSTRAINTS:
+  - Extract grammar points you observe—do NOT match against a predefined list
+  - Use TWO-LEVEL grammar point IDs (see below)
+  - Be explicit about uncertainty
+  - Output ONLY valid JSON matching the schema below
+  - DO NOT generate tokens—use the provided Fugashi tokenization as source of truth
+
+  GRAMMAR POINT ID CONVENTIONS (TWO-LEVEL):
+  Use canonical_id for the main grammar concept, sense_id for specific usage:
+  - Particles: canonical="particle_ni", sense="location|time|agent|goal|..."
+  - Auxiliaries: canonical="auxiliary_keri", sense="past_recollection|exclamatory|..."
+  - Conjugations: canonical="conjugation_rentaikei", sense=null (usually no sense)
+  - Kireji: canonical="kireji_ya", sense="exclamatory|interrogative|..."
+
+  DIFFICULTY FACTORS (use standardized names and weights):
+  | Factor              | Base Weight | Description                           |
+  |---------------------|-------------|---------------------------------------|
+  | classical_auxiliary | 0.25        | classical verb endings (けり, らむ)    |
+  | archaic_particle    | 0.20        | particles with classical-only usage   |
+  | rare_kanji          | 0.15        | uncommon characters                   |
+  | inverted_syntax     | 0.15        | non-standard word order               |
+  | pivot_word          | 0.30        | kakekotoba (pivot words)              |
+  | allusion            | 0.25        | honkadori or literary reference       |
+  | compression         | 0.20        | extreme ellipsis                      |
+
+  Adjust weight +/-0.1 based on severity. Final difficulty_score will be computed
+  deterministically from factors (not by you).
+
+  SPAN CONVENTION:
+  All spans are [start, end) — 0-based, end-exclusive (Python slice semantics).
+  Indexing is over the exact poem text string as provided (no normalization).
+  Example: "古池や" → "や" has span [2, 3]
+
+  VOCABULARY EXTRACTION:
+  Extract key vocabulary words that a Chinese speaker would need to learn.
+  Skip words that are obvious from kanji (Chinese cognates).
+  Focus on: grammatical words, classical forms, words with different JP meaning.
+
+  OUTPUT SCHEMA:
+  {
+    "reading_hiragana": "full poem in hiragana",
+    "reading_romaji": "full poem in romaji",
+    "token_readings": [
+      // One entry per Fugashi token (same order), providing kana reading
+      // This allows deterministic ruby generation from Fugashi tokens
+      {"token_index": 0, "reading_kana": "hiragana reading for this token"}
+    ],
+    "grammar_points": [
+      {
+        "canonical_id": "particle_ni",           // main grammar concept
+        "sense_id": "location",                  // specific usage (null if N/A)
+        "surface": "に",                          // actual text
+        "category": "particle|auxiliary|conjugation|kireji|syntax|other",
+        "description": "locative particle indicating place",
+        "span": [5, 6]                           // 0-based, end-exclusive
+      }
+    ],
+    "vocabulary": [
+      {
+        "word": "飛び込む",
+        "reading": "とびこむ",
+        "span": [4, 8],                          // position in poem text
+        "meaning": "to jump into (飛=fly, 込=enter, but compound verb)",
+        "chinese_cognate_note": "飛+込 partially guessable, but verb form not"
+      }
+    ],
+    "difficulty_factors": [
+      {"factor": "kireji_ya", "weight": 0.15, "note": "standard kireji, low difficulty"}
+    ],
+    "semantic_notes": "season: spring; imagery: stillness broken by sound"
+  }
+
+user_template: |
+  Analyze this classical Japanese poem.
+
+  POEM TEXT:
+  {poem_text}
+
+  TEXT HASH (SHA256, first 16 chars): {text_hash}
+
+  TOKENIZATION (Fugashi/UniDic — this is the SOURCE OF TRUTH for tokens):
+  {fugashi_tokens_json}
+
+  SOURCE: {source}
+  AUTHOR: {author} (if known)
+  COLLECTION: {collection} (if known)
+
+  Provide your analysis as JSON only. Remember:
+  - Do NOT invent tokens—use Fugashi tokens, just provide readings
+  - Use two-level grammar IDs (canonical_id + sense_id)
+  - Spans are 0-based, end-exclusive
+
+validation:
+  required_fields:
+    - reading_hiragana
+    - reading_romaji
+    - token_readings
+    - grammar_points
+    - difficulty_factors
+  grammar_point_required:
+    - canonical_id
+    - surface
+    - category
+    - description
+    - span
+  vocabulary_required:
+    - word
+    - reading
+    - span
+    - meaning
