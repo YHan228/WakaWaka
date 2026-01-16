@@ -3,6 +3,9 @@
 
 # Generated data (rebuild from pipeline)
 data/
+# But include runtime files needed for deployment
+!data/classroom.db
+!data/introduction.json
 
 # Python
 __pycache__/
