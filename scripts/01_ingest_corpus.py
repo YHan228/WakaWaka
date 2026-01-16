@@ -6,23 +6,37 @@ This script fetches poems from configured sources and outputs them to
 data/raw/poems.jsonl for further processing in the build pipeline.
 
 Sources:
-  - test: Small set of hardcoded classical poems for development
-  - ogura100: Ogura Hyakunin Isshu (100 poems) from Japanese text file
+  - test: Small set of hardcoded classical poems for development (15 poems)
+  - ogura100: Ogura Hyakunin Isshu (100 poems, embedded)
+  - oncoj: ONCOJ corpus from GitHub (~4900 Old Japanese poems)
+  - lapis: Nichibunken Lapis waka database (scraper, 500-2000 poems)
+  - all: Combine ogura100 + oncoj + lapis for full curriculum (~2500+ poems)
   - file: Load from a local JSON/JSONL file
+
+Target: 1500+ poems for adequate grammar coverage (≥3 poems per lesson × ~50 lessons)
 
 Usage:
   python scripts/01_ingest_corpus.py --source test --max-poems 10
-  python scripts/01_ingest_corpus.py --source ogura100
-  python scripts/01_ingest_corpus.py --source file --input path/to/poems.jsonl
+  python scripts/01_ingest_corpus.py --source oncoj
+  python scripts/01_ingest_corpus.py --source lapis --max-poems 500
+  python scripts/01_ingest_corpus.py --source all
 """
 
 import argparse
 import hashlib
+import io
 import json
+import logging
+import os
+import re
 import sys
+import time
+import zipfile
 from datetime import datetime
 from pathlib import Path
 from typing import Iterator
+from urllib.request import Request, urlopen
+from urllib.error import URLError, HTTPError
 
 # Project root for imports
 PROJECT_ROOT = Path(__file__).parent.parent
@@ -31,6 +45,22 @@ sys.path.insert(0, str(PROJECT_ROOT))
 from dotenv import load_dotenv
 
 load_dotenv(PROJECT_ROOT / ".env")
+
+from wakadecoder.utils.treebank_parser import parse_oncoj_file, parse_simple_bracketed
+
+# Setup logging
+logging.basicConfig(
+    level=logging.INFO,
+    format="%(asctime)s - %(levelname)s - %(message)s"
+)
+logger = logging.getLogger(__name__)
+
+# Cache directory for downloaded files
+CACHE_DIR = PROJECT_ROOT / "data" / "cache"
+
+# Rate limiting settings (per RESOURCES.md)
+DEFAULT_SLEEP = 1.0  # seconds between requests
+USER_AGENT = "WakaDecoder/1.0 (Classical Japanese Poetry Learning; contact@example.com)"
 
 # -----------------------------------------------------------------------------
 # Data structures
@@ -67,88 +97,22 @@ def make_poem_record(
 # Source: test (hardcoded development poems)
 # -----------------------------------------------------------------------------
 
-# Famous classical Japanese poems for development/testing
 TEST_POEMS = [
-    # Matsuo Basho - haiku
-    {
-        "text": "古池や蛙飛び込む水の音",
-        "author": "松尾芭蕉",
-        "collection": "haiku",
-    },
-    {
-        "text": "閑さや岩にしみ入る蝉の声",
-        "author": "松尾芭蕉",
-        "collection": "haiku",
-    },
-    {
-        "text": "夏草や兵どもが夢の跡",
-        "author": "松尾芭蕉",
-        "collection": "haiku",
-    },
-    # Yosa Buson - haiku
-    {
-        "text": "菜の花や月は東に日は西に",
-        "author": "与謝蕪村",
-        "collection": "haiku",
-    },
-    {
-        "text": "春の海ひねもすのたりのたりかな",
-        "author": "与謝蕪村",
-        "collection": "haiku",
-    },
-    # Kobayashi Issa - haiku
-    {
-        "text": "やせ蛙負けるな一茶これにあり",
-        "author": "小林一茶",
-        "collection": "haiku",
-    },
-    # Hyakunin Isshu samples
-    {
-        "text": "秋の田のかりほの庵の苫をあらみわが衣手は露にぬれつつ",
-        "author": "天智天皇",
-        "collection": "百人一首",
-    },
-    {
-        "text": "春過ぎて夏来にけらし白妙の衣ほすてふ天の香具山",
-        "author": "持統天皇",
-        "collection": "百人一首",
-    },
-    {
-        "text": "あしびきの山鳥の尾のしだり尾のながながし夜をひとりかも寝む",
-        "author": "柿本人麻呂",
-        "collection": "百人一首",
-    },
-    {
-        "text": "田子の浦にうち出でてみれば白妙の富士の高嶺に雪は降りつつ",
-        "author": "山部赤人",
-        "collection": "百人一首",
-    },
-    {
-        "text": "奥山に紅葉踏みわけ鳴く鹿の声きく時ぞ秋は悲しき",
-        "author": "猿丸大夫",
-        "collection": "百人一首",
-    },
-    {
-        "text": "かささぎの渡せる橋におく霜の白きを見れば夜ぞ更けにける",
-        "author": "中納言家持",
-        "collection": "百人一首",
-    },
-    # Kokinshū samples
-    {
-        "text": "花の色は移りにけりないたづらにわが身世にふるながめせしまに",
-        "author": "小野小町",
-        "collection": "古今和歌集",
-    },
-    {
-        "text": "ひさかたの光のどけき春の日にしづ心なく花の散るらむ",
-        "author": "紀友則",
-        "collection": "古今和歌集",
-    },
-    {
-        "text": "人はいさ心も知らずふるさとは花ぞ昔の香ににほひける",
-        "author": "紀貫之",
-        "collection": "古今和歌集",
-    },
+    {"text": "古池や蛙飛び込む水の音", "author": "松尾芭蕉", "collection": "haiku"},
+    {"text": "閑さや岩にしみ入る蝉の声", "author": "松尾芭蕉", "collection": "haiku"},
+    {"text": "夏草や兵どもが夢の跡", "author": "松尾芭蕉", "collection": "haiku"},
+    {"text": "菜の花や月は東に日は西に", "author": "与謝蕪村", "collection": "haiku"},
+    {"text": "春の海ひねもすのたりのたりかな", "author": "与謝蕪村", "collection": "haiku"},
+    {"text": "やせ蛙負けるな一茶これにあり", "author": "小林一茶", "collection": "haiku"},
+    {"text": "秋の田のかりほの庵の苫をあらみわが衣手は露にぬれつつ", "author": "天智天皇", "collection": "百人一首"},
+    {"text": "春過ぎて夏来にけらし白妙の衣ほすてふ天の香具山", "author": "持統天皇", "collection": "百人一首"},
+    {"text": "あしびきの山鳥の尾のしだり尾のながながし夜をひとりかも寝む", "author": "柿本人麻呂", "collection": "百人一首"},
+    {"text": "田子の浦にうち出でてみれば白妙の富士の高嶺に雪は降りつつ", "author": "山部赤人", "collection": "百人一首"},
+    {"text": "奥山に紅葉踏みわけ鳴く鹿の声きく時ぞ秋は悲しき", "author": "猿丸大夫", "collection": "百人一首"},
+    {"text": "かささぎの渡せる橋におく霜の白きを見れば夜ぞ更けにける", "author": "中納言家持", "collection": "百人一首"},
+    {"text": "花の色は移りにけりないたづらにわが身世にふるながめせしまに", "author": "小野小町", "collection": "古今和歌集"},
+    {"text": "ひさかたの光のどけき春の日にしづ心なく花の散るらむ", "author": "紀友則", "collection": "古今和歌集"},
+    {"text": "人はいさ心も知らずふるさとは花ぞ昔の香ににほひける", "author": "紀貫之", "collection": "古今和歌集"},
 ]
 
 
@@ -165,11 +129,9 @@ def load_test_poems(max_poems: int | None = None) -> Iterator[dict]:
 
 
 # -----------------------------------------------------------------------------
-# Source: ogura100 (Ogura Hyakunin Isshu)
+# Source: ogura100 (Ogura Hyakunin Isshu - 100 poems)
 # -----------------------------------------------------------------------------
 
-# Full Ogura Hyakunin Isshu (100 poems)
-# Source: Public domain classical anthology
 OGURA_100 = [
     ("秋の田のかりほの庵の苫をあらみわが衣手は露にぬれつつ", "天智天皇"),
     ("春過ぎて夏来にけらし白妙の衣ほすてふ天の香具山", "持統天皇"),
@@ -288,13 +250,271 @@ def load_ogura100_poems(max_poems: int | None = None) -> Iterator[dict]:
 
 
 # -----------------------------------------------------------------------------
+# Source: oncoj (ONCOJ corpus from GitHub)
+# -----------------------------------------------------------------------------
+
+ONCOJ_GITHUB_URL = "https://api.github.com/repos/ONCOJ/data/zipball/release"
+ONCOJ_CACHE_FILE = "oncoj_release.zip"
+
+
+def download_with_cache(url: str, cache_name: str, force: bool = False) -> bytes:
+    """Download a file with caching."""
+    CACHE_DIR.mkdir(parents=True, exist_ok=True)
+    cache_path = CACHE_DIR / cache_name
+
+    if cache_path.exists() and not force:
+        logger.info(f"Using cached file: {cache_path}")
+        return cache_path.read_bytes()
+
+    logger.info(f"Downloading: {url}")
+    req = Request(url, headers={"User-Agent": USER_AGENT})
+
+    try:
+        with urlopen(req, timeout=60) as response:
+            data = response.read()
+            cache_path.write_bytes(data)
+            logger.info(f"Cached to: {cache_path}")
+            return data
+    except (URLError, HTTPError) as e:
+        logger.error(f"Download failed: {e}")
+        raise
+
+
+def load_oncoj_poems(max_poems: int | None = None, force_download: bool = False) -> Iterator[dict]:
+    """
+    Load poems from ONCOJ corpus.
+
+    Downloads from GitHub if not cached, parses Penn Treebank format.
+    """
+    try:
+        zip_data = download_with_cache(ONCOJ_GITHUB_URL, ONCOJ_CACHE_FILE, force_download)
+    except Exception as e:
+        logger.error(f"Failed to download ONCOJ: {e}")
+        logger.info("Try running with --force-download or check your network connection")
+        return
+
+    count = 0
+    seen_texts = set()  # Deduplicate
+
+    with zipfile.ZipFile(io.BytesIO(zip_data)) as zf:
+        # Find all .psd files in the archive (Penn treebank format)
+        psd_files = [n for n in zf.namelist() if n.endswith('.psd')]
+        logger.info(f"Found {len(psd_files)} PSD files in ONCOJ archive")
+
+        for txt_file in psd_files:
+            if max_poems and count >= max_poems:
+                break
+
+            try:
+                content = zf.read(txt_file).decode('utf-8', errors='replace')
+            except Exception as e:
+                logger.warning(f"Failed to read {txt_file}: {e}")
+                continue
+
+            # Parse the file
+            filename = Path(txt_file).name
+            try:
+                for parsed in parse_oncoj_file(content, filename):
+                    if max_poems and count >= max_poems:
+                        break
+
+                    # Deduplicate by text
+                    if parsed.text in seen_texts:
+                        continue
+                    seen_texts.add(parsed.text)
+
+                    # Skip very short texts (likely fragments)
+                    if len(parsed.text) < 10:
+                        continue
+
+                    yield make_poem_record(
+                        text=parsed.text,
+                        source="oncoj",
+                        collection=parsed.metadata.get('collection_name', parsed.metadata.get('collection')),
+                        source_id=parsed.text_id,
+                        source_url=f"https://oncoj.ninjal.ac.jp/cgi-bin/oncoj.sh?search={parsed.text_id}",
+                    )
+                    count += 1
+
+            except Exception as e:
+                logger.warning(f"Failed to parse {txt_file}: {e}")
+                # Try fallback parser
+                try:
+                    for parsed in parse_simple_bracketed(content, filename):
+                        if max_poems and count >= max_poems:
+                            break
+                        if parsed.text in seen_texts:
+                            continue
+                        seen_texts.add(parsed.text)
+                        if len(parsed.text) < 10:
+                            continue
+                        yield make_poem_record(
+                            text=parsed.text,
+                            source="oncoj",
+                            source_id=parsed.text_id,
+                        )
+                        count += 1
+                except Exception:
+                    pass
+
+    logger.info(f"Loaded {count} poems from ONCOJ")
+
+
+# -----------------------------------------------------------------------------
+# Source: lapis (Nichibunken Lapis waka database)
+# -----------------------------------------------------------------------------
+
+LAPIS_BASE_URL = "https://lapis.nichibun.ac.jp/waka"
+LAPIS_INDEX_URLS = {
+    "era": f"{LAPIS_BASE_URL}/index_era.html",
+    "creator": f"{LAPIS_BASE_URL}/index_creator.html",
+    "creation": f"{LAPIS_BASE_URL}/index_creation.html",
+}
+
+
+def fetch_with_rate_limit(url: str, sleep: float = DEFAULT_SLEEP) -> str:
+    """Fetch URL with rate limiting and proper User-Agent."""
+    req = Request(url, headers={"User-Agent": USER_AGENT})
+    try:
+        with urlopen(req, timeout=30) as response:
+            content = response.read().decode('utf-8', errors='replace')
+        time.sleep(sleep)  # Rate limit
+        return content
+    except (URLError, HTTPError) as e:
+        logger.warning(f"Failed to fetch {url}: {e}")
+        time.sleep(sleep * 2)  # Backoff on error
+        raise
+
+
+def parse_lapis_poem_page(html: str, url: str) -> dict | None:
+    """Parse a single poem page from Lapis."""
+    # Extract poem text - look for specific patterns in the HTML
+    # This is a simplified parser - actual HTML structure may vary
+
+    # Try to find poem text in common patterns
+    # Pattern 1: <div class="poem">...</div>
+    poem_match = re.search(r'<div[^>]*class="[^"]*poem[^"]*"[^>]*>(.*?)</div>', html, re.DOTALL | re.IGNORECASE)
+    if not poem_match:
+        # Pattern 2: Look for Japanese text blocks
+        poem_match = re.search(r'<td[^>]*>([ぁ-んァ-ン一-龯々ー]{10,})</td>', html)
+
+    if not poem_match:
+        return None
+
+    text = re.sub(r'<[^>]+>', '', poem_match.group(1)).strip()
+    if not text or len(text) < 10:
+        return None
+
+    # Try to extract author
+    author = None
+    author_match = re.search(r'作者[：:]\s*([^<\n]+)', html)
+    if author_match:
+        author = author_match.group(1).strip()
+
+    # Try to extract collection
+    collection = None
+    collection_match = re.search(r'出典[：:]\s*([^<\n]+)', html)
+    if collection_match:
+        collection = collection_match.group(1).strip()
+
+    return {
+        "text": text,
+        "author": author,
+        "collection": collection,
+        "url": url,
+    }
+
+
+def load_lapis_poems(
+    max_poems: int | None = None,
+    sleep: float = DEFAULT_SLEEP,
+    index_type: str = "era"
+) -> Iterator[dict]:
+    """
+    Scrape poems from Nichibunken Lapis waka database.
+
+    Respects rate limiting and robots.txt guidelines.
+    """
+    logger.info(f"Starting Lapis scrape (index: {index_type}, max: {max_poems or 'unlimited'})")
+
+    count = 0
+    seen_texts = set()
+    errors = 0
+    max_errors = 10
+
+    try:
+        # Fetch the index page
+        index_url = LAPIS_INDEX_URLS.get(index_type, LAPIS_INDEX_URLS["era"])
+        logger.info(f"Fetching index: {index_url}")
+        index_html = fetch_with_rate_limit(index_url, sleep)
+
+        # Extract links to collection/work pages
+        # Pattern: href="xxx.html" within the index
+        links = re.findall(r'href="([^"]+\.html)"', index_html)
+        work_links = [f"{LAPIS_BASE_URL}/{link}" for link in links if not link.startswith('http')]
+
+        logger.info(f"Found {len(work_links)} work links")
+
+        for work_url in work_links:
+            if max_poems and count >= max_poems:
+                break
+            if errors >= max_errors:
+                logger.error(f"Too many errors ({errors}), stopping")
+                break
+
+            try:
+                work_html = fetch_with_rate_limit(work_url, sleep)
+
+                # Extract poem links from work page
+                poem_links = re.findall(r'href="([^"]*poem[^"]*\.html)"', work_html, re.IGNORECASE)
+                if not poem_links:
+                    # Try to find inline poems
+                    poem_links = re.findall(r'href="([^"]+\.html)"', work_html)
+
+                for poem_link in poem_links[:50]:  # Limit per work
+                    if max_poems and count >= max_poems:
+                        break
+
+                    poem_url = poem_link if poem_link.startswith('http') else f"{LAPIS_BASE_URL}/{poem_link}"
+
+                    try:
+                        poem_html = fetch_with_rate_limit(poem_url, sleep)
+                        poem_data = parse_lapis_poem_page(poem_html, poem_url)
+
+                        if poem_data and poem_data["text"] not in seen_texts:
+                            seen_texts.add(poem_data["text"])
+                            yield make_poem_record(
+                                text=poem_data["text"],
+                                source="lapis",
+                                author=poem_data.get("author"),
+                                collection=poem_data.get("collection"),
+                                source_url=poem_url,
+                            )
+                            count += 1
+
+                            if count % 50 == 0:
+                                logger.info(f"Progress: {count} poems scraped")
+
+                    except Exception as e:
+                        errors += 1
+                        logger.warning(f"Error fetching poem {poem_url}: {e}")
+
+            except Exception as e:
+                errors += 1
+                logger.warning(f"Error fetching work {work_url}: {e}")
+
+    except Exception as e:
+        logger.error(f"Failed to scrape Lapis: {e}")
+
+    logger.info(f"Lapis scrape complete: {count} poems, {errors} errors")
+
+
+# -----------------------------------------------------------------------------
 # Source: file (load from local file)
 # -----------------------------------------------------------------------------
 
 
-def load_file_poems(
-    input_path: Path, max_poems: int | None = None
-) -> Iterator[dict]:
+def load_file_poems(input_path: Path, max_poems: int | None = None) -> Iterator[dict]:
     """Load poems from a local JSON or JSONL file."""
     count = 0
     with open(input_path, "r", encoding="utf-8") as f:
@@ -313,7 +533,6 @@ def load_file_poems(
                 )
                 count += 1
         else:
-            # Assume JSON array
             poems = json.load(f)
             for data in poems:
                 if max_poems and count >= max_poems:
@@ -330,6 +549,64 @@ def load_file_poems(
 
 
 # -----------------------------------------------------------------------------
+# Source: all (combine multiple sources)
+# -----------------------------------------------------------------------------
+
+
+def load_all_poems(max_poems: int | None = None) -> Iterator[dict]:
+    """
+    Load poems from all available sources for full curriculum.
+
+    Target: 1500+ poems for adequate grammar coverage.
+    Sources: ogura100 (100) + oncoj (~2000) + lapis (500)
+    """
+    count = 0
+    seen_texts = set()
+
+    # Helper to dedupe and count
+    def emit(poem: dict) -> dict | None:
+        nonlocal count
+        if max_poems and count >= max_poems:
+            return None
+        if poem["text"] in seen_texts:
+            return None
+        seen_texts.add(poem["text"])
+        count += 1
+        return poem
+
+    # 1. Ogura 100 (high quality, known poems)
+    logger.info("Loading Ogura 100...")
+    for poem in load_ogura100_poems():
+        result = emit(poem)
+        if result:
+            yield result
+        if max_poems and count >= max_poems:
+            return
+
+    # 2. ONCOJ (main corpus, ~2000+ poems)
+    logger.info("Loading ONCOJ...")
+    for poem in load_oncoj_poems():
+        result = emit(poem)
+        if result:
+            yield result
+        if max_poems and count >= max_poems:
+            return
+
+    # 3. Lapis (supplemental, scrape 500 more if needed)
+    if not max_poems or count < max_poems:
+        remaining = (max_poems - count) if max_poems else 500
+        logger.info(f"Loading Lapis (up to {remaining} more)...")
+        for poem in load_lapis_poems(max_poems=remaining):
+            result = emit(poem)
+            if result:
+                yield result
+            if max_poems and count >= max_poems:
+                return
+
+    logger.info(f"Total poems loaded: {count}")
+
+
+# -----------------------------------------------------------------------------
 # Main
 # -----------------------------------------------------------------------------
 
@@ -341,13 +618,16 @@ def main():
         epilog="""
 Examples:
   python scripts/01_ingest_corpus.py --source test --max-poems 5
-  python scripts/01_ingest_corpus.py --source ogura100
-  python scripts/01_ingest_corpus.py --source file --input poems.jsonl
+  python scripts/01_ingest_corpus.py --source oncoj
+  python scripts/01_ingest_corpus.py --source lapis --max-poems 500 --sleep 2.0
+  python scripts/01_ingest_corpus.py --source all  # Full curriculum (~2500 poems)
+
+Target corpus size: 1500+ poems for adequate grammar coverage.
         """,
     )
     parser.add_argument(
         "--source",
-        choices=["test", "ogura100", "file"],
+        choices=["test", "ogura100", "oncoj", "lapis", "all", "file"],
         default="test",
         help="Corpus source to ingest from (default: test)",
     )
@@ -368,6 +648,17 @@ Examples:
         default=PROJECT_ROOT / "data" / "raw" / "poems.jsonl",
         help="Output JSONL file path (default: data/raw/poems.jsonl)",
     )
+    parser.add_argument(
+        "--sleep",
+        type=float,
+        default=DEFAULT_SLEEP,
+        help=f"Sleep between requests for scraping (default: {DEFAULT_SLEEP}s)",
+    )
+    parser.add_argument(
+        "--force-download",
+        action="store_true",
+        help="Force re-download of cached files",
+    )
 
     args = parser.parse_args()
 
@@ -383,6 +674,12 @@ Examples:
         poems = load_test_poems(args.max_poems)
     elif args.source == "ogura100":
         poems = load_ogura100_poems(args.max_poems)
+    elif args.source == "oncoj":
+        poems = load_oncoj_poems(args.max_poems, args.force_download)
+    elif args.source == "lapis":
+        poems = load_lapis_poems(args.max_poems, args.sleep)
+    elif args.source == "all":
+        poems = load_all_poems(args.max_poems)
     elif args.source == "file":
         poems = load_file_poems(args.input, args.max_poems)
     else:
@@ -396,6 +693,10 @@ Examples:
             count += 1
 
     print(f"Ingested {count} poems from '{args.source}' to {args.output}")
+
+    # Warn if corpus is too small
+    if count < 1500 and args.source == "all":
+        print(f"WARNING: Only {count} poems. Target is 1500+ for good curriculum coverage.")
 
 
 if __name__ == "__main__":
