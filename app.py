@@ -503,6 +503,18 @@ python scripts/05_compile_classroom.py --output data/classroom.db
     # Get audio paths for poems in this lesson
     audio_files = get_audio_for_lesson(lesson, DATA_DIR)
 
+    # Get poem metadata (author, collection) for display
+    from wakawaka.schemas import PoemPresentationStep
+    poem_metadata = {}
+    for step in lesson.teaching_sequence:
+        if isinstance(step, PoemPresentationStep) and step.poem_id:
+            poem_data = loader.get_poem(step.poem_id)
+            if poem_data:
+                poem_metadata[step.poem_id] = {
+                    "author": poem_data.author,
+                    "collection": poem_data.collection,
+                }
+
     # Inject CSS
     st.markdown(get_vocab_css(), unsafe_allow_html=True)
 
@@ -514,9 +526,8 @@ python scripts/05_compile_classroom.py --output data/classroom.db
     st.markdown(render_grammar_explanation(lesson), unsafe_allow_html=True)
 
     # Teaching sequence - render step by step to allow inline audio
-    from wakawaka.schemas import PoemPresentationStep
     for step in lesson.teaching_sequence:
-        step_html = render_teaching_step(step)
+        step_html = render_teaching_step(step, poem_metadata=poem_metadata)
         if step_html:
             st.markdown(step_html, unsafe_allow_html=True)
 

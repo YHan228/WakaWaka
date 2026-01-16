@@ -101,6 +101,17 @@ def get_vocab_css() -> str:
         position: relative;
     }
 
+    .poem-source {
+        position: absolute;
+        top: 0.6em;
+        right: 0.8em;
+        font-size: 0.75em;
+        color: var(--sumi-light);
+        font-style: italic;
+        opacity: 0.7;
+        letter-spacing: 0.02em;
+    }
+
     .poem-container::before {
         content: '';
         position: absolute;
@@ -596,9 +607,23 @@ def render_vocab_list(vocabulary: list[VocabularyItem]) -> str:
     return f'<div class="vocab-list"><strong>Vocabulary:</strong>{"".join(items)}</div>'
 
 
-def render_poem_presentation(step: PoemPresentationStep) -> str:
+def render_poem_presentation(
+    step: PoemPresentationStep,
+    author: Optional[str] = None,
+    collection: Optional[str] = None,
+) -> str:
     """Render a poem presentation step with interactive colored vocabulary."""
     parts = ['<div class="poem-container">']
+
+    # Source attribution (top-right corner)
+    source_parts = []
+    if collection:
+        source_parts.append(collection)
+    if author:
+        source_parts.append(author)
+    if source_parts:
+        source_text = " · ".join(source_parts)
+        parts.append(f'<div class="poem-source">{html.escape(source_text)}</div>')
 
     # Extract plain text from furigana HTML
     plain_text = re.sub(r'<ruby>([^<]+)<rt>[^<]+</rt></ruby>', r'\1', step.display.text_with_furigana)
@@ -655,12 +680,27 @@ def render_summary(step: SummaryStep) -> str:
     return f'<div class="step-container step-summary"><strong>Summary:</strong><br>{content}</div>'
 
 
-def render_teaching_step(step: TeachingStep) -> str:
-    """Render any teaching step."""
+def render_teaching_step(
+    step: TeachingStep,
+    poem_metadata: Optional[dict] = None,
+) -> str:
+    """
+    Render any teaching step.
+
+    Args:
+        step: Teaching step to render
+        poem_metadata: Optional dict mapping poem_id to {"author": ..., "collection": ...}
+    """
     if isinstance(step, IntroductionStep):
         return render_introduction(step)
     elif isinstance(step, PoemPresentationStep):
-        return render_poem_presentation(step)
+        author = None
+        collection = None
+        if poem_metadata and step.poem_id in poem_metadata:
+            meta = poem_metadata[step.poem_id]
+            author = meta.get("author")
+            collection = meta.get("collection")
+        return render_poem_presentation(step, author=author, collection=collection)
     elif isinstance(step, GrammarSpotlightStep):
         return render_grammar_spotlight(step)
     elif isinstance(step, ContrastExampleStep):
