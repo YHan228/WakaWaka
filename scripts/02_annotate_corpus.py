@@ -75,7 +75,7 @@ logging.basicConfig(
 logger = logging.getLogger(__name__)
 
 # Constants
-DEFAULT_MODEL = "gemini-3-flash-preview"
+DEFAULT_MODEL = "gemini-2.0-flash"  # Faster than preview; use --model gemini-3-flash-preview for higher quality
 DEFAULT_BATCH_SIZE = 10
 DEFAULT_API_SLEEP = 1.0
 CHECKPOINT_DIR = PROJECT_ROOT / "data" / "annotated" / ".checkpoints"
@@ -207,6 +207,15 @@ class GeminiClient:
 
                 # Rate limiting
                 time.sleep(self.sleep_seconds)
+
+                # Handle potential None response
+                if response.text is None:
+                    # Try to extract text from candidates
+                    if response.candidates and len(response.candidates) > 0:
+                        candidate = response.candidates[0]
+                        if candidate.content and candidate.content.parts:
+                            return candidate.content.parts[0].text
+                    raise ValueError("Empty response from API")
 
                 return response.text
 
