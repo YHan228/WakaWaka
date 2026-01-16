@@ -10,13 +10,14 @@ Key features:
 - LLM annotation via Gemini API for readings, grammar points, vocabulary
 - Two-level grammar IDs (canonical_id + sense_id)
 - Deterministic difficulty scoring from factors
-- Batch processing with checkpointing (resume on failure)
+- Parallel processing with configurable workers (5-10x speedup)
+- Batch checkpointing (resume on failure)
 - Schema validation with retry on malformed responses
 
 Usage:
-  python scripts/02_annotate_corpus.py --input data/raw/poems.jsonl --output data/annotated/poems.parquet
+  python scripts/02_annotate_corpus.py --workers 5 --resume  # Fast parallel
+  python scripts/02_annotate_corpus.py --max-poems 10        # Quick test
   python scripts/02_annotate_corpus.py --batch-size 5 --resume
-  python scripts/02_annotate_corpus.py --max-poems 50  # For testing
 """
 
 import argparse
@@ -26,7 +27,9 @@ import logging
 import os
 import re
 import sys
+import threading
 import time
+from concurrent.futures import ThreadPoolExecutor, as_completed
 from datetime import datetime
 from pathlib import Path
 from typing import Any
@@ -78,8 +81,19 @@ logger = logging.getLogger(__name__)
 DEFAULT_MODEL = "gemini-2.0-flash"  # Faster than preview; use --model gemini-3-flash-preview for higher quality
 DEFAULT_BATCH_SIZE = 10
 DEFAULT_API_SLEEP = 1.0
+DEFAULT_WORKERS = 1  # Parallel workers for annotation
 CHECKPOINT_DIR = PROJECT_ROOT / "data" / "annotated" / ".checkpoints"
 CACHE_DIR = PROJECT_ROOT / "data" / "annotated" / ".cache"
+
+# Thread-local storage for Fugashi tagger (not thread-safe)
+_thread_local = threading.local()
+
+
+def get_thread_tagger() -> "fugashi.Tagger":
+    """Get thread-local Fugashi tagger instance."""
+    if not hasattr(_thread_local, 'tagger'):
+        _thread_local.tagger = fugashi.Tagger()
+    return _thread_local.tagger
 
 
 # -----------------------------------------------------------------------------
@@ -519,6 +533,9 @@ def build_poem_annotation(
         except Exception as e:
             logger.warning(f"Skipping invalid difficulty factor: {f} - {e}")
 
+    # Compute difficulty score from factors
+    difficulty_score = compute_difficulty_score(difficulty_factors) if difficulty_factors else 0.0
+
     # Build annotation
     return PoemAnnotation(
         poem_id=poem["poem_id"],
@@ -534,6 +551,7 @@ def build_poem_annotation(
         grammar_points=grammar_points,
         vocabulary=vocabulary,
         difficulty_factors=difficulty_factors,
+        difficulty_score=difficulty_score,
         semantic_notes=llm_response.get("semantic_notes")
     )
 
@@ -669,6 +687,38 @@ def annotate_poem(
         return None
 
 
+def _annotation_to_dict(annotation: PoemAnnotation) -> dict:
+    """Convert PoemAnnotation to dict for DataFrame storage."""
+    ann_dict = annotation.model_dump()
+    ann_dict["fugashi_tokens"] = [t.model_dump() for t in annotation.fugashi_tokens]
+    ann_dict["token_readings"] = [t.model_dump() for t in annotation.token_readings]
+    ann_dict["grammar_points"] = [g.model_dump() for g in annotation.grammar_points]
+    ann_dict["vocabulary"] = [v.model_dump() for v in annotation.vocabulary]
+    ann_dict["difficulty_factors"] = [d.model_dump() for d in annotation.difficulty_factors]
+    return ann_dict
+
+
+def _annotate_worker(
+    poem: dict,
+    client: GeminiClient,
+    prompt_config: dict,
+    use_cache: bool
+) -> tuple[str, PoemAnnotation | None, str | None]:
+    """
+    Worker function for parallel annotation.
+
+    Returns:
+        Tuple of (poem_id, annotation_or_none, error_message_or_none)
+    """
+    poem_id = poem["poem_id"]
+    try:
+        tagger = get_thread_tagger()
+        annotation = annotate_poem(poem, tagger, client, prompt_config, use_cache)
+        return (poem_id, annotation, None)
+    except Exception as e:
+        return (poem_id, None, str(e))
+
+
 def annotate_corpus(
     input_path: Path,
     output_path: Path,
@@ -677,7 +727,8 @@ def annotate_corpus(
     max_poems: int | None = None,
     resume: bool = False,
     use_cache: bool = True,
-    api_sleep: float = DEFAULT_API_SLEEP
+    api_sleep: float = DEFAULT_API_SLEEP,
+    workers: int = DEFAULT_WORKERS
 ) -> int:
     """
     Annotate all poems in input file.
@@ -691,6 +742,7 @@ def annotate_corpus(
         resume: Whether to resume from checkpoint
         use_cache: Whether to use LLM response caching
         api_sleep: Seconds to sleep between API calls
+        workers: Number of parallel workers (default: 1)
 
     Returns:
         Number of poems successfully annotated
@@ -698,9 +750,6 @@ def annotate_corpus(
     # Initialize
     logger.info(f"Loading prompt configuration...")
     prompt_config = load_prompt("annotate")
-
-    logger.info(f"Initializing Fugashi tagger...")
-    tagger = fugashi.Tagger()
 
     logger.info(f"Initializing Gemini client (model: {model})...")
     client = GeminiClient(model=model, sleep_seconds=api_sleep)
@@ -748,29 +797,18 @@ def annotate_corpus(
         except Exception as e:
             logger.warning(f"Could not load existing annotations: {e}")
 
-    for i, poem in enumerate(poems):
-        poem_id = poem["poem_id"]
+    # Thread-safe lock for shared state
+    lock = threading.Lock()
 
-        try:
-            logger.info(f"[{i+1}/{len(poems)}] Annotating {poem_id}...")
+    def process_result(poem_id: str, annotation: PoemAnnotation | None, error: str | None):
+        """Process a completed annotation result (thread-safe)."""
+        nonlocal success_count, error_count
 
-            annotation = annotate_poem(poem, tagger, client, prompt_config, use_cache)
-
+        with lock:
             if annotation:
-                # Convert to dict for DataFrame
-                ann_dict = annotation.model_dump()
-
-                # Convert nested Pydantic models to dicts
-                ann_dict["fugashi_tokens"] = [t.model_dump() for t in annotation.fugashi_tokens]
-                ann_dict["token_readings"] = [t.model_dump() for t in annotation.token_readings]
-                ann_dict["grammar_points"] = [g.model_dump() for g in annotation.grammar_points]
-                ann_dict["vocabulary"] = [v.model_dump() for v in annotation.vocabulary]
-                ann_dict["difficulty_factors"] = [d.model_dump() for d in annotation.difficulty_factors]
-
+                ann_dict = _annotation_to_dict(annotation)
                 annotations.append(ann_dict)
                 success_count += 1
-
-                # Checkpoint
                 save_checkpoint(checkpoint_file, poem_id)
 
                 # Save intermediate results
@@ -781,14 +819,61 @@ def annotate_corpus(
                     df.to_parquet(output_path, index=False)
             else:
                 error_count += 1
-                logger.warning(f"Failed to annotate {poem_id}")
+                if error:
+                    logger.error(f"Failed to annotate {poem_id}: {error}")
+                else:
+                    logger.warning(f"Failed to annotate {poem_id}")
 
-        except KeyboardInterrupt:
-            logger.info("Interrupted by user")
-            break
-        except Exception as e:
-            error_count += 1
-            logger.error(f"Error processing {poem_id}: {e}")
+    if workers > 1:
+        # Parallel processing
+        logger.info(f"Starting parallel annotation with {workers} workers...")
+
+        with ThreadPoolExecutor(max_workers=workers) as executor:
+            # Submit all tasks
+            futures = {
+                executor.submit(_annotate_worker, poem, client, prompt_config, use_cache): poem
+                for poem in poems
+            }
+
+            # Process completed tasks
+            completed = 0
+            try:
+                for future in as_completed(futures):
+                    poem = futures[future]
+                    completed += 1
+
+                    try:
+                        poem_id, annotation, error = future.result()
+                        logger.info(f"[{completed}/{len(poems)}] Completed {poem_id}")
+                        process_result(poem_id, annotation, error)
+                    except Exception as e:
+                        logger.error(f"[{completed}/{len(poems)}] Worker exception for {poem['poem_id']}: {e}")
+                        with lock:
+                            error_count += 1
+
+            except KeyboardInterrupt:
+                logger.info("Interrupted by user, cancelling remaining tasks...")
+                for future in futures:
+                    future.cancel()
+    else:
+        # Sequential processing (original behavior)
+        logger.info("Starting sequential annotation...")
+        tagger = fugashi.Tagger()
+
+        for i, poem in enumerate(poems):
+            poem_id = poem["poem_id"]
+
+            try:
+                logger.info(f"[{i+1}/{len(poems)}] Annotating {poem_id}...")
+                annotation = annotate_poem(poem, tagger, client, prompt_config, use_cache)
+                process_result(poem_id, annotation, None)
+
+            except KeyboardInterrupt:
+                logger.info("Interrupted by user")
+                break
+            except Exception as e:
+                logger.error(f"Error processing {poem_id}: {e}")
+                error_count += 1
 
     # Final save
     if annotations:
@@ -863,6 +948,12 @@ Examples:
         default=DEFAULT_API_SLEEP,
         help=f"Seconds between API calls (default: {DEFAULT_API_SLEEP})",
     )
+    parser.add_argument(
+        "--workers",
+        type=int,
+        default=DEFAULT_WORKERS,
+        help=f"Parallel workers for annotation (default: {DEFAULT_WORKERS}). Use 5-10 for faster processing.",
+    )
 
     args = parser.parse_args()
 
@@ -885,7 +976,8 @@ Examples:
         max_poems=args.max_poems,
         resume=args.resume,
         use_cache=not args.no_cache,
-        api_sleep=args.api_sleep
+        api_sleep=args.api_sleep,
+        workers=args.workers
     )
 
     print(f"\nAnnotated {count} poems to {args.output}")

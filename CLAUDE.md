@@ -11,7 +11,9 @@ Classical Japanese poetry learning platform for Chinese speakers. Build pipeline
 
 ## Quick Start
 ```bash
-conda activate wakadecoder  # Python 3.11 environment
+# Activate conda (required for non-interactive shells / LLM agents)
+source ~/miniconda3/etc/profile.d/conda.sh && conda activate wakadecoder
+
 cp .env.example .env        # Edit with your GEMINI_API_KEY
 pip install -r requirements.txt
 ```

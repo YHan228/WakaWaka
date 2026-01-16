@@ -8,17 +8,22 @@ data/raw/poems.jsonl for further processing in the build pipeline.
 Sources:
   - test: Small set of hardcoded classical poems for development (15 poems)
   - ogura100: Ogura Hyakunin Isshu (100 poems, embedded)
-  - oncoj: ONCOJ corpus from GitHub (~4900 Old Japanese poems)
-  - lapis: Nichibunken Lapis waka database (scraper, 500-2000 poems)
-  - all: Combine ogura100 + oncoj + lapis for full curriculum (~2500+ poems)
+  - oncoj: ONCOJ corpus from GitHub (~4,900 Old Japanese poems)
+  - lapis: Nichibunken Lapis waka database (scraper, supports collection filtering)
+  - all: Combine ogura100 + oncoj + lapis for full curriculum
   - file: Load from a local JSON/JSONL file
 
-Target: 1500+ poems for adequate grammar coverage (≥3 poems per lesson × ~50 lessons)
+Features:
+  - Deduplication by text hash (both within source and across runs)
+  - Rate-limited scraping with configurable sleep intervals
+  - Collection filtering for Lapis (e.g., only 古今集, 新古今集, 万葉集)
+  - Random sampling to avoid volume bias in anthologies
 
 Usage:
   python scripts/01_ingest_corpus.py --source test --max-poems 10
-  python scripts/01_ingest_corpus.py --source oncoj
-  python scripts/01_ingest_corpus.py --source lapis --max-poems 500
+  python scripts/01_ingest_corpus.py --source ogura100
+  python scripts/01_ingest_corpus.py --source lapis --collections 古今集 --max-poems 300
+  python scripts/01_ingest_corpus.py --source lapis --collections imperial --max-poems 1000
   python scripts/01_ingest_corpus.py --source all
 """
 
@@ -27,7 +32,7 @@ import hashlib
 import io
 import json
 import logging
-import os
+import random
 import re
 import sys
 import time
@@ -75,7 +80,20 @@ def make_poem_record(
     source_id: str | None = None,
     source_url: str | None = None,
 ) -> dict:
-    """Create a standardized poem record."""
+    """
+    Create a standardized poem record with a unique ID.
+
+    Args:
+        text: The poem text (Japanese characters).
+        source: Source identifier (e.g., "ogura100", "lapis", "oncoj").
+        author: Optional poet name.
+        collection: Optional anthology/collection name.
+        source_id: Optional ID from the original source.
+        source_url: Optional URL to the source.
+
+    Returns:
+        A dict with poem_id, text, text_hash, source, and metadata fields.
+    """
     # Generate stable ID from source + text hash
     text_hash = hashlib.sha256(text.encode("utf-8")).hexdigest()[:16]
     poem_id = f"{source}_{text_hash}"
@@ -117,7 +135,15 @@ TEST_POEMS = [
 
 
 def load_test_poems(max_poems: int | None = None) -> Iterator[dict]:
-    """Load hardcoded test poems."""
+    """
+    Load hardcoded test poems for development.
+
+    Args:
+        max_poems: Maximum number of poems to return (default: all 15).
+
+    Yields:
+        Poem records with text, author, and collection.
+    """
     poems = TEST_POEMS[:max_poems] if max_poems else TEST_POEMS
     for poem in poems:
         yield make_poem_record(
@@ -237,7 +263,18 @@ OGURA_100 = [
 
 
 def load_ogura100_poems(max_poems: int | None = None) -> Iterator[dict]:
-    """Load Ogura Hyakunin Isshu poems."""
+    """
+    Load Ogura Hyakunin Isshu (百人一首) poems.
+
+    The 100 poems are embedded in this script with verified text and authors.
+    These are canonical classical Japanese poems, ideal as a curriculum foundation.
+
+    Args:
+        max_poems: Maximum number of poems to return (default: all 100).
+
+    Yields:
+        Poem records numbered 1-100 with text, author, and collection="百人一首".
+    """
     poems = OGURA_100[:max_poems] if max_poems else OGURA_100
     for i, (text, author) in enumerate(poems, 1):
         yield make_poem_record(
@@ -258,7 +295,20 @@ ONCOJ_CACHE_FILE = "oncoj_release.zip"
 
 
 def download_with_cache(url: str, cache_name: str, force: bool = False) -> bytes:
-    """Download a file with caching."""
+    """
+    Download a file with local caching.
+
+    Args:
+        url: URL to download from.
+        cache_name: Filename for the cached copy in data/cache/.
+        force: If True, re-download even if cached.
+
+    Returns:
+        The file contents as bytes.
+
+    Raises:
+        URLError, HTTPError: If download fails.
+    """
     CACHE_DIR.mkdir(parents=True, exist_ok=True)
     cache_path = CACHE_DIR / cache_name
 
@@ -282,9 +332,17 @@ def download_with_cache(url: str, cache_name: str, force: bool = False) -> bytes
 
 def load_oncoj_poems(max_poems: int | None = None, force_download: bool = False) -> Iterator[dict]:
     """
-    Load poems from ONCOJ corpus.
+    Load poems from ONCOJ (Oxford-NINJAL Corpus of Old Japanese).
 
-    Downloads from GitHub if not cached, parses Penn Treebank format.
+    Downloads the corpus ZIP from GitHub (cached locally), then parses
+    Penn Treebank format (.psd) files to extract poem texts.
+
+    Args:
+        max_poems: Maximum poems to return (default: all ~4,900).
+        force_download: If True, re-download even if cached.
+
+    Yields:
+        Poem records with text, collection, source_id, and source_url.
     """
     try:
         zip_data = download_with_cache(ONCOJ_GITHUB_URL, ONCOJ_CACHE_FILE, force_download)
@@ -373,7 +431,19 @@ LAPIS_INDEX_URLS = {
 
 
 def fetch_with_rate_limit(url: str, sleep: float = DEFAULT_SLEEP) -> str:
-    """Fetch URL with rate limiting and proper User-Agent."""
+    """
+    Fetch URL content with rate limiting and proper User-Agent.
+
+    Args:
+        url: URL to fetch.
+        sleep: Seconds to wait after each request (default: 1.0).
+
+    Returns:
+        The page content as a string.
+
+    Raises:
+        URLError, HTTPError: If fetch fails (after logging warning).
+    """
     req = Request(url, headers={"User-Agent": USER_AGENT})
     try:
         with urlopen(req, timeout=30) as response:
@@ -388,12 +458,18 @@ def fetch_with_rate_limit(url: str, sleep: float = DEFAULT_SLEEP) -> str:
 
 def extract_poems_from_lapis_work_page(html: str, url: str) -> Iterator[dict]:
     """
-    Extract poems from a Lapis work page.
+    Extract poems from a Lapis work page HTML.
 
-    Lapis format:
-    - Collection name in <h1> tag
-    - Poems in <div align="left"> blocks
-    - Poem text is hiragana with − separators: きのふこそ−としはくれしか−...
+    Handles two formats used by Lapis:
+    - 古今集 style: kanji+hiragana text (e.g., "古池や蛙飛び込む水の音")
+    - 新古今集/万葉集 style: hiragana with − separators (e.g., "あきの−たの−...")
+
+    Args:
+        html: Raw HTML content of the work page.
+        url: URL of the page (stored in output for reference).
+
+    Yields:
+        Dicts with 'text', 'collection', and 'url' keys.
     """
     # Extract collection name from <h1>
     collection = None
@@ -401,37 +477,77 @@ def extract_poems_from_lapis_work_page(html: str, url: str) -> Iterator[dict]:
     if h1_match:
         collection = re.sub(r'<[^>]+>', '', h1_match.group(1)).strip()
 
-    # Find all poem texts - they're in div align="left" with hiragana and − separators
-    # Pattern: hiragana text with − separators (5 parts = traditional waka structure)
-    poem_pattern = r'<div[^>]*align="left"[^>]*>\s*([ぁ-んァ-ヶー−\s]+(?:−[ぁ-んァ-ヶー−\s]+){2,})\s*<'
+    # Pattern 1: Kanji+hiragana text (古今集 style)
+    pattern_kanji = r'<div[^>]*align="left"[^>]*>([ぁ-ん一-龯ァ-ヶー々]+)<br>'
 
-    for match in re.finditer(poem_pattern, html, re.IGNORECASE):
-        poem_text = match.group(1).strip()
+    # Pattern 2: Hiragana with − separators (新古今集/万葉集 style)
+    pattern_hira = r'<div[^>]*align="left"[^>]*>([ぁ-んァ-ヶー]+(?:−[ぁ-んァ-ヶー]+){2,})<br>'
 
-        # Clean up: remove − separators and extra whitespace
-        poem_text = poem_text.replace('−', '').replace(' ', '').replace('\n', '').replace('<br>', '')
+    seen = set()
 
-        # Must be reasonable length (waka is typically 31 morae)
-        if len(poem_text) >= 20 and len(poem_text) <= 100:
-            yield {
-                "text": poem_text,
-                "collection": collection,
-                "url": url,
-            }
+    # Try kanji pattern first
+    for match in re.finditer(pattern_kanji, html, re.IGNORECASE):
+        poem_text = match.group(1).strip().replace(' ', '').replace('\n', '')
+        if 20 <= len(poem_text) <= 80 and poem_text not in seen:
+            seen.add(poem_text)
+            yield {"text": poem_text, "collection": collection, "url": url}
+
+    # If no kanji matches, try hiragana pattern
+    if not seen:
+        for match in re.finditer(pattern_hira, html, re.IGNORECASE):
+            poem_text = match.group(1).strip()
+            # Remove − separators
+            poem_text = poem_text.replace('−', '')
+            if 25 <= len(poem_text) <= 50 and poem_text not in seen:
+                seen.add(poem_text)
+                yield {"text": poem_text, "collection": collection, "url": url}
+
+
+# Collection names for the "imperial" shortcut (--collections imperial)
+# Must match exact names as they appear in Lapis <h1> tags (and LAPIS_COLLECTION_PAGES keys)
+LAPIS_IMPERIAL_COLLECTIONS = ["古今集", "新古今集", "万葉集・武田訓"]
+
+# Direct page URLs for known major collections (fast access, no index scan needed)
+# Keys are exact collection names as they appear in Lapis <h1> tags
+LAPIS_COLLECTION_PAGES = {
+    "古今集": "waka_i001.html",           # Kokin Wakashū (~1,100 poems)
+    "新古今集": "waka_i010.html",         # Shin Kokin Wakashū (~2,000 poems)
+    "万葉集・武田訓": "waka_i061.html",   # Man'yōshū - Takeda edition (~4,500 poems)
+}
 
 
 def load_lapis_poems(
     max_poems: int | None = None,
     sleep: float = DEFAULT_SLEEP,
-    index_type: str = "era"
+    index_type: str = "era",
+    collections: list[str] | None = None,
+    random_sample: bool = True,
 ) -> Iterator[dict]:
     """
     Scrape poems from Nichibunken Lapis waka database.
 
     Poems are embedded directly in work pages (not separate poem pages).
     Respects rate limiting and robots.txt guidelines.
+
+    When collections have known direct pages (古今集, 新古今集, 万葉集・武田訓),
+    fetches only those pages for efficiency. Otherwise, scans the full index.
+
+    Args:
+        max_poems: Maximum poems to return (default: unlimited).
+        sleep: Seconds to wait between requests (default: 1.0).
+        index_type: Which index to scan - "era", "creator", or "creation".
+        collections: Filter to exact collection names (e.g., ["古今集", "新古今集"]).
+            Use exact names as they appear in Lapis <h1> tags.
+        random_sample: If True, collect all matching poems first, then randomly
+            sample to max_poems. Avoids bias toward early volumes. (default: True)
+
+    Yields:
+        Poem records with text, collection, and source_url.
     """
-    logger.info(f"Starting Lapis scrape (index: {index_type}, max: {max_poems or 'unlimited'})")
+    if collections:
+        logger.info(f"Starting Lapis scrape (collections: {collections}, max: {max_poems or 'unlimited'})")
+    else:
+        logger.info(f"Starting Lapis scrape (index: {index_type}, max: {max_poems or 'unlimited'})")
 
     count = 0
     seen_texts = set()
@@ -444,13 +560,33 @@ def load_lapis_poems(
         logger.info(f"Fetching index: {index_url}")
         index_html = fetch_with_rate_limit(index_url, sleep)
 
-        # Extract links to work pages (waka_iXXX.html pattern)
-        links = re.findall(r'href="(waka_i\d+\.html)"', index_html)
-        work_links = list(set(links))  # Dedupe
-        logger.info(f"Found {len(work_links)} unique work pages")
+        # If all collections have known direct pages, skip index scan
+        if collections and all(c in LAPIS_COLLECTION_PAGES for c in collections):
+            work_links = [LAPIS_COLLECTION_PAGES[c] for c in collections]
+            logger.info(f"Using direct pages for {collections}: {work_links}")
+        else:
+            # Extract links to work pages (waka_iXXX.html pattern)
+            links = re.findall(r'href="(waka_i\d+\.html)"', index_html)
+            work_links = list(set(links))  # Dedupe
+
+            # If filtering by specific collections, prioritize known pages
+            if collections:
+                priority_pages = ["waka_i001.html", "waka_i010.html", "waka_i061.html"]
+                priority = [p for p in priority_pages if p in work_links]
+                others = [p for p in work_links if p not in priority_pages]
+                random.shuffle(others)
+                work_links = priority + others
+            else:
+                random.shuffle(work_links)
+
+            logger.info(f"Found {len(work_links)} unique work pages")
+
+        # Collect all matching poems first (for random sampling)
+        all_poems = []
 
         for i, work_link in enumerate(work_links):
-            if max_poems and count >= max_poems:
+            # If not random sampling and we have enough, stop early
+            if not random_sample and max_poems and count >= max_poems:
                 break
             if errors >= max_errors:
                 logger.error(f"Too many errors ({errors}), stopping")
@@ -464,34 +600,59 @@ def load_lapis_poems(
                 # Extract poems directly from the work page
                 poems_on_page = 0
                 for poem_data in extract_poems_from_lapis_work_page(work_html, work_url):
-                    if max_poems and count >= max_poems:
-                        break
+                    # Filter by collection if specified
+                    collection_name = poem_data.get("collection", "")
+                    if collections:
+                        # Exact match: collection must equal one of the targets
+                        if collection_name not in collections:
+                            continue  # Skip poems not in target collections
 
                     if poem_data["text"] not in seen_texts:
                         seen_texts.add(poem_data["text"])
-                        yield make_poem_record(
+                        poem_record = make_poem_record(
                             text=poem_data["text"],
                             source="lapis",
-                            collection=poem_data.get("collection"),
+                            collection=collection_name,
                             source_url=work_url,
                         )
-                        count += 1
+
+                        if random_sample:
+                            all_poems.append(poem_record)
+                        else:
+                            yield poem_record
+                            count += 1
+                            if max_poems and count >= max_poems:
+                                break
+
                         poems_on_page += 1
 
                 if poems_on_page > 0:
-                    logger.debug(f"Extracted {poems_on_page} poems from {work_link}")
+                    logger.debug(f"Extracted {poems_on_page} poems from {work_link} ({collection_name})")
 
-                if count % 100 == 0 and count > 0:
-                    logger.info(f"Progress: {count} poems scraped from {i+1}/{len(work_links)} pages")
+                total_collected = len(all_poems) if random_sample else count
+                if total_collected % 100 == 0 and total_collected > 0:
+                    logger.info(f"Progress: {total_collected} poems scraped from {i+1}/{len(work_links)} pages")
 
             except Exception as e:
                 errors += 1
                 logger.warning(f"Error fetching {work_url}: {e}")
 
+        # If random sampling, sample and yield
+        if random_sample and all_poems:
+            logger.info(f"Collected {len(all_poems)} poems, randomly sampling {min(max_poems or len(all_poems), len(all_poems))}")
+            if max_poems and len(all_poems) > max_poems:
+                sampled = random.sample(all_poems, max_poems)
+            else:
+                sampled = all_poems
+                random.shuffle(sampled)  # Still shuffle for variety
+            for poem in sampled:
+                yield poem
+                count += 1
+
     except Exception as e:
         logger.error(f"Failed to scrape Lapis: {e}")
 
-    logger.info(f"Lapis scrape complete: {count} poems from {len(work_links)} pages, {errors} errors")
+    logger.info(f"Lapis scrape complete: {count} poems, {errors} errors")
 
 
 # -----------------------------------------------------------------------------
@@ -500,7 +661,17 @@ def load_lapis_poems(
 
 
 def load_file_poems(input_path: Path, max_poems: int | None = None) -> Iterator[dict]:
-    """Load poems from a local JSON or JSONL file."""
+    """
+    Load poems from a local JSON or JSONL file.
+
+    Args:
+        input_path: Path to the input file (.json or .jsonl).
+        max_poems: Maximum poems to return (default: all).
+
+    Yields:
+        Poem records. Input must have at least a 'text' field;
+        other fields (author, collection, source_id, source_url) are optional.
+    """
     count = 0
     with open(input_path, "r", encoding="utf-8") as f:
         if input_path.suffix == ".jsonl":
@@ -542,8 +713,14 @@ def load_all_poems(max_poems: int | None = None) -> Iterator[dict]:
     """
     Load poems from all available sources for full curriculum.
 
-    Target: 1500+ poems for adequate grammar coverage.
-    Sources: ogura100 (100) + oncoj (~2000) + lapis (500)
+    Combines sources in priority order: ogura100 → oncoj → lapis.
+    Deduplicates by text across all sources.
+
+    Args:
+        max_poems: Maximum total poems to return (default: unlimited).
+
+    Yields:
+        Poem records from all sources, deduplicated.
     """
     count = 0
     seen_texts = set()
@@ -602,12 +779,18 @@ def main():
         formatter_class=argparse.RawDescriptionHelpFormatter,
         epilog="""
 Examples:
+  # Development testing
   python scripts/01_ingest_corpus.py --source test --max-poems 5
-  python scripts/01_ingest_corpus.py --source oncoj
-  python scripts/01_ingest_corpus.py --source lapis --max-poems 500 --sleep 2.0
-  python scripts/01_ingest_corpus.py --source all  # Full curriculum (~2500 poems)
 
-Target corpus size: 1500+ poems for adequate grammar coverage.
+  # Load Ogura Hyakunin Isshu (100 canonical poems)
+  python scripts/01_ingest_corpus.py --source ogura100
+
+  # Scrape specific collections from Lapis
+  python scripts/01_ingest_corpus.py --source lapis --collections 古今集 --max-poems 300
+  python scripts/01_ingest_corpus.py --source lapis --collections imperial --max-poems 1000
+
+  # Full corpus from all sources
+  python scripts/01_ingest_corpus.py --source all
         """,
     )
     parser.add_argument(
@@ -644,6 +827,12 @@ Target corpus size: 1500+ poems for adequate grammar coverage.
         action="store_true",
         help="Force re-download of cached files",
     )
+    parser.add_argument(
+        "--collections",
+        type=str,
+        default=None,
+        help="Filter lapis by collection prefixes, comma-separated (e.g., '古今,新古今,万葉'). Use 'imperial' for the three major anthologies.",
+    )
 
     args = parser.parse_args()
 
@@ -662,7 +851,14 @@ Target corpus size: 1500+ poems for adequate grammar coverage.
     elif args.source == "oncoj":
         poems = load_oncoj_poems(args.max_poems, args.force_download)
     elif args.source == "lapis":
-        poems = load_lapis_poems(args.max_poems, args.sleep)
+        # Parse collections filter
+        collections = None
+        if args.collections:
+            if args.collections.lower() == "imperial":
+                collections = LAPIS_IMPERIAL_COLLECTIONS  # 古今集, 新古今集, 万葉集
+            else:
+                collections = [c.strip() for c in args.collections.split(",")]
+        poems = load_lapis_poems(args.max_poems, args.sleep, collections=collections)
     elif args.source == "all":
         poems = load_all_poems(args.max_poems)
     elif args.source == "file":
@@ -670,14 +866,36 @@ Target corpus size: 1500+ poems for adequate grammar coverage.
     else:
         parser.error(f"Unknown source: {args.source}")
 
-    # Write to output
+    # Write to output (with deduplication by text_hash)
     count = 0
-    with open(args.output, "w", encoding="utf-8") as f:
+    skipped = 0
+    seen_hashes = set()
+
+    # If appending to existing file, load existing hashes
+    if args.output.exists():
+        with open(args.output, "r", encoding="utf-8") as f:
+            for line in f:
+                try:
+                    existing = json.loads(line)
+                    seen_hashes.add(existing.get("text_hash", ""))
+                except json.JSONDecodeError:
+                    pass
+        logger.info(f"Loaded {len(seen_hashes)} existing poems for deduplication")
+
+    # Write new poems (append mode if file exists and has content)
+    mode = "a" if seen_hashes else "w"
+    with open(args.output, mode, encoding="utf-8") as f:
         for poem in poems:
+            if poem["text_hash"] in seen_hashes:
+                skipped += 1
+                continue
+            seen_hashes.add(poem["text_hash"])
             f.write(json.dumps(poem, ensure_ascii=False) + "\n")
             count += 1
 
     print(f"Ingested {count} poems from '{args.source}' to {args.output}")
+    if skipped:
+        print(f"  (skipped {skipped} duplicates)")
 
     # Warn if corpus is too small
     if count < 1500 and args.source == "all":
