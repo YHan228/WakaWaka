@@ -11,8 +11,8 @@ Classical Japanese poetry learning platform for Chinese speakers. Build pipeline
 
 ## Quick Start
 ```bash
-cp .env.example .env
-# Edit .env with your GEMINI_API_KEY
+conda activate wakadecoder  # Python 3.11 environment
+cp .env.example .env        # Edit with your GEMINI_API_KEY
 pip install -r requirements.txt
 ```
 
