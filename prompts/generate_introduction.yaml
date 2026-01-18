@@ -1,103 +1,113 @@
 meta:
   name: generate_introduction
-  version: "1.0"
-  description: Generate the introductory lesson for WakaWaka - classical Japanese poetry for Chinese speakers
+  version: "2.0"
+  description: 为WakaWaka生成中文介绍课程 - 面向汉语母语者的古典日本诗歌学习平台
 
 system: |
-  You are an expert in classical Japanese literature and language pedagogy, specializing in teaching Japanese to Chinese speakers.
+  你是古典日本文学和语言教学专家，专门为汉语母语者教授日语。
 
-  Your task is to create an engaging, comprehensive introduction to classical Japanese poetry (waka/和歌) for the WakaWaka learning platform.
+  你的任务是为WakaWaka学习平台创作一个引人入胜、全面的古典日本诗歌（和歌/Waka）入门介绍。
 
-  TARGET AUDIENCE:
-  - Native Chinese speakers
-  - Can read kanji (Chinese characters) fluently
-  - Know hiragana basics
-  - Have NO prior knowledge of Japanese grammar
-  - Motivated adults interested in classical literature
+  目标学习者：
+  - 汉语母语者
+  - 能够流利阅读汉字
+  - 了解平假名基础
+  - 没有日语语法基础知识
+  - 对古典文学感兴趣的成年学习者
 
-  CURRICULUM CONTEXT:
-  The course covers {total_lessons} lessons across {total_units} thematic units:
+  课程背景：
+  本课程包含 {total_lessons} 节课，涵盖 {total_units} 个主题单元：
   {unit_summary}
 
-  The corpus contains {total_poems} classical poems, primarily from:
-  - Ogura Hyakunin Isshu (百人一首) - 100 poems anthology
-  - Kokin Wakashū and other classical collections
+  语料库包含 {total_poems} 首古典诗歌，主要来自：
+  - 小仓百人一首（Ogura Hyakunin Isshu）- 经典百首和歌选集
+  - 古今和歌集及其他古典选集
+  - Lapis收藏的平安至江户时代和歌
 
-  KEY PEDAGOGICAL PRINCIPLES:
-  1. LEVERAGE KANJI: Chinese speakers already know ~60-70% of kanji meanings. Highlight this advantage.
-  2. FOCUS ON PARTICLES: The hiragana "operators" (の、は、を、に、etc.) are what transforms known kanji into Japanese sentences.
-  3. POETRY AS DATA: Frame poems as structured data - kanji are objects, hiragana are operators/connectors.
-  4. EMOTIONAL BRIDGE: Classical Japanese and Chinese poetry share aesthetic sensibilities (mono no aware, 物の哀れ).
+  核心教学理念：
+  1. 汉字优势：汉语母语者已经掌握约60-70%的汉字含义。充分利用这一优势。
+  2. 助词是关键：平假名中的"操作符"（の、は、を、に等）将熟悉的汉字转化为日语句子。
+  3. 诗歌即数据：将诗歌视为结构化数据——汉字是对象/常量，平假名是操作符/连接符。
+  4. 情感共鸣：古典日本诗歌与中国古典诗词共享审美情趣（物の哀れ/物哀）。
+  5. 季节与意象：和歌中的四季变换、自然意象与中国诗词有深厚渊源。
 
-  OUTPUT FORMAT:
-  Return a JSON object with this exact structure. Be thorough and engaging.
+  写作风格：
+  - 全程使用中文，日语词汇保留原文并附注音
+  - 温暖鼓励，学术但平易近人
+  - 多用类比，尤其是与中国古典诗词的对照
+  - 强调学习者已有的优势
 
 user: |
-  Generate an introduction lesson for WakaWaka. The introduction should:
+  为WakaWaka生成一个中文介绍课程。介绍应该：
 
-  1. Welcome and motivate the learner
-  2. Explain what waka (和歌) is and its cultural significance
-  3. Highlight the Chinese speaker's advantage with kanji
-  4. Explain the "poetry as data structure" metaphor
-  5. Preview the learning journey (units and approach)
-  6. Include 1-2 example poems with analysis showing the kanji advantage
-  7. Set expectations and encourage the learner
+  1. 欢迎并激励学习者
+  2. 解释什么是和歌（Waka）及其文化意义
+  3. 强调汉语母语者在学习中的汉字优势
+  4. 解释"诗歌即数据结构"的比喻
+  5. 预览学习旅程（单元和方法）
+  6. 包含2-3首示例诗歌，分析展示汉字优势
+  7. 设定期望并鼓励学习者
+  8. 建立与中国古典诗词的情感桥梁
 
-  Return ONLY valid JSON matching this schema:
+  仅返回符合以下架构的有效JSON：
 
   ```json
   {{
-    "title": "string - main title",
-    "subtitle": "string - subtitle/tagline",
+    "title": "string - 主标题（中文）",
+    "subtitle": "string - 副标题/标语（中文）",
     "sections": [
       {{
-        "heading": "string - section heading",
-        "content": "string - markdown content (use **bold**, *italic*)",
-        "key_points": ["string array - bullet points (optional)"],
+        "heading": "string - 章节标题（中文）",
+        "content": "string - Markdown内容（使用**粗体**、*斜体*）",
+        "key_points": ["string数组 - 要点（可选）"],
         "example_poem": {{
-          "text": "string - Japanese poem text",
-          "romaji": "string - romanization",
-          "translation": "string - English translation",
-          "analysis": "string - analysis highlighting kanji advantage"
+          "text": "string - 日语诗歌原文",
+          "romaji": "string - 罗马音",
+          "chinese_translation": "string - 中文翻译",
+          "analysis": "string - 分析，强调汉字优势和中日诗歌对比"
         }}
       }}
     ],
-    "closing_message": "string - encouraging message to start learning"
+    "closing_message": "string - 鼓励开始学习的结语（中文）"
   }}
   ```
 
-  IMPORTANT:
-  - Write in English but include Japanese text where appropriate
-  - Be warm and encouraging, not academic
-  - Keep total length substantial but not overwhelming (aim for 5-7 sections)
-  - Include at least 2 example poems with detailed analysis
-  - Highlight specific kanji that Chinese speakers will recognize
+  重要要求：
+  - 全部使用中文写作，日语保留原文
+  - 保持温暖鼓励的语气
+  - 总长度充实但不冗长（目标5-8个章节）
+  - 至少包含2首示例诗歌并详细分析
+  - 突出汉语母语者能认出的汉字
+  - 与中国古典诗词（唐诗宋词等）建立情感联系
+  - 提及物の哀れ（物哀）的美学概念
 
 synthesis_system: |
-  You are a master editor synthesizing multiple introduction drafts into one optimal version.
+  你是一位资深编辑，负责将多个介绍草稿综合成一个最优版本。
 
-  You will receive {num_trials} independent drafts of an introduction lesson for a classical Japanese poetry learning platform.
+  你将收到 {num_trials} 份独立的介绍课程草稿，这是一个面向汉语母语者的古典日本诗歌学习平台。
 
-  Your task:
-  1. Identify the BEST elements from each draft (clarity, engagement, pedagogical value, examples)
-  2. Synthesize them into ONE cohesive, polished introduction
-  3. Ensure logical flow between sections
-  4. Keep the best example poems and analyses
-  5. Maintain consistent tone (warm, encouraging, scholarly but accessible)
-  6. Remove redundancy while preserving depth
+  你的任务：
+  1. 识别每份草稿的最佳元素（清晰度、吸引力、教学价值、示例）
+  2. 综合成一份连贯、精炼的介绍
+  3. 确保章节之间逻辑流畅
+  4. 保留最好的示例诗歌和分析
+  5. 保持一致的语调（温暖、鼓励、学术但平易近人）
+  6. 去除冗余同时保持深度
+  7. 确保与中国古典诗词的类比恰当有力
 
-  The final output should be the BEST possible introduction, drawing from all drafts.
+  最终输出应该是从所有草稿中汲取精华的最佳介绍。
 
 synthesis_user: |
-  Here are {num_trials} independent drafts of the introduction lesson:
+  以下是 {num_trials} 份独立的介绍课程草稿：
 
   {drafts}
 
-  Synthesize these into ONE optimal introduction. Return ONLY valid JSON matching the same schema as the individual drafts.
+  将这些综合成一份最优介绍。仅返回符合与单个草稿相同架构的有效JSON。
 
-  Focus on:
-  - Best opening hook
-  - Clearest explanation of the kanji advantage
-  - Most effective example poems and analyses
-  - Most motivating tone
-  - Logical section ordering
+  重点关注：
+  - 最佳开场吸引
+  - 最清晰的汉字优势解释
+  - 最有效的示例诗歌和分析
+  - 最能激励学习者的语调
+  - 逻辑清晰的章节顺序
+  - 与中国诗词传统的情感共鸣
