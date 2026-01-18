@@ -1,0 +1,211 @@
+meta:
+  name: generate_crash_course
+  version: "1.0"
+  description: 为零基础汉语母语者生成日语速成课程
+
+# Curriculum outline for reference
+curriculum:
+  - lesson_number: 1
+    title: "日语之声"
+    focus: "Hiragana introduction, pronunciation, mora timing"
+    duration: 20
+    objectives:
+      - "了解日语的基本音节系统（五十音）"
+      - "认识元音あいうえお及其发音"
+      - "理解拍（mora）的概念和节奏"
+      - "初步了解清音与浊音的区别"
+
+  - lesson_number: 2
+    title: "平假名入门"
+    focus: "Hiragana chart, reading practice, common patterns"
+    duration: 15
+    objectives:
+      - "掌握平假名あ行到な行"
+      - "学会拼读简单的日语词汇"
+      - "识别常见的假名组合模式"
+      - "练习书写基础平假名"
+
+  - lesson_number: 3
+    title: "汉字的日语读法"
+    focus: "Sino-Japanese readings, meaning drift, kanji compounds"
+    duration: 15
+    objectives:
+      - "理解音读和训读的概念"
+      - "发现汉语与日语汉字的意义对应"
+      - "学习常见汉字词汇的日语读法"
+      - "建立汉字认知的信心"
+
+  - lesson_number: 4
+    title: "句子的积木"
+    focus: "SOV word order, particles concept, basic structure"
+    duration: 15
+    objectives:
+      - "理解日语SOV语序（主语-宾语-动词）"
+      - "初步认识助词的概念"
+      - "学会分析简单句子的基本结构"
+      - "对比中日句子结构的异同"
+
+  - lesson_number: 5
+    title: "五大助词"
+    focus: "の、は、が、を、に - core particles"
+    duration: 20
+    objectives:
+      - "掌握の（的）的用法"
+      - "区分は（主题）和が（主语）"
+      - "学会使用を（宾语标记）和に（方向/时间）"
+      - "通过例句巩固五大助词"
+
+  - lesson_number: 6
+    title: "动词与时间"
+    focus: "Verb basics, tense, classical vs modern hints"
+    duration: 15
+    objectives:
+      - "认识日语动词的基本形态"
+      - "理解现代日语的时态系统"
+      - "初步了解古典日语的动词特点"
+      - "为学习和歌做好准备"
+
+  - lesson_number: 7
+    title: "初遇和歌"
+    focus: "Apply everything to a simple poem, bridge to main curriculum"
+    duration: 20
+    objectives:
+      - "运用所学知识解读一首简单和歌"
+      - "识别诗中的汉字和助词"
+      - "感受古典日语的韵味"
+      - "建立进入主课程的信心"
+
+system: |
+  你是日语教学专家，专门为零基础汉语母语者设计入门课程。
+
+  学生背景：
+  - 汉语母语者，能流利阅读汉字
+  - 完全没有日语基础
+  - 目标是学习阅读古典日本诗歌（和歌）
+  - 成年学习者，有学习语言的动机
+
+  教学原则：
+  1. 从已知到未知：充分利用汉字认知优势，从熟悉的汉字开始
+  2. 循序渐进：每课约15-20分钟，目标明确
+  3. 实践为主：每课包含练习和验证
+  4. 鼓励激励：强调学习者已有的优势
+  5. 桥接古典：逐步为古典日语（和歌）学习做准备
+
+  写作要求：
+  - 全程使用中文讲解，日语保留原文
+  - 语气温暖友好，像一位耐心的老师
+  - 多用类比，特别是中日对比
+  - 每个概念都要有例子
+  - 练习设计要易于理解和完成
+
+user: |
+  生成第 {lesson_number}/7 课：{title}
+
+  本课目标：
+  {objectives}
+
+  预估时长：{duration} 分钟
+
+  前置知识：{prerequisites}
+
+  请生成完整的课程内容，符合以下JSON格式。注意：
+  - teaching_sequence 应包含多种步骤类型（text, kana_chart, vocab_intro, practice, example_sentence, summary等）
+  - 每个概念都要有清晰的解释和例子
+  - 包含至少2个练习步骤
+  - 以summary步骤结束，总结本课要点
+  - 如果是第7课，包含一个mini_poem步骤展示简单和歌
+
+  返回JSON格式：
+  ```json
+  {{
+    "lesson_id": "crash_{lesson_number:02d}",
+    "lesson_number": {lesson_number},
+    "title": "{title}",
+    "subtitle": "一句吸引人的副标题",
+    "estimated_minutes": {duration},
+    "objectives": ["目标1", "目标2", ...],
+    "prerequisites": ["前置知识1", ...] 或 [],
+    "teaching_sequence": [
+      {{
+        "type": "text",
+        "title": "章节标题（可选）",
+        "content": "Markdown格式的内容"
+      }},
+      {{
+        "type": "kana_chart",
+        "title": "假名表标题",
+        "description": "说明文字",
+        "chart_type": "hiragana",
+        "rows": [
+          [{{"kana": "あ", "romaji": "a", "mnemonic": "记忆技巧"}}, ...],
+          ...
+        ],
+        "highlight_row": 0
+      }},
+      {{
+        "type": "vocab_intro",
+        "title": "词汇介绍标题",
+        "items": [
+          {{"japanese": "日本語", "reading": "にほんご", "chinese": "日本语", "meaning": "日语", "note": "备注"}}
+        ]
+      }},
+      {{
+        "type": "practice",
+        "title": "练习标题",
+        "instruction": "练习说明",
+        "exercise_type": "match|fill_blank|select|order",
+        "items": [...],
+        "hint": "提示（可选）"
+      }},
+      {{
+        "type": "example_sentence",
+        "title": "例句标题（可选）",
+        "sentence": "日语句子",
+        "reading": "读音",
+        "translation": "中文翻译",
+        "breakdown": [
+          {{"part": "词汇", "reading": "读音", "role": "语法角色", "meaning": "含义"}}
+        ],
+        "grammar_note": "语法说明（可选）"
+      }},
+      {{
+        "type": "tip",
+        "tip_type": "learning|cultural|memory|comparison",
+        "title": "提示标题（可选）",
+        "content": "提示内容"
+      }},
+      {{
+        "type": "summary",
+        "title": "本课要点",
+        "key_points": ["要点1", "要点2", ...],
+        "preview_next": "下一课预告（可选）"
+      }}
+    ],
+    "comprehension_check": {{
+      "questions": [
+        {{
+          "question": "问题内容",
+          "question_type": "multiple_choice|fill_blank|true_false",
+          "options": ["选项A", "选项B", "选项C", "选项D"],
+          "correct_answer": "正确答案",
+          "explanation": "解释",
+          "hint": "提示（可选）"
+        }}
+      ]
+    }}
+  }}
+  ```
+
+  重要：仅返回有效的JSON，不要包含任何其他文字。
+
+# Prompt for generating course metadata wrapper
+course_wrapper: |
+  {{
+    "title": "日语速成：从零到和歌",
+    "subtitle": "专为汉语母语者设计的7课入门课程",
+    "description": "在7节课中，利用你的汉字优势，快速掌握阅读古典日本诗歌所需的基础知识。",
+    "target_audience": "零基础汉语母语者",
+    "lessons": [...],
+    "version": "1.0",
+    "generated_at": "ISO时间戳"
+  }}

@@ -60,6 +60,23 @@ from .literary import (
     render_literary_analysis,
 )
 
+from .crash_course import (
+    get_crash_course_css,
+    render_text_step,
+    render_kana_chart_step,
+    render_vocab_intro_step,
+    render_practice_step,
+    render_example_sentence_step,
+    render_mini_poem_step,
+    render_summary_step as render_crash_summary_step,
+    render_tip_step,
+    render_crash_course_step,
+    render_crash_course_lesson_header,
+    render_crash_course_quiz,
+    render_crash_course_overview,
+    load_crash_course,
+)
+
 __all__ = [
     # Lesson rendering
     "get_vocab_css",
@@ -104,4 +121,19 @@ __all__ = [
     # Literary
     "get_literary_css",
     "render_literary_analysis",
+    # Crash course
+    "get_crash_course_css",
+    "render_text_step",
+    "render_kana_chart_step",
+    "render_vocab_intro_step",
+    "render_practice_step",
+    "render_example_sentence_step",
+    "render_mini_poem_step",
+    "render_crash_summary_step",
+    "render_tip_step",
+    "render_crash_course_step",
+    "render_crash_course_lesson_header",
+    "render_crash_course_quiz",
+    "render_crash_course_overview",
+    "load_crash_course",
 ]

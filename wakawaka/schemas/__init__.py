@@ -68,6 +68,25 @@ from .literary import (
     LiteraryAnalysisBatch,
 )
 
+# Crash course schemas
+from .crash_course import (
+    CrashCourseStepBase,
+    TextStep,
+    KanaChartStep,
+    VocabIntroStep,
+    PracticeStep,
+    ExampleSentenceStep,
+    MiniPoemStep,
+    SummaryStep as CrashCourseSummaryStep,
+    TipStep,
+    CrashCourseStep,
+    CrashCourseQuizQuestion,
+    CrashCourseQuiz,
+    CrashCourseLesson,
+    CrashCourse,
+    CrashCourseProgress,
+)
+
 __all__ = [
     # Annotation
     'FugashiToken',
@@ -114,4 +133,20 @@ __all__ = [
     'ImageryNote',
     'PoemLiteraryAnalysis',
     'LiteraryAnalysisBatch',
+    # Crash course
+    'CrashCourseStepBase',
+    'TextStep',
+    'KanaChartStep',
+    'VocabIntroStep',
+    'PracticeStep',
+    'ExampleSentenceStep',
+    'MiniPoemStep',
+    'CrashCourseSummaryStep',
+    'TipStep',
+    'CrashCourseStep',
+    'CrashCourseQuizQuestion',
+    'CrashCourseQuiz',
+    'CrashCourseLesson',
+    'CrashCourse',
+    'CrashCourseProgress',
 ]
