@@ -1,376 +1,330 @@
 {
   "lesson_id": "lesson_particle_tomo",
-  "lesson_title": "The Logic of Concession: Particle とも (tomo) — The 'Even If' Gate",
-  "lesson_summary": "This lesson introduces the particle とも (tomo), which functions as a logical 'concession' gate, indicating that a result remains true even if a specific condition is met.",
+  "lesson_title": "即使时光流逝：逆接假定条件「とも」",
+  "lesson_summary": "学习表示“即使……也……”的接续助词「とも」，掌握其与已学过的逆接助词「ど・ども」的区别，并欣赏和歌中的“见立”修辞。",
   "grammar_point": "particle_tomo",
   "grammar_explanation": {
-    "concept": "In the previous lesson, we learned how 'ba' (ば) creates a causal link (If A, then B). 'tomo' (とも) is the logical inverse: it creates a concessive link. It signals that the following statement holds true 'even if' or 'although' the preceding condition exists. In programming terms, it is a 'Despite' operator.",
-    "formation": "Usually attaches to the Shushikei (終止形 - Terminal Form) of verbs and adjectives. Note: In poetic texts, it may also appear as 'domo' (ども) when attached to the Izenkei, but the logical function remains the same.",
-    "variations": [
-      "ども (domo) - The voiced version, often used for 'although' (factual concession) rather than 'even if' (hypothetical)."
-    ],
+    "concept": "接续助词「とも」表示逆接假定条件。即前项是一个假设的情况（或者说话人将其作为假设提出），即使这个情况发生，后项的主张或意志也不会改变。相当于中文的“即使……也……”或“纵使……”。",
+    "formation": "活用词的终止形（終止形） + とも",
+    "variations": [],
     "common_confusions": [
-      "vs. ば (ba): 'ba' creates a path; 'tomo' acknowledges a path but ignores its usual outcome.",
-      "vs. と (to): While 'to' can mean 'and' or 'if', 'tomo' specifically adds the 'even' (concessive) nuance."
+      "「とも」 vs 「ども」：这是古典日语阅读中最大的陷阱之一。我们在之前的课程学过接续助词「ど・ども」（虽然……但是）。在古代文献中，浊音符号常被省略，导致「ども」常被写成「とも」。\n\n区分方法（系统性规则）：\n1. 看接续形式：\n   - 已然形 + とも（实为ども） = 确定逆接（虽然……但是……）\n   - 终止形 + とも = 假定逆接（即使……也……）\n\n2. 逻辑判断：\n   - 描述已发生的事实 -> 确定逆接\n   - 描述假设或强调决心 -> 假定逆接"
     ]
   },
   "teaching_sequence": [
     {
       "type": "introduction",
-      "content": "You have already mastered the 'ba' (ば) particle, which connects a condition to a result. However, poetry often deals with persistence in the face of obstacles. To express 'Even if X happens, Y remains,' Japanese uses the particle とも (tomo). Think of this as a logical filter that allows the sentence to proceed regardless of the 'input' condition."
+      "content": "在之前的单元中，我们学习了「ど」和「ども」，它们表示“虽然事实是A，但结果是B”（确定逆接）。\n\n但在表达强烈的情感或决心时，诗人往往需要一种更具力量的逻辑：“即使发生A，我也依然B”。这种不随假设条件改变的意志，就是本课的主角——接续助词「とも」。\n\n如果说「ども」是面向过去的妥协（try...catch），那么「とも」就是面向未来的宣言（even if...）。"
     },
     {
       "type": "poem_presentation",
-      "poem_id": "lapis_43e27905590c7570",
+      "poem_id": "lapis_da6f4a62d9fef3a2",
       "display": {
-        "text_with_furigana": "<ruby>吉野河<rt>よしのがわ</rt></ruby><ruby>いはきり<rt>いはきり</rt></ruby><ruby>とほし<rt>とほし</rt></ruby><ruby>行<rt>ゆ</rt></ruby>く<ruby>水<rt>みず</rt></ruby>の<ruby>おと<rt>おと</rt></ruby>には<ruby>たて<rt>たて</rt></ruby>し<ruby>こひ<rt>こひ</rt></ruby>は<ruby>しぬ<rt>しぬ</rt></ruby><ruby>とも<rt>とも</rt></ruby>",
-        "romaji": "yoshinogawa, ihakiritōshi iku, mizu no oto, ni wa tateshi koi, wa shinutomo",
-        "translation": "Like the water of the Yoshino River flowing through distant rocks, my love—though it makes no sound—will persist even if I die."
+        "text_with_furigana": "<ruby>年<rt>とし</rt></ruby><ruby>経<rt>ふ</rt></ruby>とも<ruby>越<rt>こし</rt></ruby>の<ruby>白山<rt>しらやま</rt></ruby><ruby>忘<rt>わす</rt></ruby>れずは<ruby>頭<rt>かしら</rt></ruby>の<ruby>雪<rt>ゆき</rt></ruby>をあはれとも<ruby>見<rt>み</rt></ruby>よ",
+        "romaji": "toshi fu tomo koshi no shirayama wasurezu wa kashira no yuki o aware tomo miyo",
+        "translation": "纵使岁月流逝，若你不曾忘记越国的白山，那么看着我满头如雪的白发，也请动一动怜惜之心吧。"
       },
       "vocabulary": [
         {
-          "word": "吉野河",
-          "reading": "よしのがわ",
-          "meaning": "Yoshino River",
-          "span": [
-            0,
-            3
-          ],
-          "chinese_cognate_note": "吉野河 (River name)"
+          "word": "年",
+          "reading": "とし",
+          "meaning": "年，岁月",
+          "span": null,
+          "chinese_cognate_note": "年"
         },
         {
-          "word": "いはきり",
-          "reading": "いはきり",
-          "meaning": "rocky/craggy",
-          "span": [
-            3,
-            7
-          ],
-          "chinese_cognate_note": "岩 (rock) + 切 (cut)"
+          "word": "経",
+          "reading": "ふ",
+          "meaning": "（时间）流逝，经过（下二段动词终止形）",
+          "span": null,
+          "chinese_cognate_note": "经"
         },
         {
-          "word": "とほし",
-          "reading": "とほし",
-          "meaning": "far/distant",
-          "span": [
-            7,
-            10
-          ],
-          "chinese_cognate_note": "遠 (distant)"
+          "word": "とも",
+          "reading": "とも",
+          "meaning": "（接续助词）即使……也……",
+          "span": null,
+          "chinese_cognate_note": null
         },
         {
-          "word": "行く",
-          "reading": "ゆく",
-          "meaning": "to go/flow",
-          "span": [
-            10,
-            12
-          ],
-          "chinese_cognate_note": "行 (to go)"
-        },
-        {
-          "word": "水",
-          "reading": "みず",
-          "meaning": "water",
-          "span": [
-            12,
-            13
-          ],
-          "chinese_cognate_note": "水 (water)"
+          "word": "越",
+          "reading": "こし",
+          "meaning": "越国（古地名，今北陆地区）",
+          "span": null,
+          "chinese_cognate_note": "越"
         },
         {
           "word": "の",
           "reading": "の",
-          "meaning": "possessive particle (of)",
-          "span": [
-            13,
-            14
-          ],
-          "chinese_cognate_note": "Equivalent to 之"
+          "meaning": "（格助词）的",
+          "span": null,
+          "chinese_cognate_note": null
         },
         {
-          "word": "おと",
-          "reading": "おと",
-          "meaning": "sound",
-          "span": [
-            14,
-            16
-          ],
-          "chinese_cognate_note": "音 (sound)"
+          "word": "白山",
+          "reading": "しらやま",
+          "meaning": "白山（山名）",
+          "span": null,
+          "chinese_cognate_note": "白山"
         },
         {
-          "word": "に",
-          "reading": "に",
-          "meaning": "location/target particle",
-          "span": [
-            16,
-            17
-          ],
+          "word": "忘れ",
+          "reading": "わすれ",
+          "meaning": "忘记（下二段动词未然形）",
+          "span": null,
+          "chinese_cognate_note": "忘"
+        },
+        {
+          "word": "ず",
+          "reading": "ず",
+          "meaning": "（否定助动词）不",
+          "span": null,
           "chinese_cognate_note": null
         },
         {
           "word": "は",
           "reading": "は",
-          "meaning": "topic marker",
-          "span": [
-            17,
-            18
-          ],
+          "meaning": "（系助词）表示假定条件，如果……",
+          "span": null,
           "chinese_cognate_note": null
         },
         {
-          "word": "たて",
-          "reading": "たて",
-          "meaning": "to stand/rise (here: to make a sound)",
-          "span": [
-            18,
-            20
-          ],
-          "chinese_cognate_note": "立 (to stand)"
+          "word": "頭",
+          "reading": "かしら",
+          "meaning": "头，此处指头发",
+          "span": null,
+          "chinese_cognate_note": "头"
         },
         {
-          "word": "し",
-          "reading": "し",
-          "meaning": "past tense attributive marker",
-          "span": [
-            20,
-            21
-          ],
+          "word": "の",
+          "reading": "の",
+          "meaning": "（格助词）的",
+          "span": null,
           "chinese_cognate_note": null
         },
         {
-          "word": "こひ",
-          "reading": "こひ",
-          "meaning": "love/longing",
-          "span": [
-            21,
-            23
-          ],
-          "chinese_cognate_note": "恋 (love)"
+          "word": "雪",
+          "reading": "ゆき",
+          "meaning": "雪（隐喻白发）",
+          "span": null,
+          "chinese_cognate_note": "雪"
         },
         {
-          "word": "は",
-          "reading": "は",
-          "meaning": "topic marker",
-          "span": [
-            23,
-            24
-          ],
+          "word": "を",
+          "reading": "を",
+          "meaning": "（格助词）表示动作对象",
+          "span": null,
           "chinese_cognate_note": null
         },
         {
-          "word": "しぬ",
-          "reading": "しぬ",
-          "meaning": "to die",
-          "span": [
-            24,
-            26
-          ],
-          "chinese_cognate_note": "死 (to die)"
+          "word": "あはれ",
+          "reading": "あはれ",
+          "meaning": "令人感动，可怜，情趣",
+          "span": null,
+          "chinese_cognate_note": null
         },
         {
-          "word": "とも",
-          "reading": "とも",
-          "meaning": "even if",
-          "span": [
-            26,
-            28
-          ],
+          "word": "と",
+          "reading": "と",
+          "meaning": "（格助词）表示引用的内容",
+          "span": null,
           "chinese_cognate_note": null
+        },
+        {
+          "word": "も",
+          "reading": "も",
+          "meaning": "（系助词）也",
+          "span": null,
+          "chinese_cognate_note": null
+        },
+        {
+          "word": "見よ",
+          "reading": "みよ",
+          "meaning": "看（上一段动词命令形）",
+          "span": null,
+          "chinese_cognate_note": "见"
         }
       ],
       "focus_highlight": [
-        26,
-        28
+        1,
+        3
       ]
     },
     {
       "type": "grammar_spotlight",
-      "content": "Look at the end of the poem: **しぬとも** (shinu-tomo). \n\n1. **しぬ (Shinu)**: The verb 'to die' (死). \n2. **とも (Tomo)**: The concessive particle.\n\nIn Chinese, this logic is expressed as '纵使...也' (zòngshǐ... yě) or '即便...也' (jíbiàn... yě). The poet is saying: 'Even if [I] die (纵使死), the love (恋) remains.' The particle とも acts as a terminal point for the condition, allowing the emotional weight of the poem to override the physical reality of death.",
+      "content": "请注意这里的接续：\n**経（ふ）** 是动词的**终止形**。\n**とも** 接在终止形之后，表示“即使岁月流逝”。\n\n这是一种假设性的让步。诗人并不只是在陈述岁月流逝的事实，而是在强调：无论时间如何改变，那个前提（对白山的记忆）应当能唤起对眼前白发的共鸣。",
       "evidence": "See the poem above."
     },
     {
       "type": "poem_presentation",
-      "poem_id": "lapis_c8cd1ec937da3ef9",
+      "poem_id": "lapis_7533a7b47a2de042",
       "display": {
-        "text_with_furigana": "<ruby>ゆふされ<rt>ゆふされ</rt></ruby>は<ruby>蛍<rt>ほたる</rt></ruby>よりけにもゆれ<ruby>とも<rt>とも</rt></ruby><ruby>ひかり<rt>ひかり</rt></ruby><ruby>見<rt>み</rt></ruby>ねはや<ruby>人<rt>ひと</rt></ruby>のつれなき",
-        "romaji": "yufusareha, hotaru yori keni, mo yure tomo, hikari mine haya, hito no tsurenaki",
-        "translation": "When evening comes, I burn even more than the fireflies; yet, though I burn, you do not see the light—how heartless you are."
+        "text_with_furigana": "<ruby>余所<rt>よそ</rt></ruby>に<ruby>見<rt>み</rt></ruby>て<ruby>帰<rt>かえ</rt></ruby>らむ<ruby>人<rt>ひと</rt></ruby>に<ruby>藤<rt>ふじ</rt></ruby>の<ruby>花<rt>はな</rt></ruby><ruby>這<rt>は</rt></ruby>ひ<ruby>纏<rt>まつ</rt></ruby>はれよ<ruby>枝<rt>えだ</rt></ruby>は<ruby>折<rt>を</rt></ruby>るとも",
+        "romaji": "yoso ni mite kaeramu hito ni fuji no hana hai matsuwareyo eda wa oru tomo",
+        "translation": "对于那些冷淡看一眼就要归去的人，藤花啊，请你爬过去缠住他吧！即使折断枝条也在所不惜。"
       },
       "vocabulary": [
         {
-          "word": "ゆふされ",
-          "reading": "ゆふされ",
-          "meaning": "evening",
-          "span": [
-            0,
-            4
-          ],
-          "chinese_cognate_note": "夕 (evening)"
-        },
-        {
-          "word": "は",
-          "reading": "は",
-          "meaning": "topic marker",
-          "span": [
-            4,
-            5
-          ],
+          "word": "余所",
+          "reading": "よそ",
+          "meaning": "别处，冷淡，无关的样子",
+          "span": null,
           "chinese_cognate_note": null
         },
         {
-          "word": "蛍",
-          "reading": "ほたる",
-          "meaning": "firefly",
-          "span": [
-            5,
-            6
-          ],
-          "chinese_cognate_note": "萤 (firefly)"
-        },
-        {
-          "word": "より",
-          "reading": "より",
-          "meaning": "than (comparison)",
-          "span": [
-            6,
-            8
-          ],
+          "word": "に",
+          "reading": "に",
+          "meaning": "（格助词）表示状态",
+          "span": null,
           "chinese_cognate_note": null
-        },
-        {
-          "word": "けに",
-          "reading": "けに",
-          "meaning": "particularly/more so",
-          "span": [
-            8,
-            10
-          ],
-          "chinese_cognate_note": null
-        },
-        {
-          "word": "もゆ",
-          "reading": "もゆ",
-          "meaning": "to burn",
-          "span": [
-            10,
-            12
-          ],
-          "chinese_cognate_note": "燃 (to burn)"
-        },
-        {
-          "word": "とも",
-          "reading": "とも",
-          "meaning": "although / even if",
-          "span": [
-            13,
-            15
-          ],
-          "chinese_cognate_note": null
-        },
-        {
-          "word": "ひかり",
-          "reading": "ひかり",
-          "meaning": "light",
-          "span": [
-            15,
-            18
-          ],
-          "chinese_cognate_note": "光 (light)"
         },
         {
           "word": "見",
           "reading": "み",
-          "meaning": "to see",
-          "span": [
-            18,
-            19
-          ],
-          "chinese_cognate_note": "见 (to see)"
+          "meaning": "看（上一段动词连用形）",
+          "span": null,
+          "chinese_cognate_note": "见"
         },
         {
-          "word": "ね",
-          "reading": "ね",
-          "meaning": "negative particle (not)",
-          "span": [
-            19,
-            20
-          ],
+          "word": "て",
+          "reading": "て",
+          "meaning": "（接续助词）表示动作相继",
+          "span": null,
           "chinese_cognate_note": null
         },
         {
-          "word": "はや",
-          "reading": "はや",
-          "meaning": "exclamatory particle (alas!)",
-          "span": [
-            20,
-            22
-          ],
+          "word": "帰ら",
+          "reading": "かえら",
+          "meaning": "回去（四段动词未然形）",
+          "span": null,
+          "chinese_cognate_note": "归"
+        },
+        {
+          "word": "む",
+          "reading": "む",
+          "meaning": "（助动词）想要……，将要……（婉曲/推量）",
+          "span": null,
           "chinese_cognate_note": null
         },
         {
           "word": "人",
           "reading": "ひと",
-          "meaning": "person (the beloved)",
-          "span": [
-            22,
-            23
-          ],
-          "chinese_cognate_note": "人 (person)"
+          "meaning": "人",
+          "span": null,
+          "chinese_cognate_note": "人"
+        },
+        {
+          "word": "に",
+          "reading": "に",
+          "meaning": "（格助词）表示动作对象",
+          "span": null,
+          "chinese_cognate_note": null
+        },
+        {
+          "word": "藤",
+          "reading": "ふじ",
+          "meaning": "紫藤",
+          "span": null,
+          "chinese_cognate_note": "藤"
         },
         {
           "word": "の",
           "reading": "の",
-          "meaning": "subject marker in subordinate clause",
-          "span": [
-            23,
-            24
-          ],
+          "meaning": "（格助词）的",
+          "span": null,
           "chinese_cognate_note": null
         },
         {
-          "word": "つれなき",
-          "reading": "つれなき",
-          "meaning": "cold-hearted/indifferent",
-          "span": [
-            24,
-            28
-          ],
+          "word": "花",
+          "reading": "はな",
+          "meaning": "花",
+          "span": null,
+          "chinese_cognate_note": "花"
+        },
+        {
+          "word": "這ひ纏はれ",
+          "reading": "はいまつわれ",
+          "meaning": "爬过去缠绕（复合动词命令形）",
+          "span": null,
+          "chinese_cognate_note": "缠"
+        },
+        {
+          "word": "よ",
+          "reading": "よ",
+          "meaning": "（终助词）表示命令的语气",
+          "span": null,
+          "chinese_cognate_note": null
+        },
+        {
+          "word": "枝",
+          "reading": "えだ",
+          "meaning": "树枝",
+          "span": null,
+          "chinese_cognate_note": "枝"
+        },
+        {
+          "word": "は",
+          "reading": "は",
+          "meaning": "（系助词）提示主题",
+          "span": null,
+          "chinese_cognate_note": null
+        },
+        {
+          "word": "折る",
+          "reading": "をる",
+          "meaning": "折断（四段动词终止形）",
+          "span": null,
+          "chinese_cognate_note": "折"
+        },
+        {
+          "word": "とも",
+          "reading": "とも",
+          "meaning": "（接续助词）即使……也……",
+          "span": null,
           "chinese_cognate_note": null
         }
       ],
       "focus_highlight": [
-        13,
-        15
+        27,
+        29
       ]
     },
     {
       "type": "contrast_example",
-      "content": "Compare these two logical structures:\n1. **もゆれば** (moyu-reba): **Since** I burn, [you should see the light].\n2. **もゆれとも** (moyu-re-tomo): **Although** I burn, [you do not see the light].\n\nThe poet uses 'tomo' to highlight the painful contradiction: the fire of passion is there, but the expected result (being noticed) is missing."
+      "content": "这里出现了**折る（をる）** + **とも**。\n\n**折る** 是四段动词的**终止形**。\n如果是“虽然折断了”的确定逆接，应该用已然形「折れ」+「ども」，即「折れども」。\n\n对比：\n- 折るとも (oru tomo) = 即使折断（尚未发生，或不介意发生）\n- 折れども (ore domo) = 虽然折断了（已经发生的事实）\n\n这种通过接续形式（终止形 vs 已然形）来区分含义的逻辑，是古典语法的核心系统之一。"
     },
     {
       "type": "comprehension_check",
-      "question": "In Poem 3, 'おもへとも (omohe-tomo)' uses the verb 'omo-fu' (to think/feel). Based on the logic of 'tomo', what is the speaker saying?",
-      "answer": "The speaker is saying 'Even though I think/feel [this way]...' or 'Despite my thoughts...'",
-      "hint": "Think of 'tomo' as 'although' or 'even if'."
+      "question": "诗中的「見せずとも」表达了什么逻辑？",
+      "answer": "即使不展示（花色）。",
+      "hint": "「ず」是否定助动词的终止形。终止形 + とも = 即使……（假定逆接）。"
     },
     {
-      "type": "summary",
-      "content": "You have now added the 'Concessive Gate' to your grammatical toolkit. While 'ba' (ば) follows the flow of cause and effect, 'tomo' (とも) allows the poet to express resilience, contradiction, and the persistence of emotion against all odds."
+      "type": "literary_insight",
+      "content": "在第一首诗中，我们遇到了一个经典的修辞手法：**見立て (Mitate)**，即“视觉隐喻”。\n\n诗人将“白发”比作“头上的雪”（頭の雪）。这不仅仅是颜色上的相似，更利用了“白山”这个地名（双关语/挂词的边缘）来构建整个意象系统：\n\n越国的**白山** <-> 头上的**雪**\n\n这种将身体特征与自然景观重叠的手法，赋予了衰老一种宏大而凄清的美感。这与李白的“高堂明镜悲白发，朝如青丝暮成雪”有异曲同工之妙。",
+      "literary_device": "見立て (Visual Metaphor)",
+      "chinese_parallel": "朝如青丝暮成雪"
+    },
+    {
+      "type": "literary_insight",
+      "content": "第三首诗则运用了生动的**拟人化**。\n\n诗人对“春之山风”发出命令（盗め - 命令形），让它去“偷”花香。风本无心，人却有情。通过命令自然界的事物，诗人将自己对花香的渴望投射到了风身上。\n\n王安石的《梅花》中“遥知不是雪，为有暗香来”是靠嗅觉辨识；而这里则是主动要求风将“暗香”偷运而来，即使视觉（色）被阻断（見せずとも）。",
+      "literary_device": "拟人 (Personification)",
+      "chinese_parallel": "为有暗香来"
     }
   ],
   "reference_card": {
-    "point": "Particle とも (tomo)",
-    "one_liner": "A concessive particle meaning 'even if' or 'although,' used to show that a statement holds true despite a condition.",
-    "example": "しぬとも (Even if I die)",
+    "point": "接续助词「とも」",
+    "one_liner": "接在终止形后，表示“即使……也……”（假定逆接）。",
+    "example": "枝は折るとも (eda wa oru tomo) - 即使折断枝条",
     "see_also": [
-      "particle_ba"
+      "particle_do",
+      "particle_domo"
     ]
   },
   "forward_references": [
     {
-      "point": "もゆれ (moyu-re)",
-      "note": "This specific form of the verb is the Izenkei (Already-realized base), which we will explore further when we look at the 'domo' variation in Unit 9."
+      "point": "副助词「だに」",
+      "note": "本课第三首诗出现了「香をだに」（至少把香气……），这是一个表示最低限度愿望的高级助词，我们将在下一单元详细学习。"
     }
   ]
 }

@@ -1,573 +1,449 @@
 {
   "lesson_id": "lesson_auxiliary_mu",
-  "lesson_title": "The Intentional 'Mu': Expressing Will and Future",
-  "lesson_summary": "This lesson introduces the auxiliary verb む (mu), the primary tool for expressing a speaker's intention or a future possibility, always building upon the 'Unrealized Base' (Mizenkei) you learned previously.",
+  "lesson_title": "未然的世界：助动词「む」与意志的投射",
+  "lesson_summary": "学习表示“意志”与“推测”的助动词「む」，掌握如何根据主语判断是“想要做某事”还是“推测会发生某事”。",
   "grammar_point": "auxiliary_mu",
   "grammar_explanation": {
-    "concept": "In Classical Japanese, actions that haven't happened yet but are intended or expected are marked with む (mu). Think of it as a 'Future/Intent' flag. For a Chinese speaker, it functions similarly to '想' (intention) or '会/吧' (conjecture/suggestion) depending on the context.",
-    "formation": "Attached to the 未然形 (Mizenkei - Unrealized Base) of a verb.",
+    "concept": "助动词「む」主要用于指向尚未发生的动作或状态。它有两个核心功能：1. 意志（想要做.../打算做...）；2. 推量（大概是.../将会...）。",
+    "formation": "接续在动词的【未然形】（Mizenkei）之后。未然形表示“尚未发生”的状态，是动作发生的潜能阶段。",
     "variations": [
-      "ん (n) - In later periods and some manuscripts, 'mu' is written or pronounced as 'n'."
+      "む (基本形/终止形)",
+      "め (已然形 - 常用于系结法则)"
     ],
-    "common_confusions": [
-      "Volition (I will): Used when the subject is the 1st person.",
-      "Conjecture (It might): Used when the subject is the 3rd person.",
-      "The student should look for context clues to decide if it's 'I want to' or 'It probably will'."
-    ]
+    "common_confusions": []
   },
   "teaching_sequence": [
     {
       "type": "introduction",
-      "content": "In the previous lesson, we mastered the **Mizenkei (未然形)**—the 'Unrealized Base' used for things that haven't occurred. However, a base alone doesn't tell us *why* the action is unrealized. Is it forbidden? Is it denied? Or is it something we *intend* to do? Today, we add the auxiliary **む (mu)**. In our programming analogy, if the verb is a function, adding `.mu` is like setting the execution mode to `FUTURE_INTENT`."
+      "content": "在之前的课程中，我们学习了“连用形”如何像链条一样连接已经发生的动作（如「て」、「つつ」）。\n\n但是，当我们想要谈论**尚未发生**的事情——比如明天的计划，或者对恋人心意的猜测——我们需要进入“未然”的世界。今天我们要学习的助动词「む」，就是通往未来的钥匙。它相当于中文的“将”、“欲”或英语的 \"will\"。"
     },
     {
       "type": "poem_presentation",
-      "poem_id": "lapis_49879da4daf738a9",
+      "poem_id": "lapis_859200c1f240e4f9",
       "display": {
-        "text_with_furigana": "<ruby>岩<rt>いは</rt></ruby><ruby>走<rt>はし</rt></ruby>り<ruby>滝<rt>たき</rt></ruby>なかるる<ruby>初瀬<rt>はつせ</rt></ruby><ruby>川<rt>かは</rt></ruby><ruby>絶<rt>た</rt></ruby>ゆることなくまたも<ruby>来<rt>き</rt></ruby>て<ruby>見<rt>み</rt></ruby>む",
-        "romaji": "ihahashiri, taki chi nakaruru, hatsusekaha, tayuru koto naku, mata mo kite mimu",
-        "translation": "The Hatsuse River where water surges over rocks like a waterfall—without ever ceasing, I will come to see it again."
+        "text_with_furigana": "<ruby>月夜<rt>つきよ</rt></ruby>には<ruby>来<rt>こ</rt></ruby>ぬ<ruby>人<rt>ひと</rt></ruby><ruby>待<rt>ま</rt></ruby>たるかき<ruby>曇<rt>くも</rt></ruby>り<ruby>雨<rt>あめ</rt></ruby>も<ruby>降<rt>ふ</rt></ruby>らなむ<ruby>侘<rt>わ</rt></ruby>びつつも<ruby>寝<rt>ね</rt></ruby>む",
+        "romaji": "tsukiyo ni wa konu hito mataru kakikumori ame mo furanamu wabitsutsu mo nemu",
+        "translation": "月夜人不来，空留我久待。此时天忽阴，愿雨落下来。凄凉怀愁绪，且去睡一觉。"
       },
       "vocabulary": [
         {
-          "word": "いは",
-          "reading": "いわ",
-          "meaning": "rock/stone",
-          "span": [
-            0,
-            2
-          ],
-          "chinese_cognate_note": "岩 (yán)"
-        },
-        {
-          "word": "はしり",
-          "reading": "はしり",
-          "meaning": "running/surging",
-          "span": [
-            2,
-            5
-          ],
-          "chinese_cognate_note": "走 (zǒu) - In classical Chinese/Japanese, this means 'to run'."
-        },
-        {
-          "word": "たき",
-          "reading": "たき",
-          "meaning": "waterfall",
-          "span": [
-            5,
-            7
-          ],
-          "chinese_cognate_note": "滝 (Japanese-made Kanji for waterfall)"
-        },
-        {
-          "word": "きち",
-          "reading": "きち",
-          "meaning": "place (suffix/contextual)",
-          "span": [
-            6,
-            8
-          ],
-          "chinese_cognate_note": null
-        },
-        {
-          "word": "なか",
-          "reading": "なか",
-          "meaning": "middle/inside",
-          "span": [
-            8,
-            10
-          ],
-          "chinese_cognate_note": "中 (zhōng)"
-        },
-        {
-          "word": "るる",
-          "reading": "るる",
-          "meaning": "flowing (attributive ending)",
-          "span": [
-            10,
-            12
-          ],
-          "chinese_cognate_note": null
-        },
-        {
-          "word": "はつせ",
-          "reading": "はつせ",
-          "meaning": "Hatsuse (Place name)",
-          "span": [
-            12,
-            15
-          ],
-          "chinese_cognate_note": null
-        },
-        {
-          "word": "かは",
-          "reading": "かわ",
-          "meaning": "river",
-          "span": [
-            15,
-            17
-          ],
-          "chinese_cognate_note": "川 (chuān)"
-        },
-        {
-          "word": "たゆる",
-          "reading": "たゆる",
-          "meaning": "to cease/stop",
-          "span": [
-            17,
-            20
-          ],
-          "chinese_cognate_note": "絶 (jué)"
-        },
-        {
-          "word": "こと",
-          "reading": "こと",
-          "meaning": "thing/fact",
-          "span": [
-            20,
-            22
-          ],
-          "chinese_cognate_note": "事 (shì)"
-        },
-        {
-          "word": "なく",
-          "reading": "なく",
-          "meaning": "without/not",
-          "span": [
-            22,
-            24
-          ],
-          "chinese_cognate_note": "無 (wú)"
-        },
-        {
-          "word": "また",
-          "reading": "また",
-          "meaning": "again",
-          "span": [
-            24,
-            26
-          ],
-          "chinese_cognate_note": "又 (yòu)"
-        },
-        {
-          "word": "も",
-          "reading": "も",
-          "meaning": "also/even",
-          "span": [
-            26,
-            27
-          ],
-          "chinese_cognate_note": null
-        },
-        {
-          "word": "きて",
-          "reading": "きて",
-          "meaning": "coming (te-form)",
-          "span": [
-            27,
-            29
-          ],
-          "chinese_cognate_note": "来 (lái)"
-        },
-        {
-          "word": "み",
-          "reading": "み",
-          "meaning": "to see (Mizenkei base)",
-          "span": [
-            29,
-            30
-          ],
-          "chinese_cognate_note": "見 (jiàn)"
-        },
-        {
-          "word": "む",
-          "reading": "む",
-          "meaning": "will/intend to (auxiliary)",
-          "span": [
-            30,
-            31
-          ],
-          "chinese_cognate_note": null
-        }
-      ],
-      "focus_highlight": [
-        30,
-        31
-      ]
-    },
-    {
-      "type": "grammar_spotlight",
-      "content": "Look at the end of the poem: **見む (mi-mu)**. \n1. **見 (mi)** is the Mizenkei (Unrealized Base) of the verb 'to see'.\n2. **む (mu)** is our target auxiliary.\n\nBecause the poet is talking about their own future action ('I will come again'), **む** functions as **Volition (Intention)**. It transforms 'see' into 'intend to see' or 'will see'.",
-      "evidence": "See the poem above."
-    },
-    {
-      "type": "poem_presentation",
-      "poem_id": "lapis_cff97fd82384bdb6",
-      "display": {
-        "text_with_furigana": "<ruby>深雪<rt>みゆき</rt></ruby><ruby>降<rt>ふ</rt></ruby>る<ruby>越<rt>こし</rt></ruby>の<ruby>大山<rt>おほやま</rt></ruby><ruby>行<rt>ゆ</rt></ruby>き<ruby>過<rt>す</rt></ruby>ぎていづれの<ruby>日<rt>ひ</rt></ruby>にかわが<ruby>里<rt>さと</rt></ruby>を<ruby>見<rt>み</rt></ruby>む",
-        "romaji": "miyuki furu, koshi no ooyama, yuki sukite, itsure no hi ni ka, waga sato o mimu",
-        "translation": "After passing the Great Mountains of Koshi where deep snow falls, on what day shall I see my home village again?"
-      },
-      "vocabulary": [
-        {
-          "word": "みゆき",
-          "reading": "みゆき",
-          "meaning": "deep snow",
-          "span": [
-            0,
-            3
-          ],
-          "chinese_cognate_note": "深雪 (shēn xuě)"
-        },
-        {
-          "word": "ふる",
-          "reading": "ふる",
-          "meaning": "to fall (snow/rain)",
-          "span": [
-            3,
-            5
-          ],
-          "chinese_cognate_note": "降 (jiàng)"
-        },
-        {
-          "word": "こし",
-          "reading": "こし",
-          "meaning": "Koshi (Ancient province name)",
-          "span": [
-            5,
-            7
-          ],
-          "chinese_cognate_note": "越 (yuè)"
-        },
-        {
-          "word": "の",
-          "reading": "の",
-          "meaning": "possessive particle",
-          "span": [
-            7,
-            8
-          ],
-          "chinese_cognate_note": "的 (de)"
-        },
-        {
-          "word": "おほやま",
-          "reading": "おおやま",
-          "meaning": "big mountain",
-          "span": [
-            8,
-            12
-          ],
-          "chinese_cognate_note": "大山 (dà shān)"
-        },
-        {
-          "word": "ゆき",
-          "reading": "ゆき",
-          "meaning": "going",
-          "span": [
-            12,
-            14
-          ],
-          "chinese_cognate_note": "行 (xíng)"
-        },
-        {
-          "word": "すきて",
-          "reading": "すぎて",
-          "meaning": "passing/exceeding",
-          "span": [
-            14,
-            17
-          ],
-          "chinese_cognate_note": "過 (guò)"
-        },
-        {
-          "word": "いつれ",
-          "reading": "いづれ",
-          "meaning": "which",
-          "span": [
-            17,
-            20
-          ],
-          "chinese_cognate_note": "何 (hé)"
-        },
-        {
-          "word": "の",
-          "reading": "の",
-          "meaning": "possessive particle",
-          "span": [
-            20,
-            21
-          ],
-          "chinese_cognate_note": "的 (de)"
-        },
-        {
-          "word": "ひ",
-          "reading": "ひ",
-          "meaning": "day",
-          "span": [
-            21,
-            22
-          ],
-          "chinese_cognate_note": "日 (rì)"
+          "word": "月夜",
+          "reading": "つきよ",
+          "meaning": "月色明亮的夜晚",
+          "span": null,
+          "chinese_cognate_note": "月夜"
         },
         {
           "word": "に",
           "reading": "に",
-          "meaning": "time particle (at/on)",
-          "span": [
-            22,
-            23
-          ],
-          "chinese_cognate_note": null
-        },
-        {
-          "word": "か",
-          "reading": "か",
-          "meaning": "question particle",
-          "span": [
-            23,
-            24
-          ],
-          "chinese_cognate_note": null
-        },
-        {
-          "word": "わか",
-          "reading": "わが",
-          "meaning": "my",
-          "span": [
-            24,
-            26
-          ],
-          "chinese_cognate_note": "我 (wǒ)"
-        },
-        {
-          "word": "さと",
-          "reading": "さと",
-          "meaning": "village/hometown",
-          "span": [
-            26,
-            28
-          ],
-          "chinese_cognate_note": "里 (lǐ)"
-        },
-        {
-          "word": "を",
-          "reading": "を",
-          "meaning": "object marker",
-          "span": [
-            28,
-            29
-          ],
-          "chinese_cognate_note": null
-        },
-        {
-          "word": "み",
-          "reading": "み",
-          "meaning": "to see (Mizenkei base)",
-          "span": [
-            29,
-            30
-          ],
-          "chinese_cognate_note": "見 (jiàn)"
-        },
-        {
-          "word": "む",
-          "reading": "む",
-          "meaning": "shall/will (auxiliary)",
-          "span": [
-            30,
-            31
-          ],
-          "chinese_cognate_note": null
-        }
-      ],
-      "focus_highlight": [
-        30,
-        31
-      ]
-    },
-    {
-      "type": "contrast_example",
-      "content": "In Poem 2, we see **見む (mi-mu)** again. However, notice the particle **か (ka)** earlier in the line. This is a question marker. When **む** is used in a question about the future, it shifts from 'I will' to 'Shall I?' or 'When might I?'. This is the **Conjecture** aspect of **む**."
-    },
-    {
-      "type": "poem_presentation",
-      "poem_id": "lapis_2d77c6a450ace46d",
-      "display": {
-        "text_with_furigana": "<ruby>花<rt>はな</rt></ruby>ちらす<ruby>風<rt>かぜ</rt></ruby>の<ruby>宿<rt>やど</rt></ruby>りはたれか<ruby>知<rt>し</rt></ruby>る<ruby>我<rt>われ</rt></ruby>にをしへよ<ruby>行<rt>ゆ</rt></ruby>きてうらみむ",
-        "romaji": "hana chirasu, kaze no yadori wa, tare ka shiru, ware ni o shie yo, ikite uramimu",
-        "translation": "Who knows the dwelling place of the wind that scatters the flowers? Tell me, so I may go there and find fault with it."
-      },
-      "vocabulary": [
-        {
-          "word": "はな",
-          "reading": "はな",
-          "meaning": "flower",
+          "meaning": "格助词，表示时间",
           "span": null,
-          "chinese_cognate_note": "花 (huā)"
-        },
-        {
-          "word": "ちらす",
-          "reading": "ちらす",
-          "meaning": "to scatter",
-          "span": [
-            1,
-            4
-          ],
-          "chinese_cognate_note": "散 (sàn)"
-        },
-        {
-          "word": "かぜ",
-          "reading": "かぜ",
-          "meaning": "wind",
-          "span": null,
-          "chinese_cognate_note": "風 (fēng)"
-        },
-        {
-          "word": "の",
-          "reading": "の",
-          "meaning": "possessive particle",
-          "span": [
-            5,
-            6
-          ],
-          "chinese_cognate_note": "的 (de)"
-        },
-        {
-          "word": "やどり",
-          "reading": "やどり",
-          "meaning": "lodging/dwelling",
-          "span": null,
-          "chinese_cognate_note": "宿 (sù)"
+          "chinese_cognate_note": null
         },
         {
           "word": "は",
           "reading": "は",
-          "meaning": "topic marker",
-          "span": [
-            9,
-            10
-          ],
-          "chinese_cognate_note": null
-        },
-        {
-          "word": "たれ",
-          "reading": "たれ",
-          "meaning": "who",
-          "span": [
-            10,
-            12
-          ],
-          "chinese_cognate_note": "誰 (shéi)"
-        },
-        {
-          "word": "か",
-          "reading": "か",
-          "meaning": "question particle",
-          "span": [
-            12,
-            13
-          ],
-          "chinese_cognate_note": null
-        },
-        {
-          "word": "しる",
-          "reading": "しる",
-          "meaning": "to know",
-          "span": [
-            13,
-            15
-          ],
-          "chinese_cognate_note": "知 (zhī)"
-        },
-        {
-          "word": "われ",
-          "reading": "われ",
-          "meaning": "I/me",
+          "meaning": "系助词，提示话题",
           "span": null,
-          "chinese_cognate_note": "我 (wǒ)"
-        },
-        {
-          "word": "に",
-          "reading": "に",
-          "meaning": "to (indirect object)",
-          "span": [
-            16,
-            17
-          ],
           "chinese_cognate_note": null
         },
         {
-          "word": "をしへ",
-          "reading": "おしえ",
-          "meaning": "teach/tell (imperative)",
-          "span": [
-            17,
-            20
-          ],
-          "chinese_cognate_note": "教 (jiāo)"
-        },
-        {
-          "word": "よ",
-          "reading": "よ",
-          "meaning": "imperative particle",
-          "span": [
-            20,
-            21
-          ],
-          "chinese_cognate_note": null
-        },
-        {
-          "word": "いきて",
-          "reading": "いきて",
-          "meaning": "going (te-form)",
+          "word": "来",
+          "reading": "こ",
+          "meaning": "动词“来”的未然形",
           "span": null,
-          "chinese_cognate_note": "行 (xíng)"
+          "chinese_cognate_note": null
         },
         {
-          "word": "うらみ",
-          "reading": "うらみ",
-          "meaning": "to resent/blame (Mizenkei)",
-          "span": [
-            24,
-            27
-          ],
-          "chinese_cognate_note": "怨 (yuàn)"
+          "word": "ぬ",
+          "reading": "ぬ",
+          "meaning": "否定助动词“ず”的连体形，表示“不”",
+          "span": null,
+          "chinese_cognate_note": null
+        },
+        {
+          "word": "人",
+          "reading": "ひと",
+          "meaning": "人（此处指恋人）",
+          "span": null,
+          "chinese_cognate_note": "人"
+        },
+        {
+          "word": "待たる",
+          "reading": "またる",
+          "meaning": "不由得等待（待つ + 自发助动词る）",
+          "span": null,
+          "chinese_cognate_note": null
+        },
+        {
+          "word": "かき曇り",
+          "reading": "かきくもり",
+          "meaning": "天空突然阴沉（かき是强调接头词）",
+          "span": null,
+          "chinese_cognate_note": null
+        },
+        {
+          "word": "雨",
+          "reading": "あめ",
+          "meaning": "雨",
+          "span": null,
+          "chinese_cognate_note": "雨"
+        },
+        {
+          "word": "も",
+          "reading": "も",
+          "meaning": "助词，也/强调",
+          "span": null,
+          "chinese_cognate_note": null
+        },
+        {
+          "word": "降ら",
+          "reading": "ふら",
+          "meaning": "动词“降る”的未然形",
+          "span": null,
+          "chinese_cognate_note": null
+        },
+        {
+          "word": "なむ",
+          "reading": "なむ",
+          "meaning": "终助词，表示希望他人/他物做某事（愿...）",
+          "span": null,
+          "chinese_cognate_note": null
+        },
+        {
+          "word": "侘び",
+          "reading": "わび",
+          "meaning": "动词“侘ぶ”的连用形，感到凄凉/失意",
+          "span": null,
+          "chinese_cognate_note": null
+        },
+        {
+          "word": "つつ",
+          "reading": "つつ",
+          "meaning": "接续助词，一边...一边...",
+          "span": null,
+          "chinese_cognate_note": null
+        },
+        {
+          "word": "も",
+          "reading": "も",
+          "meaning": "助词，强调",
+          "span": null,
+          "chinese_cognate_note": null
+        },
+        {
+          "word": "寝",
+          "reading": "ね",
+          "meaning": "动词“寝（ぬ）”的未然形",
+          "span": null,
+          "chinese_cognate_note": "寝"
         },
         {
           "word": "む",
           "reading": "む",
-          "meaning": "will/intend to (auxiliary)",
-          "span": [
-            27,
-            28
-          ],
+          "meaning": "助动词，表示意志（将要/打算）",
+          "span": null,
           "chinese_cognate_note": null
         }
       ],
       "focus_highlight": [
-        27,
-        28
+        20,
+        21
+      ]
+    },
+    {
+      "type": "grammar_spotlight",
+      "content": "### 核心逻辑：主语决定功能\n\n助动词「む」的功能判断有一个非常符合逻辑的规则，类似编程中的 `if-else` 语句：\n\n1.  **If 主语是第一人称 (我):**\n    *   功能：**意志 (Volition)**\n    *   含义：我**打算**做... / 我**将要**做...\n    *   例：「寝む」(nemu) = 我打算睡了。\n\n2.  **Else If 主语是第三人称 (人/事/物):**\n    *   功能：**推量 (Conjecture)**\n    *   含义：大概**会**...吧 / 看起来**要**...\n    *   例：「雨降らむ」(ame furamu) = 雨大概会下吧。\n\n在刚才的诗中，诗人说「寝む」（去睡吧），主语显然是诗人自己，因此这里是**意志**。",
+      "evidence": "See the poem above."
+    },
+    {
+      "type": "poem_presentation",
+      "poem_id": "lapis_67872c830e716e60",
+      "display": {
+        "text_with_furigana": "<ruby>初雪<rt>はつゆき</rt></ruby>は<ruby>千重<rt>ちへ</rt></ruby>に<ruby>降<rt>ふ</rt></ruby>り<ruby>敷<rt>し</rt></ruby>け<ruby>恋<rt>こ</rt></ruby>しくの<ruby>多<rt>おお</rt></ruby>かる<ruby>我<rt>われ</rt></ruby>は<ruby>見<rt>み</rt></ruby>つつ<ruby>忍<rt>しの</rt></ruby>ばむ",
+        "romaji": "hatsuyuki wa chie ni furishike koishiku no ohokaru ware wa mitsutsu shinoban",
+        "translation": "初雪重重落，堆积满地头。恋心亦积厚，我且忍相思。"
+      },
+      "vocabulary": [
+        {
+          "word": "初雪",
+          "reading": "はつゆき",
+          "meaning": "初雪",
+          "span": null,
+          "chinese_cognate_note": "初雪"
+        },
+        {
+          "word": "は",
+          "reading": "は",
+          "meaning": "系助词，提示话题",
+          "span": null,
+          "chinese_cognate_note": null
+        },
+        {
+          "word": "千重",
+          "reading": "ちへ",
+          "meaning": "千层/重重叠叠",
+          "span": null,
+          "chinese_cognate_note": "千重"
+        },
+        {
+          "word": "に",
+          "reading": "に",
+          "meaning": "格助词，表示状态",
+          "span": null,
+          "chinese_cognate_note": null
+        },
+        {
+          "word": "降り敷け",
+          "reading": "ふりしけ",
+          "meaning": "动词“降り敷く”的命令形，意为“下满吧”",
+          "span": null,
+          "chinese_cognate_note": null
+        },
+        {
+          "word": "恋しく",
+          "reading": "こいしく",
+          "meaning": "形容词名词化，恋慕之情",
+          "span": null,
+          "chinese_cognate_note": null
+        },
+        {
+          "word": "の",
+          "reading": "の",
+          "meaning": "格助词，表示主语（在定语从句中）",
+          "span": null,
+          "chinese_cognate_note": null
+        },
+        {
+          "word": "多かる",
+          "reading": "おおかる",
+          "meaning": "形容词连体形，很多的",
+          "span": null,
+          "chinese_cognate_note": "多"
+        },
+        {
+          "word": "我",
+          "reading": "われ",
+          "meaning": "我",
+          "span": null,
+          "chinese_cognate_note": "我"
+        },
+        {
+          "word": "は",
+          "reading": "は",
+          "meaning": "系助词，提示话题",
+          "span": null,
+          "chinese_cognate_note": null
+        },
+        {
+          "word": "見",
+          "reading": "み",
+          "meaning": "动词“見る”的连用形",
+          "span": null,
+          "chinese_cognate_note": null
+        },
+        {
+          "word": "つつ",
+          "reading": "つつ",
+          "meaning": "接续助词，一边...一边...",
+          "span": null,
+          "chinese_cognate_note": null
+        },
+        {
+          "word": "忍ば",
+          "reading": "しのば",
+          "meaning": "动词“忍ぶ”的未然形",
+          "span": null,
+          "chinese_cognate_note": null
+        },
+        {
+          "word": "む",
+          "reading": "む",
+          "meaning": "助动词，表示意志",
+          "span": null,
+          "chinese_cognate_note": null
+        }
+      ],
+      "focus_highlight": [
+        30,
+        31
+      ]
+    },
+    {
+      "type": "literary_insight",
+      "content": "### 挂词（Kakekotoba）：双重含义的枢纽\n\n在这首诗中，「忍ば」（shinoba）是一个非常巧妙的用法。在古典日语中，「しのぶ」有两个汉字写法，对应两种含义：\n\n1.  **忍ぶ**：忍耐（痛苦、寂寞）。\n2.  **偲ぶ**：怀念、思慕（过去或不在身边的人）。\n\n这里诗人利用了同音异义（类似于中文的双关语），表达了复杂的心理：看着积雪（忍受寒冷/寂寞），同时心中（思慕）恋人。这种技法称为**挂词**。\n\n配合助动词「む」，「忍ばむ」表达了诗人主动选择去沉浸在这种苦乐交织的状态中。",
+      "literary_device": "掛詞",
+      "chinese_parallel": "双关语（如“东边日出西边雨，道是无晴却有晴”）"
+    },
+    {
+      "type": "poem_presentation",
+      "poem_id": "lapis_953fd1423e8c4ab4",
+      "display": {
+        "text_with_furigana": "<ruby>見<rt>み</rt></ruby>てのみや<ruby>人<rt>ひと</rt></ruby>に<ruby>語<rt>かた</rt></ruby>らむ<ruby>桜花<rt>さくらばな</rt></ruby><ruby>手<rt>て</rt></ruby>ごとに<ruby>折<rt>を</rt></ruby>りて<ruby>家<rt>いへ</rt></ruby>づとにせむ",
+        "romaji": "mite nomi ya hito ni kataramu sakurabana tegoto ni orite ieduto ni semu",
+        "translation": "仅凭眼观赏，怎向他人以此谈？折取樱花枝，人手一束作家礼。"
+      },
+      "vocabulary": [
+        {
+          "word": "見",
+          "reading": "み",
+          "meaning": "动词“見る”的连用形",
+          "span": null,
+          "chinese_cognate_note": null
+        },
+        {
+          "word": "て",
+          "reading": "て",
+          "meaning": "接续助词",
+          "span": null,
+          "chinese_cognate_note": null
+        },
+        {
+          "word": "のみ",
+          "reading": "のみ",
+          "meaning": "副助词，仅仅",
+          "span": null,
+          "chinese_cognate_note": null
+        },
+        {
+          "word": "や",
+          "reading": "や",
+          "meaning": "系助词，表示疑问/反问",
+          "span": null,
+          "chinese_cognate_note": null
+        },
+        {
+          "word": "人",
+          "reading": "ひと",
+          "meaning": "人（指家里人或其他人）",
+          "span": null,
+          "chinese_cognate_note": null
+        },
+        {
+          "word": "に",
+          "reading": "に",
+          "meaning": "格助词，向/对",
+          "span": null,
+          "chinese_cognate_note": null
+        },
+        {
+          "word": "語ら",
+          "reading": "かたら",
+          "meaning": "动词“語る”的未然形，谈论",
+          "span": null,
+          "chinese_cognate_note": "语"
+        },
+        {
+          "word": "む",
+          "reading": "む",
+          "meaning": "助动词，此处为推量（连体形）",
+          "span": null,
+          "chinese_cognate_note": null
+        },
+        {
+          "word": "桜花",
+          "reading": "さくらばな",
+          "meaning": "樱花",
+          "span": null,
+          "chinese_cognate_note": null
+        },
+        {
+          "word": "手",
+          "reading": "て",
+          "meaning": "手",
+          "span": null,
+          "chinese_cognate_note": null
+        },
+        {
+          "word": "ごと",
+          "reading": "ごと",
+          "meaning": "接尾词，每...",
+          "span": null,
+          "chinese_cognate_note": null
+        },
+        {
+          "word": "に",
+          "reading": "に",
+          "meaning": "格助词",
+          "span": null,
+          "chinese_cognate_note": null
+        },
+        {
+          "word": "折り",
+          "reading": "をり",
+          "meaning": "动词“折る”的连用形",
+          "span": null,
+          "chinese_cognate_note": "折"
+        },
+        {
+          "word": "て",
+          "reading": "て",
+          "meaning": "接续助词",
+          "span": null,
+          "chinese_cognate_note": null
+        },
+        {
+          "word": "家づと",
+          "reading": "いへづと",
+          "meaning": "给家人的礼物（土特产）",
+          "span": null,
+          "chinese_cognate_note": null
+        },
+        {
+          "word": "に",
+          "reading": "に",
+          "meaning": "格助词，作为",
+          "span": null,
+          "chinese_cognate_note": null
+        },
+        {
+          "word": "せ",
+          "reading": "せ",
+          "meaning": "动词“す”的未然形，做",
+          "span": null,
+          "chinese_cognate_note": null
+        },
+        {
+          "word": "む",
+          "reading": "む",
+          "meaning": "助动词，意志",
+          "span": null,
+          "chinese_cognate_note": null
+        }
+      ],
+      "focus_highlight": [
+        10,
+        11
       ]
     },
     {
       "type": "comprehension_check",
-      "question": "In Poem 3, the poet says 'うらみむ' (urami-mu). Based on the context 'Tell me [where the wind lives], I will go and...', what is the logical function of 'mu' here?",
-      "answer": "Volition (Intention). The poet is expressing a personal will to go and confront the wind for scattering the flowers.",
-      "hint": "Is the poet talking about themselves or someone else? Is it a statement of fact or a plan?"
+      "question": "「せむ」中的「む」属于哪种用法？",
+      "answer": "意志 (Volition)",
+      "hint": "主语是谁？是谁要把它作为礼物？如果是诗人自己（第一人称），那就是..."
+    },
+    {
+      "type": "summary",
+      "content": "本课要点回顾：\n1. **「む」接在未然形后**，指向未来或心理世界。\n2. **第一人称主语（我） + む = 意志**（我打算...）。\n3. **第三人称主语（他/它） + む = 推量**（大概会...）。\n\n在第三首诗中，「語らむ」虽然主语也是“我”，但配合疑问词「や」，表示“我该如何讲述呢？（推测/反问）”，而结尾的「せむ」则是坚定的“我要把它做成礼物”。"
     }
   ],
   "reference_card": {
-    "point": "Auxiliary む (mu)",
-    "one_liner": "The 'Future/Intent' tag attached to the Mizenkei base to express volition ('I will') or conjecture ('It might').",
-    "example": "見む (mi-mu) = I will see / Shall I see?",
+    "point": "助动词「む」",
+    "one_liner": "表示意志（我将）或推量（大概）的未来指向词",
+    "example": "雨も降らなむ...寝む (愿雨落下...我将睡去)",
     "see_also": [
-      "conjugation_mizenkei"
+      "auxiliary_ji",
+      "auxiliary_ramu"
     ]
   },
   "forward_references": [
     {
-      "point": "Kakari-Musubi (か...む)",
-      "note": "In Poem 2, notice how 'ka' in the middle of the sentence changes the feeling of 'mu' at the end. We will study this 'linking' rule in Unit 7."
+      "point": "终助词「なむ」",
+      "note": "本课第一首诗中出现的「降らなむ」包含表示“希望他人/他物做某事”的助词，我们将在后续详细学习。"
+    },
+    {
+      "point": "系结法则 (Kakarimusubi)",
+      "note": "第三首诗中「や...語らむ」实际上构成了系结法则（连体形结尾），这增强了疑问的语气。"
     }
   ]
 }

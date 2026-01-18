@@ -92,6 +92,11 @@ class LessonNode(BaseModel):
     candidate_poem_ids: list[str]  # larger pool for LLM to select from (10 poems)
     poem_ids: list[str] = []  # final selected poems (populated by LLM selection step)
 
+    # Literary integration fields (Phase 5 & 6)
+    literary_ready: bool = False  # True if lesson is past foundation phase
+    literary_focus: list[str] = []  # e.g., ["掛詞", "季節詠"] - devices to highlight
+    literary_difficulty: float = 0.0  # Literary complexity score (0-1)
+
 
 class Unit(BaseModel):
     id: str

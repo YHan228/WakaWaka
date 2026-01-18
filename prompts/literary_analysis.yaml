@@ -63,7 +63,8 @@ user_template: |
 
   POEM INFO:
   - ID: {poem_id}
-  - Text: {text}
+  - 汉字转写: {kanji_transcription}
+  - 原文: {original_text}
   - Author: {author}
   - Collection: {collection}
 

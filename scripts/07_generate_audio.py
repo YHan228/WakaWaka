@@ -24,6 +24,7 @@ import random
 import sqlite3
 import sys
 import time
+from concurrent.futures import ThreadPoolExecutor, as_completed
 from pathlib import Path
 
 PROJECT_ROOT = Path(__file__).parent.parent
@@ -61,8 +62,8 @@ def add_poetic_ssml(text: str) -> str:
 
     Strategy:
     1. If text already has space-delimited 5 parts, use them (most reliable)
-    2. Otherwise, attempt character-based slicing for standard lengths
-    3. Fallback to simple kami/shimo split
+    2. Otherwise, attempt character-based slicing for standard lengths (31-33 morae)
+    3. Fallback to simple kami/shimo split at natural break point
 
     Uses punctuation to guide prosody:
     - Full-width space (　) for subtle breath pauses within kami/shimo
@@ -92,7 +93,7 @@ def add_poetic_ssml(text: str) -> str:
         clean_text = ''.join(raw_parts)  # Remove all spaces
         length = len(clean_text)
 
-        # Standard 31-mora waka
+        # Standard 31-mora waka (5-7-5-7-7)
         if length == 31:
             parts = [
                 clean_text[0:5],    # ku 1: 5 morae
@@ -101,12 +102,36 @@ def add_poetic_ssml(text: str) -> str:
                 clean_text[17:24],  # ku 4: 7 morae
                 clean_text[24:31],  # ku 5: 7 morae
             ]
-        # Fallback for any other length: simple kami/shimo split at ~60% mark
+        # 32-mora waka (字余り - extra syllable, usually in ku5: 5-7-5-7-8)
+        elif length == 32:
+            parts = [
+                clean_text[0:5],    # ku 1: 5 morae
+                clean_text[5:12],   # ku 2: 7 morae
+                clean_text[12:17],  # ku 3: 5 morae
+                clean_text[17:24],  # ku 4: 7 morae
+                clean_text[24:32],  # ku 5: 8 morae (字余り)
+            ]
+        # 33-mora waka (multiple 字余り, try 5-7-5-8-8)
+        elif length == 33:
+            parts = [
+                clean_text[0:5],    # ku 1: 5 morae
+                clean_text[5:12],   # ku 2: 7 morae
+                clean_text[12:17],  # ku 3: 5 morae
+                clean_text[17:25],  # ku 4: 8 morae
+                clean_text[25:33],  # ku 5: 8 morae
+            ]
+        # Fallback for any other length: split at kami/shimo boundary
         else:
-            # For waka, kami is 5+7+5=17, shimo is 7+7=14, so split around 55%
-            split_point = int(length * 0.55)
-            kami = clean_text[:split_point]
-            shimo = clean_text[split_point:]
+            # Kami is typically 17 morae (5+7+5), shimo is rest
+            # Use 17 as fixed kami length when possible
+            if length >= 28:  # Reasonable waka length
+                kami = clean_text[:17]
+                shimo = clean_text[17:]
+            else:
+                # Very short - use percentage split
+                split_point = int(length * 0.55)
+                kami = clean_text[:split_point]
+                shimo = clean_text[split_point:]
             return f"<speak>{kami}、<break time=\"600ms\"/>{shimo}。</speak>"
 
     # Build structured SSML from 5 parts
@@ -205,16 +230,17 @@ def list_available_voices(client):
 # Database Operations
 # -----------------------------------------------------------------------------
 
-def get_poems_for_audio(db_path: Path, limit: int | None = None) -> list[dict]:
+def get_poems_for_audio(db_path: Path, limit: int | None = None, random_order: bool = False) -> list[dict]:
     """Get poems that need audio generation."""
     conn = sqlite3.connect(db_path)
     conn.row_factory = sqlite3.Row
 
-    query = """
-        SELECT id, text, reading_hiragana
+    order_by = "RANDOM()" if random_order else "difficulty_score ASC"
+    query = f"""
+        SELECT id, text, reading_hiragana, reading_romaji
         FROM poems
         WHERE reading_hiragana IS NOT NULL AND reading_hiragana != ''
-        ORDER BY difficulty_score ASC
+        ORDER BY {order_by}
     """
     if limit:
         query += f" LIMIT {limit}"
@@ -289,10 +315,22 @@ Example:
         help="List available Japanese voices and exit"
     )
     parser.add_argument(
+        "--random",
+        action="store_true",
+        help="Process poems in random order (useful for testing)"
+    )
+    parser.add_argument(
+        "--parallel",
+        type=int,
+        default=1,
+        metavar="N",
+        help="Number of parallel workers (default: 1, sequential)"
+    )
+    parser.add_argument(
         "--delay",
         type=float,
         default=0.1,
-        help="Delay between API calls in seconds (default: 0.1)"
+        help="Delay between API calls in seconds (default: 0.1, ignored when --parallel > 1)"
     )
 
     args = parser.parse_args()
@@ -325,7 +363,7 @@ Example:
 
     # Load poems
     logger.info(f"Loading poems from {args.database}...")
-    poems = get_poems_for_audio(args.database, args.limit)
+    poems = get_poems_for_audio(args.database, args.limit, random_order=args.random)
     logger.info(f"Found {len(poems)} poems with reading data")
 
     if not poems:
@@ -348,12 +386,15 @@ Example:
     logger.info(f"Generating audio with random voices: {voices}")
     logger.info(f"Speaking rate: {args.speaking_rate}")
     logger.info(f"Output directory: {args.output}")
+    logger.info(f"Parallel workers: {args.parallel}")
 
     success_count = 0
     skip_count = 0
     fail_count = 0
 
-    for i, poem in enumerate(poems, 1):
+    def process_poem(poem_data: tuple) -> tuple[str, bool, str]:
+        """Process a single poem. Returns (poem_id, success, status)."""
+        idx, poem = poem_data
         poem_id = poem["id"]
 
         # Use clean reading if available, otherwise use original
@@ -367,11 +408,9 @@ Example:
         audio_path = args.output / f"{safe_id}.mp3"
 
         if args.skip_existing and audio_path.exists():
-            skip_count += 1
-            continue
+            return (poem_id, True, "skipped")
 
         voice = random.choice(voices)
-        logger.info(f"[{i}/{len(poems)}] Generating audio for {poem_id} ({voice})...")
 
         success = synthesize_speech(
             client=client,
@@ -381,14 +420,49 @@ Example:
             speaking_rate=args.speaking_rate,
         )
 
-        if success:
-            success_count += 1
-        else:
-            fail_count += 1
+        return (poem_id, success, "generated" if success else "failed")
 
-        # Rate limiting
-        if args.delay > 0:
-            time.sleep(args.delay)
+    # Parallel or sequential processing
+    if args.parallel > 1:
+        logger.info(f"Using {args.parallel} parallel workers...")
+        with ThreadPoolExecutor(max_workers=args.parallel) as executor:
+            futures = {
+                executor.submit(process_poem, (i, poem)): i
+                for i, poem in enumerate(poems, 1)
+            }
+
+            for future in as_completed(futures):
+                idx = futures[future]
+                try:
+                    poem_id, success, status = future.result()
+                    if status == "skipped":
+                        skip_count += 1
+                    elif success:
+                        success_count += 1
+                        if (success_count + fail_count) % 50 == 0:
+                            logger.info(f"Progress: {success_count + fail_count + skip_count}/{len(poems)} processed")
+                    else:
+                        fail_count += 1
+                except Exception as e:
+                    logger.error(f"Worker error: {e}")
+                    fail_count += 1
+    else:
+        # Sequential processing
+        for i, poem in enumerate(poems, 1):
+            poem_id, success, status = process_poem((i, poem))
+
+            if status == "skipped":
+                skip_count += 1
+            elif success:
+                success_count += 1
+                logger.info(f"[{i}/{len(poems)}] ✓ {poem_id}")
+            else:
+                fail_count += 1
+                logger.error(f"[{i}/{len(poems)}] ✗ {poem_id}")
+
+            # Rate limiting (only for sequential)
+            if args.delay > 0:
+                time.sleep(args.delay)
 
     # Summary
     logger.info("\n" + "=" * 50)

@@ -1,555 +1,461 @@
 {
   "lesson_id": "lesson_auxiliary_tsu",
-  "lesson_title": "The Intentional Finish: Completing Actions with つ (tsu)",
-  "lesson_summary": "Building on the concept of completion (Perfective Aspect) introduced with 'nu', we now examine 'tsu'—an auxiliary that marks the definitive end of an action, typically one involving human intent or a transitive verb.",
+  "lesson_title": "确切的终结：完了助动词「つ」",
+  "lesson_summary": "我们已经学习了表示“自然发生”的「ぬ」，本课将介绍表示“确切动作”或“人为完成”的助动词「つ」。",
   "grammar_point": "auxiliary_tsu",
   "grammar_explanation": {
-    "concept": "The auxiliary 'tsu' (つ) indicates that an action has been completed. While 'nu' (ぬ), which you learned previously, often describes natural or spontaneous changes (like flowers falling), 'tsu' is typically used for intentional actions or transitive verbs (actions done to something). Think of it as the 'active' version of the perfective aspect.",
-    "formation": "Attached to the Ren'yokei (Continuative Base) of verbs.",
+    "concept": "完了助动词「つ」主要表示动作的完成或对动作完成的确信。",
+    "formation": "接续在动词的【连用形】之后（回顾：连用形是连接动作的形态）。",
     "variations": [
-      "つ (tsu) - Conclusive (ends a sentence)",
-      "つる (tsuru) - Attributive (modifies a noun)",
-      "つれ (tsure) - Perfective (used with 'ba' for 'since/when...')"
+      "つ (终止形)",
+      "つる (连体形)",
+      "て (未然形/连用形 - 也就是接续助词'て'的来源)"
     ],
     "common_confusions": [
-      "vs. ぬ (nu): 'nu' is for natural/intransitive events; 'tsu' is for intentional/transitive actions.",
-      "vs. particle つ (tsu): In very archaic texts, 'tsu' can be a genitive particle like 'no', but in the classical corpus, it is almost always this perfective auxiliary."
+      "助动词「つ」 vs 上代格助词「つ」：前者接动词连用形，表示完成；后者接名词（如「天つ風」），表示所属（相当于「の」）。"
     ]
   },
   "teaching_sequence": [
     {
       "type": "introduction",
-      "content": "In the last lesson, we saw how 'nu' (ぬ) marks a state of 'having become.' However, poetry often describes deliberate actions—crying out, looking, or leaving something behind. For these 'active' completions, classical Japanese uses 'tsu' (つ). If 'nu' is a leaf falling naturally, 'tsu' is a person intentionally placing that leaf on the ground."
+      "content": "在上一单元中，我们学习了助动词「ぬ」，它常用于描述像花谢、风吹等自然发生的、不由自主的变化。今天我们要学习它的搭档——助动词「つ」。\n\n如果说「ぬ」是系统的“自动保存”，那么「つ」就是用户点击的“确认提交”。它带有更强的动作性、人为性或确信感。"
     },
     {
       "type": "poem_presentation",
-      "poem_id": "ogura100_3918ff2aefc7d4ab",
+      "poem_id": "lapis_416a43c3f1cab5c2",
       "display": {
-        "text_with_furigana": "<ruby>ほととぎす</ruby><ruby>鳴</ruby>（な）き<ruby>つる</ruby><ruby>方</ruby>（かた）を<ruby>ながむれば</ruby>ただ<ruby>有明</ruby>（ありあけ）の<ruby>月</ruby>（つき）ぞ<ruby>残</ruby>（のこ）れる",
-        "romaji": "hototogisu, nakitsuru kata o, nagamureba, tada ariake no, tsuki zo nokoreru",
-        "translation": "When I gaze toward the direction where the cuckoo has cried, only the dawn moon remains."
+        "text_with_furigana": "<ruby>折節<rt>おりふし</rt></ruby>も<ruby>うつ<rt>うつ</rt></ruby>れば<ruby>かへ<rt>かえ</rt></ruby><span class='highlight-grammar'>つ</span><ruby>世<rt>よ</rt></ruby>の<ruby>中<rt>なか</rt></ruby>の<ruby>人<rt>ひと</rt></ruby>の<ruby>心<rt>こころ</rt></ruby>の<ruby>花染<rt>はなぞ</rt></ruby>めの<ruby>袖<rt>そで</rt></ruby>",
+        "romaji": "orifushi mo utsureba kaetsu yo no naka no hito no kokoro no hanazome no sode",
+        "translation": "季节更迭之时，那人心也随之彻底改变了，就像这易褪色的花染衣袖一样。"
       },
       "vocabulary": [
         {
-          "word": "ほととぎす",
-          "reading": "hototogisu",
-          "meaning": "lesser cuckoo (a bird whose cry is a staple of summer poetry)",
-          "span": [
-            0,
-            5
-          ],
-          "chinese_cognate_note": null
-        },
-        {
-          "word": "鳴き",
-          "reading": "naki",
-          "meaning": "to cry/sing (bird)",
-          "span": [
-            5,
-            7
-          ],
-          "chinese_cognate_note": "鳴 (míng) - same meaning"
-        },
-        {
-          "word": "つる",
-          "reading": "tsuru",
-          "meaning": "did/has finished (perfective auxiliary, attributive form)",
-          "span": [
-            7,
-            9
-          ],
-          "chinese_cognate_note": null
-        },
-        {
-          "word": "方",
-          "reading": "kata",
-          "meaning": "direction",
-          "span": [
-            9,
-            10
-          ],
-          "chinese_cognate_note": "方 (fāng) - direction/side"
-        },
-        {
-          "word": "を",
-          "reading": "o",
-          "meaning": "object marker (learned in Unit 1)",
-          "span": [
-            10,
-            11
-          ],
-          "chinese_cognate_note": null
-        },
-        {
-          "word": "ながむれば",
-          "reading": "nagamureba",
-          "meaning": "when I gaze at (nagamuru + ba)",
-          "span": [
-            11,
-            16
-          ],
-          "chinese_cognate_note": null
-        },
-        {
-          "word": "ただ",
-          "reading": "tada",
-          "meaning": "only / simply",
-          "span": [
-            16,
-            18
-          ],
-          "chinese_cognate_note": "只 (zhǐ) in meaning"
-        },
-        {
-          "word": "有明",
-          "reading": "ariake",
-          "meaning": "dawn (specifically the moon remaining at dawn)",
-          "span": [
-            18,
-            20
-          ],
-          "chinese_cognate_note": "有明 (yǒumíng) - recognizable as 'having light'"
-        },
-        {
-          "word": "の",
-          "reading": "no",
-          "meaning": "possessive particle (learned in Unit 1)",
-          "span": [
-            20,
-            21
-          ],
-          "chinese_cognate_note": null
-        },
-        {
-          "word": "月",
-          "reading": "tsuki",
-          "meaning": "moon",
-          "span": [
-            21,
-            22
-          ],
-          "chinese_cognate_note": "月 (yuè) - same meaning"
-        },
-        {
-          "word": "ぞ",
-          "reading": "zo",
-          "meaning": "emphatic particle",
-          "span": [
-            22,
-            23
-          ],
-          "chinese_cognate_note": null
-        },
-        {
-          "word": "残れる",
-          "reading": "nokoreru",
-          "meaning": "is remaining",
-          "span": [
-            23,
-            26
-          ],
-          "chinese_cognate_note": null
-        }
-      ],
-      "focus_highlight": [
-        11,
-        16
-      ]
-    },
-    {
-      "type": "grammar_spotlight",
-      "content": "Look at 'naki-tsuru' (鳴きつる). Here, 'naki' is the action of the bird crying. By adding 'tsuru' (the attributive form of 'tsu'), the poet indicates the cry is *finished*. Because 'tsuru' is in the Rentaikei (Attributive form), it directly modifies the noun 'kata' (direction). \n\nLogic: [Crying] + [Finished] + [Direction] = 'The direction where the cry has finished/happened.' This creates a sharp temporal contrast: the sound is gone (tsu), but the moon remains.",
-      "evidence": "See the poem above."
-    },
-    {
-      "type": "poem_presentation",
-      "poem_id": "lapis_e4716f999ff12f1b",
-      "display": {
-        "text_with_furigana": "<ruby>立帰</ruby>（たちかえ）りあはれとそ<ruby>思</ruby>（おも）ふよそにても<ruby>人</ruby>（ひと）に<ruby>心</ruby>（こころ）を<ruby>おきつ</ruby><ruby>白浪</ruby>（しらなみ）",
-        "romaji": "tachikaeri, aware to so omou, yoso nite, mo hito ni kokoro, o okitsu shiranami",
-        "translation": "Looking back, I think 'alas'; even from a distance, I have left my heart with that person, like white waves on the shore."
-      },
-      "vocabulary": [
-        {
-          "word": "立帰り",
-          "reading": "tachikaeri",
-          "meaning": "returning / looking back",
-          "span": [
-            0,
-            3
-          ],
-          "chinese_cognate_note": "立 (stand) + 帰 (return)"
-        },
-        {
-          "word": "あはれ",
-          "reading": "aware",
-          "meaning": "alas / pathos / deep emotion",
-          "span": [
-            3,
-            6
-          ],
-          "chinese_cognate_note": null
-        },
-        {
-          "word": "と",
-          "reading": "to",
-          "meaning": "quotation particle (learned in Unit 1)",
-          "span": [
-            6,
-            7
-          ],
-          "chinese_cognate_note": null
-        },
-        {
-          "word": "そ",
-          "reading": "so",
-          "meaning": "emphatic particle (variant of 'zo')",
-          "span": [
-            7,
-            8
-          ],
-          "chinese_cognate_note": null
-        },
-        {
-          "word": "思ふ",
-          "reading": "omou",
-          "meaning": "to think",
-          "span": [
-            8,
-            10
-          ],
-          "chinese_cognate_note": "思 (sī) - same meaning"
-        },
-        {
-          "word": "よそ",
-          "reading": "yoso",
-          "meaning": "elsewhere / a distant place",
-          "span": [
-            10,
-            12
-          ],
-          "chinese_cognate_note": null
-        },
-        {
-          "word": "にて",
-          "reading": "nite",
-          "meaning": "at / in (compound particle)",
-          "span": [
-            12,
-            14
-          ],
-          "chinese_cognate_note": null
+          "word": "折節",
+          "reading": "おりふし",
+          "meaning": "季节，时令",
+          "span": null,
+          "chinese_cognate_note": "折节（指时节）"
         },
         {
           "word": "も",
-          "reading": "mo",
-          "meaning": "even / also",
-          "span": [
-            14,
-            15
-          ],
+          "reading": "も",
+          "meaning": "也（提示助词）",
+          "span": null,
+          "chinese_cognate_note": null
+        },
+        {
+          "word": "うつれ",
+          "reading": "うつれ",
+          "meaning": "迁移，变化（已然形）",
+          "span": null,
+          "chinese_cognate_note": "移"
+        },
+        {
+          "word": "ば",
+          "reading": "ば",
+          "meaning": "因为...，...的话（接续助词）",
+          "span": null,
+          "chinese_cognate_note": null
+        },
+        {
+          "word": "かへ",
+          "reading": "かえ",
+          "meaning": "改变，翻转（连用形）",
+          "span": null,
+          "chinese_cognate_note": null
+        },
+        {
+          "word": "つ",
+          "reading": "つ",
+          "meaning": "完了助动词（表示动作确切完成）",
+          "span": null,
+          "chinese_cognate_note": null
+        },
+        {
+          "word": "世の中",
+          "reading": "よのなか",
+          "meaning": "世间，特指男女关系",
+          "span": null,
+          "chinese_cognate_note": null
+        },
+        {
+          "word": "の",
+          "reading": "の",
+          "meaning": "的（格助词）",
+          "span": null,
           "chinese_cognate_note": null
         },
         {
           "word": "人",
-          "reading": "hito",
-          "meaning": "person",
-          "span": [
-            15,
-            16
-          ],
-          "chinese_cognate_note": "人 (rén) - same meaning"
+          "reading": "ひと",
+          "meaning": "人（此处指恋人）",
+          "span": null,
+          "chinese_cognate_note": null
         },
         {
-          "word": "に",
-          "reading": "ni",
-          "meaning": "target/location particle (learned in Unit 1)",
-          "span": [
-            16,
-            17
-          ],
+          "word": "の",
+          "reading": "の",
+          "meaning": "的（格助词）",
+          "span": null,
           "chinese_cognate_note": null
         },
         {
           "word": "心",
-          "reading": "kokoro",
-          "meaning": "heart / mind",
-          "span": [
-            17,
-            18
-          ],
-          "chinese_cognate_note": "心 (xīn) - same meaning"
-        },
-        {
-          "word": "を",
-          "reading": "o",
-          "meaning": "object marker",
-          "span": [
-            18,
-            19
-          ],
+          "reading": "こころ",
+          "meaning": "心",
+          "span": null,
           "chinese_cognate_note": null
         },
         {
-          "word": "おき",
-          "reading": "oki",
-          "meaning": "to place / to leave behind",
-          "span": [
-            19,
-            21
-          ],
-          "chinese_cognate_note": "置 (zhì) - same meaning"
-        },
-        {
-          "word": "つ",
-          "reading": "tsu",
-          "meaning": "have finished (perfective auxiliary, conclusive form)",
-          "span": [
-            21,
-            22
-          ],
+          "word": "の",
+          "reading": "の",
+          "meaning": "像...一样（同格/比喻）",
+          "span": null,
           "chinese_cognate_note": null
         },
         {
-          "word": "白浪",
-          "reading": "shiranami",
-          "meaning": "white waves",
-          "span": [
-            22,
-            24
-          ],
-          "chinese_cognate_note": "白 (white) + 浪 (waves)"
+          "word": "花染め",
+          "reading": "はなぞめ",
+          "meaning": "草木染（易褪色）",
+          "span": null,
+          "chinese_cognate_note": null
+        },
+        {
+          "word": "の",
+          "reading": "の",
+          "meaning": "的（格助词）",
+          "span": null,
+          "chinese_cognate_note": null
+        },
+        {
+          "word": "袖",
+          "reading": "そで",
+          "meaning": "衣袖（借代衣物）",
+          "span": null,
+          "chinese_cognate_note": null
         }
       ],
       "focus_highlight": [
-        55,
-        57
+        6,
+        7
       ]
     },
     {
       "type": "grammar_spotlight",
-      "content": "In 'kokoro o okitsu' (心を置きて/おきつ), the poet uses 'tsu' to show the definitive act of leaving the heart behind. This is a classic 'intentional' use. \n\nData Note: In this poem, 'okitsu' is also a 'Kakekotoba' (pivot word). It means 'I have left (my heart)' AND it sounds like 'Okitsu', a famous coastal place name. The 'tsu' auxiliary provides the perfect grammatical ending to make this pun work.",
+      "content": "在「かへつ」（kaetsu）中，动词「かふ」（改变）变成了连用形「かへ」，后面接上了助动词「つ」。\n\n这里的「つ」不仅表示动作结束，还暗示这种改变是**彻底的、决绝的**。如果用「ぬ」，可能侧重于“不知不觉变了”；而用「つ」，则强调“变了就是变了”这种既定事实。",
       "evidence": "See the poem above."
+    },
+    {
+      "type": "poem_presentation",
+      "poem_id": "lapis_1cd1c28609ded017",
+      "display": {
+        "text_with_furigana": "<ruby>吹<rt>ふ</rt></ruby>く<ruby>風<rt>かぜ</rt></ruby>の<ruby>色<rt>いろ</rt></ruby>の<ruby>千種<rt>ちくさ</rt></ruby>に<ruby>見<rt>み</rt></ruby>え<span class='highlight-grammar'>つる</span>は<ruby>秋<rt>あき</rt></ruby>の<ruby>木<rt>こ</rt></ruby>の<ruby>葉<rt>は</rt></ruby>の<ruby>散<rt>ち</rt></ruby>ればなりけり",
+        "romaji": "fuku kaze no iro no chikusa ni mietsuru wa aki no konoha no chireba nari keri",
+        "translation": "那看起来像是风有千种颜色的景象，原来是因为秋天的树叶在散落啊。"
+      },
+      "vocabulary": [
+        {
+          "word": "吹く",
+          "reading": "ふく",
+          "meaning": "吹（连体形）",
+          "span": null,
+          "chinese_cognate_note": null
+        },
+        {
+          "word": "風",
+          "reading": "かぜ",
+          "meaning": "风",
+          "span": null,
+          "chinese_cognate_note": null
+        },
+        {
+          "word": "の",
+          "reading": "の",
+          "meaning": "主格助词（相当于ga）",
+          "span": null,
+          "chinese_cognate_note": null
+        },
+        {
+          "word": "色",
+          "reading": "いろ",
+          "meaning": "颜色",
+          "span": null,
+          "chinese_cognate_note": null
+        },
+        {
+          "word": "の",
+          "reading": "の",
+          "meaning": "的",
+          "span": null,
+          "chinese_cognate_note": null
+        },
+        {
+          "word": "千種",
+          "reading": "ちくさ",
+          "meaning": "千种，多种多样",
+          "span": null,
+          "chinese_cognate_note": null
+        },
+        {
+          "word": "に",
+          "reading": "に",
+          "meaning": "作为...，呈...状（格助词）",
+          "span": null,
+          "chinese_cognate_note": null
+        },
+        {
+          "word": "見え",
+          "reading": "みえ",
+          "meaning": "看起来，显现（连用形）",
+          "span": null,
+          "chinese_cognate_note": null
+        },
+        {
+          "word": "つる",
+          "reading": "つる",
+          "meaning": "完了助动词「つ」的连体形",
+          "span": null,
+          "chinese_cognate_note": null
+        },
+        {
+          "word": "は",
+          "reading": "は",
+          "meaning": "提示助词（提示主语）",
+          "span": null,
+          "chinese_cognate_note": null
+        },
+        {
+          "word": "秋",
+          "reading": "あき",
+          "meaning": "秋天",
+          "span": null,
+          "chinese_cognate_note": null
+        },
+        {
+          "word": "の",
+          "reading": "の",
+          "meaning": "的",
+          "span": null,
+          "chinese_cognate_note": null
+        },
+        {
+          "word": "木の葉",
+          "reading": "このは",
+          "meaning": "树叶",
+          "span": null,
+          "chinese_cognate_note": null
+        },
+        {
+          "word": "の",
+          "reading": "の",
+          "meaning": "主格助词",
+          "span": null,
+          "chinese_cognate_note": null
+        },
+        {
+          "word": "散れ",
+          "reading": "ちれ",
+          "meaning": "散落（已然形）",
+          "span": null,
+          "chinese_cognate_note": null
+        },
+        {
+          "word": "ば",
+          "reading": "ば",
+          "meaning": "因为（接续助词）",
+          "span": null,
+          "chinese_cognate_note": null
+        },
+        {
+          "word": "なり",
+          "reading": "なり",
+          "meaning": "是（断定助动词）",
+          "span": null,
+          "chinese_cognate_note": null
+        },
+        {
+          "word": "けり",
+          "reading": "けり",
+          "meaning": "咏叹助动词（表示恍然大悟）",
+          "span": null,
+          "chinese_cognate_note": null
+        }
+      ],
+      "focus_highlight": [
+        12,
+        14
+      ]
+    },
+    {
+      "type": "contrast_example",
+      "content": "### ⚠️ 混淆辨析：助动词「つ」 vs. 格助词「つ」\n\n虽然本课重点是助动词，但在古文中你可能会遇到另一个「つ」。\n\n1.  **本课的「つ」 (助动词)**：\n    *   **接续**：动词连用形之后（如：見え**つ**、来**つ**）。\n    *   **含义**：完成了。\n\n2.  **格助词「つ」 (上代语残留)**：\n    *   **接续**：名词之后（如：天**つ**風、沖**つ**白波）。\n    *   **含义**：相当于现代的「の」（的）。\n    *   *判断技巧：看前面是动作（动词）还是物体（名词）。*"
     },
     {
       "type": "poem_presentation",
       "poem_id": "lapis_9e980d4885e7d03b",
       "display": {
-        "text_with_furigana": "おきもせすねもせてよるをあかしては<ruby>春</ruby>（はる）の<ruby>物</ruby>（もの）とてなかめくらしつ",
-        "romaji": "okimosesu, nemosete yoru o, akashite wa, haru no mono tote, nakamekurasitsu",
-        "translation": "Neither waking nor sleeping, I spend the night; then, as if it were a thing of spring, I have spent the whole day gazing idly."
+        "text_with_furigana": "<ruby>起<rt>お</rt></ruby>きもせず<ruby>寝<rt>ね</rt></ruby>もせず<ruby>夜<rt>よる</rt></ruby>を<ruby>明<rt>あ</rt></ruby>かしては<ruby>春<rt>はる</rt></ruby>の<ruby>物<rt>もの</rt></ruby>とて<ruby>眺<rt>なが</rt></ruby>め<ruby>暮<rt>く</rt></ruby>らし<span class='highlight-grammar'>つ</span>",
+        "romaji": "oki mo sezu ne mo sezu yoru o akashite wa haru no mono tote nagame kurashitsu",
+        "translation": "似醒非醒，似睡非睡，熬过漫漫长夜；又对着绵绵春雨，在这沉思中度过了一整天。"
       },
       "vocabulary": [
         {
-          "word": "おき",
-          "reading": "oki",
-          "meaning": "waking up",
-          "span": [
-            0,
-            2
-          ],
+          "word": "起き",
+          "reading": "おき",
+          "meaning": "醒来（未然形/连用形）",
+          "span": null,
           "chinese_cognate_note": null
         },
         {
           "word": "も",
-          "reading": "mo",
-          "meaning": "even / also",
-          "span": [
-            2,
-            3
-          ],
+          "reading": "も",
+          "meaning": "也（列举）",
+          "span": null,
           "chinese_cognate_note": null
         },
         {
-          "word": "せ",
-          "reading": "se",
-          "meaning": "to do",
-          "span": [
-            3,
-            4
-          ],
+          "word": "せず",
+          "reading": "せず",
+          "meaning": "不做（否定助动词ず的连用形）",
+          "span": null,
           "chinese_cognate_note": null
         },
         {
-          "word": "す",
-          "reading": "su",
-          "meaning": "not (negative auxiliary variant)",
-          "span": [
-            4,
-            5
-          ],
-          "chinese_cognate_note": null
-        },
-        {
-          "word": "ね",
-          "reading": "ne",
-          "meaning": "sleeping",
-          "span": [
-            5,
-            6
-          ],
+          "word": "寝",
+          "reading": "ね",
+          "meaning": "睡（未然形/连用形）",
+          "span": null,
           "chinese_cognate_note": null
         },
         {
           "word": "も",
-          "reading": "mo",
-          "meaning": "even / also",
-          "span": [
-            6,
-            7
-          ],
+          "reading": "も",
+          "meaning": "也",
+          "span": null,
           "chinese_cognate_note": null
         },
         {
-          "word": "せ",
-          "reading": "se",
-          "meaning": "to do",
-          "span": [
-            7,
-            8
-          ],
+          "word": "せず",
+          "reading": "せず",
+          "meaning": "不做",
+          "span": null,
           "chinese_cognate_note": null
         },
         {
-          "word": "て",
-          "reading": "te",
-          "meaning": "linking particle (learned in Unit 2)",
-          "span": [
-            8,
-            9
-          ],
+          "word": "夜",
+          "reading": "よる",
+          "meaning": "夜晚",
+          "span": null,
           "chinese_cognate_note": null
-        },
-        {
-          "word": "よる",
-          "reading": "yoru",
-          "meaning": "night",
-          "span": [
-            9,
-            11
-          ],
-          "chinese_cognate_note": "夜 (yè) - same meaning"
         },
         {
           "word": "を",
-          "reading": "o",
-          "meaning": "object marker",
-          "span": [
-            11,
-            12
-          ],
+          "reading": "を",
+          "meaning": "把（宾格助词）",
+          "span": null,
           "chinese_cognate_note": null
         },
         {
-          "word": "あかして",
-          "reading": "akashite",
-          "meaning": "spending the night until dawn",
-          "span": [
-            12,
-            16
-          ],
+          "word": "明かし",
+          "reading": "あかし",
+          "meaning": "熬夜，使天亮（连用形）",
+          "span": null,
           "chinese_cognate_note": null
         },
         {
-          "word": "は",
-          "reading": "wa",
-          "meaning": "topic marker",
-          "span": [
-            16,
-            17
-          ],
+          "word": "ては",
+          "reading": "ては",
+          "meaning": "反复动作（接续助词组合）",
+          "span": null,
           "chinese_cognate_note": null
         },
         {
           "word": "春",
-          "reading": "haru",
-          "meaning": "spring",
-          "span": [
-            17,
-            18
-          ],
-          "chinese_cognate_note": "春 (chūn) - same meaning"
+          "reading": "はる",
+          "meaning": "春天",
+          "span": null,
+          "chinese_cognate_note": null
         },
         {
           "word": "の",
-          "reading": "no",
-          "meaning": "possessive particle",
-          "span": [
-            18,
-            19
-          ],
+          "reading": "の",
+          "meaning": "的",
+          "span": null,
           "chinese_cognate_note": null
         },
         {
           "word": "物",
-          "reading": "mono",
-          "meaning": "thing",
-          "span": [
-            19,
-            20
-          ],
-          "chinese_cognate_note": "物 (wù) - same meaning"
-        },
-        {
-          "word": "とて",
-          "reading": "tote",
-          "meaning": "thinking that / as",
-          "span": [
-            20,
-            22
-          ],
+          "reading": "もの",
+          "meaning": "事物（此处指春雨带来的忧愁）",
+          "span": null,
           "chinese_cognate_note": null
         },
         {
-          "word": "なかめくらし",
-          "reading": "nakamekurashi",
-          "meaning": "to spend time gazing idly",
-          "span": [
-            22,
-            28
-          ],
+          "word": "とて",
+          "reading": "とて",
+          "meaning": "说着...，因为...（引用/原因）",
+          "span": null,
+          "chinese_cognate_note": null
+        },
+        {
+          "word": "眺め",
+          "reading": "ながめ",
+          "meaning": "凝视/长雨（挂词）",
+          "span": null,
+          "chinese_cognate_note": null
+        },
+        {
+          "word": "暮らし",
+          "reading": "くらし",
+          "meaning": "度日（连用形）",
+          "span": null,
           "chinese_cognate_note": null
         },
         {
           "word": "つ",
-          "reading": "tsu",
-          "meaning": "have finished (perfective auxiliary, conclusive form)",
-          "span": [
-            28,
-            29
-          ],
+          "reading": "つ",
+          "meaning": "完了助动词（终止形）",
+          "span": null,
           "chinese_cognate_note": null
         }
       ],
       "focus_highlight": [
-        66,
-        67
+        28,
+        29
       ]
     },
     {
       "type": "comprehension_check",
-      "question": "In the phrase 'nakamekurasitsu' (なかめくらしつ), why did the poet choose 'tsu' instead of 'nu'?",
-      "answer": "Because 'nakamekurasu' (to spend time gazing) is an intentional, active verb. The poet is describing a deliberate act they have completed, rather than a natural phenomenon occurring on its own.",
-      "hint": "Think about who is doing the 'gazing'—is it a person or a natural force?"
+      "question": "在小野小町的诗中，「暮らしつ」表达了怎样的语感？",
+      "answer": "表达了“确切地度过了”一整天。它强调了时间的流逝和动作的完结，配合前面的描写，突出了愁绪的漫长。",
+      "hint": "回顾「つ」作为“确认提交”的隐喻，它如何定格了这一天？"
+    },
+    {
+      "type": "literary_insight",
+      "content": "在小野小町的这首诗中，出现了一个非常重要的修辞技法：**掛詞（Kakekotoba / Pivot Word）**。\n\n请看单词「ながめ」（nagame）：\n1.  **眺め**：凝视，沉思。\n2.  **長雨**：连绵不断的雨。\n\n诗人用这一个词，同时表达了“望着窗外”的动作和“春雨绵绵”的景象。这与中国诗歌中的**双关语**（如“东边日出西边雨，道是无晴却有晴”）有异曲同工之妙，将内心的愁绪（眺め）与外界的景象（長雨）无缝融合。",
+      "literary_device": "掛詞 (Pivot Word)",
+      "chinese_parallel": "双关语 / 谐音双关"
+    },
+    {
+      "type": "literary_insight",
+      "content": "同样，在第一首诗中，「うつる」（utsuru）也使用了**掛詞**：\n\n1.  **移る**：季节的推移，人心的变迁。\n2.  **映る**：颜色的映照（与后面的“花染”呼应）。\n\n这种技法增加了诗歌的逻辑密度，使得“季节”、“人心”和“颜色”这三个意象在同一个动词上交汇。",
+      "literary_device": "掛詞 (Pivot Word)",
+      "chinese_parallel": "一语双关"
     }
   ],
   "reference_card": {
-    "point": "Auxiliary つ (tsu)",
-    "one_liner": "Indicates the completion of an intentional or transitive action (Perfective Aspect).",
-    "example": "鳴きつる方 (The direction where [it] has finished crying)",
+    "point": "助动词「つ」",
+    "one_liner": "表示动作的确切完成或强烈确信（人为/主动）。",
+    "example": "見えつる (mie-tsuru) - 确实看见了 / 显现了",
     "see_also": [
       "auxiliary_nu",
-      "lesson_conjugation_rentaikei"
+      "conjugation_renyoukei"
     ]
   },
   "forward_references": [
     {
-      "point": "nokoreru (残れる)",
-      "note": "The 're' here is a different auxiliary indicating a state of being, which we will cover in Unit 8."
-    },
-    {
-      "point": "tote (とて)",
-      "note": "This is a compound particle meaning 'thinking that' or 'as', which we will explore in the next unit on complex linking."
+      "point": "推量助动词「む」",
+      "note": "我们将在后续课程学习如何表达“将要完成”或“推测”。"
     }
   ]
 }

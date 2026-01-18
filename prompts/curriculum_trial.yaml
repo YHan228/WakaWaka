@@ -3,76 +3,114 @@
 # Purpose: Generate one independent curriculum organization proposal
 
 meta:
-  version: "1.0"
+  version: "3.0"
   model: "gemini-3-pro-preview"
   temperature: 0.7  # Higher temperature for diversity across trials
 
 system: |
-  You are a curriculum designer for classical Japanese poetry education.
+  你是一位专注于古典日本诗歌教育的课程设计师。
 
-  STUDENT PROFILE:
-  - Chinese native speaker (reads kanji, knows hiragana)
-  - ZERO Japanese grammar knowledge
-  - Analytical mindset, appreciates logical progression
+  学生背景:
+  - 母语为中文（能读汉字，认识平假名）
+  - 零日语语法基础
+  - 具有分析性思维，欣赏逻辑清晰的教学进度
 
-  TASK: Organize the provided lessons into a pedagogically-ordered curriculum.
+  任务: 将提供的课程组织成教学法合理的课程体系，并为每课设计文学重点。
 
-  PEDAGOGICAL PRINCIPLES:
-  1. FOUNDATION FIRST: Basic particles (は, が, の, を) before complex patterns
-  2. FREQUENCY MATTERS: Common patterns before rare ones
-  3. BUILDING BLOCKS: Simpler forms before compound/derived forms
-  4. CONCEPTUAL CLUSTERS: Group related concepts (e.g., all tense markers together)
-  5. SPIRAL LEARNING: Revisit concepts with increasing complexity
+  教学法原则（参考，可灵活调整）:
+  - 基础先行: 基础助词通常优先于复杂句型
+  - 频率与难度平衡: 常见模式 vs 概念递进
+  - 概念聚类 vs 分散学习: 你可以选择集中教授相关概念，或分散以避免认知过载
+  - 螺旋式 vs 线性: 可以重访概念，也可以一次教透
 
-  PREREQUISITE RULES:
-  - Prerequisites MUST be lesson IDs that appear EARLIER in the curriculum
-  - A lesson in unit_03 cannot have prerequisites from unit_04
-  - Limit prerequisites to 0-3 per lesson (avoid dependency chains)
-  - First lessons in each unit should have minimal prerequisites
+  文学鉴赏设计（关键任务）:
+  - 每个课程条目包含 available_seasons, available_themes, available_devices
+  - 这些是该课候选诗歌中可用的文学素材——你可以自由选择组合
+  - 为每课设计 literary_focus: 从可用素材中选择1-4项，构成该课的文学主题
+  - 设计主题弧线: 如"秋之哀歌"单元、"恋歌进阶"单元
+  - 季节可用标记: 【春】【夏】【秋】【冬】
+  - 不必拘泥于算法预设——你有完全自由根据教学目标重新设计
 
-  STRICT OUTPUT RULES:
-  - Output ONLY valid JSON, no markdown, no explanatory text
-  - Use ONLY lesson IDs from the provided list
-  - Every lesson ID must appear in EXACTLY ONE unit
-  - Unit IDs: unit_01, unit_02, ... unit_NN (zero-padded)
-  - Unit titles: max 6 words, descriptive
+  多样性要求——每个试验应有独特视角:
+  - 试验1-3: 可尝试不同的单元数量（5-10个单元）
+  - 试验4-6: 可尝试不同的概念分组方式
+  - 试验7-10: 可尝试不同的文学整合策略（按季节、按主题、按技法难度）
+  - 鼓励探索: 激进方案（如4大单元）和保守方案（如12小单元）都可以
 
-  OUTPUT SCHEMA:
+  前置条件规则:
+  - 前置条件必须是出现在课程更早位置的课程ID
+  - unit_03的课程不能有来自unit_04的前置条件
+  - 每课限制0-3个前置条件（避免依赖链）
+  - 每单元的第一课应有最少前置条件
+
+  严格输出规则:
+  - 仅输出有效JSON，无markdown，无说明文字
+  - 仅使用提供列表中的课程ID
+  - 每个课程ID必须恰好出现在一个单元中
+  - 单元ID: unit_01, unit_02, ... unit_NN（零填充）
+  - 单元标题: 最多6个词，描述性，使用中文
+
+  输出模式:
   {
     "curriculum_id": "trial_N",
-    "design_philosophy": "One sentence describing your organizing principle",
+    "design_philosophy": "一句话描述你的组织原则",
     "units": [
       {
         "id": "unit_01",
-        "title": "Short Descriptive Title",
-        "theme": "What unifies lessons in this unit",
+        "title": "简短描述性标题",
+        "theme": "本单元的统一主题",
+        "literary_ready": false,
         "lessons": ["lesson_id_1", "lesson_id_2", ...]
       }
     ],
     "prerequisites": {
       "lesson_id": ["prereq_lesson_id_1", "prereq_lesson_id_2"]
+    },
+    "literary_focus": {
+      "lesson_id": ["【秋】", "哀傷", "掛詞"]
     }
   }
 
+  literary_focus 设计指南:
+  - 从课程的 available_seasons/themes/devices 中选择
+  - 每课1-4项，构成该课的文学赏析主题
+  - 考虑单元内的主题连贯性
+  - 考虑跨单元的难度递进（简单技法如体言止め先于复杂技法如掛詞）
+  - 基础单元（语法为主）的课程可以不设literary_focus
+
 user_template: |
-  Design a curriculum organization for these {num_lessons} lessons.
+  为以下 {num_lessons} 个课程设计课程组织。
 
-  TRIAL NUMBER: {trial_number} (use as curriculum_id: "trial_{trial_number}")
+  试验编号: {trial_number} (使用 curriculum_id: "trial_{trial_number}")
 
-  AVAILABLE LESSONS (organize ALL of these):
+  可用课程（组织全部）:
   {lessons_json}
 
-  Each lesson entry shows:
-  - id: the lesson identifier (use exactly as-is)
-  - grammar_point: what this lesson teaches
-  - category: particle, auxiliary, conjugation, etc.
-  - frequency: how often this appears in the corpus
-  - difficulty_tier: 1=easiest to 5=hardest
+  每个课程条目显示:
+  - id: 课程标识符（原样使用）
+  - grammar_point: 本课教授内容
+  - category: particle（助词）, auxiliary（助动词）, conjugation（活用）等
+  - frequency: 在语料库中的出现频率
+  - difficulty_tier: 1=最易 到 5=最难
+  - available_seasons: 候选诗歌中的季节分布（如有）
+  - available_themes: 候选诗歌中的主题分布（如有）
+  - available_devices: 候选诗歌中的技法分布（如有）
 
-  GRAMMAR INDEX (for understanding relationships):
+  语法索引（用于理解关系）:
   {grammar_summary}
 
-  Output your curriculum as JSON only.
+  文学技法统计（全语料库）:
+  {literary_summary}
+
+  季节/主题分布（全语料库）:
+  {season_theme_summary}
+
+  任务:
+  1. 组织课程到单元
+  2. 设定前置条件
+  3. 为每课设计 literary_focus（从该课的 available_* 中选择）
+
+  仅输出JSON格式的课程。
 
 validation:
   required_fields:
@@ -80,8 +118,10 @@ validation:
     - design_philosophy
     - units
     - prerequisites
+    - literary_focus
   unit_required_fields:
     - id
     - title
     - theme
+    - literary_ready
     - lessons

@@ -29,7 +29,7 @@ import re
 import sys
 import threading
 import time
-from concurrent.futures import ThreadPoolExecutor, as_completed
+from concurrent.futures import ThreadPoolExecutor, as_completed, TimeoutError as FuturesTimeoutError
 from datetime import datetime
 from pathlib import Path
 from typing import Any
@@ -78,10 +78,11 @@ logging.basicConfig(
 logger = logging.getLogger(__name__)
 
 # Constants
-DEFAULT_MODEL = "gemini-2.0-flash"  # Faster than preview; use --model gemini-3-flash-preview for higher quality
+DEFAULT_MODEL = "gemini-3-flash-preview" # high quality is required
 DEFAULT_BATCH_SIZE = 10
 DEFAULT_API_SLEEP = 1.0
-DEFAULT_WORKERS = 1  # Parallel workers for annotation
+DEFAULT_WORKERS = 100  # Parallel workers for annotation
+WORKER_TIMEOUT = 120  # Timeout per poem in seconds (2 minutes)
 CHECKPOINT_DIR = PROJECT_ROOT / "data" / "annotated" / ".checkpoints"
 CACHE_DIR = PROJECT_ROOT / "data" / "annotated" / ".cache"
 
@@ -90,9 +91,16 @@ _thread_local = threading.local()
 
 
 def get_thread_tagger() -> "fugashi.Tagger":
-    """Get thread-local Fugashi tagger instance."""
+    """Get thread-local Fugashi tagger instance with UniDic-Waka for classical Japanese."""
     if not hasattr(_thread_local, 'tagger'):
-        _thread_local.tagger = fugashi.Tagger()
+        dict_path = PROJECT_ROOT / "data" / "dict"
+        if (dict_path / "dicrc").exists():
+            from fugashi import GenericTagger
+            _thread_local.tagger = GenericTagger(f'-d {dict_path} -r {dict_path}/dicrc')
+            logger.info("Using UniDic-Waka dictionary for classical Japanese")
+        else:
+            _thread_local.tagger = fugashi.Tagger()
+            logger.warning("UniDic-Waka not found at data/dict/, using default unidic-lite")
     return _thread_local.tagger
 
 
@@ -178,13 +186,16 @@ class GeminiClient:
         api_key: str | None = None,
         model: str = DEFAULT_MODEL,
         temperature: float = 0.1,
-        sleep_seconds: float = DEFAULT_API_SLEEP
+        sleep_seconds: float = DEFAULT_API_SLEEP,
+        request_timeout: float = 60.0  # HTTP request timeout in seconds
     ):
         self.api_key = api_key or os.environ.get("GEMINI_API_KEY")
         if not self.api_key:
             raise ValueError("GEMINI_API_KEY not set. Check your .env file.")
 
-        self.client = genai.Client(api_key=self.api_key)
+        # Create client with HTTP timeout via http_options (timeout in milliseconds)
+        http_options = genai_types.HttpOptions(timeout=int(request_timeout * 1000))
+        self.client = genai.Client(api_key=self.api_key, http_options=http_options)
         self.temperature = temperature
         self.sleep_seconds = sleep_seconds
         self.model_name = model
@@ -315,6 +326,9 @@ def validate_and_fix_annotation(
     text_len = len(text)
 
     # Ensure required fields exist
+    if "kanji_transcription" not in llm_response:
+        # Default to original text if no transcription provided
+        llm_response["kanji_transcription"] = text
     if "reading_hiragana" not in llm_response:
         llm_response["reading_hiragana"] = ""
     if "reading_romaji" not in llm_response:
@@ -544,6 +558,7 @@ def build_poem_annotation(
         source=poem["source"],
         author=poem.get("author"),
         collection=poem.get("collection"),
+        kanji_transcription=llm_response.get("kanji_transcription", poem["text"]),
         fugashi_tokens=tokens,
         token_readings=token_readings,
         reading_hiragana=llm_response.get("reading_hiragana", ""),
@@ -560,9 +575,9 @@ def build_poem_annotation(
 # Caching
 # -----------------------------------------------------------------------------
 
-def get_cache_key(poem_id: str, model: str, prompt_version: str) -> str:
-    """Generate cache key for LLM response."""
-    key = f"{poem_id}_{model}_{prompt_version}"
+def get_cache_key(poem_id: str, model: str, prompt_version: str, shot: int = 1) -> str:
+    """Generate cache key for LLM response with shot number for 2-shot approach."""
+    key = f"{poem_id}_{model}_{prompt_version}_shot{shot}"
     return hashlib.md5(key.encode()).hexdigest()
 
 
@@ -598,11 +613,96 @@ def load_checkpoint(checkpoint_file: Path) -> set[str]:
     return set()
 
 
-def save_checkpoint(checkpoint_file: Path, poem_id: str):
-    """Append poem ID to checkpoint file."""
+def save_checkpoint(checkpoint_file: Path, poem_id: str, all_ids: set[str] | None = None):
+    """Save poem ID to checkpoint file (deduplicated).
+
+    If all_ids is provided, writes the full set. Otherwise appends and dedupes.
+    """
     checkpoint_file.parent.mkdir(parents=True, exist_ok=True)
-    with open(checkpoint_file, "a", encoding="utf-8") as f:
-        f.write(f"{poem_id}\n")
+
+    if all_ids is not None:
+        # Write full set (used for bulk updates)
+        with open(checkpoint_file, "w", encoding="utf-8") as f:
+            for pid in sorted(all_ids):
+                f.write(f"{pid}\n")
+    else:
+        # Load existing, add new, dedupe, write back
+        existing = load_checkpoint(checkpoint_file)
+        existing.add(poem_id)
+        with open(checkpoint_file, "w", encoding="utf-8") as f:
+            for pid in sorted(existing):
+                f.write(f"{pid}\n")
+
+
+# -----------------------------------------------------------------------------
+# Two-Shot Merge Logic
+# -----------------------------------------------------------------------------
+
+def merge_annotations(shot1: dict, shot2: dict) -> dict:
+    """
+    Merge two annotation shots, preferring Shot 2 for corrected values.
+
+    Strategy:
+    - Readings: prefer Shot 2 (refined/corrected)
+    - Grammar points: merge by canonical_id, Shot 2 overwrites duplicates
+    - Vocabulary: merge by word, Shot 2 overwrites duplicates
+    - Difficulty factors: average weights, prefer Shot 2 notes
+    """
+    result = shot1.copy()
+
+    # Prefer Shot 2 for kanji transcription (more refined)
+    if shot2.get("kanji_transcription"):
+        result["kanji_transcription"] = shot2["kanji_transcription"]
+
+    # Prefer Shot 2 for readings (more refined)
+    if shot2.get("reading_hiragana"):
+        result["reading_hiragana"] = shot2["reading_hiragana"]
+    if shot2.get("reading_romaji"):
+        result["reading_romaji"] = shot2["reading_romaji"]
+    if shot2.get("token_readings"):
+        result["token_readings"] = shot2["token_readings"]
+
+    # Merge grammar points (Shot 2 overwrites duplicates by canonical_id)
+    shot1_gps = {gp["canonical_id"]: gp for gp in shot1.get("grammar_points", [])}
+    shot2_gps = {gp["canonical_id"]: gp for gp in shot2.get("grammar_points", [])}
+    shot1_gps.update(shot2_gps)  # Shot 2 overwrites
+    result["grammar_points"] = list(shot1_gps.values())
+
+    # Merge vocabulary (Shot 2 overwrites duplicates by word)
+    shot1_vocab = {v["word"]: v for v in shot1.get("vocabulary", [])}
+    shot2_vocab = {v["word"]: v for v in shot2.get("vocabulary", [])}
+    shot1_vocab.update(shot2_vocab)
+    result["vocabulary"] = list(shot1_vocab.values())
+
+    # Average difficulty factors
+    factors1 = {f["factor"]: f for f in shot1.get("difficulty_factors", [])}
+    factors2 = {f["factor"]: f for f in shot2.get("difficulty_factors", [])}
+
+    merged_factors = {}
+    all_factor_names = set(factors1.keys()) | set(factors2.keys())
+    for fname in all_factor_names:
+        f1 = factors1.get(fname, {"weight": 0.0})
+        f2 = factors2.get(fname, {"weight": 0.0})
+
+        # If factor exists in both, average; otherwise take the one that exists
+        if fname in factors1 and fname in factors2:
+            avg_weight = (f1.get("weight", 0.0) + f2.get("weight", 0.0)) / 2.0
+        else:
+            avg_weight = f1.get("weight", 0.0) or f2.get("weight", 0.0)
+
+        merged_factors[fname] = {
+            "factor": fname,
+            "weight": avg_weight,
+            "note": f2.get("note") or f1.get("note")  # Prefer Shot 2 note
+        }
+
+    result["difficulty_factors"] = list(merged_factors.values())
+
+    # Prefer Shot 2 semantic notes if available
+    if shot2.get("semantic_notes"):
+        result["semantic_notes"] = shot2["semantic_notes"]
+
+    return result
 
 
 # -----------------------------------------------------------------------------
@@ -614,17 +714,21 @@ def annotate_poem(
     tagger: fugashi.Tagger,
     client: GeminiClient,
     prompt_config: dict,
-    use_cache: bool = True
+    use_cache: bool = True,
+    prompt_config_review: dict | None = None,
+    use_two_shot: bool = True
 ) -> PoemAnnotation | None:
     """
-    Annotate a single poem.
+    Annotate a single poem with optional 2-shot approach.
 
     Args:
         poem: Raw poem dict
         tagger: Fugashi tagger
         client: Gemini client
-        prompt_config: Loaded prompt configuration
+        prompt_config: Loaded prompt configuration (Shot 1)
         use_cache: Whether to use response caching
+        prompt_config_review: Review prompt configuration (Shot 2), None to disable
+        use_two_shot: Whether to use 2-shot annotation (requires prompt_config_review)
 
     Returns:
         PoemAnnotation or None on failure
@@ -639,52 +743,111 @@ def annotate_poem(
         logger.warning(f"No tokens for poem {poem_id}, skipping")
         return None
 
-    # Check cache
-    cache_key = get_cache_key(poem_id, client.model_name, prompt_config["meta"]["version"])
-
-    if use_cache:
-        cached = load_cached_response(cache_key)
-        if cached:
-            logger.debug(f"Using cached response for {poem_id}")
-            try:
-                fixed = validate_and_fix_annotation(cached, poem, tokens)
-                return build_poem_annotation(poem, tokens, fixed)
-            except Exception as e:
-                logger.warning(f"Cached response invalid for {poem_id}: {e}")
-
-    # Build prompt
     tokens_json = tokens_to_json(tokens)
-    user_prompt = format_prompt(
-        prompt_config["user_template"],
-        poem_text=text,
-        text_hash=poem.get("text_hash", PoemAnnotation.compute_text_hash(text)),
-        fugashi_tokens_json=tokens_json,
-        source=poem["source"],
-        author=poem.get("author") or "unknown",
-        collection=poem.get("collection") or "unknown"
-    )
+    text_hash = poem.get("text_hash", PoemAnnotation.compute_text_hash(text))
 
-    # Call LLM
-    try:
-        response_text = client.generate(
-            prompt_config["system"],
-            user_prompt
+    # Determine if we can do 2-shot
+    can_two_shot = use_two_shot and prompt_config_review is not None
+
+    # --- SHOT 1: Initial Annotation ---
+    cache_key_shot1 = get_cache_key(poem_id, client.model_name, prompt_config["meta"]["version"], shot=1)
+
+    shot1_response = None
+    if use_cache:
+        cached = load_cached_response(cache_key_shot1)
+        if cached:
+            logger.debug(f"Using cached Shot 1 response for {poem_id}")
+            shot1_response = cached
+
+    if shot1_response is None:
+        # Build Shot 1 prompt
+        user_prompt = format_prompt(
+            prompt_config["user_template"],
+            poem_text=text,
+            text_hash=text_hash,
+            fugashi_tokens_json=tokens_json,
+            source=poem["source"],
+            author=poem.get("author") or "unknown",
+            collection=poem.get("collection") or "unknown"
         )
 
-        # Parse response
-        llm_response = extract_json_from_response(response_text)
+        try:
+            response_text = client.generate(
+                prompt_config["system"],
+                user_prompt
+            )
+            shot1_response = extract_json_from_response(response_text)
 
-        # Cache response
-        if use_cache:
-            save_cached_response(cache_key, llm_response)
+            if use_cache:
+                save_cached_response(cache_key_shot1, shot1_response)
 
-        # Validate and build annotation
-        fixed = validate_and_fix_annotation(llm_response, poem, tokens)
-        return build_poem_annotation(poem, tokens, fixed)
+        except Exception as e:
+            logger.error(f"Shot 1 failed for {poem_id}: {e}")
+            return None
 
+    # Validate Shot 1
+    try:
+        shot1_fixed = validate_and_fix_annotation(shot1_response, poem, tokens)
     except Exception as e:
-        logger.error(f"Failed to annotate poem {poem_id}: {e}")
+        logger.error(f"Shot 1 validation failed for {poem_id}: {e}")
         return None
+
+    # --- SHOT 2: Review & Correction (if enabled) ---
+    if can_two_shot:
+        cache_key_shot2 = get_cache_key(poem_id, client.model_name, prompt_config_review["meta"]["version"], shot=2)
+
+        shot2_response = None
+        if use_cache:
+            cached = load_cached_response(cache_key_shot2)
+            if cached:
+                logger.debug(f"Using cached Shot 2 response for {poem_id}")
+                shot2_response = cached
+
+        if shot2_response is None:
+            # Build Shot 2 prompt with Shot 1 output
+            shot1_json = json.dumps(shot1_fixed, ensure_ascii=False, indent=2)
+
+            user_prompt_review = format_prompt(
+                prompt_config_review["user_template"],
+                poem_text=text,
+                text_hash=text_hash,
+                kanji_transcription=shot1_fixed.get("kanji_transcription", text),
+                fugashi_tokens_json=tokens_json,
+                shot1_json=shot1_json,
+                source=poem["source"],
+                author=poem.get("author") or "unknown",
+                collection=poem.get("collection") or "unknown"
+            )
+
+            try:
+                response_text = client.generate(
+                    prompt_config_review["system"],
+                    user_prompt_review
+                )
+                shot2_response = extract_json_from_response(response_text)
+
+                if use_cache:
+                    save_cached_response(cache_key_shot2, shot2_response)
+
+            except Exception as e:
+                logger.warning(f"Shot 2 failed for {poem_id}: {e}, using Shot 1 only")
+                # Fall back to Shot 1 only
+                return build_poem_annotation(poem, tokens, shot1_fixed)
+
+        # Validate Shot 2
+        try:
+            shot2_fixed = validate_and_fix_annotation(shot2_response, poem, tokens)
+        except Exception as e:
+            logger.warning(f"Shot 2 validation failed for {poem_id}: {e}, using Shot 1 only")
+            return build_poem_annotation(poem, tokens, shot1_fixed)
+
+        # Merge both shots
+        merged = merge_annotations(shot1_fixed, shot2_fixed)
+        return build_poem_annotation(poem, tokens, merged)
+
+    else:
+        # Single-shot mode
+        return build_poem_annotation(poem, tokens, shot1_fixed)
 
 
 def _annotation_to_dict(annotation: PoemAnnotation) -> dict:
@@ -702,10 +865,12 @@ def _annotate_worker(
     poem: dict,
     client: GeminiClient,
     prompt_config: dict,
-    use_cache: bool
+    use_cache: bool,
+    prompt_config_review: dict | None = None,
+    use_two_shot: bool = True
 ) -> tuple[str, PoemAnnotation | None, str | None]:
     """
-    Worker function for parallel annotation.
+    Worker function for parallel annotation with 2-shot support.
 
     Returns:
         Tuple of (poem_id, annotation_or_none, error_message_or_none)
@@ -713,7 +878,11 @@ def _annotate_worker(
     poem_id = poem["poem_id"]
     try:
         tagger = get_thread_tagger()
-        annotation = annotate_poem(poem, tagger, client, prompt_config, use_cache)
+        annotation = annotate_poem(
+            poem, tagger, client, prompt_config, use_cache,
+            prompt_config_review=prompt_config_review,
+            use_two_shot=use_two_shot
+        )
         return (poem_id, annotation, None)
     except Exception as e:
         return (poem_id, None, str(e))
@@ -728,7 +897,8 @@ def annotate_corpus(
     resume: bool = False,
     use_cache: bool = True,
     api_sleep: float = DEFAULT_API_SLEEP,
-    workers: int = DEFAULT_WORKERS
+    workers: int = DEFAULT_WORKERS,
+    use_two_shot: bool = True
 ) -> int:
     """
     Annotate all poems in input file.
@@ -743,6 +913,7 @@ def annotate_corpus(
         use_cache: Whether to use LLM response caching
         api_sleep: Seconds to sleep between API calls
         workers: Number of parallel workers (default: 1)
+        use_two_shot: Whether to use 2-shot annotation (default: True)
 
     Returns:
         Number of poems successfully annotated
@@ -750,6 +921,21 @@ def annotate_corpus(
     # Initialize
     logger.info(f"Loading prompt configuration...")
     prompt_config = load_prompt("annotate")
+
+    # Load review prompt for 2-shot (if enabled)
+    prompt_config_review = None
+    if use_two_shot:
+        try:
+            prompt_config_review = load_prompt("annotate_review")
+            logger.info("Loaded review prompt for 2-shot annotation")
+        except Exception as e:
+            logger.warning(f"Could not load review prompt: {e}, falling back to single-shot")
+            use_two_shot = False
+
+    if use_two_shot:
+        logger.info("Using 2-shot annotation (initial + review)")
+    else:
+        logger.info("Using single-shot annotation")
 
     logger.info(f"Initializing Gemini client (model: {model})...")
     client = GeminiClient(model=model, sleep_seconds=api_sleep)
@@ -831,30 +1017,55 @@ def annotate_corpus(
         with ThreadPoolExecutor(max_workers=workers) as executor:
             # Submit all tasks
             futures = {
-                executor.submit(_annotate_worker, poem, client, prompt_config, use_cache): poem
+                executor.submit(
+                    _annotate_worker, poem, client, prompt_config, use_cache,
+                    prompt_config_review, use_two_shot
+                ): poem
                 for poem in poems
             }
 
-            # Process completed tasks
+            # Process completed tasks with timeout handling
+            # Overall timeout scales with number of poems: (poems/workers) * timeout_per_poem * 2 (for 2-shot)
+            overall_timeout = max(300, (len(poems) / workers) * WORKER_TIMEOUT * 2 + 60)
+            logger.info(f"Overall timeout: {overall_timeout:.0f}s for {len(poems)} poems with {workers} workers")
+
             completed = 0
+            timed_out = 0
             try:
-                for future in as_completed(futures):
+                for future in as_completed(futures, timeout=overall_timeout):
                     poem = futures[future]
                     completed += 1
 
                     try:
-                        poem_id, annotation, error = future.result()
+                        # Add timeout to result retrieval
+                        poem_id, annotation, error = future.result(timeout=WORKER_TIMEOUT)
                         logger.info(f"[{completed}/{len(poems)}] Completed {poem_id}")
                         process_result(poem_id, annotation, error)
+                    except FuturesTimeoutError:
+                        logger.warning(f"[{completed}/{len(poems)}] Timeout for {poem['poem_id']}, skipping")
+                        timed_out += 1
+                        with lock:
+                            error_count += 1
                     except Exception as e:
                         logger.error(f"[{completed}/{len(poems)}] Worker exception for {poem['poem_id']}: {e}")
                         with lock:
                             error_count += 1
 
+            except FuturesTimeoutError:
+                # Overall timeout for as_completed - some futures may still be pending
+                pending = [f for f in futures if not f.done()]
+                logger.warning(f"Overall timeout reached. {len(pending)} tasks still pending, cancelling...")
+                for future in pending:
+                    future.cancel()
+                timed_out += len(pending)
+
             except KeyboardInterrupt:
                 logger.info("Interrupted by user, cancelling remaining tasks...")
                 for future in futures:
                     future.cancel()
+
+            if timed_out > 0:
+                logger.warning(f"Total timed out poems: {timed_out}")
     else:
         # Sequential processing (original behavior)
         logger.info("Starting sequential annotation...")
@@ -865,7 +1076,11 @@ def annotate_corpus(
 
             try:
                 logger.info(f"[{i+1}/{len(poems)}] Annotating {poem_id}...")
-                annotation = annotate_poem(poem, tagger, client, prompt_config, use_cache)
+                annotation = annotate_poem(
+                    poem, tagger, client, prompt_config, use_cache,
+                    prompt_config_review=prompt_config_review,
+                    use_two_shot=use_two_shot
+                )
                 process_result(poem_id, annotation, None)
 
             except KeyboardInterrupt:
@@ -900,6 +1115,8 @@ Examples:
   python scripts/02_annotate_corpus.py --batch-size 5 --resume
   python scripts/02_annotate_corpus.py --max-poems 10  # Quick test
   python scripts/02_annotate_corpus.py --model gemini-2.0-flash --no-cache
+  python scripts/02_annotate_corpus.py --single-shot  # Faster, single-shot annotation
+  python scripts/02_annotate_corpus.py --max-poems 3 --no-cache  # Test 2-shot with 3 poems
         """,
     )
     parser.add_argument(
@@ -954,6 +1171,11 @@ Examples:
         default=DEFAULT_WORKERS,
         help=f"Parallel workers for annotation (default: {DEFAULT_WORKERS}). Use 5-10 for faster processing.",
     )
+    parser.add_argument(
+        "--single-shot",
+        action="store_true",
+        help="Disable 2-shot annotation (use only initial pass, faster but less accurate)",
+    )
 
     args = parser.parse_args()
 
@@ -977,7 +1199,8 @@ Examples:
         resume=args.resume,
         use_cache=not args.no_cache,
         api_sleep=args.api_sleep,
-        workers=args.workers
+        workers=args.workers,
+        use_two_shot=not args.single_shot
     )
 
     print(f"\nAnnotated {count} poems to {args.output}")

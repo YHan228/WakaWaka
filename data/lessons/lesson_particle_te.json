@@ -1,385 +1,188 @@
 {
   "lesson_id": "lesson_particle_te",
-  "lesson_title": "The Logical Bridge: Particle て (te) — Linking Actions",
-  "lesson_summary": "In this lesson, we move beyond static nouns to dynamic actions. You will learn how the particle 'te' acts as a logical connector, allowing multiple verbs to flow together in a sequence or to describe the manner in which an action occurs.",
+  "lesson_title": "动作的链条：接续助词「て」",
+  "lesson_summary": "学习如何使用接续助词「て」连接动作与状态，建立比单纯连用形更紧密的逻辑关系。",
   "grammar_point": "particle_te",
   "grammar_explanation": {
-    "concept": "The particle 'te' (て) is a conjunctive particle (接続助詞). In Chinese, actions are often simply placed side-by-side (e.g., 花开落 - flowers bloom [and] fall). In Japanese, verbs require a 'logical glue' to connect. 'Te' functions like a programming semicolon (;) or a plus sign (+), indicating that the first action leads into or accompanies the second.",
-    "formation": "It attaches to the 'continuative form' (連用形) of a verb. For now, simply recognize it as the bridge between two action-words.",
-    "variations": [
-      "Sometimes appears as 'de' (で) after certain sounds, but 'te' is the standard classical form."
-    ],
+    "concept": "接续助词「て」接在动词或形容词的【连用形】之后，起到连接前后句的作用。它类似于编程中的“管道”或逗号，表示动作的先后顺序（做完A，然后做B）或动作进行时的状态（以A的状态做B）。",
+    "formation": "动词/形容词连用形 + て",
+    "variations": [],
     "common_confusions": [
-      "Do not confuse with the particle 'to' (と). 'To' links nouns (A and B) or marks quotes. 'Te' links actions (Doing A, then B)."
+      "与完了助动词「つ」的连用形「て」混淆：本课学习的「て」是连接两个独立动作的助词（如：起きて…数ふる = 起床，然后数）。而作为助动词的「て」通常表示动作的强力完成，且往往后接其他助动词（如：てき、てむ、てまし）。区分关键：如果「て」后面紧跟表示过去（き）或推测（む）的助动词，它通常是完了助动词；如果「て」后面跟的是另一个独立的动作或形容词，它通常是本课学习的接续助词。"
     ]
   },
   "teaching_sequence": [
     {
       "type": "introduction",
-      "content": "Up until now, we have focused on how nouns relate to each other (の) and how they interact with verbs (を, に). But what happens when a poem describes a series of events? In Classical Japanese, you cannot simply stack verbs. You need a 'Logic Gate' to show the flow. Think of 'te' as the 'AND THEN' operator in your code."
+      "content": "在上一课中，我们学习了“连用形”（Renyokei），它允许句子在动词处暂停。今天，我们引入一个强力胶水——接续助词「て」。它紧跟在连用形之后，明确地告诉读者：“这个动作结束了，紧接着是下一个”，或者“保持着这个状态，进行下一个动作”。"
     },
     {
       "type": "poem_presentation",
-      "poem_id": "lapis_33bf42aad14edd26",
+      "poem_id": "lapis_28e2a01f81cb278d",
       "display": {
-        "text_with_furigana": "<ruby>うぐひす<rt>うぐひす</rt></ruby>の<ruby>音<rt>おと</rt></ruby><ruby>聞<rt>き</rt></ruby>くなへに<ruby>梅<rt>うめ</rt></ruby>の<ruby>花<rt>はな</rt></ruby><ruby>脇<rt>わき</rt></ruby>への<ruby>園<rt>その</rt></ruby>に<ruby>咲<rt>さ</rt></ruby>き<span style='color:red; font-weight:bold;'>て</span><ruby>散<rt>ち</rt></ruby>る<ruby>見<rt>み</rt></ruby>ゆ",
-        "romaji": "uguisu no, oto kiku naheni, ume no hana, waki e no sono ni, sakite chiru miyu",
-        "translation": "While hearing the voice of the bush warbler, the plum blossoms in the garden to the side are seen blooming and then falling."
+        "text_with_furigana": "<ruby>臥<rt>ふ</rt></ruby>して<ruby>思<rt>おも</rt></ruby>ひ<ruby>起<rt>お</rt></ruby>きて<ruby>数<rt>かぞ</rt></ruby>ふる<ruby>万代<rt>よろずよ</rt></ruby>は<ruby>神<rt>かみ</rt></ruby>ぞ<ruby>知<rt>し</rt></ruby>るらむ<ruby>我<rt>わ</rt></ruby>が<ruby>君<rt>きみ</rt></ruby>のため",
+        "romaji": "fushite omoi okite kazofuru yorozuyo wa kami zo shiru ramu waga kimi no tame",
+        "translation": "寝时思量，起时数算，这无尽的万代长寿，神明定知我皆是为了吾君。"
       },
       "vocabulary": [
         {
-          "word": "うぐひす",
-          "reading": "うぐひす",
-          "meaning": "Japanese bush warbler",
+          "word": "臥す",
+          "reading": "ふす",
+          "meaning": "躺卧、就寝（动词）",
           "span": null,
-          "chinese_cognate_note": "Often written as 莺 (yīng) in Chinese poetry."
-        },
-        {
-          "word": "の",
-          "reading": "の",
-          "meaning": "possessive particle (of)",
-          "span": [
-            4,
-            5
-          ],
-          "chinese_cognate_note": "Equivalent to 的 (de)."
-        },
-        {
-          "word": "音",
-          "reading": "おと",
-          "meaning": "sound/voice",
-          "span": null,
-          "chinese_cognate_note": "Same as Chinese 音 (yīn)."
-        },
-        {
-          "word": "聞く",
-          "reading": "きく",
-          "meaning": "to hear",
-          "span": null,
-          "chinese_cognate_note": "Same as Chinese 闻 (wén) in classical context."
-        },
-        {
-          "word": "なへに",
-          "reading": "なへに",
-          "meaning": "while / at the same time as",
-          "span": [
-            9,
-            12
-          ],
-          "chinese_cognate_note": null
-        },
-        {
-          "word": "梅",
-          "reading": "うめ",
-          "meaning": "plum",
-          "span": null,
-          "chinese_cognate_note": "Same as Chinese 梅 (méi)."
-        },
-        {
-          "word": "の",
-          "reading": "の",
-          "meaning": "possessive particle (of)",
-          "span": [
-            14,
-            15
-          ],
-          "chinese_cognate_note": null
-        },
-        {
-          "word": "花",
-          "reading": "はな",
-          "meaning": "flower",
-          "span": null,
-          "chinese_cognate_note": "Same as Chinese 花 (huā)."
-        },
-        {
-          "word": "脇",
-          "reading": "わき",
-          "meaning": "side",
-          "span": null,
-          "chinese_cognate_note": "Same as Chinese 胁 (xié), meaning side of the body/flank."
-        },
-        {
-          "word": "へ",
-          "reading": "へ",
-          "meaning": "direction particle (toward)",
-          "span": [
-            19,
-            20
-          ],
-          "chinese_cognate_note": null
-        },
-        {
-          "word": "の",
-          "reading": "の",
-          "meaning": "possessive particle (of)",
-          "span": [
-            20,
-            21
-          ],
-          "chinese_cognate_note": null
-        },
-        {
-          "word": "園",
-          "reading": "その",
-          "meaning": "garden",
-          "span": null,
-          "chinese_cognate_note": "Same as Chinese 园 (yuán)."
-        },
-        {
-          "word": "に",
-          "reading": "に",
-          "meaning": "location particle (in/at)",
-          "span": [
-            23,
-            24
-          ],
-          "chinese_cognate_note": null
-        },
-        {
-          "word": "咲き",
-          "reading": "さき",
-          "meaning": "to bloom (stem form)",
-          "span": null,
-          "chinese_cognate_note": null
+          "chinese_cognate_note": "卧"
         },
         {
           "word": "て",
           "reading": "て",
-          "meaning": "conjunctive particle (and/then)",
-          "span": [
-            26,
-            27
-          ],
+          "meaning": "接续助词，表示动作相继发生",
+          "span": null,
           "chinese_cognate_note": null
         },
         {
-          "word": "散る",
-          "reading": "ちる",
-          "meaning": "to fall/scatter",
+          "word": "思ふ",
+          "reading": "おもふ",
+          "meaning": "思念、思考（此处为连用形“思ひ”）",
           "span": null,
-          "chinese_cognate_note": "Similar to Chinese 凋 (diāo)."
+          "chinese_cognate_note": "思"
         },
         {
-          "word": "見ゆ",
-          "reading": "みゆ",
-          "meaning": "to be seen",
+          "word": "起く",
+          "reading": "おく",
+          "meaning": "起床、起身（动词）",
           "span": null,
-          "chinese_cognate_note": "Root is 见 (jiàn)."
+          "chinese_cognate_note": "起"
+        },
+        {
+          "word": "て",
+          "reading": "て",
+          "meaning": "接续助词，表示动作相继发生",
+          "span": null,
+          "chinese_cognate_note": null
+        },
+        {
+          "word": "数ふ",
+          "reading": "かぞふ",
+          "meaning": "数数、计算（此处为连体形“数ふる”）",
+          "span": null,
+          "chinese_cognate_note": "数"
+        },
+        {
+          "word": "万代",
+          "reading": "よろずよ",
+          "meaning": "万世、极长的时间",
+          "span": null,
+          "chinese_cognate_note": null
+        },
+        {
+          "word": "は",
+          "reading": "は",
+          "meaning": "提示助词（读作wa）",
+          "span": null,
+          "chinese_cognate_note": null
+        },
+        {
+          "word": "神",
+          "reading": "かみ",
+          "meaning": "神明",
+          "span": null,
+          "chinese_cognate_note": "神"
+        },
+        {
+          "word": "ぞ",
+          "reading": "ぞ",
+          "meaning": "系助词，表示强调",
+          "span": null,
+          "chinese_cognate_note": null
+        },
+        {
+          "word": "知る",
+          "reading": "しる",
+          "meaning": "知道",
+          "span": null,
+          "chinese_cognate_note": "知"
+        },
+        {
+          "word": "らむ",
+          "reading": "らむ",
+          "meaning": "推量助动词，表示“大概……吧”",
+          "span": null,
+          "chinese_cognate_note": null
+        },
+        {
+          "word": "我が",
+          "reading": "わが",
+          "meaning": "我的（代词+格助词）",
+          "span": null,
+          "chinese_cognate_note": "我"
+        },
+        {
+          "word": "君",
+          "reading": "きみ",
+          "meaning": "君主、您",
+          "span": null,
+          "chinese_cognate_note": "君"
+        },
+        {
+          "word": "の",
+          "reading": "の",
+          "meaning": "属格助词",
+          "span": null,
+          "chinese_cognate_note": null
+        },
+        {
+          "word": "ため",
+          "reading": "ため",
+          "meaning": "为了……（名词）",
+          "span": null,
+          "chinese_cognate_note": null
         }
       ],
       "focus_highlight": [
-        26,
-        27
+        2,
+        3,
+        7,
+        8
       ]
     },
     {
       "type": "grammar_spotlight",
-      "content": "Look at the sequence: **咲き (bloom) + て (and) + 散る (fall)**. \n\nIn Chinese, you might say '花开落'. In Japanese, the 'て' creates a temporal flow. It tells the reader that the blooming and the falling are part of a single continuous observation. Without 'て', the sentence would break logically.",
+      "content": "在这首诗中，「臥して」（fushite）和「起きて」（okite）展示了「て」最基本的功能：**顺序**。\n\n结构分析：\n1. **臥し** (fushi) 是“臥す”的连用形。\n2. **て** (te) 紧接其后。\n3. 含义：躺下，**然后**（做后面的事）。\n\n这就像编程中的分号或换行，表示一个指令执行完毕，进入下一个。诗中“躺下”和“起来”通过「て」连接，强调了诗人日夜不间断的祈祷。",
       "evidence": "See the poem above."
     },
     {
-      "type": "poem_presentation",
-      "poem_id": "lapis_5871ee6d9ab64013",
-      "display": {
-        "text_with_furigana": "<ruby>世<rt>よ</rt></ruby>をいとひこの<ruby>本<rt>もと</rt></ruby>ことに<ruby>立<rt>た</rt></ruby>ち<ruby>寄<rt>よ</rt></ruby>り<span style='color:red; font-weight:bold;'>て</span>うつふし<ruby>染<rt>そ</rt></ruby>めの<ruby>朝<rt>あさ</rt></ruby>の<ruby>衣<rt>きぬ</rt></ruby>なり",
-        "romaji": "yo o itohi, kono moto koto ni, tachiyorite, utsufushi some no, asa no kinu nari",
-        "translation": "Weary of the world, I approach the foot of this tree, and [find] it is a robe of hemp dyed in the color of the utsufushi fruit."
-      },
-      "vocabulary": [
-        {
-          "word": "世",
-          "reading": "よ",
-          "meaning": "the world / society",
-          "span": [
-            0,
-            1
-          ],
-          "chinese_cognate_note": "Same as Chinese 世 (shì)."
-        },
-        {
-          "word": "を",
-          "reading": "を",
-          "meaning": "object marker",
-          "span": [
-            1,
-            2
-          ],
-          "chinese_cognate_note": null
-        },
-        {
-          "word": "いとひ",
-          "reading": "いとひ",
-          "meaning": "to dislike / be weary of",
-          "span": [
-            2,
-            5
-          ],
-          "chinese_cognate_note": null
-        },
-        {
-          "word": "こ",
-          "reading": "こ",
-          "meaning": "this",
-          "span": [
-            5,
-            6
-          ],
-          "chinese_cognate_note": null
-        },
-        {
-          "word": "の",
-          "reading": "の",
-          "meaning": "possessive particle (of)",
-          "span": [
-            6,
-            7
-          ],
-          "chinese_cognate_note": null
-        },
-        {
-          "word": "本",
-          "reading": "もと",
-          "meaning": "base / foot (of a tree)",
-          "span": null,
-          "chinese_cognate_note": "Same as Chinese 本 (běn), meaning root/origin."
-        },
-        {
-          "word": "こと",
-          "reading": "こと",
-          "meaning": "especially / in particular",
-          "span": [
-            9,
-            11
-          ],
-          "chinese_cognate_note": null
-        },
-        {
-          "word": "に",
-          "reading": "に",
-          "meaning": "location particle (at)",
-          "span": [
-            11,
-            12
-          ],
-          "chinese_cognate_note": null
-        },
-        {
-          "word": "立ち寄り",
-          "reading": "たちより",
-          "meaning": "to approach / drop by",
-          "span": null,
-          "chinese_cognate_note": null
-        },
-        {
-          "word": "て",
-          "reading": "て",
-          "meaning": "conjunctive particle (and/then)",
-          "span": [
-            16,
-            17
-          ],
-          "chinese_cognate_note": null
-        },
-        {
-          "word": "うつふし",
-          "reading": "うつふし",
-          "meaning": "a type of dye (from gallnuts)",
-          "span": [
-            17,
-            21
-          ],
-          "chinese_cognate_note": null
-        },
-        {
-          "word": "染め",
-          "reading": "そめ",
-          "meaning": "dyeing",
-          "span": null,
-          "chinese_cognate_note": "Same as Chinese 染 (rǎn)."
-        },
-        {
-          "word": "の",
-          "reading": "の",
-          "meaning": "possessive particle (of)",
-          "span": [
-            23,
-            24
-          ],
-          "chinese_cognate_note": null
-        },
-        {
-          "word": "朝",
-          "reading": "あさ",
-          "meaning": "hemp (often used for clothing)",
-          "span": null,
-          "chinese_cognate_note": "Note: In this context, it refers to hemp fabric (麻)."
-        },
-        {
-          "word": "の",
-          "reading": "の",
-          "meaning": "possessive particle (of)",
-          "span": [
-            26,
-            27
-          ],
-          "chinese_cognate_note": null
-        },
-        {
-          "word": "衣",
-          "reading": "きぬ",
-          "meaning": "clothing / robe",
-          "span": null,
-          "chinese_cognate_note": "Same as Chinese 衣 (yī)."
-        },
-        {
-          "word": "なり",
-          "reading": "なり",
-          "meaning": "is (copula)",
-          "span": [
-            29,
-            31
-          ],
-          "chinese_cognate_note": null
-        }
-      ],
-      "focus_highlight": [
-        16,
-        17
-      ]
+      "type": "contrast_example",
+      "content": "「て」不仅表示时间顺序，还可以表示**原因**或**状态**。看这首描写深山红叶的诗，注意「なくて」（nakute）。"
     },
     {
-      "type": "contrast_example",
-      "content": "In the second poem, 'て' connects the action of 'approaching' (立ち寄り) to the final state of the sentence. \n\n**Structure:** [Action 1: Approach] + て + [Action 2/State: It is a robe]. \n\nThis is a 'Sequential Logic'. Action A must happen for Action B to be realized or observed."
+      "type": "literary_insight",
+      "content": "这首诗运用了**「見立て」（Mitate）**这一技巧，即“视觉隐喻”。诗人将“红叶”比作“锦缎”（錦）。\n\n更妙的是「夜の錦」（夜之锦）。中国典故有“锦衣夜行”（穿着锦绣衣服在夜里走路），意指美好事物无人知晓。这里诗人反用其意：红叶虽美，却在深山无人处（如黑夜）独自凋零，这种“无人见证的美”增添了无常的哀愁。",
+      "literary_device": "見立て (Mitate)",
+      "chinese_parallel": "比喻 / 用典（锦衣夜行）"
     },
     {
       "type": "comprehension_check",
-      "question": "In the phrase 'わけておひいてくる' (wakete ohi-ide kuru), what is the function of 'て'?",
-      "answer": "It links the action of 'pushing through/dividing' (wake) with the action of 'growing out' (ohi-ide). It shows that the grass grows *by* pushing through the snow.",
-      "hint": "Look at the verbs on either side of 'te'. How does the first action relate to the second?"
+      "question": "这首诗以「眺めて」（nagamete）结尾，这是一种倒装结构。按照逻辑顺序，「眺めて」应该连接到哪个动作之前？",
+      "answer": "悟りにき (satoriniki)",
+      "hint": "诗人是先“眺望”风中的景色，还是先“领悟”了世间的道理？"
     }
   ],
   "reference_card": {
-    "point": "Particle て (te)",
-    "one_liner": "The 'Logical Bridge' that connects two verbs to show sequence, manner, or cause.",
-    "example": "咲きて散る (Saki-te chiru) = Bloom AND THEN fall.",
+    "point": "接续助词「て」",
+    "one_liner": "连接动作或状态的“强力胶水”",
+    "example": "臥して思い (Fushite omoi) - 躺下，然后思考",
     "see_also": [
-      "particle_to",
-      "particle_ni"
+      "conjugation_renyokei"
     ]
   },
   "forward_references": [
     {
-      "point": "なり (nari)",
-      "note": "We saw this at the end of Poem 2. It functions like 'is' (是) and will be covered in Unit 3."
+      "point": "推量助动词「らむ」",
+      "note": "在第一首诗中出现，表示对眼前未见之事的推测（现在推量），我们将在后续课程详细学习。"
     },
     {
-      "point": "なへに (naheni)",
-      "note": "A more complex temporal particle meaning 'at the same time as', which we will contrast with 'te' later."
-    },
-    {
-      "point": "し (shi)",
-      "note": "In Poem 3, this indicates past tense. We will learn this in the Auxiliaries unit."
+      "point": "咏叹助动词「けり」",
+      "note": "在第二首诗末尾出现，常用于和歌表达感叹或发现，是古典语法的核心词汇。"
     }
   ]
 }

@@ -1,410 +1,296 @@
 {
   "lesson_id": "lesson_particle_shi",
-  "lesson_title": "The Spotlight Particle: Pure Emphasis with 'Shi' (し)",
-  "lesson_summary": "In this lesson, we explore the particle 'shi' (し), which acts as a logical 'highlighter' to emphasize a specific word without changing the sentence's grammatical structure.",
+  "lesson_title": "强调用副助词「し」：节奏与焦点的微调",
+  "lesson_summary": "学习副助词「し」的强调功能，掌握其与过去助动词「き」的区别，并深入体会和歌中“缘语”的联想艺术。",
   "grammar_point": "particle_shi",
   "grammar_explanation": {
-    "concept": "The particle 'shi' (し) is an emphatic particle (副助詞). Its sole purpose is to put a 'spotlight' on the word preceding it. In programming terms, think of it as a 'priority flag' or a 'bold' tag that doesn't change the data type but tells the processor to pay extra attention to that specific variable.",
-    "formation": "Noun/Particle/Verb + し (shi)",
+    "concept": "副助词「し」 (Emphatic Particle)",
+    "formation": "接在多种词语（体言、副词、助词等）之后。",
     "variations": [
-      "しも (shimo): A combination of 'shi' (emphasis) and 'mo' (also/even), creating an even stronger 'double emphasis'."
+      "常与「ぞ」连用构成「～しぞ」",
+      "常用于「～にしあれば」句型"
     ],
     "common_confusions": [
-      "vs. Auxiliary 'shi': Do not confuse this with the past-tense auxiliary 'shi' (the attributive form of 'ki') learned in Unit 5. The auxiliary 'shi' follows the Ren'yokei of a verb, whereas the particle 'shi' can follow almost any word and does not indicate tense."
+      "与过去助动词「き」的连体形「し」混淆。辨析核心：副助词「し」通常可以省略而不改变句子的基本时态（仅减弱语气），而助动词「し」表示“...过的”，省略会改变时态含义。"
     ]
   },
   "teaching_sequence": [
     {
       "type": "introduction",
-      "content": "By now, you have mastered the 'logical glue' that holds Japanese sentences together—particles that mark subjects, objects, and directions. However, poetry often requires more than just logic; it requires focus. Just as we use bold text or italics in English, or the character '亦' or '甚' in Classical Chinese for nuance, Classical Japanese uses the particle 'し' (shi) to isolate and emphasize a specific element of the poem. It doesn't change 'who' did 'what,' but it tells you 'this' is the person or thing that matters most in this moment."
+      "content": "在之前的课程中，我们学习了「ぞ」和「こそ」这样强烈的系助词，它们如同聚光灯般照亮句子的核心。今天我们要介绍的副助词<ruby>し<rt>shi</rt></ruby>则更为微妙。它像是一个节奏的调节器，或者编程中的`assert`断言，用于加强语气、调整音律，却往往不改变句子的逻辑真值。在和歌中，它常出现在你意想不到的地方。"
     },
     {
       "type": "poem_presentation",
-      "poem_id": "lapis_0e5046055c1dc0ae",
+      "poem_id": "lapis_0535d5849eec8024",
       "display": {
-        "text_with_furigana": "<ruby>な<rt>な</rt></ruby>に<ruby>は<rt>は</rt></ruby><ruby>かた<rt>かた</rt></ruby><ruby>しほひ<rt>しほひ</rt></ruby>の<ruby>なこり<rt>なこり</rt></ruby><ruby>あく<rt>あく</rt></ruby>まてに<ruby>ひと<rt>ひと</rt></ruby>の<ruby>みる<rt>みる</rt></ruby><ruby>こ<rt>こ</rt></ruby>を<ruby>われ<rt>われ</rt></ruby><span style='color:red; font-weight:bold;'>し</span><ruby>ともし<rt>ともし</rt></ruby>も",
-        "romaji": "nani wa kata, shiohi no nakori, akuma te ni, hito no miru ko o, ware shi tomoshi mo",
-        "translation": "The tide recedes at Naniwa lagoon, leaving a lingering beauty; while others merely look at the girl, I am the one who feels such deep envy."
+        "text_with_furigana": "<ruby>遠<rt>とお</rt></ruby>つ<ruby>人<rt>ひと</rt></ruby> <ruby>雁道<rt>かりち</rt></ruby>の<ruby>池<rt>いけ</rt></ruby>に <ruby>住<rt>す</rt></ruby>む<ruby>鳥<rt>とり</rt></ruby>の <ruby>立<rt>た</rt></ruby>っても<ruby>居<rt>い</rt></ruby>ても <ruby>君<rt>きみ</rt></ruby>を<ruby>し<rt>shi</rt></ruby><ruby>ぞ<rt>zo</rt></ruby><ruby>思<rt>おも</rt></ruby>ふ",
+        "romaji": "tōtsuhito karichi no ike ni sumu tori no tachite mo ite mo kimi o shi zo omou",
+        "translation": "正如那雁道池畔栖息的鸟儿，无论起飞还是栖止，我无论站着还是坐着，心中唯独思念着你。"
       },
       "vocabulary": [
         {
-          "word": "な",
-          "reading": "na",
-          "meaning": "to be (classical copula)",
-          "span": [
-            0,
-            1
-          ],
-          "chinese_cognate_note": "Similar function to '也' or '是'"
-        },
-        {
-          "word": "に",
-          "reading": "ni",
-          "meaning": "at/in (location marker)",
-          "span": [
-            1,
-            2
-          ],
+          "word": "遠つ人",
+          "reading": "とおつひと",
+          "meaning": "远方的人（此处作为枕词引出地名）",
+          "span": null,
           "chinese_cognate_note": null
         },
         {
-          "word": "は",
-          "reading": "wa",
-          "meaning": "topic marker",
-          "span": [
-            2,
-            3
-          ],
-          "chinese_cognate_note": "Marks the scope, like '至于'"
-        },
-        {
-          "word": "かた",
-          "reading": "kata",
-          "meaning": "lagoon/beach",
-          "span": [
-            3,
-            5
-          ],
+          "word": "雁道",
+          "reading": "かりち",
+          "meaning": "地名（奈良县）",
+          "span": null,
           "chinese_cognate_note": null
-        },
-        {
-          "word": "しほひ",
-          "reading": "shiohi",
-          "meaning": "ebb tide/low tide",
-          "span": [
-            5,
-            8
-          ],
-          "chinese_cognate_note": "潮干 (tide dries up)"
         },
         {
           "word": "の",
-          "reading": "no",
-          "meaning": "possessive particle",
-          "span": [
-            8,
-            9
-          ],
-          "chinese_cognate_note": "Equivalent to '之'"
-        },
-        {
-          "word": "なこり",
-          "reading": "nakori",
-          "meaning": "remains/aftermath",
-          "span": [
-            9,
-            12
-          ],
-          "chinese_cognate_note": "残 (remnant)"
-        },
-        {
-          "word": "あく",
-          "reading": "aku",
-          "meaning": "to be satisfied/to open",
-          "span": [
-            12,
-            14
-          ],
+          "reading": "の",
+          "meaning": "格助词（连接修饰语）",
+          "span": null,
           "chinese_cognate_note": null
         },
         {
-          "word": "まて",
-          "reading": "mate",
-          "meaning": "until",
-          "span": [
-            14,
-            16
-          ],
-          "chinese_cognate_note": null
+          "word": "池",
+          "reading": "いけ",
+          "meaning": "池塘",
+          "span": null,
+          "chinese_cognate_note": "池"
         },
         {
           "word": "に",
-          "reading": "ni",
-          "meaning": "particle indicating state/time",
-          "span": [
-            16,
-            17
-          ],
+          "reading": "に",
+          "meaning": "格助词（表示存在的场所）",
+          "span": null,
           "chinese_cognate_note": null
         },
         {
-          "word": "ひと",
-          "reading": "hito",
-          "meaning": "person/others",
-          "span": [
-            17,
-            19
-          ],
-          "chinese_cognate_note": "人"
+          "word": "住む",
+          "reading": "すむ",
+          "meaning": "栖息、居住",
+          "span": null,
+          "chinese_cognate_note": "住"
+        },
+        {
+          "word": "鳥",
+          "reading": "とり",
+          "meaning": "鸟",
+          "span": null,
+          "chinese_cognate_note": "鸟"
         },
         {
           "word": "の",
-          "reading": "no",
-          "meaning": "subject marker (in relative clause)",
-          "span": [
-            19,
-            20
-          ],
+          "reading": "の",
+          "meaning": "格助词（此处用于比喻，像...一样）",
+          "span": null,
           "chinese_cognate_note": null
         },
         {
-          "word": "みる",
-          "reading": "miru",
-          "meaning": "to see/look at",
-          "span": [
-            20,
-            22
-          ],
-          "chinese_cognate_note": "见/看"
+          "word": "立ち",
+          "reading": "たち",
+          "meaning": "站立、起飞（动词连用形）",
+          "span": null,
+          "chinese_cognate_note": "立"
         },
         {
-          "word": "こ",
-          "reading": "ko",
-          "meaning": "child/girl",
-          "span": [
-            22,
-            23
-          ],
-          "chinese_cognate_note": "子"
-        },
-        {
-          "word": "を",
-          "reading": "wo",
-          "meaning": "direct object marker",
-          "span": [
-            23,
-            24
-          ],
-          "chinese_cognate_note": null
-        },
-        {
-          "word": "われ",
-          "reading": "ware",
-          "meaning": "I/me",
-          "span": [
-            24,
-            26
-          ],
-          "chinese_cognate_note": "我"
-        },
-        {
-          "word": "し",
-          "reading": "shi",
-          "meaning": "emphatic particle (the target of this lesson)",
-          "span": [
-            26,
-            27
-          ],
-          "chinese_cognate_note": null
-        },
-        {
-          "word": "ともし",
-          "reading": "tomoshi",
-          "meaning": "envious/jealous",
-          "span": [
-            27,
-            30
-          ],
+          "word": "て",
+          "reading": "て",
+          "meaning": "接续助词",
+          "span": null,
           "chinese_cognate_note": null
         },
         {
           "word": "も",
-          "reading": "mo",
-          "meaning": "emphasis particle",
-          "span": [
-            30,
-            31
-          ],
+          "reading": "も",
+          "meaning": "系助词（表示并列）",
+          "span": null,
           "chinese_cognate_note": null
+        },
+        {
+          "word": "居",
+          "reading": "い",
+          "meaning": "坐、栖息（动词连用形）",
+          "span": null,
+          "chinese_cognate_note": "居"
+        },
+        {
+          "word": "て",
+          "reading": "て",
+          "meaning": "接续助词",
+          "span": null,
+          "chinese_cognate_note": null
+        },
+        {
+          "word": "も",
+          "reading": "も",
+          "meaning": "系助词（表示并列）",
+          "span": null,
+          "chinese_cognate_note": null
+        },
+        {
+          "word": "君",
+          "reading": "きみ",
+          "meaning": "你（恋人）",
+          "span": null,
+          "chinese_cognate_note": "君"
+        },
+        {
+          "word": "を",
+          "reading": "を",
+          "meaning": "格助词（表示动作对象）",
+          "span": null,
+          "chinese_cognate_note": null
+        },
+        {
+          "word": "し",
+          "reading": "し",
+          "meaning": "副助词（强调）",
+          "span": null,
+          "chinese_cognate_note": null
+        },
+        {
+          "word": "ぞ",
+          "reading": "ぞ",
+          "meaning": "系助词（强调，触发系结）",
+          "span": null,
+          "chinese_cognate_note": null
+        },
+        {
+          "word": "思ふ",
+          "reading": "おもう",
+          "meaning": "思念（连体形，因系结法则）",
+          "span": null,
+          "chinese_cognate_note": "思"
         }
       ],
       "focus_highlight": [
-        25,
-        26
+        27,
+        28
       ]
     },
     {
       "type": "grammar_spotlight",
-      "content": "In the poem above, look at the phrase **われし** (ware shi). \n\n1. **われ (Ware)** = 'I'.\n2. **し (Shi)** = Emphasis.\n\nThe poet isn't just saying 'I am envious.' By adding **し**, they are saying 'It is **I** (specifically) who feels this way,' contrasting their deep emotion with the 'others' (hito) who are just looking. The 'shi' acts as a logical pointer, singling out the speaker from the crowd.",
+      "content": "在这首诗的末尾，我们看到了「君をしぞ思ふ」。\n\n这里的结构是：\n`对象(君) + 格助词(を) + 强调用副助词(し) + 系助词(ぞ) + 动词`\n\n**语法功能：**\n这里的「し」并没有实际的翻译含义，它的作用是加强前面的「君を」。如果去掉它，变成「君をぞ思ふ」，意思完全一样，但语气和节奏会变弱。可以将其理解为在代码中加粗了变量名，或者在乐谱上加了一个重音记号。\n\n**关键辨析（Confusables）：**\n这是本课的难点。你之前学过过去助动词「き」，它的连体形也是「し」。\n\n*   **副助词「し」（本课）：** 强调作用。通常接在助词（如「を」「に」「と」）或副词之后。**去掉它，句子语法依然通顺。**\n*   **过去助动词「き」的连体形「し」：** 表示过去时态。通常接在动词连用形之后，且位于句尾修饰名词（或名词化）。**去掉它，时态会改变。**\n\n例如：\n1. `君をし思ふ` (强调) -> 去掉 `し` -> `君を思ふ` (思念你) -> **通顺**。\n2. `泣きし人` (哭过的人) -> 去掉 `し` -> `泣き人` (哭泣的人?) -> **时态丢失，含义改变**。",
       "evidence": "See the poem above."
     },
     {
       "type": "poem_presentation",
-      "poem_id": "lapis_cbc3d61a0ec23a30",
+      "poem_id": "ogura100_837bbf614071cb5d",
       "display": {
-        "text_with_furigana": "<ruby>しなの<rt>しなの</rt></ruby><ruby>なる<rt>なる</rt></ruby><ruby>ちくま<rt>ちくま</rt></ruby>の<ruby>かは<rt>かは</rt></ruby>の<ruby>さされ<rt>さされ</rt></ruby><span style='color:blue; font-weight:bold;'>しも</span><ruby>きみ<rt>きみ</rt></ruby><span style='color:red; font-weight:bold;'>し</span><ruby>ふみ<rt>ふみ</rt></ruby>ては<ruby>たま<rt>たま</rt></ruby>と<ruby>ひろ<rt>ひろ</rt></ruby>はむ",
-        "romaji": "shinano naru, chikuma no kawa no, sasare shimo, kimi shi fumite wa, tama to hirohamu",
-        "translation": "In the Chikuma River of Shinano, even the pebbles being struck by the water... if it is YOU who steps on them, I shall pick them up as if they were jewels."
+        "text_with_furigana": "<ruby>立<rt>た</rt></ruby>ち<ruby>別<rt>わか</rt></ruby>れ <ruby>因幡<rt>いなば</rt></ruby>の<ruby>山<rt>やま</rt></ruby>の <ruby>峰<rt>みね</rt></ruby>に<ruby>生<rt>お</rt></ruby>ふる <ruby>松<rt>まつ</rt></ruby>と<ruby>し<rt>shi</rt></ruby><ruby>聞<rt>き</rt></ruby>かば <ruby>今<rt>いま</rt></ruby><ruby>帰<rt>かえ</rt></ruby>り<ruby>来<rt>こ</rt></ruby>む",
+        "romaji": "tachiwakare inaba no yama no mine ni ouru matsu to shi kikaba ima kaerikomu",
+        "translation": "虽然我将离去，但若听到因幡山的松树（像你一样）在等待，我便会立刻归来。"
       },
       "vocabulary": [
         {
-          "word": "しなの",
-          "reading": "shinano",
-          "meaning": "Shinano (ancient province name)",
-          "span": [
-            0,
-            3
-          ],
-          "chinese_cognate_note": null
+          "word": "立ち別れ",
+          "reading": "たちわかれ",
+          "meaning": "离别（“立ち”为接头词，加强语气）",
+          "span": null,
+          "chinese_cognate_note": "立别"
         },
         {
-          "word": "なる",
-          "reading": "naru",
-          "meaning": "to be (attributive copula)",
-          "span": [
-            3,
-            5
-          ],
-          "chinese_cognate_note": "Equivalent to '在...的'"
-        },
-        {
-          "word": "ちくま",
-          "reading": "chikuma",
-          "meaning": "Chikuma (river name)",
-          "span": [
-            5,
-            8
-          ],
+          "word": "因幡",
+          "reading": "いなば",
+          "meaning": "地名（亦双关“若离去”）",
+          "span": null,
           "chinese_cognate_note": null
         },
         {
           "word": "の",
-          "reading": "no",
-          "meaning": "possessive particle",
-          "span": [
-            8,
-            9
-          ],
-          "chinese_cognate_note": "之"
+          "reading": "の",
+          "meaning": "格助词",
+          "span": null,
+          "chinese_cognate_note": null
         },
         {
-          "word": "かは",
-          "reading": "kawa",
-          "meaning": "river",
-          "span": [
-            9,
-            11
-          ],
-          "chinese_cognate_note": "川/河"
+          "word": "山",
+          "reading": "やま",
+          "meaning": "山",
+          "span": null,
+          "chinese_cognate_note": "山"
         },
         {
           "word": "の",
-          "reading": "no",
-          "meaning": "possessive particle",
-          "span": [
-            11,
-            12
-          ],
+          "reading": "の",
+          "meaning": "格助词",
+          "span": null,
           "chinese_cognate_note": null
         },
         {
-          "word": "さされ",
-          "reading": "sasare",
-          "meaning": "to be pierced/struck (passive of sasu)",
-          "span": [
-            12,
-            15
-          ],
-          "chinese_cognate_note": "刺 (pierce)"
+          "word": "峰",
+          "reading": "みね",
+          "meaning": "山峰",
+          "span": null,
+          "chinese_cognate_note": "峰"
         },
         {
-          "word": "しも",
-          "reading": "shimo",
-          "meaning": "strong emphasis (shi + mo)",
-          "span": [
-            15,
-            17
-          ],
+          "word": "に",
+          "reading": "に",
+          "meaning": "格助词",
+          "span": null,
           "chinese_cognate_note": null
         },
         {
-          "word": "きみ",
-          "reading": "kimi",
-          "meaning": "you (polite)",
-          "span": [
-            17,
-            19
-          ],
-          "chinese_cognate_note": "君"
+          "word": "生ふる",
+          "reading": "おうる",
+          "meaning": "生长（连体形）",
+          "span": null,
+          "chinese_cognate_note": "生"
         },
         {
-          "word": "し",
-          "reading": "shi",
-          "meaning": "emphatic particle",
-          "span": [
-            19,
-            20
-          ],
-          "chinese_cognate_note": null
-        },
-        {
-          "word": "ふみ",
-          "reading": "fumi",
-          "meaning": "to step on",
-          "span": [
-            20,
-            22
-          ],
-          "chinese_cognate_note": "踏"
-        },
-        {
-          "word": "て",
-          "reading": "te",
-          "meaning": "conjunctive particle (linking actions)",
-          "span": [
-            22,
-            23
-          ],
-          "chinese_cognate_note": null
-        },
-        {
-          "word": "は",
-          "reading": "wa",
-          "meaning": "contrast/topic marker",
-          "span": [
-            23,
-            24
-          ],
-          "chinese_cognate_note": null
-        },
-        {
-          "word": "たま",
-          "reading": "tama",
-          "meaning": "jewel/gem",
-          "span": [
-            24,
-            26
-          ],
-          "chinese_cognate_note": "玉"
+          "word": "松",
+          "reading": "まつ",
+          "meaning": "松树（双关“等待”）",
+          "span": null,
+          "chinese_cognate_note": "松"
         },
         {
           "word": "と",
-          "reading": "to",
-          "meaning": "as/like (quotative/comparative)",
-          "span": [
-            26,
-            27
-          ],
+          "reading": "と",
+          "meaning": "格助词（引用内容）",
+          "span": null,
           "chinese_cognate_note": null
         },
         {
-          "word": "ひろは",
-          "reading": "hiroha",
-          "meaning": "to pick up",
-          "span": [
-            27,
-            30
-          ],
-          "chinese_cognate_note": "拾"
+          "word": "し",
+          "reading": "し",
+          "meaning": "副助词（强调）",
+          "span": null,
+          "chinese_cognate_note": null
+        },
+        {
+          "word": "聞か",
+          "reading": "きか",
+          "meaning": "听（未然形）",
+          "span": null,
+          "chinese_cognate_note": "闻"
+        },
+        {
+          "word": "ば",
+          "reading": "ば",
+          "meaning": "接续助词（假设条件：如果）",
+          "span": null,
+          "chinese_cognate_note": null
+        },
+        {
+          "word": "今",
+          "reading": "いま",
+          "meaning": "立刻、马上",
+          "span": null,
+          "chinese_cognate_note": "今"
+        },
+        {
+          "word": "帰り来",
+          "reading": "かえりこ",
+          "meaning": "归来（动词复合）",
+          "span": null,
+          "chinese_cognate_note": "归来"
         },
         {
           "word": "む",
-          "reading": "mu",
-          "meaning": "will/volition (auxiliary)",
-          "span": [
-            30,
-            31
-          ],
+          "reading": "む",
+          "meaning": "助动词（意志：想要...）",
+          "span": null,
           "chinese_cognate_note": null
         }
       ],
@@ -415,37 +301,170 @@
     },
     {
       "type": "contrast_example",
-      "content": "Notice the two types of emphasis in the second poem:\n1. **さされしも (sasare-shimo)**: The 'shimo' emphasizes the action of the water striking the stones. It adds a layer of 'even the stones that are [struck]'.\n2. **きみし (kimi-shi)**: This is the critical focus. The poet doesn't care about anyone else stepping on the stones. 'If **YOU** (indeed) step on them...' \n\nWithout 'shi', the sentence is grammatically complete, but the poetic 'heart'—the focus on the specific person—would be weakened."
+      "content": "在《百人一首》这首著名的离别诗中，「松とし聞かば」展示了「し」的另一种常见位置：引用助词「と」之后。\n\n`松(等待) + と(引用) + し(强调) + 聞かば(如果听到)`\n\n这里强调的是“如果听到**你在等待**这件事”。同样，这里的「し」不是过去式，它只是加强了“等待”这个条件的重要性。"
     },
     {
       "type": "comprehension_check",
-      "question": "In the phrase 'Kimi shi fumite wa' (きみしふみては), if we removed the 'shi' (し), would the basic meaning of 'You step on [them]' change?",
-      "answer": "No. The basic logical relationship (You = Subject, Step = Action) remains the same. Only the emphasis/intensity on 'You' is lost.",
-      "hint": "Think of 'shi' as a highlighter. If you remove the yellow ink, can you still read the words?"
+      "question": "请判断以下两个句子中「し」的语法性质是否相同：\n1. 旅に**し**あれば (Tabi ni shi areba) - 正因为是在旅途中\n2. 過ぎ**し**月日 (Sugi shi tsukihi) - 流逝了的岁月",
+      "answer": "不同",
+      "hint": "尝试去掉「し」，看看句子的时态或基本含义是否发生根本改变。句1去掉后是“在旅途中”，句2去掉后变成“流逝岁月”（失去了“过去”的含义）。"
+    },
+    {
+      "type": "poem_presentation",
+      "poem_id": "lapis_a31dc732958310e8",
+      "display": {
+        "text_with_furigana": "<ruby>世<rt>よ</rt></ruby>の<ruby>中<rt>なか</rt></ruby>は <ruby>憂<rt>う</rt></ruby>き<ruby>節<rt>ふし</rt></ruby><ruby>繁<rt>しげ</rt></ruby>し <ruby>篠原<rt>しのはら</rt></ruby>や <ruby>旅<rt>たび</rt></ruby>に<ruby>し<rt>shi</rt></ruby>あれば <ruby>妹<rt>いも</rt></ruby><ruby>夢<rt>ゆめ</rt></ruby>に<ruby>見<rt>み</rt></ruby>ゆ",
+        "romaji": "yo no naka wa uki fushi shigeshi shinohara ya tabi ni shi areba imo yume ni miyu",
+        "translation": "世间艰辛如竹节繁多，正因身处这荒凉的篠原旅途，才在梦中见到了你。"
+      },
+      "vocabulary": [
+        {
+          "word": "世の中",
+          "reading": "よのなか",
+          "meaning": "世间、俗世",
+          "span": null,
+          "chinese_cognate_note": "世中"
+        },
+        {
+          "word": "は",
+          "reading": "は",
+          "meaning": "系助词（提示话题）",
+          "span": null,
+          "chinese_cognate_note": null
+        },
+        {
+          "word": "憂き",
+          "reading": "うき",
+          "meaning": "痛苦的、忧郁的（形容词连体形）",
+          "span": null,
+          "chinese_cognate_note": "忧"
+        },
+        {
+          "word": "節",
+          "reading": "ふし",
+          "meaning": "竹节 / 际遇（挂词）",
+          "span": null,
+          "chinese_cognate_note": "节"
+        },
+        {
+          "word": "繁し",
+          "reading": "しげし",
+          "meaning": "繁多、茂密（形容词终止形）",
+          "span": null,
+          "chinese_cognate_note": "繁"
+        },
+        {
+          "word": "篠原",
+          "reading": "しのはら",
+          "meaning": "长满细竹的原野（地名）",
+          "span": null,
+          "chinese_cognate_note": null
+        },
+        {
+          "word": "や",
+          "reading": "や",
+          "meaning": "间投助词（咏叹，调整节奏）",
+          "span": null,
+          "chinese_cognate_note": null
+        },
+        {
+          "word": "旅",
+          "reading": "たび",
+          "meaning": "旅行",
+          "span": null,
+          "chinese_cognate_note": "旅"
+        },
+        {
+          "word": "に",
+          "reading": "に",
+          "meaning": "断定助动词「なり」的连用形",
+          "span": null,
+          "chinese_cognate_note": null
+        },
+        {
+          "word": "し",
+          "reading": "し",
+          "meaning": "副助词（强调）",
+          "span": null,
+          "chinese_cognate_note": null
+        },
+        {
+          "word": "あれ",
+          "reading": "あれ",
+          "meaning": "存在（动词已然形）",
+          "span": null,
+          "chinese_cognate_note": null
+        },
+        {
+          "word": "ば",
+          "reading": "ば",
+          "meaning": "接续助词（因为...）",
+          "span": null,
+          "chinese_cognate_note": null
+        },
+        {
+          "word": "妹",
+          "reading": "いも",
+          "meaning": "爱人、妻子",
+          "span": null,
+          "chinese_cognate_note": "妹"
+        },
+        {
+          "word": "夢",
+          "reading": "ゆめ",
+          "meaning": "梦",
+          "span": null,
+          "chinese_cognate_note": "梦"
+        },
+        {
+          "word": "に",
+          "reading": "に",
+          "meaning": "格助词",
+          "span": null,
+          "chinese_cognate_note": null
+        },
+        {
+          "word": "見ゆ",
+          "reading": "みゆ",
+          "meaning": "出现、被看见（自发动词）",
+          "span": null,
+          "chinese_cognate_note": "见"
+        }
+      ],
+      "focus_highlight": [
+        22,
+        23
+      ]
+    },
+    {
+      "type": "grammar_spotlight",
+      "content": "这首诗展示了「し」最经典的句型之一：\n\n`名词/形容动词 + に(断定) + し(强调) + ある(存在)`\n\n即「～にしあり」（以及其活用形，如本诗中的「～にしあれば」）。\n\n这里的「に」实际上是断定助动词「なり」的连用形。直译是“因为确实是（在旅途中）”。「し」嵌入在断定结构中，强调了这种状态的真实性或不可避免性。",
+      "evidence": "See the poem above."
+    },
+    {
+      "type": "literary_insight",
+      "content": "既然我们已经掌握了语法，让我们看看这些诗歌是如何像精心编写的代码一样，通过“语义链接”构建深度的。\n\n**縁語 (En-go)** 指的是在一首诗中，使用语义上相关联的词汇，即使它们在句子结构上相距较远。这就像在文本中埋下了超链接。\n\n*   **在第一首诗中：**\n    *   <ruby>鳥<rt>とり</rt></ruby> (鸟) -> <ruby>立<rt>た</rt></ruby>つ (起飞) / <ruby>居<rt>い</rt></ruby>る (栖息)\n    *   <ruby>人<rt>ひと</rt></ruby> (人) -> <ruby>立<rt>た</rt></ruby>つ (站立) / <ruby>居<rt>い</rt></ruby>る (坐下)\n    作者利用“鸟”的习性词汇，同时也完美描述了“人”的动作，实现了物我合一。\n\n*   **在第三首诗中：**\n    *   <ruby>節<rt>ふし</rt></ruby> (竹节) <-> <ruby>篠<rt>しの</rt></ruby> (细竹)\n    *   <ruby>繁<rt>しげ</rt></ruby>し (繁多/茂密)\n    诗人用形容竹林的词（节、繁、篠）来形容人生的艰辛（忧愁的节点繁多）。这种技法让“篠原”这个地名不仅仅是地点，更成为了情感的象征。",
+      "literary_device": "縁語 (En-go / Associated Words)",
+      "chinese_parallel": "连类 / 意象关联"
     },
     {
       "type": "summary",
-      "content": "The particle 'し' (shi) is a non-functional emphasis marker. It does not change the case of a noun (like 'wo' or 'ni') nor the tense of a verb. It simply acts as a spotlight for the reader's attention. When combined with 'mo' to form 'shimo', the emphasis becomes even more pronounced."
+      "content": "本课要点回顾：\n1. **副助词「し」**：用于强调，不改变句意但增强语气和节奏。常位于助词后或「～にしあり」结构中。\n2. **辨析**：如果「し」位于句尾修饰名词且表示过去动作，那是助动词「き」；如果去掉「し」句子依然成立，那是副助词。\n3. **文学技法**：注意「縁語」（关联词）如何通过语义网络将自然景物与人类情感紧密编织在一起。"
     }
   ],
   "reference_card": {
-    "point": "Particle Shi (し)",
-    "one_liner": "An emphatic particle used to 'spotlight' the preceding word without changing the sentence structure.",
-    "example": "われし (Ware shi) = 'I, indeed' / 'It is I who...'",
+    "point": "副助词「し」 (Particle Shi)",
+    "one_liner": "不改变时态的强调标记，用于加强语气或调整音律。",
+    "example": "花を**し**ぞ思ふ (Hana o shi zo omou) - 确实是思念着花啊。",
     "see_also": [
-      "particle_mo",
-      "particle_zo",
-      "particle_koso"
+      "auxiliary_ki",
+      "particle_zo"
     ]
   },
   "forward_references": [
     {
-      "point": "さされ (sasare)",
-      "note": "This is the passive form of 'sasu'. We will cover the passive auxiliary 'reru/rareru' in Unit 9."
-    },
-    {
-      "point": "ひろはむ (hirohamu)",
-      "note": "The 'mu' at the end indicates the speaker's intention. We will refine our understanding of volitional endings in the next unit."
+      "point": "枕词 (Makurakotoba)",
+      "note": "我们在第一首诗中见到了「遠つ人」引出「雁道」，这是一种固定的修饰技法，将在后续深入讲解。"
     }
   ]
 }

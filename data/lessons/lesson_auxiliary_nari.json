@@ -1,565 +1,343 @@
 {
   "lesson_id": "lesson_auxiliary_nari",
-  "lesson_title": "The Classical 'Is': The Copula なり (nari)",
-  "lesson_summary": "In this lesson, we introduce the auxiliary verb 'nari', the classical equivalent of the Chinese '是' (shì). It functions as a logical anchor that identifies or describes the state of a noun.",
+  "lesson_title": "定义世界：断定助动词「なり」",
+  "lesson_summary": "学习如何表达“A是B”的定义关系，以及如何描述事物的存在状态。掌握助动词「なり」的三种关键变形。",
   "grammar_point": "auxiliary_nari",
   "grammar_explanation": {
-    "concept": "The auxiliary 'nari' (なり) is the primary tool for assertion (断定). It functions like a mathematical equals sign (=), linking a subject to a predicate. In Chinese terms, it is the functional equivalent of '是'.",
-    "formation": "Noun + なり (nari) / Noun + なる (naru)",
+    "concept": "助动词「なり」主要用于“断定”（Assertion）和“存在”（Existence）。它相当于现代日语的「だ/である」或英语的 be动词（is/are）。它将名词与属性联系起来，或确立事物的身份。",
+    "formation": "主要接在体言（名词）之后。",
     "variations": [
-      "なり (nari): Terminal form (Shuushikei) used to end a sentence.",
-      "なる (naru): Attributive form (Rentaikei) used to modify a following noun (e.g., 'the X that is Y')."
+      "なり (终止形)：用于句末，表示“是...”。",
+      "なる (连体形)：用于修饰名词，表示“是...的”或“位于...的”。",
+      "に (连用形)：用于连接后续动词（如あり），表示“是...”。"
     ],
     "common_confusions": [
-      "Unlike Chinese '是', 'nari' comes at the end of the phrase (SOV logic).",
-      "Do not confuse 'nari' with the particle 'ni' (location); 'nari' is a complete declaration of identity."
+      "「に」（格助词）vs「に」（断定助动词连用形）：格助词表示地点、时间或对象（在...）；断定助动词表示定义（是...）。判别法：如果后面接「あり/おはす」等存在动词，且句意为“是...”而非“在...”，通常为断定助动词。",
+      "「なる」（动词）vs「なる」（断定助动词）：动词「成る」表示“变成”；助动词「なる」表示“是/位于”。"
     ]
   },
   "teaching_sequence": [
     {
       "type": "introduction",
-      "content": "Having mastered the 'tags' (particles) that define the roles of nouns, we now move to the 'glue' that defines existence and identity. In Classical Japanese, when you want to say 'A is B', you use the auxiliary <span class='highlight'>なり (nari)</span>. Think of this as the logical 'Return' statement in a function—it concludes the thought by declaring what the subject actually is."
+      "content": "在之前的课程中，我们学习了如何描述动作的进行（つ、ぬ）和状态的持续（つつ）。但在诗歌中，我们经常需要给事物下定义，或者通过隐喻说“A即是B”。\n\n本课我们将学习古典日语中最核心的“系动词”——「なり」。它不仅能像编程中的赋值符号（=）一样连接两个概念，还能描述事物存在的场所。"
     },
     {
       "type": "poem_presentation",
-      "poem_id": "ogura100_3ff8eec7c905cced",
+      "poem_id": "lapis_4fa432dcf41b5ec6",
       "display": {
-        "text_with_furigana": "<ruby>嵐<rt>あらし</rt></ruby><ruby>吹<rt>ふ</rt></ruby>く<ruby>三室<rt>みむろ</rt></ruby>の<ruby>山<rt>やま</rt></ruby>の<ruby>もみぢ<rt>もみぢ</rt></ruby><ruby>葉<rt>ば</rt></ruby>は<ruby>竜田<rt>たつた</rt></ruby>の<ruby>川<rt>かわ</rt></ruby>の<ruby>錦<rt>にしき</rt></ruby><span class='highlight'>なり</span>けり",
-        "romaji": "arashi fuku, mimuro no yama no, momijiba wa, tatsuta no kawa no, nishiki nari keri",
-        "translation": "The autumn leaves of Mount Mimuro, blown by the storm, are (nari) the brocade of the Tatsuta River."
+        "text_with_furigana": "<ruby>見<rt>み</rt></ruby>る<ruby>人<rt>ひと</rt></ruby>もなくて<ruby>散<rt>ち</rt></ruby>りぬる<ruby>奥山<rt>おくやま</rt></ruby>の<ruby>紅葉<rt>もみじ</rt></ruby>は<ruby>夜<rt>よる</rt></ruby>の<ruby>錦<rt>にしき</rt></ruby><ruby>なり<rt>なり</rt></ruby><ruby>けり<rt>けり</rt></ruby>",
+        "romaji": "miru hito mo nakute chirinuru okuyama no momiji wa yoru no nishiki nari keri",
+        "translation": "深山红叶无人赏，散落满地，恰似那暗夜中的锦缎。"
       },
       "vocabulary": [
         {
-          "word": "嵐",
-          "reading": "あらし",
-          "meaning": "storm",
-          "span": [
-            0,
-            1
-          ],
-          "chinese_cognate_note": "Same meaning as 嵐 (mountain mist/storm)."
-        },
-        {
-          "word": "吹く",
-          "reading": "ふく",
-          "meaning": "to blow",
-          "span": [
-            1,
-            3
-          ],
-          "chinese_cognate_note": "Cognate with 吹 (chuī)."
-        },
-        {
-          "word": "三室",
-          "reading": "みむろ",
-          "meaning": "Mimuro (place name)",
-          "span": [
-            3,
-            5
-          ],
+          "word": "見る",
+          "reading": "みる",
+          "meaning": "看，观赏",
+          "span": null,
           "chinese_cognate_note": null
+        },
+        {
+          "word": "人",
+          "reading": "ひと",
+          "meaning": "人",
+          "span": null,
+          "chinese_cognate_note": null
+        },
+        {
+          "word": "も",
+          "reading": "も",
+          "meaning": "也，甚至（强调助词）",
+          "span": null,
+          "chinese_cognate_note": null
+        },
+        {
+          "word": "なくて",
+          "reading": "なくて",
+          "meaning": "没有...而...（形容词“なし”的连用形+接续助词“て”）",
+          "span": null,
+          "chinese_cognate_note": null
+        },
+        {
+          "word": "散り",
+          "reading": "ちり",
+          "meaning": "散落，凋谢",
+          "span": null,
+          "chinese_cognate_note": null
+        },
+        {
+          "word": "ぬる",
+          "reading": "ぬる",
+          "meaning": "已经...了（完了助动词“ぬ”的连体形）",
+          "span": null,
+          "chinese_cognate_note": null
+        },
+        {
+          "word": "奥山",
+          "reading": "おくやま",
+          "meaning": "深山",
+          "span": null,
+          "chinese_cognate_note": "奥山"
         },
         {
           "word": "の",
           "reading": "の",
-          "meaning": "possessive particle (of)",
-          "span": [
-            5,
-            6
-          ],
-          "chinese_cognate_note": "Functions like 的 (de)."
-        },
-        {
-          "word": "山",
-          "reading": "やま",
-          "meaning": "mountain",
-          "span": [
-            6,
-            7
-          ],
-          "chinese_cognate_note": "Identical to 山 (shān)."
-        },
-        {
-          "word": "の",
-          "reading": "の",
-          "meaning": "possessive particle (of)",
-          "span": [
-            7,
-            8
-          ],
+          "meaning": "的（格助词）",
+          "span": null,
           "chinese_cognate_note": null
         },
         {
-          "word": "もみぢ葉",
-          "reading": "もみぢば",
-          "meaning": "autumn leaves",
-          "span": [
-            8,
-            12
-          ],
-          "chinese_cognate_note": "紅葉 (hóngyè)."
+          "word": "紅葉",
+          "reading": "もみじ",
+          "meaning": "红叶",
+          "span": null,
+          "chinese_cognate_note": null
         },
         {
           "word": "は",
           "reading": "は",
-          "meaning": "topic marker",
-          "span": [
-            12,
-            13
-          ],
-          "chinese_cognate_note": "Learned in Unit 1; defines the scope."
+          "meaning": "关于...（系助词，提示主题）",
+          "span": null,
+          "chinese_cognate_note": null
         },
         {
-          "word": "竜田",
-          "reading": "たつた",
-          "meaning": "Tatsuta (place name)",
-          "span": [
-            13,
-            15
-          ],
+          "word": "夜",
+          "reading": "よる",
+          "meaning": "夜晚",
+          "span": null,
           "chinese_cognate_note": null
         },
         {
           "word": "の",
           "reading": "の",
-          "meaning": "possessive particle (of)",
-          "span": [
-            15,
-            16
-          ],
-          "chinese_cognate_note": null
-        },
-        {
-          "word": "川",
-          "reading": "かわ",
-          "meaning": "river",
-          "span": [
-            16,
-            17
-          ],
-          "chinese_cognate_note": "Identical to 川 (chuān)."
-        },
-        {
-          "word": "の",
-          "reading": "の",
-          "meaning": "possessive particle (of)",
-          "span": [
-            17,
-            18
-          ],
+          "meaning": "的（格助词）",
+          "span": null,
           "chinese_cognate_note": null
         },
         {
           "word": "錦",
           "reading": "にしき",
-          "meaning": "brocade",
-          "span": [
-            18,
-            19
-          ],
-          "chinese_cognate_note": "Identical to 錦 (jǐn)."
+          "meaning": "锦缎",
+          "span": null,
+          "chinese_cognate_note": "锦"
         },
         {
           "word": "なり",
           "reading": "なり",
-          "meaning": "is (copula)",
-          "span": [
-            19,
-            21
-          ],
-          "chinese_cognate_note": "Equivalent to 是 (shì)."
+          "meaning": "是（断定助动词）",
+          "span": null,
+          "chinese_cognate_note": null
         },
         {
           "word": "けり",
           "reading": "けり",
-          "meaning": "past/exclamatory auxiliary",
-          "span": [
-            21,
-            23
-          ],
-          "chinese_cognate_note": null
-        }
-      ],
-      "focus_highlight": [
-        19,
-        21
-      ]
-    },
-    {
-      "type": "grammar_spotlight",
-      "content": "In the poem above, look at the structure: [Autumn leaves] は [Brocade] <span class='highlight'>なり</span>. The 'nari' acts as the 'is'. Even though 'keri' follows it (which adds a sense of realization), the core logical identity is established by 'nari'. Without it, the sentence would just be a list of nouns.",
-      "evidence": "See the poem above."
-    },
-    {
-      "type": "poem_presentation",
-      "poem_id": "lapis_5871ee6d9ab64013",
-      "display": {
-        "text_with_furigana": "<ruby>世<rt>よ</rt></ruby>をいとひこのもとことにたちよりてうつふしそめのあさの<ruby>衣<rt>きぬ</rt></ruby><span class='highlight'>なり</span>",
-        "romaji": "yo o itohi, kono moto koto ni, tachiyorite, utsufushi some no, asa no kinu nari",
-        "translation": "Weary of the world, I stopped by the base of this tree; it is (nari) a garment of hemp dyed in light red."
-      },
-      "vocabulary": [
-        {
-          "word": "世",
-          "reading": "よ",
-          "meaning": "the world",
-          "span": [
-            0,
-            1
-          ],
-          "chinese_cognate_note": "Cognate with 世 (shì)."
-        },
-        {
-          "word": "を",
-          "reading": "を",
-          "meaning": "object marker",
-          "span": [
-            1,
-            2
-          ],
-          "chinese_cognate_note": null
-        },
-        {
-          "word": "いとひ",
-          "reading": "いとひ",
-          "meaning": "to dislike/be weary of",
-          "span": [
-            2,
-            5
-          ],
-          "chinese_cognate_note": null
-        },
-        {
-          "word": "こ",
-          "reading": "こ",
-          "meaning": "child/offspring (here: small/this)",
-          "span": [
-            5,
-            6
-          ],
-          "chinese_cognate_note": null
-        },
-        {
-          "word": "の",
-          "reading": "の",
-          "meaning": "possessive particle (of)",
-          "span": [
-            6,
-            7
-          ],
-          "chinese_cognate_note": null
-        },
-        {
-          "word": "もと",
-          "reading": "もと",
-          "meaning": "origin/base",
-          "span": [
-            7,
-            9
-          ],
-          "chinese_cognate_note": "Cognate with 本 (běn)."
-        },
-        {
-          "word": "こと",
-          "reading": "こと",
-          "meaning": "especially",
-          "span": [
-            9,
-            11
-          ],
-          "chinese_cognate_note": null
-        },
-        {
-          "word": "に",
-          "reading": "に",
-          "meaning": "location marker",
-          "span": [
-            11,
-            12
-          ],
-          "chinese_cognate_note": null
-        },
-        {
-          "word": "たちより",
-          "reading": "たちより",
-          "meaning": "to approach/drop by",
-          "span": [
-            12,
-            16
-          ],
-          "chinese_cognate_note": null
-        },
-        {
-          "word": "て",
-          "reading": "て",
-          "meaning": "conjunctive particle (and/then)",
-          "span": [
-            16,
-            17
-          ],
-          "chinese_cognate_note": null
-        },
-        {
-          "word": "うつふし",
-          "reading": "うつふし",
-          "meaning": "beautiful/light red color",
-          "span": [
-            17,
-            21
-          ],
-          "chinese_cognate_note": null
-        },
-        {
-          "word": "そめ",
-          "reading": "そめ",
-          "meaning": "dyed",
-          "span": [
-            21,
-            23
-          ],
-          "chinese_cognate_note": "Cognate with 染 (rǎn)."
-        },
-        {
-          "word": "の",
-          "reading": "の",
-          "meaning": "possessive particle (of)",
-          "span": [
-            23,
-            24
-          ],
-          "chinese_cognate_note": null
-        },
-        {
-          "word": "あさ",
-          "reading": "あさ",
-          "meaning": "hemp (textile)",
-          "span": [
-            24,
-            26
-          ],
-          "chinese_cognate_note": "Cognate with 麻 (má)."
-        },
-        {
-          "word": "の",
-          "reading": "の",
-          "meaning": "possessive particle (of)",
-          "span": [
-            26,
-            27
-          ],
-          "chinese_cognate_note": null
-        },
-        {
-          "word": "衣",
-          "reading": "きぬ",
-          "meaning": "garment/silk",
+          "meaning": "啊/了（咏叹助动词，表示感叹或发觉）",
           "span": null,
-          "chinese_cognate_note": "Cognate with 衣 (yī)."
-        },
-        {
-          "word": "なり",
-          "reading": "なり",
-          "meaning": "is (copula)",
-          "span": [
-            29,
-            31
-          ],
           "chinese_cognate_note": null
         }
       ],
       "focus_highlight": [
-        29,
-        31
+        24,
+        26
       ]
     },
     {
       "type": "grammar_spotlight",
-      "content": "When 'nari' appears at the very end of a poem, it provides a definitive conclusion. In this poem, after describing the journey and the material, the poet ends with <span class='highlight'>きぬなり</span> (It is a garment). This is the 'Terminal Form' (Shuushikei).",
+      "content": "在这首诗的结尾，我们看到了「錦（にしき）なり」。\n\n这里的**「なり」**就是**断定助动词**的终止形（句子结束的形式）。\n\n结构非常简单：\n**名词 + なり = 是 [名词]**\n\n*   `夜の錦なり` = 是夜里的锦缎。\n\n这是一种强有力的隐喻（暗喻）。诗人断言：那地上的红叶，**就是**锦缎。",
       "evidence": "See the poem above."
     },
     {
       "type": "poem_presentation",
-      "poem_id": "lapis_ce22c35957c135a1",
+      "poem_id": "lapis_c43f8fcb91177463",
       "display": {
-        "text_with_furigana": "さやか<span class='highlight'>なる</span>わしのたかねのくもゐよりかけやはらくるつきよみのもり",
-        "romaji": "sayakanaru, washi no takane no, kumoi yori, kake ya harakuru, tsuki yomi no mori",
-        "translation": "From the clouds of the high peak that is (naru) clear, the moonlight clears the forest."
+        "text_with_furigana": "<ruby>君<rt>きみ</rt></ruby>なくは なぞ<ruby>身<rt>み</rt></ruby><ruby>装<rt>よそ</rt></ruby>はむ <ruby>櫛笥<rt>くしげ</rt></ruby>なる <ruby>柘<rt>つげ</rt></ruby>の<ruby>小櫛<rt>おぐし</rt></ruby>も <ruby>取<rt>と</rt></ruby>らむとも<ruby>思<rt>おも</rt></ruby>はず",
+        "romaji": "kimi naku wa nazo mi yosowan kushige naru tsuge no ogushi mo toran to mo omowazu",
+        "translation": "君若不在，为谁梳妆？那梳妆盒里的黄杨木梳，我拿都不想拿。"
       },
       "vocabulary": [
         {
-          "word": "さやか",
-          "reading": "さやか",
-          "meaning": "clear/bright",
-          "span": [
-            0,
-            3
-          ],
+          "word": "君",
+          "reading": "きみ",
+          "meaning": "你（指恋人）",
+          "span": null,
+          "chinese_cognate_note": null
+        },
+        {
+          "word": "なく",
+          "reading": "なく",
+          "meaning": "不在/没有（形容词“なし”的连用形）",
+          "span": null,
+          "chinese_cognate_note": null
+        },
+        {
+          "word": "は",
+          "reading": "は",
+          "meaning": "如果...的话（提示条件）",
+          "span": null,
+          "chinese_cognate_note": null
+        },
+        {
+          "word": "なぞ",
+          "reading": "なぞ",
+          "meaning": "为何",
+          "span": null,
+          "chinese_cognate_note": null
+        },
+        {
+          "word": "身",
+          "reading": "み",
+          "meaning": "身体/自己",
+          "span": null,
+          "chinese_cognate_note": null
+        },
+        {
+          "word": "装は",
+          "reading": "よそわ",
+          "meaning": "打扮（动词未然形）",
+          "span": null,
+          "chinese_cognate_note": null
+        },
+        {
+          "word": "む",
+          "reading": "ん",
+          "meaning": "想要...吗（推量助动词，此处表反问）",
+          "span": null,
+          "chinese_cognate_note": null
+        },
+        {
+          "word": "櫛笥",
+          "reading": "くしげ",
+          "meaning": "梳妆盒",
+          "span": null,
           "chinese_cognate_note": null
         },
         {
           "word": "なる",
           "reading": "なる",
-          "meaning": "is (attributive form of nari)",
-          "span": [
-            3,
-            5
-          ],
+          "meaning": "位于...的（断定/存在助动词“なり”的连体形）",
+          "span": null,
           "chinese_cognate_note": null
         },
         {
-          "word": "わし",
-          "reading": "わし",
-          "meaning": "eagle (or humble 'I')",
-          "span": [
-            5,
-            7
-          ],
+          "word": "柘",
+          "reading": "つげ",
+          "meaning": "黄杨木",
+          "span": null,
           "chinese_cognate_note": null
         },
         {
           "word": "の",
           "reading": "の",
-          "meaning": "possessive particle (of)",
-          "span": [
-            7,
-            8
-          ],
+          "meaning": "的（格助词）",
+          "span": null,
           "chinese_cognate_note": null
         },
         {
-          "word": "たかね",
-          "reading": "たかね",
-          "meaning": "high peak",
-          "span": [
-            8,
-            11
-          ],
-          "chinese_cognate_note": "高嶺 (gāolǐng)."
-        },
-        {
-          "word": "の",
-          "reading": "の",
-          "meaning": "possessive particle (of)",
-          "span": [
-            11,
-            12
-          ],
+          "word": "小櫛",
+          "reading": "おぐし",
+          "meaning": "梳子（“小”为美称）",
+          "span": null,
           "chinese_cognate_note": null
         },
         {
-          "word": "くもゐ",
-          "reading": "くもゐ",
-          "meaning": "clouds/sky",
-          "span": [
-            12,
-            15
-          ],
-          "chinese_cognate_note": "雲 (yún)."
-        },
-        {
-          "word": "より",
-          "reading": "より",
-          "meaning": "from (origin particle)",
-          "span": [
-            15,
-            17
-          ],
+          "word": "も",
+          "reading": "も",
+          "meaning": "也/连...",
+          "span": null,
           "chinese_cognate_note": null
         },
         {
-          "word": "かけ",
-          "reading": "かけ",
-          "meaning": "light/shadow",
-          "span": [
-            17,
-            19
-          ],
+          "word": "取ら",
+          "reading": "とら",
+          "meaning": "拿取（动词未然形）",
+          "span": null,
           "chinese_cognate_note": null
         },
         {
-          "word": "や",
-          "reading": "や",
-          "meaning": "exclamatory particle",
-          "span": [
-            19,
-            20
-          ],
+          "word": "む",
+          "reading": "ん",
+          "meaning": "想要（意志助动词）",
+          "span": null,
           "chinese_cognate_note": null
         },
         {
-          "word": "はらくる",
-          "reading": "はらくる",
-          "meaning": "to clear up",
-          "span": [
-            20,
-            24
-          ],
+          "word": "と",
+          "reading": "と",
+          "meaning": "这样（引用助词）",
+          "span": null,
           "chinese_cognate_note": null
         },
         {
-          "word": "つきよみ",
-          "reading": "つきよみ",
-          "meaning": "moon-viewing",
-          "span": [
-            24,
-            28
-          ],
+          "word": "も",
+          "reading": "も",
+          "meaning": "也（强调）",
+          "span": null,
           "chinese_cognate_note": null
         },
         {
-          "word": "の",
-          "reading": "の",
-          "meaning": "possessive particle (of)",
-          "span": [
-            28,
-            29
-          ],
+          "word": "思は",
+          "reading": "おもわ",
+          "meaning": "想（动词未然形）",
+          "span": null,
           "chinese_cognate_note": null
         },
         {
-          "word": "もり",
-          "reading": "もり",
-          "meaning": "forest",
-          "span": [
-            29,
-            31
-          ],
-          "chinese_cognate_note": "Cognate with 森 (sēn)."
+          "word": "ず",
+          "reading": "ず",
+          "meaning": "不（否定助动词）",
+          "span": null,
+          "chinese_cognate_note": null
         }
       ],
       "focus_highlight": [
-        3,
-        5
+        15,
+        17
       ]
     },
     {
+      "type": "grammar_spotlight",
+      "content": "这里出现了**「なる」**。\n\n这是「なり」的**连体形**（连接体言/名词的形式）。\n\n*   `櫛笥（くしげ）` = 梳妆盒\n*   `なる` = 位于...的 / 是...的\n*   `柘（つげ）の小櫛（おぐし）` = 黄杨木梳\n\n`櫛笥なる柘の小櫛` = **位于**梳妆盒里的黄杨木梳。\n\n**注意**：当「なり」表示场所或位置时，它带有“存在”的含义（相当于“にある”）。这与单纯的“A是B”略有不同，但语法形式完全一致。",
+      "evidence": "See the poem above."
+    },
+    {
       "type": "contrast_example",
-      "content": "Notice the difference: In the first two poems, we used <span class='highlight'>なり (nari)</span> to end the sentence. In this poem, we use <span class='highlight'>なる (naru)</span>. Why? Because it is modifying the noun 'washi' (eagle/peak). 'Sayaka-naru washi' = 'The peak that is clear'. This is the 'Attributive Form' (Rentaikei). In Chinese, this is like using '...的' to describe a noun (清澈的...)."
+      "content": "最容易混淆的形式是「なり」的**连用形**——**「に」**。\n\n请看下首诗，注意「葛の葉**に**あらぬ」这一句。这里的「に」不是表示地点的助词，而是断定助动词的变形。"
+    },
+    {
+      "type": "grammar_spotlight",
+      "content": "为什么这里用「に」？\n\n当断定助动词「なり」后面接续**动词**（如「あり」）或**否定助动词**时，它必须变成连用形**「に」**。\n\n*   `葛の葉` (名词) + `なり` (是) + `ず` (不)\n*   变形：`なり` -> `に` (为了连接后面的成分)\n*   结果：`葛の葉` + `に` + `あら` (あり的未然形) + `ぬ` (ず的连体形)\n*   意思：**是**葛叶 + **不** = **并非**葛叶\n\n**辨析技巧**：\n如果你看到「**名词 + に + あり/あらぬ**」，这里的「に」通常是“是”的意思（断定），而不是“在”（格助词）。",
+      "evidence": "See the poem above."
     },
     {
       "type": "comprehension_check",
-      "question": "In the phrase '錦なり' (nishiki nari), what is the logical relationship between the subject and 'nishiki'?",
-      "answer": "Identity/Assertion. It means '[Subject] IS brocade'.",
-      "hint": "Think of the Chinese word '是'."
+      "question": "这里的「に」是断定助动词（是）还是格助词（在）？",
+      "answer": "格助词（在）",
+      "hint": "如果是断定助动词，意思会变成“它是山（存在）”。但在古典语境中，通常“山にあり”表示位置。如果是“山なり”，则明确表示“是山”。语境是关键，但一般来说，表示地点的名词+に+あり，倾向于格助词。"
+    },
+    {
+      "type": "literary_insight",
+      "content": "在第三首诗中，我们遇到了一个非常重要的修辞技巧：**掛詞（かけことば）**，类似于中文的“双关语”。\n\n诗中的「うらみ」承载了双重含义：\n1.  **恨み**：怨恨（因恋人冷淡）。\n2.  **裏見**：看背面（葛叶被风吹翻，露出白色的背面）。\n\n这种技巧利用同音异义，将“自然的景象”（叶子翻转）与“内心的情感”（怨恨/对方变心）无缝融合。葛叶翻白（裏見）暗示了人心的变化（变心），从而引发了怨恨（恨み）。",
+      "literary_device": "掛詞 (Kakekotoba / Pivot Word)",
+      "chinese_parallel": "类似于刘禹锡《竹枝词》中的“东边日出西边雨，道是无晴却有晴”（晴/情双关）。"
     }
   ],
   "reference_card": {
-    "point": "Auxiliary なり (nari)",
-    "one_liner": "The declarative copula used to state that 'A is B' (Assertion).",
-    "example": "錦なり (It is brocade) / さやかなる山 (The mountain that is clear)",
+    "point": "断定助动词「なり」",
+    "one_liner": "古典日语的系动词，表示“A是B”或“位于...”。",
+    "example": "夜の錦なり (是夜里的锦缎)",
     "see_also": [
-      "lesson_particle_no",
-      "lesson_conjugation_rentaikei"
+      "particle_ni",
+      "auxiliary_nu"
     ]
   },
   "forward_references": [
     {
-      "point": "けり (keri)",
-      "note": "We saw this in Poem 1. It often follows 'nari' to express a past state or a sudden realization. We will cover this in Unit 4."
+      "point": "auxiliary_keri",
+      "note": "我们在第一首诗中见到了「けり」，它常接在「なり」后面表示咏叹或对过去的发现。将在后续课程详细讲解。"
     },
     {
-      "point": "連体形 (Rentaikei)",
-      "note": "The 'naru' form is our first encounter with the Attributive base. We will explore this systematically later in Unit 3."
+      "point": "auxiliary_mu",
+      "note": "第二首诗中的「装はむ」和「取らむ」包含了表示推量或意志的「む」，将在未来学习。"
     }
   ]
 }

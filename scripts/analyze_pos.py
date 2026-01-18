@@ -6,6 +6,8 @@ Analyses:
 - POS tag distribution
 - POS bigram transitions (what follows what?)
 - POS patterns in poems
+- Kakarimusubi pattern detection (discontinuous dependencies)
+- Conjugation form distribution
 
 Output: data/analysis/pos/
 """
@@ -253,6 +255,258 @@ def analyze_pos_patterns_by_collection(df: pd.DataFrame, sequences: list[list[st
     return collection_pos
 
 
+def analyze_kakarimusubi(df: pd.DataFrame, output_dir: Path):
+    """
+    Analyze kakarimusubi patterns - discontinuous grammatical dependencies.
+
+    Kakarimusubi rules:
+    - ぞ (zo), なむ (namu), や (ya), か (ka) → rentaikei ending
+    - こそ (koso) → izenkei ending
+
+    This function searches for these patterns in grammar_points and checks
+    if the poem ends appropriately.
+    """
+    print("Analyzing kakarimusubi patterns...")
+
+    # Kakari particles and their expected endings
+    kakari_rules = {
+        'particle_zo': 'rentaikei',
+        'particle_ya': 'rentaikei',
+        'particle_ka': 'rentaikei',
+        'particle_namu': 'rentaikei',
+        'particle_koso': 'izenkei',
+    }
+
+    kakari_surfaces = {
+        'particle_zo': 'ぞ',
+        'particle_ya': 'や',
+        'particle_ka': 'か',
+        'particle_namu': 'なむ',
+        'particle_koso': 'こそ',
+    }
+
+    results = []
+    pattern_counts = Counter()
+    correct_counts = Counter()
+
+    for idx, row in df.iterrows():
+        poem_id = row['poem_id']
+        text = row['text']
+        grammar_points = row.get('grammar_points', [])
+        if hasattr(grammar_points, 'tolist'):
+            grammar_points = grammar_points.tolist()
+
+        # Find kakari particles and conjugation endings
+        kakari_found = []
+        conjugations_found = []
+
+        for gp in grammar_points:
+            if not isinstance(gp, dict):
+                continue
+            cid = gp.get('canonical_id', '')
+
+            # Check for kakari particles
+            if cid in kakari_rules:
+                kakari_found.append({
+                    'canonical_id': cid,
+                    'surface': gp.get('surface', ''),
+                    'span': gp.get('span', [0, 0]),
+                    'expected_ending': kakari_rules[cid],
+                })
+
+            # Check for conjugation forms (normalize variants)
+            if cid.startswith('conjugation_'):
+                form = cid.replace('conjugation_', '')
+                # Normalize common variants
+                if 'rentai' in form:
+                    normalized = 'rentaikei'
+                elif 'izen' in form:
+                    normalized = 'izenkei'
+                elif 'meirei' in form:
+                    normalized = 'meireikei'
+                elif 'mizen' in form:
+                    normalized = 'mizenkei'
+                elif 'renyo' in form:
+                    normalized = 'renyokei'
+                elif 'shushi' in form:
+                    normalized = 'shushikei'
+                else:
+                    normalized = form
+
+                conjugations_found.append({
+                    'canonical_id': cid,
+                    'normalized_form': normalized,
+                    'span': gp.get('span', [0, 0]),
+                })
+
+        # For each kakari particle, check if poem has matching ending
+        for kakari in kakari_found:
+            expected = kakari['expected_ending']
+            pattern_counts[kakari['canonical_id']] += 1
+
+            # Check if any conjugation matches expected (especially near end)
+            has_correct_ending = any(
+                c['normalized_form'] == expected
+                for c in conjugations_found
+            )
+
+            # Also check if syntax_kakarimusubi is annotated
+            has_kakarimusubi_tag = any(
+                gp.get('canonical_id') == 'syntax_kakarimusubi'
+                for gp in grammar_points if isinstance(gp, dict)
+            )
+
+            if has_correct_ending or has_kakarimusubi_tag:
+                correct_counts[kakari['canonical_id']] += 1
+
+            results.append({
+                'poem_id': poem_id,
+                'kakari_particle': kakari['canonical_id'],
+                'kakari_surface': kakari['surface'],
+                'expected_ending': expected,
+                'has_correct_ending': has_correct_ending,
+                'has_kakarimusubi_tag': has_kakarimusubi_tag,
+                'text_preview': text[:40] + '...' if len(text) > 40 else text,
+            })
+
+    # Statistics
+    print(f"\nKakarimusubi pattern frequencies:")
+    total_patterns = sum(pattern_counts.values())
+    for particle, count in pattern_counts.most_common():
+        correct = correct_counts.get(particle, 0)
+        surface = kakari_surfaces.get(particle, particle)
+        print(f"  {surface} ({particle}): {count} occurrences, {correct} with correct ending ({100*correct/count:.1f}%)")
+
+    print(f"\nTotal kakarimusubi patterns: {total_patterns}")
+    print(f"Poems with patterns: {len(set(r['poem_id'] for r in results))}")
+
+    # Save results
+    with open(output_dir / "kakarimusubi_patterns.csv", "w", encoding="utf-8") as f:
+        f.write("poem_id,kakari_particle,kakari_surface,expected_ending,has_correct_ending,has_kakarimusubi_tag,text_preview\n")
+        for r in results:
+            # Escape quotes in text preview
+            preview = r['text_preview'].replace('"', '""')
+            f.write(f"{r['poem_id']},{r['kakari_particle']},{r['kakari_surface']},{r['expected_ending']},{r['has_correct_ending']},{r['has_kakarimusubi_tag']},\"{preview}\"\n")
+
+    # Summary CSV
+    with open(output_dir / "kakarimusubi_summary.csv", "w", encoding="utf-8") as f:
+        f.write("kakari_particle,surface,expected_ending,total_count,correct_ending_count,correct_percentage\n")
+        for particle, count in pattern_counts.most_common():
+            correct = correct_counts.get(particle, 0)
+            surface = kakari_surfaces.get(particle, particle)
+            expected = kakari_rules.get(particle, 'unknown')
+            f.write(f"{particle},{surface},{expected},{count},{correct},{100*correct/count:.1f}\n")
+
+    return results, pattern_counts
+
+
+def analyze_conjugation_distribution(df: pd.DataFrame, output_dir: Path):
+    """
+    Analyze distribution of conjugation forms across the corpus.
+
+    Classical Japanese has 6 main conjugation forms:
+    - 未然形 (mizenkei) - irrealis/imperfective
+    - 連用形 (ren'yokei) - continuative
+    - 終止形 (shushikei) - terminal/conclusive
+    - 連体形 (rentaikei) - attributive
+    - 已然形 (izenkei) - realis/perfective
+    - 命令形 (meireikei) - imperative
+    """
+    print("Analyzing conjugation form distribution...")
+
+    # Standard forms and their variants
+    form_normalization = {
+        'mizenkei': 'mizenkei',
+        'renyokei': 'renyokei',
+        'renyoukei': 'renyokei',  # Variant spelling
+        'shushikei': 'shushikei',
+        'rentaikei': 'rentaikei',
+        'izenkei': 'izenkei',
+        'izennkei': 'izenkei',  # Typo variant
+        'meireikei': 'meireikei',
+    }
+
+    conjugation_counts = Counter()
+    normalized_counts = Counter()
+    poems_per_form = defaultdict(set)
+
+    for idx, row in df.iterrows():
+        poem_id = row['poem_id']
+        grammar_points = row.get('grammar_points', [])
+        if hasattr(grammar_points, 'tolist'):
+            grammar_points = grammar_points.tolist()
+
+        for gp in grammar_points:
+            if not isinstance(gp, dict):
+                continue
+            cid = gp.get('canonical_id', '')
+
+            if cid.startswith('conjugation_'):
+                conjugation_counts[cid] += 1
+
+                # Normalize to standard form
+                form = cid.replace('conjugation_', '').split('_')[0]  # Get base form
+                normalized = form_normalization.get(form, 'other')
+                normalized_counts[normalized] += 1
+                poems_per_form[normalized].add(poem_id)
+
+    # Statistics
+    total = sum(normalized_counts.values())
+    print(f"\nConjugation form distribution (normalized):")
+    form_order = ['mizenkei', 'renyokei', 'shushikei', 'rentaikei', 'izenkei', 'meireikei', 'other']
+    for form in form_order:
+        count = normalized_counts.get(form, 0)
+        poems = len(poems_per_form.get(form, set()))
+        print(f"  {form}: {count} ({100*count/total:.1f}%) in {poems} poems")
+
+    print(f"\nRaw conjugation IDs (top 15):")
+    for cid, count in conjugation_counts.most_common(15):
+        print(f"  {cid}: {count}")
+
+    # Save normalized distribution
+    with open(output_dir / "conjugation_distribution.csv", "w", encoding="utf-8") as f:
+        f.write("conjugation_form,count,percentage,poem_count\n")
+        for form in form_order:
+            count = normalized_counts.get(form, 0)
+            poems = len(poems_per_form.get(form, set()))
+            pct = 100 * count / total if total > 0 else 0
+            f.write(f"{form},{count},{pct:.2f},{poems}\n")
+
+    # Save raw counts
+    with open(output_dir / "conjugation_raw.csv", "w", encoding="utf-8") as f:
+        f.write("canonical_id,count\n")
+        for cid, count in conjugation_counts.most_common():
+            f.write(f"{cid},{count}\n")
+
+    # Plot
+    fig, axes = plt.subplots(1, 2, figsize=(14, 6))
+
+    # Normalized distribution
+    forms = [f for f in form_order if normalized_counts.get(f, 0) > 0]
+    counts = [normalized_counts.get(f, 0) for f in forms]
+    colors = plt.cm.Set2(np.linspace(0, 1, len(forms)))
+
+    axes[0].bar(forms, counts, color=colors)
+    axes[0].set_xlabel('Conjugation Form')
+    axes[0].set_ylabel('Frequency')
+    axes[0].set_title('Conjugation Form Distribution (Normalized)')
+    axes[0].tick_params(axis='x', rotation=45)
+
+    for i, (form, count) in enumerate(zip(forms, counts)):
+        axes[0].text(i, count + max(counts)*0.02, f'{100*count/total:.1f}%',
+                     ha='center', va='bottom', fontsize=9)
+
+    # Pie chart
+    axes[1].pie(counts, labels=forms, autopct='%1.1f%%', colors=colors, startangle=90)
+    axes[1].set_title('Conjugation Form Proportions')
+
+    plt.tight_layout()
+    plt.savefig(output_dir / "conjugation_distribution.png", dpi=150)
+    plt.close()
+
+    return normalized_counts, conjugation_counts
+
+
 def main():
     OUTPUT_DIR.mkdir(parents=True, exist_ok=True)
     setup_plotting()
@@ -277,6 +531,12 @@ def main():
 
     print("\n" + "="*50)
     collection_pos = analyze_pos_patterns_by_collection(df, sequences, OUTPUT_DIR)
+
+    print("\n" + "="*50)
+    kakarimusubi_results, kakari_counts = analyze_kakarimusubi(df, OUTPUT_DIR)
+
+    print("\n" + "="*50)
+    normalized_conj, raw_conj = analyze_conjugation_distribution(df, OUTPUT_DIR)
 
     print(f"\nResults saved to {OUTPUT_DIR}")
 

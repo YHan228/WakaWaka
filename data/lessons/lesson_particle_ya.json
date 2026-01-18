@@ -1,492 +1,438 @@
 {
   "lesson_id": "lesson_particle_ya",
-  "lesson_title": "The Rhetorical Inquiry: Particle や (ya) and the Logic of Doubt",
-  "lesson_summary": "In this lesson, we explore the particle 'ya', a logical marker used to express doubt, questions, or rhetorical emphasis, which forces the sentence's final verb into the Attributive form (Rentaikei).",
+  "lesson_title": "疑问与感叹的触发器：系助词「や」与系结法则",
+  "lesson_summary": "引入古典语法核心概念“系结法则”（係り結び）。学习助词「や」如何不仅表示疑问，还能改变句尾动词的形式，以此表达强烈的情感波动。",
   "grammar_point": "particle_ya",
   "grammar_explanation": {
-    "concept": "The particle や (ya) acts as a 'logical query' marker. In Classical Japanese, it signals that the speaker is questioning a specific element of the sentence. Like the particle か (ka) we studied previously, や (ya) triggers a 'Kakari-musubi' (Focus-Link) effect: the verb at the end of the sentence must change from its standard 'Terminal' form to the 'Attributive' (Rentaikei) form to 'close' the logical loop opened by 'ya'.",
-    "formation": "[Focus Word] + や + ... + [Verb in Rentaikei]",
+    "concept": "系助词「や」与系结法则 (Kakarimusubi)",
+    "formation": "「や」 (句中/句末) ... 谓语变为【连体形】 (而非终止形)",
     "variations": [
-      "やは (ya-ha): Stronger rhetorical question (often implying 'certainly not').",
-      "やも (ya-mo): Emphatic rhetorical doubt, often used at the very end of a poem."
+      "疑问 (Question): ...吗？",
+      "反问 (Rhetorical): 难道...吗？(暗示否定)",
+      "感叹 (Exclamation): 多么...啊！"
     ],
     "common_confusions": [
-      "vs. か (ka): 'Ka' is generally a direct question (?), while 'ya' is often more rhetorical or emotive (?!)."
+      "切字「や」 vs 系助词「や」：在俳句或句末，单出现的「や」常作为切字（Kireji）表示单纯的咏叹或断句。而在本课的和歌中，我们关注它出现在句中并触发句尾变形的“系结”功能。"
     ]
   },
   "teaching_sequence": [
     {
       "type": "introduction",
-      "content": "In our previous lesson, we saw how the particle か (ka) creates a direct question. However, Japanese poetry often prefers a softer, more reflective kind of doubt. Enter the particle や (ya). Think of 'ya' as a 'logical hook.' Once you place it after a word, the sentence's energy is suspended until it reaches the verb, which must then take the Rentaikei (Attributive) form to 'knot' the thought together. For a Chinese speaker, this is very similar to the classical 乎 (hū) or 耶 (yé) used to turn a statement into a rhetorical inquiry."
+      "content": "在之前的课程中，我们学习了动词的“连体形”通常用于修饰名词（如“爱的人”）。\n\n但在古典日语中，有一种特殊的规则，可以强制句子的谓语变成连体形，即使后面没有名词。这就像编程中的“特殊模式开关”：一旦触发了开关，结尾的格式必须随之改变。\n\n今天我们要学习的开关是系助词「<ruby>や<rt>ya</rt></ruby>」。它不仅表示疑问，更是一种情感的强调。"
     },
     {
       "type": "poem_presentation",
-      "poem_id": "lapis_d78ecbcb440f54df",
+      "poem_id": "ogura100_93536ed7f8792bf0",
       "display": {
-        "text_with_furigana": "<ruby>秋<rt>あき</rt></ruby>の<ruby>田<rt>た</rt></ruby>の<ruby>穂<rt>ほ</rt></ruby>の<ruby>上<rt>うへ</rt></ruby>を<ruby>照<rt>て</rt></ruby>らす<ruby>稲妻<rt>いなづま</rt></ruby>の<ruby>光<rt>ひかり</rt></ruby>の<ruby>間<rt>ま</rt></ruby>にも<ruby>我<rt>われ</rt></ruby><span style='color: #ff4500;'>や</span><ruby>忘<rt>わす</rt></ruby>るる",
-        "romaji": "aki no ta no, ho no ue o terasu, inatsuma, no hikari no ma ni, mo ware ya wasururu",
-        "translation": "In the brief flash of lightning that shines over the ears of the autumn rice fields—in that tiny moment, could I ever forget you?"
+        "text_with_furigana": "<ruby>忍<rt>しの</rt></ruby>ぶれど<ruby>色<rt>いろ</rt></ruby>に<ruby>出<rt>い</rt></ruby>でにけりわが<ruby>恋<rt>こい</rt></ruby>は<ruby>物<rt>もの</rt></ruby><span class='highlight-grammar'>や</span><ruby>思<rt>おも</rt></ruby>ふと<ruby>人<rt>ひと</rt></ruby>の<ruby>問<rt>と</rt></ruby>ふまで",
+        "romaji": "shinoburedo iro ni ide ni keri waga koi wa mono ya omou to hito no tou made",
+        "translation": "虽欲强忍耐，深情显神色。旁人以此问：君正相思耶？"
       },
       "vocabulary": [
         {
-          "word": "秋",
-          "reading": "あき",
-          "meaning": "autumn",
+          "word": "忍ぶれ",
+          "reading": "しのぶれ",
+          "meaning": "隐忍（已然形）",
           "span": null,
-          "chinese_cognate_note": "Identical to Chinese 秋"
+          "chinese_cognate_note": "忍"
         },
         {
-          "word": "の",
-          "reading": "の",
-          "meaning": "possessive particle (of)",
-          "span": [
-            2,
-            3
-          ],
+          "word": "ど",
+          "reading": "ど",
+          "meaning": "虽然...但是（逆接助词）",
+          "span": null,
           "chinese_cognate_note": null
         },
         {
-          "word": "田",
-          "reading": "た",
-          "meaning": "rice field",
+          "word": "色",
+          "reading": "いろ",
+          "meaning": "脸色、表情",
           "span": null,
-          "chinese_cognate_note": "Identical to Chinese 田"
-        },
-        {
-          "word": "の",
-          "reading": "の",
-          "meaning": "possessive particle (of)",
-          "span": [
-            4,
-            5
-          ],
-          "chinese_cognate_note": null
-        },
-        {
-          "word": "穂",
-          "reading": "ほ",
-          "meaning": "ear of grain",
-          "span": null,
-          "chinese_cognate_note": "Identical to Chinese 穗"
-        },
-        {
-          "word": "の",
-          "reading": "の",
-          "meaning": "possessive particle (of)",
-          "span": [
-            6,
-            7
-          ],
-          "chinese_cognate_note": null
-        },
-        {
-          "word": "上",
-          "reading": "うへ",
-          "meaning": "top/above",
-          "span": null,
-          "chinese_cognate_note": "Identical to Chinese 上"
-        },
-        {
-          "word": "を",
-          "reading": "を",
-          "meaning": "object marker",
-          "span": [
-            9,
-            10
-          ],
-          "chinese_cognate_note": null
-        },
-        {
-          "word": "照らす",
-          "reading": "てらす",
-          "meaning": "to shine/illuminate",
-          "span": null,
-          "chinese_cognate_note": "Cognate with Chinese 照"
-        },
-        {
-          "word": "稲妻",
-          "reading": "いなづま",
-          "meaning": "lightning (lit. 'rice-wife')",
-          "span": null,
-          "chinese_cognate_note": "Uses Kanji 稲 (rice) and 妻 (wife)"
-        },
-        {
-          "word": "の",
-          "reading": "の",
-          "meaning": "possessive particle (of)",
-          "span": [
-            17,
-            18
-          ],
-          "chinese_cognate_note": null
-        },
-        {
-          "word": "光",
-          "reading": "ひかり",
-          "meaning": "light",
-          "span": null,
-          "chinese_cognate_note": "Identical to Chinese 光"
-        },
-        {
-          "word": "の",
-          "reading": "の",
-          "meaning": "possessive particle (of)",
-          "span": [
-            21,
-            22
-          ],
-          "chinese_cognate_note": null
-        },
-        {
-          "word": "間",
-          "reading": "ま",
-          "meaning": "interval/moment",
-          "span": null,
-          "chinese_cognate_note": "Identical to Chinese 間"
+          "chinese_cognate_note": "色"
         },
         {
           "word": "に",
           "reading": "に",
-          "meaning": "time marker (at/in)",
-          "span": [
-            23,
-            24
-          ],
-          "chinese_cognate_note": null
-        },
-        {
-          "word": "も",
-          "reading": "も",
-          "meaning": "even/also",
-          "span": [
-            24,
-            25
-          ],
-          "chinese_cognate_note": null
-        },
-        {
-          "word": "我",
-          "reading": "われ",
-          "meaning": "I/me",
-          "span": [
-            25,
-            26
-          ],
-          "chinese_cognate_note": "Identical to Chinese 我"
-        },
-        {
-          "word": "や",
-          "reading": "や",
-          "meaning": "interrogative/rhetorical particle",
-          "span": [
-            26,
-            27
-          ],
-          "chinese_cognate_note": null
-        },
-        {
-          "word": "忘るる",
-          "reading": "わするる",
-          "meaning": "to forget (Attributive form)",
+          "meaning": "在...（格助词）",
           "span": null,
-          "chinese_cognate_note": "Cognate with Chinese 忘"
-        }
-      ],
-      "focus_highlight": [
-        26,
-        27
-      ]
-    },
-    {
-      "type": "grammar_spotlight",
-      "content": "Look at the end of the poem: **我やわするる** (ware ya wasururu). \n\n1. **The Focus**: The speaker places 'ya' after 'ware' (I). This highlights the subject: 'Is it *I* who...?'\n2. **The Link**: Because 'ya' is present, the verb 'to forget' cannot be the standard 'wasuru'. It must change to **わするる (wasururu)**, which is the **Rentaikei (Attributive form)**.\n3. **The Logic**: This creates a rhetorical question. The speaker is saying the moment of lightning is so short, yet even in that split second, 'Would I forget you?' (The implied answer is 'No').",
-      "evidence": "See the poem above."
-    },
-    {
-      "type": "poem_presentation",
-      "poem_id": "lapis_953fd1423e8c4ab4",
-      "display": {
-        "text_with_furigana": "<ruby>見<rt>み</rt></ruby>てのみ<span style='color: #ff4500;'>や</span><ruby>人<rt>ひと</rt></ruby>に<ruby>語<rt>かた</rt></ruby>らむ<ruby>桜花<rt>さくらばな</rt></ruby><ruby>手<rt>て</rt></ruby>ごとに<ruby>折<rt>を</rt></ruby>りて<ruby>家<rt>いへ</rt></ruby>つとにせむ",
-        "romaji": "mite nomi ya, hito ni kataramu, sakurabana, te koto ni orite, ihe tsuto ni semu",
-        "translation": "Should I only look at them and then just tell others? No, I shall pluck these cherry blossoms in my hands and take them home as a souvenir."
-      },
-      "vocabulary": [
-        {
-          "word": "見て",
-          "reading": "みて",
-          "meaning": "seeing (te-form of 'miru')",
-          "span": [
-            0,
-            2
-          ],
-          "chinese_cognate_note": "Cognate with Chinese 見"
+          "chinese_cognate_note": null
         },
         {
-          "word": "のみ",
-          "reading": "のみ",
-          "meaning": "only",
-          "span": [
-            2,
-            4
-          ],
+          "word": "出で",
+          "reading": "いで",
+          "meaning": "显露（动词连用形）",
+          "span": null,
+          "chinese_cognate_note": "出"
+        },
+        {
+          "word": "に",
+          "reading": "に",
+          "meaning": "已经（完了助动词“ぬ”的连用形）",
+          "span": null,
           "chinese_cognate_note": null
+        },
+        {
+          "word": "けり",
+          "reading": "けり",
+          "meaning": "啊...了（咏叹助动词）",
+          "span": null,
+          "chinese_cognate_note": null
+        },
+        {
+          "word": "わが",
+          "reading": "わが",
+          "meaning": "我的",
+          "span": null,
+          "chinese_cognate_note": null
+        },
+        {
+          "word": "恋",
+          "reading": "こい",
+          "meaning": "恋情",
+          "span": null,
+          "chinese_cognate_note": "恋"
+        },
+        {
+          "word": "は",
+          "reading": "は",
+          "meaning": "至于...（系助词）",
+          "span": null,
+          "chinese_cognate_note": null
+        },
+        {
+          "word": "物",
+          "reading": "もの",
+          "meaning": "事情/对象",
+          "span": null,
+          "chinese_cognate_note": "物"
         },
         {
           "word": "や",
           "reading": "や",
-          "meaning": "interrogative particle",
-          "span": [
-            4,
-            5
-          ],
+          "meaning": "吗？（疑问系助词）",
+          "span": null,
+          "chinese_cognate_note": null
+        },
+        {
+          "word": "思ふ",
+          "reading": "おもう",
+          "meaning": "思念/思考（连体形）",
+          "span": null,
+          "chinese_cognate_note": "思"
+        },
+        {
+          "word": "と",
+          "reading": "と",
+          "meaning": "这样（引用助词）",
+          "span": null,
           "chinese_cognate_note": null
         },
         {
           "word": "人",
           "reading": "ひと",
-          "meaning": "person/others",
-          "span": [
-            5,
-            6
-          ],
-          "chinese_cognate_note": "Identical to Chinese 人"
+          "meaning": "别人",
+          "span": null,
+          "chinese_cognate_note": "人"
         },
         {
-          "word": "に",
-          "reading": "に",
-          "meaning": "target marker (to)",
-          "span": [
-            6,
-            7
-          ],
+          "word": "の",
+          "reading": "の",
+          "meaning": "主语标记（格助词）",
+          "span": null,
           "chinese_cognate_note": null
         },
         {
-          "word": "語らむ",
-          "reading": "かたらむ",
-          "meaning": "will tell/talk",
+          "word": "問ふ",
+          "reading": "とう",
+          "meaning": "询问（连体形）",
           "span": null,
-          "chinese_cognate_note": "Cognate with Chinese 語"
+          "chinese_cognate_note": "问"
         },
         {
-          "word": "桜花",
-          "reading": "さくらばな",
-          "meaning": "cherry blossoms",
+          "word": "まで",
+          "reading": "まで",
+          "meaning": "到了...的程度（副助词）",
           "span": null,
-          "chinese_cognate_note": "Identical to Chinese 櫻花"
-        },
-        {
-          "word": "手",
-          "reading": "て",
-          "meaning": "hand",
-          "span": null,
-          "chinese_cognate_note": "Identical to Chinese 手"
-        },
-        {
-          "word": "ごとに",
-          "reading": "ごとに",
-          "meaning": "each/every",
-          "span": null,
-          "chinese_cognate_note": "Similar to Chinese 每"
-        },
-        {
-          "word": "折りて",
-          "reading": "をりて",
-          "meaning": "plucking/breaking (te-form)",
-          "span": null,
-          "chinese_cognate_note": "Cognate with Chinese 折"
-        },
-        {
-          "word": "家",
-          "reading": "いへ",
-          "meaning": "home/house",
-          "span": null,
-          "chinese_cognate_note": "Identical to Chinese 家"
-        },
-        {
-          "word": "つとに",
-          "reading": "つとに",
-          "meaning": "as a souvenir/gift",
-          "span": [
-            24,
-            27
-          ],
-          "chinese_cognate_note": null
-        },
-        {
-          "word": "せむ",
-          "reading": "せむ",
-          "meaning": "will do/make",
-          "span": [
-            27,
-            29
-          ],
           "chinese_cognate_note": null
         }
       ],
       "focus_highlight": [
-        4,
-        5
+        17,
+        18
       ]
     },
     {
-      "type": "contrast_example",
-      "content": "In the second poem, 'ya' follows 'nomi' (only). **見てのみや (mite nomi ya)** translates to 'Is it only by looking [that I should appreciate them]?' This 'ya' casts doubt on the idea of *only* looking, leading the speaker to the conclusion that they must actually pluck the flowers."
+      "type": "grammar_spotlight",
+      "content": "### 语法核心：系结法则 (Kakarimusubi)\n\n在「物**や**思ふ」这一句中，助词「や」起到了**疑问**的作用：“是在思念什么**吗**？”\n\n这里发生了一个重要的语法现象：\n1.  **触发器**：「や」是一个强有力的系助词。\n2.  **响应**：它要求句尾的动词必须变成**连体形**。\n\n虽然「思ふ」（omou）的终止形和连体形长得一样（都是四段动词），但在语法逻辑上，这里的「思ふ」是连体形。这种“前有呼，后有应”的结构，赋予了诗歌紧凑的逻辑和强烈的语气。\n\n*注：在本诗中，这个疑问句被「と」引用，意为“别人问我：‘你在相思吗？’”*",
+      "evidence": "See the poem above."
     },
     {
       "type": "poem_presentation",
-      "poem_id": "lapis_c614f61d1a3043a2",
+      "poem_id": "lapis_95361bd683c4cc60",
       "display": {
-        "text_with_furigana": "<ruby>遠<rt>とほ</rt></ruby>くあれと<ruby>君<rt>きみ</rt></ruby>にそこふる<ruby>玉桙<rt>たまほこ</rt></ruby>の<ruby>里人<rt>さとひと</rt></ruby><ruby>皆<rt>みな</rt></ruby>に<ruby>我<rt>われ</rt></ruby><ruby>恋<rt>こ</rt></ruby>ひめ<span style='color: #ff4500;'>やも</span>",
-        "romaji": "tohoku are, to kimi ni soko furu, tamahoko, no satohito mina, ni ware kohime ya mo",
-        "translation": "Though you are far away, I long for you; how could I ever love any of the people in this village as I love you?"
+        "text_with_furigana": "<ruby>声<rt>こえ</rt></ruby>はして<ruby>雲路<rt>くもじ</rt></ruby>にむせぶほととぎす<ruby>涙<rt>なみだ</rt></ruby><span class='highlight-grammar'>や</span>そそぐ<ruby>宵<rt>よい</rt></ruby>の<ruby>村雨<rt>むらさめ</rt></ruby>",
+        "romaji": "koe wa shite kumoji ni musebu hototogisu namida ya sosogu yoi no murasame",
+        "translation": "云路闻啼声，杜鹃以此以此哽咽鸣。洒落可是泪？今宵骤雨情。"
       },
       "vocabulary": [
         {
-          "word": "遠く",
-          "reading": "とほく",
-          "meaning": "far away",
+          "word": "声",
+          "reading": "こえ",
+          "meaning": "声音",
           "span": null,
-          "chinese_cognate_note": "Identical to Chinese 遠"
+          "chinese_cognate_note": "声"
         },
         {
-          "word": "あれ",
-          "reading": "あれ",
-          "meaning": "to be (subjunctive/conditional)",
-          "span": [
-            3,
-            5
-          ],
+          "word": "は",
+          "reading": "は",
+          "meaning": "强调主语（系助词）",
+          "span": null,
           "chinese_cognate_note": null
         },
         {
-          "word": "と",
-          "reading": "と",
-          "meaning": "even though/if",
-          "span": [
-            5,
-            6
-          ],
+          "word": "して",
+          "reading": "して",
+          "meaning": "发出...（动词“す”的接续形式）",
+          "span": null,
           "chinese_cognate_note": null
         },
         {
-          "word": "君",
-          "reading": "きみ",
-          "meaning": "you",
+          "word": "雲路",
+          "reading": "くもじ",
+          "meaning": "云端/云路",
           "span": null,
-          "chinese_cognate_note": "Identical to Chinese 君"
+          "chinese_cognate_note": "云路"
         },
         {
           "word": "に",
           "reading": "に",
-          "meaning": "target marker",
-          "span": [
-            8,
-            9
-          ],
-          "chinese_cognate_note": null
-        },
-        {
-          "word": "そこ",
-          "reading": "そこ",
-          "meaning": "there",
-          "span": [
-            9,
-            11
-          ],
-          "chinese_cognate_note": null
-        },
-        {
-          "word": "ふる",
-          "reading": "ふる",
-          "meaning": "to pass (time/place)",
-          "span": [
-            11,
-            13
-          ],
-          "chinese_cognate_note": null
-        },
-        {
-          "word": "玉桙の",
-          "reading": "たまほこの",
-          "meaning": "pillow word for 'road' or 'village'",
+          "meaning": "在...（格助词）",
           "span": null,
           "chinese_cognate_note": null
         },
         {
-          "word": "里人",
-          "reading": "さとひと",
-          "meaning": "villager",
-          "span": null,
-          "chinese_cognate_note": "里 (village) + 人 (person)"
-        },
-        {
-          "word": "皆",
-          "reading": "みな",
-          "meaning": "all/everyone",
-          "span": null,
-          "chinese_cognate_note": "Identical to Chinese 皆"
-        },
-        {
-          "word": "に",
-          "reading": "に",
-          "meaning": "target marker",
-          "span": [
-            24,
-            25
-          ],
-          "chinese_cognate_note": null
-        },
-        {
-          "word": "我",
-          "reading": "われ",
-          "meaning": "I",
+          "word": "むせぶ",
+          "reading": "むせぶ",
+          "meaning": "哽咽/抽泣",
           "span": null,
           "chinese_cognate_note": null
         },
         {
-          "word": "恋ひめ",
-          "reading": "こひめ",
-          "meaning": "would love (from 'kofu')",
+          "word": "ほととぎす",
+          "reading": "ほととぎす",
+          "meaning": "杜鹃鸟",
           "span": null,
           "chinese_cognate_note": null
         },
         {
-          "word": "やも",
-          "reading": "やも",
-          "meaning": "strong rhetorical negative particle",
-          "span": [
-            30,
-            32
-          ],
+          "word": "涙",
+          "reading": "なみだ",
+          "meaning": "眼泪",
+          "span": null,
+          "chinese_cognate_note": "泪"
+        },
+        {
+          "word": "や",
+          "reading": "や",
+          "meaning": "是...吗？（疑问系助词）",
+          "span": null,
+          "chinese_cognate_note": null
+        },
+        {
+          "word": "そそぐ",
+          "reading": "そそぐ",
+          "meaning": "洒落/倾注（连体形）",
+          "span": null,
+          "chinese_cognate_note": null
+        },
+        {
+          "word": "宵",
+          "reading": "よい",
+          "meaning": "夜晚（尤指初夜）",
+          "span": null,
+          "chinese_cognate_note": "宵"
+        },
+        {
+          "word": "の",
+          "reading": "の",
+          "meaning": "的（格助词）",
+          "span": null,
+          "chinese_cognate_note": null
+        },
+        {
+          "word": "村雨",
+          "reading": "むらさめ",
+          "meaning": "阵雨/骤雨",
+          "span": null,
+          "chinese_cognate_note": "村雨"
+        }
+      ],
+      "focus_highlight": [
+        20,
+        21
+      ]
+    },
+    {
+      "type": "literary_insight",
+      "content": "### 见立 (Mitate) 与 缘语 (Engo)\n\n这首诗展示了两个高级技巧：\n\n1.  **见立 (Visual Metaphor)**：诗人并没有直接说“下雨了”，而是问「涙やそそぐ」（那是洒落的眼泪吗？）。他将“雨”看作了杜鹃鸟的“泪”。\n2.  **缘语 (Related Words)**：词汇之间有着内在的联系。「むせぶ」（哽咽）、「涙」（泪）、「そそぐ」（洒落/流泪）形成了一组与悲伤哭泣相关的词网，增强了感染力。\n\n「や」在这里不仅仅是提问，更是在提示读者去感受这种“雨即是泪”的艺术联想。",
+      "literary_device": "見立て (Mitate)",
+      "chinese_parallel": "感时花溅泪，恨别鸟惊心。"
+    },
+    {
+      "type": "comprehension_check",
+      "question": "为什么「そそぐ」是连体形？",
+      "answer": "因为前面的系助词「や」触发了系结法则（Kakarimusubi），强制要求句尾动词变为连体形。",
+      "hint": "寻找句子前面的“触发器”助词。"
+    },
+    {
+      "type": "poem_presentation",
+      "poem_id": "lapis_25d891762fea6b30",
+      "display": {
+        "text_with_furigana": "<ruby>浪<rt>なみ</rt></ruby>の<ruby>花<rt>はな</rt></ruby><ruby>沖<rt>おき</rt></ruby>から<ruby>咲<rt>さ</rt></ruby>きて<ruby>散<rt>ち</rt></ruby>り<ruby>来<rt>く</rt></ruby>めり<ruby>水<rt>みず</rt></ruby>の<ruby>春<rt>はる</rt></ruby>とは<ruby>風<rt>かぜ</rt></ruby><span class='highlight-grammar'>や</span>なるらむ",
+        "romaji": "nami no hana oki kara sakite chiriku meri mizu no haru to wa kaze ya naru ramu",
+        "translation": "浪花似白樱，以此以此海心开落以此来。水上亦逢春，风是造物主？"
+      },
+      "vocabulary": [
+        {
+          "word": "浪",
+          "reading": "なみ",
+          "meaning": "波浪",
+          "span": null,
+          "chinese_cognate_note": "浪"
+        },
+        {
+          "word": "の",
+          "reading": "の",
+          "meaning": "的（格助词）",
+          "span": null,
+          "chinese_cognate_note": null
+        },
+        {
+          "word": "花",
+          "reading": "はな",
+          "meaning": "花",
+          "span": null,
+          "chinese_cognate_note": "花"
+        },
+        {
+          "word": "沖",
+          "reading": "おき",
+          "meaning": "海面/远海",
+          "span": null,
+          "chinese_cognate_note": "冲"
+        },
+        {
+          "word": "から",
+          "reading": "から",
+          "meaning": "从...（格助词）",
+          "span": null,
+          "chinese_cognate_note": null
+        },
+        {
+          "word": "咲きて",
+          "reading": "さきて",
+          "meaning": "盛开并且...（动词接续）",
+          "span": null,
+          "chinese_cognate_note": null
+        },
+        {
+          "word": "散り来",
+          "reading": "ちりく",
+          "meaning": "飘落而来（复合动词）",
+          "span": null,
+          "chinese_cognate_note": "散"
+        },
+        {
+          "word": "めり",
+          "reading": "めり",
+          "meaning": "看起来像是...（推量助动词）",
+          "span": null,
+          "chinese_cognate_note": null
+        },
+        {
+          "word": "水",
+          "reading": "みず",
+          "meaning": "水",
+          "span": null,
+          "chinese_cognate_note": "水"
+        },
+        {
+          "word": "の",
+          "reading": "の",
+          "meaning": "上的（格助词）",
+          "span": null,
+          "chinese_cognate_note": null
+        },
+        {
+          "word": "春",
+          "reading": "はる",
+          "meaning": "春天",
+          "span": null,
+          "chinese_cognate_note": "春"
+        },
+        {
+          "word": "とは",
+          "reading": "とは",
+          "meaning": "所谓的...（引用+强调）",
+          "span": null,
+          "chinese_cognate_note": null
+        },
+        {
+          "word": "風",
+          "reading": "かぜ",
+          "meaning": "风",
+          "span": null,
+          "chinese_cognate_note": "风"
+        },
+        {
+          "word": "や",
+          "reading": "や",
+          "meaning": "是...吗？（疑问系助词）",
+          "span": null,
+          "chinese_cognate_note": null
+        },
+        {
+          "word": "なる",
+          "reading": "なる",
+          "meaning": "构成/成为（动词）",
+          "span": null,
+          "chinese_cognate_note": "成"
+        },
+        {
+          "word": "らむ",
+          "reading": "らむ",
+          "meaning": "大概是...吧（推量助动词，连体形）",
+          "span": null,
           "chinese_cognate_note": null
         }
       ],
       "focus_highlight": [
-        30,
-        32
+        21,
+        22
       ]
     },
     {
-      "type": "comprehension_check",
-      "question": "In Poem 3, the phrase 'ware kohime ya mo' ends with 'ya mo'. Based on the context, does the speaker intend to love the villagers?",
-      "answer": "No. 'Ya mo' is a strong rhetorical negative. It implies 'How could I possibly love them? (I certainly won't).'",
-      "hint": "Think of 'ya mo' as a logical operator that flips the meaning of the verb into a 'certainly not' rhetorical question."
+      "type": "summary",
+      "content": "本课要点回顾：\n1.  **功能**：「や」是表示疑问或感叹的系助词。\n2.  **规则**：它触发“系结法则”，要求句尾使用**连体形**。\n3.  **效果**：这种结构打破了平铺直叙，常用于表达“难道是...吗？”的惊叹或不确定，非常适合描写恋爱中的猜测或对自然奇景的感叹。"
     }
   ],
   "reference_card": {
-    "point": "Particle や (ya)",
-    "one_liner": "A focus particle used for questions or rhetorical doubt that requires the sentence to end in the Rentaikei (Attributive) form.",
-    "example": "我やわするる (Ware ya wasururu) - 'Will I forget?' (Rhetorical)",
+    "point": "系助词「や」 (Particle Ya)",
+    "one_liner": "疑问/感叹触发器，强制句尾变为连体形。",
+    "example": "風やなるらむ (是风造成的吗？)",
     "see_also": [
-      "particle_ka",
-      "lesson_conjugation_rentaikei"
+      "conjugation_rentaikei",
+      "kireji_ya"
     ]
   },
   "forward_references": [
     {
-      "point": "Kakari-Musubi with 'Koso'",
-      "note": "In Unit 7.5, we will see 'Koso', which is the emphatic cousin of 'Ya' and 'Ka', but requires a different verb ending."
+      "point": "auxiliary_ramu",
+      "note": "我们在第三首诗中见到了「らむ」，这是一个表示“当前推测”的助动词，将在后续课程详细讲解。"
+    },
+    {
+      "point": "auxiliary_meri",
+      "note": "第三首诗中的「めり」表示视觉推测（看起来像），也是后续重点。"
     }
   ]
 }

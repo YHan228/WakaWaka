@@ -1,255 +1,255 @@
 {
-  "generated_at": "2026-01-16T17:52:48.223354",
+  "generated_at": "2026-01-18T17:00:44.732931",
   "total_lessons": 50,
   "lessons": [
     {
       "lesson_id": "lesson_auxiliary_ru",
-      "lesson_title": "The 'State' Suffix: Mastering the Versatile る (ru)",
+      "lesson_title": "心弦自鸣：助动词「る」的自发与被动",
       "grammar_point": "auxiliary_ru"
     },
     {
+      "lesson_id": "lesson_conjugation_izennkei",
+      "lesson_title": "确定的现实：已然形与逻辑链条",
+      "grammar_point": "conjugation_izennkei"
+    },
+    {
       "lesson_id": "lesson_auxiliary_tari",
-      "lesson_title": "The Resultative State: Auxiliary たり (tari)",
+      "lesson_title": "定格的风景：存续助动词「たり」",
       "grammar_point": "auxiliary_tari"
     },
     {
+      "lesson_id": "lesson_particle_ga",
+      "lesson_title": "助词「が」：不仅仅是主语",
+      "grammar_point": "particle_ga"
+    },
+    {
       "lesson_id": "lesson_particle_ba",
-      "lesson_title": "The Logic Gate: Mastering the Conditional Particle ば (ba)",
+      "lesson_title": "逻辑的开关：接续助词「ば」",
       "grammar_point": "particle_ba"
     },
     {
+      "lesson_id": "lesson_auxiliary_mashi",
+      "lesson_title": "虚构的平行世界：反实虚拟「まし」",
+      "grammar_point": "auxiliary_mashi"
+    },
+    {
       "lesson_id": "lesson_particle_zo",
-      "lesson_title": "The Emphatic Spotlight: Particle ぞ (zo) and the Logic of Binding",
+      "lesson_title": "聚焦的光束：系助词「ぞ」与系结法则",
       "grammar_point": "particle_zo"
     },
     {
       "lesson_id": "lesson_particle_ya",
-      "lesson_title": "The Rhetorical Inquiry: Particle や (ya) and the Logic of Doubt",
+      "lesson_title": "疑问与感叹的触发器：系助词「や」与系结法则",
       "grammar_point": "particle_ya"
     },
     {
-      "lesson_id": "lesson_auxiliary_da",
-      "lesson_title": "The Identifying Link: The Auxiliary/Particle な (na)",
-      "grammar_point": "auxiliary_da"
+      "lesson_id": "lesson_pivot_word",
+      "lesson_title": "语义的重载：挂词 (Kakekotoba)",
+      "grammar_point": "pivot_word"
     },
     {
-      "lesson_id": "lesson_particle_nomi",
-      "lesson_title": "The Logic of Exclusion: Restrictive Particle のみ (nomi)",
-      "grammar_point": "particle_nomi"
+      "lesson_id": "lesson_auxiliary_kemu",
+      "lesson_title": "遥想往昔：过去推量助动词「けむ」",
+      "grammar_point": "auxiliary_kemu"
     },
     {
       "lesson_id": "lesson_kireji_kana",
-      "lesson_title": "The Poetic Sigh: Mastering the Exclamatory 'Kana' (かな)",
+      "lesson_title": "咏叹的终结：切字「かな」",
       "grammar_point": "kireji_kana"
     },
     {
-      "lesson_id": "lesson_auxiliary_masi",
-      "lesson_title": "The 'What If' Logic: Counterfactuals with まし (masi)",
-      "grammar_point": "auxiliary_masi"
-    },
-    {
-      "lesson_id": "lesson_particle_ha",
-      "lesson_title": "The Logic of Isolation: Particle は (ha)",
-      "grammar_point": "particle_ha"
+      "lesson_id": "lesson_particle_tsu",
+      "lesson_title": "古老的连接符：格助词「つ」",
+      "grammar_point": "particle_tsu"
     },
     {
       "lesson_id": "lesson_particle_wa",
-      "lesson_title": "The Topic Marker: Defining the Scope with 'Wa' (は)",
+      "lesson_title": "话题与对比：系助词「は」",
       "grammar_point": "particle_wa"
     },
     {
-      "lesson_id": "lesson_particle_e",
-      "lesson_title": "The Vector of Direction: Particle へ (e)",
-      "grammar_point": "particle_e"
-    },
-    {
       "lesson_id": "lesson_particle_na",
-      "lesson_title": "The Emotional Anchor: Particle な (na)",
+      "lesson_title": "终助词「な」：是“禁止”还是“咏叹”？",
       "grammar_point": "particle_na"
     },
     {
-      "lesson_id": "lesson_particle_so",
-      "lesson_title": "The Subtle Spotlight: Particle そ (so) and the Logic of Emphasis",
-      "grammar_point": "particle_so"
-    },
-    {
       "lesson_id": "lesson_auxiliary_ramu",
-      "lesson_title": "The 'Invisible Present': Speculating with らむ (ramu)",
+      "lesson_title": "看不见的当下：现在推量「らむ」",
       "grammar_point": "auxiliary_ramu"
     },
     {
       "lesson_id": "lesson_particle_tsutsu",
-      "lesson_title": "The 'Loop' Particle: Continuous and Simultaneous Action with つつ (tsutsu)",
+      "lesson_title": "动作的并行与持续：接续助词「つつ」",
       "grammar_point": "particle_tsutsu"
     },
     {
-      "lesson_id": "lesson_particle_he",
-      "lesson_title": "The Vector of Movement: Particle へ (he/e)",
-      "grammar_point": "particle_he"
-    },
-    {
-      "lesson_id": "lesson_particle_o",
-      "lesson_title": "Unit 1.6: The Object Marker を (o) — Identifying the Target",
-      "grammar_point": "particle_o"
-    },
-    {
       "lesson_id": "lesson_particle_no",
-      "lesson_title": "The Logical Bridge: Particle の (no)",
+      "lesson_title": "第一课：名词间的纽带——格助词「の」",
       "grammar_point": "particle_no"
     },
     {
       "lesson_id": "lesson_particle_to",
-      "lesson_title": "The Logical Wrapper: Particle と (to)",
+      "lesson_title": "助词「と」：连接、引用与变化",
       "grammar_point": "particle_to"
     },
     {
+      "lesson_id": "lesson_conjugation_renyokei",
+      "lesson_title": "连用形：连接动作与状态的纽带",
+      "grammar_point": "conjugation_renyokei"
+    },
+    {
       "lesson_id": "lesson_conjugation_izenkei",
-      "lesson_title": "The 'Already So' Base: Mastering the Izenkei (已然形)",
+      "lesson_title": "已然形：既定事实与逻辑转折",
       "grammar_point": "conjugation_izenkei"
     },
     {
-      "lesson_id": "lesson_auxiliary_shi",
-      "lesson_title": "The Past as a Descriptor: The Attributive Auxiliary し (shi)",
-      "grammar_point": "auxiliary_shi"
-    },
-    {
-      "lesson_id": "lesson_conjugation_te",
-      "lesson_title": "The Logical Semicolon: Connecting Actions with て (te)",
-      "grammar_point": "conjugation_te"
-    },
-    {
       "lesson_id": "lesson_kireji_ya",
-      "lesson_title": "The Poetic Pause: Mastering the Exclamatory 'Ya' (や)",
+      "lesson_title": "切字「や」：咏叹与停顿的艺术",
       "grammar_point": "kireji_ya"
     },
     {
+      "lesson_id": "lesson_syntax_inverted",
+      "lesson_title": "破序之美：倒装句中的情感逻辑",
+      "grammar_point": "syntax_inverted"
+    },
+    {
+      "lesson_id": "lesson_particle_do",
+      "lesson_title": "逆接的转折点：接续助词「ど」",
+      "grammar_point": "particle_do"
+    },
+    {
       "lesson_id": "lesson_particle_mo",
-      "lesson_title": "The Logic of Inclusion: Particle も (mo)",
+      "lesson_title": "并列与强调：助词「も」",
       "grammar_point": "particle_mo"
     },
     {
-      "lesson_id": "lesson_auxiliary_ta",
-      "lesson_title": "The Marker of Completion: Auxiliary た (ta)",
-      "grammar_point": "auxiliary_ta"
-    },
-    {
-      "lesson_id": "lesson_particle_yo",
-      "lesson_title": "The Emotional Call: Particle よ (yo)",
-      "grammar_point": "particle_yo"
+      "lesson_id": "lesson_syntax_kakarimusubi",
+      "lesson_title": "系结法则总集篇：情感的逻辑闭环",
+      "grammar_point": "syntax_kakarimusubi"
     },
     {
       "lesson_id": "lesson_auxiliary_zu",
-      "lesson_title": "The Logic of 'Not': Negation with the Auxiliary ず (zu)",
+      "lesson_title": "否定の論理：助動詞「ず」",
       "grammar_point": "auxiliary_zu"
     },
     {
-      "lesson_id": "lesson_particle_yori",
-      "lesson_title": "The Vector Particle: より (yori) — Origin and Comparison",
-      "grammar_point": "particle_yori"
+      "lesson_id": "lesson_auxiliary_ji",
+      "lesson_title": "否定的意志与推测：助动词「じ」",
+      "grammar_point": "auxiliary_ji"
     },
     {
       "lesson_id": "lesson_particle_ni",
-      "lesson_title": "The Targeting Tag: Particle に (ni)",
+      "lesson_title": "定位：格助词「に」与场景设定",
       "grammar_point": "particle_ni"
     },
     {
+      "lesson_id": "lesson_syntax_taigendome",
+      "lesson_title": "定格的艺术：体言止",
+      "grammar_point": "syntax_taigendome"
+    },
+    {
       "lesson_id": "lesson_auxiliary_ki",
-      "lesson_title": "The Eyewitness Past: Personal Memory with き (ki)",
+      "lesson_title": "铭刻于心的记忆：过去助动词「き」",
       "grammar_point": "auxiliary_ki"
     },
     {
       "lesson_id": "lesson_auxiliary_nu",
-      "lesson_title": "The Logic of the 'Nu' Switch: Completion vs. Negation",
+      "lesson_title": "确定的终结：完了助动词「ぬ」",
       "grammar_point": "auxiliary_nu"
     },
     {
       "lesson_id": "lesson_particle_te",
-      "lesson_title": "The Logical Bridge: Particle て (te) — Linking Actions",
+      "lesson_title": "动作的链条：接续助词「て」",
       "grammar_point": "particle_te"
     },
     {
+      "lesson_id": "lesson_conjugation_meireikei",
+      "lesson_title": "命令形：向世界发出的指令",
+      "grammar_point": "conjugation_meireikei"
+    },
+    {
       "lesson_id": "lesson_particle_ka",
-      "lesson_title": "The Logic of Inquiry: The Interrogative Particle か (ka)",
+      "lesson_title": "疑问与反语：助词「か」",
       "grammar_point": "particle_ka"
     },
     {
-      "lesson_id": "lesson_auxiliary_masu",
-      "lesson_title": "The Politeness Bit: The Auxiliary ます (masu)",
-      "grammar_point": "auxiliary_masu"
-    },
-    {
       "lesson_id": "lesson_auxiliary_keri",
-      "lesson_title": "The Poetic Discovery: The Auxiliary けり (keri)",
+      "lesson_title": "咏叹的发现：助动词「けり」",
       "grammar_point": "auxiliary_keri"
     },
     {
       "lesson_id": "lesson_particle_shi",
-      "lesson_title": "The Spotlight Particle: Pure Emphasis with 'Shi' (し)",
+      "lesson_title": "强调用副助词「し」：节奏与焦点的微调",
       "grammar_point": "particle_shi"
     },
     {
-      "lesson_id": "lesson_particle_kara",
-      "lesson_title": "The Source and the Cause: Particle から (kara)",
-      "grammar_point": "particle_kara"
-    },
-    {
       "lesson_id": "lesson_auxiliary_tsu",
-      "lesson_title": "The Intentional Finish: Completing Actions with つ (tsu)",
+      "lesson_title": "确切的终结：完了助动词「つ」",
       "grammar_point": "auxiliary_tsu"
     },
     {
       "lesson_id": "lesson_particle_wo",
-      "lesson_title": "The Direct Object Marker: Identifying the Target of Action",
+      "lesson_title": "动作的受体：格助词「を」",
       "grammar_point": "particle_wo"
     },
     {
-      "lesson_id": "lesson_auxiliary_su",
-      "lesson_title": "The Versatile Operator: Mastering the Auxiliary す (su)",
-      "grammar_point": "auxiliary_su"
+      "lesson_id": "lesson_syntax_inversion",
+      "lesson_title": "语序的艺术：倒装句（倒置法）",
+      "grammar_point": "syntax_inversion"
+    },
+    {
+      "lesson_id": "lesson_particle_domo",
+      "lesson_title": "逆接的确定条件：接续助词「ども」",
+      "grammar_point": "particle_domo"
     },
     {
       "lesson_id": "lesson_particle_tomo",
-      "lesson_title": "The Logic of Concession: Particle とも (tomo) — The 'Even If' Gate",
+      "lesson_title": "即使时光流逝：逆接假定条件「とも」",
       "grammar_point": "particle_tomo"
     },
     {
-      "lesson_id": "lesson_auxiliary_seru",
-      "lesson_title": "The Causative Command: Mastering 'seru' (せる)",
-      "grammar_point": "auxiliary_seru"
+      "lesson_id": "lesson_particle_de",
+      "lesson_title": "否定的连接：接续助词「で」",
+      "grammar_point": "particle_de"
+    },
+    {
+      "lesson_id": "lesson_auxiliary_beshi",
+      "lesson_title": "必然的推论：助动词「べし」",
+      "grammar_point": "auxiliary_beshi"
     },
     {
       "lesson_id": "lesson_auxiliary_nari",
-      "lesson_title": "The Classical 'Is': The Copula なり (nari)",
+      "lesson_title": "定义世界：断定助动词「なり」",
       "grammar_point": "auxiliary_nari"
     },
     {
-      "lesson_id": "lesson_auxiliary_na",
-      "lesson_title": "The Logic of Prohibition: The Auxiliary な (na)",
-      "grammar_point": "auxiliary_na"
-    },
-    {
       "lesson_id": "lesson_conjugation_rentaikei",
-      "lesson_title": "The Noun-Linker: Mastering the Rentaikei (Attributive Form)",
+      "lesson_title": "动词作定语：连体形",
       "grammar_point": "conjugation_rentaikei"
     },
     {
       "lesson_id": "lesson_particle_koso",
-      "lesson_title": "The Ultimate Emphasis: Particle こそ (koso) and the Izenkei 'Lock'",
+      "lesson_title": "确信的强音：系助词「こそ」与已然形",
       "grammar_point": "particle_koso"
     },
     {
-      "lesson_id": "lesson_conjugation_mizenkei",
-      "lesson_title": "The 'Unrealized' Base: Introduction to Mizenkei (未然形)",
-      "grammar_point": "conjugation_mizenkei"
+      "lesson_id": "lesson_particle_dani",
+      "lesson_title": "卑微的祈愿：副助词「だに」",
+      "grammar_point": "particle_dani"
+    },
+    {
+      "lesson_id": "lesson_particle_kamo",
+      "lesson_title": "万叶的深叹：终助词「かも」",
+      "grammar_point": "particle_kamo"
     },
     {
       "lesson_id": "lesson_auxiliary_ri",
-      "lesson_title": "The Persistence Flag: The Auxiliary り (ri)",
+      "lesson_title": "存续的余音：助动词「り」",
       "grammar_point": "auxiliary_ri"
     },
     {
       "lesson_id": "lesson_auxiliary_mu",
-      "lesson_title": "The Intentional 'Mu': Expressing Will and Future",
+      "lesson_title": "未然的世界：助动词「む」与意志的投射",
       "grammar_point": "auxiliary_mu"
     }
   ]

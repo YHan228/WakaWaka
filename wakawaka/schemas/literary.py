@@ -131,3 +131,67 @@ class LiteraryAnalysisBatch(BaseModel):
     model_used: str
     prompt_version: str
     generated_at: str
+
+
+# -----------------------------------------------------------------------------
+# Literary Index Schemas (for curriculum integration)
+# -----------------------------------------------------------------------------
+
+
+class LiteraryIndexEntry(BaseModel):
+    """
+    Index entry for a poetic device used in curriculum planning.
+
+    Tracks device frequency, co-occurrence patterns, and example poems
+    to inform literary-aware lesson design.
+    """
+
+    device_name: str = Field(description="Normalized device name in Japanese, e.g., '掛詞'")
+    frequency: int = Field(description="Number of poems containing this device")
+    co_occurring_devices: dict[str, int] = Field(
+        default_factory=dict,
+        description="Other devices that appear in the same poems: {device_name: count}"
+    )
+    co_occurring_grammar: dict[str, int] = Field(
+        default_factory=dict,
+        description="Grammar points that co-occur with this device: {canonical_id: count}"
+    )
+    example_poem_ids: list[str] = Field(
+        default_factory=list,
+        description="Up to 5 example poem IDs for reference"
+    )
+
+
+class LiteraryIndex(BaseModel):
+    """
+    Index of all poetic devices in the corpus.
+
+    Used by curriculum extraction to:
+    - Select poems with specific literary features
+    - Plan literary progression in lessons
+    - Identify grammar-literary correlations
+    """
+
+    entries: dict[str, LiteraryIndexEntry] = Field(
+        description="Device name -> index entry mapping"
+    )
+    generated_at: str
+    corpus_size: int
+
+
+class PoemLiteraryDifficulty(BaseModel):
+    """Literary difficulty assessment for a single poem."""
+
+    poem_id: str
+    literary_difficulty: float = Field(
+        ge=0.0, le=1.0,
+        description="Overall literary complexity score (0=simple, 1=complex)"
+    )
+    device_count: int = Field(description="Number of poetic devices identified")
+    has_complex_device: bool = Field(
+        description="True if poem contains 掛詞, 本歌取り, or 序詞"
+    )
+    interpretation_complexity: float = Field(
+        ge=0.0, le=1.0,
+        description="Complexity of meaning/interpretation"
+    )

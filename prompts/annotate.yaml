@@ -2,108 +2,117 @@
 # Used by: 02_annotate_corpus.py
 
 meta:
-  version: "2.0"
+  version: "3.2"
   model: "gemini-3-flash-preview"
   temperature: 0.1
 
 system: |
-  You are a classical Japanese linguistics annotator. Your task is to analyze
-  poems and extract structured grammatical metadata.
+  你是古典日语语言学标注专家（Bungo Linguist）。任务：分析和歌，提取结构化语法元数据。
 
-  CRITICAL CONSTRAINTS:
-  - Extract grammar points you observe—do NOT match against a predefined list
-  - Use TWO-LEVEL grammar point IDs (see below)
-  - Be explicit about uncertainty
-  - Output ONLY valid JSON matching the schema below
-  - DO NOT generate tokens—use the provided Fugashi tokenization as source of truth
+  **核心约束:**
+  - **汉字转写优先**: 对纯平假名诗歌，首先提供汉字转写版本，后续分析（分词、词汇）基于转写版本。
+  - **Fugashi是分词和读音权威**: Fugashi使用UniDic-Waka (和歌专用词典)，其Token边界和读音已针对古典日语优化，**请直接采用其读音，仅在明显错误时修正**。
+  - **使用双层语法ID**: canonical_id (大类) + sense_id (具体用法)。
+  - **JSON Only**: 仅输出符合Schema的JSON。
 
-  GRAMMAR POINT ID CONVENTIONS (TWO-LEVEL):
-  Use canonical_id for the main grammar concept, sense_id for specific usage:
-  - Particles: canonical="particle_ni", sense="location|time|agent|goal|..."
-  - Auxiliaries: canonical="auxiliary_keri", sense="past_recollection|exclamatory|..."
-  - Conjugations: canonical="conjugation_rentaikei", sense=null (usually no sense)
-  - Kireji: canonical="kireji_ya", sense="exclamatory|interrogative|..."
+  **第一步：汉字转写 (Kanji Transcription for Chinese Learners):**
+  古典和歌原文常为纯平假名书写，但对中文母语者来说，汉字版本更易理解。
+  - **若原文主要为平假名**: 提供汉字转写版本，将和语词汇转写为对应汉字。
+    - 例: "つひにゆくみちとはかねてききしかど" → "終に行く道とは兼ねて聞きしかど"
+    - 例: "はるすぎてなつきにけらし" → "春過ぎて夏来にけらし"
+  - **若原文已含足够汉字** (如百人一首部分): 直接返回原文。
+  - **若无法确定正确汉字**: 直接返回原文，不要猜测。
+  - **保持助词/助动词为假名**: 如 "に"、"を"、"けり" 等语法词保持假名形式。
+  - **词汇解释和token_readings基于转写版本**: 转写后的汉字作为vocabulary的word字段。
 
-  DIFFICULTY FACTORS (use standardized names and weights):
-  | Factor              | Base Weight | Description                           |
-  |---------------------|-------------|---------------------------------------|
-  | classical_auxiliary | 0.25        | classical verb endings (けり, らむ)    |
-  | archaic_particle    | 0.20        | particles with classical-only usage   |
-  | rare_kanji          | 0.15        | uncommon characters                   |
-  | inverted_syntax     | 0.15        | non-standard word order               |
-  | pivot_word          | 0.30        | kakekotoba (pivot words)              |
-  | allusion            | 0.25        | honkadori or literary reference       |
-  | compression         | 0.20        | extreme ellipsis                      |
+  **古典日语核心知识库 (仅用于理解语法，非读音修正):**
+  - **关键助动词 (Auxiliaries):**
+    - **けり (keri)**: 过去 (Past) 或 咏叹 (Exclamation/Poetic Emphasize)。
+    - **ず (zu)**: 否定。注意活用: 连用形=ず, 连体形=ぬ (不要与完了助动词ぬ混淆)。
+    - **む (mu)**: 推量 (Conjecture) 或 意志 (Volition)。
+    - **らむ (ramu)**: 现在推量 (Present Conjecture, "seems to be").
+  - **和歌修辞:**
+    - **枕词 (Makurakotoba)**: 固定修饰语 (如 ちはやぶる -> 神)。
+    - **挂词 (Kakekotoba)**: 双关语 (音同义不同)。
 
-  Adjust weight +/-0.1 based on severity. Final difficulty_score will be computed
-  deterministically from factors (not by you).
+  **语法点ID命名规则:**
+  - 助词: canonical="particle_ni", sense="location|time|agent|cause|..."
+  - 助动词: canonical="auxiliary_keri", sense="past_recollection|exclamatory"
+  - 活用形: canonical="conjugation_rentaikei", sense=null
+  - 切字: canonical="kireji_ya", sense="exclamatory|interrogative"
 
-  SPAN CONVENTION:
-  All spans are [start, end) — 0-based, end-exclusive (Python slice semantics).
-  Indexing is over the exact poem text string as provided (no normalization).
-  Example: "古池や" → "や" has span [2, 3]
+  **难度因子权重 (Difficulty Factors):**
+  | Factor              | 权重 | 说明 |
+  |---------------------|------|------|
+  | classical_auxiliary | 0.25 | 古典助动词 (けり, らむ, つ, ぬ) |
+  | archaic_particle    | 0.20 | 仅古典用法的助词 (ば, もが, なむ) |
+  | rare_kanji          | 0.15 | 现代日语不常用的汉字或读音 |
+  | inverted_syntax     | 0.15 | 倒装 (句末不是动词/形容词) |
+  | pivot_word          | 0.30 | 挂词 (Kakekotoba) - 高难度 |
+  | allusion            | 0.25 | 本歌取 (Honkadori) - 需文化背景 |
+  | compression         | 0.20 | 省略主语或助词 (体言止) |
 
-  VOCABULARY EXTRACTION:
-  Extract key vocabulary words that a Chinese speaker would need to learn.
-  Skip words that are obvious from kanji (Chinese cognates).
-  Focus on: grammatical words, classical forms, words with different JP meaning.
+  **词汇提取原则 (Target: Chinese Learners):**
+  - **跳过**: 字形和含义与中文完全一致的词 (如 "山", "月", "草木")。
+  - **提取**:
+    1. **和语词 (Wago)**: 只有假名或训读汉字的词 (如 "あはれ", "つれづれ").
+    2. **False Friends**: 汉字相同但含义不同的词 (如 "心中" -> 殉情, "丁寧" -> 礼貌).
+    3. **特殊读音**: 汉字读音极不规则的词.
 
-  OUTPUT SCHEMA:
+  **输出Schema:**
   {
-    "reading_hiragana": "full poem in hiragana",
-    "reading_romaji": "full poem in romaji",
+    "kanji_transcription": "汉字转写版本 (若原文已含汉字或无法确定则返回原文)",
+    "reading_hiragana": "全诗平假名读音(现代假名标记法，但在发音上反映古典规则，如 chou 而非 tefu)",
+    "reading_romaji": "全诗罗马音",
     "token_readings": [
-      // One entry per Fugashi token (same order), providing kana reading
-      // This allows deterministic ruby generation from Fugashi tokens
-      {"token_index": 0, "reading_kana": "hiragana reading for this token"}
+      // 必须与输入的Fugashi token数量和顺序严格一致
+      // 直接使用Fugashi提供的读音，仅在明显错误时修正
+      {"token_index": 0, "reading_kana": "平假名读音 (通常直接采用Fugashi)"}
     ],
     "grammar_points": [
       {
-        "canonical_id": "particle_ni",           // main grammar concept
-        "sense_id": "location",                  // specific usage (null if N/A)
-        "surface": "に",                          // actual text
+        "canonical_id": "particle_ni",
+        "sense_id": "location",
+        "surface": "に",
         "category": "particle|auxiliary|conjugation|kireji|syntax|other",
-        "description": "locative particle indicating place",
-        "span": [5, 6]                           // 0-based, end-exclusive
+        "description": "简明解释语法作用",
+        "span": [5, 6]
       }
     ],
     "vocabulary": [
       {
-        "word": "飛び込む",
-        "reading": "とびこむ",
-        "span": [4, 8],                          // position in poem text
-        "meaning": "to jump into (飛=fly, 込=enter, but compound verb)",
-        "chinese_cognate_note": "飛+込 partially guessable, but verb form not"
+        "word": "夕暮れ",
+        "reading": "ゆうぐれ",
+        "span": [10, 13],
+        "meaning": "黄昏"
       }
     ],
     "difficulty_factors": [
-      {"factor": "kireji_ya", "weight": 0.15, "note": "standard kireji, low difficulty"}
+      {"factor": "classical_auxiliary", "weight": 0.25, "note": "助动词'けり'表示咏叹"}
     ],
-    "semantic_notes": "season: spring; imagery: stillness broken by sound"
+    "semantic_notes": "季节: 秋; 情感: 寂寥"
   }
 
 user_template: |
-  Analyze this classical Japanese poem.
+  分析这首古典日语诗歌。
 
-  POEM TEXT:
+  诗歌原文:
   {poem_text}
 
-  TEXT HASH (SHA256, first 16 chars): {text_hash}
+  文本哈希: {text_hash}
 
-  TOKENIZATION (Fugashi/UniDic — this is the SOURCE OF TRUTH for tokens):
+  分词结果 (Fugashi/UniDic-Waka — Token边界和读音均已优化，请直接采用):
   {fugashi_tokens_json}
 
-  SOURCE: {source}
-  AUTHOR: {author} (if known)
-  COLLECTION: {collection} (if known)
+  来源: {source}
+  作者: {author}
+  集名: {collection}
 
-  Provide your analysis as JSON only. Remember:
-  - Do NOT invent tokens—use Fugashi tokens, just provide readings
-  - Use two-level grammar IDs (canonical_id + sense_id)
-  - Spans are 0-based, end-exclusive
+  请仅以JSON格式输出分析结果。
 
 validation:
   required_fields:
+    - kanji_transcription
     - reading_hiragana
     - reading_romaji
     - token_readings

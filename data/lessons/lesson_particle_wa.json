@@ -1,568 +1,415 @@
 {
   "lesson_id": "lesson_particle_wa",
-  "lesson_title": "The Topic Marker: Defining the Scope with 'Wa' (は)",
-  "lesson_summary": "In this lesson, we introduce the particle 'wa' (は), which functions as a 'logic tag' to identify the topic of a sentence, similar to the Chinese '至于' or the implicit topic-comment structure.",
+  "lesson_title": "话题与对比：系助词「は」",
+  "lesson_summary": "学习系助词「は」如何确立话题、构建对比，并掌握辨析古文中写作「は」读作「ば」的条件句用法。",
   "grammar_point": "particle_wa",
   "grammar_explanation": {
-    "concept": "The particle 'wa' (は) marks the 'Topic' of the sentence. It tells the reader: 'Regarding this specific thing, here is what I am about to say.' While it often marks the subject (the 'doer'), its primary role is to set the stage or scope for the rest of the statement.",
-    "formation": "[Noun] + は (wa)",
-    "variations": [
-      "に + は (ni wa): Regarding [at/in this place/time]..."
-    ],
+    "concept": "系助词「は」用于提示句子的主题（Topic）或表示对比（Contrast）。",
+    "formation": "接在体言（名词）、活用词连体形或助词之后。",
+    "variations": [],
     "common_confusions": [
-      "In Chinese, the topic is often just placed at the start of the sentence without a marker (e.g., '那个人，我不认识'). In Japanese, 'wa' (は) explicitly flags that '那个人' is the topic."
+      "接续助词「ば」：在古文中，表示条件（如果/因为）的「ば」通常不加浊点，写作「は」。区分方法：看接续。接在动词已然形（通常以e段音结尾）或未然形（通常以a段音结尾）之后时，读作「ば」，表示条件；接在名词或连体形后，读作「は」，表示话题。"
     ]
   },
   "teaching_sequence": [
     {
       "type": "introduction",
-      "content": "In our previous lessons, we looked at 'no' (の) for possession and 'ni' (に) for location. These particles define relationships between specific words. Today, we move to a 'macro' level. The particle 'wa' (は) acts like a spotlight, shining on a specific concept to let us know that the rest of the poem will be a comment or observation about that topic."
+      "content": "在之前的课程中，我们学习了「が」标记主语，「を」标记对象。今天我们介绍「は」（wa）。在逻辑上，「は」并不直接标记动作的执行者，而是设定一个“话题范围”或“关注框架”。就像编程中定义一个全局变量的作用域，或者写下 `switch(topic)` 一样，「は」告诉读者：“关于这一点，以下是我的陈述。”"
     },
     {
       "type": "poem_presentation",
-      "poem_id": "lapis_8989aa2cde50c93d",
+      "poem_id": "lapis_bcaeb41bd8f17afc",
       "display": {
-        "text_with_furigana": "<ruby>吹<rt>ふ</rt></ruby>きまよふ<ruby>野風<rt>のかぜ</rt></ruby>をさむみ<ruby>秋<rt>あき</rt></ruby><span style='color: #ff4500;'>は</span><ruby>きのう<rt>きのう</rt></ruby><ruby>つり<rt>つり</rt></ruby>も<ruby>行<rt>ゆ</rt></ruby>くか<ruby>人<rt>ひと</rt></ruby>の<ruby>心<rt>こころ</rt></ruby>の",
-        "romaji": "fukimayofu, nokaze o samumi, aki wa kinou, tsuri mo yuku ka, hito no kokoro no",
-        "translation": "The field winds blow wildly and cold; as for autumn, has it passed away yesterday? Or is it the heart of the person that changed?"
+        "text_with_furigana": "<ruby>逢<rt>あ</rt></ruby>ふ<ruby>事<rt>こと</rt></ruby><span class='highlight-grammar'>は</span><ruby>玉<rt>たま</rt></ruby>の<ruby>緒<rt>を</rt></ruby>ばかり<ruby>名<rt>な</rt></ruby>の<ruby>立<rt>た</rt></ruby>つ<span class='highlight-grammar'>は</span><ruby>吉野<rt>よしの</rt></ruby>の<ruby>河<rt>かわ</rt></ruby>の<ruby>激<rt>たき</rt></ruby>つ<ruby>瀬<rt>せ</rt></ruby>のこと",
+        "romaji": "afu koto wa tama no o bakari na no tatsu wa yoshino no kawa no takitsuse no koto",
+        "translation": "相逢之时短暂如珠链之线，艳名流传却如吉野川的激流般汹涌。"
       },
       "vocabulary": [
         {
-          "word": "吹きまよふ",
-          "reading": "ふきまよふ",
-          "meaning": "to blow about wildly",
-          "span": [
-            0,
-            5
-          ],
-          "chinese_cognate_note": null
+          "word": "逢ふ",
+          "reading": "あふ",
+          "meaning": "相逢",
+          "span": null,
+          "chinese_cognate_note": "逢"
         },
         {
-          "word": "野風",
-          "reading": "のかぜ",
-          "meaning": "wind in the fields",
-          "span": [
-            5,
-            7
-          ],
-          "chinese_cognate_note": "野 + 風: Meaning is identical to Chinese."
-        },
-        {
-          "word": "を",
-          "reading": "を",
-          "meaning": "object marker (indicates the target of an action)",
-          "span": [
-            7,
-            8
-          ],
-          "chinese_cognate_note": null
-        },
-        {
-          "word": "さむみ",
-          "reading": "さむみ",
-          "meaning": "because it is cold / the coldness",
-          "span": [
-            8,
-            11
-          ],
-          "chinese_cognate_note": null
-        },
-        {
-          "word": "秋",
-          "reading": "あき",
-          "meaning": "autumn",
-          "span": [
-            11,
-            12
-          ],
-          "chinese_cognate_note": "Identical to Chinese '秋'."
+          "word": "事",
+          "reading": "こと",
+          "meaning": "事情/行为（形式名词）",
+          "span": null,
+          "chinese_cognate_note": "事"
         },
         {
           "word": "は",
           "reading": "は",
-          "meaning": "topic marker (as for...)",
-          "span": [
-            12,
-            13
-          ],
+          "meaning": "提示助词（表示对比）",
+          "span": null,
           "chinese_cognate_note": null
         },
         {
-          "word": "きのう",
-          "reading": "きのう",
-          "meaning": "yesterday",
-          "span": [
-            13,
-            16
-          ],
-          "chinese_cognate_note": "Written as 昨日 in Kanji."
+          "word": "玉の緒",
+          "reading": "たまのを",
+          "meaning": "串珠的线（比喻短暂或生命）",
+          "span": null,
+          "chinese_cognate_note": "玉绪"
         },
         {
-          "word": "つり",
-          "reading": "つり",
-          "meaning": "change, alteration",
-          "span": [
-            16,
-            18
-          ],
-          "chinese_cognate_note": "Related to 移り (change/shift)."
-        },
-        {
-          "word": "も",
-          "reading": "も",
-          "meaning": "also, even",
-          "span": [
-            18,
-            19
-          ],
+          "word": "ばかり",
+          "reading": "ばかり",
+          "meaning": "副助词：仅仅、只有",
+          "span": null,
           "chinese_cognate_note": null
         },
         {
-          "word": "行く",
-          "reading": "ゆく",
-          "meaning": "to go, to pass",
-          "span": [
-            19,
-            21
-          ],
-          "chinese_cognate_note": "Identical to Chinese '行'."
+          "word": "名",
+          "reading": "な",
+          "meaning": "名声/传闻",
+          "span": null,
+          "chinese_cognate_note": "名"
         },
         {
-          "word": "か",
-          "reading": "か",
-          "meaning": "question marker",
-          "span": [
-            21,
-            22
-          ],
+          "word": "の",
+          "reading": "の",
+          "meaning": "主格助词（相当于ga）",
+          "span": null,
+          "chinese_cognate_note": null
+        },
+        {
+          "word": "立つ",
+          "reading": "たつ",
+          "meaning": "传开/扬起",
+          "span": null,
+          "chinese_cognate_note": "立"
+        },
+        {
+          "word": "は",
+          "reading": "は",
+          "meaning": "提示助词（表示对比）",
+          "span": null,
+          "chinese_cognate_note": null
+        },
+        {
+          "word": "吉野",
+          "reading": "よしの",
+          "meaning": "地名（吉野山）",
+          "span": null,
+          "chinese_cognate_note": null
+        },
+        {
+          "word": "の",
+          "reading": "の",
+          "meaning": "修饰助词（的）",
+          "span": null,
+          "chinese_cognate_note": null
+        },
+        {
+          "word": "河",
+          "reading": "かわ",
+          "meaning": "河",
+          "span": null,
+          "chinese_cognate_note": "河"
+        },
+        {
+          "word": "の",
+          "reading": "の",
+          "meaning": "修饰助词（的）",
+          "span": null,
+          "chinese_cognate_note": null
+        },
+        {
+          "word": "激つ瀬",
+          "reading": "たきつせ",
+          "meaning": "激流/湍急的浅滩",
+          "span": null,
+          "chinese_cognate_note": "激"
+        },
+        {
+          "word": "の",
+          "reading": "の",
+          "meaning": "修饰助词（如...一样）",
+          "span": null,
+          "chinese_cognate_note": null
+        },
+        {
+          "word": "こと",
+          "reading": "こと",
+          "meaning": "样态/事情（形式名词）",
+          "span": null,
+          "chinese_cognate_note": null
+        }
+      ],
+      "focus_highlight": [
+        3,
+        4,
+        10,
+        11
+      ]
+    },
+    {
+      "type": "grammar_spotlight",
+      "content": "在这首诗中，「A **は** ... B **は** ...」的结构非常清晰：\n1. **逢ふ事は**（相逢这件事）：很短（玉の緒ばかり）。\n2. **名の立つは**（名声传开这件事）：很猛烈（激つ瀬のこと）。\n\n这里的「は」不仅仅是提示主语，更是在两个事件之间划出界限，强调两者的反差。这是「は」作为**对比提示**的典型用法。",
+      "evidence": "See the poem above."
+    },
+    {
+      "type": "contrast_example",
+      "content": "⚠️ **重要辨析：是「wa」还是「ba」？**\n\n在阅读古文时，你经常会看到假名「は」出现在句中，但它不一定总是读作「wa」。\n\n**规则：**\n*   **读作 wa (话题/对比):** 接在**体言**（名词）或**连体形**（动词修饰形）之后。\n    *   例：`逢ふ事は` (afu koto wa) - `koto` 是名词。\n*   **读作 ba (条件/原因):** 接在动词的**已然形**（通常 -e 音）或**未然形**（通常 -a 音）之后。古文常省略浊点。\n    *   例：`思へは` → 读作 `omoeba` (因为思念/一思念就...)。\n    *   例：`死なは` → 读作 `shinaba` (如果死的话...)。\n\n**口诀：** 名词后面读哇(wa)，动词变位后面读吧(ba)。"
+    },
+    {
+      "type": "poem_presentation",
+      "poem_id": "lapis_3a134b41f911331b",
+      "display": {
+        "text_with_furigana": "<ruby>衣<rt>ころも</rt></ruby><ruby>打<rt>う</rt></ruby>つ<ruby>音<rt>おと</rt></ruby><span class='highlight-grammar'>は</span><ruby>枕<rt>まくら</rt></ruby>に<ruby>澄<rt>す</rt></ruby><ruby>河原<rt>かはら</rt></ruby>や<ruby>伏見<rt>ふしみ</rt></ruby>の<ruby>夢<rt>ゆめ</rt></ruby>を<ruby>幾夜<rt>いくよ</rt></ruby><ruby>残<rt>のこ</rt></ruby>しつ",
+        "romaji": "koromo utsu oto wa makura ni sukawara ya fushimi no yume o ikuyo nokoshitsu",
+        "translation": "捣衣之声响彻枕边，在那澄河原上，伏见的梦境究竟残留了几夜？"
+      },
+      "vocabulary": [
+        {
+          "word": "衣",
+          "reading": "ころも",
+          "meaning": "衣服",
+          "span": null,
+          "chinese_cognate_note": "衣"
+        },
+        {
+          "word": "打つ",
+          "reading": "うつ",
+          "meaning": "敲打（捣衣）",
+          "span": null,
+          "chinese_cognate_note": "打"
+        },
+        {
+          "word": "音",
+          "reading": "おと",
+          "meaning": "声音",
+          "span": null,
+          "chinese_cognate_note": "音"
+        },
+        {
+          "word": "は",
+          "reading": "は",
+          "meaning": "提示助词（话题）",
+          "span": null,
+          "chinese_cognate_note": null
+        },
+        {
+          "word": "枕",
+          "reading": "まくら",
+          "meaning": "枕头",
+          "span": null,
+          "chinese_cognate_note": "枕"
+        },
+        {
+          "word": "に",
+          "reading": "に",
+          "meaning": "格助词（动作落脚点）",
+          "span": null,
+          "chinese_cognate_note": null
+        },
+        {
+          "word": "澄河原",
+          "reading": "すかはら",
+          "meaning": "地名（澄之河原）/ 清澈的河滩",
+          "span": null,
+          "chinese_cognate_note": "澄"
+        },
+        {
+          "word": "や",
+          "reading": "や",
+          "meaning": "切字（感叹/咏叹）",
+          "span": null,
+          "chinese_cognate_note": null
+        },
+        {
+          "word": "伏見",
+          "reading": "ふしみ",
+          "meaning": "地名（伏见）/ 卧着看",
+          "span": null,
+          "chinese_cognate_note": "伏见"
+        },
+        {
+          "word": "の",
+          "reading": "の",
+          "meaning": "修饰助词（的）",
+          "span": null,
+          "chinese_cognate_note": null
+        },
+        {
+          "word": "夢",
+          "reading": "ゆめ",
+          "meaning": "梦",
+          "span": null,
+          "chinese_cognate_note": "梦"
+        },
+        {
+          "word": "を",
+          "reading": "を",
+          "meaning": "格助词（宾语标记）",
+          "span": null,
+          "chinese_cognate_note": null
+        },
+        {
+          "word": "幾夜",
+          "reading": "いくよ",
+          "meaning": "几夜",
+          "span": null,
+          "chinese_cognate_note": "几夜"
+        },
+        {
+          "word": "残し",
+          "reading": "のこし",
+          "meaning": "留下",
+          "span": null,
+          "chinese_cognate_note": "残"
+        },
+        {
+          "word": "つ",
+          "reading": "つ",
+          "meaning": "完了助动词（已经/了）",
+          "span": null,
+          "chinese_cognate_note": null
+        }
+      ],
+      "focus_highlight": [
+        7,
+        8
+      ]
+    },
+    {
+      "type": "literary_insight",
+      "content": "这首诗使用了和歌中极具逻辑趣味的技法：**掛詞**（Kakekotoba / Pivot Word）。这类似于编程中的“重载”（Overloading）或同一个变量在不同上下文中取不同值。\n\n1.  **澄河原 (Sukawara):** 既是地名，又包含动词「澄む」（Sumu，清澈/声音响亮）。捣衣声是“清脆”的。\n2.  **伏見 (Fushimi):** 既是地名，又包含「伏し見」（Fushi-mi，卧着看/睡着）。\n\n**逻辑链：** 听到声音(音) -> 枕头(枕) -> 睡着(伏し) -> 做梦(夢)。地名被完美嵌入了这个逻辑链中。",
+      "literary_device": "掛詞 (Pivot Word)",
+      "chinese_parallel": "双关语（如刘禹锡《竹枝词》：“道是无晴却有晴”）"
+    },
+    {
+      "type": "poem_presentation",
+      "poem_id": "ogura100_f7874b57d463e73c",
+      "display": {
+        "text_with_furigana": "<ruby>海原<rt>わたのはら</rt></ruby><ruby>八十島<rt>やそしま</rt></ruby>かけて<ruby>漕<rt>こ</rt></ruby>ぎ<ruby>出<rt>い</rt></ruby>でぬと<ruby>人<rt>ひと</rt></ruby>に<span class='highlight-grammar'>は</span><ruby>告<rt>つ</rt></ruby>げよ<ruby>海人<rt>あま</rt></ruby>の<ruby>釣舟<rt>つりぶね</rt></ruby>",
+        "romaji": "wata no hara yaso shima kakete kogi idenu to hito ni wa tsugeyo ama no tsuribune",
+        "translation": "我要向着大海原的八十岛划船远去了——海人的钓船啊，请务必将此告知家乡的亲友。"
+      },
+      "vocabulary": [
+        {
+          "word": "海原",
+          "reading": "わたのはら",
+          "meaning": "大海原",
+          "span": null,
+          "chinese_cognate_note": "原"
+        },
+        {
+          "word": "八十島",
+          "reading": "やそしま",
+          "meaning": "众多的岛屿",
+          "span": null,
+          "chinese_cognate_note": "八十岛"
+        },
+        {
+          "word": "かけて",
+          "reading": "かけて",
+          "meaning": "以此为目标/途径",
+          "span": null,
+          "chinese_cognate_note": null
+        },
+        {
+          "word": "漕ぎ出で",
+          "reading": "こぎいで",
+          "meaning": "划船出去",
+          "span": null,
+          "chinese_cognate_note": "漕出"
+        },
+        {
+          "word": "ぬ",
+          "reading": "ぬ",
+          "meaning": "完了助动词（已经...了）",
+          "span": null,
+          "chinese_cognate_note": null
+        },
+        {
+          "word": "と",
+          "reading": "と",
+          "meaning": "引用助词（内容是...）",
+          "span": null,
           "chinese_cognate_note": null
         },
         {
           "word": "人",
           "reading": "ひと",
-          "meaning": "person",
-          "span": [
-            22,
-            23
-          ],
-          "chinese_cognate_note": "Identical to Chinese '人'."
-        },
-        {
-          "word": "の",
-          "reading": "の",
-          "meaning": "possessive particle (learned in Lesson 1)",
-          "span": [
-            23,
-            24
-          ],
-          "chinese_cognate_note": null
-        },
-        {
-          "word": "心",
-          "reading": "こころ",
-          "meaning": "heart/mind",
-          "span": [
-            24,
-            25
-          ],
-          "chinese_cognate_note": "Identical to Chinese '心'."
-        },
-        {
-          "word": "の",
-          "reading": "の",
-          "meaning": "possessive particle (trailing)",
-          "span": [
-            25,
-            26
-          ],
-          "chinese_cognate_note": null
-        }
-      ],
-      "focus_highlight": [
-        12,
-        13
-      ]
-    },
-    {
-      "type": "grammar_spotlight",
-      "content": "Look at 'aki wa' (秋は) in the poem above. The poet is setting 'Autumn' as the topic. \n\nLogic breakdown:\n1. **Topic**: 秋 (Autumn)\n2. **Marker**: は (As for...)\n3. **Comment**: Has it already changed/passed?\n\nIn Chinese, you might say '至于秋天...' or simply start the sentence with '秋天...'. In Japanese, 'wa' (は) makes this logical relationship explicit. Note that although it is written as 'ha' (は), it is pronounced 'wa' when used as a particle.",
-      "evidence": "See the poem above."
-    },
-    {
-      "type": "poem_presentation",
-      "poem_id": "lapis_402126b3934b9c1b",
-      "display": {
-        "text_with_furigana": "かすかのの<ruby>ゆきま<rt>ゆきま</rt></ruby>をわけておひいてくる<ruby>草<rt>くさ</rt></ruby>のはつかに<ruby>見<rt>み</rt></ruby>えしきみ<span style='color: #ff4500;'>は</span>も",
-        "romaji": "kasuka no no, yukima o wakete, ohiitekuru, kusa no hatsuka, ni mieshikimi wa mo",
-        "translation": "Like the grass growing through the gaps in the snow on the faint fields, I caught a glimpse of you—as for you, oh..."
-      },
-      "vocabulary": [
-        {
-          "word": "かすか",
-          "reading": "かすか",
-          "meaning": "faint, indistinct",
-          "span": [
-            0,
-            3
-          ],
-          "chinese_cognate_note": "Written as 幽か or 微か."
-        },
-        {
-          "word": "の",
-          "reading": "の",
-          "meaning": "possessive particle",
-          "span": [
-            3,
-            4
-          ],
-          "chinese_cognate_note": null
-        },
-        {
-          "word": "野",
-          "reading": "の",
-          "meaning": "field",
+          "meaning": "人（指京城的亲友）",
           "span": null,
-          "chinese_cognate_note": "Identical to Chinese '野'."
-        },
-        {
-          "word": "の",
-          "reading": "の",
-          "meaning": "possessive particle",
-          "span": [
-            4,
-            5
-          ],
-          "chinese_cognate_note": null
-        },
-        {
-          "word": "ゆきま",
-          "reading": "ゆきま",
-          "meaning": "snowy interval, space between snow",
-          "span": [
-            5,
-            8
-          ],
-          "chinese_cognate_note": "雪 + 間."
-        },
-        {
-          "word": "を",
-          "reading": "を",
-          "meaning": "object marker",
-          "span": [
-            8,
-            9
-          ],
-          "chinese_cognate_note": null
-        },
-        {
-          "word": "わけて",
-          "reading": "わけて",
-          "meaning": "pushing through / especially",
-          "span": [
-            9,
-            12
-          ],
-          "chinese_cognate_note": null
-        },
-        {
-          "word": "おひいてくる",
-          "reading": "おひいてくる",
-          "meaning": "to grow out",
-          "span": [
-            12,
-            18
-          ],
-          "chinese_cognate_note": null
-        },
-        {
-          "word": "草",
-          "reading": "くさ",
-          "meaning": "grass",
-          "span": [
-            18,
-            19
-          ],
-          "chinese_cognate_note": "Identical to Chinese '草'."
-        },
-        {
-          "word": "の",
-          "reading": "の",
-          "meaning": "possessive particle",
-          "span": [
-            19,
-            20
-          ],
-          "chinese_cognate_note": null
-        },
-        {
-          "word": "はつかに",
-          "reading": "はつかに",
-          "meaning": "barely, faintly",
-          "span": [
-            20,
-            24
-          ],
-          "chinese_cognate_note": null
-        },
-        {
-          "word": "見え",
-          "reading": "みえ",
-          "meaning": "to be seen / to appear",
-          "span": [
-            24,
-            26
-          ],
-          "chinese_cognate_note": "From 見 (to see)."
-        },
-        {
-          "word": "し",
-          "reading": "し",
-          "meaning": "past tense marker",
-          "span": [
-            26,
-            27
-          ],
-          "chinese_cognate_note": null
-        },
-        {
-          "word": "きみ",
-          "reading": "きみ",
-          "meaning": "you (honorific/intimate)",
-          "span": [
-            27,
-            29
-          ],
-          "chinese_cognate_note": "Written as 君."
-        },
-        {
-          "word": "は",
-          "reading": "は",
-          "meaning": "topic marker",
-          "span": [
-            29,
-            30
-          ],
-          "chinese_cognate_note": null
-        },
-        {
-          "word": "も",
-          "reading": "も",
-          "meaning": "exclamatory particle / emphasis",
-          "span": [
-            30,
-            31
-          ],
-          "chinese_cognate_note": null
-        }
-      ],
-      "focus_highlight": [
-        31,
-        32
-      ]
-    },
-    {
-      "type": "contrast_example",
-      "content": "Sometimes, 'wa' (は) follows another particle to narrow the scope of a location or time. In Poem 3, we see 'ni wa' (には). \n\n- 'ni' (に) = in/at (Location)\n- 'wa' (は) = as for (Topic)\n- 'ni wa' (には) = 'As for [what is happening] in [this place]...'"
-    },
-    {
-      "type": "poem_presentation",
-      "poem_id": "lapis_7ec488958a1fbf94",
-      "display": {
-        "text_with_furigana": "みよしののきさやまのまの<ruby>こぬれ<rt>こぬれ</rt></ruby><span style='color: #ff4500;'>には</span>ここたもさわく<ruby>とり<rt>とり</rt></ruby>の<ruby>こゑ<rt>こゑ</rt></ruby>かも",
-        "romaji": "miyoshino no, kisayama no ma no, konure ni wa, koko ta mo sawaku, tori no koe kamo",
-        "translation": "In the treetops of the mountains of Yoshino—as for that place—the voices of the birds are clamoring greatly."
-      },
-      "vocabulary": [
-        {
-          "word": "みよしの",
-          "reading": "みよしの",
-          "meaning": "Beautiful Yoshino (place name)",
-          "span": [
-            0,
-            4
-          ],
-          "chinese_cognate_note": "美 + 吉野."
-        },
-        {
-          "word": "の",
-          "reading": "の",
-          "meaning": "possessive particle",
-          "span": [
-            4,
-            5
-          ],
-          "chinese_cognate_note": null
-        },
-        {
-          "word": "きさやま",
-          "reading": "きさやま",
-          "meaning": "Mt. Kisa (place name)",
-          "span": [
-            5,
-            9
-          ],
-          "chinese_cognate_note": "象山."
-        },
-        {
-          "word": "の",
-          "reading": "の",
-          "meaning": "possessive particle",
-          "span": [
-            9,
-            10
-          ],
-          "chinese_cognate_note": null
-        },
-        {
-          "word": "ま",
-          "reading": "ま",
-          "meaning": "interval, space",
-          "span": [
-            10,
-            11
-          ],
-          "chinese_cognate_note": "Identical to Chinese '間'."
-        },
-        {
-          "word": "の",
-          "reading": "の",
-          "meaning": "possessive particle",
-          "span": [
-            11,
-            12
-          ],
-          "chinese_cognate_note": null
-        },
-        {
-          "word": "こぬれ",
-          "reading": "こぬれ",
-          "meaning": "treetops, branches of trees",
-          "span": [
-            12,
-            15
-          ],
-          "chinese_cognate_note": null
+          "chinese_cognate_note": "人"
         },
         {
           "word": "に",
           "reading": "に",
-          "meaning": "at/in (Location particle learned in Lesson 2)",
-          "span": [
-            15,
-            16
-          ],
+          "meaning": "对象助词（对...）",
+          "span": null,
           "chinese_cognate_note": null
         },
         {
           "word": "は",
           "reading": "は",
-          "meaning": "topic marker",
-          "span": [
-            16,
-            17
-          ],
+          "meaning": "提示助词（强调/限定）",
+          "span": null,
           "chinese_cognate_note": null
         },
         {
-          "word": "ここた",
-          "reading": "ここた",
-          "meaning": "many, greatly",
-          "span": [
-            17,
-            20
-          ],
-          "chinese_cognate_note": null
+          "word": "告げよ",
+          "reading": "つげよ",
+          "meaning": "告诉吧（命令形）",
+          "span": null,
+          "chinese_cognate_note": "告"
         },
         {
-          "word": "も",
-          "reading": "も",
-          "meaning": "even, also",
-          "span": [
-            20,
-            21
-          ],
-          "chinese_cognate_note": null
-        },
-        {
-          "word": "さわく",
-          "reading": "さわく",
-          "meaning": "to make noise, to clamor",
-          "span": [
-            21,
-            24
-          ],
-          "chinese_cognate_note": "Written as 騒ぐ."
-        },
-        {
-          "word": "とり",
-          "reading": "とり",
-          "meaning": "bird",
-          "span": [
-            24,
-            26
-          ],
-          "chinese_cognate_note": "Written as 鳥."
+          "word": "海人",
+          "reading": "あま",
+          "meaning": "渔夫",
+          "span": null,
+          "chinese_cognate_note": "海人"
         },
         {
           "word": "の",
           "reading": "の",
-          "meaning": "possessive particle",
-          "span": [
-            26,
-            27
-          ],
+          "meaning": "修饰助词（的）",
+          "span": null,
           "chinese_cognate_note": null
         },
         {
-          "word": "こゑ",
-          "reading": "こゑ",
-          "meaning": "voice",
-          "span": [
-            27,
-            29
-          ],
-          "chinese_cognate_note": "Written as 声."
-        },
-        {
-          "word": "かも",
-          "reading": "かも",
-          "meaning": "exclamation of wonder",
-          "span": [
-            29,
-            31
-          ],
-          "chinese_cognate_note": null
+          "word": "釣舟",
+          "reading": "つりぶね",
+          "meaning": "钓鱼船",
+          "span": null,
+          "chinese_cognate_note": "钓舟"
         }
       ],
       "focus_highlight": [
-        15,
-        17
+        18,
+        19
       ]
     },
     {
       "type": "comprehension_check",
-      "question": "In the phrase 'aki wa' (秋は), if 'aki' means 'Autumn', what is the logical function of 'wa'?",
-      "answer": "It marks 'Autumn' as the topic of the sentence, signaling that the following words will provide information or a comment about Autumn.",
-      "hint": "Think of it as the 'As for...' tag."
+      "question": "在第三首诗「人には告げよ」（请告诉那些人）中，为什么在「人に」（对人）后面还要加「は」？",
+      "answer": "表示区别或限定。暗示“虽然无法告诉其他人/虽然我自己无法回去，但至少请告诉我的亲友”。",
+      "hint": "如果没有「は」，只是单纯的“告诉人”。加上「は」后，仿佛在众多对象中画了一个圈，排除了其他可能性（如告诉神明、告诉自己等），带有一种恳切的限定感。"
     }
   ],
   "reference_card": {
-    "point": "particle_wa (は)",
-    "one_liner": "The topic marker that sets the scope of the sentence (As for X...).",
-    "example": "秋は (Aki wa) = As for autumn...",
+    "point": "系助词 は (Wa)",
+    "one_liner": "提示话题、对比或强调范围（非主格标记）。",
+    "example": "逢ふ事は... 名の立つは... (相逢这件事... 名声传开这件事...)",
     "see_also": [
-      "particle_no",
-      "particle_ni"
+      "particle_ga",
+      "particle_wo"
     ]
   },
   "forward_references": [
     {
-      "point": "particle_o",
-      "note": "We saw 'o' (を) in these poems; it marks the direct object of an action. We will cover this in Lesson 4."
+      "point": "助动词 ぬ (Nu)",
+      "note": "在第三首诗中出现的「漕ぎ出でぬ」，表示动作的完成。我们将在下一单元详细学习。"
     },
     {
-      "point": "particle_mo",
-      "note": "We saw 'mo' (も) meaning 'also/even'. This is a focus particle we will explore in Unit 2."
+      "point": "命令形",
+      "note": "「告げよ」是动词的命令形式，用于请求或命令。"
     }
   ]
 }

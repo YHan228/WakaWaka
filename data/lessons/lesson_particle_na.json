@@ -1,329 +1,366 @@
 {
   "lesson_id": "lesson_particle_na",
-  "lesson_title": "The Emotional Anchor: Particle な (na)",
-  "lesson_summary": "In this lesson, we explore the particle な (na), the final 'emotional exhale' of a poem. We will see how it anchors a thought, often turning a question into a deep realization or a sigh of wonder.",
+  "lesson_title": "终助词「な」：是“禁止”还是“咏叹”？",
+  "lesson_summary": "同一个假名「な」在句末时，既可以是严厉的“禁止”，也可以是深沉的“咏叹”。本课将通过语境与接续规律，解析这一极具张力的单音节词。",
   "grammar_point": "particle_na",
   "grammar_explanation": {
-    "concept": "The particle な (na) is a sentence-final particle used to express deep emotion, exclamation, or a lingering realization. In Classical Japanese, it is most frequently encountered as the second half of the compound particle かな (kana). While か (ka) asks a question or expresses doubt, adding な (na) turns that doubt inward, creating a 'rhetorical sigh' or an exclamation of 'Ah, I realize...!'",
-    "formation": "Typically follows the Rentaikei (Attributive form) of verbs/adjectives or follows a Noun directly. Most commonly seen as [Base] + か + な.",
+    "concept": "终助词「な」的双重人格",
+    "formation": "1. 禁止：动词终止形（字典形） + な\n2. 咏叹：活用词（通常是助动词） + な",
     "variations": [
-      "かな (kana) - The most common form, expressing a sigh of realization.",
-      "な (na) - Used alone at the end of a sentence for pure exclamation (less common in the Kokinshu than kana)."
+      "なよ (禁止的强调)",
+      "かな (咏叹的强调，已学)"
     ],
     "common_confusions": [
-      "vs. Prohibitive な: A different 'na' placed after the Terminal form means 'Do not...', but in the context of these emotional poems, it is almost always the exclamatory 'na'.",
-      "vs. Copula な: The 'na' used in 'nari' (to be) is a linking tool; the exclamatory 'na' is a terminal emotional tag."
+      "完了助动词「ぬ」的未然形「な」：通常出现在句中，后接「む」(namu) 或「ば」(naba)。而本课的终助词「な」通常位于句末。"
     ]
   },
   "teaching_sequence": [
     {
       "type": "introduction",
-      "content": "You have already mastered the logic of the 'Question' with か (ka) and the 'Spotlight' with ぞ (zo). Now, we reach the final emotional layer. Think of な (na) as the 'Emotional Metadata' of a sentence. If a poem were a line of code, な would be the final `!` that tells the reader: 'This is not just data; this is a feeling.' It anchors the preceding imagery into the poet's heart."
+      "content": "在之前的单元中，我们学习了复杂的动词变形和助动词组合。今天，我们回到最简短的形式——单个假名「な」。\n\n在古典诗歌的句尾，这个音节拥有截然相反的两种力量：\n1. 强行停止动作的**禁止**（不要做！）。\n2. 情感满溢的**咏叹**（啊，多么……）。\n\n区分它们的关键，在于它前面的词是什么形式。"
     },
     {
       "type": "poem_presentation",
-      "poem_id": "lapis_ee7837c0cf599ce5",
+      "poem_id": "lapis_f4a7d6cb0a3a7e05",
       "display": {
-        "text_with_furigana": "<ruby>君<rt>きみ</rt></ruby>まさて<ruby>煙<rt>けむた</rt></ruby>えにし<ruby>しほかま<rt>しほかま</rt></ruby>の<ruby>浦<rt>うら</rt></ruby><ruby>さびしく<rt>さびしく</rt></ruby>も<ruby>見え渡る<rt>みえわたる</rt></ruby>か<ruby>な<rt>な</rt></ruby>",
-        "romaji": "kimi masate, kemuta enishi shi, hokama no ura, sabishiku mo miewataru, kana",
-        "translation": "Since you are gone, the smoke has ceased; how lonely the bay of Shiogama appears as I gaze across it!"
+        "text_with_furigana": "<ruby>枕<rt>まくら</rt></ruby>だに<ruby>知<rt>し</rt></ruby>らねば<ruby>言<rt>い</rt></ruby>はじ<ruby>見<rt>み</rt></ruby>しままに<ruby>君<rt>きみ</rt></ruby><ruby>語<rt>かた</rt></ruby>るなよ<ruby>春<rt>はる</rt></ruby>の<ruby>夜<rt>よ</rt></ruby>の<ruby>夢<rt>ゆめ</rt></ruby>",
+        "romaji": "makura dani shiraneba iwaji mishi mama ni kimi kataru na yo haru no yo no yume",
+        "translation": "连共枕的枕头都不知道，我绝不会说出去。春夜之梦啊，你也不要照原样说出去。"
       },
       "vocabulary": [
         {
-          "word": "君",
-          "reading": "きみ",
-          "meaning": "you",
-          "span": [
-            0,
-            1
-          ],
-          "chinese_cognate_note": "Same as Chinese 君 (jūn)."
-        },
-        {
-          "word": "まさて",
-          "reading": "まさて",
-          "meaning": "not being here / in your absence",
-          "span": [
-            1,
-            4
-          ],
-          "chinese_cognate_note": null
-        },
-        {
-          "word": "煙",
-          "reading": "けむた",
-          "meaning": "smoke / smoky",
-          "span": [
-            4,
-            5
-          ],
-          "chinese_cognate_note": "Same as Chinese 烟 (yān)."
-        },
-        {
-          "word": "えにし",
-          "reading": "えにし",
-          "meaning": "fate / bond / connection",
-          "span": [
-            6,
-            9
-          ],
-          "chinese_cognate_note": "Same as Chinese 缘 (yuán)."
-        },
-        {
-          "word": "しほかま",
-          "reading": "しほかま",
-          "meaning": "Shiogama (a famous coastal location)",
-          "span": [
-            9,
-            13
-          ],
-          "chinese_cognate_note": null
-        },
-        {
-          "word": "の",
-          "reading": "の",
-          "meaning": "possessive particle (of)",
-          "span": [
-            13,
-            14
-          ],
-          "chinese_cognate_note": null
-        },
-        {
-          "word": "浦",
-          "reading": "うら",
-          "meaning": "bay / inlet",
-          "span": [
-            14,
-            15
-          ],
-          "chinese_cognate_note": "Same as Chinese 浦 (pǔ)."
-        },
-        {
-          "word": "さびしく",
-          "reading": "さびしく",
-          "meaning": "lonely / desolate",
+          "word": "枕",
+          "reading": "まくら",
+          "meaning": "枕头",
           "span": null,
-          "chinese_cognate_note": "Related to Chinese 寂 (jì)."
+          "chinese_cognate_note": "枕"
         },
         {
-          "word": "も",
-          "reading": "も",
-          "meaning": "emphasis particle (even/also)",
-          "span": [
-            19,
-            20
-          ],
-          "chinese_cognate_note": null
-        },
-        {
-          "word": "見え渡る",
-          "reading": "みえわたる",
-          "meaning": "to be visible far and wide / to gaze across",
-          "span": [
-            20,
-            24
-          ],
-          "chinese_cognate_note": "见 (see) + 渡 (across)."
-        },
-        {
-          "word": "かな",
-          "reading": "かな",
-          "meaning": "exclamatory particle (how...!)",
-          "span": [
-            24,
-            26
-          ],
-          "chinese_cognate_note": null
-        }
-      ],
-      "focus_highlight": [
-        25,
-        27
-      ]
-    },
-    {
-      "type": "grammar_spotlight",
-      "content": "In the poem above, look at the end: **見え渡るかな (miewataru kana)**. \n\n1. **見え渡る (miewataru)** is the action: 'to gaze across.'\n2. **か (ka)** adds a sense of 'is it so?' or wonder.\n3. **な (na)** provides the emotional closure.\n\nWithout the **な**, it might sound like a simple observation. With **な**, it becomes a sigh of grief. The poet isn't just seeing the bay; they are feeling the weight of the emptiness where the smoke (and the person) used to be.",
-      "evidence": "See the poem above."
-    },
-    {
-      "type": "poem_presentation",
-      "poem_id": "lapis_9398b4e23dae0a2e",
-      "display": {
-        "text_with_furigana": "<ruby>山里<rt>やまさとに</rt></ruby>にひとり<ruby>なかめて<rt>なかめて</rt></ruby><ruby>おもふ<rt>おもふ</rt></ruby>か<ruby>な<rt>な</rt></ruby><ruby>よ<rt>よ</rt></ruby>に<ruby>すむ<rt>すむ</rt></ruby><ruby>ひと<rt>ひと</rt></ruby>の<ruby>こころ<rt>こころ</rt></ruby><ruby>つよさ<rt>つよさ</rt></ruby>を",
-        "romaji": "yamazato ni, hitori nakamete, omou kana, yo ni sumu hito no, kokoro tsuyosa o",
-        "translation": "Gazing alone in the mountain village, I realize—how heartless (strong-willed) are the hearts of those who live in this world!"
-      },
-      "vocabulary": [
-        {
-          "word": "山里",
-          "reading": "やまざと",
-          "meaning": "mountain village",
+          "word": "だに",
+          "reading": "だに",
+          "meaning": "甚至、连……都（表示程度）",
           "span": null,
-          "chinese_cognate_note": "山 (mountain) + 里 (village/place)."
+          "chinese_cognate_note": null
+        },
+        {
+          "word": "知ら",
+          "reading": "しら",
+          "meaning": "知道（未然形）",
+          "span": null,
+          "chinese_cognate_note": "知"
+        },
+        {
+          "word": "ね",
+          "reading": "ね",
+          "meaning": "不（否定助动词「ず」的已然形）",
+          "span": null,
+          "chinese_cognate_note": null
+        },
+        {
+          "word": "ば",
+          "reading": "ば",
+          "meaning": "因为（接续助词，接已然形表示原因）",
+          "span": null,
+          "chinese_cognate_note": null
+        },
+        {
+          "word": "言は",
+          "reading": "いわ",
+          "meaning": "说（未然形）",
+          "span": null,
+          "chinese_cognate_note": "言"
+        },
+        {
+          "word": "じ",
+          "reading": "じ",
+          "meaning": "不打算、不会（否定意志助动词）",
+          "span": null,
+          "chinese_cognate_note": null
+        },
+        {
+          "word": "見",
+          "reading": "み",
+          "meaning": "看、见（连用形）",
+          "span": null,
+          "chinese_cognate_note": "见"
+        },
+        {
+          "word": "し",
+          "reading": "し",
+          "meaning": "过去的（过去助动词「き」的连体形）",
+          "span": null,
+          "chinese_cognate_note": null
+        },
+        {
+          "word": "まま",
+          "reading": "まま",
+          "meaning": "原样、照旧",
+          "span": null,
+          "chinese_cognate_note": null
         },
         {
           "word": "に",
           "reading": "に",
-          "meaning": "location particle (in)",
-          "span": [
-            4,
-            5
-          ],
+          "meaning": "地（格助词，表示状态）",
+          "span": null,
           "chinese_cognate_note": null
         },
         {
-          "word": "ひとり",
-          "reading": "ひとり",
-          "meaning": "alone / one person",
-          "span": [
-            5,
-            8
-          ],
-          "chinese_cognate_note": "一人 (yī rén)."
+          "word": "君",
+          "reading": "きみ",
+          "meaning": "你（此处指代拟人化的“梦”）",
+          "span": null,
+          "chinese_cognate_note": "君"
         },
         {
-          "word": "なかめて",
-          "reading": "なかめて",
-          "meaning": "gazing / looking",
-          "span": [
-            8,
-            12
-          ],
-          "chinese_cognate_note": null
+          "word": "語る",
+          "reading": "かたる",
+          "meaning": "讲述（终止形/字典形）",
+          "span": null,
+          "chinese_cognate_note": "语"
         },
         {
-          "word": "おもふ",
-          "reading": "おもふ",
-          "meaning": "to think / to feel",
-          "span": [
-            12,
-            15
-          ],
-          "chinese_cognate_note": "Same as Chinese 思 (sī)."
-        },
-        {
-          "word": "かな",
-          "reading": "かな",
-          "meaning": "exclamatory particle (how...!)",
-          "span": [
-            15,
-            17
-          ],
+          "word": "な",
+          "reading": "な",
+          "meaning": "不要（禁止终助词）",
+          "span": null,
           "chinese_cognate_note": null
         },
         {
           "word": "よ",
           "reading": "よ",
-          "meaning": "the world / society",
-          "span": [
-            17,
-            18
-          ],
-          "chinese_cognate_note": "Same as Chinese 世 (shì)."
-        },
-        {
-          "word": "に",
-          "reading": "に",
-          "meaning": "location particle (in)",
-          "span": [
-            18,
-            19
-          ],
+          "meaning": "啊（语气助词，加强语气）",
+          "span": null,
           "chinese_cognate_note": null
         },
         {
-          "word": "すむ",
-          "reading": "すむ",
-          "meaning": "to live / to reside",
-          "span": [
-            19,
-            21
-          ],
-          "chinese_cognate_note": "Related to Chinese 住 (zhù)."
-        },
-        {
-          "word": "ひと",
-          "reading": "ひと",
-          "meaning": "person",
-          "span": [
-            21,
-            23
-          ],
-          "chinese_cognate_note": "Same as Chinese 人 (rén)."
+          "word": "春",
+          "reading": "はる",
+          "meaning": "春",
+          "span": null,
+          "chinese_cognate_note": "春"
         },
         {
           "word": "の",
           "reading": "の",
-          "meaning": "possessive particle ('s)",
-          "span": [
-            23,
-            24
-          ],
+          "meaning": "之（格助词）",
+          "span": null,
           "chinese_cognate_note": null
         },
         {
-          "word": "こころ",
-          "reading": "こころ",
-          "meaning": "heart / mind",
-          "span": [
-            24,
-            27
-          ],
-          "chinese_cognate_note": "Same as Chinese 心 (xīn)."
+          "word": "夜",
+          "reading": "よ",
+          "meaning": "夜",
+          "span": null,
+          "chinese_cognate_note": "夜"
         },
         {
-          "word": "つよさ",
-          "reading": "つよさ",
-          "meaning": "strength / hardness",
-          "span": [
-            27,
-            30
-          ],
-          "chinese_cognate_note": "Same as Chinese 强 (qiáng)."
-        },
-        {
-          "word": "を",
-          "reading": "を",
-          "meaning": "object marker (here used for emphasis at the end)",
-          "span": [
-            30,
-            31
-          ],
+          "word": "の",
+          "reading": "の",
+          "meaning": "之（格助词）",
+          "span": null,
           "chinese_cognate_note": null
+        },
+        {
+          "word": "夢",
+          "reading": "ゆめ",
+          "meaning": "梦",
+          "span": null,
+          "chinese_cognate_note": "梦"
         }
       ],
       "focus_highlight": [
-        14,
-        16
+        21,
+        23
       ]
     },
     {
       "type": "grammar_spotlight",
-      "content": "Notice the structure **おもふかな (omou kana)**. \n\nIn this poem, the 'sigh' happens in the middle of the sentence (a technique called *kire* or 'cutting'). The poet says 'I think... (sigh)' and then explains *what* they are thinking about: the strength/coldness of people's hearts. The **な (na)** here acts like a logical break where the emotion overflows before the thought is even finished.",
+      "content": "### 1. 禁止的「な」\n\n当「な」接在**动词终止形**（即字典形/基本形）之后时，表示“禁止”。\n\n*   **结构**：`语る` (kataru - 讲述) + `な` (na) = 不要讲！\n*   **逻辑**：这是一种直接、强烈的命令。就像编程中的 `return` 或 `break`，强行终止动作的发生。\n*   **诗中用法**：作者对“春夜之梦”下达了封口令——`語るな`（不要说出去）。",
       "evidence": "See the poem above."
     },
     {
+      "type": "poem_presentation",
+      "poem_id": "ogura100_75c36e7364f0059a",
+      "display": {
+        "text_with_furigana": "<ruby>花<rt>はな</rt></ruby>の<ruby>色<rt>いろ</rt></ruby>は<ruby>移<rt>うつ</rt></ruby>りにけりな<ruby>徒<rt>いたづ</rt></ruby>らにわが<ruby>身<rt>み</rt></ruby><ruby>世<rt>よ</rt></ruby>に<ruby>ふ<rt>ふ</rt></ruby>る<ruby>ながめ<rt>ながめ</rt></ruby>せし<ruby>間<rt>ま</rt></ruby>に",
+        "romaji": "hana no iro wa utsurinikerina itazura ni waga mi yo ni furu nagame seshi ma ni",
+        "translation": "花色已然褪去，正如我空度的年华。在长久的愁思与连绵的春雨中，容颜徒然衰老。"
+      },
+      "vocabulary": [
+        {
+          "word": "花",
+          "reading": "はな",
+          "meaning": "花（特指樱花）",
+          "span": null,
+          "chinese_cognate_note": "花"
+        },
+        {
+          "word": "の",
+          "reading": "の",
+          "meaning": "之",
+          "span": null,
+          "chinese_cognate_note": null
+        },
+        {
+          "word": "色",
+          "reading": "いろ",
+          "meaning": "颜色、容颜",
+          "span": null,
+          "chinese_cognate_note": "色"
+        },
+        {
+          "word": "は",
+          "reading": "は",
+          "meaning": "话题标记",
+          "span": null,
+          "chinese_cognate_note": null
+        },
+        {
+          "word": "移り",
+          "reading": "うつり",
+          "meaning": "改变、褪色（连用形）",
+          "span": null,
+          "chinese_cognate_note": "移"
+        },
+        {
+          "word": "に",
+          "reading": "に",
+          "meaning": "已经（完了助动词「ぬ」的连用形）",
+          "span": null,
+          "chinese_cognate_note": null
+        },
+        {
+          "word": "けり",
+          "reading": "けり",
+          "meaning": "了啊（咏叹助动词，表示发觉）",
+          "span": null,
+          "chinese_cognate_note": null
+        },
+        {
+          "word": "な",
+          "reading": "な",
+          "meaning": "啊（咏叹终助词）",
+          "span": null,
+          "chinese_cognate_note": null
+        },
+        {
+          "word": "徒らに",
+          "reading": "いたづらに",
+          "meaning": "徒然、白白地",
+          "span": null,
+          "chinese_cognate_note": null
+        },
+        {
+          "word": "わが",
+          "reading": "わが",
+          "meaning": "我的",
+          "span": null,
+          "chinese_cognate_note": null
+        },
+        {
+          "word": "身",
+          "reading": "み",
+          "meaning": "身、自身",
+          "span": null,
+          "chinese_cognate_note": "身"
+        },
+        {
+          "word": "世",
+          "reading": "よ",
+          "meaning": "世间、男女关系",
+          "span": null,
+          "chinese_cognate_note": "世"
+        },
+        {
+          "word": "に",
+          "reading": "に",
+          "meaning": "在",
+          "span": null,
+          "chinese_cognate_note": null
+        },
+        {
+          "word": "ふる",
+          "reading": "ふる",
+          "meaning": "经年/下雨（掛詞）",
+          "span": null,
+          "chinese_cognate_note": null
+        },
+        {
+          "word": "ながめ",
+          "reading": "ながめ",
+          "meaning": "沉思/长雨（掛詞）",
+          "span": null,
+          "chinese_cognate_note": null
+        },
+        {
+          "word": "せ",
+          "reading": "せ",
+          "meaning": "做（动词「す」的未然形，此处接过去助动词）",
+          "span": null,
+          "chinese_cognate_note": null
+        },
+        {
+          "word": "し",
+          "reading": "し",
+          "meaning": "过去的（过去助动词「き」的连体形）",
+          "span": null,
+          "chinese_cognate_note": null
+        },
+        {
+          "word": "間",
+          "reading": "ま",
+          "meaning": "期间",
+          "span": null,
+          "chinese_cognate_note": "间"
+        },
+        {
+          "word": "に",
+          "reading": "に",
+          "meaning": "在……时候",
+          "span": null,
+          "chinese_cognate_note": null
+        }
+      ],
+      "focus_highlight": [
+        7,
+        10
+      ]
+    },
+    {
+      "type": "grammar_spotlight",
+      "content": "### 2. 咏叹的「な」\n\n当「な」接在**助动词**（特别是「けり」、「ぬ」等）之后时，它不再是禁止，而是表示深沉的感叹。\n\n*   **结构**：`けり` (keri - 咏叹/过去) + `な` (na) = 啊，真是……啊！\n*   **逻辑**：这是一种情感的溢出。如果说禁止的「な」是红灯，那么咏叹的「な」就是一声长叹。\n*   **诗中用法**：`移りにけりな`（已经改变了啊！）。这里的「な」加强了「けり」的咏叹语气，表达对容颜易逝的痛切感悟。",
+      "evidence": "See the poem above."
+    },
+    {
+      "type": "contrast_example",
+      "content": "### ⚠️ 陷阱警报：同形异义词\n\n你可能会在句中看到「な」，例如「なむ」或「なば」。那通常**不是**本课的终助词。\n\n*   **终助词「な」**（本课）：\n    *   位置：句末（或句中停顿处）。\n    *   含义：禁止 或 咏叹。\n    *   例：`語るな`（别说）、`けりな`（啊）。\n\n*   **完了助动词「ぬ」的未然形「な」**（易混淆）：\n    *   位置：句中，通常后接 `む` 或 `ば`。\n    *   含义：表示“完成”的语法变位。\n    *   例：`散りなむ` (chiri-na-mu) = 将会散落吧（完了+推量）。\n\n**判断口诀**：看到「な」在最后，不是“别做”就是“叹息”。看到「な」在中间且后面跟着「む/ば」，多半是“完了”。"
+    },
+    {
       "type": "comprehension_check",
-      "question": "In the phrase 'いのちかな' (inochi kana), what is the function of 'na'?",
-      "answer": "It acts as an emotional anchor or exclamation, turning the noun 'life' (inochi) into an emotional realization like 'Oh, this life!'",
-      "hint": "Think about how 'ka' (question) and 'na' (emotion) work together to create a sigh."
+      "question": "「契りきな」中的「な」表示什么功能？",
+      "answer": "咏叹",
+      "hint": "看看「な」前面的词「き」。它是动词字典形吗？不是，它是过去助动词。所以这不可能是“禁止”。意思是“曾经约定过啊……”。"
+    },
+    {
+      "type": "literary_insight",
+      "content": "在小野小町的诗中，除了「けりな」的咏叹，还隐藏着精妙的**掛詞 (Pivot Words)**。这是一种“一词多义”的技法，就像编程中的重载函数，同一个词在不同上下文中返回不同含义。\n\n1.  **ふる (furu)**:\n    *   含义A: `降る` (下雨) —— 呼应前面的“花”和后面的“长雨”。\n    *   含义B: `経る` (经年/流逝) —— 呼应“世”和“身”，暗示年华老去。\n\n2.  **ながめ (nagame)**:\n    *   含义A: `長雨` (连绵长雨) —— 视觉上的雨景。\n    *   含义B: `眺め` (凝视/沉思) —— 心理上的忧郁。\n\n通过这两个词，诗人将“窗外的雨中落花”与“内心的红颜老去”完美重叠，无需额外解释，读者便能感受到身心交织的哀愁。",
+      "literary_device": "掛詞 (Pivot Word)",
+      "chinese_parallel": "类似于中文诗歌中的“双关”。如刘禹锡《竹枝词》：“东边日出西边雨，道是无晴却有晴（情）。”利用同音字同时表达天气与情感。"
+    },
+    {
+      "type": "summary",
+      "content": "本课要点回顾：\n1. **禁止**：动词字典形 + **な** = “不许做！”（强硬命令）\n2. **咏叹**：助动词/活用词 + **な** = “啊……”（深沉感叹）\n3. **辨析**：如果「な」在句中且后接「む/ば」，通常是完了助动词「ぬ」的变形，而非本课的终助词。"
     }
   ],
   "reference_card": {
-    "point": "Particle な (na)",
-    "one_liner": "An exclamatory particle that anchors emotion and creates a lingering 'sigh' of realization, usually paired with 'ka'.",
-    "example": "をしきいのちかな (oshiki inochi kana) = 'Oh, how precious this life is!'",
+    "point": "终助词「な」",
+    "one_liner": "句末的红灯（禁止）或叹息（咏叹）",
+    "example": "語るな (Don't tell) vs 移りにけりな (It has changed, alas)",
     "see_also": [
-      "particle_ka",
-      "kireji_kana"
+      "auxiliary_nu",
+      "auxiliary_keri"
     ]
   },
-  "forward_references": [
-    {
-      "point": "倒置法 (touchihou) - Inversion",
-      "note": "In Poem 2, the object (tsuyosa o) comes AFTER the verb and the particle 'kana'. We will see more of this poetic word-order flipping in the final review."
-    }
-  ]
+  "forward_references": []
 }

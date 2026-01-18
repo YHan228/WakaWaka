@@ -1,581 +1,338 @@
 {
   "lesson_id": "lesson_particle_koso",
-  "lesson_title": "The Ultimate Emphasis: Particle こそ (koso) and the Izenkei 'Lock'",
-  "lesson_summary": "This lesson introduces 'koso', the strongest emphatic particle in classical Japanese, and explains how it forces the sentence-final verb into the Izenkei (Realized Base) through the logic of Kakari-Musubi.",
+  "lesson_title": "确信的强音：系助词「こそ」与已然形",
+  "lesson_summary": "学习古典日语中最强烈的强调助词「こそ」，掌握其独特的系结法则——要求句末使用“已然形”。",
   "grammar_point": "particle_koso",
   "grammar_explanation": {
-    "concept": "The particle こそ (koso) is used to single out one thing and emphasize it above all others. In programming terms, it acts like a 'High Priority' flag. When this flag is raised, the sentence cannot end normally; it triggers a 'Kakari-Musubi' (Linking and Binding) rule that forces the final verb or auxiliary to switch to its Izenkei (已然形 - Realized Base) form.",
-    "formation": "[Noun/Particle] + こそ + ... + [Verb/Auxiliary in Izenkei]",
+    "concept": "系助词「こそ」表示极强的强调、确信或特指。在逻辑上，它往往用于排除其他可能性，单独凸显某一方面（“唯有……才……”）。",
+    "formation": "こそ + [用言/助动词的已然形]",
     "variations": [
-      "Often used with 'nomi' (only) as 'nomi koso' for 'only and specifically'."
+      "こそ...已然形...（逆接）: 当「こそ」结句的已然形出现在句中而非句末时，常表示“虽然……但是……”"
     ],
     "common_confusions": [
-      "Unlike 'zo' or 'ya' which trigger the Rentaikei (Attributive Form), 'koso' is the ONLY particle that triggers the Izenkei (Realized Base) at the end of a sentence."
+      "こそ (系助词) vs こぞ (名词): 虽读音不同（浊音），但在某些旧假名遣中可能混淆。名词「こぞ」意为“去年”。",
+      "系结法则的区别: 「ぞ・なむ・や・か」要求连体形，唯独「こそ」要求已然形。"
     ]
   },
   "teaching_sequence": [
     {
       "type": "introduction",
-      "content": "In previous lessons, we saw how particles like 'zo' and 'ya' change the ending of a sentence to the Rentaikei. Today, we encounter the most powerful emphatic particle: こそ (koso). Think of 'koso' as a logical 'Override' command. When 'koso' appears, the sentence-final verb is 'locked' into the Izenkei (已然形). Since you already know the Izenkei represents 'realized' or 'established' facts, using it with 'koso' creates a sense of absolute, undeniable certainty."
+      "content": "在之前的课程中，我们学习了「ぞ」、「や」和「か」，它们都遵循一个规则：让句尾的词变为“连体形”。\n\n今天我们要介绍系助词家族中的“最强音”——「<ruby>こそ<rt>koso</rt></ruby>」。\n\n与其他系助词不同，「こそ」拥有独特的逻辑规则：它要求句尾的词变为**已然形**（Izenkei/Realis form）。已然形通常表示“已经确定的事实”或“现实”，这与「こそ」所表达的无可辩驳的强调语气完美契合。"
     },
     {
       "type": "poem_presentation",
-      "poem_id": "ogura100_2eaba95627b91dd3",
+      "poem_id": "ogura100_0772c4db0e21126d",
       "display": {
-        "text_with_furigana": "<ruby>御垣守<rt>みかきもり</rt></ruby><ruby>衛士<rt>えじ</rt></ruby>のたく<ruby>火<rt>ひ</rt></ruby>の<ruby>夜<rt>よる</rt></ruby>は<ruby>燃<rt>も</rt></ruby>え<ruby>昼<rt>ひる</rt></ruby>は<ruby>消<rt>き</rt></ruby>えつつ<ruby>物<rt>もの</rt></ruby>を<span style='color: #ff4500; font-weight: bold;'>こそ</span><ruby>思<rt>おも</rt></ruby>へ",
-        "romaji": "mikakimori, eji no taku hi no, yoru wa moe, hiru wa kie tsutsu, mono o koso omoe",
-        "translation": "Like the fires kept by the imperial guards, burning by night and fading by day, I too am consumed by my thoughts."
+        "text_with_furigana": "<ruby>滝<rt>たき</rt></ruby>の<ruby>音<rt>おと</rt></ruby>は<ruby>絶<rt>た</rt></ruby>えて<ruby>久<rt>ひさ</rt></ruby>しくなりぬれど<br><ruby>名<rt>な</rt></ruby><strong>こそ</strong><ruby>流<rt>なが</rt></ruby>れて<ruby>尚<rt>な</rt></ruby>ほ<ruby>聞<rt>き</rt></ruby>こえ<strong>けれ</strong>",
+        "romaji": "taki no oto wa taete hisashiku narinuredo na koso nagarete naho kikoekere",
+        "translation": "瀑布之声绝，久已无复闻。唯有名长流，至今尚传神。"
       },
       "vocabulary": [
         {
-          "word": "御垣守",
-          "reading": "みかきもり",
-          "meaning": "imperial palace guards",
-          "span": [
-            0,
-            3
-          ],
-          "chinese_cognate_note": "御 (imperial) + 垣 (fence/wall) + 守 (guard)"
-        },
-        {
-          "word": "衛士",
-          "reading": "えじ",
-          "meaning": "guardsman",
-          "span": [
-            3,
-            5
-          ],
-          "chinese_cognate_note": "Identical to Chinese 卫士 (wèishì)"
+          "word": "滝",
+          "reading": "たき",
+          "meaning": "瀑布",
+          "span": null,
+          "chinese_cognate_note": "泷（急流）"
         },
         {
           "word": "の",
           "reading": "の",
-          "meaning": "possessive particle (of)",
-          "span": [
-            5,
-            6
-          ],
+          "meaning": "的（格助词）",
+          "span": null,
           "chinese_cognate_note": null
         },
         {
-          "word": "たく",
-          "reading": "たく",
-          "meaning": "to burn/kindle",
-          "span": [
-            6,
-            8
-          ],
-          "chinese_cognate_note": "Cognate with 炊 (chuī)"
-        },
-        {
-          "word": "火",
-          "reading": "ひ",
-          "meaning": "fire",
-          "span": [
-            8,
-            9
-          ],
-          "chinese_cognate_note": "Identical to Chinese 火 (huǒ)"
-        },
-        {
-          "word": "の",
-          "reading": "の",
-          "meaning": "subject marker (in relative clause)",
-          "span": [
-            9,
-            10
-          ],
-          "chinese_cognate_note": null
-        },
-        {
-          "word": "夜",
-          "reading": "よる",
-          "meaning": "night",
-          "span": [
-            10,
-            11
-          ],
-          "chinese_cognate_note": "Identical to Chinese 夜 (yè)"
-        },
-        {
-          "word": "は",
-          "reading": "は",
-          "meaning": "topic marker",
-          "span": [
-            11,
-            12
-          ],
-          "chinese_cognate_note": null
-        },
-        {
-          "word": "燃え",
-          "reading": "もえ",
-          "meaning": "burning",
-          "span": [
-            12,
-            14
-          ],
-          "chinese_cognate_note": "Cognate with 燃 (rán)"
-        },
-        {
-          "word": "昼",
-          "reading": "ひる",
-          "meaning": "daytime",
-          "span": [
-            14,
-            15
-          ],
-          "chinese_cognate_note": "Identical to Chinese 昼 (zhòu)"
-        },
-        {
-          "word": "は",
-          "reading": "は",
-          "meaning": "topic marker",
-          "span": [
-            15,
-            16
-          ],
-          "chinese_cognate_note": null
-        },
-        {
-          "word": "消え",
-          "reading": "きえ",
-          "meaning": "extinguishing/fading",
-          "span": [
-            16,
-            18
-          ],
-          "chinese_cognate_note": "Cognate with 消 (xiāo)"
-        },
-        {
-          "word": "つつ",
-          "reading": "つつ",
-          "meaning": "while/continuously",
-          "span": [
-            18,
-            20
-          ],
-          "chinese_cognate_note": null
-        },
-        {
-          "word": "物",
-          "reading": "もの",
-          "meaning": "things/thoughts",
-          "span": [
-            20,
-            21
-          ],
-          "chinese_cognate_note": "Identical to Chinese 物 (wù)"
-        },
-        {
-          "word": "を",
-          "reading": "を",
-          "meaning": "object marker",
-          "span": [
-            21,
-            22
-          ],
-          "chinese_cognate_note": null
-        },
-        {
-          "word": "こそ",
-          "reading": "koso",
-          "meaning": "emphasis marker",
-          "span": [
-            22,
-            24
-          ],
-          "chinese_cognate_note": null
-        },
-        {
-          "word": "思へ",
-          "reading": "おもえ",
-          "meaning": "to think/long for (Izenkei form)",
-          "span": [
-            24,
-            26
-          ],
-          "chinese_cognate_note": "Cognate with 思 (sī)"
-        }
-      ],
-      "focus_highlight": [
-        22,
-        26
-      ]
-    },
-    {
-      "type": "grammar_spotlight",
-      "content": "Look at the end of the poem: 物を**こそ**思**へ** (mono o koso omoe). \n\n1. The verb is 思ふ (omofu - to think). \n2. Normally, the sentence would end in 'omofu' (Shuushikei).\n3. However, because **こそ** (koso) is present, the verb is forced into the **Izenkei** (Realized Base).\n4. For this verb, the Izenkei is **思へ** (omoe).\n\nThis doesn't change the basic meaning ('I think'), but it adds a heavy emotional weight, as if saying: 'It is specifically these thoughts that I am feeling!'",
-      "evidence": "See the poem above."
-    },
-    {
-      "type": "poem_presentation",
-      "poem_id": "ogura100_28563908709d966c",
-      "display": {
-        "text_with_furigana": "<ruby>月<rt>つき</rt></ruby><ruby>見<rt>み</rt></ruby>ればちぢにもの<span style='color: #ff4500; font-weight: bold;'>こそ</span><ruby>悲<rt>かな</rt></ruby>しけれわが<ruby>身<rt>み</rt></ruby><ruby>一<rt>ひと</rt></ruby>つの<ruby>秋<rt>あき</rt></ruby>にはあらねど",
-        "romaji": "tsukimireba, chiji ni mono koso, kanashikere, wagami hitotsu no, aki ni wa aranedo",
-        "translation": "When I look at the moon, a thousand things become truly sad, though it is not an autumn for me alone."
-      },
-      "vocabulary": [
-        {
-          "word": "月",
-          "reading": "つき",
-          "meaning": "moon",
-          "span": [
-            0,
-            1
-          ],
-          "chinese_cognate_note": "Identical to Chinese 月 (yuè)"
-        },
-        {
-          "word": "見れば",
-          "reading": "みれば",
-          "meaning": "when/since I see (Mire + ba)",
-          "span": [
-            1,
-            4
-          ],
-          "chinese_cognate_note": null
-        },
-        {
-          "word": "ちぢに",
-          "reading": "ちぢに",
-          "meaning": "in a thousand ways / manifold",
-          "span": [
-            4,
-            7
-          ],
-          "chinese_cognate_note": null
-        },
-        {
-          "word": "もの",
-          "reading": "もの",
-          "meaning": "things",
-          "span": [
-            7,
-            9
-          ],
-          "chinese_cognate_note": "物 (wù)"
-        },
-        {
-          "word": "こそ",
-          "reading": "koso",
-          "meaning": "emphasis marker",
-          "span": [
-            9,
-            11
-          ],
-          "chinese_cognate_note": null
-        },
-        {
-          "word": "悲しけれ",
-          "reading": "かなしけれ",
-          "meaning": "sad (Izenkei form of adjective)",
-          "span": [
-            11,
-            15
-          ],
-          "chinese_cognate_note": "悲 (bēi)"
-        },
-        {
-          "word": "わが",
-          "reading": "わが",
-          "meaning": "my",
-          "span": [
-            15,
-            17
-          ],
-          "chinese_cognate_note": null
-        },
-        {
-          "word": "身",
-          "reading": "み",
-          "meaning": "body/self",
-          "span": [
-            17,
-            18
-          ],
-          "chinese_cognate_note": "身 (shēn)"
-        },
-        {
-          "word": "一つ",
-          "reading": "ひとつ",
-          "meaning": "one",
-          "span": [
-            18,
-            20
-          ],
-          "chinese_cognate_note": "一 (yī)"
-        },
-        {
-          "word": "の",
-          "reading": "の",
-          "meaning": "possessive particle",
-          "span": [
-            20,
-            21
-          ],
-          "chinese_cognate_note": null
-        },
-        {
-          "word": "秋",
-          "reading": "あき",
-          "meaning": "autumn",
-          "span": [
-            21,
-            22
-          ],
-          "chinese_cognate_note": "秋 (qiū)"
-        },
-        {
-          "word": "に",
-          "reading": "に",
-          "meaning": "in/at",
-          "span": [
-            22,
-            23
-          ],
+          "word": "音",
+          "reading": "おと",
+          "meaning": "声音",
+          "span": null,
           "chinese_cognate_note": null
         },
         {
           "word": "は",
           "reading": "は",
-          "meaning": "topic marker",
-          "span": [
-            23,
-            24
-          ],
+          "meaning": "关于...（系助词）",
+          "span": null,
           "chinese_cognate_note": null
         },
         {
-          "word": "あら",
-          "reading": "あら",
-          "meaning": "to be (exist)",
-          "span": [
-            24,
-            26
-          ],
+          "word": "絶え",
+          "reading": "たえ",
+          "meaning": "断绝、停止（动词连用形）",
+          "span": null,
+          "chinese_cognate_note": "绝"
+        },
+        {
+          "word": "て",
+          "reading": "て",
+          "meaning": "表示承接（接续助词）",
+          "span": null,
           "chinese_cognate_note": null
         },
         {
-          "word": "ね",
-          "reading": "ね",
-          "meaning": "not (Izenkei of negative auxiliary 'zu')",
-          "span": [
-            26,
-            27
-          ],
+          "word": "久しく",
+          "reading": "ひさしく",
+          "meaning": "长久地（形容词连用形）",
+          "span": null,
+          "chinese_cognate_note": null
+        },
+        {
+          "word": "なり",
+          "reading": "なり",
+          "meaning": "变得（动词连用形）",
+          "span": null,
+          "chinese_cognate_note": null
+        },
+        {
+          "word": "ぬれ",
+          "reading": "ぬれ",
+          "meaning": "已经（完了助动词「ぬ」的已然形，因后接「ど」）",
+          "span": null,
           "chinese_cognate_note": null
         },
         {
           "word": "ど",
           "reading": "ど",
-          "meaning": "although",
-          "span": [
-            27,
-            28
-          ],
-          "chinese_cognate_note": null
-        }
-      ],
-      "focus_highlight": [
-        9,
-        15
-      ]
-    },
-    {
-      "type": "grammar_spotlight",
-      "content": "In this poem, 'koso' emphasizes the noun 'mono' (things). \n\nThe adjective is **悲し** (kanashi - sad). \nIn classical Japanese, adjectives also have an Izenkei form ending in **~けれ** (~kere). \n\nTherefore, **こそ** (koso) triggers **悲しけれ** (kanashikere). This highlights the intense, undeniable sadness the poet feels upon seeing the moon.",
-      "evidence": "See the poem above."
-    },
-    {
-      "type": "poem_presentation",
-      "poem_id": "lapis_cd5d70f4541ae68e",
-      "display": {
-        "text_with_furigana": "<ruby>紅<rt>くれない</rt></ruby>のふりいでつつなく<ruby>涙<rt>なみだ</rt></ruby>にはたもとのみ<span style='color: #ff4500; font-weight: bold;'>こそ</span><ruby>色<rt>いろ</rt></ruby>まさりけれ",
-        "romaji": "kurenai no, furiite tsutsunaku, namida ni, wa tamoto nomi koso, iro masari kere",
-        "translation": "In the tears that fall like crimson rain, it is my sleeves alone whose color has deepened."
-      },
-      "vocabulary": [
-        {
-          "word": "紅",
-          "reading": "くれない",
-          "meaning": "crimson/deep red",
-          "span": [
-            0,
-            1
-          ],
-          "chinese_cognate_note": "红 (hóng)"
-        },
-        {
-          "word": "の",
-          "reading": "の",
-          "meaning": "possessive particle",
-          "span": [
-            1,
-            2
-          ],
-          "chinese_cognate_note": null
-        },
-        {
-          "word": "ふり",
-          "reading": "ふり",
-          "meaning": "falling (tears/rain)",
-          "span": [
-            2,
-            4
-          ],
-          "chinese_cognate_note": null
-        },
-        {
-          "word": "いで",
-          "reading": "いで",
-          "meaning": "out",
+          "meaning": "虽然...但是（逆接助词）",
           "span": null,
           "chinese_cognate_note": null
         },
         {
-          "word": "つつ",
-          "reading": "つつ",
-          "meaning": "while/continuously",
-          "span": [
-            6,
-            8
-          ],
+          "word": "名",
+          "reading": "な",
+          "meaning": "名声、名字",
+          "span": null,
           "chinese_cognate_note": null
         },
         {
-          "word": "なく",
-          "reading": "なく",
-          "meaning": "crying/weeping",
-          "span": [
-            8,
-            10
-          ],
-          "chinese_cognate_note": "泣 (qì)"
+          "word": "こそ",
+          "reading": "こそ",
+          "meaning": "唯有、正是（强调系助词）",
+          "span": null,
+          "chinese_cognate_note": null
         },
         {
-          "word": "涙",
-          "reading": "なみだ",
-          "meaning": "tears",
-          "span": [
-            10,
-            11
-          ],
-          "chinese_cognate_note": "泪 (lèi)"
+          "word": "流れ",
+          "reading": "ながれ",
+          "meaning": "流传（动词连用形）",
+          "span": null,
+          "chinese_cognate_note": null
         },
         {
-          "word": "に",
-          "reading": "に",
-          "meaning": "in/at",
-          "span": [
-            11,
-            12
-          ],
+          "word": "て",
+          "reading": "て",
+          "meaning": "表示承接（接续助词）",
+          "span": null,
+          "chinese_cognate_note": null
+        },
+        {
+          "word": "尚ほ",
+          "reading": "なほ",
+          "meaning": "依然、还是（副词）",
+          "span": null,
+          "chinese_cognate_note": "尚"
+        },
+        {
+          "word": "聞こえ",
+          "reading": "きこえ",
+          "meaning": "被听闻、名声远扬（动词连用形）",
+          "span": null,
+          "chinese_cognate_note": null
+        },
+        {
+          "word": "けれ",
+          "reading": "けれ",
+          "meaning": "啊！（咏叹助动词「けり」的已然形）",
+          "span": null,
+          "chinese_cognate_note": null
+        }
+      ],
+      "focus_highlight": [
+        16,
+        28
+      ]
+    },
+    {
+      "type": "grammar_spotlight",
+      "content": "请注意句尾的变化：\n\n通常情况下，咏叹助动词是「けり」（Keri）。\n但在「こそ」的影响下，它变成了已然形「**けれ**」（Kere）。\n\n逻辑结构：\n[名] **こそ** ... [聞こえ] **けれ**\n(正是名声... 依然被传颂啊)\n\n这种结构不仅仅是陈述事实，更是在对比中强调：瀑布的水（实体）虽然没了，但**名声**（抽象）却绝对存在。",
+      "evidence": "See the poem above."
+    },
+    {
+      "type": "poem_presentation",
+      "poem_id": "lapis_32540ee118b380fc",
+      "display": {
+        "text_with_furigana": "<ruby>春<rt>はる</rt></ruby>の<ruby>夜<rt>よ</rt></ruby>の<ruby>闇<rt>やみ</rt></ruby>はあやなし<ruby>梅<rt>うめ</rt></ruby>の<ruby>花<rt>はな</rt></ruby><br><ruby>色<rt>いろ</rt></ruby><strong>こそ</strong><ruby>見<rt>み</rt></ruby>え<strong>ね</strong><ruby>香<rt>か</rt></ruby>やは<ruby>隠<rt>か</rt></ruby>るる",
+        "romaji": "haru no yo no yami wa ayanashi ume no hana iro koso miene ka ya wa kakururu",
+        "translation": "春夜暗无理，乱把梅花遮。颜色虽不见，暗香岂能藏？"
+      },
+      "vocabulary": [
+        {
+          "word": "春",
+          "reading": "はる",
+          "meaning": "春天",
+          "span": null,
+          "chinese_cognate_note": null
+        },
+        {
+          "word": "の",
+          "reading": "の",
+          "meaning": "的",
+          "span": null,
+          "chinese_cognate_note": null
+        },
+        {
+          "word": "夜",
+          "reading": "よ",
+          "meaning": "夜晚",
+          "span": null,
+          "chinese_cognate_note": null
+        },
+        {
+          "word": "の",
+          "reading": "の",
+          "meaning": "的",
+          "span": null,
+          "chinese_cognate_note": null
+        },
+        {
+          "word": "闇",
+          "reading": "やみ",
+          "meaning": "黑暗",
+          "span": null,
           "chinese_cognate_note": null
         },
         {
           "word": "は",
           "reading": "は",
-          "meaning": "topic marker",
-          "span": [
-            12,
-            13
-          ],
+          "meaning": "话题标记",
+          "span": null,
           "chinese_cognate_note": null
         },
         {
-          "word": "たもと",
-          "reading": "たもと",
-          "meaning": "sleeve (of a kimono)",
-          "span": [
-            13,
-            16
-          ],
+          "word": "あやなし",
+          "reading": "あやなし",
+          "meaning": "没道理、不识趣（形容词）",
+          "span": null,
           "chinese_cognate_note": null
         },
         {
-          "word": "のみ",
-          "reading": "のみ",
-          "meaning": "only",
-          "span": [
-            16,
-            18
-          ],
+          "word": "梅",
+          "reading": "うめ",
+          "meaning": "梅",
+          "span": null,
           "chinese_cognate_note": null
         },
         {
-          "word": "こそ",
-          "reading": "koso",
-          "meaning": "emphasis marker",
-          "span": [
-            18,
-            20
-          ],
+          "word": "の",
+          "reading": "の",
+          "meaning": "的",
+          "span": null,
+          "chinese_cognate_note": null
+        },
+        {
+          "word": "花",
+          "reading": "はな",
+          "meaning": "花",
+          "span": null,
           "chinese_cognate_note": null
         },
         {
           "word": "色",
           "reading": "いろ",
-          "meaning": "color",
-          "span": [
-            20,
-            21
-          ],
-          "chinese_cognate_note": "色 (sè)"
+          "meaning": "颜色、形态",
+          "span": null,
+          "chinese_cognate_note": null
         },
         {
-          "word": "まさり",
-          "reading": "まさり",
-          "meaning": "to increase/surpass",
-          "span": [
-            21,
-            24
-          ],
-          "chinese_cognate_note": "胜 (shèng)"
+          "word": "こそ",
+          "reading": "こそ",
+          "meaning": "唯有、虽然（强调）",
+          "span": null,
+          "chinese_cognate_note": null
         },
         {
-          "word": "けれ",
-          "reading": "kere",
-          "meaning": "past recollection auxiliary (Izenkei form)",
-          "span": [
-            24,
-            26
-          ],
+          "word": "見え",
+          "reading": "みえ",
+          "meaning": "被看见（动词未然形）",
+          "span": null,
+          "chinese_cognate_note": null
+        },
+        {
+          "word": "ね",
+          "reading": "ね",
+          "meaning": "不（否定助动词「ず」的已然形）",
+          "span": null,
+          "chinese_cognate_note": null
+        },
+        {
+          "word": "香",
+          "reading": "か",
+          "meaning": "香气",
+          "span": null,
+          "chinese_cognate_note": null
+        },
+        {
+          "word": "やは",
+          "reading": "やは",
+          "meaning": "难道...吗（反问系助词）",
+          "span": null,
+          "chinese_cognate_note": null
+        },
+        {
+          "word": "隠るる",
+          "reading": "かくるる",
+          "meaning": "隐藏（动词连体形，受「や」系结）",
+          "span": null,
           "chinese_cognate_note": null
         }
       ],
       "focus_highlight": [
-        18,
-        26
+        14,
+        19
       ]
     },
     {
-      "type": "grammar_spotlight",
-      "content": "Here we see **のみこそ** (nomi koso). 'Nomi' means 'only'. Adding 'koso' makes it 'ONLY and specifically'. \n\nThe sentence ends with the auxiliary **けり** (keri - past/discovery). \nAs we learned in Unit 5, the Izenkei of 'keri' is **けれ** (kere). \n\nBecause of **こそ**, the sentence must end in **けれ**.",
-      "evidence": "See the poem above."
+      "type": "contrast_example",
+      "content": "在这句诗中，我们看到了两个系结法则同时出现：\n\n1. **色こそ見えね**：\n   否定助动词「ず」 (zu) → 已然形「**ね**」 (ne)。\n   含义：颜色确实是看不见（强调/让步）。\n\n2. **香やは隠るる**：\n   系助词「や」 → 连体形「**隠るる**」 (kakururu)。\n   含义：香气难道能藏得住吗？（反问）\n\n「こそ」在这里起到了**对比**的作用：虽然A（颜色）不行，但B（香气）很强。"
     },
     {
       "type": "comprehension_check",
-      "question": "In the phrase '物こそ悲しけれ', why does the word '悲し' (sad) end in 'けれ' instead of its standard form?",
-      "answer": "Because the emphatic particle 'koso' triggers the Kakari-Musubi rule, which requires the sentence-final word to be in the Izenkei (Realized Base). 'Kanashikere' is the Izenkei form of the adjective 'kanashi'.",
-      "hint": "Recall the 'Izenkei Lock' triggered by the strongest emphatic particle."
+      "question": "「こそ」要求句末使用什么形式？对于「けり」来说，这个形式是什么？",
+      "answer": "已然形 (Izenkei)；けれ (Kere)",
+      "hint": "回想第一首诗：...名こそ流れて尚聞こえ____。"
+    },
+    {
+      "type": "literary_insight",
+      "content": "在古典诗歌中，语法往往服务于情感。让我们看第三首诗，它结合了「こそ」的强烈断定与精妙的修辞技巧。",
+      "literary_device": "掛詞 (Kakekotoba)",
+      "chinese_parallel": "双关语 (Pun)"
+    },
+    {
+      "type": "literary_insight",
+      "content": "这首诗使用了多个**掛詞**（双关语），这是和歌中极重要的技巧，类似于中国诗歌中的双关：\n\n1. **思ひ (Omoi)**：包含「火 (Hi)」，暗示思念如火燃烧。\n2. **富士 (Fuji)**：谐音「不死 (Fushi)」，暗示思念永不消亡。\n\n语法上的「こそ...けれ」强化了这种比喻：正是那座燃烧不息的富士山，**就是**我自己啊！",
+      "literary_device": null,
+      "chinese_parallel": null
+    },
+    {
+      "type": "summary",
+      "content": "本课要点：\n1. **「こそ」是强调之王**：比「ぞ」更强烈，常用于确信、对比或特指。\n2. **系结法则**：「こそ」要求句末使用**已然形**（如：けり→けれ，ず→ね）。\n3. **文学功能**：配合挂词（双关），「こそ」能将复杂的隐喻转化为强有力的情感宣泄。"
     }
   ],
   "reference_card": {
-    "point": "Particle こそ (koso)",
-    "one_liner": "The strongest emphatic particle; it triggers the Kakari-Musubi rule, forcing the final verb/auxiliary into the Izenkei (已然形).",
-    "example": "物こそ思へ (It is specifically [these] things that I think of.)",
+    "point": "系助词「こそ」",
+    "one_liner": "最强强调助词，要求句末使用已然形（Izenkei）。",
+    "example": "名こそ流れて尚聞こえけれ (唯有名声流传，依然为人所知啊)",
     "see_also": [
-      "particle_zo",
-      "particle_ya",
-      "conjugation_izenkei"
+      "syntax_kakarimusubi",
+      "auxiliary_keri",
+      "auxiliary_zu"
     ]
   },
   "forward_references": [
     {
-      "point": "Izenkei + ba",
-      "note": "In Poem 2, we saw '見れば' (mire-ba). While 'koso' uses Izenkei to end a sentence, the particle 'ba' uses it to create 'since/because' clauses. We will contrast these uses in the next unit."
+      "point": "已然形的接续功能",
+      "note": "我们将在后续课程中学习已然形接续「ば」表示原因或条件（因为...所以...）。"
     }
   ]
 }

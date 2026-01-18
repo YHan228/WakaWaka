@@ -1,294 +1,421 @@
 {
   "lesson_id": "lesson_kireji_ya",
-  "lesson_title": "The Poetic Pause: Mastering the Exclamatory 'Ya' (や)",
-  "lesson_summary": "In this final unit, we move beyond logical syntax to poetic texture. We explore 'ya' (や) not as a question marker, but as a 'cutting word' (kireji) that creates emotional emphasis and structural pauses.",
+  "lesson_title": "切字「や」：咏叹与停顿的艺术",
+  "lesson_summary": "学习古典诗歌中最重要的修辞工具之一——切字「や」，理解它如何通过“切断”语流来创造咏叹、强调焦点及划分诗歌结构。",
   "grammar_point": "kireji_ya",
   "grammar_explanation": {
-    "concept": "While you previously learned 'ya' as a particle of doubt or rhetorical inquiry, in poetry it often functions as a 'Kireji' (切字) or 'cutting word.' It acts like a logical 'break' in a line of code, pausing the flow to highlight a specific image or emotion. For a Chinese speaker, think of it as the poetic '兮' (xī) or an emphatic '啊' (a) that isolates a concept for contemplation.",
-    "formation": "Attached directly to nouns or the end of a clause to create a 'cut' in the poem's rhythm.",
+    "concept": "切字 (Kireji) - 咏叹与断句",
+    "formation": "接在体言（名词）或活用词连体形之后。",
     "variations": [
-      "ya wa (やは) - Combined emphasis",
-      "ya to (やと) - Exclamatory thought followed by a quotation marker"
+      "句中切 (kuchū-gire): 位于诗句中间，通常在第二句末尾，将诗歌分为上下两部分。",
+      "句末切 (kumatsu-gire): 位于结句，表示强烈的余韵。"
     ],
     "common_confusions": [
-      "Rhetorical 'ya' vs. Exclamatory 'ya': Rhetorical 'ya' expects a logical answer or reversal; Exclamatory 'ya' simply 'zooms in' on an image."
+      "疑问系助词「や」 vs. 咏叹切字「や」：\n我们在之前的课程中学习过「や」作为疑问系助词（Question Particle），常与「らむ/む」呼应构成系结（Kakarimusubi）。\n\n区别方法：\n1. **语境判断**：如果句子明显是在感叹景色的美丽或情感的强烈（如“秋之形见呀！”），而非询问信息，则是切字/咏叹用法。\n2. **结构位置**：切字「や」常紧跟在名词后，形成一个独立的感叹短语（类似编程中的 `print(variable + '!');`），造成语气的明显停顿。而疑问「や」通常引导一个完整的疑问句逻辑（类似 `if (variable == ?) ...`）。"
     ]
   },
   "teaching_sequence": [
     {
       "type": "introduction",
-      "content": "You have mastered the 'grammatical glue' that holds Japanese sentences together. Now, we look at the 'punctuation of the heart.' In classical poetry, certain particles don't just link words—they create space. The particle 'ya' (や) is the most famous of these 'cutting words.' It tells the reader: 'Stop here. Look at this image. Feel this emotion.'"
+      "content": "在此之前的课程中，我们学习了许多将词语“连接”起来的助词（如「の」、「と」）。今天，我们要学习一个相反的概念——**切字（Kireji）**。在古典和歌中，为了表达强烈的情感爆发，诗人会故意“切断”语流。助词「や」不仅能表示疑问，当它作为切字使用时，就像一个强有力的感叹号或休止符，迫使读者在继续阅读前，先凝视眼前的意象。"
     },
     {
       "type": "poem_presentation",
-      "poem_id": "lapis_ea799cfe78d5a735",
+      "poem_id": "ogura100_7aef5fe3b5e4a06e",
       "display": {
-        "text_with_furigana": "<ruby>水上<rt>みなかみ</rt></ruby>や<ruby>絶<rt>た</rt></ruby>え<ruby>絶<rt>だ</rt></ruby>え<ruby>凍<rt>こお</rt></ruby>る<ruby>岩間<rt>いわま</rt></ruby>より<ruby>清滝川<rt>きよたきがわ</rt></ruby>に<ruby>残<rt>のこ</rt></ruby>る<ruby>白波<rt>しらなみ</rt></ruby>",
-        "romaji": "minakami ya, tae tae koho ru, iwa ma yori, kiyo taki kawa ni, nokoru shiranami",
-        "translation": "The headwaters! From between the rocks where the ice is fitfully freezing, white waves remain on the Clear Cascade River."
+        "text_with_furigana": "<ruby>此<rt>こ</rt></ruby>れや<ruby>此<rt>こ</rt></ruby>の<ruby>行<rt>ゆ</rt></ruby>くも<ruby>帰<rt>かえ</rt></ruby>るも<ruby>別<rt>わか</rt></ruby>れては<ruby>知<rt>し</rt></ruby>るも<ruby>知<rt>し</rt></ruby>らぬも<ruby>逢坂<rt>おうさか</rt></ruby>の<ruby>関<rt>せき</rt></ruby>",
+        "romaji": "kore ya kono yuku mo kaeru mo wakarete wa shiru mo shiranu mo ousaka no seki",
+        "translation": "这就是那个大名鼎鼎的逢坂关啊！离去的人，归来的人，在此分别；相识的人，陌生的人，在此相逢。"
       },
       "vocabulary": [
         {
-          "word": "水上",
-          "reading": "みなかみ",
-          "meaning": "headwaters / source of a river",
+          "word": "これ",
+          "reading": "これ",
+          "meaning": "这（代词）",
           "span": null,
-          "chinese_cognate_note": "Obvious from 'water' + 'above/up'"
+          "chinese_cognate_note": null
         },
         {
           "word": "や",
           "reading": "や",
-          "meaning": "exclamatory particle (kireji)",
-          "span": [
-            4,
-            5
-          ],
-          "chinese_cognate_note": "Similar to poetic 兮"
-        },
-        {
-          "word": "絶え絶え",
-          "reading": "たえたえ",
-          "meaning": "intermittently / faintly",
+          "meaning": "【切字】啊！（表示强烈的咏叹与强调）",
           "span": null,
-          "chinese_cognate_note": "Related to 'extinguish/sever' (绝)"
-        },
-        {
-          "word": "凍る",
-          "reading": "こほる",
-          "meaning": "to freeze",
-          "span": null,
-          "chinese_cognate_note": "Cognate with 冻"
-        },
-        {
-          "word": "岩間",
-          "reading": "いわま",
-          "meaning": "between rocks",
-          "span": null,
-          "chinese_cognate_note": "Obvious from 'rock' + 'between'"
-        },
-        {
-          "word": "より",
-          "reading": "より",
-          "meaning": "from (origin marker)",
-          "span": [
-            15,
-            17
-          ],
           "chinese_cognate_note": null
         },
         {
-          "word": "清滝川",
-          "reading": "きよたきがわ",
-          "meaning": "Kiyotaki River (Clear Waterfall River)",
+          "word": "この",
+          "reading": "この",
+          "meaning": "那个（传闻中的）",
           "span": null,
-          "chinese_cognate_note": "Clear (清) + Waterfall (滝) + River (川)"
-        },
-        {
-          "word": "に",
-          "reading": "に",
-          "meaning": "at/in (location marker)",
-          "span": [
-            23,
-            24
-          ],
           "chinese_cognate_note": null
         },
         {
-          "word": "残る",
-          "reading": "のこる",
-          "meaning": "to remain",
+          "word": "行く",
+          "reading": "ゆく",
+          "meaning": "去、离开（京城）",
           "span": null,
-          "chinese_cognate_note": "Cognate with 残 (left over)"
+          "chinese_cognate_note": null
         },
         {
-          "word": "白波",
-          "reading": "しらなみ",
-          "meaning": "white waves",
+          "word": "も",
+          "reading": "も",
+          "meaning": "也、无论...还是...",
           "span": null,
-          "chinese_cognate_note": "Obvious from 'white' + 'wave'"
+          "chinese_cognate_note": null
+        },
+        {
+          "word": "帰る",
+          "reading": "かえる",
+          "meaning": "归、回（京城）",
+          "span": null,
+          "chinese_cognate_note": null
+        },
+        {
+          "word": "も",
+          "reading": "も",
+          "meaning": "也",
+          "span": null,
+          "chinese_cognate_note": null
+        },
+        {
+          "word": "別れて",
+          "reading": "わかれて",
+          "meaning": "分别（动词“別る”的连用形+接续助词“て”）",
+          "span": null,
+          "chinese_cognate_note": null
+        },
+        {
+          "word": "は",
+          "reading": "は",
+          "meaning": "（提示助词，此处表示反复发生的动作）",
+          "span": null,
+          "chinese_cognate_note": null
+        },
+        {
+          "word": "知る",
+          "reading": "しる",
+          "meaning": "认识、相识",
+          "span": null,
+          "chinese_cognate_note": null
+        },
+        {
+          "word": "も",
+          "reading": "も",
+          "meaning": "也",
+          "span": null,
+          "chinese_cognate_note": null
+        },
+        {
+          "word": "知ら",
+          "reading": "しら",
+          "meaning": "不认识（动词“知る”的未然形）",
+          "span": null,
+          "chinese_cognate_note": null
+        },
+        {
+          "word": "ぬ",
+          "reading": "ぬ",
+          "meaning": "不（否定助动词“ず”的连体形）",
+          "span": null,
+          "chinese_cognate_note": null
+        },
+        {
+          "word": "も",
+          "reading": "も",
+          "meaning": "也",
+          "span": null,
+          "chinese_cognate_note": null
+        },
+        {
+          "word": "逢坂の関",
+          "reading": "おうさかのせき",
+          "meaning": "逢坂关（地名，位于京都与滋贺交界）",
+          "span": null,
+          "chinese_cognate_note": null
         }
       ],
       "focus_highlight": [
-        4,
-        5
+        1,
+        2
       ]
     },
     {
       "type": "grammar_spotlight",
-      "content": "In this poem, 'ya' (や) follows 'Minakami' (Headwaters). It doesn't ask a question. Instead, it acts like a cinematic 'cut.' It establishes the setting—the source of the river—and forces the reader to pause before describing the movement of the water. This is the 'Spatial Cut.' It isolates the subject to give it grandeur.",
+      "content": "在这首诗的开头，「これやこの」（Kore ya kono）是一个非常著名的固定句式。这里的「や」并非在问“这是那个吗？”，而是在感叹“**这就是那个啊！**”。\n\n*   **功能**：它将焦点强烈地聚集在「これ」（这）上，打断了句子的平铺直叙，确立了全诗的情感基调——对眼前繁忙景象的惊叹。\n*   **结构**：这种用法通常将诗句划分为“焦点呈现”和“后续描述”两部分。",
       "evidence": "See the poem above."
     },
     {
       "type": "poem_presentation",
-      "poem_id": "lapis_136a51b745fb5a8e",
+      "poem_id": "lapis_4c2e747a434ffd71",
       "display": {
-        "text_with_furigana": "<ruby>鶯<rt>うぐいす</rt></ruby>の<ruby>笠<rt>かさ</rt></ruby>に<ruby>縫<rt>ぬ</rt></ruby>ふといふ<ruby>梅花<rt>ばいか</rt></ruby><ruby>折<rt>お</rt></ruby>りてかささむ<ruby>老<rt>お</rt></ruby>い<ruby>隠<rt>かく</rt></ruby>るやと",
-        "romaji": "uguisu no, kasa ni nufu to iu, baika orite, kasasamu oi, kakuru ya to",
-        "translation": "Picking the plum blossoms said to be sewn into the warbler's hat, I shall wear them—wondering, 'will they hide my old age?'"
+        "text_with_furigana": "<ruby>唐錦<rt>からにしき</rt></ruby><ruby>秋<rt>あき</rt></ruby>の<ruby>形見<rt>かたみ</rt></ruby>や<ruby>竜田山<rt>たつたやま</rt></ruby><ruby>散<rt>ち</rt></ruby>り<ruby>敢<rt>あ</rt></ruby>えぬ<ruby>枝<rt>え</rt></ruby>に<ruby>嵐<rt>あらし</rt></ruby><ruby>吹<rt>ふ</rt></ruby>くなり",
+        "romaji": "karanishiki aki no katami ya tatsutayama chiriaenu eta ni arashi fuku nari",
+        "translation": "那满山的红叶宛如唐锦，真是秋天留下的遗物啊！龙田山上，在那尚未落尽的枝头，山风正呼啸而过。"
       },
       "vocabulary": [
         {
-          "word": "鶯",
-          "reading": "うぐいす",
-          "meaning": "Japanese bush warbler",
-          "span": [
-            0,
-            1
-          ],
-          "chinese_cognate_note": "The bird '莺'"
+          "word": "唐錦",
+          "reading": "からにしき",
+          "meaning": "唐锦（精美的中国织锦，喻指红叶）",
+          "span": null,
+          "chinese_cognate_note": "唐锦"
+        },
+        {
+          "word": "秋",
+          "reading": "あき",
+          "meaning": "秋天",
+          "span": null,
+          "chinese_cognate_note": null
         },
         {
           "word": "の",
           "reading": "の",
-          "meaning": "possessive particle",
-          "span": [
-            1,
-            2
-          ],
-          "chinese_cognate_note": null
-        },
-        {
-          "word": "笠",
-          "reading": "かさ",
-          "meaning": "traditional hat",
-          "span": [
-            2,
-            3
-          ],
-          "chinese_cognate_note": "Same character as 'bamboo hat'"
-        },
-        {
-          "word": "に",
-          "reading": "に",
-          "meaning": "into/at (target marker)",
-          "span": [
-            3,
-            4
-          ],
-          "chinese_cognate_note": null
-        },
-        {
-          "word": "縫ふ",
-          "reading": "ぬふ",
-          "meaning": "to sew",
+          "meaning": "的（格助词）",
           "span": null,
-          "chinese_cognate_note": "Cognate with 缝"
-        },
-        {
-          "word": "と",
-          "reading": "と",
-          "meaning": "quotative particle",
-          "span": [
-            6,
-            7
-          ],
           "chinese_cognate_note": null
         },
         {
-          "word": "いふ",
-          "reading": "いふ",
-          "meaning": "to say/be called",
-          "span": [
-            7,
-            9
-          ],
-          "chinese_cognate_note": "Cognate with 云/说"
-        },
-        {
-          "word": "梅花",
-          "reading": "ばいか",
-          "meaning": "plum blossom",
-          "span": [
-            9,
-            11
-          ],
-          "chinese_cognate_note": "Identical to Chinese"
-        },
-        {
-          "word": "折りて",
-          "reading": "おりて",
-          "meaning": "picking and...",
-          "span": [
-            11,
-            14
-          ],
-          "chinese_cognate_note": "折 (to break/pick)"
-        },
-        {
-          "word": "かささむ",
-          "reading": "かささむ",
-          "meaning": "will wear as a hat",
-          "span": [
-            14,
-            18
-          ],
+          "word": "形見",
+          "reading": "かたみ",
+          "meaning": "遗物、纪念品",
+          "span": null,
           "chinese_cognate_note": null
-        },
-        {
-          "word": "老い",
-          "reading": "おい",
-          "meaning": "old age",
-          "span": null,
-          "chinese_cognate_note": "Cognate with 老"
-        },
-        {
-          "word": "隠る",
-          "reading": "かくる",
-          "meaning": "to hide",
-          "span": null,
-          "chinese_cognate_note": "Cognate with 隐"
         },
         {
           "word": "や",
           "reading": "や",
-          "meaning": "exclamatory/wondering particle",
-          "span": [
-            23,
-            24
-          ],
+          "meaning": "【切字】啊！（咏叹）",
+          "span": null,
           "chinese_cognate_note": null
         },
         {
-          "word": "と",
-          "reading": "と",
-          "meaning": "quotative particle (marking the thought)",
-          "span": [
-            24,
-            25
-          ],
+          "word": "竜田山",
+          "reading": "たつたやま",
+          "meaning": "龙田山（地名，红叶名胜）",
+          "span": null,
+          "chinese_cognate_note": null
+        },
+        {
+          "word": "散り敢え",
+          "reading": "ちりあえ",
+          "meaning": "散尽（动词“散る”+辅助动词“敢ふ”的未然形）",
+          "span": null,
+          "chinese_cognate_note": null
+        },
+        {
+          "word": "ぬ",
+          "reading": "ぬ",
+          "meaning": "没有（否定助动词“ず”的连体形）",
+          "span": null,
+          "chinese_cognate_note": null
+        },
+        {
+          "word": "枝",
+          "reading": "えだ",
+          "meaning": "树枝",
+          "span": null,
+          "chinese_cognate_note": null
+        },
+        {
+          "word": "に",
+          "reading": "に",
+          "meaning": "在（格助词）",
+          "span": null,
+          "chinese_cognate_note": null
+        },
+        {
+          "word": "嵐",
+          "reading": "あらし",
+          "meaning": "暴风、山风",
+          "span": null,
+          "chinese_cognate_note": null
+        },
+        {
+          "word": "吹く",
+          "reading": "ふく",
+          "meaning": "吹",
+          "span": null,
+          "chinese_cognate_note": null
+        },
+        {
+          "word": "なり",
+          "reading": "なり",
+          "meaning": "听说、好像（传闻/推定助动词）",
+          "span": null,
           "chinese_cognate_note": null
         }
       ],
       "focus_highlight": [
-        23,
-        24
+        11,
+        12
       ]
     },
     {
-      "type": "grammar_spotlight",
-      "content": "Here, 'ya' is used within a thought (marked by 'to'). It expresses a hopeful, emotional exclamation: 'Will it hide my old age!?' It turns a simple statement into a moment of poignant reflection. Notice how 'ya' + 'to' (やと) functions like a 'thought bubble' in a comic, highlighting the speaker's internal yearning.",
-      "evidence": "See the poem above."
+      "type": "comprehension_check",
+      "question": "在第二首诗中，「秋の形見や」中的「や」起到了什么作用？",
+      "answer": "它切断了句子，强调红叶是“秋天的遗物”，表达了对红叶美景的赞叹。",
+      "hint": "注意它位于名词「形見」（遗物）之后，并没有引导疑问句，而是像一个感叹号。"
     },
     {
-      "type": "comprehension_check",
-      "question": "In Poem 3 (Minakami ya...), if we removed the 'ya', how would the logical relationship change for the reader?",
-      "answer": "The 'ya' creates a structural pause (kireji) that isolates 'the headwaters' as a standalone image of focus. Without it, 'minakami' would simply be a flat subject of the sentence, losing its emotional 'zoom-in' effect.",
-      "hint": "Think about the difference between 'The headwaters are...' and 'The headwaters! ...'"
+      "type": "literary_insight",
+      "content": "在语法理解的基础上，我们来看这首诗中的**见立（Mitate）**手法。\n\n*   **概念**：见立（Mitate）是将一物“看作”另一物，即视觉隐喻。\n*   **应用**：诗人将满山的红叶比作「唐錦」（精美的织锦）。\n*   **关联**：这种比喻不仅是视觉上的（颜色斑斓），还通过「竜田山」（Tatsuta-yama）中的「たつ」（Tatsu）与裁衣服的“裁つ”（Tatsu）双关，暗示这块“锦缎”是被大自然裁剪在山上的。",
+      "literary_device": null,
+      "chinese_parallel": null
+    },
+    {
+      "type": "poem_presentation",
+      "poem_id": "lapis_33ec863214d285cf",
+      "display": {
+        "text_with_furigana": "<ruby>袖<rt>そで</rt></ruby><ruby>漬<rt>ひ</rt></ruby>ちて<ruby>掬<rt>むす</rt></ruby>びし<ruby>水<rt>みず</rt></ruby>の<ruby>凍<rt>こ</rt></ruby>れるを<ruby>春<rt>はる</rt></ruby><ruby>立<rt>た</rt></ruby>つ<ruby>今日<rt>きょう</rt></ruby>の<ruby>風<rt>かぜ</rt></ruby>や<ruby>解<rt>と</rt></ruby>くらむ",
+        "romaji": "sode hichite musubishi mizu no kohoreru o haru tatsu kyou no kaze ya tokuramu",
+        "translation": "夏天曾沾湿衣袖捧起的水，如今已结成冰。这立春今日吹来的风，是否正在将其融解呢？"
+      },
+      "vocabulary": [
+        {
+          "word": "袖",
+          "reading": "そで",
+          "meaning": "袖子",
+          "span": null,
+          "chinese_cognate_note": null
+        },
+        {
+          "word": "漬ち",
+          "reading": "ひち",
+          "meaning": "浸湿（动词“漬つ”的连用形）",
+          "span": null,
+          "chinese_cognate_note": null
+        },
+        {
+          "word": "て",
+          "reading": "て",
+          "meaning": "（接续助词，表示动作先后）",
+          "span": null,
+          "chinese_cognate_note": null
+        },
+        {
+          "word": "掬び",
+          "reading": "むすび",
+          "meaning": "用手捧（水）（动词“掬ぶ”的连用形）",
+          "span": null,
+          "chinese_cognate_note": null
+        },
+        {
+          "word": "し",
+          "reading": "し",
+          "meaning": "曾经（过去助动词“き”的连体形）",
+          "span": null,
+          "chinese_cognate_note": null
+        },
+        {
+          "word": "水",
+          "reading": "みず",
+          "meaning": "水",
+          "span": null,
+          "chinese_cognate_note": null
+        },
+        {
+          "word": "の",
+          "reading": "の",
+          "meaning": "（主格助词，表示“水”是“冻”的主语）",
+          "span": null,
+          "chinese_cognate_note": null
+        },
+        {
+          "word": "凍れ",
+          "reading": "こほれ",
+          "meaning": "结冰（动词“凍る”的已然形）",
+          "span": null,
+          "chinese_cognate_note": null
+        },
+        {
+          "word": "る",
+          "reading": "る",
+          "meaning": "着/了（存续助动词“り”的连体形）",
+          "span": null,
+          "chinese_cognate_note": null
+        },
+        {
+          "word": "を",
+          "reading": "を",
+          "meaning": "把/对（宾格助词，提示动作对象）",
+          "span": null,
+          "chinese_cognate_note": null
+        },
+        {
+          "word": "春立つ",
+          "reading": "はるたつ",
+          "meaning": "立春",
+          "span": null,
+          "chinese_cognate_note": null
+        },
+        {
+          "word": "今日",
+          "reading": "きょう",
+          "meaning": "今天",
+          "span": null,
+          "chinese_cognate_note": null
+        },
+        {
+          "word": "の",
+          "reading": "の",
+          "meaning": "的",
+          "span": null,
+          "chinese_cognate_note": null
+        },
+        {
+          "word": "風",
+          "reading": "かぜ",
+          "meaning": "风",
+          "span": null,
+          "chinese_cognate_note": null
+        },
+        {
+          "word": "や",
+          "reading": "や",
+          "meaning": "【切字/疑问】是...吗？（兼具咏叹与疑问）",
+          "span": null,
+          "chinese_cognate_note": null
+        },
+        {
+          "word": "解く",
+          "reading": "とく",
+          "meaning": "融化、解开",
+          "span": null,
+          "chinese_cognate_note": null
+        },
+        {
+          "word": "らむ",
+          "reading": "らむ",
+          "meaning": "大概正在...吧（现在推量助动词，连体形）",
+          "span": null,
+          "chinese_cognate_note": null
+        }
+      ],
+      "focus_highlight": [
+        22,
+        23
+      ]
+    },
+    {
+      "type": "literary_insight",
+      "content": "这首诗展示了**挂词（Kakekotoba）**与**缘语（Engo）**的高超技巧。\n\n1.  **挂词（双关语）**：\n    *   第一首诗中的「逢坂（おうさか）」既是地名，又隐含了「逢ふ」（相逢）的意思。\n    *   第三首诗中的「解く（とく）」既指冰的“融化”，也指衣带的“解开”（呼应开头的“袖”）。\n\n2.  **缘语（关联词）**：\n    *   第三首诗中，作者精心编织了一组与“水”相关的词网：「漬つ」（湿）、「掬ぶ」（捧水）、「水」、「凍る」（冻）、「解く」（融）。这种词汇的内在联系赋予了诗歌极强的凝聚力，就像编程中的对象属性一样紧密相关。",
+      "literary_device": null,
+      "chinese_parallel": "双关语 / 连类"
     }
   ],
   "reference_card": {
-    "point": "Kireji 'Ya' (や)",
-    "one_liner": "A poetic 'cutting word' used to create an emotional pause or highlight a specific image/concept.",
-    "example": "水上や (The headwaters!)",
+    "point": "切字「や」 (Kireji 'Ya')",
+    "one_liner": "诗歌中的感叹号，用于切断语流、强调名词或表达强烈咏叹。",
+    "example": "秋の形見や (Aki no katami ya) -> 秋天的遗物啊！",
     "see_also": [
-      "particle_ya_doubt",
-      "kireji_kana"
+      "particle_ya",
+      "syntax_kakarimusubi"
     ]
   },
   "forward_references": [
     {
-      "point": "kireji_kana",
-      "note": "In the next lesson, we will look at 'kana', another cutting word often used at the very end of a poem to express deep emotion."
+      "point": "助动词「なり」 (Nari)",
+      "note": "我们在第二首诗末尾看到了「なり」，表示传闻或声音。将在后续课程详细解析其不同用法。"
     }
   ]
 }

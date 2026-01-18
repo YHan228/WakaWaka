@@ -1,339 +1,424 @@
 {
   "lesson_id": "lesson_auxiliary_tari",
-  "lesson_title": "The Resultative State: Auxiliary たり (tari)",
-  "lesson_summary": "In previous lessons, we explored 'nu' and 'tsu' to mark the completion of an action. Today, we introduce 'tari', which describes the state that remains after an action is finished—essentially 'Action + Existence'.",
+  "lesson_title": "定格的风景：存续助动词「たり」",
+  "lesson_summary": "通过助动词「たり」学习如何描述动作发生后持续存在的状态，理解其「て＋あり」的逻辑构成。",
   "grammar_point": "auxiliary_tari",
   "grammar_explanation": {
-    "concept": "The auxiliary たり (tari) indicates that an action has been completed and its result currently persists (Resultative/Perfective). Logically, it functions like a 'status flag' in programming: it doesn't just say the function ran; it says the variable is now in a specific state.",
-    "formation": "It attaches to the Ren'yōkei (Continuative Form). Etymologically, it is a contraction of the particle 'te' (linking) + 'ari' (to exist). Thus, 'V-te ari' → 'tari'.",
+    "concept": "助动词「たり」主要表示“存续”（状态的持续）或“完了”（动作的完成）。它描述一个动作已经发生，且其结果目前仍然存在。相当于给视频按下了暂停键，定格在某个画面。",
+    "formation": "接续在动词的【连用形】之后。",
     "variations": [
-      "たり (tari) - Conclusive (ends sentence)",
-      "たる (taru) - Attributive (modifies noun)",
-      "たれ (tare) - Realized (used with 'ba' for 'since/because')"
+      "たら (未然形)",
+      "たり (连用形)",
+      "たり (终止形)",
+      "たる (连体形)",
+      "たれ (已然形)",
+      "たれ (命令形)"
     ],
-    "common_confusions": [
-      "vs. nu/tsu: 'nu' and 'tsu' focus on the moment of completion (the 'click'); 'tari' focuses on the state that follows (the 'on' light)."
-    ]
+    "common_confusions": []
   },
   "teaching_sequence": [
     {
       "type": "introduction",
-      "content": "You have already mastered the 'Perfective' auxiliaries *nu* and *tsu*, which signal that an action is finished. However, classical Japanese often wants to emphasize the *result* of that action. Think of the difference between 'The door closed' (Action) and 'The door is closed' (State). In Classical Japanese, this 'State of Being' is handled by the auxiliary たり (*tari*). For a Chinese speaker, think of this as a more formal, structural version of the aspect marker '了' (le) or '着' (zhe) when they imply a resulting state."
+      "content": "在之前的课程中，我们学习了表示过去的「き」和「けり」，以及表示动作完成的「ぬ」和「つ」。今天我们要引入一个新的维度：**状态的存续**。\n\n当我们想要描述“花开着”（而不是“花开了”或“花开过”），或者“雪积着”这种**动作结果持续存在**的状态时，就需要用到助动词「たり」。\n\n从逻辑上讲，「たり」源自「て」（接续助词）+「あり」（存在动词）。\n即：**做某事 + 维持存在 = 保持着做某事的状态**。\n\n让我们先看一首描绘春日野外盛景的诗歌。"
     },
     {
       "type": "poem_presentation",
-      "poem_id": "lapis_5a00ffed96c86e60",
+      "poem_id": "lapis_9daee56ff10e8f14",
       "display": {
-        "text_with_furigana": "<ruby>ゆふくれ<rt>夕暮</rt></ruby>に<ruby>いのち<rt>命</rt></ruby><ruby>かけ<rt>懸</rt></ruby>たる<ruby>かけろふ<rt>蜉蝣</rt></ruby>の<ruby>あり<rt>有</rt></ruby>や<ruby>あらず<rt>不有</rt></ruby>や<ruby>とふ<rt>問</rt></ruby>も<ruby>はかな<rt>果敢</rt></ruby>し",
-        "romaji": "yufukure ni, inochi kaketaru, kagerō no ari, ya arasu ya tou, mo hakanashi",
-        "translation": "In the evening dusk, the mayfly that has staked its life—to ask if it exists or not is itself a fleeting thing."
+        "text_with_furigana": "<ruby>山吹<rt>やまぶき</rt></ruby>の<ruby>咲<rt>さ</rt></ruby>き<ruby>たる<rt>たる</rt></ruby><ruby>野辺<rt>のべ</rt></ruby>の<ruby>坪菫<rt>つぼすみれ</rt></ruby>この<ruby>春<rt>はる</rt></ruby>の<ruby>雨<rt>あめ</rt></ruby>に<ruby>盛<rt>さか</rt></ruby>りなりけり",
+        "romaji": "yamabuki no sakitaru nobe no tsubosumire kono haru no ame ni sakari nari keri",
+        "translation": "棣棠花盛开的原野上，坪堇花在春雨的滋润下，正值全盛期啊。"
       },
       "vocabulary": [
         {
-          "word": "ゆふくれ",
-          "reading": "ゆふくれ",
-          "meaning": "evening dusk",
-          "span": [
-            0,
-            4
-          ],
-          "chinese_cognate_note": "夕暮 (xīmù) - identical meaning"
+          "word": "山吹",
+          "reading": "やまぶき",
+          "meaning": "棣棠花（黄色春花）",
+          "span": null,
+          "chinese_cognate_note": "植物名"
         },
         {
-          "word": "に",
-          "reading": "に",
-          "meaning": "at/in (time marker)",
-          "span": [
-            4,
-            5
-          ],
+          "word": "の",
+          "reading": "の",
+          "meaning": "主格助词（表示主语）",
+          "span": null,
           "chinese_cognate_note": null
         },
         {
-          "word": "いのち",
-          "reading": "いのち",
-          "meaning": "life",
-          "span": [
-            5,
-            8
-          ],
-          "chinese_cognate_note": "命 (mìng) - identical meaning"
-        },
-        {
-          "word": "かけ",
-          "reading": "かけ",
-          "meaning": "to hang/stake (Ren'yōkei of kaku)",
-          "span": [
-            8,
-            10
-          ],
-          "chinese_cognate_note": "懸 (xuán) - to hang/suspend"
+          "word": "咲き",
+          "reading": "さき",
+          "meaning": "开花（动词“咲く”的连用形）",
+          "span": null,
+          "chinese_cognate_note": "咲（笑/开花）"
         },
         {
           "word": "たる",
           "reading": "たる",
-          "meaning": "has (done) and remains so (tari in Rentaikei form)",
-          "span": [
-            10,
-            12
-          ],
-          "chinese_cognate_note": null
-        },
-        {
-          "word": "かけろふ",
-          "reading": "かけろふ",
-          "meaning": "mayfly",
-          "span": [
-            12,
-            16
-          ],
-          "chinese_cognate_note": "蜉蝣 (fúyóu) - identical meaning"
-        },
-        {
-          "word": "の",
-          "reading": "の",
-          "meaning": "subject marker (in relative clause)",
-          "span": [
-            16,
-            17
-          ],
-          "chinese_cognate_note": null
-        },
-        {
-          "word": "あり",
-          "reading": "あり",
-          "meaning": "exists/is",
-          "span": [
-            17,
-            19
-          ],
-          "chinese_cognate_note": "有 (yǒu) - identical meaning"
-        },
-        {
-          "word": "や",
-          "reading": "や",
-          "meaning": "question particle (or/whether)",
-          "span": [
-            19,
-            20
-          ],
-          "chinese_cognate_note": null
-        },
-        {
-          "word": "あらず",
-          "reading": "あらず",
-          "meaning": "does not exist",
+          "meaning": "～着/了（助动词“たり”的连体形，表示存续）",
           "span": null,
-          "chinese_cognate_note": "不 (bù) + 有 (yǒu)"
-        },
-        {
-          "word": "や",
-          "reading": "や",
-          "meaning": "question particle (or/whether)",
-          "span": [
-            23,
-            24
-          ],
           "chinese_cognate_note": null
         },
         {
-          "word": "とふ",
-          "reading": "とふ",
-          "meaning": "to ask",
-          "span": [
-            24,
-            26
-          ],
-          "chinese_cognate_note": "問 (wèn) - identical meaning"
-        },
-        {
-          "word": "も",
-          "reading": "も",
-          "meaning": "also/even",
-          "span": [
-            26,
-            27
-          ],
-          "chinese_cognate_note": null
-        },
-        {
-          "word": "はかなし",
-          "reading": "はかなし",
-          "meaning": "fleeting/transient",
-          "span": [
-            27,
-            31
-          ],
-          "chinese_cognate_note": null
-        }
-      ],
-      "focus_highlight": [
-        10,
-        12
-      ]
-    },
-    {
-      "type": "grammar_spotlight",
-      "content": "In the poem above, look at **かけたる** (*kake-taru*). \n1. **かけ** (*kake*) is the verb 'to stake/hang'.\n2. **たる** (*taru*) is the 'attributive' form of *tari*.\n\nBecause it is in the *Rentaikei* (attributive) form, it modifies the noun **かけろふ** (mayfly). It doesn't just mean the mayfly 'staked' its life in the past; it means the mayfly is currently in the state of having its life staked. \n\n**Logic Check:** \nAction: *kake* (stake) + Existence: *ari* = *kake-tari* (is in the state of having staked).",
-      "evidence": "See the poem above."
-    },
-    {
-      "type": "poem_presentation",
-      "poem_id": "lapis_be9670c7bd872601",
-      "display": {
-        "text_with_furigana": "<ruby>こふ<rt>恋</rt></ruby>と<ruby>いふ<rt>言</rt></ruby>はえもなつけたり<ruby>いふ<rt>言</rt></ruby>すへのたつきもなきはあかみなりけり",
-        "romaji": "ko futo iu, wa e mo natsuketari, ifusu e, no tatsuki mo naki, wa akaminari keri",
-        "translation": "That which we call 'love' has been given a name; yet having no way to describe its end, it is like a sudden bolt of thunder."
-      },
-      "vocabulary": [
-        {
-          "word": "こふ",
-          "reading": "こふ",
-          "meaning": "love",
-          "span": [
-            0,
-            2
-          ],
-          "chinese_cognate_note": "恋 (liàn) - identical meaning"
-        },
-        {
-          "word": "と",
-          "reading": "と",
-          "meaning": "quotative particle ('as')",
-          "span": [
-            2,
-            3
-          ],
-          "chinese_cognate_note": null
-        },
-        {
-          "word": "いふ",
-          "reading": "いふ",
-          "meaning": "to say/call",
-          "span": [
-            3,
-            5
-          ],
-          "chinese_cognate_note": "言 (yán) - identical meaning"
-        },
-        {
-          "word": "は",
-          "reading": "は",
-          "meaning": "topic marker",
-          "span": [
-            5,
-            6
-          ],
-          "chinese_cognate_note": null
-        },
-        {
-          "word": "えもなつけ",
-          "reading": "えもなつけ",
-          "meaning": "to give a name/to tame",
-          "span": [
-            6,
-            11
-          ],
-          "chinese_cognate_note": null
-        },
-        {
-          "word": "たり",
-          "reading": "たり",
-          "meaning": "has been (conclusive form)",
-          "span": [
-            11,
-            13
-          ],
-          "chinese_cognate_note": null
-        },
-        {
-          "word": "いふ",
-          "reading": "いふ",
-          "meaning": "to say",
-          "span": [
-            13,
-            15
-          ],
-          "chinese_cognate_note": "言 (yán)"
-        },
-        {
-          "word": "すへ",
-          "reading": "すへ",
-          "meaning": "end/future",
-          "span": [
-            15,
-            17
-          ],
-          "chinese_cognate_note": "末 (mò) - end/tip"
+          "word": "野辺",
+          "reading": "のべ",
+          "meaning": "原野、野外",
+          "span": null,
+          "chinese_cognate_note": "野边"
         },
         {
           "word": "の",
           "reading": "の",
-          "meaning": "possessive particle",
-          "span": [
-            17,
-            18
-          ],
+          "meaning": "的（格助词，表示修饰）",
+          "span": null,
           "chinese_cognate_note": null
         },
         {
-          "word": "たつき",
-          "reading": "たつき",
-          "meaning": "means/way",
-          "span": [
-            18,
-            21
-          ],
+          "word": "坪菫",
+          "reading": "つぼすみれ",
+          "meaning": "坪堇（一种紫色小花）",
+          "span": null,
           "chinese_cognate_note": null
         },
         {
-          "word": "も",
-          "reading": "も",
-          "meaning": "even/also",
-          "span": [
-            21,
-            22
-          ],
+          "word": "この",
+          "reading": "この",
+          "meaning": "这（连体词）",
+          "span": null,
           "chinese_cognate_note": null
         },
         {
-          "word": "なき",
-          "reading": "なき",
-          "meaning": "not existing",
-          "span": [
-            22,
-            24
-          ],
-          "chinese_cognate_note": "無 (wú) - identical meaning"
+          "word": "春",
+          "reading": "はる",
+          "meaning": "春天",
+          "span": null,
+          "chinese_cognate_note": "春"
         },
         {
-          "word": "は",
-          "reading": "は",
-          "meaning": "topic marker",
-          "span": [
-            24,
-            25
-          ],
+          "word": "の",
+          "reading": "の",
+          "meaning": "的（格助词）",
+          "span": null,
           "chinese_cognate_note": null
         },
         {
-          "word": "あかみなり",
-          "reading": "あかみなり",
-          "meaning": "thunder",
-          "span": [
-            25,
-            30
-          ],
+          "word": "雨",
+          "reading": "あめ",
+          "meaning": "雨",
+          "span": null,
+          "chinese_cognate_note": "雨"
+        },
+        {
+          "word": "に",
+          "reading": "に",
+          "meaning": "因……（格助词，表示原因/状态）",
+          "span": null,
+          "chinese_cognate_note": null
+        },
+        {
+          "word": "盛り",
+          "reading": "さかり",
+          "meaning": "全盛期、繁茂",
+          "span": null,
+          "chinese_cognate_note": "盛"
+        },
+        {
+          "word": "なり",
+          "reading": "なり",
+          "meaning": "是（断定助动词）",
+          "span": null,
           "chinese_cognate_note": null
         },
         {
           "word": "けり",
           "reading": "けり",
-          "meaning": "past/realization auxiliary",
-          "span": [
-            30,
-            32
-          ],
+          "meaning": "啊/了（咏叹助动词）",
+          "span": null,
+          "chinese_cognate_note": null
+        }
+      ],
+      "focus_highlight": [
+        7,
+        9
+      ]
+    },
+    {
+      "type": "grammar_spotlight",
+      "content": "### 核心语法：咲きたる (Saki-taru)\n\n1.  **结构分解**：\n    *   `咲き` (Saki)：动词 `咲く` (开花) 的**连用形**。\n    *   `たる` (Taru)：助动词 `たり` 的**连体形**（因为后面修饰名词 `野辺`）。\n\n2.  **语义分析**：\n    *   如果只用 `咲く` (Saku)，是“花开”这个动作。\n    *   如果是 `咲きぬ` (Sakinu)，强调“花开完了”这个变化。\n    *   **`咲きたる` (Sakitaru)** 则表示“花已经开了，并且**现在正处于盛开的状态**”。\n\n这就像中文里的“开**着**”或“盛开**的**”。它将动作转化为一种静态的背景描写。",
+      "evidence": "See the poem above."
+    },
+    {
+      "type": "poem_presentation",
+      "poem_id": "ogura100_7c46ea1f3fd90f1a",
+      "display": {
+        "text_with_furigana": "<ruby>山川<rt>やまがわ</rt></ruby>に<ruby>風<rt>かぜ</rt></ruby>の<ruby>架<rt>か</rt></ruby>け<ruby>たる<rt>たる</rt></ruby>しがらみは<ruby>流<rt>なが</rt></ruby>れも<ruby>敢<rt>あ</rt></ruby>へ<ruby>ぬ<rt>ぬ</rt></ruby><ruby>紅葉<rt>もみじ</rt></ruby>なりけり",
+        "romaji": "yamakawa ni kaze no kaketaru shigarami wa nagare mo aenu momiji nari keri",
+        "translation": "山涧中风架起的栅栏，原来是那流也流不走的红叶啊。"
+      },
+      "vocabulary": [
+        {
+          "word": "山川",
+          "reading": "やまがわ",
+          "meaning": "山涧、溪流",
+          "span": null,
+          "chinese_cognate_note": "山川"
+        },
+        {
+          "word": "に",
+          "reading": "に",
+          "meaning": "在（格助词，表示场所）",
+          "span": null,
+          "chinese_cognate_note": null
+        },
+        {
+          "word": "風",
+          "reading": "かぜ",
+          "meaning": "风",
+          "span": null,
+          "chinese_cognate_note": "风"
+        },
+        {
+          "word": "の",
+          "reading": "の",
+          "meaning": "主格助词（表示主语）",
+          "span": null,
+          "chinese_cognate_note": null
+        },
+        {
+          "word": "架け",
+          "reading": "かけ",
+          "meaning": "架设（动词“架く”的连用形）",
+          "span": null,
+          "chinese_cognate_note": "架"
+        },
+        {
+          "word": "たる",
+          "reading": "たる",
+          "meaning": "～着/了（助动词“たり”的连体形，表示存续）",
+          "span": null,
+          "chinese_cognate_note": null
+        },
+        {
+          "word": "しがらみ",
+          "reading": "しがらみ",
+          "meaning": "栅栏（阻挡水流的装置）",
+          "span": null,
+          "chinese_cognate_note": null
+        },
+        {
+          "word": "は",
+          "reading": "は",
+          "meaning": "提示助词（表示话题）",
+          "span": null,
+          "chinese_cognate_note": null
+        },
+        {
+          "word": "流れ",
+          "reading": "ながれ",
+          "meaning": "流动（动词连用形作名词）",
+          "span": null,
+          "chinese_cognate_note": "流"
+        },
+        {
+          "word": "も",
+          "reading": "も",
+          "meaning": "强调助词",
+          "span": null,
+          "chinese_cognate_note": null
+        },
+        {
+          "word": "敢へ",
+          "reading": "あえ",
+          "meaning": "能够/禁得住（动词“敢ふ”的未然形）",
+          "span": null,
+          "chinese_cognate_note": "敢"
+        },
+        {
+          "word": "ぬ",
+          "reading": "ぬ",
+          "meaning": "不（否定助动词“ず”的连体形）",
+          "span": null,
+          "chinese_cognate_note": null
+        },
+        {
+          "word": "紅葉",
+          "reading": "もみじ",
+          "meaning": "红叶",
+          "span": null,
+          "chinese_cognate_note": "红叶"
+        },
+        {
+          "word": "なり",
+          "reading": "なり",
+          "meaning": "是（断定助动词）",
+          "span": null,
+          "chinese_cognate_note": null
+        },
+        {
+          "word": "けり",
+          "reading": "けり",
+          "meaning": "啊（咏叹助动词）",
+          "span": null,
+          "chinese_cognate_note": null
+        }
+      ],
+      "focus_highlight": [
+        7,
+        9
+      ]
+    },
+    {
+      "type": "literary_insight",
+      "content": "### 视觉错觉与「見立て」 (Mitate)\n\n这首诗运用了**「見立て」 (Mitate)** 这一技巧，即“比喻”或“视觉错觉”。\n\n诗人看到溪流中堆积的红叶阻挡了水流，将其**比作**人工架设的“栅栏 (しがらみ)”。\n\n*   **风の架けたる** (Kaze no kaketaru)：风“架设好了”并且“保持着架设状态”。\n\n这里使用「たり」非常关键。如果用表示过去的「き」，则强调“风曾经架过”；但用「たり」，强调的是**眼前的景象**——那个由风构建的“红叶栅栏”此刻正稳稳地横跨在水面上。助动词「たり」帮助确立了这个比喻的**实体感**。",
+      "literary_device": "見立て (Mitate)",
+      "chinese_parallel": "比喻 / 拟人"
+    },
+    {
+      "type": "poem_presentation",
+      "poem_id": "lapis_045fd7792f5f9614",
+      "display": {
+        "text_with_furigana": "<ruby>宿<rt>やど</rt></ruby>りして<ruby>春<rt>はる</rt></ruby>の<ruby>山辺<rt>やまべ</rt></ruby>に<ruby>寝<rt>ね</rt></ruby><ruby>たる<rt>たる</rt></ruby><ruby>夜<rt>よ</rt></ruby>は<ruby>夢<rt>ゆめ</rt></ruby>の<ruby>内<rt>うち</rt></ruby>にも<ruby>花<rt>はな</rt></ruby>ぞ<ruby>散<rt>ち</rt></ruby>りける",
+        "romaji": "yadori shite haru no yamabe ni netaru yo wa yume no uchi ni mo hana zo chirikeru",
+        "translation": "借宿在春天的山边，在那入睡的夜晚，梦境之中花儿也在纷飞啊。"
+      },
+      "vocabulary": [
+        {
+          "word": "宿り",
+          "reading": "やどり",
+          "meaning": "借宿、旅宿",
+          "span": null,
+          "chinese_cognate_note": "宿"
+        },
+        {
+          "word": "し",
+          "reading": "し",
+          "meaning": "做（动词“す”的连用形）",
+          "span": null,
+          "chinese_cognate_note": null
+        },
+        {
+          "word": "て",
+          "reading": "て",
+          "meaning": "并且/之后（接续助词）",
+          "span": null,
+          "chinese_cognate_note": null
+        },
+        {
+          "word": "春",
+          "reading": "はる",
+          "meaning": "春天",
+          "span": null,
+          "chinese_cognate_note": "春"
+        },
+        {
+          "word": "の",
+          "reading": "の",
+          "meaning": "的（格助词）",
+          "span": null,
+          "chinese_cognate_note": null
+        },
+        {
+          "word": "山辺",
+          "reading": "やまべ",
+          "meaning": "山边",
+          "span": null,
+          "chinese_cognate_note": "山边"
+        },
+        {
+          "word": "に",
+          "reading": "に",
+          "meaning": "在（格助词）",
+          "span": null,
+          "chinese_cognate_note": null
+        },
+        {
+          "word": "寝",
+          "reading": "ね",
+          "meaning": "睡（动词“寝（ぬ）”的连用形）",
+          "span": null,
+          "chinese_cognate_note": "寝"
+        },
+        {
+          "word": "たる",
+          "reading": "たる",
+          "meaning": "～着（助动词“たり”的连体形）",
+          "span": null,
+          "chinese_cognate_note": null
+        },
+        {
+          "word": "夜",
+          "reading": "よ",
+          "meaning": "夜晚",
+          "span": null,
+          "chinese_cognate_note": "夜"
+        },
+        {
+          "word": "は",
+          "reading": "は",
+          "meaning": "关于（提示助词）",
+          "span": null,
+          "chinese_cognate_note": null
+        },
+        {
+          "word": "夢",
+          "reading": "ゆめ",
+          "meaning": "梦",
+          "span": null,
+          "chinese_cognate_note": "梦"
+        },
+        {
+          "word": "の",
+          "reading": "の",
+          "meaning": "的（格助词）",
+          "span": null,
+          "chinese_cognate_note": null
+        },
+        {
+          "word": "内",
+          "reading": "うち",
+          "meaning": "里面",
+          "span": null,
+          "chinese_cognate_note": "内"
+        },
+        {
+          "word": "に",
+          "reading": "に",
+          "meaning": "在（格助词）",
+          "span": null,
+          "chinese_cognate_note": null
+        },
+        {
+          "word": "も",
+          "reading": "も",
+          "meaning": "也（并列助词）",
+          "span": null,
+          "chinese_cognate_note": null
+        },
+        {
+          "word": "花",
+          "reading": "はな",
+          "meaning": "花（特指樱花）",
+          "span": null,
+          "chinese_cognate_note": "花"
+        },
+        {
+          "word": "ぞ",
+          "reading": "ぞ",
+          "meaning": "（强调系助词）",
+          "span": null,
+          "chinese_cognate_note": null
+        },
+        {
+          "word": "散り",
+          "reading": "ちり",
+          "meaning": "散落（动词“散る”的连用形）",
+          "span": null,
+          "chinese_cognate_note": "散"
+        },
+        {
+          "word": "ける",
+          "reading": "ける",
+          "meaning": "啊/了（咏叹助动词“けり”的连体形，因“ぞ”而结句）",
+          "span": null,
           "chinese_cognate_note": null
         }
       ],
@@ -343,212 +428,30 @@
       ]
     },
     {
-      "type": "contrast_example",
-      "content": "In Poem 2, we see **なつけたり** (*natsuketari*). Here, *tari* is in its conclusive form (*Shūshikei*). It ends the first thought. \n\nIf the poet used **なつけつ** (*natsuketsu* - using the perfective *tsu*), it would mean 'Someone finished naming it.' \nBy using **なつけたり** (*natsuketari*), it means 'It has been named (and that name sticks to it now).'"
-    },
-    {
-      "type": "poem_presentation",
-      "poem_id": "lapis_644a8505cb283fc4",
-      "display": {
-        "text_with_furigana": "<ruby>近江<rt>おうみ</rt></ruby>のや<ruby>かかみ<rt>鏡</rt></ruby>の<ruby>山<rt>やま</rt></ruby>をたてたれはかねてそ<ruby>見<rt>み</rt></ruby>ゆる<ruby>君<rt>きみ</rt></ruby>が<ruby>ちとせ<rt>千歳</rt></ruby>は",
-        "romaji": "oumi no ya, kakami no yama o, tatetare ha, kanete so miyuru, kimi ga chitose ha",
-        "translation": "Since Mount Kagami in Omi has been stood up (like a mirror), I can see your thousand-year life in advance."
-      },
-      "vocabulary": [
-        {
-          "word": "近江",
-          "reading": "おうみ",
-          "meaning": "Omi Province (place name)",
-          "span": [
-            0,
-            2
-          ],
-          "chinese_cognate_note": null
-        },
-        {
-          "word": "の",
-          "reading": "の",
-          "meaning": "possessive particle",
-          "span": [
-            2,
-            3
-          ],
-          "chinese_cognate_note": null
-        },
-        {
-          "word": "や",
-          "reading": "や",
-          "meaning": "interjection/particle",
-          "span": [
-            3,
-            4
-          ],
-          "chinese_cognate_note": null
-        },
-        {
-          "word": "かかみ",
-          "reading": "かかみ",
-          "meaning": "mirror",
-          "span": [
-            4,
-            7
-          ],
-          "chinese_cognate_note": "鏡 (jìng) - identical meaning"
-        },
-        {
-          "word": "の",
-          "reading": "の",
-          "meaning": "possessive particle",
-          "span": [
-            7,
-            8
-          ],
-          "chinese_cognate_note": null
-        },
-        {
-          "word": "山",
-          "reading": "やま",
-          "meaning": "mountain",
-          "span": [
-            8,
-            9
-          ],
-          "chinese_cognate_note": "山 (shān) - identical meaning"
-        },
-        {
-          "word": "を",
-          "reading": "を",
-          "meaning": "object marker",
-          "span": [
-            9,
-            10
-          ],
-          "chinese_cognate_note": null
-        },
-        {
-          "word": "たて",
-          "reading": "たて",
-          "meaning": "to stand up/erect (Ren'yōkei)",
-          "span": [
-            10,
-            12
-          ],
-          "chinese_cognate_note": "立 (lì) - identical meaning"
-        },
-        {
-          "word": "たれ",
-          "reading": "たれ",
-          "meaning": "has been (tari in Izentei form)",
-          "span": [
-            12,
-            14
-          ],
-          "chinese_cognate_note": null
-        },
-        {
-          "word": "は",
-          "reading": "は",
-          "meaning": "since/because (when following Izentei)",
-          "span": [
-            14,
-            15
-          ],
-          "chinese_cognate_note": null
-        },
-        {
-          "word": "かねて",
-          "reading": "かねて",
-          "meaning": "beforehand/already",
-          "span": [
-            15,
-            18
-          ],
-          "chinese_cognate_note": null
-        },
-        {
-          "word": "そ",
-          "reading": "そ",
-          "meaning": "emphasis particle (zo)",
-          "span": [
-            18,
-            19
-          ],
-          "chinese_cognate_note": null
-        },
-        {
-          "word": "見ゆる",
-          "reading": "みゆる",
-          "meaning": "can be seen/appears",
-          "span": [
-            19,
-            22
-          ],
-          "chinese_cognate_note": "見 (jiàn) - identical meaning"
-        },
-        {
-          "word": "君",
-          "reading": "きみ",
-          "meaning": "you (lord)",
-          "span": [
-            22,
-            23
-          ],
-          "chinese_cognate_note": "君 (jūn) - identical meaning"
-        },
-        {
-          "word": "が",
-          "reading": "が",
-          "meaning": "possessive particle",
-          "span": null,
-          "chinese_cognate_note": null
-        },
-        {
-          "word": "ちとせ",
-          "reading": "ちとせ",
-          "meaning": "thousand years",
-          "span": [
-            24,
-            27
-          ],
-          "chinese_cognate_note": "千歳 (qiānsuì) - identical meaning"
-        },
-        {
-          "word": "は",
-          "reading": "は",
-          "meaning": "topic marker",
-          "span": [
-            27,
-            28
-          ],
-          "chinese_cognate_note": null
-        }
-      ],
-      "focus_highlight": [
-        12,
-        14
-      ]
-    },
-    {
       "type": "comprehension_check",
-      "question": "In Poem 3, the phrase is 'たてたれば' (tate-tare-ba). Based on your knowledge of 'ba' from previous lessons, why is 'tari' written as 'tare' here?",
-      "answer": "Because 'ba' (meaning 'since/because') requires the Izentei (Realized) form of the preceding word. 'Tare' is the Izentei form of 'tari'.",
-      "hint": "Recall the 'Logic of Ba' from Unit 2. What form must a word take before 'ba' to mean 'because'?"
+      "question": "在第三首诗中，「寝たる夜」（netaru yo）的意思是什么？",
+      "answer": "睡着了的夜晚 / 正在睡觉的夜晚",
+      "hint": "「寝（ね）」是动词“睡”的连用形，「たる」表示状态的存续。不是“睡过了”，而是“处于睡眠状态中”。"
+    },
+    {
+      "type": "summary",
+      "content": "本课要点回顾：\n\n1.  **功能**：「たり」表示动作结果的存续（～着）或完了（～了）。\n2.  **逻辑**：源自「て」（连接）+「あり」（存在）。\n3.  **接续**：接在动词的**连用形**之后。\n4.  **语感**：它比单纯的过去式更具画面感，像是一张定格的照片，描述眼前持续存在的景象（如盛开的花、架着的栅栏、睡着的夜晚）。"
     }
   ],
   "reference_card": {
-    "point": "Auxiliary たり (tari)",
-    "one_liner": "Indicates a state resulting from a completed action (Action + Existence).",
-    "example": "なつけたり (natsuketari) = Has been named (and remains named).",
+    "point": "助动词「たり」",
+    "one_liner": "表示动作结果的存续（～着）或完了。",
+    "example": "咲きたる花 (Saki-taru hana) - 盛开着的花",
     "see_also": [
       "auxiliary_nu",
       "auxiliary_tsu",
-      "auxiliary_nari"
+      "conjugation_renyokei"
     ]
   },
   "forward_references": [
     {
-      "point": "そ (so/zo) ... 見ゆる (miyuru)",
-      "note": "Notice how 'so' changes the ending of the verb to 'yuru'. This is a major rule called Kakari-Musubi, which we will cover in Unit 7."
+      "point": "推量助动词「らむ」",
+      "note": "我们将在未来学习如何推测眼前未见的现在的状态。"
     }
   ]
 }

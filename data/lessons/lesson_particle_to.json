@@ -1,212 +1,365 @@
 {
   "lesson_id": "lesson_particle_to",
-  "lesson_title": "The Logical Wrapper: Particle と (to)",
-  "lesson_summary": "In this final lesson of Unit 1, we introduce the particle と (to), which acts as a 'logical wrapper' or 'quotative marker,' defining the content of thoughts, names, or comparisons.",
+  "lesson_title": "助词「と」：连接、引用与变化",
+  "lesson_summary": "本课讲解格助词「と」的三大核心功能：并列列举（和）、引用/比喻的内容标记（视为...）、以及变化的结果（成为...）。",
   "grammar_point": "particle_to",
   "grammar_explanation": {
-    "concept": "The particle と (to) functions like quotation marks in English or the word '说'/'认为' in Chinese logic. It 'wraps' a phrase or a noun to indicate that it is the content of a verb (like 'thinking', 'saying', or 'becoming'). In programming terms, it converts a sequence of characters into a string literal to be passed as an argument to a function.",
-    "formation": "[Content/Noun] + と + [Verb of cognition/action]",
+    "concept": "格助词「と」的多重功能",
+    "formation": "体言（名词） + と",
     "variations": [
-      "Quotative: Marks what someone thinks or says.",
-      "Comparative/Resultative: Marks what something is 'as' or what it 'becomes'."
+      "AとBと (A和B)",
+      "...と見る (视为...)",
+      "...となる (变为...)"
     ],
     "common_confusions": [
-      "vs. に (ni): に marks a destination or target; と marks the identity or content. If you change INTO something, use に; if you act AS something, use と."
+      "接续助词「ど」：在古文中常写作不带浊点的「と」。区别在于：本课的格助词「と」通常接在名词或终止形后；而表示“虽然”的「ど」接在动词已然形（通常以-e段音结尾）之后。"
     ]
   },
   "teaching_sequence": [
     {
       "type": "introduction",
-      "content": "You have already mastered the 'tags' for subjects (は), objects (を), and locations (に). However, language often requires us to describe abstract thoughts or comparisons. How do we say 'I think *that*...' or 'It looks *like*...'? In Classical Japanese, we use the particle と (to) to wrap these ideas. Think of it as a logical container that tells the reader: 'Everything inside this container is the specific content of the action that follows.'"
+      "content": "在之前的课程中，我们学习了定位主语的「が/の」、定位地点的「に」以及定位对象的「を」。\n\n今天我们引入**格助词「と」**。在古典和歌中，它不仅表示简单的“和”，还像编程中的指针一样，指向“引用的内容”或“变化的目标”。我们将通过三首诗分别观察它的三种不同用法。"
     },
     {
       "type": "poem_presentation",
-      "poem_id": "lapis_54f700598246bf9c",
+      "poem_id": "ogura100_e577ea67c50fc78c",
       "display": {
-        "text_with_furigana": "<ruby>秋風<rt>あきかぜ</rt></ruby>に<ruby>山<rt>やま</rt></ruby>のこのはのうつろへは<ruby>人<rt>ひと</rt></ruby>の<ruby>心<rt>こころ</rt></ruby>もいかかとそ<ruby>思<rt>おも</rt></ruby>ふ",
-        "romaji": "akikaze ni, yama no konoha no, utsuroe wa, hito no kokoro mo, ika ka to so omou",
-        "translation": "When the autumn wind blows and the mountain leaves change color, I wonder: what will become of the human heart?"
+        "text_with_furigana": "<ruby>朝<rt>あさ</rt></ruby>ぼらけ<ruby>有明<rt>ありあけ</rt></ruby>の<ruby>月<rt>つき</rt></ruby><span class='highlight'>と</span><ruby>見<rt>み</rt></ruby>るまでに<ruby>吉野<rt>よしの</rt></ruby>の<ruby>里<rt>さと</rt></ruby>に<ruby>降<rt>ふ</rt></ruby>れる<ruby>白雪<rt>しらゆき</rt></ruby>",
+        "romaji": "asaborake ariake no tsuki to miru made ni yoshino no sato ni fureru shirayuki",
+        "translation": "黎明时分，吉野山村白雪皑皑，那光景竟让人误以为是拂晓的月光。"
       },
       "vocabulary": [
         {
-          "word": "秋風",
-          "reading": "あきかぜ",
-          "meaning": "autumn wind",
-          "span": [
-            0,
-            2
-          ],
-          "chinese_cognate_note": "Identical to Chinese 秋风."
-        },
-        {
-          "word": "に",
-          "reading": "に",
-          "meaning": "at/by (particle marking cause/time)",
-          "span": [
-            2,
-            3
-          ],
+          "word": "朝ぼらけ",
+          "reading": "あさぼらけ",
+          "meaning": "黎明，天色微明",
+          "span": null,
           "chinese_cognate_note": null
         },
         {
-          "word": "山",
-          "reading": "やま",
-          "meaning": "mountain",
-          "span": [
-            3,
-            4
-          ],
-          "chinese_cognate_note": "Identical to Chinese 山."
+          "word": "有明",
+          "reading": "ありあけ",
+          "meaning": "拂晓时仍挂在天边的月亮",
+          "span": null,
+          "chinese_cognate_note": "有明"
         },
         {
           "word": "の",
           "reading": "の",
-          "meaning": "of (possessive particle)",
-          "span": [
-            4,
-            5
-          ],
+          "meaning": "（助词）的",
+          "span": null,
           "chinese_cognate_note": null
         },
         {
-          "word": "このは",
-          "reading": "このは",
-          "meaning": "leaves of trees",
-          "span": [
-            5,
-            8
-          ],
-          "chinese_cognate_note": "木之叶 (leaves of wood/trees)."
-        },
-        {
-          "word": "の",
-          "reading": "の",
-          "meaning": "of (possessive particle)",
-          "span": [
-            8,
-            9
-          ],
-          "chinese_cognate_note": null
-        },
-        {
-          "word": "うつろ",
-          "reading": "うつろ",
-          "meaning": "to change color / fade / be transient",
-          "span": [
-            9,
-            12
-          ],
-          "chinese_cognate_note": null
-        },
-        {
-          "word": "へ",
-          "reading": "へ",
-          "meaning": "direction/towards (particle)",
-          "span": [
-            12,
-            13
-          ],
-          "chinese_cognate_note": null
-        },
-        {
-          "word": "は",
-          "reading": "は",
-          "meaning": "topic/contrast marker",
-          "span": [
-            13,
-            14
-          ],
-          "chinese_cognate_note": null
-        },
-        {
-          "word": "人",
-          "reading": "ひと",
-          "meaning": "person/human",
-          "span": [
-            14,
-            15
-          ],
-          "chinese_cognate_note": "Identical to Chinese 人."
-        },
-        {
-          "word": "の",
-          "reading": "の",
-          "meaning": "of (possessive particle)",
-          "span": [
-            15,
-            16
-          ],
-          "chinese_cognate_note": null
-        },
-        {
-          "word": "心",
-          "reading": "こころ",
-          "meaning": "heart/mind",
-          "span": [
-            16,
-            17
-          ],
-          "chinese_cognate_note": "Identical to Chinese 心."
-        },
-        {
-          "word": "も",
-          "reading": "も",
-          "meaning": "also/too",
-          "span": [
-            17,
-            18
-          ],
-          "chinese_cognate_note": null
-        },
-        {
-          "word": "いか",
-          "reading": "いか",
-          "meaning": "how/in what way",
-          "span": [
-            18,
-            20
-          ],
-          "chinese_cognate_note": null
-        },
-        {
-          "word": "か",
-          "reading": "か",
-          "meaning": "question marker",
-          "span": [
-            20,
-            21
-          ],
-          "chinese_cognate_note": null
+          "word": "月",
+          "reading": "つき",
+          "meaning": "月亮",
+          "span": null,
+          "chinese_cognate_note": "月"
         },
         {
           "word": "と",
           "reading": "と",
-          "meaning": "quotative particle (wrapping the thought)",
-          "span": [
-            21,
-            22
-          ],
+          "meaning": "（助词）表引用/比喻内容：...地（看作）",
+          "span": null,
           "chinese_cognate_note": null
         },
         {
-          "word": "そ",
-          "reading": "そ",
-          "meaning": "emphasis particle",
-          "span": [
-            22,
-            23
-          ],
+          "word": "見る",
+          "reading": "みる",
+          "meaning": "看，视为",
+          "span": null,
+          "chinese_cognate_note": "见/视"
+        },
+        {
+          "word": "まで",
+          "reading": "まで",
+          "meaning": "（助词）程度：甚至到了...的地步",
+          "span": null,
           "chinese_cognate_note": null
         },
         {
-          "word": "思ふ",
-          "reading": "おもう",
-          "meaning": "to think",
-          "span": [
-            23,
-            25
-          ],
-          "chinese_cognate_note": "Cognate with Chinese 思."
+          "word": "に",
+          "reading": "に",
+          "meaning": "（助词）表示状态/程度的基准",
+          "span": null,
+          "chinese_cognate_note": null
+        },
+        {
+          "word": "吉野",
+          "reading": "よしの",
+          "meaning": "吉野（地名）",
+          "span": null,
+          "chinese_cognate_note": null
+        },
+        {
+          "word": "の",
+          "reading": "の",
+          "meaning": "（助词）的",
+          "span": null,
+          "chinese_cognate_note": null
+        },
+        {
+          "word": "里",
+          "reading": "さと",
+          "meaning": "村落",
+          "span": null,
+          "chinese_cognate_note": "里"
+        },
+        {
+          "word": "に",
+          "reading": "に",
+          "meaning": "（助词）在（地点）",
+          "span": null,
+          "chinese_cognate_note": null
+        },
+        {
+          "word": "降れる",
+          "reading": "ふれる",
+          "meaning": "降下的（完了助动词“り”的连体形）",
+          "span": null,
+          "chinese_cognate_note": null
+        },
+        {
+          "word": "白雪",
+          "reading": "しらゆき",
+          "meaning": "白雪",
+          "span": null,
+          "chinese_cognate_note": "白雪"
+        }
+      ],
+      "focus_highlight": [
+        8,
+        9
+      ]
+    },
+    {
+      "type": "grammar_spotlight",
+      "content": "在这句「月と見る」（tsuki to miru）中，「と」的作用相当于引号。\n\n*   **结构**：名词 + と + 动词（如：见、思、言）\n*   **含义**：把...看作... / 认为是... / 说是...\n\n这里诗人并没有真的看到月亮，而是说地上的雪太白太亮，以至于他将其“看作”（と見る）了月光。",
+      "evidence": "See the poem above."
+    },
+    {
+      "type": "literary_insight",
+      "content": "这种将一物“误看”为另一物的修辞手法，在和歌中称为**「見立て」**（Mitate，拟态/比喻）。\n\n这与中国唐诗中李白的《静夜思》有着异曲同工之妙。李白将月光疑为霜（疑是地上霜），而这首和歌将地上的雪疑为月光（月と見る）。两者都利用了白色光泽的视觉混淆来营造清冷的意境。",
+      "literary_device": "見立て (Visual Metaphor/Simile)",
+      "chinese_parallel": "李白《静夜思》：床前明月光，疑是地上霜。（月光↔霜雪的视觉互换）"
+    },
+    {
+      "type": "poem_presentation",
+      "poem_id": "lapis_7b78499c0c554b60",
+      "display": {
+        "text_with_furigana": "<ruby>言問<rt>ことと</rt></ruby>はむ<ruby>野島<rt>のじま</rt></ruby>が<ruby>崎<rt>さき</rt></ruby>の<ruby>海人衣<rt>あまころも</rt></ruby><ruby>波<rt>なみ</rt></ruby><span class='highlight'>と</span><ruby>月<rt>つき</rt></ruby><span class='highlight'>と</span>にいかが<ruby>萎<rt>しを</rt></ruby>るる",
+        "romaji": "koto towa mu nojima ga saki no amakoromo nami to tsuki to ni ikaga shioruru",
+        "translation": "我想问问野岛崎渔夫的衣裳：在这波浪与月光之中，究竟是被哪一样打湿了呢？"
+      },
+      "vocabulary": [
+        {
+          "word": "言問は",
+          "reading": "こととわ",
+          "meaning": "询问（未然形）",
+          "span": null,
+          "chinese_cognate_note": null
+        },
+        {
+          "word": "む",
+          "reading": "む",
+          "meaning": "（助动词）想要...（意志）",
+          "span": null,
+          "chinese_cognate_note": null
+        },
+        {
+          "word": "野島が崎",
+          "reading": "のじまがさき",
+          "meaning": "野岛崎（地名）",
+          "span": null,
+          "chinese_cognate_note": null
+        },
+        {
+          "word": "の",
+          "reading": "の",
+          "meaning": "（助词）的",
+          "span": null,
+          "chinese_cognate_note": null
+        },
+        {
+          "word": "海人衣",
+          "reading": "あまころも",
+          "meaning": "渔夫的衣服",
+          "span": null,
+          "chinese_cognate_note": null
+        },
+        {
+          "word": "波",
+          "reading": "なみ",
+          "meaning": "波浪",
+          "span": null,
+          "chinese_cognate_note": "波"
+        },
+        {
+          "word": "と",
+          "reading": "と",
+          "meaning": "（助词）和",
+          "span": null,
+          "chinese_cognate_note": null
+        },
+        {
+          "word": "月",
+          "reading": "つき",
+          "meaning": "月亮/月光",
+          "span": null,
+          "chinese_cognate_note": "月"
+        },
+        {
+          "word": "と",
+          "reading": "と",
+          "meaning": "（助词）和",
+          "span": null,
+          "chinese_cognate_note": null
+        },
+        {
+          "word": "に",
+          "reading": "に",
+          "meaning": "（助词）被... / 因为...",
+          "span": null,
+          "chinese_cognate_note": null
+        },
+        {
+          "word": "いかが",
+          "reading": "いかが",
+          "meaning": "如何/为什么",
+          "span": null,
+          "chinese_cognate_note": null
+        },
+        {
+          "word": "萎るる",
+          "reading": "しをるる",
+          "meaning": "濡湿/凋零（连体形）",
+          "span": null,
+          "chinese_cognate_note": null
+        }
+      ],
+      "focus_highlight": [
+        19,
+        23
+      ]
+    },
+    {
+      "type": "grammar_spotlight",
+      "content": "观察短语「波と月とに」（nami to tsuki to ni）：\n\n*   **结构**：A と B と\n*   **含义**：A和B\n\n现代日语通常只说「AとB」，但在古典诗歌中，为了韵律平衡或强调，第二个名词后也常加「と」。这里的「に」表示原因（被...打湿）。诗人想表达：衣服湿了，是因为海里的“波”，还是因为洒下的“月”（泪/露）呢？",
+      "evidence": "See the poem above."
+    },
+    {
+      "type": "comprehension_check",
+      "question": "在短语「花と紅葉と」中，语法结构与本课哪首诗的用法最相似？",
+      "answer": "第二首（野岛崎）",
+      "hint": "注意观察「と」出现了几次。这是一种并列结构。"
+    },
+    {
+      "type": "poem_presentation",
+      "poem_id": "ogura100_9da8649ab2efb04b",
+      "display": {
+        "text_with_furigana": "<ruby>筑波嶺<rt>つくばね</rt></ruby>の<ruby>峰<rt>みね</rt></ruby>より<ruby>落<rt>お</rt></ruby>つる<ruby>男女川<rt>みなのがわ</rt></ruby><ruby>恋<rt>こい</rt></ruby>ぞつもりて<ruby>淵<rt>ふち</rt></ruby><span class='highlight'>と</span>なりぬる",
+        "romaji": "tsukubane no mine yori otsuru minanogawa koi zo tsumorite fuchi to narinuru",
+        "translation": "从筑波山峰落下的男女川啊，我的恋情也如那水流积聚，终成深渊。"
+      },
+      "vocabulary": [
+        {
+          "word": "筑波嶺",
+          "reading": "つくばね",
+          "meaning": "筑波山",
+          "span": null,
+          "chinese_cognate_note": null
+        },
+        {
+          "word": "の",
+          "reading": "の",
+          "meaning": "（助词）的",
+          "span": null,
+          "chinese_cognate_note": null
+        },
+        {
+          "word": "峰",
+          "reading": "みね",
+          "meaning": "山峰",
+          "span": null,
+          "chinese_cognate_note": "峰"
+        },
+        {
+          "word": "より",
+          "reading": "より",
+          "meaning": "（助词）从...",
+          "span": null,
+          "chinese_cognate_note": null
+        },
+        {
+          "word": "落つる",
+          "reading": "おつる",
+          "meaning": "落下（连体形）",
+          "span": null,
+          "chinese_cognate_note": "落"
+        },
+        {
+          "word": "男女川",
+          "reading": "みなのがわ",
+          "meaning": "男女川（河名）",
+          "span": null,
+          "chinese_cognate_note": null
+        },
+        {
+          "word": "恋",
+          "reading": "こい",
+          "meaning": "恋情",
+          "span": null,
+          "chinese_cognate_note": "恋"
+        },
+        {
+          "word": "ぞ",
+          "reading": "ぞ",
+          "meaning": "（系助词）强调语气",
+          "span": null,
+          "chinese_cognate_note": null
+        },
+        {
+          "word": "つもり",
+          "reading": "つもり",
+          "meaning": "积聚/堆积",
+          "span": null,
+          "chinese_cognate_note": "积"
+        },
+        {
+          "word": "て",
+          "reading": "て",
+          "meaning": "（助词）表示顺接，然后",
+          "span": null,
+          "chinese_cognate_note": null
+        },
+        {
+          "word": "淵",
+          "reading": "ふち",
+          "meaning": "深渊/深潭",
+          "span": null,
+          "chinese_cognate_note": "渊"
+        },
+        {
+          "word": "と",
+          "reading": "と",
+          "meaning": "（助词）表示变化的结果：成为...",
+          "span": null,
+          "chinese_cognate_note": null
+        },
+        {
+          "word": "なり",
+          "reading": "なり",
+          "meaning": "变成/成为",
+          "span": null,
+          "chinese_cognate_note": null
+        },
+        {
+          "word": "ぬる",
+          "reading": "ぬる",
+          "meaning": "（助动词）已经...了（完了）",
+          "span": null,
+          "chinese_cognate_note": null
         }
       ],
       "focus_highlight": [
@@ -216,407 +369,37 @@
     },
     {
       "type": "grammar_spotlight",
-      "content": "In the poem above, look at the phrase **いかか と 思ふ** (ika ka to omou). \n\n1. **いかか (ika ka)**: 'How?' (a question).\n2. **と (to)**: The wrapper.\n3. **思ふ (omou)**: 'To think'.\n\nThe particle **と** tells us exactly *what* is being thought. Without it, the sentence would be a jumble of nouns. It functions exactly like the Chinese '...之想' or '认为...'. It captures the internal state 'How?' and presents it to the verb 'think'.",
+      "content": "「淵となる」（fuchi to naru）意为“变成深渊”。\n\n*   **结构**：名词 + と + なる\n*   **逻辑**：状态 A $\\to$ 状态 B。这里的「と」标记了变化后的最终状态（B）。\n\n这首诗利用了物理上的“水流积聚成渊”来比喻“恋情积深成痴”。",
       "evidence": "See the poem above."
     },
     {
-      "type": "poem_presentation",
-      "poem_id": "lapis_b8e6240d655af0e3",
-      "display": {
-        "text_with_furigana": "<ruby>秋<rt>あき</rt></ruby>くれは<ruby>月<rt>つき</rt></ruby>のかつらの<ruby>みや<rt>みや</rt></ruby>はなるひかりを<ruby>花<rt>はな</rt></ruby>とちらすはかりを",
-        "romaji": "aki kure wa, tsuki no katsura no, miya wa naru, hikari o hana to, chirasu hakari o",
-        "translation": "As autumn ends, the light from the moon's laurel palace scatters just like falling flower petals."
-      },
-      "vocabulary": [
-        {
-          "word": "秋",
-          "reading": "あき",
-          "meaning": "autumn",
-          "span": [
-            0,
-            1
-          ],
-          "chinese_cognate_note": "Identical to Chinese 秋."
-        },
-        {
-          "word": "くれ",
-          "reading": "くれ",
-          "meaning": "to end/to darken",
-          "span": [
-            1,
-            3
-          ],
-          "chinese_cognate_note": "Cognate with Chinese 暮 (evening/end)."
-        },
-        {
-          "word": "は",
-          "reading": "は",
-          "meaning": "topic marker",
-          "span": [
-            3,
-            4
-          ],
-          "chinese_cognate_note": null
-        },
-        {
-          "word": "月",
-          "reading": "つき",
-          "meaning": "moon",
-          "span": [
-            4,
-            5
-          ],
-          "chinese_cognate_note": "Identical to Chinese 月."
-        },
-        {
-          "word": "の",
-          "reading": "の",
-          "meaning": "of (possessive)",
-          "span": [
-            5,
-            6
-          ],
-          "chinese_cognate_note": null
-        },
-        {
-          "word": "かつら",
-          "reading": "かつら",
-          "meaning": "Japanese Judas-tree / Laurel",
-          "span": [
-            6,
-            9
-          ],
-          "chinese_cognate_note": "Refers to the mythical 桂 tree on the moon."
-        },
-        {
-          "word": "の",
-          "reading": "の",
-          "meaning": "of (possessive)",
-          "span": [
-            9,
-            10
-          ],
-          "chinese_cognate_note": null
-        },
-        {
-          "word": "みや",
-          "reading": "みや",
-          "meaning": "palace",
-          "span": [
-            10,
-            12
-          ],
-          "chinese_cognate_note": "Cognate with Chinese 宫."
-        },
-        {
-          "word": "は",
-          "reading": "は",
-          "meaning": "topic marker",
-          "span": [
-            12,
-            13
-          ],
-          "chinese_cognate_note": null
-        },
-        {
-          "word": "なる",
-          "reading": "なる",
-          "meaning": "to be / to become",
-          "span": [
-            13,
-            15
-          ],
-          "chinese_cognate_note": null
-        },
-        {
-          "word": "ひかり",
-          "reading": "ひかり",
-          "meaning": "light",
-          "span": [
-            15,
-            18
-          ],
-          "chinese_cognate_note": "Cognate with Chinese 光."
-        },
-        {
-          "word": "を",
-          "reading": "を",
-          "meaning": "object marker",
-          "span": [
-            18,
-            19
-          ],
-          "chinese_cognate_note": null
-        },
-        {
-          "word": "花",
-          "reading": "はな",
-          "meaning": "flower",
-          "span": [
-            19,
-            20
-          ],
-          "chinese_cognate_note": "Identical to Chinese 花."
-        },
-        {
-          "word": "と",
-          "reading": "と",
-          "meaning": "as / in the manner of (comparison)",
-          "span": [
-            20,
-            21
-          ],
-          "chinese_cognate_note": null
-        },
-        {
-          "word": "ちらす",
-          "reading": "ちらす",
-          "meaning": "to scatter",
-          "span": [
-            21,
-            24
-          ],
-          "chinese_cognate_note": "Cognate with Chinese 散."
-        },
-        {
-          "word": "はかり",
-          "reading": "はかり",
-          "meaning": "only / to the extent of",
-          "span": [
-            24,
-            27
-          ],
-          "chinese_cognate_note": null
-        },
-        {
-          "word": "を",
-          "reading": "を",
-          "meaning": "object marker / exclamation",
-          "span": [
-            27,
-            28
-          ],
-          "chinese_cognate_note": null
-        }
-      ],
-      "focus_highlight": [
-        20,
-        21
-      ]
+      "type": "literary_insight",
+      "content": "这首诗的前半部分（从“筑波岭”到“男女川”）其实是为了引出后半部分“恋情积聚”而做的铺垫。这种修辞手法叫**「序詞」**（Jokotoba）。\n\n就像中国古诗中的“起兴”（如《关雎》的“关关雎鸠，在河之洲”引出“窈窕淑女”），诗人先描绘自然界水流汇聚的景象，以此自然过渡到内心深沉的爱恋。水流变深渊，正如浅淡的喜欢变成了无法自拔的深爱。",
+      "literary_device": "序詞 (Preface Phrase)",
+      "chinese_parallel": "《诗经》“起兴”：先言他物以引起所咏之词。如“思君如流水，何有穷已时”。"
     },
     {
       "type": "contrast_example",
-      "content": "In the second poem, we see **花 と ちらす** (hana to chirasu). Here, **と** isn't marking a thought, but a *state*. The light is being scattered **as** flowers. \n\n- **花 を ちらす**: Scatters the flowers (Flowers are the object).\n- **花 と ちらす**: Scatters [something] *as if they were* flowers (Flowers are the mode/identity).\n\nThis is the 'Comparative' use of **と**. It defines the identity of the action's result."
-    },
-    {
-      "type": "poem_presentation",
-      "poem_id": "lapis_1c808be76eeca83a",
-      "display": {
-        "text_with_furigana": "かかみにもかけみたらしの<ruby>みつ<rt>みつ</rt></ruby>の<ruby>おも<rt>おも</rt></ruby>にうつるはかりの<ruby>こころ<rt>こころ</rt></ruby>とをしれ",
-        "romaji": "kakamini mo, kake mitarashi no, mitsu no omo, ni utsuru hakari, no kokoro to o shire",
-        "translation": "Know that your heart is like the reflection cast upon the surface of the purification pool."
-      },
-      "vocabulary": [
-        {
-          "word": "かかみ",
-          "reading": "かかみ",
-          "meaning": "mirror",
-          "span": [
-            0,
-            3
-          ],
-          "chinese_cognate_note": "Cognate with Chinese 镜."
-        },
-        {
-          "word": "に",
-          "reading": "に",
-          "meaning": "in/on (location)",
-          "span": [
-            3,
-            4
-          ],
-          "chinese_cognate_note": null
-        },
-        {
-          "word": "も",
-          "reading": "も",
-          "meaning": "also/even",
-          "span": [
-            4,
-            5
-          ],
-          "chinese_cognate_note": null
-        },
-        {
-          "word": "かけ",
-          "reading": "かけ",
-          "meaning": "shadow/reflection",
-          "span": [
-            5,
-            7
-          ],
-          "chinese_cognate_note": "Cognate with Chinese 影."
-        },
-        {
-          "word": "みたらし",
-          "reading": "みたらし",
-          "meaning": "purification pool (at a shrine)",
-          "span": [
-            7,
-            11
-          ],
-          "chinese_cognate_note": null
-        },
-        {
-          "word": "の",
-          "reading": "の",
-          "meaning": "of (possessive)",
-          "span": [
-            11,
-            12
-          ],
-          "chinese_cognate_note": null
-        },
-        {
-          "word": "みつ",
-          "reading": "みつ",
-          "meaning": "water",
-          "span": [
-            12,
-            14
-          ],
-          "chinese_cognate_note": "Cognate with Chinese 水."
-        },
-        {
-          "word": "の",
-          "reading": "の",
-          "meaning": "of (possessive)",
-          "span": [
-            14,
-            15
-          ],
-          "chinese_cognate_note": null
-        },
-        {
-          "word": "おも",
-          "reading": "おも",
-          "meaning": "surface/face",
-          "span": [
-            15,
-            17
-          ],
-          "chinese_cognate_note": "Cognate with Chinese 面."
-        },
-        {
-          "word": "に",
-          "reading": "に",
-          "meaning": "on (location)",
-          "span": [
-            17,
-            18
-          ],
-          "chinese_cognate_note": null
-        },
-        {
-          "word": "うつる",
-          "reading": "うつる",
-          "meaning": "to be reflected",
-          "span": [
-            18,
-            21
-          ],
-          "chinese_cognate_note": "Cognate with Chinese 映."
-        },
-        {
-          "word": "はかり",
-          "reading": "はかり",
-          "meaning": "measure/extent",
-          "span": [
-            21,
-            24
-          ],
-          "chinese_cognate_note": null
-        },
-        {
-          "word": "の",
-          "reading": "の",
-          "meaning": "of (possessive)",
-          "span": [
-            24,
-            25
-          ],
-          "chinese_cognate_note": null
-        },
-        {
-          "word": "こころ",
-          "reading": "こころ",
-          "meaning": "heart",
-          "span": [
-            25,
-            28
-          ],
-          "chinese_cognate_note": "Cognate with Chinese 心."
-        },
-        {
-          "word": "と",
-          "reading": "と",
-          "meaning": "quotative/definitional wrapper",
-          "span": [
-            28,
-            29
-          ],
-          "chinese_cognate_note": null
-        },
-        {
-          "word": "を",
-          "reading": "を",
-          "meaning": "object marker",
-          "span": [
-            29,
-            30
-          ],
-          "chinese_cognate_note": null
-        },
-        {
-          "word": "しれ",
-          "reading": "しれ",
-          "meaning": "know! (imperative)",
-          "span": [
-            30,
-            32
-          ],
-          "chinese_cognate_note": "Cognate with Chinese 知."
-        }
-      ],
-      "focus_highlight": [
-        28,
-        29
-      ]
-    },
-    {
-      "type": "comprehension_check",
-      "question": "In Poem 3, the phrase is 'こころ と を しれ' (kokoro to o shire). Based on the particles you've learned, what is the 'content' that the speaker wants you to 'know'?",
-      "answer": "The content is 'こころ' (heart). The particle 'と' wraps 'heart' as the definition/content of the knowledge, and 'を' marks that entire wrapped concept as the object of the verb 'know' (しれ).",
-      "hint": "Look at what comes immediately before 'と'. That is the 'wrapped' content."
+      "content": "⚠️ **重要辨析：是「と」还是「ど」？**\n\n在阅读古文原典时，你可能会遇到看起来像「と」但意思完全不通的情况。这是因为古人书写时常省略浊音点（゛）。\n\n*   **本课的格助词「と」**：通常接在**名词**或动词终止形后。表示“和”、“引用”、“结果”。\n*   **接续助词「ど」**（虽然）：通常接在动词的**已然形**（多以 -e 音结尾）后。\n\n**判断技巧**：\n如果你看到 `动词(e段音) + と`，它很可能是表示转折的 `ど`（虽然...但是...），而不是本课学的「と」。"
     }
   ],
   "reference_card": {
-    "point": "Particle と (to)",
-    "one_liner": "A logical 'wrapper' used to mark the content of thoughts, speech, or comparisons (like 'that' or 'as').",
-    "example": "花とちらす (hana to chirasu) = Scatters [light] *as* flowers.",
+    "point": "格助词 と (to)",
+    "one_liner": "用于标记并列伙伴、引用内容或变化结果。",
+    "example": "波と月と (波浪与月亮) / 月と見る (视为月亮) / 淵となる (成为深渊)",
     "see_also": [
-      "particle_wo",
-      "particle_ni"
+      "particle_ni",
+      "particle_wo"
     ]
   },
   "forward_references": [
     {
-      "point": "そ (so)",
-      "note": "In Poem 1, 'so' is an emphasis particle that often works with specific verb forms. We will explore this 'Kakari-musubi' system in Unit 7."
+      "point": "助动词「む」",
+      "note": "在第二首诗中出现的「言問はむ」，表示意志（想要问）。我们将在助动词单元详细学习。"
     },
     {
-      "point": "しれ (shire)",
-      "note": "This is a command form (imperative) of the verb 'to know'. We will learn verb conjugations starting in Unit 3."
+      "point": "系结法则 (Kakarimusubi)",
+      "note": "第二首诗中的「いかが...しをるる」涉及疑问词与动词形式的呼应，这是古典语法的核心规则之一。"
     }
   ]
 }

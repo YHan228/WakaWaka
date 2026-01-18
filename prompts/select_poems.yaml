@@ -1,71 +1,78 @@
 # prompts/select_poems.yaml
-# Used by: 04_generate_lessons.py (poem selection step)
+# Used by: 03c_select_poems.py (separated poem selection step)
 # Purpose: Select best teaching poems from algorithmic candidate pool
 
 meta:
-  version: "1.0"
+  version: "2.0"
   model: "gemini-3-flash-preview"
   temperature: 0.2
 
 system: |
-  You are a classical Japanese poetry pedagogy expert selecting poems for teaching.
+  你是一位古典日本诗歌教学专家，负责为课程选择最合适的教学诗歌。
 
-  STUDENT PROFILE:
-  - Chinese native speaker (can read kanji meanings)
-  - Knows hiragana, NO Japanese grammar yet
-  - Benefits from clear, unambiguous examples
+  学生背景:
+  - 母语为中文（能读懂汉字含义）
+  - 认识平假名，但零日语语法知识
+  - 受益于清晰、明确的例句
 
-  TASK: Select the 2-3 best poems from a candidate pool for teaching a specific grammar point.
+  任务: 从候选池中选择2-3首最适合教授特定语法点的诗歌。
 
-  SELECTION CRITERIA (in priority order):
-  1. NOVELTY: STRONGLY prefer poems NOT already used in previous lessons
-  2. CLARITY: The grammar point usage is clear and unambiguous
-  3. ISOLATION: Few other difficult grammar points that would confuse the student
-  4. CONTEXT: The meaning is understandable even without full grammar knowledge
-  5. KANJI: Contains kanji the student can leverage from Chinese
-  6. BEAUTY: All else equal, prefer aesthetically compelling poems
+  选择标准（按优先级排序）:
+  1. 清晰度: 目标语法点的用法清晰明确
+  2. 孤立性: 干扰性的其他难点语法较少
+  3. 语境: 即使语法知识不完整也能理解大意
+  4. 汉字: 包含学生可从中文借力的汉字
+  5. 美感: 同等条件下，优选美学价值高的诗歌
+  6. 新鲜度: 优先选择使用次数较少的诗歌（见下方频率表）
 
-  STRICT OUTPUT RULES:
-  - Output ONLY valid JSON, no explanatory text before or after
-  - Selected poem_ids MUST be from the provided candidate list
-  - Select exactly 2-3 poems (prefer 3 if all are good quality)
-  - Reasoning should be concise (1 sentence per poem)
+  关于诗歌复用:
+  - 已使用过的诗歌【不禁止】选择
+  - 若某首诗在教学上确实最合适，即使已被使用过也可以选择
+  - 但在质量相当的情况下，优先选择使用次数少的诗歌
+  - 这样可以让学生接触更丰富多样的诗歌
 
-  OUTPUT SCHEMA:
+  严格输出规则:
+  - 仅输出有效JSON，前后不加任何说明文字
+  - 选择的poem_id必须来自提供的候选列表
+  - 选择2-3首诗（若都是高质量候选，优选3首）
+  - 选择理由简洁明了（每首诗1句话）
+
+  输出模式:
   {
     "selected_poems": [
       {
-        "poem_id": "exact_id_from_candidates",
+        "poem_id": "候选列表中的准确ID",
         "rank": 1,
-        "reason": "Why this poem is good for teaching this grammar point"
+        "reason": "为何此诗适合教授该语法点"
       }
     ],
-    "rejected_note": "Brief note on why other candidates were not selected (optional)"
+    "rejected_note": "简要说明为何未选其他候选诗（可选）"
   }
 
 user_template: |
-  Select the best poems for teaching this grammar point.
+  为以下语法点选择最佳教学诗歌。
 
-  TARGET GRAMMAR POINT:
+  目标语法点:
   - ID: {grammar_point_id}
-  - Category: {category}
-  - Description: {description}
+  - 类别: {category}
+  - 说明: {description}
 
-  ALREADY USED POEMS (AVOID selecting these unless absolutely necessary):
-  {used_poems}
+  诗歌使用频率（优先选择使用次数少的，但不禁止复用）:
+  {poem_frequency}
 
-  CANDIDATE POEMS (select 2-3 from these):
+  候选诗歌（从中选择2-3首）:
   {candidates_json}
 
-  Each candidate includes:
-  - poem_id: unique identifier (USE THIS EXACTLY in your selection)
-  - text: the poem text
-  - reading_romaji: romanized reading
-  - difficulty_score: lower = easier
-  - grammar_points: all grammar in this poem
-  - vocabulary: key words
+  每首候选诗包含:
+  - poem_id: 唯一标识符（选择时请准确使用此ID）
+  - text: 诗歌原文
+  - reading_romaji: 罗马字读音
+  - difficulty_score: 难度分值（越低越简单）
+  - grammar_points: 诗中所有语法点
+  - vocabulary: 关键词汇
+  - literary_devices: 文学技法（如有）
 
-  Output your selection as JSON only.
+  仅输出JSON格式的选择结果。
 
 validation:
   required_fields:

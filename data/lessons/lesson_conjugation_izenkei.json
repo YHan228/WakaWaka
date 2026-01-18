@@ -1,577 +1,472 @@
 {
   "lesson_id": "lesson_conjugation_izenkei",
-  "lesson_title": "The 'Already So' Base: Mastering the Izenkei (已然形)",
-  "lesson_summary": "This lesson introduces the Izenkei (已然形), or 'Realized Base,' which represents established facts and is used to express causality ('since/because') or emphatic certainty.",
+  "lesson_title": "已然形：既定事实与逻辑转折",
+  "lesson_summary": "学习动词的“已然形”（Realis Form），掌握如何表达“因为”、“虽然”以及配合“こそ”表示强调。这是构建诗歌逻辑骨架的关键形态。",
   "grammar_point": "conjugation_izenkei",
   "grammar_explanation": {
-    "concept": "The Izenkei (已然形) literally translates to the 'Already-So Form' (已 = already, 然 = so/thus). In programming terms, if Mizenkei (未然形) is a 'Conditional/Null' state, Izenkei is a 'Boolean TRUE' or 'Executed' state. It describes actions that have actually happened or states that currently exist.",
-    "formation": "For most verbs, the Izenkei ends in an '-e' sound (e.g., Miru -> Mire). For adjectives, it typically ends in '-kere' (e.g., Tooki -> Tookere).",
+    "concept": "已然形（Izenkei）表示“已经发生”或“已成事实”的状态。在逻辑上，它对应编程中的 `True` 状态。它主要用于引出后续的逻辑结果（因为、虽然）或作为系结法则的终点。",
+    "formation": "对于大多数动词（四段活用），将词尾的元音 /u/ 变为 /e/。例如：「思ふ」(omou) → 「思へ」(omoe)。",
     "variations": [
-      "Izenkei + ば (ba): Since/Because/When (Factual conditional)",
-      "Izenkei + ど (do): Although (Concessive)",
-      "Koso ... Izenkei: Emphatic sentence ending (Kakari-Musubi)"
+      "已然形 + ば (ba) = 顺接（因为、既然）",
+      "已然形 + ど/ども (do/domo) = 逆接（虽然、但是）",
+      "系助词「こそ」... 已然形 = 强烈的强调（系结法则）"
     ],
     "common_confusions": [
-      "Mizenkei + ば (ba) means 'IF' (hypothetical), while Izenkei + ば (ba) means 'SINCE/WHEN' (factual). This is a critical distinction in classical logic."
+      "与命令形的混淆：四段动词的“已然形”与“命令形”拼写相同（如：思へ）。区分关键在于上下文：若有「こそ」引导，必为已然形；若无，且语境为呼唤或祈使，则为命令形。"
     ]
   },
   "teaching_sequence": [
     {
       "type": "introduction",
-      "content": "You have already mastered the 'Unrealized' (未然形) base for things that haven't happened yet. Now, we move to its logical opposite: the **Izenkei (已然形)**. As a Chinese speaker, the characters 已然 (yǐrán) immediately tell you the story—this is the base for things that are 'already so.' While modern Japanese uses the '-ba' form for simple 'if' statements, in Classical Japanese, attaching 'ba' to this 'Already-So' base creates a logical 'Since' or 'Because' relationship. It treats the action as a completed fact that triggers a result."
+      "content": "在之前的课程中，我们学习了“连体形”如何像标签一样修饰名词，以及“连用形”如何像胶水一样连接动作。今天，我们要学习一个具有强烈逻辑属性的形态——**已然形**。\n\n顾名思义，“已然”意味着“已经如此”。在和歌中，当诗人想要表达“因为发生了A，所以...”或者“虽然事实是A，但是...”时，必须使用这个形态。它将动作锁定为现实，从而引出后续的情感或转折。"
     },
     {
       "type": "poem_presentation",
-      "poem_id": "ogura100_9ac02ed9904e8f9c",
+      "poem_id": "lapis_54f700598246bf9c",
       "display": {
-        "text_with_furigana": "<ruby>田子<rt>たご</rt></ruby>の<ruby>浦<rt>うら</rt></ruby>にうち<ruby>出<rt>い</rt></ruby>でて<ruby>見<rt>み</rt></ruby>れば<ruby>白妙<rt>しろたえ</rt></ruby>の<ruby>富士<rt>ふじ</rt></ruby>の<ruby>高嶺<rt>たかね</rt></ruby>に<ruby>雪<rt>ゆき</rt></ruby>は<ruby>降<rt>ふ</rt></ruby>りつつ",
-        "romaji": "tago no ura, ni uchi idete mireba, shirotae, no fuji no takane, ni yuki wa furitsutsu",
-        "translation": "When I go out to the shore of Tago and look, I see the snow is falling on the high peak of Fuji, pure white."
+        "text_with_furigana": "<ruby>秋<rt>あき</rt></ruby><ruby>風<rt>かぜ</rt></ruby>に<ruby>山<rt>やま</rt></ruby>の<ruby>木<rt>こ</rt></ruby>の<ruby>葉<rt>は</rt></ruby>の<ruby>移<rt>うつ</rt></ruby>ろへば<ruby>人<rt>ひと</rt></ruby>の<ruby>心<rt>こころ</rt></ruby>もいかがとぞ<ruby>思<rt>おも</rt></ruby>ふ",
+        "romaji": "akikaze ni yama no konoha no utsuroeba hito no kokoro mo ikaga to zo omou",
+        "translation": "山中树叶因秋风吹拂而变色凋零，见此情景，我不禁想：人的心意是否也如这落叶般易变呢？"
       },
       "vocabulary": [
         {
-          "word": "田子の浦",
-          "reading": "たごのうら",
-          "meaning": "Tago Bay (place name)",
-          "span": [
-            0,
-            4
-          ],
-          "chinese_cognate_note": "Proper noun; 浦 means bay/shore in both languages."
-        },
-        {
-          "word": "の",
-          "reading": "の",
-          "meaning": "possessive particle (of)",
-          "span": [
-            15,
-            16
-          ],
-          "chinese_cognate_note": null
-        },
-        {
-          "word": "に",
-          "reading": "ni",
-          "meaning": "location marker (at/to)",
-          "span": [
-            21,
-            22
-          ],
-          "chinese_cognate_note": null
-        },
-        {
-          "word": "うち出でて",
-          "reading": "うちいでて",
-          "meaning": "to go out / to set out",
-          "span": [
-            5,
-            10
-          ],
-          "chinese_cognate_note": "出 is 'exit/out'."
-        },
-        {
-          "word": "見れ",
-          "reading": "みれ",
-          "meaning": "to see (Izenkei form)",
+          "word": "秋風",
+          "reading": "あきかぜ",
+          "meaning": "秋风",
           "span": null,
-          "chinese_cognate_note": "見 is 'to see'."
-        },
-        {
-          "word": "ば",
-          "reading": "ば",
-          "meaning": "since / when (factual conditional)",
-          "span": [
-            12,
-            13
-          ],
-          "chinese_cognate_note": null
-        },
-        {
-          "word": "白妙",
-          "reading": "しろたえ",
-          "meaning": "pure white / white cloth",
-          "span": [
-            13,
-            15
-          ],
-          "chinese_cognate_note": "白 is 'white'."
-        },
-        {
-          "word": "の",
-          "reading": "の",
-          "meaning": "possessive particle (of)",
-          "span": [
-            2,
-            3
-          ],
-          "chinese_cognate_note": null
-        },
-        {
-          "word": "富士",
-          "reading": "ふじ",
-          "meaning": "Mount Fuji",
-          "span": [
-            16,
-            18
-          ],
-          "chinese_cognate_note": null
-        },
-        {
-          "word": "の",
-          "reading": "の",
-          "meaning": "possessive particle (of)",
-          "span": [
-            2,
-            3
-          ],
-          "chinese_cognate_note": null
-        },
-        {
-          "word": "高嶺",
-          "reading": "たかね",
-          "meaning": "high peak",
-          "span": [
-            19,
-            21
-          ],
-          "chinese_cognate_note": "高嶺 (gāolǐng) is identical in meaning to Chinese."
-        },
-        {
-          "word": "に",
-          "reading": "ni",
-          "meaning": "location marker (on)",
-          "span": [
-            4,
-            5
-          ],
-          "chinese_cognate_note": null
-        },
-        {
-          "word": "雪",
-          "reading": "ゆき",
-          "meaning": "snow",
-          "span": [
-            22,
-            23
-          ],
-          "chinese_cognate_note": "Identical kanji."
-        },
-        {
-          "word": "は",
-          "reading": "は",
-          "meaning": "topic marker",
-          "span": [
-            23,
-            24
-          ],
-          "chinese_cognate_note": null
-        },
-        {
-          "word": "降り",
-          "reading": "ふり",
-          "meaning": "falling (snow/rain)",
-          "span": [
-            24,
-            26
-          ],
-          "chinese_cognate_note": null
-        },
-        {
-          "word": "つつ",
-          "reading": "つつ",
-          "meaning": "continuous action marker (while/keep on)",
-          "span": [
-            26,
-            28
-          ],
-          "chinese_cognate_note": null
-        }
-      ],
-      "focus_highlight": [
-        10,
-        13
-      ]
-    },
-    {
-      "type": "grammar_spotlight",
-      "content": "Look at the word **見れば (mireba)**. \n1. The verb is **見る (miru)** (to see).\n2. Its Izenkei (Realized Base) is **見れ (mire)**.\n3. By adding **ば (ba)**, we get 'Since I looked' or 'When I looked.'\n\nBecause the poet *actually* looked (the action is 'realized'), the snow on Mt. Fuji is revealed. If he had used the Mizenkei (Miba), it would mean 'If I were to look (but I haven't yet).'",
-      "evidence": "See the poem above."
-    },
-    {
-      "type": "poem_presentation",
-      "poem_id": "ogura100_71744305011a8c60",
-      "display": {
-        "text_with_furigana": "<ruby>大江山<rt>おおえやま</rt></ruby>いく<ruby>野<rt>の</rt></ruby>の<ruby>道<rt>みち</rt></ruby>の<ruby>遠<rt>とお</rt></ruby>ければまだふみもみず<ruby>天<rt>あま</rt></ruby>の<ruby>橋立<rt>はしだて</rt></ruby>",
-        "romaji": "ooe yama, iku no no michi no, tookere ba, mada fumi mo mizu, ama no hashidate",
-        "translation": "Because the road to Ikuno across Mount Oe is so far, I have not yet seen a letter from my mother, nor have I been to Ama-no-Hashidate."
-      },
-      "vocabulary": [
-        {
-          "word": "大江山",
-          "reading": "おおえやま",
-          "meaning": "Mount Oe (place name)",
-          "span": [
-            0,
-            3
-          ],
-          "chinese_cognate_note": null
-        },
-        {
-          "word": "いく",
-          "reading": "いく",
-          "meaning": "to go / to pass through",
-          "span": [
-            3,
-            5
-          ],
-          "chinese_cognate_note": "Often written as 行く (xíng)."
-        },
-        {
-          "word": "野",
-          "reading": "の",
-          "meaning": "field/plain",
-          "span": [
-            5,
-            6
-          ],
-          "chinese_cognate_note": "Identical meaning."
-        },
-        {
-          "word": "の",
-          "reading": "の",
-          "meaning": "possessive particle",
-          "span": [
-            6,
-            7
-          ],
-          "chinese_cognate_note": null
-        },
-        {
-          "word": "道",
-          "reading": "みち",
-          "meaning": "road/path",
-          "span": [
-            7,
-            8
-          ],
-          "chinese_cognate_note": "Identical meaning (dào)."
-        },
-        {
-          "word": "の",
-          "reading": "の",
-          "meaning": "subject marker (in subordinate clauses)",
-          "span": [
-            8,
-            9
-          ],
-          "chinese_cognate_note": null
-        },
-        {
-          "word": "遠けれ",
-          "reading": "とおけれ",
-          "meaning": "far (adjective Izenkei)",
-          "span": [
-            9,
-            12
-          ],
-          "chinese_cognate_note": "遠 (yuǎn) means far."
-        },
-        {
-          "word": "ば",
-          "reading": "ば",
-          "meaning": "because / since",
-          "span": [
-            12,
-            13
-          ],
-          "chinese_cognate_note": null
-        },
-        {
-          "word": "まだ",
-          "reading": "まだ",
-          "meaning": "not yet",
-          "span": [
-            13,
-            15
-          ],
-          "chinese_cognate_note": null
-        },
-        {
-          "word": "ふみ",
-          "reading": "ふみ",
-          "meaning": "letter / footstep",
-          "span": [
-            15,
-            17
-          ],
-          "chinese_cognate_note": "Often written as 文 (wén) for letter."
-        },
-        {
-          "word": "も",
-          "reading": "も",
-          "meaning": "also / even",
-          "span": [
-            17,
-            18
-          ],
-          "chinese_cognate_note": null
-        },
-        {
-          "word": "み",
-          "reading": "み",
-          "meaning": "to see",
-          "span": [
-            18,
-            19
-          ],
-          "chinese_cognate_note": null
-        },
-        {
-          "word": "ず",
-          "reading": "ず",
-          "meaning": "negative auxiliary (not)",
-          "span": [
-            19,
-            20
-          ],
-          "chinese_cognate_note": null
-        },
-        {
-          "word": "天の橋立",
-          "reading": "あまのはしだて",
-          "meaning": "Ama-no-Hashidate (place name)",
-          "span": [
-            20,
-            24
-          ],
-          "chinese_cognate_note": null
-        }
-      ],
-      "focus_highlight": [
-        9,
-        13
-      ]
-    },
-    {
-      "type": "grammar_spotlight",
-      "content": "In this poem, we see an adjective in the Izenkei: **遠ければ (tookereba)**.\n- Base adjective: **遠し (tooshi)** (far).\n- Izenkei: **遠けれ (tookere)**.\n- Logical result: **Because** it is far (an established fact), the poet hasn't received a letter. This is a clear 'Cause -> Effect' relationship powered by the Izenkei.",
-      "evidence": "See the poem above."
-    },
-    {
-      "type": "poem_presentation",
-      "poem_id": "ogura100_28563908709d966c",
-      "display": {
-        "text_with_furigana": "<ruby>月<rt>つき</rt></ruby><ruby>見<rt>み</rt></ruby>ればちぢにものこそ<ruby>悲<rt>かな</rt></ruby>しけれわが<ruby>身<rt>み</rt></ruby><ruby>一<rt>ひと</rt></ruby>つの<ruby>秋<rt>あき</rt></ruby>にはあらねど",
-        "romaji": "tsuki mireba, chiji ni mono koso, kanashikere, wagami hitotsu no, aki ni wa aranedo",
-        "translation": "When I look at the moon, a thousand things become sad; though it is not an autumn that comes for me alone."
-      },
-      "vocabulary": [
-        {
-          "word": "月",
-          "reading": "つき",
-          "meaning": "moon",
-          "span": [
-            0,
-            1
-          ],
-          "chinese_cognate_note": "Identical kanji."
-        },
-        {
-          "word": "見れ",
-          "reading": "みれ",
-          "meaning": "to see (Izenkei)",
-          "span": [
-            1,
-            3
-          ],
-          "chinese_cognate_note": null
-        },
-        {
-          "word": "ば",
-          "reading": "ば",
-          "meaning": "when / since",
-          "span": [
-            3,
-            4
-          ],
-          "chinese_cognate_note": null
-        },
-        {
-          "word": "ちぢに",
-          "reading": "ちぢに",
-          "meaning": "into a thousand pieces / manifold",
-          "span": [
-            4,
-            7
-          ],
-          "chinese_cognate_note": null
-        },
-        {
-          "word": "もの",
-          "reading": "もの",
-          "meaning": "things",
-          "span": [
-            7,
-            9
-          ],
-          "chinese_cognate_note": "物 (wù)."
-        },
-        {
-          "word": "こそ",
-          "reading": "こそ",
-          "meaning": "emphatic particle",
-          "span": [
-            9,
-            11
-          ],
-          "chinese_cognate_note": null
-        },
-        {
-          "word": "悲しけれ",
-          "reading": "かなしけれ",
-          "meaning": "sad (adjective Izenkei)",
-          "span": [
-            11,
-            15
-          ],
-          "chinese_cognate_note": "悲 (bēi) means sad."
-        },
-        {
-          "word": "わが",
-          "reading": "わが",
-          "meaning": "my",
-          "span": [
-            15,
-            17
-          ],
-          "chinese_cognate_note": null
-        },
-        {
-          "word": "身",
-          "reading": "み",
-          "meaning": "self / body",
-          "span": [
-            17,
-            18
-          ],
-          "chinese_cognate_note": "身 (shēn) means body/self."
-        },
-        {
-          "word": "一つ",
-          "reading": "ひとつ",
-          "meaning": "one / alone",
-          "span": [
-            18,
-            20
-          ],
-          "chinese_cognate_note": null
-        },
-        {
-          "word": "の",
-          "reading": "の",
-          "meaning": "possessive particle",
-          "span": [
-            20,
-            21
-          ],
-          "chinese_cognate_note": null
-        },
-        {
-          "word": "秋",
-          "reading": "あき",
-          "meaning": "autumn",
-          "span": [
-            21,
-            22
-          ],
-          "chinese_cognate_note": "Identical kanji."
+          "chinese_cognate_note": "秋风"
         },
         {
           "word": "に",
           "reading": "に",
-          "meaning": "particle (part of 'ni wa')",
-          "span": [
-            22,
-            23
-          ],
+          "meaning": "格助词，表示原因（因秋风...）",
+          "span": null,
           "chinese_cognate_note": null
         },
         {
-          "word": "は",
-          "reading": "は",
-          "meaning": "topic marker",
-          "span": [
-            23,
-            24
-          ],
+          "word": "山",
+          "reading": "やま",
+          "meaning": "山",
+          "span": null,
+          "chinese_cognate_note": "山"
+        },
+        {
+          "word": "の",
+          "reading": "の",
+          "meaning": "格助词，表示修饰",
+          "span": null,
           "chinese_cognate_note": null
         },
         {
-          "word": "あら",
-          "reading": "あら",
-          "meaning": "to be (exist)",
-          "span": [
-            24,
-            26
-          ],
+          "word": "木の葉",
+          "reading": "このは",
+          "meaning": "树叶",
+          "span": null,
           "chinese_cognate_note": null
         },
         {
-          "word": "ね",
-          "reading": "ね",
-          "meaning": "not (negative auxiliary Izenkei)",
-          "span": [
-            26,
-            27
-          ],
+          "word": "の",
+          "reading": "の",
+          "meaning": "格助词，表示主语（树叶...）",
+          "span": null,
           "chinese_cognate_note": null
         },
         {
-          "word": "ど",
-          "reading": "ど",
-          "meaning": "although",
-          "span": [
-            27,
-            28
-          ],
+          "word": "移ろふ",
+          "reading": "うつろう",
+          "meaning": "变色、凋零、变心（此处变为已然形うつろへ）",
+          "span": null,
           "chinese_cognate_note": null
+        },
+        {
+          "word": "ば",
+          "reading": "ば",
+          "meaning": "接续助词，接在已然形后表示“因为”",
+          "span": null,
+          "chinese_cognate_note": null
+        },
+        {
+          "word": "人",
+          "reading": "ひと",
+          "meaning": "人（特指恋人）",
+          "span": null,
+          "chinese_cognate_note": "人"
+        },
+        {
+          "word": "の",
+          "reading": "の",
+          "meaning": "格助词，表示修饰",
+          "span": null,
+          "chinese_cognate_note": null
+        },
+        {
+          "word": "心",
+          "reading": "こころ",
+          "meaning": "心、心意",
+          "span": null,
+          "chinese_cognate_note": "心"
+        },
+        {
+          "word": "も",
+          "reading": "も",
+          "meaning": "系助词，也",
+          "span": null,
+          "chinese_cognate_note": null
+        },
+        {
+          "word": "いかが",
+          "reading": "いかが",
+          "meaning": "如何、怎么样（表示疑问）",
+          "span": null,
+          "chinese_cognate_note": null
+        },
+        {
+          "word": "と",
+          "reading": "と",
+          "meaning": "格助词，表示引用的内容",
+          "span": null,
+          "chinese_cognate_note": null
+        },
+        {
+          "word": "ぞ",
+          "reading": "ぞ",
+          "meaning": "系助词，表示强调",
+          "span": null,
+          "chinese_cognate_note": null
+        },
+        {
+          "word": "思ふ",
+          "reading": "おもう",
+          "meaning": "想、思考（受ぞ影响变为连体形）",
+          "span": null,
+          "chinese_cognate_note": "思"
         }
       ],
       "focus_highlight": [
         9,
-        15
+        13
       ]
     },
     {
       "type": "grammar_spotlight",
-      "content": "This poem demonstrates the second major use of Izenkei: **Kakari-Musubi**. \nWhen the emphatic particle **こそ (koso)** appears, the verb at the end of that clause *must* change to Izenkei. \n- Normal: ...もの悲し (Things are sad).\n- Emphatic: ...もの**こそ**悲し**けれ** (Things are *truly* sad).\n\nThink of 'koso' as a function that forces the sentence to resolve in the 'Realized' state to emphasize its truth.",
+      "content": "### 逻辑一：顺接条件（因为/既然）\n\n在「移ろへば」中，动词「移ろふ」变成了「移ろ**へ**」（已然形），后面接上了助词「ば」。\n\n*   **公式**：已然形 + ば = 因为... / 既然...\n*   **逻辑**：前项是已确定的事实，自然导致后项的结果。\n\n这就像编程中的 `if (fact == true) { result }`。因为树叶变色是眼前的事实，所以自然引发了对人心的感慨。",
       "evidence": "See the poem above."
     },
     {
+      "type": "poem_presentation",
+      "poem_id": "ogura100_2eaba95627b91dd3",
+      "display": {
+        "text_with_furigana": "<ruby>御<rt>み</rt></ruby><ruby>垣<rt>かき</rt></ruby><ruby>守<rt>もり</rt></ruby><ruby>衛<rt>え</rt></ruby><ruby>士<rt>じ</rt></ruby>のたく<ruby>火<rt>ひ</rt></ruby>の<ruby>夜<rt>よる</rt></ruby>は<ruby>燃<rt>も</rt></ruby>え<ruby>昼<rt>ひる</rt></ruby>は<ruby>消<rt>き</rt></ruby>えつつ<ruby>物<rt>もの</rt></ruby>をこそ<ruby>思<rt>おも</rt></ruby>へ",
+        "romaji": "mikakimori eji no taku hi no yoru wa moe hiru wa kie-tsutsu mono o koso omoe",
+        "translation": "我就像宫门卫士夜里点燃的篝火，夜里燃烧，白天熄灭，心中充满了苦恋的愁思。"
+      },
+      "vocabulary": [
+        {
+          "word": "御垣守",
+          "reading": "みかきもり",
+          "meaning": "宫门守卫",
+          "span": null,
+          "chinese_cognate_note": null
+        },
+        {
+          "word": "衛士",
+          "reading": "えじ",
+          "meaning": "卫士",
+          "span": null,
+          "chinese_cognate_note": "卫士"
+        },
+        {
+          "word": "の",
+          "reading": "の",
+          "meaning": "格助词，表示同位语（即...）",
+          "span": null,
+          "chinese_cognate_note": null
+        },
+        {
+          "word": "たく",
+          "reading": "たく",
+          "meaning": "点火、焚烧",
+          "span": null,
+          "chinese_cognate_note": null
+        },
+        {
+          "word": "火",
+          "reading": "ひ",
+          "meaning": "火",
+          "span": null,
+          "chinese_cognate_note": "火"
+        },
+        {
+          "word": "の",
+          "reading": "の",
+          "meaning": "格助词，表示比喻（像火一样）",
+          "span": null,
+          "chinese_cognate_note": null
+        },
+        {
+          "word": "夜",
+          "reading": "よる",
+          "meaning": "夜晚",
+          "span": null,
+          "chinese_cognate_note": "夜"
+        },
+        {
+          "word": "は",
+          "reading": "は",
+          "meaning": "系助词，提示话题",
+          "span": null,
+          "chinese_cognate_note": null
+        },
+        {
+          "word": "燃え",
+          "reading": "もえ",
+          "meaning": "燃烧（连用形）",
+          "span": null,
+          "chinese_cognate_note": "燃"
+        },
+        {
+          "word": "昼",
+          "reading": "ひる",
+          "meaning": "白天",
+          "span": null,
+          "chinese_cognate_note": "昼"
+        },
+        {
+          "word": "は",
+          "reading": "は",
+          "meaning": "系助词，提示话题",
+          "span": null,
+          "chinese_cognate_note": null
+        },
+        {
+          "word": "消え",
+          "reading": "きえ",
+          "meaning": "熄灭（连用形）",
+          "span": null,
+          "chinese_cognate_note": "消"
+        },
+        {
+          "word": "つつ",
+          "reading": "つつ",
+          "meaning": "接续助词，表示反复、持续",
+          "span": null,
+          "chinese_cognate_note": null
+        },
+        {
+          "word": "物",
+          "reading": "もの",
+          "meaning": "事情（此处特指恋情）",
+          "span": null,
+          "chinese_cognate_note": "物"
+        },
+        {
+          "word": "を",
+          "reading": "を",
+          "meaning": "格助词，表示动作对象",
+          "span": null,
+          "chinese_cognate_note": null
+        },
+        {
+          "word": "こそ",
+          "reading": "こそ",
+          "meaning": "系助词，极强的强调",
+          "span": null,
+          "chinese_cognate_note": null
+        },
+        {
+          "word": "思へ",
+          "reading": "おもえ",
+          "meaning": "想、苦恼（受こそ影响变为已然形）",
+          "span": null,
+          "chinese_cognate_note": "思"
+        }
+      ],
+      "focus_highlight": [
+        22,
+        26
+      ]
+    },
+    {
+      "type": "grammar_spotlight",
+      "content": "### 逻辑二：系结法则的终结（强调）\n\n我们之前学过 `zo`, `namu`, `ya`, `ka` 都会要求句尾变成连体形。唯独 **`koso`**（こそ）不同，它要求句尾动词必须变成 **已然形**。\n\n*   **结构**：...こそ ... 已然形。\n*   **效果**：这是古典日语中最强的强调形式。它不仅是陈述事实，更是断言。\n\n在诗中，「物をこそ思へ」比普通的「物を思ふ」语气强烈得多，表达了“我确实是在深深地苦恼啊！”这种无法排解的沉重感。",
+      "evidence": "See the poem above."
+    },
+    {
+      "type": "contrast_example",
+      "content": "### 易混淆点：是“命令”还是“强调”？\n\n动词「思ふ」的已然形是「思へ」(omoe)。\n动词「思ふ」的命令形也是「思へ」(omoe)。\n\n如何区分？\n1.  **看「こそ」**：如果句中有「こそ」，这绝对是**已然形**（系结法则）。\n2.  **看语境**：如果没有「こそ」，且是对着某人或某物说话，那通常是**命令形**（如：“思へ！”=“想吧！”）。\n\n在本诗中，因为有「こそ」，所以这里的「思へ」是陈述事实的已然形，而非命令。"
+    },
+    {
+      "type": "poem_presentation",
+      "poem_id": "ogura100_93536ed7f8792bf0",
+      "display": {
+        "text_with_furigana": "<ruby>忍<rt>しの</rt></ruby>ぶれど<ruby>色<rt>いろ</rt></ruby>に<ruby>出<rt>い</rt></ruby>でにけりわが<ruby>恋<rt>こ</rt></ruby>は<ruby>物<rt>もの</rt></ruby>や<ruby>思<rt>おも</rt></ruby>ふと<ruby>人<rt>ひと</rt></ruby>の<ruby>問<rt>と</rt></ruby>ふまで",
+        "romaji": "shinoburedo iro ni ide ni keri waga koi wa mono ya omou to hito no tou made",
+        "translation": "虽然我极力隐藏这份恋情，但它终究还是流露在脸上了，以至于别人都问我：“你在思念谁吗？”"
+      },
+      "vocabulary": [
+        {
+          "word": "忍ぶ",
+          "reading": "しのぶ",
+          "meaning": "隐忍、隐藏（此处活用为已然形しのぶれ）",
+          "span": null,
+          "chinese_cognate_note": "忍"
+        },
+        {
+          "word": "ど",
+          "reading": "ど",
+          "meaning": "接续助词，接在已然形后表示“虽然”",
+          "span": null,
+          "chinese_cognate_note": null
+        },
+        {
+          "word": "色",
+          "reading": "いろ",
+          "meaning": "脸色、表情",
+          "span": null,
+          "chinese_cognate_note": "色"
+        },
+        {
+          "word": "に",
+          "reading": "に",
+          "meaning": "格助词，表示结果",
+          "span": null,
+          "chinese_cognate_note": null
+        },
+        {
+          "word": "出で",
+          "reading": "いで",
+          "meaning": "显露、出来（连用形）",
+          "span": null,
+          "chinese_cognate_note": "出"
+        },
+        {
+          "word": "に",
+          "reading": "に",
+          "meaning": "完了助动词“ぬ”的连用形",
+          "span": null,
+          "chinese_cognate_note": null
+        },
+        {
+          "word": "けり",
+          "reading": "けり",
+          "meaning": "咏叹助动词，表示“原来...了啊”",
+          "span": null,
+          "chinese_cognate_note": null
+        },
+        {
+          "word": "わが",
+          "reading": "わが",
+          "meaning": "我的",
+          "span": null,
+          "chinese_cognate_note": null
+        },
+        {
+          "word": "恋",
+          "reading": "こい",
+          "meaning": "恋情",
+          "span": null,
+          "chinese_cognate_note": "恋"
+        },
+        {
+          "word": "は",
+          "reading": "は",
+          "meaning": "系助词，提示话题",
+          "span": null,
+          "chinese_cognate_note": null
+        },
+        {
+          "word": "物",
+          "reading": "もの",
+          "meaning": "事情（特指恋情）",
+          "span": null,
+          "chinese_cognate_note": "物"
+        },
+        {
+          "word": "や",
+          "reading": "や",
+          "meaning": "系助词，表示疑问",
+          "span": null,
+          "chinese_cognate_note": null
+        },
+        {
+          "word": "思ふ",
+          "reading": "おもう",
+          "meaning": "想、思念（连体形，响应“や”）",
+          "span": null,
+          "chinese_cognate_note": "思"
+        },
+        {
+          "word": "と",
+          "reading": "と",
+          "meaning": "格助词，表示引用",
+          "span": null,
+          "chinese_cognate_note": null
+        },
+        {
+          "word": "人",
+          "reading": "ひと",
+          "meaning": "别人",
+          "span": null,
+          "chinese_cognate_note": "人"
+        },
+        {
+          "word": "の",
+          "reading": "の",
+          "meaning": "格助词，表示主语",
+          "span": null,
+          "chinese_cognate_note": null
+        },
+        {
+          "word": "問ふ",
+          "reading": "とう",
+          "meaning": "问",
+          "span": null,
+          "chinese_cognate_note": "问"
+        },
+        {
+          "word": "まで",
+          "reading": "まで",
+          "meaning": "副助词，表示程度（甚至到了...的地步）",
+          "span": null,
+          "chinese_cognate_note": null
+        }
+      ],
+      "focus_highlight": [
+        0,
+        4
+      ]
+    },
+    {
+      "type": "grammar_spotlight",
+      "content": "### 逻辑三：逆接条件（虽然/但是）\n\n在「忍ぶれど」中，动词变成了已然形「忍ぶれ」，后面接了助词「ど」。\n\n*   **公式**：已然形 + ど (do) / ども (domo) = 虽然...但是...\n*   **逻辑**：承认前项是事实，但后项出现了相反或意外的结果。\n\n这相当于编程中的 `try { action } catch { exception }`。我试图隐藏（事实），但结果却失败了（异常流出）。\n\n*注：这里的「忍ぶ」使用了特殊的活用形式（上二段），所以已然形是「忍ぶれ」而不是「忍べ」，但原理相同。*",
+      "evidence": "See the poem above."
+    },
+    {
+      "type": "literary_insight",
+      "content": "### 技巧赏析：序词 (Jo-kotoba)\n\n在第二首诗（御垣守...）中，前三句「御垣守衛士のたく火の」（像卫士点的火一样）完全是为了引出第四句的「夜は燃え」（夜里燃烧）。\n\n这种修辞手法叫做**序词**（Preface Phrase）。它像是一个长长的助跑，利用同音词或意象关联，将读者的情绪从宏大的场景（宫廷卫士的篝火）自然地引导到诗人私密的内心（像火一样燃烧的恋情）。\n\n*   **结构**：[长长的描述 A] -> [关键词 B] -> [实际想说的主题 C]\n*   **本诗**：[卫士点的火] -> [燃烧] -> [我的恋情在燃烧]",
+      "literary_device": "序詞",
+      "chinese_parallel": "类似于《诗经》中的“兴”（先言他物以引起所咏之词），如“关关雎鸠，在河之洲”引出“窈窕淑女”。"
+    },
+    {
       "type": "comprehension_check",
-      "question": "In the phrase '月見れば' (Tsuki mireba), why is 'mire' used instead of the standard 'miru'?",
-      "answer": "Because it is followed by the particle 'ba' to indicate a factual condition ('When/Since I look'). In Classical Japanese, 'ba' requires the Izenkei (Realized Base) to express that the action is an established fact or cause.",
-      "hint": "Think about the difference between 'If I look' (hypothetical) and 'When I look' (factual)."
+      "question": "这句话表达的是什么逻辑？",
+      "answer": "因为下雨，所以不去。",
+      "hint": "回忆一下：已然形 + **ば** = 顺接（因为）；已然形 + **ど** = 逆接（虽然）。"
     }
   ],
   "reference_card": {
-    "point": "Izenkei (已然形)",
-    "one_liner": "The 'Realized Base' used for established facts, causality (with -ba), and emphasis (with koso).",
-    "example": "見れば (Mire-ba) = Since/When I look.",
+    "point": "已然形 (Izenkei)",
+    "one_liner": "表示“已成事实”的形态，用于构建因果、转折或强强调。",
+    "example": "移ろへば (因为变色) / 忍ぶれど (虽然隐藏) / こそ...思へ (确实在想)",
     "see_also": [
-      "conjugation_mizenkei",
-      "particle_ba",
-      "kakari_musubi"
+      "conjugation_rentaikei",
+      "syntax_kakarimusubi"
     ]
   },
   "forward_references": [
     {
-      "point": "Kakari-Musubi (こそ...已然形)",
-      "note": "We will explore the full logic of emphasis rules in Unit 07, Lesson 4."
-    },
-    {
-      "point": "Concessive particle ど (do)",
-      "note": "The 'although' meaning seen in 'aranedo' also relies on the Izenkei and will be covered in Lesson 3."
+      "point": "未然形 + ば",
+      "note": "我们今天学了“已然形+ば”表示“因为”。将来我们会学“未然形+ば”，它表示“如果”（假设）。"
     }
   ]
 }

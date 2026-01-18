@@ -1,601 +1,273 @@
 {
   "lesson_id": "lesson_auxiliary_ri",
-  "lesson_title": "The Persistence Flag: The Auxiliary り (ri)",
-  "lesson_summary": "In this lesson, we explore the auxiliary 'ri', which indicates a state resulting from a completed action. It functions like a 'status flag' in programming, telling us that an action happened and its effect still remains in the present.",
+  "lesson_title": "存续的余音：助动词「り」",
+  "lesson_summary": "学习表示状态存续与完了的助动词「り」，掌握其特殊的接续规则（サ未四已）及与同形词的辨析。",
   "grammar_point": "auxiliary_ri",
   "grammar_explanation": {
-    "concept": "The auxiliary 'ri' (り) expresses the 'Resultative State' or 'Perfective'. It signifies that an action has been completed and the resulting state continues to exist. In Chinese, it is often comparable to '着' (zhe) or '了' (le) depending on whether the focus is on the ongoing state or the completion.",
-    "formation": "Visually, 'ri' (or its forms 'ru'/'re') almost always attaches to a verb ending in an 'e' sound (the Izentei or Mizenkei of specific verb classes). For example: Furu (fall) becomes Fure-ru (has fallen and is now there).",
+    "concept": "助动词「り」主要表示动作结果的存续（...着/了）或完了。它与「たり」非常相似，都源自「あり」（存在）的缩略。",
+    "formation": "接续规则口诀：“サ未四已”（寂しい）。\n1. 四段动词的已然形（e段音）+ り\n2. サ变动词的未然形（se）+ り",
     "variations": [
-      "り (ri) - Sentence-ending form",
-      "る (ru) - Noun-modifying form (Rentaikei)",
-      "れ (re) - Realized/Conditional form"
+      "ら (未然)",
+      "り (连用)",
+      "り (终止)",
+      "る (连体)",
+      "れ (已然)",
+      "れ (命令)"
     ],
     "common_confusions": [
-      "vs. たり (tari): Both indicate a resultative state. However, 'ri' is more archaic and elegant, and it only attaches to specific verb types (Yodan and Sa-hen), whereas 'tari' is more versatile."
+      "「る」的辨析：当看到结尾是「る」时，可能是受身助动词「る」，也可能是存续助动词「り」的连体形。区分关键在于前面的元音：a段音接受身「る」，e段音接存续「り」。"
     ]
   },
   "teaching_sequence": [
     {
       "type": "introduction",
-      "content": "You have already learned 'tari' (たり) to describe a state. Today, we look at its more classical and 'strict' cousin: 'ri' (り). Think of 'ri' as a logical toggle. Once a verb is 'toggled' by 'ri', the action is finished, but the consequence is visible. If 'to fall' is the action, 'fure-ru' is the state of the snow lying on the ground."
+      "content": "在前面的课程中，我们学习了表示“动作完成”的「ぬ」和「つ」，以及表示“状态持续”的「たり」。今天我们学习本单元最后一个核心助动词——「り」。\n\n「り」可以被视为古日语中的“极简主义者”。它实际上是动词与「あり」（存在）融合的结果。例如：\n书写 (kaki) + 存在 (ari) → kakeri (写着/写好了)。\n\n这种融合留下的痕迹，就是它前面独特的 **e段音**。"
     },
     {
       "type": "poem_presentation",
-      "poem_id": "ogura100_e577ea67c50fc78c",
+      "poem_id": "lapis_0f67a63663e1473f",
       "display": {
-        "text_with_furigana": "<ruby>朝<rt>あさ</rt></ruby>ぼらけ<ruby>有明<rt>ありあけ</rt></ruby>の<ruby>月<rt>つき</rt></ruby>と<ruby>見<rt>み</rt></ruby>るまでに<ruby>吉野<rt>よしの</rt></ruby>の<ruby>里<rt>さと</rt></ruby>に<ruby>降<rt>ふ</rt></ruby>れる<ruby>白雪<rt>しらゆき</rt></ruby>",
-        "romaji": "asaborake, ariake no tsuki, to miru made, ni yoshino no sato, ni fureru shirayuki",
-        "translation": "At the break of dawn, the white snow falling in the village of Yoshino is so bright that I mistake it for the light of the late-setting moon."
+        "text_with_furigana": "<ruby>道<rt>みち</rt></ruby><ruby>遠<rt>とお</rt></ruby>し<ruby>程<rt>ほど</rt></ruby>も<ruby>遥<rt>はる</rt></ruby>かに<ruby>隔<rt>へだ</rt></ruby>たれ<ruby>り<rt>り</rt></ruby><ruby>思<rt>おも</rt></ruby>い<ruby>起<rt>お</rt></ruby>こせよ<ruby>我<rt>われ</rt></ruby>も<ruby>忘<rt>わす</rt></ruby>れし",
+        "romaji": "michi tooshi hodo mo haruka ni hedatareri omoiokoseyo ware mo wasureshi",
+        "translation": "道路悠远路程遥，你我相隔万里遥。请君寄情常相忆，我亦未曾忘旧交。"
       },
       "vocabulary": [
         {
-          "word": "朝ぼらけ",
-          "reading": "あさぼらけ",
-          "meaning": "dawn",
-          "span": [
-            0,
-            4
-          ],
-          "chinese_cognate_note": "朝 (zhāo) refers to morning."
-        },
-        {
-          "word": "有明",
-          "reading": "ありあけ",
-          "meaning": "daybreak moon",
-          "span": [
-            4,
-            6
-          ],
-          "chinese_cognate_note": "The moon that remains in the sky at dawn."
-        },
-        {
-          "word": "の",
-          "reading": "の",
-          "meaning": "possessive particle (of)",
-          "span": [
-            6,
-            7
-          ],
-          "chinese_cognate_note": null
-        },
-        {
-          "word": "月",
-          "reading": "つき",
-          "meaning": "moon",
-          "span": [
-            7,
-            8
-          ],
-          "chinese_cognate_note": "Identical to Chinese 月 (yuè)."
-        },
-        {
-          "word": "と",
-          "reading": "と",
-          "meaning": "comparison particle (as/like)",
-          "span": [
-            8,
-            9
-          ],
-          "chinese_cognate_note": null
-        },
-        {
-          "word": "見る",
-          "reading": "みる",
-          "meaning": "to see/perceive",
-          "span": [
-            9,
-            11
-          ],
-          "chinese_cognate_note": "Identical to Chinese 見 (jiàn)."
-        },
-        {
-          "word": "までに",
-          "reading": "までに",
-          "meaning": "to the extent that",
-          "span": [
-            11,
-            14
-          ],
-          "chinese_cognate_note": null
-        },
-        {
-          "word": "吉野",
-          "reading": "よしの",
-          "meaning": "Yoshino (a place famous for snow and cherries)",
-          "span": [
-            14,
-            16
-          ],
-          "chinese_cognate_note": null
-        },
-        {
-          "word": "の",
-          "reading": "の",
-          "meaning": "possessive particle (of)",
-          "span": [
-            16,
-            17
-          ],
-          "chinese_cognate_note": null
-        },
-        {
-          "word": "里",
-          "reading": "さと",
-          "meaning": "village",
-          "span": [
-            17,
-            18
-          ],
-          "chinese_cognate_note": "Identical to Chinese 里 (lǐ)."
-        },
-        {
-          "word": "に",
-          "reading": "に",
-          "meaning": "location marker (in)",
-          "span": [
-            18,
-            19
-          ],
-          "chinese_cognate_note": null
-        },
-        {
-          "word": "降れ",
-          "reading": "ふれ",
-          "meaning": "to fall (snow/rain)",
-          "span": [
-            19,
-            21
-          ],
-          "chinese_cognate_note": "降 (jiàng) means to descend/fall."
-        },
-        {
-          "word": "る",
-          "reading": "る",
-          "meaning": "auxiliary 'ri' (resultative state)",
-          "span": [
-            21,
-            22
-          ],
-          "chinese_cognate_note": null
-        },
-        {
-          "word": "白雪",
-          "reading": "しらゆき",
-          "meaning": "white snow",
-          "span": [
-            22,
-            24
-          ],
-          "chinese_cognate_note": "Identical to Chinese 白雪 (bái xuě)."
-        }
-      ],
-      "focus_highlight": [
-        19,
-        21
-      ]
-    },
-    {
-      "type": "grammar_spotlight",
-      "content": "Look at the word <ruby>降<rt>ふ</rt></ruby>れる (fure-ru). The base verb is 'furu' (to fall). By changing the vowel to 'e' and adding 'ru', the poet isn't just saying 'snow falls.' They are describing the **state** of the snow that has fallen and is now covering the village. It is the 'fallen-and-now-present' snow. Because it modifies the noun 'shirayuki' (white snow), 'ri' takes the form 'ru'.",
-      "evidence": "See the poem above."
-    },
-    {
-      "type": "poem_presentation",
-      "poem_id": "lapis_c1636ada463705af",
-      "display": {
-        "text_with_furigana": "<ruby>神<rt>かむ</rt></ruby>なひの<ruby>山<rt>やま</rt></ruby>をすき<ruby>行<rt>ゆ</rt></ruby>く<ruby>秋<rt>あき</rt></ruby>なればたつた<ruby>河<rt>かわ</rt></ruby>にそぬさはたむくる",
-        "romaji": "kamunahi no, yama o suki yuku, aki nare ha, tatsuta kawa ni so, nusa hata mukuru",
-        "translation": "Since it is autumn passing through the sacred mountains, offerings are being made even to the Tatsuta River."
-      },
-      "vocabulary": [
-        {
-          "word": "神なひ",
-          "reading": "かむなひ",
-          "meaning": "divine/sacred",
-          "span": [
-            0,
-            3
-          ],
-          "chinese_cognate_note": "神 (shén) means deity."
-        },
-        {
-          "word": "の",
-          "reading": "の",
-          "meaning": "possessive particle",
-          "span": [
-            3,
-            4
-          ],
-          "chinese_cognate_note": null
-        },
-        {
-          "word": "山",
-          "reading": "やま",
-          "meaning": "mountain",
-          "span": [
-            4,
-            5
-          ],
-          "chinese_cognate_note": "Identical to Chinese 山 (shān)."
-        },
-        {
-          "word": "を",
-          "reading": "を",
-          "meaning": "object marker (through/space)",
-          "span": [
-            5,
-            6
-          ],
-          "chinese_cognate_note": null
-        },
-        {
-          "word": "すき",
-          "reading": "すき",
-          "meaning": "to pass through",
-          "span": [
-            6,
-            8
-          ],
-          "chinese_cognate_note": null
-        },
-        {
-          "word": "行く",
-          "reading": "ゆく",
-          "meaning": "to go",
-          "span": [
-            8,
-            10
-          ],
-          "chinese_cognate_note": "Identical to Chinese 行 (xíng)."
-        },
-        {
-          "word": "秋",
-          "reading": "あき",
-          "meaning": "autumn",
-          "span": [
-            10,
-            11
-          ],
-          "chinese_cognate_note": "Identical to Chinese 秋 (qiū)."
-        },
-        {
-          "word": "なれ",
-          "reading": "なれ",
-          "meaning": "to be (copula nari)",
-          "span": [
-            11,
-            13
-          ],
-          "chinese_cognate_note": null
-        },
-        {
-          "word": "は",
-          "reading": "は",
-          "meaning": "topic/reason marker",
-          "span": [
-            13,
-            14
-          ],
-          "chinese_cognate_note": null
-        },
-        {
-          "word": "たつた",
-          "reading": "たつた",
-          "meaning": "Tatsuta (place name)",
-          "span": [
-            14,
-            17
-          ],
-          "chinese_cognate_note": null
-        },
-        {
-          "word": "河",
-          "reading": "かわ",
-          "meaning": "river",
-          "span": [
-            17,
-            18
-          ],
-          "chinese_cognate_note": "Identical to Chinese 河 (hé)."
-        },
-        {
-          "word": "に",
-          "reading": "に",
-          "meaning": "target marker (to)",
-          "span": [
-            18,
-            19
-          ],
-          "chinese_cognate_note": null
-        },
-        {
-          "word": "そ",
-          "reading": "そ",
-          "meaning": "emphasis particle (archaic 'zo')",
-          "span": [
-            19,
-            20
-          ],
-          "chinese_cognate_note": null
-        },
-        {
-          "word": "ぬさ",
-          "reading": "ぬさ",
-          "meaning": "cloth offerings to gods",
-          "span": [
-            20,
-            22
-          ],
-          "chinese_cognate_note": null
-        },
-        {
-          "word": "はた",
-          "reading": "はた",
-          "meaning": "also/moreover",
-          "span": [
-            22,
-            24
-          ],
-          "chinese_cognate_note": null
-        },
-        {
-          "word": "たむく",
-          "reading": "たむく",
-          "meaning": "to offer (to a deity)",
-          "span": [
-            23,
-            26
-          ],
-          "chinese_cognate_note": null
-        },
-        {
-          "word": "る",
-          "reading": "る",
-          "meaning": "auxiliary 'ri' (resultative/ongoing state)",
-          "span": [
-            26,
-            27
-          ],
-          "chinese_cognate_note": null
-        }
-      ],
-      "focus_highlight": [
-        26,
-        27
-      ]
-    },
-    {
-      "type": "grammar_spotlight",
-      "content": "In 'tamuku-ru', the 'ru' indicates that the act of offering is not just a momentary flash, but a state that has been established. The offerings have been placed and remain there as the autumn passes.",
-      "evidence": "See the poem above."
-    },
-    {
-      "type": "poem_presentation",
-      "poem_id": "lapis_9363708ca0b19b0d",
-      "display": {
-        "text_with_furigana": "<ruby>月日<rt>つきひ</rt></ruby>えりあひてしあればわかれむのをしかる<ruby>君<rt>きみ</rt></ruby>はあすさへもかも",
-        "romaji": "tsuki hie ri, a hi te shi are ha, wakare mu no, o shikaru kimi ha, asu sae mo ka mo",
-        "translation": "Months and days have passed since we met; now that we must part, I wish you could stay even until tomorrow."
-      },
-      "vocabulary": [
-        {
-          "word": "月日",
-          "reading": "つきひ",
-          "meaning": "months and days/time",
+          "word": "道",
+          "reading": "みち",
+          "meaning": "道路",
           "span": null,
-          "chinese_cognate_note": "Identical to Chinese 月日 (yuè rì)."
+          "chinese_cognate_note": "道"
         },
         {
-          "word": "え",
-          "reading": "え",
-          "meaning": "to pass/elapse",
-          "span": [
-            3,
-            4
-          ],
-          "chinese_cognate_note": null
-        },
-        {
-          "word": "り",
-          "reading": "り",
-          "meaning": "auxiliary 'ri' (completed state)",
-          "span": [
-            4,
-            5
-          ],
-          "chinese_cognate_note": null
-        },
-        {
-          "word": "あひ",
-          "reading": "あひ",
-          "meaning": "to meet",
-          "span": [
-            5,
-            7
-          ],
-          "chinese_cognate_note": "会 (huì) in Chinese."
-        },
-        {
-          "word": "て",
-          "reading": "て",
-          "meaning": "linking particle",
-          "span": [
-            7,
-            8
-          ],
-          "chinese_cognate_note": null
-        },
-        {
-          "word": "し",
-          "reading": "し",
-          "meaning": "past auxiliary",
-          "span": [
-            8,
-            9
-          ],
-          "chinese_cognate_note": null
-        },
-        {
-          "word": "あれ",
-          "reading": "あれ",
-          "meaning": "to be",
-          "span": [
-            9,
-            11
-          ],
-          "chinese_cognate_note": null
-        },
-        {
-          "word": "は",
-          "reading": "は",
-          "meaning": "topic/reason marker",
-          "span": [
-            11,
-            12
-          ],
-          "chinese_cognate_note": null
-        },
-        {
-          "word": "わかれ",
-          "reading": "わかれ",
-          "meaning": "to part/separate",
-          "span": [
-            12,
-            15
-          ],
-          "chinese_cognate_note": "別 (bié) in Chinese."
-        },
-        {
-          "word": "む",
-          "reading": "む",
-          "meaning": "volitional/future auxiliary",
-          "span": [
-            15,
-            16
-          ],
-          "chinese_cognate_note": null
-        },
-        {
-          "word": "の",
-          "reading": "の",
-          "meaning": "particle",
-          "span": [
-            16,
-            17
-          ],
-          "chinese_cognate_note": null
-        },
-        {
-          "word": "を",
-          "reading": "を",
-          "meaning": "object/conjunction marker",
-          "span": [
-            17,
-            18
-          ],
-          "chinese_cognate_note": null
-        },
-        {
-          "word": "しかる",
-          "reading": "しかる",
-          "meaning": "to be so/that way",
-          "span": [
-            18,
-            21
-          ],
-          "chinese_cognate_note": null
-        },
-        {
-          "word": "君",
-          "reading": "きみ",
-          "meaning": "you/lord",
+          "word": "遠し",
+          "reading": "とおし",
+          "meaning": "遥远的（形容词终止形）",
           "span": null,
-          "chinese_cognate_note": "Identical to Chinese 君 (jūn)."
+          "chinese_cognate_note": "远"
         },
         {
-          "word": "は",
-          "reading": "は",
-          "meaning": "topic marker",
-          "span": [
-            23,
-            24
-          ],
-          "chinese_cognate_note": null
-        },
-        {
-          "word": "あす",
-          "reading": "あす",
-          "meaning": "tomorrow",
-          "span": [
-            24,
-            26
-          ],
-          "chinese_cognate_note": null
-        },
-        {
-          "word": "さへ",
-          "reading": "さへ",
-          "meaning": "even",
-          "span": [
-            26,
-            28
-          ],
-          "chinese_cognate_note": null
+          "word": "程",
+          "reading": "ほど",
+          "meaning": "距离，程度",
+          "span": null,
+          "chinese_cognate_note": "程"
         },
         {
           "word": "も",
           "reading": "も",
-          "meaning": "also/even",
-          "span": [
-            28,
-            29
-          ],
+          "meaning": "也，强调（系助词）",
+          "span": null,
           "chinese_cognate_note": null
         },
         {
-          "word": "かも",
-          "reading": "かも",
-          "meaning": "emotional exclamation",
-          "span": [
-            29,
-            31
-          ],
+          "word": "遥かに",
+          "reading": "はるかに",
+          "meaning": "遥远地（形容动词连用形）",
+          "span": null,
+          "chinese_cognate_note": "遥"
+        },
+        {
+          "word": "隔たれり",
+          "reading": "へだたれり",
+          "meaning": "分隔着（动词+助动词）",
+          "span": null,
+          "chinese_cognate_note": "隔"
+        },
+        {
+          "word": "思い起こせ",
+          "reading": "おもいおこせ",
+          "meaning": "想起，寄予思念（复合动词命令形）",
+          "span": null,
+          "chinese_cognate_note": "思/起"
+        },
+        {
+          "word": "よ",
+          "reading": "よ",
+          "meaning": "啊/吧（终助词，表示命令的强调）",
+          "span": null,
+          "chinese_cognate_note": null
+        },
+        {
+          "word": "我",
+          "reading": "われ",
+          "meaning": "我",
+          "span": null,
+          "chinese_cognate_note": "我"
+        },
+        {
+          "word": "も",
+          "reading": "も",
+          "meaning": "也（系助词）",
+          "span": null,
+          "chinese_cognate_note": null
+        },
+        {
+          "word": "忘れし",
+          "reading": "わすれし",
+          "meaning": "忘记了（动词+过去助动词连体形）",
+          "span": null,
+          "chinese_cognate_note": "忘"
+        }
+      ],
+      "focus_highlight": [
+        16,
+        17
+      ]
+    },
+    {
+      "type": "grammar_spotlight",
+      "content": "### 助动词「り」的接续机制\n\n「り」的接续非常特殊，对于喜欢逻辑的学生来说，这其实是一个语音融合现象：\n\n1. **四段动词**：接在**已然形**（e段音）后。\n   - 隔たる (hedataru) → 已然形 隔たれ (hedatar**e**) + り = **隔たれり** (hedatareri)\n   - 含义：处于被分隔的状态（存续）。\n\n2. **サ变动词**：接在**未然形**（se）后。\n   - す (su) → 未然形 せ (se) + り = **せり** (seri)\n\n**记忆口诀**：**サ未四已**（读音近似日语“寂しい/samishii”）。",
+      "evidence": "See the poem above."
+    },
+    {
+      "type": "poem_presentation",
+      "poem_id": "ogura100_0cbd84e60668d5f8",
+      "display": {
+        "text_with_furigana": "<ruby>八重<rt>やえ</rt></ruby><ruby>葎<rt>むぐら</rt></ruby><ruby>茂<rt>しげ</rt></ruby>れる<ruby>宿<rt>やど</rt></ruby>の<ruby>寂<rt>さび</rt></ruby>しきに<ruby>人<rt>ひと</rt></ruby>こそ<ruby>見<rt>み</rt></ruby>えね<ruby>秋<rt>あき</rt></ruby>は<ruby>来<rt>き</rt></ruby>にけり",
+        "romaji": "yae mugura shigereru yado no sabishiki ni hito koso miene aki wa ki ni keri",
+        "translation": "层层葎草生，荒园寂无声。虽无旧人影，秋意已深更。"
+      },
+      "vocabulary": [
+        {
+          "word": "八重葎",
+          "reading": "やえむぐら",
+          "meaning": "重重叠叠的蔓草",
+          "span": null,
+          "chinese_cognate_note": "八重/葎"
+        },
+        {
+          "word": "茂れる",
+          "reading": "しげれる",
+          "meaning": "茂盛着（动词+助动词连体形）",
+          "span": null,
+          "chinese_cognate_note": "茂"
+        },
+        {
+          "word": "宿",
+          "reading": "やど",
+          "meaning": "家，宅邸",
+          "span": null,
+          "chinese_cognate_note": "宿"
+        },
+        {
+          "word": "の",
+          "reading": "の",
+          "meaning": "的（格助词）",
+          "span": null,
+          "chinese_cognate_note": null
+        },
+        {
+          "word": "寂しき",
+          "reading": "さびしき",
+          "meaning": "寂寞的（形容词连体形）",
+          "span": null,
+          "chinese_cognate_note": "寂"
+        },
+        {
+          "word": "に",
+          "reading": "に",
+          "meaning": "在...情况下（格助词）",
+          "span": null,
+          "chinese_cognate_note": null
+        },
+        {
+          "word": "人",
+          "reading": "ひと",
+          "meaning": "人，访客",
+          "span": null,
+          "chinese_cognate_note": "人"
+        },
+        {
+          "word": "こそ",
+          "reading": "こそ",
+          "meaning": "唯有（强调系助词）",
+          "span": null,
+          "chinese_cognate_note": null
+        },
+        {
+          "word": "見えね",
+          "reading": "みえね",
+          "meaning": "看不见（动词+否定助动词已然形）",
+          "span": null,
+          "chinese_cognate_note": "见"
+        },
+        {
+          "word": "秋",
+          "reading": "あき",
+          "meaning": "秋天",
+          "span": null,
+          "chinese_cognate_note": "秋"
+        },
+        {
+          "word": "は",
+          "reading": "は",
+          "meaning": "提示主题（系助词）",
+          "span": null,
+          "chinese_cognate_note": null
+        },
+        {
+          "word": "来",
+          "reading": "き",
+          "meaning": "来（动词连用形）",
+          "span": null,
+          "chinese_cognate_note": "来"
+        },
+        {
+          "word": "に",
+          "reading": "に",
+          "meaning": "已经（完了助动词连用形）",
+          "span": null,
+          "chinese_cognate_note": null
+        },
+        {
+          "word": "けり",
+          "reading": "けり",
+          "meaning": "了啊（咏叹助动词终止形）",
+          "span": null,
           "chinese_cognate_note": null
         }
       ],
       "focus_highlight": [
-        4,
-        5
+        7,
+        8
       ]
     },
     {
+      "type": "contrast_example",
+      "content": "### 关键辨析：是「り」还是「る」？\n\n学生常混淆助动词「り」的连体形（る）和受身/自发助动词「る」。\n\n**辨析算法**：看前面的元音。\n\n1. **e段音 + る = 存续「り」**\n   - 例：茂れ (shiger**e**) + る = 茂れる (shigereru)\n   - 含义：茂盛着（状态）\n\n2. **a段音 + る = 受身/自发「る」**\n   - 例：知ら (shir**a**) + る = 知らる (shiraru)\n   - 含义：被知道（被动）\n\n记住：**e-ru 是存续，a-ru 是被动。**"
+    },
+    {
       "type": "comprehension_check",
-      "question": "In the phrase '月日えり' (tsukihi e-ri), the verb 'e' means 'to pass (time)'. What does the 'ri' tell us about the time?",
-      "answer": "It tells us that the time has already passed and we are now in the resulting state (the present moment after that time has elapsed).",
-      "hint": "Think of 'ri' as a status flag that marks an action as 'Done, and here is the result'."
+      "question": "在诗句「雪降れば冬籠もりせる草も木も」中，动词「す」(su) 变成了「せる」(seru)。请根据“サ未四已”规则分析其构成。",
+      "answer": "「す」是サ变动词，其未然形是「せ」(se)。「せ」加上助动词「り」的连体形「る」，构成了「せる」。",
+      "hint": "サ变动词的未然形是什么？这里的「る」是因为后面接了名词「草」，所以是连体形。"
+    },
+    {
+      "type": "literary_insight",
+      "content": "在《雪降れば》这首诗中，诗人运用了**「見立て」（Mitate）**这一修辞手法。这是一种视觉上的比喻，将一物看作另一物。\n\n诗人将落在枯萎草木上的白雪，比作是春天还未察觉时就已绽放的“花”。\n\n*   **冬籠もりせる**（蛰伏着的）：用助动词「り」强调草木在冬天静止的状态。\n*   **花ぞ咲きける**（花开了啊）：用「ける」表达发现雪花如花般的惊喜。",
+      "literary_device": "見立て (Mitate)",
+      "chinese_parallel": "这种将雪比作花的想象，与岑参的“忽如一夜春风来，千树万树梨花开”有异曲同工之妙。"
     },
     {
       "type": "summary",
-      "content": "The auxiliary 'ri' is a powerful tool in Waka to bridge the past and the present. It doesn't just say something happened; it describes the world as it looks *because* something happened. Remember the 'e-sound' visual cue: Fure-ru, Tamuku-ru, E-ri."
+      "content": "助动词「り」是古日语中表示“状态存续”的重要工具。记住它源于「あり」，并牢记“e段音+り”或“se+り”的形式，你就能轻松将其与被动助动词区分开来。"
     }
   ],
   "reference_card": {
-    "point": "Auxiliary り (ri)",
-    "one_liner": "Indicates a state resulting from a completed action (Resultative/Perfective).",
-    "example": "降れる (fure-ru) = Has fallen (and is now lying there).",
+    "point": "助动词「り」",
+    "one_liner": "接在e段音后的“状态存续”标记（...着/了）。",
+    "example": "隔たれり (hedatareri) - 分隔着",
     "see_also": [
-      "auxiliary_tari"
+      "auxiliary_tari",
+      "auxiliary_nu",
+      "auxiliary_ru"
     ]
   },
   "forward_references": [
     {
-      "point": "ぞ (zo/so)",
-      "note": "We will learn how this particle forces a specific ending on the verb in Unit 7 (Kakari-musubi)."
-    },
-    {
-      "point": "ば (ba)",
-      "note": "We will explore how this creates 'since' or 'if' logic in Unit 8."
+      "point": "助动词「る」的自发用法",
+      "note": "我们在本课提到了「る」作为被动/自发助动词的区别，未来将详细讲解其“不由自主”的微妙含义。"
     }
   ]
 }

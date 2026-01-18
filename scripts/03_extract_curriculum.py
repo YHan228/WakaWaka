@@ -31,6 +31,7 @@ PROJECT_ROOT = Path(__file__).parent.parent
 sys.path.insert(0, str(PROJECT_ROOT))
 
 import pandas as pd
+import numpy as np
 import networkx as nx
 
 from wakawaka.schemas.curriculum import (
@@ -64,6 +65,219 @@ CO_RATIO_THRESHOLD = 0.7      # 70% co-occurrence required
 DIFFICULTY_GAP_THRESHOLD = 0.05  # Minimum difficulty difference
 MIN_SUPPORT_COUNT = 2         # Minimum co-occurrence count (lowered for small corpus)
 
+# Literary integration configuration
+DEFAULT_LITERARY_INPUT = PROJECT_ROOT / "data" / "literary" / "poems_literary.parquet"
+DEFAULT_LITERARY_DIFFICULTY = PROJECT_ROOT / "data" / "literary" / "literary_difficulty.json"
+DEFAULT_LITERARY_INDEX = PROJECT_ROOT / "data" / "literary" / "literary_index.json"
+
+# Chinese-adjusted difficulty (use instead of raw difficulty)
+DEFAULT_CHINESE_DIFFICULTY = PROJECT_ROOT / "data" / "analysis" / "chinese_difficulty.json"
+DEFAULT_COMBINED_DIFFICULTY = PROJECT_ROOT / "data" / "literary" / "combined_difficulty.json"
+DEFAULT_CONFUSABLES = PROJECT_ROOT / "data" / "analysis" / "confusables.json"
+GRAMMAR_WEIGHT = 0.7  # Weight for grammar difficulty in combined score
+LITERARY_WEIGHT = 0.3  # Weight for literary difficulty in combined score
+FOUNDATION_UNIT_COUNT = 3  # First N units are "foundation" (no literary focus)
+
+# Standardized season/theme data
+DEFAULT_SEASON_THEME = PROJECT_ROOT / "data" / "literary" / "standardized_season_theme.json"
+
+# Major poetic devices to track for literary_focus
+# Includes common variants (Japanese/Chinese names, with/without okurigana)
+MAJOR_DEVICES = {
+    # Core waka devices
+    '掛詞', '挂词', 'かけことば',  # Pivot word
+    '縁語', '缘语', 'えんご',      # Associated words
+    '枕詞', '枕词', 'まくらことば',  # Pillow word
+    '序詞', '序词', 'じょことば',   # Preface
+    '体言止め', '体言止', 'たいげんどめ',  # Noun ending
+    '見立て', '见立', 'みたて',     # Conceit/metaphor
+    '本歌取り', '本歌取', 'ほんかどり',  # Allusive variation
+    # Kakarimusubi variants
+    '係結', '係り結び', '係結び', '係り結', 'かかりむすび',
+    '係結 (Kakarimusubi)',
+    # Other common devices
+    '歌枕', 'うたまくら',           # Poetic place name
+    '切れ字', '切字', 'きれじ',      # Cutting word
+    '倒置', '倒置法', '倒装',        # Inversion
+    '拟人', '擬人法', '擬人',        # Personification
+    '対句', '对句',                 # Parallelism
+    '反語', '反问', '反実仮想',      # Rhetorical question/counterfactual
+    '呼告', '呼びかけ',             # Apostrophe
+}
+
+
+# -----------------------------------------------------------------------------
+# Literary Data Loading
+# -----------------------------------------------------------------------------
+
+def load_literary_data(
+    literary_input: Path | None = None,
+    literary_difficulty_path: Path | None = None,
+    literary_index_path: Path | None = None
+) -> tuple[pd.DataFrame | None, dict | None, dict | None]:
+    """
+    Load literary analysis data for curriculum integration.
+
+    Returns:
+        Tuple of (literary_df, literary_difficulty_dict, literary_index_dict)
+    """
+    literary_df = None
+    literary_difficulty = None
+    literary_index = None
+
+    # Load literary annotations parquet
+    if literary_input and literary_input.exists():
+        logger.info(f"Loading literary annotations from {literary_input}...")
+        literary_df = pd.read_parquet(literary_input)
+        logger.info(f"Loaded literary data for {len(literary_df)} poems")
+    else:
+        logger.warning("No literary annotations found, skipping literary integration")
+
+    # Load pre-computed literary difficulty scores
+    if literary_difficulty_path and literary_difficulty_path.exists():
+        with open(literary_difficulty_path, 'r', encoding='utf-8') as f:
+            literary_difficulty = json.load(f)
+        logger.info(f"Loaded literary difficulty scores for {len(literary_difficulty)} poems")
+    else:
+        logger.warning("No literary difficulty scores found")
+
+    # Load literary index (device frequency)
+    if literary_index_path and literary_index_path.exists():
+        with open(literary_index_path, 'r', encoding='utf-8') as f:
+            literary_index = json.load(f)
+        logger.info(f"Loaded literary index with {len(literary_index)} devices")
+    else:
+        logger.warning("No literary index found")
+
+    return literary_df, literary_difficulty, literary_index
+
+
+def parse_poetic_devices(devices_raw) -> list[str]:
+    """Parse and extract device names from various formats."""
+    if devices_raw is None or (isinstance(devices_raw, float) and np.isnan(devices_raw)):
+        return []
+
+    if isinstance(devices_raw, np.ndarray):
+        devices_raw = devices_raw.tolist()
+
+    if isinstance(devices_raw, str):
+        try:
+            import ast
+            devices_raw = ast.literal_eval(devices_raw)
+        except (ValueError, SyntaxError):
+            try:
+                devices_raw = json.loads(devices_raw)
+            except json.JSONDecodeError:
+                return []
+
+    if isinstance(devices_raw, list):
+        names = []
+        for device in devices_raw:
+            if isinstance(device, dict) and 'name' in device:
+                names.append(device['name'])
+            elif isinstance(device, str):
+                try:
+                    import ast
+                    parsed = ast.literal_eval(device)
+                    if isinstance(parsed, dict) and 'name' in parsed:
+                        names.append(parsed['name'])
+                except:
+                    pass
+        return names
+
+    return []
+
+
+def get_poem_devices(
+    poem_id: str,
+    literary_df: pd.DataFrame | None
+) -> list[str]:
+    """Get list of poetic devices for a poem."""
+    if literary_df is None:
+        return []
+
+    row = literary_df[literary_df['poem_id'] == poem_id]
+    if row.empty:
+        return []
+
+    devices_raw = row.iloc[0].get('poetic_devices')
+    return parse_poetic_devices(devices_raw)
+
+
+# -----------------------------------------------------------------------------
+# Load Chinese-Adjusted Difficulty
+# -----------------------------------------------------------------------------
+
+def load_chinese_difficulty(path: Path = DEFAULT_CHINESE_DIFFICULTY) -> dict[str, float]:
+    """
+    Load Chinese-adjusted difficulty scores.
+
+    Returns:
+        Dict of poem_id -> chinese_adjusted_difficulty
+    """
+    if not path.exists():
+        logger.warning(f"Chinese difficulty file not found: {path}")
+        return {}
+
+    with open(path, 'r', encoding='utf-8') as f:
+        data = json.load(f)
+
+    result = {}
+    for entry in data:
+        result[entry['poem_id']] = entry['chinese_adjusted_difficulty']
+
+    logger.info(f"Loaded Chinese-adjusted difficulty for {len(result)} poems")
+    return result
+
+
+def load_combined_difficulty(path: Path = DEFAULT_COMBINED_DIFFICULTY) -> dict[str, float]:
+    """
+    Load combined difficulty scores (grammar + literary).
+
+    Returns:
+        Dict of poem_id -> combined_difficulty
+    """
+    if not path.exists():
+        logger.warning(f"Combined difficulty file not found: {path}")
+        return {}
+
+    with open(path, 'r', encoding='utf-8') as f:
+        data = json.load(f)
+
+    result = {pid: entry['combined_difficulty'] for pid, entry in data.items()}
+    logger.info(f"Loaded combined difficulty for {len(result)} poems")
+    return result
+
+
+def load_confusables(path: Path = DEFAULT_CONFUSABLES) -> dict[str, list]:
+    """
+    Load grammar confusables for curriculum awareness.
+
+    Returns:
+        Dict of surface -> list of meanings
+    """
+    if not path.exists():
+        logger.warning(f"Confusables file not found: {path}")
+        return {}
+
+    with open(path, 'r', encoding='utf-8') as f:
+        data = json.load(f)
+
+    confusables = data.get('confusables', {})
+    logger.info(f"Loaded {len(confusables)} confusable surfaces")
+    return confusables
+
+
+def load_season_theme(path: Path = DEFAULT_SEASON_THEME) -> dict[str, dict]:
+    """Load standardized season/theme labels for poems."""
+    if not path.exists():
+        logger.warning(f"Season/theme file not found: {path}")
+        return {}
+    with open(path, 'r', encoding='utf-8') as f:
+        data = json.load(f)
+    logger.info(f"Loaded season/theme for {len(data)} poems")
+    return data
+
 
 # -----------------------------------------------------------------------------
 # Step 1: Build Grammar Index
@@ -71,7 +285,8 @@ MIN_SUPPORT_COUNT = 2         # Minimum co-occurrence count (lowered for small c
 
 def build_grammar_index(
     poems_df: pd.DataFrame,
-    min_frequency: int = 1
+    min_frequency: int = 1,
+    chinese_difficulty: dict[str, float] | None = None
 ) -> dict[str, GrammarIndexEntry]:
     """
     Build grammar index from annotated poems.
@@ -80,17 +295,22 @@ def build_grammar_index(
     Args:
         poems_df: DataFrame with annotated poems
         min_frequency: Minimum poem frequency for inclusion
+        chinese_difficulty: Optional Chinese-adjusted difficulty scores
 
     Returns:
         Dict of canonical_id -> GrammarIndexEntry
     """
     logger.info("Building grammar index...")
 
+    if chinese_difficulty is None:
+        chinese_difficulty = {}
+
     # Collect all grammar points
     all_points = []
     for _, row in poems_df.iterrows():
         poem_id = row['poem_id']
-        difficulty = row.get('difficulty_score_computed', 0.0)
+        # Use Chinese-adjusted difficulty if available, otherwise fall back to raw
+        difficulty = chinese_difficulty.get(poem_id, row.get('difficulty_score_computed', 0.0))
 
         for gp in row['grammar_points']:
             all_points.append({
@@ -350,7 +570,12 @@ def build_lesson_graph(
     min_poems_per_lesson: int = DEFAULT_MIN_POEMS_PER_LESSON,
     max_lessons: int = DEFAULT_MAX_LESSONS,
     candidate_pool_size: int = DEFAULT_CANDIDATE_POOL_SIZE,
-    difficulty_tiers: int = DEFAULT_DIFFICULTY_TIERS
+    difficulty_tiers: int = DEFAULT_DIFFICULTY_TIERS,
+    literary_df: pd.DataFrame | None = None,
+    literary_difficulty: dict | None = None,
+    foundation_unit_count: int = FOUNDATION_UNIT_COUNT,
+    combined_difficulty: dict[str, float] | None = None,
+    season_theme: dict[str, dict] | None = None
 ) -> tuple[list[Unit], dict[str, list[str]]]:
     """
     Build lesson graph from grammar index and prerequisites.
@@ -363,6 +588,10 @@ def build_lesson_graph(
         max_lessons: Maximum number of lessons
         candidate_pool_size: Number of candidate poems per lesson (for LLM selection)
         difficulty_tiers: Number of difficulty tiers (1-5)
+        literary_df: DataFrame with literary annotations (optional)
+        literary_difficulty: Dict of poem_id -> literary difficulty info (optional)
+        foundation_unit_count: First N units are "foundation" (no literary focus)
+        combined_difficulty: Dict of poem_id -> combined (grammar+literary) difficulty
 
     Returns:
         Tuple of (units, prerequisite_map)
@@ -405,8 +634,14 @@ def build_lesson_graph(
     # Build poem -> canonical_ids mapping for poem selection
     poem_to_canonical = defaultdict(set)
     for _, row in poems_df.iterrows():
-        for gp in row['grammar_points']:
-            poem_to_canonical[row['poem_id']].add(gp['canonical_id'])
+        grammar_points = row.get('grammar_points', [])
+        if grammar_points is None:
+            continue
+        if isinstance(grammar_points, np.ndarray):
+            grammar_points = grammar_points.tolist()
+        for gp in grammar_points:
+            if isinstance(gp, dict) and 'canonical_id' in gp:
+                poem_to_canonical[row['poem_id']].add(gp['canonical_id'])
 
     # Group by category into units
     units_dict = defaultdict(list)
@@ -421,8 +656,14 @@ def build_lesson_graph(
         )
 
         # Select candidate poems for this lesson (larger pool for LLM selection)
-        candidate_poem_ids = select_poems_for_lesson(
-            canonical_id, poems_df, poem_to_canonical, candidate_pool_size
+        # Note: literary_ready will be determined after units are formed
+        candidate_poem_ids, _, _ = select_poems_for_lesson(
+            canonical_id, poems_df, poem_to_canonical, candidate_pool_size,
+            literary_difficulty=literary_difficulty,
+            literary_df=literary_df,
+            prefer_literary_rich=False,  # Will update after unit assignment
+            combined_difficulty=combined_difficulty,
+            season_theme=season_theme
         )
 
         if not candidate_poem_ids:
@@ -443,7 +684,10 @@ def build_lesson_graph(
             prerequisites=prereq_lesson_ids,
             difficulty_tier=difficulty_tier,
             candidate_poem_ids=candidate_poem_ids,
-            poem_ids=[]  # Will be populated by LLM poem selection step
+            poem_ids=[],  # Will be populated by LLM poem selection step
+            literary_ready=False,  # Will be updated after units are formed
+            literary_focus=[],
+            literary_difficulty=0.0
         )
 
         unit_id = f"unit_{entry.category}"
@@ -455,8 +699,44 @@ def build_lesson_graph(
         for unit_id, lessons in sorted(units_dict.items())
     ]
 
+    # Determine which lessons are "literary_ready" based on unit position
+    # First N units are foundation (no literary focus)
+    # After that, lessons are literary_ready
+    logger.info(f"Marking lessons as literary_ready (foundation units: {foundation_unit_count})")
+    foundation_lesson_ids = set()
+
+    for i, unit in enumerate(units):
+        is_foundation_unit = i < foundation_unit_count
+
+        for lesson in unit.lessons:
+            if is_foundation_unit:
+                foundation_lesson_ids.add(lesson.id)
+                lesson.literary_ready = False
+            else:
+                lesson.literary_ready = True
+
+                # Re-select poems preferring literary-rich ones
+                if literary_df is not None or season_theme:
+                    new_poems, lit_focus, lit_diff = select_poems_for_lesson(
+                        lesson.canonical_grammar_point, poems_df, poem_to_canonical,
+                        candidate_pool_size,
+                        literary_difficulty=literary_difficulty,
+                        literary_df=literary_df,
+                        prefer_literary_rich=True,
+                        combined_difficulty=combined_difficulty,
+                        season_theme=season_theme
+                    )
+                    lesson.candidate_poem_ids = new_poems
+                    lesson.literary_focus = lit_focus
+                    lesson.literary_difficulty = round(lit_diff, 3)
+
+    # Log literary integration stats
+    literary_ready_count = sum(
+        1 for u in units for l in u.lessons if l.literary_ready
+    )
     total_lessons = sum(len(u.lessons) for u in units)
     logger.info(f"Built {len(units)} units with {total_lessons} lessons")
+    logger.info(f"Literary-ready lessons: {literary_ready_count}/{total_lessons}")
 
     return units, dict(prereq_lookup)
 
@@ -465,23 +745,39 @@ def select_poems_for_lesson(
     canonical_id: str,
     poems_df: pd.DataFrame,
     poem_to_canonical: dict[str, set],
-    max_poems: int
-) -> list[str]:
+    max_poems: int,
+    literary_difficulty: dict | None = None,
+    literary_df: pd.DataFrame | None = None,
+    prefer_literary_rich: bool = False,
+    combined_difficulty: dict[str, float] | None = None,
+    season_theme: dict[str, dict] | None = None
+) -> tuple[list[str], list[str], float]:
     """
-    Select poems that best teach a grammar point.
+    Select poems that best teach a grammar point using stratified sampling.
+
+    Uses stratified sampling across difficulty tiers to give the LLM variety
+    to choose from, rather than just the easiest poems. This ensures the
+    candidate pool represents the full difficulty distribution of poems
+    containing this grammar point.
 
     Criteria:
     - Contains the target canonical point
-    - Sorted by difficulty (easier first)
+    - Stratified across 3-5 difficulty tiers (proportional sampling)
+    - Within each tier: prefer poems with notable poetic devices if literary-ready
+    - Final output sorted by difficulty for consistent ordering
 
     Args:
         canonical_id: Target grammar point
         poems_df: Annotated poems
         poem_to_canonical: Mapping of poem_id -> canonical_ids
         max_poems: Maximum poems to select
+        literary_difficulty: Dict of poem_id -> literary difficulty info
+        literary_df: DataFrame with literary annotations
+        prefer_literary_rich: If True, prefer poems with more devices within each tier
+        combined_difficulty: Dict of poem_id -> combined (grammar+literary) difficulty
 
     Returns:
-        List of poem IDs
+        Tuple of (poem_ids, literary_focus_devices, avg_literary_difficulty)
     """
     # Filter to poems containing this canonical point
     candidate_ids = [
@@ -490,13 +786,131 @@ def select_poems_for_lesson(
     ]
 
     if not candidate_ids:
-        return []
+        return [], [], 0.0
 
     # Get difficulties for sorting
     candidates = poems_df[poems_df['poem_id'].isin(candidate_ids)].copy()
-    candidates = candidates.sort_values('difficulty_score_computed')
 
-    return candidates.head(max_poems)['poem_id'].tolist()
+    # Use combined difficulty if available (grammar + literary), else fall back to grammar only
+    if combined_difficulty and prefer_literary_rich:
+        candidates['sort_difficulty'] = candidates['poem_id'].apply(
+            lambda pid: combined_difficulty.get(pid, candidates.loc[candidates['poem_id'] == pid, 'difficulty_score_computed'].iloc[0] if len(candidates[candidates['poem_id'] == pid]) > 0 else 0.5)
+        )
+    else:
+        candidates['sort_difficulty'] = candidates['difficulty_score_computed']
+
+    # Add literary difficulty if available
+    if literary_difficulty:
+        candidates['literary_diff'] = candidates['poem_id'].apply(
+            lambda pid: literary_difficulty.get(pid, {}).get('literary_difficulty', 0.0)
+        )
+    else:
+        candidates['literary_diff'] = 0.0
+
+    # Add device count if literary data available
+    if prefer_literary_rich and literary_df is not None:
+        candidates['device_count'] = candidates['poem_id'].apply(
+            lambda pid: literary_difficulty.get(pid, {}).get('device_count', 0)
+            if literary_difficulty else 0
+        )
+    else:
+        candidates['device_count'] = 0
+
+    # Stratified sampling: pick poems across the difficulty distribution
+    # This gives LLM variety to choose from, not just easiest poems
+    n_candidates = len(candidates)
+
+    if n_candidates <= max_poems:
+        # Not enough candidates, take all
+        selected = candidates.sort_values('sort_difficulty')
+    else:
+        # Stratified sampling across difficulty tiers
+        # Use 3-5 tiers depending on pool size
+        n_tiers = min(5, max(3, n_candidates // 10))
+        candidates['difficulty_tier'] = pd.qcut(
+            candidates['sort_difficulty'],
+            q=n_tiers,
+            labels=False,
+            duplicates='drop'
+        )
+
+        # Calculate poems per tier (distribute evenly, with extras going to easier tiers)
+        actual_tiers = candidates['difficulty_tier'].nunique()
+        base_per_tier = max_poems // actual_tiers
+        extras = max_poems % actual_tiers
+
+        selected_rows = []
+        for tier in sorted(candidates['difficulty_tier'].unique()):
+            tier_poems = candidates[candidates['difficulty_tier'] == tier]
+
+            # Easier tiers (lower numbers) get priority for extra slots
+            n_from_tier = base_per_tier + (1 if tier < extras else 0)
+
+            if prefer_literary_rich and literary_df is not None:
+                # Within tier, prefer poems with more devices
+                tier_poems = tier_poems.sort_values('device_count', ascending=False)
+            else:
+                # Within tier, sort by difficulty for consistent ordering
+                tier_poems = tier_poems.sort_values('sort_difficulty')
+
+            selected_rows.append(tier_poems.head(n_from_tier))
+
+        selected = pd.concat(selected_rows, ignore_index=True)
+        # Final sort by difficulty for output ordering
+        selected = selected.sort_values('sort_difficulty')
+
+    selected_ids = selected['poem_id'].tolist()
+
+    # Compute literary focus (devices + season/themes) and average difficulty
+    literary_focus = []
+    if literary_df is not None or season_theme:
+        device_counter = Counter()
+        season_counter = Counter()
+        theme_counter = Counter()
+
+        for pid in selected_ids:
+            # Count poetic devices from literary_df
+            if literary_df is not None:
+                devices = get_poem_devices(pid, literary_df)
+                for device in devices:
+                    if device in MAJOR_DEVICES:
+                        device_counter[device] += 1
+
+            # Use standardized season/theme data
+            if season_theme and pid in season_theme:
+                st = season_theme[pid]
+                if st.get('season') and st['season'] != '無季':
+                    season_counter[st['season']] += 1
+                for theme in st.get('themes', []):
+                    if theme != '其他':
+                        theme_counter[theme] += 1
+
+        # Top devices (up to 3) - relaxed from 2
+        top_devices = [d for d, _ in device_counter.most_common(3)]
+
+        # Dominant season (25%+ threshold) - relaxed from 40%
+        top_season = None
+        if season_counter:
+            most_common_season, season_count = season_counter.most_common(1)[0]
+            if season_count >= len(selected_ids) * 0.25:
+                top_season = f"【{most_common_season}】"
+
+        # Dominant themes (25%+ threshold, up to 2) - relaxed from 40%/max 1
+        top_themes = []
+        if theme_counter:
+            for theme, theme_count in theme_counter.most_common(2):
+                if theme_count >= len(selected_ids) * 0.25:
+                    top_themes.append(theme)
+
+        # Combine: season > themes > devices (up to 5 total) - increased from 3
+        if top_season:
+            literary_focus.append(top_season)
+        literary_focus.extend(top_themes[:max(0, 2 - (1 if top_season else 0))])
+        literary_focus.extend(top_devices[:max(0, 5 - len(literary_focus))])
+
+    avg_literary_diff = selected['literary_diff'].mean() if len(selected) > 0 else 0.0
+
+    return selected_ids, literary_focus, avg_literary_diff
 
 
 # -----------------------------------------------------------------------------
@@ -509,7 +923,10 @@ def extract_curriculum(
     min_poems_per_lesson: int = DEFAULT_MIN_POEMS_PER_LESSON,
     max_lessons: int = DEFAULT_MAX_LESSONS,
     candidate_pool_size: int = DEFAULT_CANDIDATE_POOL_SIZE,
-    difficulty_tiers: int = DEFAULT_DIFFICULTY_TIERS
+    difficulty_tiers: int = DEFAULT_DIFFICULTY_TIERS,
+    literary_input: Path | None = None,
+    literary_difficulty_path: Path | None = None,
+    foundation_unit_count: int = FOUNDATION_UNIT_COUNT
 ) -> LessonGraph:
     """
     Extract curriculum from annotated poems.
@@ -521,6 +938,9 @@ def extract_curriculum(
         max_lessons: Maximum lessons to generate
         candidate_pool_size: Number of candidate poems per lesson (for LLM selection)
         difficulty_tiers: Number of difficulty tiers
+        literary_input: Path to literary annotations parquet (optional)
+        literary_difficulty_path: Path to literary difficulty JSON (optional)
+        foundation_unit_count: First N units are "foundation" (no literary focus)
 
     Returns:
         LessonGraph object
@@ -530,8 +950,25 @@ def extract_curriculum(
     poems_df = pd.read_parquet(input_path)
     logger.info(f"Loaded {len(poems_df)} annotated poems")
 
-    # Step 1: Build grammar index
-    grammar_index = build_grammar_index(poems_df, min_frequency=1)
+    # Load literary data (optional)
+    if literary_input is not None or literary_difficulty_path is not None:
+        literary_df, literary_difficulty, literary_index = load_literary_data(
+            literary_input=literary_input or DEFAULT_LITERARY_INPUT,
+            literary_difficulty_path=literary_difficulty_path or DEFAULT_LITERARY_DIFFICULTY,
+            literary_index_path=DEFAULT_LITERARY_INDEX
+        )
+    else:
+        logger.info("Literary integration disabled")
+        literary_df, literary_difficulty, literary_index = None, None, None
+
+    # Load Chinese-adjusted difficulty, combined difficulty, confusables, and season/theme
+    chinese_difficulty = load_chinese_difficulty()
+    combined_difficulty = load_combined_difficulty()
+    confusables = load_confusables()
+    season_theme = load_season_theme()
+
+    # Step 1: Build grammar index (using Chinese-adjusted difficulty)
+    grammar_index = build_grammar_index(poems_df, min_frequency=1, chinese_difficulty=chinese_difficulty)
 
     if not grammar_index:
         raise ValueError("No grammar points found in corpus")
@@ -545,7 +982,7 @@ def extract_curriculum(
     # Step 4: Break cycles
     final_edges, removed_edges = break_cycles(edges)
 
-    # Step 5: Build lesson graph
+    # Step 5: Build lesson graph (with literary integration)
     units, prereq_map = build_lesson_graph(
         grammar_index,
         final_edges,
@@ -553,7 +990,12 @@ def extract_curriculum(
         min_poems_per_lesson=min_poems_per_lesson,
         max_lessons=max_lessons,
         candidate_pool_size=candidate_pool_size,
-        difficulty_tiers=difficulty_tiers
+        difficulty_tiers=difficulty_tiers,
+        literary_df=literary_df,
+        literary_difficulty=literary_difficulty,
+        foundation_unit_count=foundation_unit_count,
+        combined_difficulty=combined_difficulty,
+        season_theme=season_theme
     )
 
     # Build prerequisite graph
@@ -563,8 +1005,11 @@ def extract_curriculum(
         stoplist_applied=stoplist_applied
     )
 
-    # Build metadata
+    # Calculate literary integration stats
+    literary_ready_count = sum(1 for u in units for l in u.lessons if l.literary_ready)
     total_lessons = sum(len(u.lessons) for u in units)
+
+    # Build metadata
     meta = {
         'generated_at': datetime.now().isoformat(),
         'corpus_size': len(poems_df),
@@ -573,6 +1018,13 @@ def extract_curriculum(
         'total_canonical_points': len(grammar_index),
         'cycles_broken': len(removed_edges),
         'stoplist_size': len(stoplist_applied),
+        'literary_integration': {
+            'enabled': literary_df is not None,
+            'literary_ready_lessons': literary_ready_count,
+            'foundation_units': foundation_unit_count,
+            'grammar_weight': GRAMMAR_WEIGHT,
+            'literary_weight': LITERARY_WEIGHT
+        },
         'config': {
             'min_poems_per_lesson': min_poems_per_lesson,
             'max_lessons': max_lessons,
@@ -665,7 +1117,30 @@ def generate_curriculum_report(
             lines.append(f"  - Frequency: {freq} poems")
             lines.append(f"  - Prerequisites: {prereqs}")
             lines.append(f"  - Candidate poems: {len(lesson.candidate_poem_ids)}")
+
+            # Literary integration info
+            lit_ready = "✓" if lesson.literary_ready else "✗"
+            lines.append(f"  - Literary ready: {lit_ready}")
+            if lesson.literary_focus:
+                lines.append(f"  - Literary focus: {', '.join(lesson.literary_focus)}")
+            if lesson.literary_difficulty > 0:
+                lines.append(f"  - Literary difficulty: {lesson.literary_difficulty:.2f}")
+
             lines.append("")
+
+    # Literary integration summary
+    lit_meta = lesson_graph.meta.get('literary_integration', {})
+    if lit_meta.get('enabled'):
+        lines.extend([
+            "## Literary Integration",
+            "",
+            f"- **Enabled**: Yes",
+            f"- **Foundation units**: {lit_meta.get('foundation_units', 0)}",
+            f"- **Literary-ready lessons**: {lit_meta.get('literary_ready_lessons', 0)}",
+            f"- **Grammar weight**: {lit_meta.get('grammar_weight', 0.7)}",
+            f"- **Literary weight**: {lit_meta.get('literary_weight', 0.3)}",
+            "",
+        ])
 
     lines.extend([
         "## Prerequisite Graph",
@@ -749,6 +1224,29 @@ Examples:
         default=DEFAULT_DIFFICULTY_TIERS,
         help=f"Number of difficulty tiers 1-N (default: {DEFAULT_DIFFICULTY_TIERS})",
     )
+    parser.add_argument(
+        "--literary-input",
+        type=Path,
+        default=DEFAULT_LITERARY_INPUT,
+        help=f"Path to literary annotations parquet (default: {DEFAULT_LITERARY_INPUT})",
+    )
+    parser.add_argument(
+        "--literary-difficulty",
+        type=Path,
+        default=DEFAULT_LITERARY_DIFFICULTY,
+        help=f"Path to literary difficulty JSON (default: {DEFAULT_LITERARY_DIFFICULTY})",
+    )
+    parser.add_argument(
+        "--foundation-units",
+        type=int,
+        default=FOUNDATION_UNIT_COUNT,
+        help=f"Number of foundation units (no literary focus) (default: {FOUNDATION_UNIT_COUNT})",
+    )
+    parser.add_argument(
+        "--no-literary",
+        action="store_true",
+        help="Disable literary integration entirely",
+    )
 
     args = parser.parse_args()
 
@@ -764,13 +1262,21 @@ Examples:
         min_poems_per_lesson=args.min_poems_per_lesson,
         max_lessons=args.max_lessons,
         candidate_pool_size=args.candidate_pool_size,
-        difficulty_tiers=args.difficulty_tiers
+        difficulty_tiers=args.difficulty_tiers,
+        literary_input=None if args.no_literary else args.literary_input,
+        literary_difficulty_path=None if args.no_literary else args.literary_difficulty,
+        foundation_unit_count=args.foundation_units
     )
 
     print(f"\nCurriculum extracted to {args.output_dir}/")
     print(f"  - Units: {len(lesson_graph.units)}")
     print(f"  - Lessons: {lesson_graph.meta['total_lessons']}")
     print(f"  - Grammar points: {lesson_graph.meta['total_canonical_points']}")
+
+    # Literary integration stats
+    lit_meta = lesson_graph.meta.get('literary_integration', {})
+    if lit_meta.get('enabled'):
+        print(f"  - Literary-ready lessons: {lit_meta.get('literary_ready_lessons', 0)}")
 
     print(f"\nVerify with:")
     print(f'  cat {args.output_dir}/curriculum_report.md')

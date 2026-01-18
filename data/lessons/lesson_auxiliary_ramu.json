@@ -1,358 +1,299 @@
 {
   "lesson_id": "lesson_auxiliary_ramu",
-  "lesson_title": "The 'Invisible Present': Speculating with らむ (ramu)",
-  "lesson_summary": "In this lesson, we move from speculating about the future (む) to speculating about the present. You will learn how to use the auxiliary 'ramu' to infer events happening out of sight or to explain the logical 'why' behind a situation.",
+  "lesson_title": "看不见的当下：现在推量「らむ」",
+  "lesson_summary": "学习助动词「らむ」，用于推测视线之外正在发生的事情，或探究眼前现象背后的原因。",
   "grammar_point": "auxiliary_ramu",
   "grammar_explanation": {
-    "concept": "The auxiliary らむ (ramu) is the 'Present Tense' counterpart to the む (mu) you learned previously. While む deals with the future or intent, らむ deals with the 'here and now' that the speaker cannot directly see. It functions like a logical inference engine: 'Based on what I see here, [X] must be happening elsewhere' or '[X] must be the reason why this is so.'",
-    "formation": "Attached to the Shuushikei (Terminal Form) of verbs. For most verbs you've seen, this is the standard dictionary form ending in a 'u' sound.",
+    "concept": "现在推量 (Present Conjecture)",
+    "formation": "接在动词的终止形（U段音）之后。",
     "variations": [
-      "Reasoning: 'That must be why...' (often paired with 'why' words or 'because' structures)",
-      "Present Speculation: 'It is probably [doing] right now' (referring to a distant place)"
+      "终止形：らむ",
+      "连体形：らむ（同形）"
     ],
     "common_confusions": [
-      "らむ (Present Inference) vs. む (Future/Will): らむ is for things happening NOW; む is for things that WILL happen.",
-      "らむ (Inference) vs. けむ (Past Inference): We will cover the past version in a later unit."
+      "终止形 vs 连体形：虽然「らむ」的这两种形式写法和读音完全相同，但当句中出现系助词「や」或「か」时（系结法则），句末的「らむ」在语法上被视为连体形。这不影响翻译，但影响语法分析。"
     ]
   },
   "teaching_sequence": [
     {
       "type": "introduction",
-      "content": "In Unit 4.3, we saw how む (mu) acts as a 'probability' or 'will' tag for the future. But what if you want to guess about something happening *right now*? In classical poetry, poets often hear a sound or see a result and infer a cause. Think of らむ (ramu) as a 'Present Inference' logic gate: Input (Evidence) -> Process (Inference) -> Output (らむ)."
+      "content": "在上一课中，我们学习了助动词「む」，它像指向未来的箭头，表达“意志”或“推测将来”。\n\n今天我们把目光收回到**现在**。当你身处此地，却心系彼处；或者当你看到某种景象，心中升起“为什么会这样”的疑问时，古人会使用助动词「らむ」。\n\n它相当于中文的“想必正在……吧”或“究竟是为什么……呢”。"
     },
     {
       "type": "poem_presentation",
-      "poem_id": "ogura100_c66f30a30a5205f6",
+      "poem_id": "lapis_04ca54fe2d1490c6",
       "display": {
-        "text_with_furigana": "<ruby>吹<rt>ふ</rt></ruby>くからに<ruby>秋<rt>あき</rt></ruby>の<ruby>草木<rt>くさき</rt></ruby>のしをるれば<ruby>むべ<rt>むべ</rt></ruby><ruby>山風<rt>やまかぜ</rt></ruby>を<ruby>嵐<rt>あらし</rt></ruby>といふらむ",
-        "romaji": "fuku kara ni, aki no kusaki no, shiorureba, mube yamakaze o, arashi to ifuramu",
-        "translation": "As soon as it blows, the autumn plants wither; that must be why they call the mountain wind (山風) a storm (嵐)."
+        "text_with_furigana": "<ruby>秋<rt>あき</rt></ruby>は<ruby>来<rt>き</rt></ruby>に<ruby>うらびれ<rt>うらびれ</rt></ruby><ruby>居<rt>お</rt></ruby>れば<ruby>足引<rt>あしひき</rt></ruby>の<ruby>山下<rt>やました</rt></ruby><ruby>響<rt>とよ</rt></ruby>み<ruby>鹿<rt>しか</rt></ruby>の<ruby>鳴<rt>な</rt></ruby>く<span class='highlight-grammar'>らむ</span>",
+        "romaji": "aki wa ki ni urabire oreba ashihiki no yamashita toyomi shika no nakuramu",
+        "translation": "秋意已至，我心凄清地独坐，听那深山幽谷回响，想必是那鹿儿正在鸣叫吧。"
       },
       "vocabulary": [
-        {
-          "word": "吹く",
-          "reading": "ふく",
-          "meaning": "to blow",
-          "span": [
-            0,
-            2
-          ],
-          "chinese_cognate_note": "Cognate with 吹 (chuī)."
-        },
-        {
-          "word": "からに",
-          "reading": "からに",
-          "meaning": "as soon as / because of",
-          "span": [
-            2,
-            5
-          ],
-          "chinese_cognate_note": null
-        },
         {
           "word": "秋",
           "reading": "あき",
-          "meaning": "autumn",
-          "span": [
-            5,
-            6
-          ],
-          "chinese_cognate_note": "Cognate with 秋 (qiū)."
+          "meaning": "秋天",
+          "span": null,
+          "chinese_cognate_note": "秋"
+        },
+        {
+          "word": "は",
+          "reading": "は",
+          "meaning": "提示主题（系助词）",
+          "span": null,
+          "chinese_cognate_note": null
+        },
+        {
+          "word": "来",
+          "reading": "き",
+          "meaning": "来（动词“来”的连用形）",
+          "span": null,
+          "chinese_cognate_note": "来"
+        },
+        {
+          "word": "に",
+          "reading": "に",
+          "meaning": "表示完了/确认（助动词“ぬ”的连用形）",
+          "span": null,
+          "chinese_cognate_note": null
+        },
+        {
+          "word": "うらびれ",
+          "reading": "うらびれ",
+          "meaning": "感到凄凉、萧条（动词“うらびる”的连用形）",
+          "span": null,
+          "chinese_cognate_note": null
+        },
+        {
+          "word": "居",
+          "reading": "お",
+          "meaning": "在、坐着（动词“居り”的已然形）",
+          "span": null,
+          "chinese_cognate_note": "居"
+        },
+        {
+          "word": "れば",
+          "reading": "れば",
+          "meaning": "因为……所以（接续助词“ば”接在已然形后）",
+          "span": null,
+          "chinese_cognate_note": null
+        },
+        {
+          "word": "足引の",
+          "reading": "あしひきの",
+          "meaning": "枕词，修饰“山”",
+          "span": null,
+          "chinese_cognate_note": null
+        },
+        {
+          "word": "山下",
+          "reading": "やました",
+          "meaning": "山脚、山谷",
+          "span": null,
+          "chinese_cognate_note": "山下"
+        },
+        {
+          "word": "響み",
+          "reading": "とよみ",
+          "meaning": "轰鸣、回响（动词“響む”的连用形）",
+          "span": null,
+          "chinese_cognate_note": "响"
+        },
+        {
+          "word": "鹿",
+          "reading": "しか",
+          "meaning": "鹿",
+          "span": null,
+          "chinese_cognate_note": "鹿"
         },
         {
           "word": "の",
           "reading": "の",
-          "meaning": "possessive particle (of)",
-          "span": [
-            6,
-            7
-          ],
+          "meaning": "主格助词（表示主语）",
+          "span": null,
           "chinese_cognate_note": null
         },
         {
-          "word": "草木",
-          "reading": "くさき",
-          "meaning": "plants and trees",
-          "span": [
-            7,
-            9
-          ],
-          "chinese_cognate_note": "Cognate with 草木 (cǎomù)."
-        },
-        {
-          "word": "の",
-          "reading": "の",
-          "meaning": "subject marker (in this context, identifying what is withering)",
-          "span": [
-            9,
-            10
-          ],
-          "chinese_cognate_note": null
-        },
-        {
-          "word": "しをるれば",
-          "reading": "しをるれば",
-          "meaning": "because [they] wither",
-          "span": [
-            10,
-            15
-          ],
-          "chinese_cognate_note": "The 'reba' ending indicates a causal relationship (since/because)."
-        },
-        {
-          "word": "むべ",
-          "reading": "むべ",
-          "meaning": "indeed / no wonder",
-          "span": [
-            15,
-            17
-          ],
-          "chinese_cognate_note": null
-        },
-        {
-          "word": "山風",
-          "reading": "やまかぜ",
-          "meaning": "mountain wind",
-          "span": [
-            17,
-            19
-          ],
-          "chinese_cognate_note": "Cognate with 山風 (shānfēng)."
-        },
-        {
-          "word": "を",
-          "reading": "を",
-          "meaning": "object marker (marks 'mountain wind')",
-          "span": [
-            19,
-            20
-          ],
-          "chinese_cognate_note": null
-        },
-        {
-          "word": "嵐",
-          "reading": "あらし",
-          "meaning": "storm / tempest",
-          "span": [
-            20,
-            21
-          ],
-          "chinese_cognate_note": "Cognate with 嵐 (lán), though in Japanese it specifically means storm."
-        },
-        {
-          "word": "と",
-          "reading": "と",
-          "meaning": "quotation particle (as)",
-          "span": [
-            21,
-            22
-          ],
-          "chinese_cognate_note": null
-        },
-        {
-          "word": "いふ",
-          "reading": "いふ",
-          "meaning": "to say / to call",
-          "span": [
-            22,
-            24
-          ],
-          "chinese_cognate_note": "Cognate with 言 (yán)."
+          "word": "鳴く",
+          "reading": "なく",
+          "meaning": "鸣叫（动词）",
+          "span": null,
+          "chinese_cognate_note": "鸣"
         },
         {
           "word": "らむ",
           "reading": "らむ",
-          "meaning": "must be why / probably",
-          "span": [
-            24,
-            26
-          ],
-          "chinese_cognate_note": "The target grammar point: present inference."
+          "meaning": "想必正在……吧（现在推量助动词）",
+          "span": null,
+          "chinese_cognate_note": null
         }
       ],
       "focus_highlight": [
-        24,
-        26
+        27,
+        29
       ]
     },
     {
       "type": "grammar_spotlight",
-      "content": "In the poem above, the poet uses a visual pun. The Kanji for 'Storm' (嵐) is composed of 'Mountain' (山) on top of 'Wind' (風). \n\n1. **Evidence:** The wind blows and plants wither immediately.\n2. **Inference:** This is why people call it 'Arashi' (Mountain-Wind).\n\nHere, **いふらむ (ifu-ramu)** doesn't mean 'they will say,' but rather 'that must be why they call it [right now/generally].' It explains the *reason* for a known fact.",
+      "content": "在这首诗中，「鳴く」（naku，鸣叫）是动词的终止形，后面直接接上了「らむ」。\n\n**结构**：`动词终止形` + `らむ`\n**含义**：推测视线之外正在发生的事。\n\n诗人虽然听到了声音，但并没有亲眼看到鹿。因此，他不是在陈述一个事实（“鹿在叫”），而是在脑海中构建这个画面（“想必是鹿在叫吧”）。这种“当下的想象”就是「らむ」的核心功能。",
       "evidence": "See the poem above."
     },
     {
       "type": "poem_presentation",
-      "poem_id": "lapis_0acc1b80b37ce7e7",
+      "poem_id": "lapis_c4b757c9f94f6ddc",
       "display": {
-        "text_with_furigana": "おほつかな<ruby>霞<rt>かすみ</rt></ruby><ruby>立<rt>た</rt></ruby>つらむたけくまの<ruby>松<rt>まつ</rt></ruby>の<ruby>間<rt>ま</rt></ruby>もる<ruby>春<rt>はる</rt></ruby>の<ruby>夜<rt>よ</rt></ruby>の<ruby>月<rt>つき</rt></ruby>",
-        "romaji": "ootsutsunaka, sumi tatsu ramu, takekuma no, matsu no kuma moru, haru no yo no tsuki",
-        "translation": "How indistinct it is; the mist must be rising (now) as the spring night moon shines through the pines of Takekuma."
+        "text_with_furigana": "<ruby>住<rt>すみ</rt></ruby>の<ruby>江<rt>え</rt></ruby>の<ruby>岸<rt>きし</rt></ruby>に<ruby>寄<rt>よ</rt></ruby>る<ruby>浪<rt>なみ</rt></ruby><ruby>よる<rt>よる</rt></ruby>さへや<ruby>夢<rt>ゆめ</rt></ruby>の<ruby>通<rt>かよ</rt></ruby>ひ<ruby>路<rt>じ</rt></ruby><ruby>人目<rt>ひとめ</rt></ruby><ruby>避<rt>よ</rt></ruby>く<span class='highlight-grammar'>らむ</span>",
+        "romaji": "suminoe no kishi ni yoru nami yoru sae ya yume no kayoiji hitome yokuran",
+        "translation": "就像那打向住之江岸边的波浪，为何连在夜晚的梦路中，你也要避开人目（不愿相见）呢？"
       },
       "vocabulary": [
         {
-          "word": "おほつかな",
-          "reading": "おほつかな",
-          "meaning": "vague / indistinct / uncertain",
-          "span": [
-            0,
-            5
-          ],
+          "word": "住の江",
+          "reading": "すみのえ",
+          "meaning": "地名（住吉之江）",
+          "span": null,
           "chinese_cognate_note": null
         },
         {
-          "word": "霞",
-          "reading": "かすみ",
-          "meaning": "mist / haze",
+          "word": "の",
+          "reading": "の",
+          "meaning": "格助词（的）",
           "span": null,
-          "chinese_cognate_note": "Cognate with 霞 (xiá)."
+          "chinese_cognate_note": null
         },
         {
-          "word": "立つ",
-          "reading": "たつ",
-          "meaning": "to rise / to stand",
+          "word": "岸",
+          "reading": "きし",
+          "meaning": "岸",
           "span": null,
-          "chinese_cognate_note": "Cognate with 立 (lì)."
+          "chinese_cognate_note": "岸"
+        },
+        {
+          "word": "に",
+          "reading": "に",
+          "meaning": "格助词（向、对）",
+          "span": null,
+          "chinese_cognate_note": null
+        },
+        {
+          "word": "寄る",
+          "reading": "よる",
+          "meaning": "靠近、涌来",
+          "span": null,
+          "chinese_cognate_note": null
+        },
+        {
+          "word": "浪",
+          "reading": "なみ",
+          "meaning": "波浪",
+          "span": null,
+          "chinese_cognate_note": "浪"
+        },
+        {
+          "word": "よる",
+          "reading": "よる",
+          "meaning": "夜晚（此处双关“靠近”）",
+          "span": null,
+          "chinese_cognate_note": "夜"
+        },
+        {
+          "word": "さへ",
+          "reading": "さえ",
+          "meaning": "连……也（表示添加/强调）",
+          "span": null,
+          "chinese_cognate_note": null
+        },
+        {
+          "word": "や",
+          "reading": "や",
+          "meaning": "表示疑问（系助词）",
+          "span": null,
+          "chinese_cognate_note": null
+        },
+        {
+          "word": "夢",
+          "reading": "ゆめ",
+          "meaning": "梦",
+          "span": null,
+          "chinese_cognate_note": "梦"
+        },
+        {
+          "word": "の",
+          "reading": "の",
+          "meaning": "格助词（的）",
+          "span": null,
+          "chinese_cognate_note": null
+        },
+        {
+          "word": "通ひ路",
+          "reading": "かよいじ",
+          "meaning": "往来的路（指梦路）",
+          "span": null,
+          "chinese_cognate_note": "通路"
+        },
+        {
+          "word": "人目",
+          "reading": "ひとめ",
+          "meaning": "别人的视线",
+          "span": null,
+          "chinese_cognate_note": "人目"
+        },
+        {
+          "word": "避く",
+          "reading": "よく",
+          "meaning": "避开、躲避（动词终止形）",
+          "span": null,
+          "chinese_cognate_note": "避"
         },
         {
           "word": "らむ",
           "reading": "らむ",
-          "meaning": "must be / is likely (present inference)",
-          "span": [
-            10,
-            12
-          ],
-          "chinese_cognate_note": null
-        },
-        {
-          "word": "たけくま",
-          "reading": "たけくま",
-          "meaning": "Takekuma (a place name)",
-          "span": [
-            12,
-            16
-          ],
-          "chinese_cognate_note": null
-        },
-        {
-          "word": "の",
-          "reading": "の",
-          "meaning": "possessive particle (of)",
-          "span": [
-            16,
-            17
-          ],
-          "chinese_cognate_note": null
-        },
-        {
-          "word": "松",
-          "reading": "まつ",
-          "meaning": "pine tree",
+          "meaning": "究竟是为什么……呢（原因推量）",
           "span": null,
-          "chinese_cognate_note": "Cognate with 松 (sōng)."
-        },
-        {
-          "word": "の",
-          "reading": "の",
-          "meaning": "possessive particle (of)",
-          "span": [
-            19,
-            20
-          ],
           "chinese_cognate_note": null
-        },
-        {
-          "word": "間",
-          "reading": "ま",
-          "meaning": "space / interval",
-          "span": null,
-          "chinese_cognate_note": "Cognate with 間 (jiān)."
-        },
-        {
-          "word": "もる",
-          "reading": "もる",
-          "meaning": "to leak through / to shine through",
-          "span": [
-            22,
-            24
-          ],
-          "chinese_cognate_note": null
-        },
-        {
-          "word": "春",
-          "reading": "はる",
-          "meaning": "spring",
-          "span": null,
-          "chinese_cognate_note": "Cognate with 春 (chūn)."
-        },
-        {
-          "word": "の",
-          "reading": "の",
-          "meaning": "possessive particle (of)",
-          "span": [
-            26,
-            27
-          ],
-          "chinese_cognate_note": null
-        },
-        {
-          "word": "夜",
-          "reading": "よ",
-          "meaning": "night",
-          "span": null,
-          "chinese_cognate_note": "Cognate with 夜 (yè)."
-        },
-        {
-          "word": "の",
-          "reading": "の",
-          "meaning": "possessive particle (of)",
-          "span": [
-            28,
-            29
-          ],
-          "chinese_cognate_note": null
-        },
-        {
-          "word": "月",
-          "reading": "つき",
-          "meaning": "moon",
-          "span": null,
-          "chinese_cognate_note": "Cognate with 月 (yuè)."
         }
       ],
       "focus_highlight": [
-        10,
-        12
+        25,
+        27
       ]
     },
     {
       "type": "grammar_spotlight",
-      "content": "In this second poem, the poet is looking at the moon, but it looks 'vague' (おほつかな). \n\n**Logic:** If the moon looks blurry, then *right now*, mist must be rising (立つらむ). \n\nThis is the 'Present Speculation' use of らむ. The poet isn't seeing the mist directly, but they are inferring its presence based on the blurry appearance of the moon.",
+      "content": "注意这里的搭配：\n\n`や` (疑问系助词) ... `避く` (动词) + `らむ` (推量)\n\n1. **原因推量**：因为有疑问词「や」，这里的「らむ」不再是单纯猜测“正在避开”，而是探究“**为什么**正在避开”。\n2. **系结法则**：我们在之前的课程学过，系助词「や」要求句尾使用**连体形**。虽然「らむ」的连体形写起来也是「らむ」，但在语法分析上，这里的「らむ」是连体形。",
       "evidence": "See the poem above."
     },
     {
+      "type": "literary_insight",
+      "content": "这首诗使用了一个非常经典的技巧：**掛詞 (Kakekotoba)**，类似于中文的双关语。\n\n诗中的「よる」（yoru）出现了两次：\n1. 第一次是「寄る」（波浪**靠近**）。\n2. 第二次是「夜」（**夜晚**）。\n\n诗人利用读音相同，将“波浪靠近”的自然景象与“夜晚做梦”的时间背景无缝连接。这种技巧不仅节省字数，还增加了诗歌的流动感。",
+      "literary_device": "掛詞 (Pivot Word)",
+      "chinese_parallel": "双关语（如刘禹锡《竹枝词》“东边日出西边雨，道是无晴却有晴”）"
+    },
+    {
       "type": "comprehension_check",
-      "question": "In Poem 3 (below), look for the word 'ikani' (如何 - how/why). If 'yadoru' means 'to dwell/stay', what does 'yadoru ramu' imply in a question?",
-      "answer": "It implies a question about the current state: 'How is it [possible] that the light is dwelling [on my sleeves right now]?'",
-      "hint": "Think of 'ramu' as adding a layer of 'I wonder why' or 'it seems' to the verb 'dwell'."
+      "question": "在句子「風や解くらむ」（风正在融化[冰]吧/风为什么要融化[冰]呢）中，由于「や」的存在，「らむ」表达的重点倾向于什么？",
+      "answer": "原因推测（为什么）",
+      "hint": "回顾一下系助词「や」通常带来的语气是单纯的陈述还是疑问？"
+    },
+    {
+      "type": "literary_insight",
+      "content": "在第三首诗中，我们看到了另一项技法：**縁語 (Engo)**，即“关联词”。\n\n诗人精心挑选了一组在语义上紧密相关的词汇：\n- 水 (水)\n- 凍る (结冰)\n- 解く (融化/解开)\n- 袖 (袖子)\n- 漬つ (浸湿)\n\n这些词像一张网一样交织在一起。特别是「解く」（toku），既指冰的“融化”，也指系着的衣带“解开”（呼应“袖”）。这种词汇网络增强了诗歌的整体感。",
+      "literary_device": "縁語 (Related Words)",
+      "chinese_parallel": "连类/借代（如古诗中以“冰、水、寒”构建整体意境）"
     }
   ],
   "reference_card": {
-    "point": "Auxiliary らむ (ramu)",
-    "one_liner": "Speculates about a present action that is not directly visible or explains the reason for a current state.",
-    "example": "いふらむ (ifu-ramu) = 'must be why they call it' or 'is likely saying right now'.",
+    "point": "助动词「らむ」",
+    "one_liner": "推测视线之外正在发生的事（现在推量）或其原因。",
+    "example": "鹿の鳴く<strong>らむ</strong> (shika no naku ramu) - 想必鹿正在鸣叫吧",
     "see_also": [
-      "auxiliary_mu",
-      "conjugation_izenkei"
+      "lesson_auxiliary_mu",
+      "syntax_kakarimusubi"
     ]
   },
   "forward_references": [
     {
-      "point": "しをるれば (shiorureba)",
-      "note": "The 'reba' ending is the Izenkei + ba construction meaning 'because/since'. We will master this 'Reasoning Base' in Unit 5."
-    },
-    {
-      "point": "こし (koshi)",
-      "note": "This is a past tense auxiliary. We will cover the 'Past Speculation' (けむ) and 'Past Recollection' (き/けり) in Unit 6."
+      "point": "助动词「けむ」",
+      "note": "我们将在后续课程学习「けむ」，它是「らむ」的过去时版本（过去推量）。"
     }
   ]
 }

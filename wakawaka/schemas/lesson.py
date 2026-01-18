@@ -82,13 +82,22 @@ class SummaryStep(TeachingStepBase):
     content: str
 
 
+class LiteraryInsightStep(TeachingStepBase):
+    """Literary appreciation step for literary-ready lessons."""
+    type: Literal["literary_insight"] = "literary_insight"
+    content: str
+    literary_device: Optional[str] = None  # The poetic device being explained
+    chinese_parallel: Optional[str] = None  # Chinese poetry parallel concept
+
+
 TeachingStep = Union[
     IntroductionStep,
     PoemPresentationStep,
     GrammarSpotlightStep,
     ContrastExampleStep,
     ComprehensionCheckStep,
-    SummaryStep
+    SummaryStep,
+    LiteraryInsightStep
 ]
 
 

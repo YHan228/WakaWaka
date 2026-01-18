@@ -1,492 +1,377 @@
 {
   "lesson_id": "lesson_auxiliary_zu",
-  "lesson_title": "The Logic of 'Not': Negation with the Auxiliary ず (zu)",
-  "lesson_summary": "This lesson introduces the primary tool for negation in Classical Japanese. By attaching the auxiliary 'zu' to the Mizenkei (Unrealized Base) you learned in the previous lesson, you can flip the logical state of any action.",
+  "lesson_title": "否定の論理：助動詞「ず」",
+  "lesson_summary": "学习如何表达“不”与“没有”。掌握否定助动词「ず」及其连体形「ぬ」，并学会区分它与完了助动词「ぬ」的异同。",
   "grammar_point": "auxiliary_zu",
   "grammar_explanation": {
-    "concept": "The auxiliary 'zu' (ず) functions like a logical NOT operator (!). It negates the verb it attaches to. Because negation deals with something that 'has not happened,' it must always attach to the Mizenkei (未然形), the 'Unrealized Base' we established in Lesson 4.1.",
-    "formation": "Verb (Mizenkei Base) + ず (zu) / ぬ (nu)",
+    "concept": "否定助动词「ず」用于否定动作或状态，相当于中文的“不”或“没”。",
+    "formation": "接续在动词的【未然形】（Mizenkei）之后。未然形表示“尚未发生”的状态，逻辑上与否定相契合。",
     "variations": [
-      "ず (zu): The terminal form, used to end a sentence or a clause (like a semicolon).",
-      "ぬ (nu): The attributive form (Rentaikei), used when the negated verb modifies a noun or precedes certain particles."
+      "ず (终止形/连用形)：用于句末结句或中顿",
+      "ぬ (连体形)：用于修饰名词，或在系结法则中呼应「ぞ/なむ/や/か」"
     ],
     "common_confusions": [
-      "Do not confuse the negative 'nu' (ぬ) with the completion auxiliary 'nu' (which attaches to a different base). If it's on the Mizenkei, it's always 'NOT'."
+      "否定「ぬ」 vs 完了「ぬ」：这是古典语法中最著名的同形异义点。区分关键在于接续：否定「ぬ」接未然形（通常段动词为a段音），完了「ぬ」接连用形（通常段动词为i段音）。"
     ]
   },
   "teaching_sequence": [
     {
       "type": "introduction",
-      "content": "In the previous lesson, we identified the **Mizenkei (未然形)** as the 'Unrealized Base'—a version of the verb used for things that haven't occurred yet. Today, we apply the most common 'tag' to that base: the auxiliary **ず (zu)**. In programming terms, if the Mizenkei is the variable, 'zu' is the logical NOT operator that changes the boolean value from TRUE to FALSE."
+      "content": "在之前的课程中，我们学习了如何描述动作的发生（完了「つ/ぬ」）、过去（「き/けり」）以及推测（「む/らむ」）。但在逻辑表达中，定义“什么没有发生”同样重要。本课我们将引入否定助动词「ず」，它是构建反义逻辑的核心工具。"
     },
     {
       "type": "poem_presentation",
-      "poem_id": "ogura100_5f7cf181bd94b71f",
+      "poem_id": "lapis_1017f209485a9b1f",
       "display": {
-        "text_with_furigana": "<ruby>こ<rt>こ</rt></ruby>の<ruby>たび<rt>たび</rt></ruby>は<ruby>幣<rt>みてぐら</rt></ruby>も<ruby>取<rt>と</rt></ruby>り<ruby>あへ<rt>あへ</rt></ruby><span style='color: #ff4500;'>ず</span><ruby>手向山<rt>たむけやま</rt></ruby><ruby>紅葉<rt>もみぢ</rt></ruby>の<ruby>錦<rt>にしき</rt></ruby><ruby>神<rt>かみ</rt></ruby>のまにまに",
-        "romaji": "konotabi wa, mitegura mo toriaezu, tamukeyama, momiji no, nishiki kami no manimani",
-        "translation": "On this occasion, I could not even prepare offerings; instead, I offer the brocade of autumn leaves on Mt. Tamuke, as the gods will."
+        "text_with_furigana": "<ruby>山<rt>やま</rt></ruby><ruby>高<rt>たか</rt></ruby>み<ruby>雲<rt>くも</rt></ruby><ruby>居<rt>い</rt></ruby>に<ruby>見<rt>み</rt></ruby>ゆる<ruby>桜<rt>さくら</rt></ruby><ruby>花<rt>ばな</rt></ruby><ruby>心<rt>こころ</rt></ruby>の<ruby>行<rt>い</rt></ruby>きて<ruby>居<rt>お</rt></ruby>ら<ruby>ぬ<rt>ぬ</rt></ruby><ruby>日<rt>ひ</rt></ruby>ぞなき",
+        "romaji": "yama takami kumoi ni miyuru sakurabana kokoro no ikite oranu hi zo naki",
+        "translation": "山高入云端，樱花遥可见。我心飞去处，无日不流连。"
       },
       "vocabulary": [
         {
-          "word": "この",
-          "reading": "kono",
-          "meaning": "this",
-          "span": [
-            0,
-            2
-          ],
-          "chinese_cognate_note": "Equivalent to 此の"
+          "word": "山",
+          "reading": "やま",
+          "meaning": "山",
+          "span": null,
+          "chinese_cognate_note": "山"
         },
         {
-          "word": "たび",
-          "reading": "tabi",
-          "meaning": "time / occasion",
-          "span": [
-            2,
-            4
-          ],
-          "chinese_cognate_note": "Equivalent to 度"
+          "word": "高み",
+          "reading": "たかみ",
+          "meaning": "因为高（形容词词干+み表示原因）",
+          "span": null,
+          "chinese_cognate_note": "高"
         },
         {
-          "word": "は",
-          "reading": "wa",
-          "meaning": "[Topic Marker]",
-          "span": [
-            4,
-            5
-          ],
+          "word": "雲居",
+          "reading": "くもい",
+          "meaning": "云端、皇宫",
+          "span": null,
           "chinese_cognate_note": null
         },
         {
-          "word": "幣",
-          "reading": "mitegura",
-          "meaning": "offerings to a deity",
-          "span": [
-            5,
-            6
-          ],
-          "chinese_cognate_note": "Related to 幣 (currency/offering)"
-        },
-        {
-          "word": "も",
-          "reading": "mo",
-          "meaning": "also / even",
-          "span": [
-            6,
-            7
-          ],
+          "word": "に",
+          "reading": "に",
+          "meaning": "在（格助词）",
+          "span": null,
           "chinese_cognate_note": null
         },
         {
-          "word": "取りあへ",
-          "reading": "toriae",
-          "meaning": "to prepare/do fully (Mizenkei base)",
-          "span": [
-            7,
-            11
-          ],
-          "chinese_cognate_note": "取 (take/handle)"
+          "word": "見ゆる",
+          "reading": "みゆる",
+          "meaning": "看得见（自发动词连体形）",
+          "span": null,
+          "chinese_cognate_note": "见"
         },
         {
-          "word": "ず",
-          "reading": "zu",
-          "meaning": "not (negative auxiliary)",
-          "span": [
-            11,
-            12
-          ],
+          "word": "桜花",
+          "reading": "さくらばな",
+          "meaning": "樱花",
+          "span": null,
           "chinese_cognate_note": null
         },
         {
-          "word": "手向山",
-          "reading": "tamukeyama",
-          "meaning": "Mt. Tamuke (Place name)",
-          "span": [
-            12,
-            15
-          ],
-          "chinese_cognate_note": "山 (mountain)"
-        },
-        {
-          "word": "紅葉",
-          "reading": "momiji",
-          "meaning": "autumn leaves / maple",
-          "span": [
-            15,
-            17
-          ],
-          "chinese_cognate_note": "Same characters used in Chinese"
+          "word": "心",
+          "reading": "こころ",
+          "meaning": "心",
+          "span": null,
+          "chinese_cognate_note": "心"
         },
         {
           "word": "の",
-          "reading": "no",
-          "meaning": "[Possessive/Genitive Particle]",
-          "span": [
-            17,
-            18
-          ],
+          "reading": "の",
+          "meaning": "主语标记（格助词）",
+          "span": null,
           "chinese_cognate_note": null
         },
         {
-          "word": "錦",
-          "reading": "nishiki",
-          "meaning": "brocade",
-          "span": [
-            18,
-            19
-          ],
-          "chinese_cognate_note": "Same character/meaning as 錦"
+          "word": "行きて",
+          "reading": "いきて",
+          "meaning": "去并且...（动词连用形+接续助词）",
+          "span": null,
+          "chinese_cognate_note": "行"
         },
         {
-          "word": "神",
-          "reading": "kami",
-          "meaning": "god / deity",
-          "span": [
-            19,
-            20
-          ],
-          "chinese_cognate_note": "Same character/meaning as 神"
+          "word": "居ら",
+          "reading": "おら",
+          "meaning": "在、停留（动词未然形）",
+          "span": null,
+          "chinese_cognate_note": "居"
         },
         {
-          "word": "の",
-          "reading": "no",
-          "meaning": "[Possessive/Genitive Particle]",
-          "span": [
-            20,
-            21
-          ],
+          "word": "ぬ",
+          "reading": "ぬ",
+          "meaning": "不（否定助动词「ず」的连体形）",
+          "span": null,
           "chinese_cognate_note": null
         },
         {
-          "word": "まにまに",
-          "reading": "manimani",
-          "meaning": "at the will of / according to",
-          "span": [
-            21,
-            25
-          ],
+          "word": "日",
+          "reading": "ひ",
+          "meaning": "日子",
+          "span": null,
+          "chinese_cognate_note": "日"
+        },
+        {
+          "word": "ぞ",
+          "reading": "ぞ",
+          "meaning": "强调（系助词）",
+          "span": null,
           "chinese_cognate_note": null
+        },
+        {
+          "word": "なき",
+          "reading": "なき",
+          "meaning": "没有（形容词「なし」的连体形，受「ぞ」影响）",
+          "span": null,
+          "chinese_cognate_note": "无"
         }
       ],
       "focus_highlight": [
-        11,
-        12
+        22,
+        23
       ]
     },
     {
       "type": "grammar_spotlight",
-      "content": "Look at **取りあへず (toriaezu)**. The verb is 'toriahu' (to do fully). To negate it, we change it to its Mizenkei (toriahe) and add **ず (zu)**. \n\nLogic: [Action: Prepare] + [Not] = [Did not prepare]. \n\nIn this poem, the author is traveling so suddenly he didn't have time to prepare ritual offerings, so he offers the autumn leaves instead.",
+      "content": "请观察「居らぬ日」（oranu hi）。这里的「ぬ」是否定助动词「ず」的**连体形**。\n\n**逻辑结构：**\n1. 动词「居り」（ori，存在/在）\n2. 变为**未然形**「居ら」（ora，尚未/未发生的形式）\n3. 加上否定「ぬ」（nu）\n4. 修饰名词「日」（hi）\n\n**含义：**\n「居らぬ日」 = 不在的日子。\n全句「居らぬ日ぞなき」使用了双重否定（没有“不在的日子”），即“每一天心都在那里”。",
       "evidence": "See the poem above."
     },
     {
       "type": "poem_presentation",
-      "poem_id": "lapis_611ff94dbcc5ac83",
+      "poem_id": "lapis_71440e1f688e069a",
       "display": {
-        "text_with_furigana": "つくはねの<ruby>峰<rt>みね</rt></ruby>のもみちはおちつもりしるも<ruby>しら<rt>しら</rt></ruby><span style='color: #ff4500;'>ぬ</span>もなへてかなしも",
-        "romaji": "tsukuhaneno minenomomijiha ochitsumorishirumoshiranumonahetekanashimo",
-        "translation": "The autumn leaves from the peaks of Tsukuba fall and pile up; those I know and those I do not know, all are equally sad."
+        "text_with_furigana": "<ruby>春<rt>はる</rt></ruby><ruby>霞<rt>かすみ</rt></ruby><ruby>立<rt>た</rt></ruby>ちにし<ruby>日<rt>ひ</rt></ruby>より<ruby>今<rt>きょ</rt></ruby><ruby>日<rt>う</rt></ruby>までに<ruby>我<rt>わ</rt></ruby>が<ruby>恋<rt>こい</rt></ruby><ruby>止<rt>や</rt></ruby>まず<ruby>本<rt>もと</rt></ruby>の<ruby>繁<rt>しげ</rt></ruby>ければ",
+        "romaji": "harukasumi tachinishi hiyori kyō made ni waga koi yamazu moto no shikekereba",
+        "translation": "春霞初起日，直至今日时。我恋无止息，情根深且滋。"
       },
       "vocabulary": [
         {
-          "word": "つくはね",
-          "reading": "tsukuhane",
-          "meaning": "Mt. Tsukuba's peak",
-          "span": [
-            0,
-            4
-          ],
+          "word": "春霞",
+          "reading": "はるかすみ",
+          "meaning": "春天的薄雾",
+          "span": null,
           "chinese_cognate_note": null
+        },
+        {
+          "word": "立ち",
+          "reading": "たち",
+          "meaning": "升起（动词连用形）",
+          "span": null,
+          "chinese_cognate_note": "立"
+        },
+        {
+          "word": "に",
+          "reading": "に",
+          "meaning": "已经（完了助动词「ぬ」的连用形）",
+          "span": null,
+          "chinese_cognate_note": null
+        },
+        {
+          "word": "し",
+          "reading": "し",
+          "meaning": "过去（过去助动词「き」的连体形）",
+          "span": null,
+          "chinese_cognate_note": null
+        },
+        {
+          "word": "日",
+          "reading": "ひ",
+          "meaning": "日子",
+          "span": null,
+          "chinese_cognate_note": "日"
+        },
+        {
+          "word": "より",
+          "reading": "より",
+          "meaning": "从...开始（格助词）",
+          "span": null,
+          "chinese_cognate_note": null
+        },
+        {
+          "word": "今日",
+          "reading": "きょう",
+          "meaning": "今天",
+          "span": null,
+          "chinese_cognate_note": null
+        },
+        {
+          "word": "までに",
+          "reading": "までに",
+          "meaning": "直到（副助词+格助词）",
+          "span": null,
+          "chinese_cognate_note": null
+        },
+        {
+          "word": "我",
+          "reading": "わ",
+          "meaning": "我",
+          "span": null,
+          "chinese_cognate_note": "我"
+        },
+        {
+          "word": "が",
+          "reading": "が",
+          "meaning": "的（格助词）",
+          "span": null,
+          "chinese_cognate_note": null
+        },
+        {
+          "word": "恋",
+          "reading": "こい",
+          "meaning": "恋情",
+          "span": null,
+          "chinese_cognate_note": "恋"
+        },
+        {
+          "word": "止ま",
+          "reading": "やま",
+          "meaning": "停止（动词未然形）",
+          "span": null,
+          "chinese_cognate_note": "止"
+        },
+        {
+          "word": "ず",
+          "reading": "ず",
+          "meaning": "不（否定助动词「ず」的终止形/连用形）",
+          "span": null,
+          "chinese_cognate_note": null
+        },
+        {
+          "word": "本",
+          "reading": "もと",
+          "meaning": "根基、根源",
+          "span": null,
+          "chinese_cognate_note": "本"
         },
         {
           "word": "の",
-          "reading": "no",
-          "meaning": "[Possessive Particle]",
-          "span": [
-            4,
-            5
-          ],
+          "reading": "の",
+          "meaning": "主语标记（格助词）",
+          "span": null,
           "chinese_cognate_note": null
         },
         {
-          "word": "峰",
-          "reading": "mine",
-          "meaning": "peak / summit",
-          "span": [
-            5,
-            6
-          ],
-          "chinese_cognate_note": "Same character/meaning as 峰"
+          "word": "繁けれ",
+          "reading": "しげけれ",
+          "meaning": "茂密、繁多（形容词已然形）",
+          "span": null,
+          "chinese_cognate_note": "繁"
         },
         {
-          "word": "の",
-          "reading": "no",
-          "meaning": "[Possessive Particle]",
-          "span": [
-            6,
-            7
-          ],
-          "chinese_cognate_note": null
-        },
-        {
-          "word": "もみち",
-          "reading": "momiji",
-          "meaning": "autumn leaves",
-          "span": [
-            7,
-            10
-          ],
-          "chinese_cognate_note": null
-        },
-        {
-          "word": "は",
-          "reading": "wa",
-          "meaning": "[Topic Marker]",
-          "span": [
-            10,
-            11
-          ],
-          "chinese_cognate_note": null
-        },
-        {
-          "word": "おちつもり",
-          "reading": "ochitsumori",
-          "meaning": "falling and piling up",
-          "span": [
-            11,
-            16
-          ],
-          "chinese_cognate_note": "落 (fall) + 積 (pile)"
-        },
-        {
-          "word": "しる",
-          "reading": "shiru",
-          "meaning": "those who know / to know",
-          "span": [
-            16,
-            18
-          ],
-          "chinese_cognate_note": "知 (know)"
-        },
-        {
-          "word": "も",
-          "reading": "mo",
-          "meaning": "also / and",
-          "span": [
-            18,
-            19
-          ],
-          "chinese_cognate_note": null
-        },
-        {
-          "word": "しら",
-          "reading": "shira",
-          "meaning": "to know (Mizenkei base)",
-          "span": [
-            19,
-            21
-          ],
-          "chinese_cognate_note": null
-        },
-        {
-          "word": "ぬ",
-          "reading": "nu",
-          "meaning": "not (negative auxiliary - attributive form)",
-          "span": [
-            21,
-            22
-          ],
-          "chinese_cognate_note": null
-        },
-        {
-          "word": "も",
-          "reading": "mo",
-          "meaning": "also / and",
-          "span": [
-            22,
-            23
-          ],
-          "chinese_cognate_note": null
-        },
-        {
-          "word": "なへて",
-          "reading": "nahete",
-          "meaning": "altogether / generally",
-          "span": [
-            23,
-            26
-          ],
-          "chinese_cognate_note": null
-        },
-        {
-          "word": "かなしも",
-          "reading": "kanashimo",
-          "meaning": "how sad",
-          "span": [
-            26,
-            30
-          ],
+          "word": "ば",
+          "reading": "ば",
+          "meaning": "因为（接续助词）",
+          "span": null,
           "chinese_cognate_note": null
         }
       ],
       "focus_highlight": [
         21,
-        22
+        24
       ]
     },
     {
       "type": "grammar_spotlight",
-      "content": "In the second poem, we see **しらぬ (shiranu)**. \n1. Verb: **しる** (shiru - to know / 知).\n2. Mizenkei: **しら** (shira).\n3. Negative: **ぬ** (nu).\n\nWhy **ぬ** instead of **ず**? Because it is acting as a noun ('those who do NOT know'). As we learned in Unit 3, the **Rentaikei** (Attributive form) is required to turn a verb into a noun-phrase or modify a noun. For the negative auxiliary, the Rentaikei is **ぬ**.",
+      "content": "在这首诗中，我们看到了否定的另一种形式：「止まず」（yamazu）。\n\n*   **形式**：「ず」是终止形（用于结句）或连用形（用于中顿）。\n*   **功能**：这里表示中顿，“恋情没有停止，（而且）...”。\n*   **接续**：「止む」（yamu）是四段动词，其未然形是「止ま」（yama）。\n\n**对比观察：**\n诗中还出现了「立ちにし」（tachinishi）。这里的「に」是**完了助动词**「ぬ」的连用形。请注意它接在「立ち」（tachi，连用形）之后，表示动作“已经”发生，而非否定。",
       "evidence": "See the poem above."
     },
     {
+      "type": "contrast_example",
+      "content": "这是古典日语中最关键的辨析点之一：同为「ぬ」，如何区分“否定”与“完了”？\n\n**核心法则：看前面的元音**\n\n1.  **否定「ぬ」**（连体形）：接**未然形**。\n    *   对于最常见的四段动词，未然形以 **-a** 结尾。\n    *   例：`yuka-nu` (行かぬ - 不去)\n\n2.  **完了「ぬ」**（终止形）：接**连用形**。\n    *   对于最常见的四段动词，连用形以 **-i** 结尾。\n    *   例：`yuki-nu` (行きぬ - 去了/已经去了)\n\n*助记：A段音（未然）+ ぬ = 不； I段音（连用）+ ぬ = 了。*"
+    },
+    {
       "type": "poem_presentation",
-      "poem_id": "lapis_cf692c16ec62ceea",
+      "poem_id": "lapis_635143a685aa7d11",
       "display": {
-        "text_with_furigana": "<ruby>しもこほり<rt>しもこほり</rt></ruby><ruby>こころ<rt>こころ</rt></ruby>も<ruby>とけ<rt>とけ</rt></ruby><span style='color: #ff4500;'>ぬ</span><ruby>ふゆ<rt>ふゆ</rt></ruby>の<ruby>いけ<rt>いけ</rt></ruby>によふけてそなくをしのひとこゑ",
-        "romaji": "shimokōri kokoro, mo tokenu fuyu, no ike ni yofukete, so naku o, shi no hitokoe",
-        "translation": "In the winter pond where the ice is frozen and the core does not melt, the single cry of a mandarin duck as the night deepens."
+        "text_with_furigana": "<ruby>神無月<rt>かみなつき</rt></ruby><ruby>紅葉<rt>もみち</rt></ruby>も<ruby>知<rt>し</rt></ruby>ら<ruby>ぬ<rt>ぬ</rt></ruby><ruby>常盤木<rt>ときはき</rt></ruby>に<ruby>万<rt>よろ</rt></ruby><ruby>代<rt>つよ</rt></ruby><ruby>懸<rt>か</rt></ruby>かれ<ruby>峰<rt>みね</rt></ruby>の<ruby>白<rt>しら</rt></ruby><ruby>雲<rt>くも</rt></ruby>",
+        "romaji": "kaminatsuki momichi mo shiranu tokiwaki ni yorotsuyo kakare mine no shirakumo",
+        "translation": "神无十月时，常绿不知秋。愿以此身姿，万代挂峰头。"
       },
       "vocabulary": [
         {
-          "word": "しもこほり",
-          "reading": "shimokōri",
-          "meaning": "frost-frozen / thin ice",
-          "span": [
-            0,
-            5
-          ],
-          "chinese_cognate_note": "霜 (frost) + 氷 (ice)"
+          "word": "神無月",
+          "reading": "かみなつき",
+          "meaning": "阴历十月",
+          "span": null,
+          "chinese_cognate_note": null
         },
         {
-          "word": "こころ",
-          "reading": "kokoro",
-          "meaning": "heart / center / core",
-          "span": [
-            5,
-            8
-          ],
-          "chinese_cognate_note": "心 (heart/core)"
+          "word": "紅葉",
+          "reading": "もみち",
+          "meaning": "红叶、秋色",
+          "span": null,
+          "chinese_cognate_note": null
         },
         {
           "word": "も",
-          "reading": "mo",
-          "meaning": "also / even",
-          "span": [
-            8,
-            9
-          ],
+          "reading": "も",
+          "meaning": "也、甚至（系助词）",
+          "span": null,
           "chinese_cognate_note": null
         },
         {
-          "word": "とけ",
-          "reading": "toke",
-          "meaning": "to melt (Mizenkei base)",
-          "span": [
-            9,
-            11
-          ],
-          "chinese_cognate_note": "解 (dissolve/melt)"
+          "word": "知ら",
+          "reading": "しら",
+          "meaning": "知道（动词未然形）",
+          "span": null,
+          "chinese_cognate_note": "知"
         },
         {
           "word": "ぬ",
-          "reading": "nu",
-          "meaning": "not (negative auxiliary)",
-          "span": [
-            11,
-            12
-          ],
+          "reading": "ぬ",
+          "meaning": "不（否定助动词连体形）",
+          "span": null,
           "chinese_cognate_note": null
         },
         {
-          "word": "ふゆ",
-          "reading": "fuyu",
-          "meaning": "winter",
-          "span": [
-            12,
-            14
-          ],
-          "chinese_cognate_note": "冬 (winter)"
-        },
-        {
-          "word": "の",
-          "reading": "no",
-          "meaning": "[Possessive Particle]",
-          "span": [
-            14,
-            15
-          ],
+          "word": "常盤木",
+          "reading": "ときはき",
+          "meaning": "常绿树（松柏等）",
+          "span": null,
           "chinese_cognate_note": null
-        },
-        {
-          "word": "いけ",
-          "reading": "ike",
-          "meaning": "pond",
-          "span": [
-            15,
-            17
-          ],
-          "chinese_cognate_note": "池 (pond)"
         },
         {
           "word": "に",
-          "reading": "ni",
-          "meaning": "[Location Particle]",
-          "span": [
-            17,
-            18
-          ],
+          "reading": "に",
+          "meaning": "对、向（格助词）",
+          "span": null,
           "chinese_cognate_note": null
         },
         {
-          "word": "よふけて",
-          "reading": "yofukete",
-          "meaning": "night deepening",
-          "span": [
-            18,
-            22
-          ],
-          "chinese_cognate_note": "夜 (night) + 更 (grow late)"
+          "word": "万代",
+          "reading": "よろつよ",
+          "meaning": "万代、永远",
+          "span": null,
+          "chinese_cognate_note": "万代"
         },
         {
-          "word": "そ",
-          "reading": "so",
-          "meaning": "[Emphasis Particle]",
-          "span": [
-            22,
-            23
-          ],
+          "word": "懸かれ",
+          "reading": "かかれ",
+          "meaning": "悬挂、笼罩（动词命令形，表示祈愿）",
+          "span": null,
+          "chinese_cognate_note": "悬"
+        },
+        {
+          "word": "峰",
+          "reading": "みね",
+          "meaning": "山峰",
+          "span": null,
+          "chinese_cognate_note": "峰"
+        },
+        {
+          "word": "の",
+          "reading": "の",
+          "meaning": "的（格助词）",
+          "span": null,
           "chinese_cognate_note": null
         },
         {
-          "word": "なく",
-          "reading": "naku",
-          "meaning": "to cry (of an animal)",
-          "span": [
-            23,
-            25
-          ],
-          "chinese_cognate_note": "鳴 (cry/chirp)"
-        },
-        {
-          "word": "をしの",
-          "reading": "oshino",
-          "meaning": "mandarin duck's",
-          "span": [
-            25,
-            28
-          ],
-          "chinese_cognate_note": null
-        },
-        {
-          "word": "ひとこゑ",
-          "reading": "hitokoe",
-          "meaning": "single voice / one cry",
-          "span": [
-            28,
-            32
-          ],
-          "chinese_cognate_note": "一 (one) + 声 (voice)"
+          "word": "白雲",
+          "reading": "しらくも",
+          "meaning": "白云",
+          "span": null,
+          "chinese_cognate_note": "白云"
         }
       ],
       "focus_highlight": [
@@ -496,28 +381,29 @@
     },
     {
       "type": "comprehension_check",
-      "question": "In Poem 3, look at the phrase 'とけぬふゆのいけ' (tokenu fuyu no ike). Based on the grammar we just discussed, what is the logical relationship between 'melt' (toke) and 'winter pond' (fuyu no ike)?",
-      "answer": "The 'nu' negates 'toke' (melt), and because 'nu' is the attributive form, it modifies the 'winter pond.' Thus, it is a 'pond that does NOT melt.'",
-      "hint": "Identify the base of 'toke' and the function of 'nu' when it precedes a noun like 'fuyu' (winter)."
+      "question": "在短语「紅葉も知らぬ」（momichi mo shiranu）中，为什么我们可以确定这里的「ぬ」是否定助动词，而不是完了助动词？",
+      "answer": "因为前面的动词是「知ら」（shira），这是「知る」的未然形（a段音）。",
+      "hint": "检查「ぬ」前面的元音。如果是完了助动词，前面应该是连用形「知り」（shiri）。"
+    },
+    {
+      "type": "literary_insight",
+      "content": "在第二首诗中，诗人使用了**縁語（Engo）**技巧，这是一种利用词语多重含义进行关联的修辞法。\n\n*   **本（Moto）**：既指“原本/本来”，也指草木的“根”。\n*   **繁し（Shigeshi）**：既指恋情“繁多/深重”，也指草木“茂密”。\n\n诗人通过「本」与「繁」这两个与植物生长相关的词，将抽象的“恋情”具象化为一株根深叶茂、无法停止生长的植物，以此呼应前文的“春霞”与“日”，展现了时间的流逝与情感的积淀。",
+      "literary_device": "縁語 (Word Association)",
+      "chinese_parallel": "类似于中国诗歌中的“双关”或“连类”手法，如“东边日出西边雨，道是无晴却有晴”（晴/情）。"
     }
   ],
   "reference_card": {
-    "point": "Auxiliary ず (zu / nu)",
-    "one_liner": "The negative auxiliary that attaches to the Mizenkei (Unrealized) base to mean 'does not' or 'without'.",
-    "example": "しらぬ (shira-nu) = [Know: Mizenkei] + [Not] = Does not know.",
+    "point": "否定助动词「ず」",
+    "one_liner": "接在未然形后，表示“不”或“没有”。",
+    "example": "知らぬ (shira-nu) - 不知道",
     "see_also": [
-      "conjugation_mizenkei",
-      "conjugation_rentaikei"
+      "auxiliary_nu"
     ]
   },
   "forward_references": [
     {
-      "point": "そ (so)",
-      "note": "In Poem 3, you see 'so naku'. This 'so' is an emphasis particle that will trigger a special verb ending called Kakari-musubi in Unit 7."
-    },
-    {
-      "point": "かなしも (kanashimo)",
-      "note": "The ending '-shi' in Poem 2 is the standard way to end an adjective in Classical Japanese. We will cover this in Unit 5."
+      "point": "已然形「ね」",
+      "note": "我们将在后续学习「ず」的已然形「ね」，常用于「～ねば」（如果不...）的条件句中。"
     }
   ]
 }

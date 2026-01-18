@@ -1,527 +1,341 @@
 {
   "lesson_id": "lesson_auxiliary_ru",
-  "lesson_title": "The 'State' Suffix: Mastering the Versatile る (ru)",
-  "lesson_summary": "In this lesson, we analyze the suffix 'ru' (る), which acts as a logical 'packaging' tool. It transforms verbs into descriptions (Attributive) or indicates a state of being (Passive/Resultative).",
+  "lesson_title": "心弦自鸣：助动词「る」的自发与被动",
+  "lesson_summary": "探索助动词「る」如何表达“不由自主的情感”（自发）与“承受他人的动作”（被动），理解主语在动作中的微妙位置。",
   "grammar_point": "auxiliary_ru",
   "grammar_explanation": {
-    "concept": "The auxiliary 'ru' (る) functions like a status flag in a data object. It tells the reader that the preceding action is not just a simple 'does,' but is either (1) describing a noun, (2) representing a continuous state, or (3) indicating an action received (passive). For a Chinese speaker, think of it as a bridge between a verb and a noun, similar to the function of '的' in '浮动的叶子' (floating leaves).",
-    "formation": "In Classical Japanese, 'ru' typically attaches to the end of verbs or other auxiliaries. Its specific meaning depends on the 'base' it attaches to, but its visual form 'る' almost always signals that the word is in the Rentaikei (Attributive) form.",
+    "concept": "助动词「る」主要用于描述非主观意愿控制的动作或状态。它将动作的源头从“主观意图”转移到“自然发生”或“外部施加”。",
+    "formation": "接续于四段活用、那行（ナ行）变格、拉行（ラ行）变格动词的未然形（a段音）之后。",
     "variations": [
-      "る (ru) - Standard attributive/passive form",
-      "つる (tsuru) - Perfective 'tsu' + attributive 'ru'",
-      "れる (reru) - Resultative 'ri' + attributive 'ru' (often appears as 'eru' in certain verb classes)"
+      "未然形：れ",
+      "连用形：れ",
+      "终止形：る",
+      "连体形：るる",
+      "已然形：るれ",
+      "命令形：れよ"
     ],
     "common_confusions": [
-      "vs. 'zu' (ず): 'ru' indicates a state or description, while 'zu' indicates negation.",
-      "vs. 'ri' (り): 'ru' is often the 'attributive' version of the resultative 'ri'."
+      "与完了助动词「り」的辨析：看接续音。接在a段音（未然形）后是「る」（自发/被动）；接在e段音（已然形/命令形）后是「り」（完了/存续）。",
+      "与动词词尾的辨析：需判断「る/るる」是助动词还是动词本身的一部分（如「流る」）。"
     ]
   },
   "teaching_sequence": [
     {
       "type": "introduction",
-      "content": "You have already mastered how particles like 'no' and 'ni' create spatial and logical links. Now, we look at the suffix 'る' (ru). In your programming mental model, if a verb is a function `action()`, adding 'る' often turns it into a property `action.status`. It allows a verb to act as an adjective for a noun or to indicate that an action has reached a certain state."
+      "content": "在之前的课程中，我们学习了「ば」与已然形构建的逻辑链条，那是充满理性的因果世界。但在和歌中，最动人的往往是那些无法用逻辑解释、不由自主涌上心头的情感。今天我们要学习的助动词「る」，就是这种“心弦自鸣”的开关——它标志着动作不是出于“做”，而是出于“自然发生”。"
     },
     {
       "type": "poem_presentation",
-      "poem_id": "lapis_6e00d6082a28b396",
+      "poem_id": "ogura100_ac2f6771a80b27ea",
       "display": {
-        "text_with_furigana": "<ruby>白浪<rt>しらなみ</rt></ruby>に<ruby>秋<rt>あき</rt></ruby>のこのはの<ruby>うかへる<rt>うかへる</rt></ruby>を<ruby>あま<rt>あま</rt></ruby>の<ruby>なかせる<rt>なかせる</rt></ruby><ruby>舟<rt>ふね</rt></ruby>かとそ<ruby>見る<rt>みる</rt></ruby>",
-        "romaji": "shiranami ni, aki no konoha no, ukaeru o, ama no nakaseru, fune ka to zo miru",
-        "translation": "Seeing the autumn leaves floating on the white waves, I wonder if they are boats set adrift by fishermen."
+        "text_with_furigana": "<ruby>永<rt>なが</rt></ruby>らへばまたこのごろや<ruby>忍<rt>しの</rt></ruby>ば<mark>れ</mark>む<ruby>憂<rt>う</rt></ruby>しと<ruby>見<rt>み</rt></ruby>し<ruby>世<rt>よ</rt></ruby>ぞ<ruby>今<rt>いま</rt></ruby>は<ruby>恋<rt>こい</rt></ruby>しき",
+        "romaji": "nagaraeba mata konogoro ya shinobaremu ushi to mishi yo zo ima wa koishiki",
+        "translation": "若能长久活下去，哪怕是现在这痛苦的日子，将来恐怕也会不由自主地怀念吧。就像曾经觉得痛苦的过去，如今却令人恋慕。"
       },
       "vocabulary": [
         {
-          "word": "白浪",
-          "reading": "しらなみ",
-          "meaning": "white waves",
-          "span": [
-            0,
-            2
-          ],
-          "chinese_cognate_note": "Identical to Chinese '白浪'"
-        },
-        {
-          "word": "に",
-          "reading": "ni",
-          "meaning": "in/on (location particle)",
-          "span": [
-            2,
-            3
-          ],
-          "chinese_cognate_note": null
-        },
-        {
-          "word": "秋",
-          "reading": "あき",
-          "meaning": "autumn",
-          "span": [
-            3,
-            4
-          ],
-          "chinese_cognate_note": "Identical to Chinese '秋'"
-        },
-        {
-          "word": "の",
-          "reading": "no",
-          "meaning": "possessive particle (of)",
-          "span": [
-            4,
-            5
-          ],
-          "chinese_cognate_note": null
-        },
-        {
-          "word": "このは",
-          "reading": "konoha",
-          "meaning": "leaves of trees",
-          "span": [
-            5,
-            8
-          ],
-          "chinese_cognate_note": "木 (ko) + の (no) + 葉 (ha)"
-        },
-        {
-          "word": "の",
-          "reading": "no",
-          "meaning": "subject marker in a descriptive clause",
-          "span": [
-            8,
-            9
-          ],
-          "chinese_cognate_note": null
-        },
-        {
-          "word": "うかへる",
-          "reading": "ukaeru",
-          "meaning": "floating (state)",
-          "span": [
-            9,
-            13
-          ],
-          "chinese_cognate_note": "Contains '浮' (float)"
-        },
-        {
-          "word": "を",
-          "reading": "o",
-          "meaning": "object marker",
-          "span": [
-            13,
-            14
-          ],
-          "chinese_cognate_note": null
-        },
-        {
-          "word": "あま",
-          "reading": "ama",
-          "meaning": "fisherman",
-          "span": [
-            14,
-            16
-          ],
-          "chinese_cognate_note": "Written as '海人'"
-        },
-        {
-          "word": "の",
-          "reading": "no",
-          "meaning": "subject marker (by)",
-          "span": [
-            16,
-            17
-          ],
-          "chinese_cognate_note": null
-        },
-        {
-          "word": "なかせる",
-          "reading": "nakaseru",
-          "meaning": "set adrift / caused to flow",
-          "span": [
-            17,
-            21
-          ],
-          "chinese_cognate_note": "Contains '流' (flow)"
-        },
-        {
-          "word": "舟",
-          "reading": "fune",
-          "meaning": "boat",
-          "span": [
-            21,
-            22
-          ],
-          "chinese_cognate_note": "Identical to Chinese '舟'"
-        },
-        {
-          "word": "か",
-          "reading": "ka",
-          "meaning": "question particle",
-          "span": [
-            22,
-            23
-          ],
-          "chinese_cognate_note": null
-        },
-        {
-          "word": "と",
-          "reading": "to",
-          "meaning": "quotative particle",
-          "span": [
-            23,
-            24
-          ],
-          "chinese_cognate_note": null
-        },
-        {
-          "word": "そ",
-          "reading": "zo",
-          "meaning": "emphatic particle (triggers Rentaikei)",
-          "span": [
-            24,
-            25
-          ],
-          "chinese_cognate_note": null
-        },
-        {
-          "word": "見る",
-          "reading": "miru",
-          "meaning": "to see/look",
-          "span": [
-            25,
-            27
-          ],
-          "chinese_cognate_note": "Identical to Chinese '見/看'"
-        }
-      ],
-      "focus_highlight": [
-        12,
-        13
-      ]
-    },
-    {
-      "type": "grammar_spotlight",
-      "content": "Look at 'ukaeru' (うかへる) and 'nakaseru' (なかせる). Both end in 'ru'. \n\n1. **ukaeru**: This is 'ukafu' (to float) + 'ru'. It describes the *state* of the leaves. Instead of 'the leaves float,' it becomes 'the floating leaves.'\n2. **nakaseru**: This is 'nakasu' (to let flow) + 'ru'. Here, 'ru' acts as a bridge to the noun 'fune' (boat). It defines the boat as one that 'has been set adrift.'\n\nIn both cases, 'ru' is the 'Attributive' (Rentaikei) form, which you learned is required to modify a noun or when triggered by the emphatic particle 'zo' (そ/ぞ).",
-      "evidence": "See the poem above."
-    },
-    {
-      "type": "poem_presentation",
-      "poem_id": "lapis_5a207dd28bcacbf7",
-      "display": {
-        "text_with_furigana": "わかの<ruby>うら<rt>うら</rt></ruby>を<ruby>まつ<rt>まつ</rt></ruby>の<ruby>こし<rt>こし</rt></ruby>に<ruby>なかむれ<rt>なかむれ</rt></ruby>は<ruby>こすゑ<rt>こすゑ</rt></ruby>に<ruby>よする<rt>よする</rt></ruby><ruby>あま<rt>あま</rt></ruby>の<ruby>つりふね<rt>つりふね</rt></ruby>",
-        "romaji": "wakanoura, o matsu no koshi ni, nakamure ba, kosue ni yosuru, ama no tsuribune",
-        "translation": "When I look at Waka Bay through the pines on the shore, I see the fishing boats of the fishermen approaching the treetops."
-      },
-      "vocabulary": [
-        {
-          "word": "わかのうら",
-          "reading": "wakanoura",
-          "meaning": "Waka Bay (place name)",
-          "span": [
-            0,
-            5
-          ],
-          "chinese_cognate_note": null
-        },
-        {
-          "word": "を",
-          "reading": "o",
-          "meaning": "object marker",
-          "span": [
-            5,
-            6
-          ],
-          "chinese_cognate_note": null
-        },
-        {
-          "word": "まつ",
-          "reading": "matsu",
-          "meaning": "pine tree",
-          "span": [
-            6,
-            8
-          ],
-          "chinese_cognate_note": "Identical to Chinese '松'"
-        },
-        {
-          "word": "の",
-          "reading": "no",
-          "meaning": "possessive particle",
-          "span": [
-            8,
-            9
-          ],
-          "chinese_cognate_note": null
-        },
-        {
-          "word": "こし",
-          "reading": "koshi",
-          "meaning": "shore / waist-high area",
-          "span": [
-            10,
-            12
-          ],
-          "chinese_cognate_note": "Often written as '腰'"
-        },
-        {
-          "word": "に",
-          "reading": "ni",
-          "meaning": "at/in (location)",
-          "span": [
-            12,
-            13
-          ],
-          "chinese_cognate_note": null
-        },
-        {
-          "word": "なかむれ",
-          "reading": "nakamure",
-          "meaning": "gaze / look out",
-          "span": [
-            13,
-            17
-          ],
-          "chinese_cognate_note": "Contains '眺' (gaze)"
-        },
-        {
-          "word": "ば",
-          "reading": "ba",
-          "meaning": "when/if (conditional)",
+          "word": "永らへ",
+          "reading": "ながらえ",
+          "meaning": "长生，活下去（下二段动词未然形）",
           "span": null,
           "chinese_cognate_note": null
         },
         {
-          "word": "こすゑ",
-          "reading": "kosue",
-          "meaning": "treetops",
-          "span": [
-            18,
-            21
-          ],
-          "chinese_cognate_note": "Written as '梢'"
-        },
-        {
-          "word": "に",
-          "reading": "ni",
-          "meaning": "toward (direction)",
-          "span": [
-            21,
-            22
-          ],
-          "chinese_cognate_note": null
-        },
-        {
-          "word": "よする",
-          "reading": "yosuru",
-          "meaning": "approaching / drawing near",
-          "span": [
-            22,
-            25
-          ],
-          "chinese_cognate_note": "Contains '寄' (approach)"
-        },
-        {
-          "word": "あま",
-          "reading": "ama",
-          "meaning": "fisherman",
-          "span": [
-            25,
-            27
-          ],
-          "chinese_cognate_note": "Written as '海人'"
-        },
-        {
-          "word": "の",
-          "reading": "no",
-          "meaning": "possessive particle",
-          "span": [
-            27,
-            28
-          ],
-          "chinese_cognate_note": null
-        },
-        {
-          "word": "つりふね",
-          "reading": "tsuribune",
-          "meaning": "fishing boat",
-          "span": [
-            28,
-            32
-          ],
-          "chinese_cognate_note": "釣 (fishing) + 舟 (boat)"
-        }
-      ],
-      "focus_highlight": [
-        24,
-        25
-      ]
-    },
-    {
-      "type": "contrast_example",
-      "content": "In the second poem, 'yosuru' (よする) modifies 'tsuribune' (fishing boat). \n\n- **Base Verb:** 'yosu' (寄す - to approach)\n- **With 'ru':** 'yosuru' (寄する - approaching)\n\nWithout 'ru', the sentence would just say 'The boat approaches.' With 'ru', it becomes 'The **approaching** boat.' This is the power of the Rentaikei (Attributive) form signaled by 'ru'."
-    },
-    {
-      "type": "poem_presentation",
-      "poem_id": "ogura100_3918ff2aefc7d4ab",
-      "display": {
-        "text_with_furigana": "ほととぎす<ruby>鳴<rt>な</rt></ruby>きつる<ruby>方<rt>かた</rt></ruby>を<ruby>ながむれ<rt>ながむれ</rt></ruby>ばただ<ruby>有明<rt>ありあけ</rt></ruby>の<ruby>月<rt>つき</rt></ruby>ぞ<ruby>残<rt>のこ</rt></ruby>れる",
-        "romaji": "hototogisu, nakitsuru kata o, nagamureba, tada ariake no, tsuki zo nokoreru",
-        "translation": "When I look toward the direction where the cuckoo cried, only the dawn moon remains."
-      },
-      "vocabulary": [
-        {
-          "word": "ほととぎす",
-          "reading": "hototogisu",
-          "meaning": "cuckoo bird",
-          "span": [
-            0,
-            5
-          ],
-          "chinese_cognate_note": "Often written as '子規'"
-        },
-        {
-          "word": "鳴き",
-          "reading": "naki",
-          "meaning": "cried/chirped",
-          "span": [
-            5,
-            7
-          ],
-          "chinese_cognate_note": "Identical to Chinese '鳴'"
-        },
-        {
-          "word": "つる",
-          "reading": "tsuru",
-          "meaning": "did (perfective 'tsu' + 'ru')",
-          "span": [
-            7,
-            9
-          ],
-          "chinese_cognate_note": "The 'ru' here makes it attributive"
-        },
-        {
-          "word": "方",
-          "reading": "kata",
-          "meaning": "direction",
-          "span": [
-            9,
-            10
-          ],
-          "chinese_cognate_note": "Identical to Chinese '方'"
-        },
-        {
-          "word": "を",
-          "reading": "o",
-          "meaning": "object marker",
-          "span": [
-            10,
-            11
-          ],
-          "chinese_cognate_note": null
-        },
-        {
-          "word": "ながむれ",
-          "reading": "nagamure",
-          "meaning": "gaze",
-          "span": [
-            11,
-            15
-          ],
-          "chinese_cognate_note": "Contains '眺'"
-        },
-        {
           "word": "ば",
-          "reading": "ba",
-          "meaning": "when (conditional)",
-          "span": [
-            15,
-            16
-          ],
+          "reading": "ば",
+          "meaning": "如果（接续助词，接未然形表示假定条件）",
+          "span": null,
           "chinese_cognate_note": null
         },
         {
-          "word": "ただ",
-          "reading": "tada",
-          "meaning": "only / simply",
-          "span": [
-            16,
-            18
-          ],
-          "chinese_cognate_note": "Similar to '只'"
-        },
-        {
-          "word": "有明",
-          "reading": "ariake",
-          "meaning": "dawn / morning moon",
-          "span": [
-            18,
-            20
-          ],
-          "chinese_cognate_note": "Identical to Chinese '有明'"
-        },
-        {
-          "word": "の",
-          "reading": "no",
-          "meaning": "possessive particle",
-          "span": [
-            20,
-            21
-          ],
+          "word": "また",
+          "reading": "また",
+          "meaning": "又，将来也",
+          "span": null,
           "chinese_cognate_note": null
         },
         {
-          "word": "月",
-          "reading": "tsuki",
-          "meaning": "moon",
-          "span": [
-            21,
-            22
-          ],
-          "chinese_cognate_note": "Identical to Chinese '月'"
+          "word": "このごろ",
+          "reading": "このごろ",
+          "meaning": "现在，近来",
+          "span": null,
+          "chinese_cognate_note": null
+        },
+        {
+          "word": "や",
+          "reading": "や",
+          "meaning": "吗（系助词，表示疑问/反问）",
+          "span": null,
+          "chinese_cognate_note": null
+        },
+        {
+          "word": "忍ば",
+          "reading": "しのば",
+          "meaning": "怀念，追忆（四段动词「忍ぶ」未然形）",
+          "span": null,
+          "chinese_cognate_note": null
+        },
+        {
+          "word": "れ",
+          "reading": "れ",
+          "meaning": "自然而然地（助动词「る」未然形，表示自发）",
+          "span": null,
+          "chinese_cognate_note": null
+        },
+        {
+          "word": "む",
+          "reading": "む",
+          "meaning": "大概会...吧（推量助动词终止形）",
+          "span": null,
+          "chinese_cognate_note": null
+        },
+        {
+          "word": "憂し",
+          "reading": "うし",
+          "meaning": "痛苦的（形容词终止形）",
+          "span": null,
+          "chinese_cognate_note": null
+        },
+        {
+          "word": "と",
+          "reading": "と",
+          "meaning": "觉得...（格助词，表示引用）",
+          "span": null,
+          "chinese_cognate_note": null
+        },
+        {
+          "word": "見",
+          "reading": "み",
+          "meaning": "看待，经历（上一段动词连用形）",
+          "span": null,
+          "chinese_cognate_note": null
+        },
+        {
+          "word": "し",
+          "reading": "し",
+          "meaning": "过去的（过去助动词「き」连体形）",
+          "span": null,
+          "chinese_cognate_note": null
+        },
+        {
+          "word": "世",
+          "reading": "よ",
+          "meaning": "世道，日子",
+          "span": null,
+          "chinese_cognate_note": null
         },
         {
           "word": "ぞ",
-          "reading": "zo",
-          "meaning": "emphatic particle (triggers Rentaikei ending)",
-          "span": [
-            22,
-            23
-          ],
+          "reading": "ぞ",
+          "meaning": "正是（系助词，表示强调）",
+          "span": null,
           "chinese_cognate_note": null
         },
         {
-          "word": "残れる",
-          "reading": "nokoreru",
-          "meaning": "remaining (state)",
-          "span": [
-            23,
-            26
-          ],
-          "chinese_cognate_note": "Contains '残' (remain)"
+          "word": "今",
+          "reading": "いま",
+          "meaning": "现在",
+          "span": null,
+          "chinese_cognate_note": null
+        },
+        {
+          "word": "は",
+          "reading": "は",
+          "meaning": "至于（系助词，提示话题）",
+          "span": null,
+          "chinese_cognate_note": null
+        },
+        {
+          "word": "恋しき",
+          "reading": "こいしき",
+          "meaning": "令人眷恋的（形容词连体形，受「ぞ」影响结句）",
+          "span": null,
+          "chinese_cognate_note": null
         }
       ],
       "focus_highlight": [
-        8,
-        9
+        15,
+        16
       ]
     },
     {
+      "type": "grammar_spotlight",
+      "content": "### 核心语法：助动词「る」的自发用法\n\n在「忍ばれむ」中，结构是：\n`忍ば` (shinoba, 未然形) + `れ` (re, 助动词「る」的未然形) + `む` (mu, 推测)。\n\n这里的「る」表示**自发（Spontaneous）**。它不是“我努力去怀念”，而是“怀念之情自然地涌上心头”。\n\n**编程类比：**\n*   普通动词（忍ぶ）：`user.recall()` —— 用户主动调用的方法。\n*   自发助动词（忍ばる）：`onEvent('time_passed', callback)` —— 系统自动触发的事件，不受用户直接控制。\n\n在和歌中，涉及心情（思ふ）、知觉（見る、聞く）的动词接「る」时，通常解释为“自发”。",
+      "evidence": "See the poem above."
+    },
+    {
+      "type": "poem_presentation",
+      "poem_id": "ogura100_7160e5e8ee1a4ddb",
+      "display": {
+        "text_with_furigana": "<ruby>忘<rt>わす</rt></ruby>ら<mark>るる</mark><ruby>身<rt>み</rt></ruby>をば<ruby>思<rt>おも</rt></ruby>はず<ruby>誓<rt>ちか</rt></ruby>ひてし<ruby>人<rt>ひと</rt></ruby>の<ruby>命<rt>いのち</rt></ruby>の<ruby>惜<rt>お</rt></ruby>しくもあるかな",
+        "romaji": "wasuraruru mi wo ba omo wazu chikaite shi hito no inochi no oshiku mo aru kana",
+        "translation": "我不顾惜自己这被遗忘的身世，只为你那曾对神明发誓的性命感到惋惜（怕你因违背誓言而受罚）。"
+      },
+      "vocabulary": [
+        {
+          "word": "忘ら",
+          "reading": "わすら",
+          "meaning": "忘记（四段动词「忘る」未然形）",
+          "span": null,
+          "chinese_cognate_note": null
+        },
+        {
+          "word": "るる",
+          "reading": "るる",
+          "meaning": "被...（助动词「る」连体形，表示被动）",
+          "span": null,
+          "chinese_cognate_note": null
+        },
+        {
+          "word": "身",
+          "reading": "み",
+          "meaning": "自身，处境",
+          "span": null,
+          "chinese_cognate_note": null
+        },
+        {
+          "word": "をば",
+          "reading": "をば",
+          "meaning": "把...（格助词「を」+系助词「は」的浊音化，强调宾语）",
+          "span": null,
+          "chinese_cognate_note": null
+        },
+        {
+          "word": "思は",
+          "reading": "おもは",
+          "meaning": "在意，顾虑（四段动词「思ふ」未然形）",
+          "span": null,
+          "chinese_cognate_note": null
+        },
+        {
+          "word": "ず",
+          "reading": "ず",
+          "meaning": "不（否定助动词连用形）",
+          "span": null,
+          "chinese_cognate_note": null
+        },
+        {
+          "word": "誓ひ",
+          "reading": "ちかひ",
+          "meaning": "发誓（四段动词连用形）",
+          "span": null,
+          "chinese_cognate_note": null
+        },
+        {
+          "word": "て",
+          "reading": "て",
+          "meaning": "已经...（完了助动词「つ」连用形）",
+          "span": null,
+          "chinese_cognate_note": null
+        },
+        {
+          "word": "し",
+          "reading": "し",
+          "meaning": "过去的（过去助动词「き」连体形）",
+          "span": null,
+          "chinese_cognate_note": null
+        },
+        {
+          "word": "人",
+          "reading": "ひと",
+          "meaning": "那个人（指负心人）",
+          "span": null,
+          "chinese_cognate_note": null
+        },
+        {
+          "word": "の",
+          "reading": "の",
+          "meaning": "的（格助词）",
+          "span": null,
+          "chinese_cognate_note": null
+        },
+        {
+          "word": "命",
+          "reading": "いのち",
+          "meaning": "性命",
+          "span": null,
+          "chinese_cognate_note": null
+        },
+        {
+          "word": "の",
+          "reading": "の",
+          "meaning": "主格助词（在形容词句中标记主语）",
+          "span": null,
+          "chinese_cognate_note": null
+        },
+        {
+          "word": "惜しく",
+          "reading": "おしく",
+          "meaning": "令人惋惜/痛惜（形容词连用形）",
+          "span": null,
+          "chinese_cognate_note": null
+        },
+        {
+          "word": "も",
+          "reading": "も",
+          "meaning": "也/强调（系助词）",
+          "span": null,
+          "chinese_cognate_note": null
+        },
+        {
+          "word": "ある",
+          "reading": "ある",
+          "meaning": "是/有（拉行变格动词连体形）",
+          "span": null,
+          "chinese_cognate_note": null
+        },
+        {
+          "word": "かな",
+          "reading": "かな",
+          "meaning": "啊（终助词，表示咏叹）",
+          "span": null,
+          "chinese_cognate_note": null
+        }
+      ],
+      "focus_highlight": [
+        2,
+        4
+      ]
+    },
+    {
+      "type": "grammar_spotlight",
+      "content": "### 核心语法：助动词「る」的被动用法\n\n在「忘らるる」中：\n`忘ら` (wasura, 未然形) + `るる` (ruru, 助动词「る」的连体形)。\n\n*   **含义**：被动（Passive）。「忘らるる身」即“被（你）遗忘的我的身世”。\n*   **形态**：这里使用的是**连体形** `るる`，因为它修饰后面的名词「身」。\n\n**注意**：助动词「る」接在四段动词的未然形（a段音）之后。`wasur`**`a`** + `ru`。",
+      "evidence": "See the poem above."
+    },
+    {
+      "type": "contrast_example",
+      "content": "### 关键辨析：是「る」还是「り」？\n\n这是古典语法中最常见的陷阱之一。助动词「る」和「り」都有形式为「れ」的变位，如何区分？\n\n**黄金法则：看前面的元音**\n\n1.  **a段音 + れ = 助动词「る」**（自发/被动）\n    *   接续：未然形\n    *   例：`書か` (kaka) + `れ` = `書かれ` (被写/自然地写)\n\n2.  **e段音 + れ = 助动词「り」**（完了/存续）\n    *   接续：已然形/命令形\n    *   例：`書け` (kake) + `れ` = `書けれ` (已经写了/写着)\n\n**速记口诀：** A-Ru (阿鲁) vs E-Ri (爱理)。"
+    },
+    {
       "type": "comprehension_check",
-      "question": "In the third poem, why does the word 'nokoreru' (残れる) end in 'ru' instead of just being the base verb 'nokoru'?",
-      "answer": "Because of the emphatic particle 'zo' (ぞ). As learned in Unit 7, 'zo' requires the final verb to be in the Rentaikei (Attributive) form. The 'ru' suffix is the marker of that form here.",
-      "hint": "Look for the particle 'zo' earlier in the line."
+      "question": "在「疎まれぬ」中，「れ」前面是「ま」(ma, a段音)。这说明「れ」是哪个助动词？",
+      "answer": "助动词「る」（自发）",
+      "hint": "回忆口诀：A-Ru (a段音接ru)。如果是E-Ri (e段音接ri)，前面应该是me。"
+    },
+    {
+      "type": "literary_insight",
+      "content": "### 文学视角：消融的“自我”\n\n为什么古典诗人如此偏爱“自发”的「る」？\n\n在西方语言或现代语中，我们常说“我想起了往事”（主语是我）。但在和歌中，使用「忍ばる」（自然地怀念）或「泣かる」（不由得哭泣），诗人将“自我”从动作中抽离了。\n\n这是一种**“物哀”**的体现——不是我要去感受世界，而是世界（春霞、旧事）触动了我。这种语法结构创造了一种谦卑而深情的审美：情感是外界赐予的礼物，或者是无法抗拒的命运，而非个人的造作。\n\n**中国诗歌对照：**\n杜甫的“感时花溅泪”也有异曲同工之妙。不是“我对着花流泪”，而是花本身承载了情感，让泪水自然溅落。主客体的界限在极致的情感中变得模糊。",
+      "literary_device": null,
+      "chinese_parallel": null
+    },
+    {
+      "type": "summary",
+      "content": "本课我们学习了助动词「る」的两个侧面：\n1. **自发**：情感如泉水般自然涌出（忍ばれむ）。\n2. **被动**：作为承受者而非施动者（忘らるる身）。\n\n记住区分「る」与「り」的关键在于接续：**a段音接「る」，e段音接「り」**。下次看到「れ」时，先看前一个假名，谜底自解。"
     }
   ],
   "reference_card": {
-    "point": "Auxiliary る (ru)",
-    "one_liner": "A suffix that marks the Attributive (Rentaikei) form, used to describe nouns or indicate a state of being.",
-    "example": "よする舟 (yosuru fune) = The approaching boat.",
+    "point": "助动词「る」",
+    "one_liner": "接在a段音后，表示“不由自主”（自发）或“被...”（被动）。",
+    "example": "忍ばれむ (shinoba-re-mu) - 不由得怀念吧",
     "see_also": [
-      "lesson_conjugation_rentaikei",
-      "lesson_particle_zo"
+      "auxiliary_ri",
+      "auxiliary_raru"
     ]
   },
   "forward_references": [
     {
-      "point": "らる (raru)",
-      "note": "We will learn the more complex version of this suffix, 'raru', which is used for honorifics and potentiality, in the next lesson."
+      "point": "助动词「らる」",
+      "note": "我们将在后续课程学习，「る」的兄弟，用于一段动词等其他动词的自发/被动形式。"
     }
   ]
 }

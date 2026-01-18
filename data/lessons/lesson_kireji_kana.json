@@ -1,180 +1,246 @@
 {
   "lesson_id": "lesson_kireji_kana",
-  "lesson_title": "The Poetic Sigh: Mastering the Exclamatory 'Kana' (かな)",
-  "lesson_summary": "This lesson introduces 'kana', a terminal particle known as a 'kireji' (cutting word) that acts as an emotional exclamation mark, signaling a moment of deep realization or wonder.",
+  "lesson_title": "咏叹的终结：切字「かな」",
+  "lesson_summary": "学习古典和歌中最具代表性的感叹词「かな」，理解它如何作为情感的锚点，为诗歌带来深长的余韵。",
   "grammar_point": "kireji_kana",
   "grammar_explanation": {
-    "concept": "The particle かな (kana) is used at the end of a poem to express a sigh of emotion, admiration, or poignant realization. In programming terms, it is like an 'EOF' (End of File) marker that also carries an emotional metadata tag. In Classical Chinese, it functions similarly to the exclamatory particles '哉' (zāi) or '也' (yě) used to conclude a thought with emphasis.",
-    "formation": "It typically follows a Noun or a Verb/Auxiliary in its Rentaikei (Attributive) form.",
-    "variations": [
-      "Often appears as '...nuru kana' (has become...!) or '...keri kana' (alas, I realize...!)."
-    ],
+    "concept": "终助词「かな」用于表达强烈的咏叹、感动或深沉的感慨。它通常位于句末（或句中停顿处），相当于深吸一口气后的感叹“啊……”。在和歌中，它被称为“切字”（切れ字），起到切断语流、让情感回荡的作用。",
+    "formation": "接续：体言（名词）或 用言（动词/形容词/助动词）的连体形 + かな",
+    "variations": [],
     "common_confusions": [
-      "Do not confuse with the modern Japanese 'kana' which expresses doubt or uncertainty ('I wonder?'). In classical poetry, it is almost always a definitive exclamation of feeling."
+      "「かな」vs「もがな」：本课重点「かな」表示对现状的感叹（多么……啊）；而「もがな」（或「～くもかな」）表示对不存在之事的愿望（要是……就好了）。见诗歌2的对比。"
     ]
   },
   "teaching_sequence": [
     {
       "type": "introduction",
-      "content": "Having explored how particles link nouns and how auxiliaries modify time, we now reach the 'emotional terminal.' In classical poetry, the poet often needs a way to 'cut' the flow of the poem and let the accumulated emotion resonate. This is the role of the kireji (切れ字). Think of 'kana' as a linguistic sigh—a way to say 'Ah, it is so!' or 'How beautiful/sad it is!'"
+      "content": "在之前的课程中，我们学习了「や」和「か」用来提出疑问或表示反语。今天我们要学习的是情感的“句号”——「かな」。\n\n如果说「や」是向外抛出的疑问或惊叹（！），那么「かな」就是向内收敛的深沉感慨（……！）。它常用于诗歌的结尾，标志着诗人情感的最高潮，同时留出空白让读者回味。在编程中，它就像是一个 `finally` 块，无论前面的逻辑如何，最后都要执行这个情感的释放。"
     },
     {
       "type": "poem_presentation",
-      "poem_id": "ogura100_ad42b89935dfcae0",
+      "poem_id": "lapis_b93891cc239fd352",
       "display": {
-        "text_with_furigana": "<ruby>風<rt>かぜ</rt></ruby>をいたみ<ruby>岩<rt>いわ</rt></ruby>うつ<ruby>波<rt>なみ</rt></ruby>の<ruby>おのれ<rt>おのれ</rt></ruby>のみ<ruby>くだけ<rt>くだけ</rt></ruby>て<ruby>物<rt>もの</rt></ruby>を<ruby>思<rt>おも</rt></ruby>ふころ<span style='color: #ff4500;'>かな</span>",
-        "romaji": "kaze o itami, iwa utsu nami, no onore nomi, kudakete mono, o omou koro kana",
-        "translation": "Like the waves that smash against the rocks because the wind is so fierce, it is a time when I alone am broken by my thoughts!"
+        "text_with_furigana": "<ruby>古<rt>いにしえ</rt></ruby>に<ruby>猶<rt>なお</rt></ruby><ruby>立<rt>た</rt></ruby>ち<ruby>返<rt>かえ</rt></ruby>る<ruby>心<rt>こころ</rt></ruby><ruby>かな<rt>かな</rt></ruby><ruby>恋<rt>こい</rt></ruby>しきことに<ruby>物<rt>もの</rt></ruby><ruby>忘<rt>わす</rt></ruby>れして",
+        "romaji": "inishie ni nao tachikaeru kokoro kana koishiki koto ni monowasure shite",
+        "translation": "心绪依然回到了往昔啊，只因相思太切，竟忘了眼前的一切。"
       },
       "vocabulary": [
         {
-          "word": "風",
-          "reading": "かぜ",
-          "meaning": "wind",
-          "span": [
-            0,
-            1
-          ],
-          "chinese_cognate_note": "Identical to Chinese '風'"
+          "word": "古",
+          "reading": "いにしえ",
+          "meaning": "往昔、过去",
+          "span": null,
+          "chinese_cognate_note": "古"
         },
         {
-          "word": "を",
-          "reading": "を",
-          "meaning": "object marker (here used in a causal structure)",
-          "span": [
-            1,
-            2
-          ],
+          "word": "に",
+          "reading": "に",
+          "meaning": "格助词（表示方向/对象）",
+          "span": null,
           "chinese_cognate_note": null
         },
         {
-          "word": "いたみ",
-          "reading": "いたみ",
-          "meaning": "fierceness / because of the strength of",
-          "span": [
-            2,
-            5
-          ],
+          "word": "猶",
+          "reading": "なお",
+          "meaning": "依然、还是",
+          "span": null,
+          "chinese_cognate_note": "犹"
+        },
+        {
+          "word": "立ち返る",
+          "reading": "たちかえる",
+          "meaning": "折返、回到",
+          "span": null,
+          "chinese_cognate_note": "返"
+        },
+        {
+          "word": "心",
+          "reading": "こころ",
+          "meaning": "心、心绪",
+          "span": null,
+          "chinese_cognate_note": "心"
+        },
+        {
+          "word": "かな",
+          "reading": "かな",
+          "meaning": "咏叹助词（啊……）",
+          "span": null,
           "chinese_cognate_note": null
         },
         {
-          "word": "岩",
-          "reading": "いわ",
-          "meaning": "rock",
-          "span": [
-            5,
-            6
-          ],
-          "chinese_cognate_note": "Identical to Chinese '岩'"
+          "word": "恋しき",
+          "reading": "こいしき",
+          "meaning": "思念的（形容词连体形）",
+          "span": null,
+          "chinese_cognate_note": "恋"
         },
         {
-          "word": "うつ",
-          "reading": "うつ",
-          "meaning": "to strike / to hit",
-          "span": [
-            6,
-            8
-          ],
+          "word": "こと",
+          "reading": "こと",
+          "meaning": "事情/原因",
+          "span": null,
           "chinese_cognate_note": null
         },
         {
-          "word": "波",
-          "reading": "なみ",
-          "meaning": "wave",
-          "span": [
-            8,
-            9
-          ],
-          "chinese_cognate_note": "Identical to Chinese '波'"
+          "word": "に",
+          "reading": "に",
+          "meaning": "格助词（表示原因）",
+          "span": null,
+          "chinese_cognate_note": null
+        },
+        {
+          "word": "物忘れ",
+          "reading": "ものわすれ",
+          "meaning": "健忘、恍惚",
+          "span": null,
+          "chinese_cognate_note": "忘"
+        },
+        {
+          "word": "して",
+          "reading": "して",
+          "meaning": "做（动词“す”的接续形式）",
+          "span": null,
+          "chinese_cognate_note": null
+        }
+      ],
+      "focus_highlight": [
+        10,
+        12
+      ]
+    },
+    {
+      "type": "grammar_spotlight",
+      "content": "在这首诗中，「かな」接在名词「心（こころ）」之后：\n\n**「立ち返る心 + かな」**\n\n直译为：“那颗折返的心啊……”\n\n注意这里「かな」出现在诗的第三句末尾，而不是全诗的最后。这种用法被称为**“句中切”**（句切れ）。它将诗歌分为两部分：\n1. 前半部分感叹自己的心境（总是回到过去）。\n2. 后半部分解释原因（因为太思念了）。\n\n「かな」在这里就像一个强烈的休止符，让读者在进入解释部分之前，先体会诗人内心的无奈。",
+      "evidence": "See the poem above."
+    },
+    {
+      "type": "contrast_example",
+      "content": "接下来我们看一个非常重要的对比。同一个「かな」的读音，如果前面搭配了表示愿望的词，意思就完全不同了。请注意这首诗中出现的「もがな」与结尾的「かな」。"
+    },
+    {
+      "type": "grammar_spotlight",
+      "content": "这首诗完美展示了两种用法的区别：\n\n1. **愿望**：「長く**もがな**」\n   - 意思是“要是长久就好了”。这是对**尚未发生**之事的愿望。\n\n2. **咏叹**：「思ひける**かな**」\n   - 意思是“我竟然这样想了啊”。这是对**已经发生**的心理状态的感叹。\n\n**辨析关键**：\n- 如果看到「～もがな」或「～くもかな」，通常表示“愿望”（Wish）。\n- 如果接在动词/助动词的连体形（如「ける」）或名词之后，表示“咏叹”（Exclamation）。",
+      "evidence": "See the poem above."
+    },
+    {
+      "type": "poem_presentation",
+      "poem_id": "lapis_25490e79f7337669",
+      "display": {
+        "text_with_furigana": "<ruby>秋<rt>あき</rt></ruby>の<ruby>野<rt>の</rt></ruby>に<ruby>乱<rt>みだ</rt></ruby>れて<ruby>咲<rt>さ</rt></ruby>ける<ruby>花<rt>はな</rt></ruby>の<ruby>色<rt>いろ</rt></ruby><ruby>千種<rt>ちぐさ</rt></ruby>に<ruby>物<rt>もの</rt></ruby>を<ruby>思<rt>おも</rt></ruby>ふ<ruby>ころ<rt>ころ</rt></ruby><ruby>かな<rt>かな</rt></ruby>",
+        "romaji": "aki no no ni midarete sakeru hana no iro no chigusa ni mono o omou koro kana",
+        "translation": "秋野上花儿纷乱盛开，正如我这千般繁杂的思绪，此刻正是伤秋之时啊。"
+      },
+      "vocabulary": [
+        {
+          "word": "秋",
+          "reading": "あき",
+          "meaning": "秋天",
+          "span": null,
+          "chinese_cognate_note": "秋"
         },
         {
           "word": "の",
           "reading": "の",
-          "meaning": "genitive particle (subject marker in relative clause)",
-          "span": [
-            9,
-            10
-          ],
+          "meaning": "格助词（的）",
+          "span": null,
           "chinese_cognate_note": null
         },
         {
-          "word": "おのれ",
-          "reading": "おのれ",
-          "meaning": "oneself",
-          "span": [
-            10,
-            13
-          ],
-          "chinese_cognate_note": "Similar to '己' (jǐ)"
+          "word": "野",
+          "reading": "の",
+          "meaning": "原野",
+          "span": null,
+          "chinese_cognate_note": "野"
         },
         {
-          "word": "のみ",
-          "reading": "のみ",
-          "meaning": "only",
-          "span": [
-            13,
-            15
-          ],
+          "word": "に",
+          "reading": "に",
+          "meaning": "格助词（在）",
+          "span": null,
           "chinese_cognate_note": null
         },
         {
-          "word": "くだけて",
-          "reading": "くだけて",
-          "meaning": "being broken / shattered",
-          "span": [
-            15,
-            19
-          ],
+          "word": "乱れて",
+          "reading": "みだれて",
+          "meaning": "纷乱地（动词接续）",
+          "span": null,
+          "chinese_cognate_note": "乱"
+        },
+        {
+          "word": "咲ける",
+          "reading": "さける",
+          "meaning": "盛开着的（动词+存续助动词连体形）",
+          "span": null,
+          "chinese_cognate_note": null
+        },
+        {
+          "word": "花",
+          "reading": "はな",
+          "meaning": "花",
+          "span": null,
+          "chinese_cognate_note": "花"
+        },
+        {
+          "word": "の",
+          "reading": "の",
+          "meaning": "格助词（的）",
+          "span": null,
+          "chinese_cognate_note": null
+        },
+        {
+          "word": "色",
+          "reading": "いろ",
+          "meaning": "颜色/种类",
+          "span": null,
+          "chinese_cognate_note": "色"
+        },
+        {
+          "word": "千種",
+          "reading": "ちぐさ",
+          "meaning": "千种（花草）/千种（思绪）",
+          "span": null,
+          "chinese_cognate_note": "千种"
+        },
+        {
+          "word": "に",
+          "reading": "に",
+          "meaning": "格助词（作为/呈现出）",
+          "span": null,
           "chinese_cognate_note": null
         },
         {
           "word": "物",
           "reading": "もの",
-          "meaning": "things / matters",
-          "span": [
-            19,
-            20
-          ],
-          "chinese_cognate_note": "Identical to Chinese '物'"
+          "meaning": "事情",
+          "span": null,
+          "chinese_cognate_note": "物"
         },
         {
           "word": "を",
           "reading": "を",
-          "meaning": "object marker",
-          "span": [
-            20,
-            21
-          ],
+          "meaning": "格助词（宾语标记）",
+          "span": null,
           "chinese_cognate_note": null
         },
         {
           "word": "思ふ",
-          "reading": "おもふ",
-          "meaning": "to think / to feel / to love",
-          "span": [
-            21,
-            23
-          ],
-          "chinese_cognate_note": "Cognate with '思' (sī)"
+          "reading": "おもう",
+          "meaning": "思考/忧虑（连体形）",
+          "span": null,
+          "chinese_cognate_note": "思"
         },
         {
           "word": "ころ",
           "reading": "ころ",
-          "meaning": "time / occasion",
-          "span": [
-            23,
-            25
-          ],
-          "chinese_cognate_note": null
+          "meaning": "时候/时节",
+          "span": null,
+          "chinese_cognate_note": "顷"
         },
         {
           "word": "かな",
           "reading": "かな",
-          "meaning": "exclamatory particle (kana)",
-          "span": [
-            25,
-            27
-          ],
+          "meaning": "咏叹助词（啊……）",
+          "span": null,
           "chinese_cognate_note": null
         }
       ],
@@ -184,360 +250,35 @@
       ]
     },
     {
-      "type": "grammar_spotlight",
-      "content": "In the poem above, notice how the entire sequence of imagery—the wind, the rocks, and the shattered waves—leads to the noun 'koro' (time). By adding 'kana' at the very end, the poet transforms a simple statement ('It is a time of thinking') into a cry of emotional distress ('What a time this is!'). It functions as a 'logical closer' that wraps the preceding imagery into a single emotional realization.",
-      "evidence": "See the poem above."
-    },
-    {
-      "type": "poem_presentation",
-      "poem_id": "ogura100_5aa90a4c251a8c77",
-      "display": {
-        "text_with_furigana": "<ruby>由良<rt>ゆら</rt></ruby>の<ruby>門<rt>と</rt></ruby>を<ruby>渡<rt>わた</rt></ruby>る<ruby>舟人<rt>ふなびと</rt></ruby>かぢを<ruby>絶<rt>た</rt></ruby>え<ruby>行<rt>ゆ</rt></ruby>くへも<ruby>知<rt>し</rt></ruby>らぬ<ruby>恋<rt>こい</rt></ruby>の<ruby>道<rt>みち</rt></ruby><span style='color: #ff4500;'>かな</span>",
-        "romaji": "yura no to o, wataru funabito, kaji o tae, yuku e mo shiranu, koi no michi kana",
-        "translation": "Like a boatman crossing the Yura straits who has lost his rudder, I know not where I go on this path of love!"
-      },
-      "vocabulary": [
-        {
-          "word": "由良",
-          "reading": "ゆら",
-          "meaning": "Yura (place name)",
-          "span": [
-            0,
-            2
-          ],
-          "chinese_cognate_note": null
-        },
-        {
-          "word": "の",
-          "reading": "の",
-          "meaning": "genitive particle",
-          "span": [
-            2,
-            3
-          ],
-          "chinese_cognate_note": null
-        },
-        {
-          "word": "門",
-          "reading": "と",
-          "meaning": "strait / channel",
-          "span": [
-            3,
-            4
-          ],
-          "chinese_cognate_note": "Cognate with '門' (gate)"
-        },
-        {
-          "word": "を",
-          "reading": "を",
-          "meaning": "object marker",
-          "span": [
-            4,
-            5
-          ],
-          "chinese_cognate_note": null
-        },
-        {
-          "word": "渡る",
-          "reading": "わたる",
-          "meaning": "to cross",
-          "span": [
-            5,
-            7
-          ],
-          "chinese_cognate_note": "Cognate with '渡' (dù)"
-        },
-        {
-          "word": "舟人",
-          "reading": "ふなびと",
-          "meaning": "boatman",
-          "span": [
-            7,
-            9
-          ],
-          "chinese_cognate_note": "Cognate with '舟人' (zhōurén)"
-        },
-        {
-          "word": "かぢ",
-          "reading": "かぢ",
-          "meaning": "rudder",
-          "span": [
-            9,
-            11
-          ],
-          "chinese_cognate_note": null
-        },
-        {
-          "word": "を",
-          "reading": "を",
-          "meaning": "object marker",
-          "span": [
-            11,
-            12
-          ],
-          "chinese_cognate_note": null
-        },
-        {
-          "word": "絶え",
-          "reading": "たえ",
-          "meaning": "to snap / to lose / to end",
-          "span": [
-            12,
-            14
-          ],
-          "chinese_cognate_note": "Cognate with '絶' (jué)"
-        },
-        {
-          "word": "行くへ",
-          "reading": "ゆくへ",
-          "meaning": "whereabouts / destination",
-          "span": [
-            14,
-            17
-          ],
-          "chinese_cognate_note": null
-        },
-        {
-          "word": "も",
-          "reading": "も",
-          "meaning": "even / also",
-          "span": [
-            17,
-            18
-          ],
-          "chinese_cognate_note": null
-        },
-        {
-          "word": "知ら",
-          "reading": "しら",
-          "meaning": "to know (mizenkei form)",
-          "span": [
-            18,
-            20
-          ],
-          "chinese_cognate_note": null
-        },
-        {
-          "word": "ぬ",
-          "reading": "ぬ",
-          "meaning": "negative auxiliary (zu)",
-          "span": [
-            20,
-            21
-          ],
-          "chinese_cognate_note": null
-        },
-        {
-          "word": "恋",
-          "reading": "こい",
-          "meaning": "love / romance",
-          "span": [
-            21,
-            22
-          ],
-          "chinese_cognate_note": "Cognate with '恋' (liàn)"
-        },
-        {
-          "word": "の",
-          "reading": "の",
-          "meaning": "genitive particle",
-          "span": [
-            22,
-            23
-          ],
-          "chinese_cognate_note": null
-        },
-        {
-          "word": "道",
-          "reading": "みち",
-          "meaning": "path / way",
-          "span": [
-            23,
-            24
-          ],
-          "chinese_cognate_note": "Identical to Chinese '道'"
-        },
-        {
-          "word": "かな",
-          "reading": "かな",
-          "meaning": "exclamatory particle (kana)",
-          "span": [
-            24,
-            26
-          ],
-          "chinese_cognate_note": null
-        }
-      ],
-      "focus_highlight": [
-        25,
-        26
-      ]
-    },
-    {
-      "type": "poem_presentation",
-      "poem_id": "ogura100_fdb9c7d5ae4dfbd2",
-      "display": {
-        "text_with_furigana": "いにしへの<ruby>奈良<rt>なら</rt></ruby>の<ruby>都<rt>みやこ</rt></ruby>の<ruby>八重桜<rt>やえざくら</rt></ruby>けふ<ruby>九重<rt>ここのえ</rt></ruby>ににほひぬる<span style='color: #ff4500;'>かな</span>",
-        "romaji": "inishie no, nara no miyako no, yaezakura, kefu kokonoe ni, nioi nuru kana",
-        "translation": "The double-layered cherry blossoms from the ancient capital of Nara—today, they have come to bloom in full beauty in the Imperial Palace!"
-      },
-      "vocabulary": [
-        {
-          "word": "いにしへ",
-          "reading": "いにしへ",
-          "meaning": "ancient times / the past",
-          "span": [
-            0,
-            4
-          ],
-          "chinese_cognate_note": null
-        },
-        {
-          "word": "の",
-          "reading": "の",
-          "meaning": "genitive particle",
-          "span": [
-            4,
-            5
-          ],
-          "chinese_cognate_note": null
-        },
-        {
-          "word": "奈良",
-          "reading": "なら",
-          "meaning": "Nara (ancient capital)",
-          "span": [
-            5,
-            7
-          ],
-          "chinese_cognate_note": null
-        },
-        {
-          "word": "の",
-          "reading": "の",
-          "meaning": "genitive particle",
-          "span": [
-            7,
-            8
-          ],
-          "chinese_cognate_note": null
-        },
-        {
-          "word": "都",
-          "reading": "みやこ",
-          "meaning": "capital",
-          "span": [
-            8,
-            9
-          ],
-          "chinese_cognate_note": "Identical to Chinese '都' (dū)"
-        },
-        {
-          "word": "の",
-          "reading": "の",
-          "meaning": "genitive particle",
-          "span": [
-            9,
-            10
-          ],
-          "chinese_cognate_note": null
-        },
-        {
-          "word": "八重桜",
-          "reading": "やえざくら",
-          "meaning": "double-layered cherry blossoms",
-          "span": [
-            10,
-            13
-          ],
-          "chinese_cognate_note": null
-        },
-        {
-          "word": "けふ",
-          "reading": "きょう",
-          "meaning": "today",
-          "span": [
-            13,
-            15
-          ],
-          "chinese_cognate_note": null
-        },
-        {
-          "word": "九重",
-          "reading": "ここのえ",
-          "meaning": "The Imperial Palace",
-          "span": [
-            15,
-            17
-          ],
-          "chinese_cognate_note": "Literally 'nine-layered', a Chinese poetic term for the palace"
-        },
-        {
-          "word": "に",
-          "reading": "に",
-          "meaning": "location marker",
-          "span": [
-            17,
-            18
-          ],
-          "chinese_cognate_note": null
-        },
-        {
-          "word": "にほひ",
-          "reading": "にほひ",
-          "meaning": "to bloom beautifully / to be fragrant",
-          "span": [
-            18,
-            21
-          ],
-          "chinese_cognate_note": null
-        },
-        {
-          "word": "ぬる",
-          "reading": "ぬる",
-          "meaning": "perfective auxiliary (nu) in Rentaikei form",
-          "span": [
-            21,
-            23
-          ],
-          "chinese_cognate_note": null
-        },
-        {
-          "word": "かな",
-          "reading": "かな",
-          "meaning": "exclamatory particle (kana)",
-          "span": [
-            23,
-            25
-          ],
-          "chinese_cognate_note": null
-        }
-      ],
-      "focus_highlight": [
-        23,
-        25
-      ]
+      "type": "literary_insight",
+      "content": "在语法之外，让我们欣赏这首诗中的两个高级技法：\n\n1. **挂词 (Pivot Word)**：\n   「千種（ちぐさ）」在这里是一语双关。它既指前文秋野上“千种”花草（Chigusa），又指下文心中“千般”思绪。这就像编程中的一个变量被两个不同的函数调用，连接了“外景”与“内情”。\n\n2. **切字 (Cutting Word) 的余韵**：\n   全诗结束于「ころかな」（正是……的时候啊）。「かな」不仅结束了句子，还让“物思ふ”（沉思/忧愁）的状态无限延伸。它没有明确说出思绪的结果，而是将这种复杂的情感悬停在空气中。",
+      "literary_device": "掛詞 (Kakekotoba) & 切れ字 (Kireji)",
+      "chinese_parallel": "挂词 ≈ 双关语（如“东边日出西边雨，道是无晴却有晴”）；切字 ≈ 句末语气词（如“哉”、“夫”）"
     },
     {
       "type": "comprehension_check",
-      "question": "In the third poem, 'kana' follows the word 'nuru' (ぬる). Based on your knowledge of Unit 3 and Unit 8, why is the form 'nuru' used instead of the standard 'nu'?",
-      "answer": "Because 'kana' requires the preceding verb or auxiliary to be in the Rentaikei (Attributive) form. 'Nuru' is the Rentaikei of the perfective auxiliary 'nu'.",
-      "hint": "Recall the 'Noun-Linker' lesson. Certain particles 'pull' the preceding word into the Rentaikei form."
+      "question": "在诗句「思ひけるかな」中，「かな」的作用是什么？",
+      "answer": "表示对“自己竟然产生了这种想法”的惊讶和深沉感叹。",
+      "hint": "注意前面的「ける」表示过去/咏叹，这里不是表示愿望的「もがな」。"
     }
   ],
   "reference_card": {
-    "point": "kireji_kana (かな)",
-    "one_liner": "A terminal exclamatory particle used to express deep emotion or realization, similar to '...哉' in Classical Chinese.",
-    "example": "道かな (michi kana) = 'Oh, what a path!'",
+    "point": "终助词「かな」",
+    "one_liner": "接在句末或句中，表示强烈的咏叹或感动的“切字”。",
+    "example": "心かな (Kokoro kana) - 心啊…… / 思ひけるかな (Omoikeru kana) - 竟想至此啊……",
     "see_also": [
-      "kireji_ya",
-      "conjugation_rentaikei"
+      "particle_ya",
+      "particle_ka"
     ]
   },
   "forward_references": [
     {
-      "point": "kireji_ya",
-      "note": "While 'kana' usually ends a poem, the kireji 'ya' often appears in the middle to create a pause. We will compare them in the final review."
+      "point": "助动词「ける」",
+      "note": "我们在诗中看到了「思ひける」，这是表示过去或咏叹的助动词，将在后续课程详细讲解。"
+    },
+    {
+      "point": "助动词「り」",
+      "note": "诗中出现的「咲ける」包含存续助动词「り」，表示动作结果的持续。"
     }
   ]
 }

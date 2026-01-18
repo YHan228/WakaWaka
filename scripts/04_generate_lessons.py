@@ -6,6 +6,10 @@ This script processes the curriculum graph and generates complete lesson
 content for each lesson, including teaching sequences, grammar explanations,
 and reference cards.
 
+Recommended workflow:
+  1. Run 03c_select_poems.py first (separate poem selection with frequency tracking)
+  2. This script will auto-load lesson_graph_with_poems.json if available
+
 Key features:
 - LLM-generated pedagogical content via Gemini API
 - Context-aware: provides prerequisite summaries and poem annotations
@@ -14,7 +18,10 @@ Key features:
 - Generates lessons_manifest.json for tracking
 
 Usage:
-  python scripts/04_generate_lessons.py --all                    # Generate all lessons
+  # Recommended: after running 03c_select_poems.py
+  python scripts/04_generate_lessons.py --all
+
+  # Other options
   python scripts/04_generate_lessons.py --lesson-ids lesson_particle_wa,lesson_auxiliary_keri
   python scripts/04_generate_lessons.py --all --resume           # Resume interrupted generation
   python scripts/04_generate_lessons.py --max-lessons 5          # Quick test
@@ -61,6 +68,7 @@ from wakawaka.schemas.lesson import (
     ContrastExampleStep,
     ComprehensionCheckStep,
     SummaryStep,
+    LiteraryInsightStep,
     ReferenceCard,
     ForwardReference,
     VocabularyItem,
@@ -80,6 +88,9 @@ DEFAULT_API_SLEEP = 1.0
 CHECKPOINT_DIR = PROJECT_ROOT / "data" / "lessons" / ".checkpoints"
 CACHE_DIR = PROJECT_ROOT / "data" / "lessons" / ".cache"
 OUTPUT_DIR = PROJECT_ROOT / "data" / "lessons"
+DEFAULT_CONFUSABLES = PROJECT_ROOT / "data" / "analysis" / "confusables.json"
+DEFAULT_LITERARY_PARQUET = PROJECT_ROOT / "data" / "literary" / "poems_literary.parquet"
+DEFAULT_SEASON_THEME = PROJECT_ROOT / "data" / "literary" / "standardized_season_theme.json"
 
 
 # -----------------------------------------------------------------------------
@@ -151,14 +162,25 @@ def load_curriculum(curriculum_dir: Path) -> tuple[dict, dict]:
     """
     Load curriculum data.
 
+    Prefers lesson_graph_with_poems.json (from 03c_select_poems.py) if available,
+    otherwise falls back to lesson_graph.json.
+
     Returns:
         Tuple of (lesson_graph, grammar_index)
     """
+    # Prefer the version with pre-selected poems
+    lesson_graph_with_poems = curriculum_dir / "lesson_graph_with_poems.json"
     lesson_graph_path = curriculum_dir / "lesson_graph.json"
     grammar_index_path = curriculum_dir / "grammar_index.json"
 
-    with open(lesson_graph_path, "r", encoding="utf-8") as f:
-        lesson_graph = json.load(f)
+    if lesson_graph_with_poems.exists():
+        logger.info(f"  Using lesson_graph_with_poems.json (poems pre-selected)")
+        with open(lesson_graph_with_poems, "r", encoding="utf-8") as f:
+            lesson_graph = json.load(f)
+    else:
+        logger.info(f"  Using lesson_graph.json (may need --select-poems)")
+        with open(lesson_graph_path, "r", encoding="utf-8") as f:
+            lesson_graph = json.load(f)
 
     with open(grammar_index_path, "r", encoding="utf-8") as f:
         grammar_index = json.load(f)
@@ -166,9 +188,137 @@ def load_curriculum(curriculum_dir: Path) -> tuple[dict, dict]:
     return lesson_graph, grammar_index
 
 
-def load_poems(poems_path: Path) -> pd.DataFrame:
-    """Load annotated poems."""
-    return pd.read_parquet(poems_path)
+def load_poems(poems_path: Path, literary_path: Path | None = None) -> pd.DataFrame:
+    """
+    Load annotated poems, optionally merging literary analysis data.
+
+    Args:
+        poems_path: Path to main annotated poems parquet
+        literary_path: Optional path to literary annotations parquet
+
+    Returns:
+        DataFrame with poems, including literary columns if available
+    """
+    poems_df = pd.read_parquet(poems_path)
+
+    # Merge literary data if available
+    if literary_path and literary_path.exists():
+        literary_df = pd.read_parquet(literary_path)
+        # Select literary columns to merge (avoid duplicating poem_id, text)
+        literary_cols = [
+            'poem_id', 'poetic_devices', 'interpretation', 'emotional_tone',
+            'chinese_poetry_parallel', 'seasonal_context', 'allusions'
+        ]
+        literary_cols = [c for c in literary_cols if c in literary_df.columns]
+        literary_subset = literary_df[literary_cols]
+
+        # Merge on poem_id
+        poems_df = poems_df.merge(literary_subset, on='poem_id', how='left')
+        logger.info(f"  Merged literary data for {len(literary_subset)} poems")
+
+    return poems_df
+
+
+def load_confusables(confusables_path: Path) -> dict[str, dict]:
+    """
+    Load confusables data for identifying grammar homographs.
+
+    Returns:
+        Dict mapping surface forms to confusable entry dicts.
+        Each entry has 'surface', 'meaning_count', 'total_occurrences', 'meanings' list.
+    """
+    if not confusables_path.exists():
+        logger.warning(f"Confusables file not found: {confusables_path}")
+        return {}
+
+    try:
+        with open(confusables_path, "r", encoding="utf-8") as f:
+            data = json.load(f)
+        # Extract the 'confusables' dict from the file structure
+        confusables_data = data.get("confusables", {})
+        logger.info(f"  Loaded confusables: {len(confusables_data)} ambiguous surfaces")
+        return confusables_data
+    except Exception as e:
+        logger.warning(f"Failed to load confusables: {e}")
+        return {}
+
+
+def load_season_theme(season_theme_path: Path = DEFAULT_SEASON_THEME) -> dict[str, dict]:
+    """
+    Load standardized season/theme data for poems.
+
+    Returns:
+        Dict mapping poem_id to season/theme data.
+        Each entry has 'season', 'themes' list.
+    """
+    if not season_theme_path.exists():
+        logger.warning(f"Season/theme file not found: {season_theme_path}")
+        return {}
+
+    try:
+        with open(season_theme_path, "r", encoding="utf-8") as f:
+            data = json.load(f)
+        logger.info(f"  Loaded season/theme: {len(data)} poems")
+        return data
+    except Exception as e:
+        logger.warning(f"Failed to load season/theme: {e}")
+        return {}
+
+
+def get_confusables_for_grammar_point(
+    canonical_id: str,
+    grammar_points: list[dict],
+    confusables: dict[str, dict]
+) -> list[dict]:
+    """
+    Get confusables relevant to a specific grammar point.
+
+    Args:
+        canonical_id: The grammar point being taught
+        grammar_points: List of grammar points from poems in this lesson
+        confusables: Full confusables dict (surface -> entry with 'meanings' list)
+
+    Returns:
+        List of relevant confusables with their alternatives
+    """
+    if not confusables:
+        return []
+
+    # Find surface forms used for this grammar point
+    relevant_surfaces = set()
+    for gp in grammar_points:
+        if gp.get("canonical_id") == canonical_id:
+            surface = gp.get("surface", "")
+            if surface and surface in confusables:
+                relevant_surfaces.add(surface)
+
+    # Build list of confusables with alternatives
+    result = []
+    for surface in relevant_surfaces:
+        entry = confusables.get(surface, {})
+        meanings = entry.get("meanings", [])
+        if len(meanings) > 1:  # Only if actually ambiguous
+            # Filter to alternatives (different canonical_id from target)
+            alternatives = [
+                {
+                    "canonical_id": m.get("canonical_id"),
+                    "sense_id": m.get("sense_id"),
+                    "category": m.get("category"),
+                    "frequency": m.get("frequency", 0),
+                    "description": m.get("description", "")
+                }
+                for m in meanings
+                if m.get("canonical_id") != canonical_id
+            ]
+            if alternatives:  # Only add if there are actual alternatives
+                result.append({
+                    "surface": surface,
+                    "target_grammar": canonical_id,
+                    "meaning_count": entry.get("meaning_count", len(meanings)),
+                    "alternatives": alternatives
+                })
+
+    return result
 
 
 def get_all_lessons(lesson_graph: dict) -> list[dict]:
@@ -346,7 +496,9 @@ def format_candidates_for_selection(candidates: list[dict], grammar_point_id: st
 
     for poem in candidates:
         poem_id = poem.get("poem_id", "")
-        text = poem.get("text", "")
+        original_text = poem.get("text", "")
+        # Use kanji_transcription if available, otherwise use original text
+        text = poem.get("kanji_transcription") or original_text
         romaji = poem.get("reading_romaji", "")
         difficulty = poem.get("difficulty_score", poem.get("difficulty_score_computed", 0))
 
@@ -695,6 +847,12 @@ def build_lesson_content(lesson: dict, llm_response: dict) -> LessonContent:
                 teaching_sequence.append(SummaryStep(
                     content=step.get("content", "")
                 ))
+            elif step_type == "literary_insight":
+                teaching_sequence.append(LiteraryInsightStep(
+                    content=step.get("content", ""),
+                    literary_device=step.get("literary_device"),
+                    chinese_parallel=step.get("chinese_parallel")
+                ))
             else:
                 logger.warning(f"Unknown step type: {step_type}")
         except Exception as e:
@@ -807,7 +965,9 @@ def format_poems_for_prompt(poems: list[dict]) -> str:
     formatted = []
 
     for i, poem in enumerate(poems, 1):
-        poem_text = poem.get("text", "")
+        original_text = poem.get("text", "")
+        # Use kanji_transcription if available, otherwise use original text
+        poem_text = poem.get("kanji_transcription") or original_text
         poem_id = poem.get("poem_id", f"poem_{i}")
         reading_hiragana = poem.get("reading_hiragana", "")
         reading_romaji = poem.get("reading_romaji", "")
@@ -833,9 +993,12 @@ def format_poems_for_prompt(poems: list[dict]) -> str:
             if isinstance(v, dict):
                 vocab_list.append(f"  - {v.get('word', '')}: {v.get('meaning', '')}")
 
+        # Show original text only if different from transcription
+        original_line = f"\nOriginal: {original_text}" if original_text != poem_text else ""
+
         formatted.append(f"""
 POEM {i} (ID: {poem_id})
-Text: {poem_text}
+Text: {poem_text}{original_line}
 Hiragana: {reading_hiragana}
 Romaji: {reading_romaji}
 Difficulty: {difficulty:.2f}
@@ -859,7 +1022,9 @@ def generate_lesson(
     use_cache: bool = True,
     selection_prompt_config: dict | None = None,
     skip_poem_selection: bool = False,
-    used_poem_ids: set[str] | None = None
+    used_poem_ids: set[str] | None = None,
+    confusables: dict[str, list] | None = None,
+    season_theme: dict[str, dict] | None = None
 ) -> tuple[LessonContent | None, list[str]]:
     """
     Generate content for a single lesson.
@@ -876,12 +1041,14 @@ def generate_lesson(
         selection_prompt_config: Config for LLM poem selection (None to skip)
         skip_poem_selection: If True, use pre-selected poem_ids directly
         used_poem_ids: Set of poem IDs already used in previous lessons
+        confusables: Dict of grammar homographs for disambiguation guidance
 
     Returns:
         Tuple of (LessonContent or None, list of poem IDs used in this lesson)
     """
     lesson_id = lesson["id"]
     canonical_id = lesson["canonical_grammar_point"]
+    confusables = confusables or {}
 
     # Check cache
     cache_key = get_cache_key(lesson_id, client.model_name, prompt_config["meta"]["version"])
@@ -948,6 +1115,66 @@ def generate_lesson(
     # Build prompt
     system_prompt = prompt_config.get("system", "")
 
+    # Get confusables relevant to this grammar point
+    all_poem_grammar_points = []
+    for poem in poems:
+        all_poem_grammar_points.extend(poem.get("grammar_points", []))
+    relevant_confusables = get_confusables_for_grammar_point(
+        canonical_id, all_poem_grammar_points, confusables
+    )
+    confusables_json = (
+        json.dumps(relevant_confusables, ensure_ascii=False, indent=2)
+        if relevant_confusables
+        else "无（本语法点无同形异义混淆）"
+    )
+
+    # Get literary status from lesson metadata
+    literary_ready = lesson.get("literary_ready", False)
+    literary_focus = lesson.get("literary_focus", "无")
+    literary_difficulty = lesson.get("literary_difficulty", 0.5)
+
+    # Extract literary analysis from poems if available
+    literary_analysis = []
+    if literary_ready:
+        for poem in poems:
+            poem_literary = {}
+            if poem.get("poetic_devices"):
+                poem_literary["poem_id"] = poem.get("poem_id", "")
+                poem_literary["poetic_devices"] = poem.get("poetic_devices", [])
+                poem_literary["chinese_poetry_parallel"] = poem.get("chinese_poetry_parallel", "")
+                poem_literary["emotional_arc"] = poem.get("emotional_arc", "")
+                # Include seasonal_context from poem data
+                if poem.get("seasonal_context"):
+                    poem_literary["seasonal_context"] = poem.get("seasonal_context", "")
+                literary_analysis.append(poem_literary)
+
+    literary_analysis_json = (
+        json.dumps(literary_analysis, ensure_ascii=False, indent=2)
+        if literary_analysis
+        else "无文学分析数据"
+    )
+
+    # Build season/theme context from standardized data
+    season_theme_context_items = []
+    if season_theme:
+        for poem in poems:
+            poem_id = poem.get("poem_id", "")
+            if poem_id in season_theme:
+                st = season_theme[poem_id]
+                season = st.get("season", "無季")
+                themes = st.get("themes", [])
+                season_theme_context_items.append({
+                    "poem_id": poem_id,
+                    "season": season,
+                    "themes": themes
+                })
+
+    season_theme_context = (
+        json.dumps(season_theme_context_items, ensure_ascii=False, indent=2)
+        if season_theme_context_items
+        else "无季节/主题数据"
+    )
+
     user_template = prompt_config.get("user_template", "")
     user_prompt = user_template.format(
         grammar_point_id=canonical_id,
@@ -957,7 +1184,13 @@ def generate_lesson(
         lesson_position=lesson_position,
         lessons_completed=lessons_completed,
         prerequisites_summary=prereq_summary,
-        poems_json=format_poems_for_prompt(poems)
+        poems_json=format_poems_for_prompt(poems),
+        confusables_json=confusables_json,
+        literary_ready=literary_ready,
+        literary_focus=literary_focus if literary_focus else "无",
+        literary_difficulty=f"{literary_difficulty:.2f}",
+        literary_analysis_json=literary_analysis_json,
+        season_theme_context=season_theme_context
     )
 
     # Call LLM
@@ -1038,6 +1271,12 @@ def main():
         help="Path to annotated poems parquet"
     )
     parser.add_argument(
+        "--literary",
+        type=Path,
+        default=DEFAULT_LITERARY_PARQUET,
+        help="Path to literary annotations parquet (for literary-ready lessons)"
+    )
+    parser.add_argument(
         "--output-dir",
         type=Path,
         default=OUTPUT_DIR,
@@ -1083,12 +1322,12 @@ def main():
     parser.add_argument(
         "--select-poems",
         action="store_true",
-        help="Enable LLM poem selection from candidate pool (requires candidate_poem_ids in curriculum)"
+        help="Enable inline LLM poem selection (fallback if lesson_graph_with_poems.json not available)"
     )
     parser.add_argument(
         "--skip-poem-selection",
         action="store_true",
-        help="Skip poem selection, use pre-assigned poem_ids directly"
+        help="Force use of pre-assigned poem_ids (auto-enabled if lesson_graph_with_poems.json loaded)"
     )
     parser.add_argument(
         "--parallel",
@@ -1109,7 +1348,7 @@ def main():
     lesson_graph, grammar_index = load_curriculum(args.curriculum)
 
     logger.info("Loading poems...")
-    poems_df = load_poems(args.poems)
+    poems_df = load_poems(args.poems, args.literary)
     logger.info(f"  Loaded {len(poems_df)} poems")
 
     # Load prompts
@@ -1140,6 +1379,12 @@ def main():
     if args.select_poems:
         selection_prompt_config = load_prompt("select_poems")
         logger.info("  LLM poem selection enabled")
+
+    # Load confusables data for disambiguation guidance
+    confusables = load_confusables(DEFAULT_CONFUSABLES)
+
+    # Load season/theme data for literary context
+    season_theme = load_season_theme()
 
     # Get lessons to generate
     all_lessons = get_all_lessons(lesson_graph)
@@ -1228,7 +1473,9 @@ def main():
                     use_cache=not args.no_cache,
                     selection_prompt_config=selection_prompt_config,
                     skip_poem_selection=args.skip_poem_selection,
-                    used_poem_ids=None  # Parallel mode doesn't track cross-lesson poem usage
+                    used_poem_ids=None,  # Parallel mode doesn't track cross-lesson poem usage
+                    confusables=confusables,
+                    season_theme=season_theme
                 )
                 return lesson_id, content, poems_used
             except Exception as e:
@@ -1279,7 +1526,9 @@ def main():
                     use_cache=not args.no_cache,
                     selection_prompt_config=selection_prompt_config,
                     skip_poem_selection=args.skip_poem_selection,
-                    used_poem_ids=used_poem_ids  # Pass tracked poems to avoid reuse
+                    used_poem_ids=used_poem_ids,  # Pass tracked poems to avoid reuse
+                    confusables=confusables,
+                    season_theme=season_theme
                 )
 
                 # Track poems used in this lesson

@@ -1,404 +1,390 @@
 {
   "lesson_id": "lesson_conjugation_rentaikei",
-  "lesson_title": "The Noun-Linker: Mastering the Rentaikei (Attributive Form)",
-  "lesson_summary": "In Classical Japanese, verbs and adjectives don't just sit next to nouns; they change their 'tail' to act as a modifier. This lesson introduces the Rentaikei (连体形), the specific form used to link descriptions to nouns.",
+  "lesson_title": "动词作定语：连体形",
+  "lesson_summary": "学习如何使用动词直接修饰名词，相当于中文的“...的”结构。这是古典日语中最基础的动词变形之一：连体形。",
   "grammar_point": "conjugation_rentaikei",
   "grammar_explanation": {
-    "concept": "The Rentaikei (连体形) is the 'Attributive Form.' In Chinese, you use the particle '的' to link a verb or adjective to a noun (e.g., 跑*的*人, 美丽*的*花). In Classical Japanese, the word itself transforms its ending to perform this 'linking' function without needing a separate 'de'.",
-    "formation": "For adjectives, the ending often changes to '-ki' (き). For verbs, the ending often changes to '-u' or '-uru'.",
+    "concept": "连体形 (Rentaikei)",
+    "formation": "动词接续名词时的特定形态。对于四段活用动词（如：書く、思ふ），其形态通常与终止形相同；对于其他活用类型（如二段活用），词尾可能发生变化（如：u → uru）。",
     "variations": [
-      "Adjective Rentaikei: ~き (ki)",
-      "Verb Rentaikei: ~る (ru) or ~う (u)"
+      "四段活用：词尾不变 (u)",
+      "下二段活用：词尾变为 uru (如：離る → 離るる)"
     ],
-    "common_confusions": [
-      "Do not confuse Rentaikei with the Terminal form (Shuushikei) which ends a sentence. While they look identical for some verbs, their logical function is different: one modifies a noun, the other completes a statement."
-    ]
+    "common_confusions": []
   },
   "teaching_sequence": [
     {
       "type": "introduction",
-      "content": "Think of the Rentaikei as a 'logical hook.' In previous lessons, we saw how particles like 'no' link nouns. But what if you want to link an action or a quality to a noun? Instead of adding a new word, Japanese modifies the 'tail' of the verb or adjective. If you are a programmer, think of this as a type-cast: we are casting a Verb/Adjective into an 'Attribute' type so it can be accepted by a Noun object."
+      "content": "在之前的课程中，我们学习了助词如何连接词语。今天我们进入一个新的领域：**活用（Conjugation）**。在中文里，要用动词修饰名词，我们通常加一个“的”（例如：哭泣**的**鸟）。在古典日语中，动词通过改变自身的形态（或保持特定形态）直接粘附在名词前面。这种形态被称为“连体形”（连接体言/名词的形式）。"
     },
     {
       "type": "poem_presentation",
-      "poem_id": "lapis_3fae4cc77d26129b",
+      "poem_id": "lapis_6f0fcedcc11bdcc4",
       "display": {
-        "text_with_furigana": "<ruby>大<rt>おほ</rt></ruby>の<ruby>浦<rt>うら</rt></ruby>のその<ruby>中<rt>なか</rt></ruby><ruby>滨<rt>はま</rt></ruby>に<ruby>寄<rt>よ</rt></ruby>する<ruby>浪<rt>なみ</rt></ruby><ruby>豊<rt>ゆた</rt></ruby>けき<ruby>君<rt>きみ</rt></ruby>を<ruby>思<rt>おも</rt></ruby>ふこの<ruby>頃<rt>ころ</rt></ruby>",
-        "romaji": "ohonoura, no sono nakahama, ni yosuru nami, yutakeki kimi, o omou kono koro",
-        "translation": "By the inner beach of the great bay, like the waves that approach the shore, I think of you and your generous heart these days."
+        "text_with_furigana": "<ruby>夏<rt>なつ</rt></ruby><ruby>山<rt>やま</rt></ruby>に<ruby>な<rt>な</rt></ruby>く<ruby>郭公<rt>ほととぎす</rt></ruby><ruby>心<rt>こころ</rt></ruby>あらば<ruby>物<rt>もの</rt></ruby><ruby>思<rt>おも</rt></ruby>ふ<ruby>我<rt>われ</rt></ruby>に<ruby>声<rt>こえ</rt></ruby>な<ruby>聞<rt>き</rt></ruby>かせそ",
+        "romaji": "natsuyama ni naku hototogisu kokoro araba mono omou ware ni koe na kikase so",
+        "translation": "夏山啼杜鹃，若汝亦有心。莫向悲愁我，声声以此音。"
       },
       "vocabulary": [
         {
-          "word": "おほ",
-          "reading": "oho",
-          "meaning": "great/large",
-          "span": [
-            0,
-            2
-          ],
-          "chinese_cognate_note": "Cognate with 大"
-        },
-        {
-          "word": "の",
-          "reading": "no",
-          "meaning": "possessive particle (of)",
-          "span": [
-            2,
-            3
-          ],
-          "chinese_cognate_note": null
-        },
-        {
-          "word": "うら",
-          "reading": "ura",
-          "meaning": "bay/inlet",
-          "span": [
-            3,
-            5
-          ],
-          "chinese_cognate_note": null
-        },
-        {
-          "word": "の",
-          "reading": "no",
-          "meaning": "possessive particle (of)",
-          "span": [
-            5,
-            6
-          ],
-          "chinese_cognate_note": null
-        },
-        {
-          "word": "その",
-          "reading": "sono",
-          "meaning": "that",
-          "span": [
-            6,
-            8
-          ],
-          "chinese_cognate_note": null
-        },
-        {
-          "word": "なか",
-          "reading": "naka",
-          "meaning": "middle/inner",
-          "span": [
-            8,
-            10
-          ],
-          "chinese_cognate_note": "Cognate with 中"
-        },
-        {
-          "word": "はま",
-          "reading": "hama",
-          "meaning": "beach/shore",
-          "span": [
-            10,
-            12
-          ],
-          "chinese_cognate_note": "Cognate with 滨"
-        },
-        {
-          "word": "に",
-          "reading": "ni",
-          "meaning": "at/to (location marker)",
-          "span": [
-            12,
-            13
-          ],
-          "chinese_cognate_note": null
-        },
-        {
-          "word": "よする",
-          "reading": "yosuru",
-          "meaning": "to approach/draw near (Rentaikei form)",
-          "span": [
-            13,
-            16
-          ],
-          "chinese_cognate_note": null
-        },
-        {
-          "word": "なみ",
-          "reading": "nami",
-          "meaning": "waves",
-          "span": [
-            16,
-            18
-          ],
-          "chinese_cognate_note": "Cognate with 浪"
-        },
-        {
-          "word": "ゆたけき",
-          "reading": "yutakeki",
-          "meaning": "abundant/generous (Rentaikei form)",
-          "span": [
-            18,
-            22
-          ],
-          "chinese_cognate_note": null
-        },
-        {
-          "word": "きみ",
-          "reading": "kimi",
-          "meaning": "you/lord",
-          "span": [
-            22,
-            24
-          ],
-          "chinese_cognate_note": "Cognate with 君"
-        },
-        {
-          "word": "を",
-          "reading": "o",
-          "meaning": "object marker",
-          "span": [
-            24,
-            25
-          ],
-          "chinese_cognate_note": null
-        },
-        {
-          "word": "おもふ",
-          "reading": "omou",
-          "meaning": "to think/love",
-          "span": [
-            25,
-            28
-          ],
-          "chinese_cognate_note": "Cognate with 思"
-        },
-        {
-          "word": "この",
-          "reading": "kono",
-          "meaning": "this",
-          "span": [
-            28,
-            30
-          ],
-          "chinese_cognate_note": null
-        },
-        {
-          "word": "ころ",
-          "reading": "koro",
-          "meaning": "time/days",
-          "span": [
-            30,
-            32
-          ],
-          "chinese_cognate_note": null
-        }
-      ],
-      "focus_highlight": [
-        18,
-        22
-      ]
-    },
-    {
-      "type": "grammar_spotlight",
-      "content": "Look at 'yosuru nami' (寄する浪) and 'yutakeki kimi' (豊けき君). \n\n1. **Verb Linkage**: 'yosuru' is the Rentaikei of 'yosu' (to approach). It hooks directly onto 'nami' (waves). In Chinese, this is '涌向**的**浪'.\n2. **Adjective Linkage**: 'yutakeki' is the Rentaikei of 'yutakeshi' (generous/abundant). It hooks onto 'kimi' (you). In Chinese, this is '宽厚**的**君'.\n\nNotice the '-ki' ending on the adjective. Whenever you see an adjective ending in '-ki' followed by a noun, it is functioning exactly like the Chinese '的'.",
-      "evidence": "See the poem above."
-    },
-    {
-      "type": "poem_presentation",
-      "poem_id": "lapis_30203194c3b2dcfb",
-      "display": {
-        "text_with_furigana": "<ruby>世<rt>よ</rt></ruby>に<ruby>ふれ<rt>ふれ</rt></ruby>は<ruby>事<rt>こと</rt></ruby>の<ruby>はしけき<rt>はしけき</rt></ruby><ruby>呉竹<rt>くれたけ</rt></ruby>の<ruby>忧<rt>うき</rt></ruby><ruby>节<rt>ふし</rt></ruby>ごとに<ruby>莺<rt>うぐいす</rt></ruby>そなく",
-        "romaji": "yo ni fure ba, koto no hashikeki, kuretake no, ukifushi koto ni, uguisu so naku",
-        "translation": "As I pass through this world, at every painful joint of the dark bamboo—like the harshness of life—the warbler sings."
-      },
-      "vocabulary": [
-        {
-          "word": "世",
-          "reading": "yo",
-          "meaning": "world/life",
-          "span": [
-            0,
-            1
-          ],
-          "chinese_cognate_note": "Cognate with 世"
-        },
-        {
-          "word": "に",
-          "reading": "ni",
-          "meaning": "in/at",
-          "span": [
-            1,
-            2
-          ],
-          "chinese_cognate_note": null
-        },
-        {
-          "word": "ふれ",
-          "reading": "fure",
-          "meaning": "to pass through/experience",
-          "span": [
-            2,
-            4
-          ],
-          "chinese_cognate_note": null
-        },
-        {
-          "word": "は",
-          "reading": "ba",
-          "meaning": "as/when (conditional)",
-          "span": [
-            4,
-            5
-          ],
-          "chinese_cognate_note": null
-        },
-        {
-          "word": "事",
-          "reading": "koto",
-          "meaning": "things/matters",
-          "span": [
-            5,
-            6
-          ],
-          "chinese_cognate_note": "Cognate with 事"
-        },
-        {
-          "word": "の",
-          "reading": "no",
-          "meaning": "possessive particle",
-          "span": [
-            6,
-            7
-          ],
-          "chinese_cognate_note": null
-        },
-        {
-          "word": "はしけき",
-          "reading": "hashikeki",
-          "meaning": "severe/harsh (Rentaikei form)",
-          "span": [
-            7,
-            11
-          ],
-          "chinese_cognate_note": null
-        },
-        {
-          "word": "くれ竹",
-          "reading": "kuretake",
-          "meaning": "dark bamboo",
-          "span": [
-            11,
-            14
-          ],
-          "chinese_cognate_note": null
-        },
-        {
-          "word": "の",
-          "reading": "no",
-          "meaning": "possessive particle",
-          "span": [
-            14,
-            15
-          ],
-          "chinese_cognate_note": null
-        },
-        {
-          "word": "うき",
-          "reading": "uki",
-          "meaning": "sad/painful",
-          "span": [
-            15,
-            17
-          ],
-          "chinese_cognate_note": null
-        },
-        {
-          "word": "ふし",
-          "reading": "fushi",
-          "meaning": "joint (of bamboo) / event",
-          "span": [
-            17,
-            19
-          ],
-          "chinese_cognate_note": null
-        },
-        {
-          "word": "こと",
-          "reading": "koto",
-          "meaning": "every/each",
-          "span": [
-            19,
-            21
-          ],
-          "chinese_cognate_note": null
-        },
-        {
-          "word": "に",
-          "reading": "ni",
-          "meaning": "at",
-          "span": [
-            21,
-            22
-          ],
-          "chinese_cognate_note": null
-        },
-        {
-          "word": "莺",
-          "reading": "uguisu",
-          "meaning": "bush warbler",
+          "word": "夏山",
+          "reading": "なつやま",
+          "meaning": "夏天的山",
           "span": null,
-          "chinese_cognate_note": "Cognate with 莺"
+          "chinese_cognate_note": "夏山"
         },
         {
-          "word": "そ",
-          "reading": "so",
-          "meaning": "emphasis particle",
-          "span": [
-            23,
-            24
-          ],
+          "word": "に",
+          "reading": "に",
+          "meaning": "在（表示场所的助词）",
+          "span": null,
           "chinese_cognate_note": null
         },
         {
           "word": "なく",
-          "reading": "naku",
-          "meaning": "to sing/cry",
-          "span": [
-            24,
-            26
-          ],
-          "chinese_cognate_note": "Cognate with 鸣 (but read as naku)"
+          "reading": "なく",
+          "meaning": "啼叫（动词）",
+          "span": null,
+          "chinese_cognate_note": "鸣"
+        },
+        {
+          "word": "郭公",
+          "reading": "ほととぎす",
+          "meaning": "杜鹃鸟",
+          "span": null,
+          "chinese_cognate_note": null
+        },
+        {
+          "word": "心",
+          "reading": "こころ",
+          "meaning": "心、情趣、同理心",
+          "span": null,
+          "chinese_cognate_note": "心"
+        },
+        {
+          "word": "あらば",
+          "reading": "あらば",
+          "meaning": "如果有的话（あり的未然形 + 接续助词ba）",
+          "span": null,
+          "chinese_cognate_note": null
+        },
+        {
+          "word": "物",
+          "reading": "もの",
+          "meaning": "事情、对象",
+          "span": null,
+          "chinese_cognate_note": "物"
+        },
+        {
+          "word": "思ふ",
+          "reading": "おもう",
+          "meaning": "思考、忧愁（动词）",
+          "span": null,
+          "chinese_cognate_note": "思"
+        },
+        {
+          "word": "我",
+          "reading": "われ",
+          "meaning": "我",
+          "span": null,
+          "chinese_cognate_note": "我"
+        },
+        {
+          "word": "に",
+          "reading": "に",
+          "meaning": "对、向（表示对象的助词）",
+          "span": null,
+          "chinese_cognate_note": null
+        },
+        {
+          "word": "声",
+          "reading": "こえ",
+          "meaning": "声音（此处指啼声）",
+          "span": null,
+          "chinese_cognate_note": "声"
+        },
+        {
+          "word": "な",
+          "reading": "な",
+          "meaning": "不要（禁止副词，与下面的“そ”呼应）",
+          "span": null,
+          "chinese_cognate_note": null
+        },
+        {
+          "word": "聞かせ",
+          "reading": "きかせ",
+          "meaning": "让...听（使役动词）",
+          "span": null,
+          "chinese_cognate_note": null
+        },
+        {
+          "word": "そ",
+          "reading": "そ",
+          "meaning": "（禁止终助词）",
+          "span": null,
+          "chinese_cognate_note": null
         }
       ],
       "focus_highlight": [
-        7,
-        11
+        2,
+        4,
+        12,
+        14
       ]
     },
     {
-      "type": "contrast_example",
-      "content": "In Poem 3, we see 'hashikeki kuretake' (harsh bamboo). \n\n- Adjective: はしけし (hashikeshi - 'is harsh')\n- Rentaikei: はしけき (hashikeki - 'harsh...')\n- Noun: くれ竹 (kuretake - 'bamboo')\n\nWithout the 'ki' ending, the adjective cannot 'stick' to the bamboo. It's the grammatical glue."
+      "type": "grammar_spotlight",
+      "content": "在这首诗中，我们看到了两个**连体形**的例子：\n\n1. **なく** 郭公 (naku hototogisu) = 啼叫**的**杜鹃\n2. 物 **思ふ** 我 (mono omou ware) = (正在)有所思虑**的**我\n\n这里的“なく”和“思ふ”都处于**连体形**。在这个例子中，它们的形式看起来和基本形式（终止形）一样，直接放在名词前面，起到了形容词的作用。",
+      "evidence": "See the poem above."
+    },
+    {
+      "type": "poem_presentation",
+      "poem_id": "lapis_271c5606ba2c61c1",
+      "display": {
+        "text_with_furigana": "<ruby>霞<rt>かすみ</rt></ruby><ruby>立<rt>た</rt></ruby>つ<ruby>末<rt>すえ</rt></ruby>の<ruby>松山<rt>まつやま</rt></ruby><ruby>ほのぼの<rt>ほのぼの</rt></ruby>と<ruby>波<rt>なみ</rt></ruby>に<ruby>離<rt>はな</rt></ruby>るる<ruby>横雲<rt>よこくも</rt></ruby>の<ruby>空<rt>そら</rt></ruby>",
+        "romaji": "kasumi tatsu sue no matsuyama honobono to nami ni hanaruru yokokumo no sora",
+        "translation": "霞起末松山，朦胧波际间。横云离散去，空阔水连天。"
+      },
+      "vocabulary": [
+        {
+          "word": "霞",
+          "reading": "かすみ",
+          "meaning": "霞、薄雾",
+          "span": null,
+          "chinese_cognate_note": "霞"
+        },
+        {
+          "word": "立つ",
+          "reading": "たつ",
+          "meaning": "升起（连体形修饰“末の松山”）",
+          "span": null,
+          "chinese_cognate_note": "立"
+        },
+        {
+          "word": "末",
+          "reading": "すえ",
+          "meaning": "末端（地名的一部分）",
+          "span": null,
+          "chinese_cognate_note": "末"
+        },
+        {
+          "word": "の",
+          "reading": "の",
+          "meaning": "之（连接助词）",
+          "span": null,
+          "chinese_cognate_note": null
+        },
+        {
+          "word": "松山",
+          "reading": "まつやま",
+          "meaning": "松山（地名）",
+          "span": null,
+          "chinese_cognate_note": "松山"
+        },
+        {
+          "word": "ほのぼのと",
+          "reading": "ほのぼのと",
+          "meaning": "朦胧地、微明地",
+          "span": null,
+          "chinese_cognate_note": null
+        },
+        {
+          "word": "波",
+          "reading": "なみ",
+          "meaning": "波浪",
+          "span": null,
+          "chinese_cognate_note": "波"
+        },
+        {
+          "word": "に",
+          "reading": "に",
+          "meaning": "从（表示分离点的助词）",
+          "span": null,
+          "chinese_cognate_note": null
+        },
+        {
+          "word": "離るる",
+          "reading": "はなるる",
+          "meaning": "离去、散开（动词“離る”的连体形）",
+          "span": null,
+          "chinese_cognate_note": "离"
+        },
+        {
+          "word": "横雲",
+          "reading": "よこくも",
+          "meaning": "横向飘浮的云",
+          "span": null,
+          "chinese_cognate_note": "横云"
+        },
+        {
+          "word": "の",
+          "reading": "の",
+          "meaning": "的（连接助词）",
+          "span": null,
+          "chinese_cognate_note": null
+        },
+        {
+          "word": "空",
+          "reading": "そら",
+          "meaning": "天空",
+          "span": null,
+          "chinese_cognate_note": "空"
+        }
+      ],
+      "focus_highlight": [
+        20,
+        24
+      ]
+    },
+    {
+      "type": "grammar_spotlight",
+      "content": "注意这里的变化：\n\n*   基本动词：**離る** (hanaru) - 离开\n*   连体形：**離るる** (hanaruru) - 离开**的**...\n*   结构：波に **離るる** 横雲 (nami ni hanaruru yokokumo) = 从波浪中离去**的**横云\n\n这就是古典语法的特征之一：为了粘附下面的名词，动词的尾音发生了变化（增加了 -ru 或 -uru）。这种形态专门用于修饰名词。",
+      "evidence": "See the poem above."
+    },
+    {
+      "type": "literary_insight",
+      "content": "在这首诗中，诗人使用了**見立て (Mitate)** 这一技法，即“视觉隐喻”。\n\n诗人看着天空中的云层，将其比作大海的波浪。云层散开的样子，被描述为“从波浪中离去”。这种将天空（云）与大海（波）重叠的意象，创造了一种超现实的空间感，类似于中国诗歌中的“云海”。",
+      "literary_device": null,
+      "chinese_parallel": null
+    },
+    {
+      "type": "poem_presentation",
+      "poem_id": "lapis_c4fc7009d0665f7c",
+      "display": {
+        "text_with_furigana": "<ruby>露<rt>つゆ</rt></ruby><ruby>時雨<rt>しぐれ</rt></ruby><ruby>漏<rt>も</rt></ruby>る<ruby>山陰<rt>やまかげ</rt></ruby>の<ruby>下紅葉<rt>したもみじ</rt></ruby><ruby>濡<rt>ぬ</rt></ruby>るとも<ruby>折<rt>お</rt></ruby>らむ<ruby>秋<rt>あき</rt></ruby>の<ruby>形見<rt>かたみ</rt></ruby>に",
+        "romaji": "tsuyu shigure moru yamakage no shita momichi nuru tomo oramu aki no katami ni",
+        "translation": "露水时雨落，漏入山阴处。红叶虽湿润，折之留秋顾。"
+      },
+      "vocabulary": [
+        {
+          "word": "露",
+          "reading": "つゆ",
+          "meaning": "露水",
+          "span": null,
+          "chinese_cognate_note": "露"
+        },
+        {
+          "word": "時雨",
+          "reading": "しぐれ",
+          "meaning": "秋冬之际的阵雨",
+          "span": null,
+          "chinese_cognate_note": "时雨"
+        },
+        {
+          "word": "漏る",
+          "reading": "もる",
+          "meaning": "漏下、透过（动词）",
+          "span": null,
+          "chinese_cognate_note": "漏"
+        },
+        {
+          "word": "山陰",
+          "reading": "やまかげ",
+          "meaning": "山的背阴处",
+          "span": null,
+          "chinese_cognate_note": "山阴"
+        },
+        {
+          "word": "の",
+          "reading": "の",
+          "meaning": "之（连接助词）",
+          "span": null,
+          "chinese_cognate_note": null
+        },
+        {
+          "word": "下紅葉",
+          "reading": "したもみち",
+          "meaning": "低处的红叶",
+          "span": null,
+          "chinese_cognate_note": "红叶"
+        },
+        {
+          "word": "濡る",
+          "reading": "ぬる",
+          "meaning": "湿润（动词“濡る”的终止/连体形）",
+          "span": null,
+          "chinese_cognate_note": "濡"
+        },
+        {
+          "word": "とも",
+          "reading": "とも",
+          "meaning": "即使...也（逆接助词）",
+          "span": null,
+          "chinese_cognate_note": null
+        },
+        {
+          "word": "折ら",
+          "reading": "おら",
+          "meaning": "折取（动词未然形）",
+          "span": null,
+          "chinese_cognate_note": "折"
+        },
+        {
+          "word": "む",
+          "reading": "む",
+          "meaning": "想要（意志助动词）",
+          "span": null,
+          "chinese_cognate_note": null
+        },
+        {
+          "word": "秋",
+          "reading": "あき",
+          "meaning": "秋天",
+          "span": null,
+          "chinese_cognate_note": "秋"
+        },
+        {
+          "word": "の",
+          "reading": "の",
+          "meaning": "的",
+          "span": null,
+          "chinese_cognate_note": null
+        },
+        {
+          "word": "形見",
+          "reading": "かたみ",
+          "meaning": "纪念品、遗物",
+          "span": null,
+          "chinese_cognate_note": null
+        },
+        {
+          "word": "に",
+          "reading": "に",
+          "meaning": "作为（表示目的/结果）",
+          "span": null,
+          "chinese_cognate_note": null
+        }
+      ],
+      "focus_highlight": [
+        5,
+        7
+      ]
     },
     {
       "type": "comprehension_check",
-      "question": "In Poem 1, identify the word that acts as the 'Rentaikei' (Attributive) form modifying the noun 'kimi' (君). What is its ending?",
-      "answer": "The word is 'yutakeki' (豊けき), and its ending is '-ki' (き).",
-      "hint": "Look for the adjective describing the person (君) right before the particle 'o'."
+      "question": "“漏る”在这个句子中的语法功能是什么？",
+      "answer": "它修饰后面的名词“山陰”。",
+      "hint": "想一想中文翻译：“露水和时雨漏下【的】山阴处”。"
     },
     {
-      "type": "summary",
-      "content": "You have now mastered the 'Noun-Linker' logic. Whenever a verb or adjective modifies a noun in Classical Japanese, it must take the Rentaikei form. For adjectives, look for that distinctive '-ki' (き) tail. This allows complex descriptions to be built without the need for the Chinese 'de' (的)."
+      "type": "literary_insight",
+      "content": "这首诗运用了**縁語 (Engo)**，即“关联词”。\n\n“露”、“時雨”（阵雨）、“漏る”（漏）、“濡る”（湿）都是与“水”相关的词汇。这种词汇的密集使用，不仅描绘了深秋山阴处湿冷的环境，也强化了红叶虽湿仍要折取的决心。这与中国诗歌中通过意象叠加（如“秋阴不散霜飞晚”）来营造氛围的手法类似。",
+      "literary_device": "縁語 (Engo)",
+      "chinese_parallel": "意象叠加 / 连类"
     }
   ],
   "reference_card": {
-    "point": "Rentaikei (连体形)",
-    "one_liner": "The form of a verb or adjective used to modify a noun (Relative Clause).",
-    "example": "ゆたけき (Generous) + 君 (You) = Generous You",
+    "point": "连体形 (Attributive Form)",
+    "one_liner": "动词修饰名词时的形态，相当于中文的“...的”。",
+    "example": "泣く鳥 (naku tori) - 啼叫的鸟",
     "see_also": [
-      "auxiliary_nari",
-      "particle_no"
+      "lesson_particle_no"
     ]
   },
   "forward_references": [
     {
-      "point": "Kakari-Musubi (Emphasis Concord)",
-      "note": "In Poem 2 and 3, you saw 'so' (そ) at the end. This particle 'forces' the final verb to also take the Rentaikei form, even if there is no noun to modify! We will explore this 'Emphasis Rule' in Unit 7."
+      "point": "系结法则 (Kakarimusubi)",
+      "note": "连体形不仅用于修饰名词，将来我们还会学到它在句尾受特定助词（如ぞ、なむ、や、か）影响时的用法。"
     }
   ]
 }

@@ -175,6 +175,7 @@ def analyze_style_fingerprints(df: pd.DataFrame, output_dir: Path):
         grammar_counts = []
         hiragana_ratios = []
         difficulty_scores = []
+        kanji_mora_ratios = []
 
         for _, row in coll_df.iterrows():
             text = row['text']
@@ -186,11 +187,20 @@ def analyze_style_fingerprints(df: pd.DataFrame, output_dir: Path):
             char_counts.append(len(text))
             vocab_counts.append(len(row.get('vocabulary', [])))
             grammar_counts.append(len(row.get('grammar_points', [])))
-            difficulty_scores.append(row.get('difficulty_score', 0) or 0)
+            difficulty_scores.append(row.get('difficulty_score_computed', 0) or 0)
 
             # Hiragana ratio
             hiragana = sum(1 for c in text if '\u3040' <= c <= '\u309f')
             hiragana_ratios.append(hiragana / len(text) if text else 0)
+
+            # Kanji-to-mora ratio (information density for Chinese learners)
+            # Use kanji_transcription for kanji count, reading_hiragana for mora count
+            kanji_text = row.get('kanji_transcription', text) or text
+            reading = row.get('reading_hiragana', '')
+            kanji_count = sum(1 for c in kanji_text if '\u4e00' <= c <= '\u9fff')
+            # Approximate mora count from hiragana reading length
+            mora_count = len(reading) if reading else len(text)
+            kanji_mora_ratios.append(kanji_count / mora_count if mora_count > 0 else 0)
 
         fingerprints[collection] = {
             'poem_count': len(coll_df),
@@ -201,6 +211,7 @@ def analyze_style_fingerprints(df: pd.DataFrame, output_dir: Path):
             'avg_grammar': np.mean(grammar_counts),
             'avg_difficulty': np.mean(difficulty_scores),
             'avg_hiragana_ratio': np.mean(hiragana_ratios),
+            'avg_kanji_mora_ratio': np.mean(kanji_mora_ratios),
         }
 
     print("\nStyle Fingerprints:")
@@ -209,6 +220,7 @@ def analyze_style_fingerprints(df: pd.DataFrame, output_dir: Path):
         print(f"    Avg tokens: {fp['avg_tokens']:.1f} ± {fp['std_tokens']:.1f}")
         print(f"    Avg chars: {fp['avg_chars']:.1f}")
         print(f"    Hiragana ratio: {fp['avg_hiragana_ratio']:.2%}")
+        print(f"    Kanji/mora ratio: {fp['avg_kanji_mora_ratio']:.3f}")
         print(f"    Avg difficulty: {fp['avg_difficulty']:.3f}")
 
     # Save fingerprints
@@ -221,13 +233,13 @@ def analyze_style_fingerprints(df: pd.DataFrame, output_dir: Path):
         metrics = ['avg_tokens', 'avg_vocab', 'avg_grammar', 'avg_hiragana_ratio', 'avg_difficulty']
         metric_labels = ['Tokens', 'Vocabulary', 'Grammar', 'Hiragana%', 'Difficulty']
 
-        # Normalize each metric to 0-1
+        # Normalize each metric to 0-1 (divide by max, not min-max)
+        # This preserves proportions and avoids forcing one collection to 0
         normalized = {}
         for m in metrics:
             values = [fingerprints[c][m] for c in collections]
-            min_v, max_v = min(values), max(values)
-            range_v = max_v - min_v if max_v > min_v else 1
-            normalized[m] = [(fingerprints[c][m] - min_v) / range_v for c in collections]
+            max_v = max(values) if max(values) > 0 else 1
+            normalized[m] = [fingerprints[c][m] / max_v for c in collections]
 
         # Plot
         angles = np.linspace(0, 2 * np.pi, len(metrics), endpoint=False).tolist()

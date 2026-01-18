@@ -59,6 +59,12 @@ logger = logging.getLogger(__name__)
 DEFAULT_MODEL = "gemini-3-pro-preview"
 DEFAULT_INPUT_DIR = PROJECT_ROOT / "data" / "curriculum"
 DEFAULT_OUTPUT_DIR = PROJECT_ROOT / "data" / "curriculum_refined"
+DEFAULT_LITERARY_INDEX = PROJECT_ROOT / "data" / "literary" / "literary_index.json"
+DEFAULT_SEASON_THEME = PROJECT_ROOT / "data" / "literary" / "standardized_season_theme.json"
+DEFAULT_LITERARY_PARQUET = PROJECT_ROOT / "data" / "literary" / "poems_literary.parquet"
+
+import pandas as pd
+import numpy as np
 
 
 # -----------------------------------------------------------------------------
@@ -129,6 +135,167 @@ def load_curriculum(curriculum_dir: Path) -> tuple[dict, dict]:
         grammar_index = json.load(f)
 
     return lesson_graph, grammar_index
+
+
+def load_literary_index(literary_index_path: Path | None = None) -> dict | None:
+    """Load literary index data for curriculum awareness."""
+    path = literary_index_path or DEFAULT_LITERARY_INDEX
+    if path.exists():
+        with open(path, "r", encoding="utf-8") as f:
+            literary_index = json.load(f)
+        logger.info(f"Loaded literary index with {len(literary_index)} devices")
+        return literary_index
+    else:
+        logger.warning(f"Literary index not found at {path}")
+        return None
+
+
+def format_literary_summary(literary_index: dict | None) -> str:
+    """Format literary device statistics for LLM context."""
+    if not literary_index:
+        return "（无文学分析数据）"
+
+    lines = ["主要诗歌技法统计:"]
+
+    # Sort by frequency
+    sorted_devices = sorted(
+        literary_index.items(),
+        key=lambda x: x[1].get("frequency", 0),
+        reverse=True
+    )
+
+    for device, stats in sorted_devices[:8]:
+        freq = stats.get("frequency", 0)
+        lines.append(f"  - {device}: {freq}首诗")
+
+    return "\n".join(lines)
+
+
+def load_season_theme(season_theme_path: Path | None = None) -> dict | None:
+    """Load standardized season/theme data for curriculum awareness."""
+    path = season_theme_path or DEFAULT_SEASON_THEME
+    if path.exists():
+        with open(path, "r", encoding="utf-8") as f:
+            season_theme = json.load(f)
+        logger.info(f"Loaded season/theme for {len(season_theme)} poems")
+        return season_theme
+    else:
+        logger.warning(f"Season/theme data not found at {path}")
+        return None
+
+
+def format_season_theme_summary(season_theme: dict | None) -> str:
+    """Format season/theme distribution for LLM context."""
+    if not season_theme:
+        return "（无季节/主题数据）"
+
+    from collections import Counter
+
+    season_counter = Counter()
+    theme_counter = Counter()
+
+    for poem_id, data in season_theme.items():
+        season = data.get("season", "")
+        if season and season != "無季":
+            season_counter[season] += 1
+        for theme in data.get("themes", []):
+            if theme and theme != "其他":
+                theme_counter[theme] += 1
+
+    lines = ["季节分布:"]
+    for season, count in season_counter.most_common(5):
+        lines.append(f"  - {season}: {count}首诗")
+
+    lines.append("\n主题分布:")
+    for theme, count in theme_counter.most_common(8):
+        lines.append(f"  - {theme}: {count}首诗")
+
+    return "\n".join(lines)
+
+
+def load_poem_devices(literary_parquet_path: Path | None = None) -> dict[str, list[str]]:
+    """
+    Load poetic devices for each poem from literary parquet.
+
+    Returns:
+        Dict mapping poem_id -> list of device names
+    """
+    path = literary_parquet_path or DEFAULT_LITERARY_PARQUET
+    if not path.exists():
+        logger.warning(f"Literary parquet not found at {path}")
+        return {}
+
+    try:
+        df = pd.read_parquet(path)
+        poem_devices = {}
+
+        for _, row in df.iterrows():
+            poem_id = row.get("poem_id", "")
+            devices_raw = row.get("poetic_devices")
+
+            if devices_raw is None or (isinstance(devices_raw, float) and np.isnan(devices_raw)):
+                poem_devices[poem_id] = []
+                continue
+
+            # Handle numpy array
+            if isinstance(devices_raw, np.ndarray):
+                devices_raw = devices_raw.tolist()
+
+            # Extract device names
+            device_names = []
+            if isinstance(devices_raw, list):
+                for device in devices_raw:
+                    if isinstance(device, dict) and "name" in device:
+                        device_names.append(device["name"])
+
+            poem_devices[poem_id] = device_names
+
+        logger.info(f"Loaded devices for {len(poem_devices)} poems")
+        return poem_devices
+
+    except Exception as e:
+        logger.warning(f"Failed to load poem devices: {e}")
+        return {}
+
+
+def get_lesson_literary_distribution(
+    candidate_poem_ids: list[str],
+    season_theme: dict | None,
+    poem_devices: dict | None
+) -> dict:
+    """
+    Compute season/theme/device distribution for a lesson's candidate poems.
+
+    Returns:
+        Dict with seasons, themes, devices distributions
+    """
+    from collections import Counter
+
+    seasons = Counter()
+    themes = Counter()
+    devices = Counter()
+
+    for poem_id in candidate_poem_ids:
+        # Season/theme from standardized data
+        if season_theme and poem_id in season_theme:
+            st = season_theme[poem_id]
+            season = st.get("season", "")
+            if season and season != "無季":
+                seasons[season] += 1
+            for theme in st.get("themes", []):
+                if theme and theme != "其他":
+                    themes[theme] += 1
+
+        # Devices from literary parquet
+        if poem_devices and poem_id in poem_devices:
+            for device in poem_devices[poem_id]:
+                devices[device] += 1
+
+    return {
+        "seasons": dict(seasons.most_common(4)),
+        "themes": dict(themes.most_common(4)),
+        "devices": dict(devices.most_common(5))
+    }
 
 
 def get_all_lesson_ids(lesson_graph: dict) -> list[str]:
@@ -362,8 +529,18 @@ def fix_missing_lessons(refinements: dict, valid_ids: set[str]) -> dict:
 # Ensemble Mode Functions
 # -----------------------------------------------------------------------------
 
-def format_lessons_for_trial(lesson_graph: dict, grammar_index: dict) -> str:
-    """Format lessons as JSON for trial prompt."""
+def format_lessons_for_trial(
+    lesson_graph: dict,
+    grammar_index: dict,
+    season_theme: dict | None = None,
+    poem_devices: dict | None = None
+) -> str:
+    """
+    Format lessons as JSON for trial prompt.
+
+    Now includes per-lesson literary distributions so LLM can design
+    thematic units and assign literary_focus with full awareness.
+    """
     lessons = []
     for unit in lesson_graph.get("units", []):
         for lesson in unit.get("lessons", []):
@@ -371,14 +548,37 @@ def format_lessons_for_trial(lesson_graph: dict, grammar_index: dict) -> str:
             gp = lesson.get("canonical_grammar_point", "")
             gp_info = grammar_index.get("entries", {}).get(gp, {})
 
-            lessons.append({
+            lesson_data = {
                 "id": lid,
                 "grammar_point": gp,
                 "category": gp_info.get("category", "unknown"),
                 "frequency": gp_info.get("frequency", 0),
                 "difficulty_tier": lesson.get("difficulty_tier", 3),
                 "surfaces": gp_info.get("surfaces", [])[:3]
-            })
+            }
+
+            # Include algorithmic literary data
+            if lesson.get("literary_ready"):
+                lesson_data["literary_ready"] = True
+                if lesson.get("literary_difficulty"):
+                    lesson_data["literary_difficulty"] = lesson["literary_difficulty"]
+
+            # Include per-lesson literary distributions from candidate poems
+            # This gives LLM full picture to design thematic progression
+            candidate_ids = lesson.get("candidate_poem_ids", [])
+            if candidate_ids and (season_theme or poem_devices):
+                distribution = get_lesson_literary_distribution(
+                    candidate_ids, season_theme, poem_devices
+                )
+                # Only include non-empty distributions
+                if distribution["seasons"]:
+                    lesson_data["available_seasons"] = distribution["seasons"]
+                if distribution["themes"]:
+                    lesson_data["available_themes"] = distribution["themes"]
+                if distribution["devices"]:
+                    lesson_data["available_devices"] = distribution["devices"]
+
+            lessons.append(lesson_data)
 
     return json.dumps(lessons, ensure_ascii=False, indent=2)
 
@@ -410,13 +610,23 @@ def run_ensemble_trial(
     grammar_index: dict,
     client: GeminiClient,
     trial_prompt_config: dict,
-    valid_ids: set[str]
+    valid_ids: set[str],
+    literary_index: dict | None = None,
+    season_theme: dict | None = None,
+    poem_devices: dict | None = None
 ) -> dict | None:
     """Run a single ensemble trial."""
     logger.info(f"  Running trial {trial_num}...")
 
-    lessons_json = format_lessons_for_trial(lesson_graph, grammar_index)
+    # Include per-lesson distributions for LLM awareness
+    lessons_json = format_lessons_for_trial(
+        lesson_graph, grammar_index,
+        season_theme=season_theme,
+        poem_devices=poem_devices
+    )
     grammar_summary = format_grammar_summary(grammar_index)
+    literary_summary = format_literary_summary(literary_index)
+    season_theme_summary = format_season_theme_summary(season_theme)
 
     system_prompt = trial_prompt_config.get("system", "")
     user_template = trial_prompt_config.get("user_template", "")
@@ -425,7 +635,9 @@ def run_ensemble_trial(
         num_lessons=len(valid_ids),
         trial_number=trial_num,
         lessons_json=lessons_json,
-        grammar_summary=grammar_summary
+        grammar_summary=grammar_summary,
+        literary_summary=literary_summary,
+        season_theme_summary=season_theme_summary
     )
 
     try:
@@ -451,13 +663,24 @@ def synthesize_trials(
     trials: list[dict],
     valid_ids: set[str],
     client: GeminiClient,
-    synthesis_prompt_config: dict
+    synthesis_prompt_config: dict,
+    literary_index: dict | None = None,
+    season_theme: dict | None = None,
+    lessons_with_distributions: str | None = None
 ) -> dict:
     """Synthesize final curriculum from multiple trials."""
     logger.info("Synthesizing final curriculum from trials...")
 
     # Format trials for synthesis prompt
     master_lessons = [{"id": lid} for lid in sorted(valid_ids)]
+    literary_summary = format_literary_summary(literary_index)
+    season_theme_summary = format_season_theme_summary(season_theme)
+
+    # Use per-lesson distributions if provided, otherwise just IDs
+    if lessons_with_distributions:
+        lessons_json_for_synthesis = lessons_with_distributions
+    else:
+        lessons_json_for_synthesis = json.dumps(master_lessons, indent=2)
 
     # Clean up trials for JSON
     trials_data = []
@@ -475,8 +698,10 @@ def synthesize_trials(
 
     user_prompt = user_template.format(
         num_trials=len(trials_data),
-        master_lessons_json=json.dumps(master_lessons, indent=2),
-        trials_json=json.dumps(trials_data, ensure_ascii=False, indent=2)
+        lessons_with_distributions=lessons_json_for_synthesis,
+        trials_json=json.dumps(trials_data, ensure_ascii=False, indent=2),
+        literary_summary=literary_summary,
+        season_theme_summary=season_theme_summary
     )
 
     response_text = client.generate(system_prompt, user_prompt)
@@ -561,7 +786,10 @@ def run_ensemble(
     grammar_index: dict,
     client: GeminiClient,
     num_trials: int = 5,
-    max_parallel: int = 3
+    max_parallel: int = 3,
+    literary_index: dict | None = None,
+    season_theme: dict | None = None,
+    poem_devices: dict | None = None
 ) -> tuple[dict, list[dict]]:
     """
     Run ensemble curriculum generation with parallel trials.
@@ -572,6 +800,9 @@ def run_ensemble(
         client: Gemini client
         num_trials: Number of independent trials
         max_parallel: Maximum parallel API calls
+        literary_index: Literary device index for context (optional)
+        season_theme: Season/theme data for context (optional)
+        poem_devices: Per-poem device lists for context (optional)
 
     Returns:
         Tuple of (synthesized_curriculum, all_trials)
@@ -601,7 +832,10 @@ def run_ensemble(
             grammar_index=grammar_index,
             client=thread_client,
             trial_prompt_config=trial_prompt,
-            valid_ids=valid_ids
+            valid_ids=valid_ids,
+            literary_index=literary_index,
+            season_theme=season_theme,
+            poem_devices=poem_devices
         )
         return trial_num, result
 
@@ -625,9 +859,21 @@ def run_ensemble(
     if len(valid_trials) < 2:
         raise ValueError(f"Only {len(valid_trials)} trials succeeded, need at least 2 for synthesis")
 
+    # Prepare lessons with distributions for synthesis (same as trials see)
+    lessons_with_distributions = format_lessons_for_trial(
+        lesson_graph, grammar_index,
+        season_theme=season_theme,
+        poem_devices=poem_devices
+    )
+
     # Synthesize with lower temperature
     client.temperature = synthesis_prompt.get("meta", {}).get("temperature", 0.3)
-    synthesis = synthesize_trials(valid_trials, valid_ids, client, synthesis_prompt)
+    synthesis = synthesize_trials(
+        valid_trials, valid_ids, client, synthesis_prompt,
+        literary_index=literary_index,
+        season_theme=season_theme,
+        lessons_with_distributions=lessons_with_distributions
+    )
 
     return synthesis, valid_trials
 
@@ -656,15 +902,26 @@ def apply_refinements(
     llm_units = refinements.get("units", [])
     if llm_units:
         for unit_def in llm_units:
+            # Get literary_ready from LLM's unit definition
+            unit_literary_ready = unit_def.get("literary_ready", False)
+
             unit = {
                 "id": unit_def.get("id", f"unit_{len(new_graph['units']) + 1:02d}"),
                 "title": unit_def.get("title"),
+                "theme": unit_def.get("theme", ""),
+                "literary_ready": unit_literary_ready,
                 "lessons": []
             }
 
             for lesson_id in unit_def.get("lessons", []):
                 if lesson_id in lesson_lookup:
                     lesson = lesson_lookup[lesson_id].copy()
+
+                    # Apply unit's literary_ready status to lessons
+                    # This ensures lessons in literary-ready units get marked appropriately
+                    if unit_literary_ready and not lesson.get("literary_ready"):
+                        lesson["literary_ready"] = True
+
                     unit["lessons"].append(lesson)
 
             if unit["lessons"]:
@@ -681,10 +938,35 @@ def apply_refinements(
                 if lesson_id in prereqs:
                     lesson["prerequisites"] = prereqs[lesson_id]
 
-    # Update meta
+    # Apply LLM's literary_focus (key new feature)
+    llm_literary_focus = refinements.get("literary_focus", {})
+    if llm_literary_focus:
+        logger.info(f"Applying LLM literary_focus to {len(llm_literary_focus)} lessons")
+        for unit in new_graph["units"]:
+            for lesson in unit["lessons"]:
+                lesson_id = lesson["id"]
+                if lesson_id in llm_literary_focus:
+                    # Override algorithmic literary_focus with LLM's design
+                    lesson["literary_focus"] = llm_literary_focus[lesson_id]
+                    # Ensure lesson is marked literary_ready if it has focus
+                    if llm_literary_focus[lesson_id]:
+                        lesson["literary_ready"] = True
+
+    # Update meta with literary integration stats
+    literary_ready_count = sum(
+        1 for u in new_graph["units"] for l in u.get("lessons", [])
+        if l.get("literary_ready", False)
+    )
+    total_lessons = sum(len(u["lessons"]) for u in new_graph["units"])
+
     new_graph["meta"]["refined_at"] = datetime.now().isoformat()
     new_graph["meta"]["refinement_model"] = "llm"
-    new_graph["meta"]["total_lessons"] = sum(len(u["lessons"]) for u in new_graph["units"])
+    new_graph["meta"]["total_lessons"] = total_lessons
+
+    # Update literary integration meta
+    if "literary_integration" not in new_graph["meta"]:
+        new_graph["meta"]["literary_integration"] = {}
+    new_graph["meta"]["literary_integration"]["literary_ready_lessons"] = literary_ready_count
 
     return new_graph
 
@@ -718,6 +1000,9 @@ def save_refined_curriculum(
 
 def generate_report(refined_graph: dict, output_dir: Path):
     """Generate markdown report for refined curriculum."""
+    meta = refined_graph.get('meta', {})
+    lit_meta = meta.get('literary_integration', {})
+
     lines = [
         "# Refined Curriculum Report",
         "",
@@ -726,11 +1011,23 @@ def generate_report(refined_graph: dict, output_dir: Path):
         "## Summary",
         "",
         f"- **Total units**: {len(refined_graph.get('units', []))}",
-        f"- **Total lessons**: {refined_graph.get('meta', {}).get('total_lessons', 0)}",
+        f"- **Total lessons**: {meta.get('total_lessons', 0)}",
+    ]
+
+    # Add literary integration summary
+    if lit_meta:
+        lines.extend([
+            "",
+            "### Literary Integration",
+            "",
+            f"- **Literary-ready lessons**: {lit_meta.get('literary_ready_lessons', 0)}",
+        ])
+
+    lines.extend([
         "",
         "## Units and Lessons",
         "",
-    ]
+    ])
 
     for unit in refined_graph.get("units", []):
         unit_id = unit.get("id", "unknown")
@@ -743,11 +1040,25 @@ def generate_report(refined_graph: dict, output_dir: Path):
             lesson_id = lesson.get("id", "")
             grammar = lesson.get("canonical_grammar_point", "")
             prereqs = lesson.get("prerequisites", [])
+            lit_ready = lesson.get("literary_ready", False)
 
             prereq_str = f" (prereqs: {', '.join(prereqs)})" if prereqs else ""
-            lines.append(f"- `{lesson_id}` — {grammar}{prereq_str}")
+            lit_str = " 📖" if lit_ready else ""
+            lines.append(f"- `{lesson_id}` — {grammar}{prereq_str}{lit_str}")
+
+            # Show literary focus if present
+            if lesson.get("literary_focus"):
+                lines.append(f"  - Literary focus: {', '.join(lesson['literary_focus'])}")
 
         lines.append("")
+
+    # Legend
+    lines.extend([
+        "---",
+        "",
+        "**Legend**: 📖 = Literary-ready lesson (includes literary appreciation content)",
+        "",
+    ])
 
     with open(output_dir / "curriculum_report.md", "w", encoding="utf-8") as f:
         f.write("\n".join(lines))
@@ -800,12 +1111,27 @@ Examples:
         metavar="P",
         help="Max parallel API calls for ensemble mode (default: 3)"
     )
+    parser.add_argument(
+        "--literary-index",
+        type=Path,
+        default=DEFAULT_LITERARY_INDEX,
+        help=f"Path to literary index JSON (default: {DEFAULT_LITERARY_INDEX})"
+    )
 
     args = parser.parse_args()
 
     # Load original curriculum
     logger.info(f"Loading curriculum from {args.input_dir}...")
     lesson_graph, grammar_index = load_curriculum(args.input_dir)
+
+    # Load literary index
+    literary_index = load_literary_index(args.literary_index)
+
+    # Load season/theme data
+    season_theme = load_season_theme()
+
+    # Load per-poem devices for detailed distributions
+    poem_devices = load_poem_devices()
 
     original_lessons = sum(len(u.get("lessons", [])) for u in lesson_graph.get("units", []))
     logger.info(f"  Original: {len(lesson_graph.get('units', []))} units, {original_lessons} lessons")
@@ -822,7 +1148,10 @@ Examples:
             refinements, trials = run_ensemble(
                 lesson_graph, grammar_index, client,
                 num_trials=args.ensemble,
-                max_parallel=args.parallel
+                max_parallel=args.parallel,
+                literary_index=literary_index,
+                season_theme=season_theme,
+                poem_devices=poem_devices
             )
         else:
             # Single-shot mode

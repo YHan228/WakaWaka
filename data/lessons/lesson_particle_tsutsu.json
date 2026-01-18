@@ -1,541 +1,405 @@
 {
   "lesson_id": "lesson_particle_tsutsu",
-  "lesson_title": "The 'Loop' Particle: Continuous and Simultaneous Action with つつ (tsutsu)",
-  "lesson_summary": "In this lesson, we move beyond sequential actions (A then B) to explore the particle つつ, which functions like a logical 'while' loop or a parallel process, indicating actions that are ongoing or happening simultaneously.",
+  "lesson_title": "动作的并行与持续：接续助词「つつ」",
+  "lesson_summary": "学习如何使用接续助词「つつ」连接动词，表达“一边……一边……”（同时动作）或“一直……”（持续/反复动作）。",
   "grammar_point": "particle_tsutsu",
   "grammar_explanation": {
-    "concept": "The particle つつ (tsutsu) attaches to verbs to indicate that an action is either continuing over time (like a background process) or occurring at the exact same time as another action.",
-    "formation": "Verb (Continuative/Ren'youkei form) + つつ",
-    "variations": [
-      "Continuous: 'Keep on doing...'",
-      "Simultaneous: 'While doing A, B happens...'"
-    ],
-    "common_confusions": [
-      "vs. て (te): て usually marks a sequence (Step 1 then Step 2). つつ marks overlap (Step 1 during Step 2)."
-    ]
+    "concept": "接续助词「つつ」接在动词之后，主要有两种功能：\n1. **同时进行**：表示两个动作同时发生（一边做A，一边做B）。\n2. **持续/反复**：表示一个动作持续进行或反复发生（一直做A）。\n\n这与我们之前学过的助词「て」（表示顺序：做完A，然后做B）形成对比。",
+    "formation": "动词连用形 + つつ\n（注：你刚刚在上一单元学习了“连用形”，这是它最常见的接续场景之一。）",
+    "variations": [],
+    "common_confusions": []
   },
   "teaching_sequence": [
     {
       "type": "introduction",
-      "content": "In our previous lessons, we mastered the particle て (te) to link actions in a sequence—much like a series of commands in a script. However, poetry often describes states that don't just 'happen and end.' Today we look at つつ (tsutsu). Think of it as a **parallel process** or a **while-loop**. It tells us that an action is persisting in the background while we observe the world."
+      "content": "在之前的课程中，我们学习了助词「て」用于连接先后发生的动作（Sequence）。但在古典诗歌中，如果我们想表达“看着花的同时等待某人”，或者“一直望着远方”，应该如何表达？\n\n本课我们将学习接续助词「つつ」。在逻辑上，你可以将其类比为编程中的多线程（Threading）或循环（Loop），表示动作的并行或持续。"
     },
     {
       "type": "poem_presentation",
-      "poem_id": "ogura100_9ac02ed9904e8f9c",
+      "poem_id": "lapis_daccf002db7432fe",
       "display": {
-        "text_with_furigana": "<ruby>田子<rt>たご</rt></ruby>の<ruby>浦<rt>うら</rt></ruby>にうち<ruby>出<rt>い</rt></ruby>でてみれば<ruby>白妙<rt>しろたえ</rt></ruby>の<ruby>富士<rt>ふじ</rt></ruby>の<ruby>高嶺<rt>たかね</rt></ruby>に<ruby>雪<rt>ゆき</rt></ruby>は<ruby>降<rt>ふ</rt></ruby>りつつ",
-        "romaji": "tagono ura, ni uchi idete mireba, shirotae, no fuji no takane, ni yuki wa furitsutsu",
-        "translation": "When I go out to the shore of Tago and look, I see the snow falling continuously on the high peak of white-clothed Fuji."
+        "text_with_furigana": "<ruby>花<rt>はな</rt></ruby><ruby>見<rt>み</rt></ruby>つつ<ruby>人<rt>ひと</rt></ruby><ruby>待<rt>ま</rt></ruby>つ<ruby>時<rt>とき</rt></ruby>は<ruby>白妙<rt>しろたえ</rt></ruby>の<ruby>袖<rt>そで</rt></ruby>かとのみぞ<ruby>誤<rt>あやま</rt></ruby>たれける",
+        "romaji": "hana mi tsutsu hito matsu toki wa shirotae no sode ka to nomi zo ayamatarekeru",
+        "translation": "一边赏花一边待君至，飘落的花瓣洁白如斯，竟被我误认为是你的衣袖。"
       },
       "vocabulary": [
         {
-          "word": "田子の浦",
-          "reading": "たごのうら",
-          "meaning": "Tago Bay (Place name)",
-          "span": [
-            0,
-            4
-          ],
-          "chinese_cognate_note": "浦 means 'shore/bay' in Chinese."
+          "word": "花",
+          "reading": "はな",
+          "meaning": "花（此处指樱花）",
+          "span": null,
+          "chinese_cognate_note": "花"
         },
         {
-          "word": "に",
-          "reading": "に",
-          "meaning": "at/to (location marker)",
-          "span": [
-            4,
-            5
-          ],
+          "word": "見",
+          "reading": "み",
+          "meaning": "看（动词“見る”的连用形）",
+          "span": null,
+          "chinese_cognate_note": "见"
+        },
+        {
+          "word": "つつ",
+          "reading": "つつ",
+          "meaning": "一边……一边……（接续助词）",
+          "span": null,
           "chinese_cognate_note": null
         },
         {
-          "word": "うち出でて",
-          "reading": "うちいでて",
-          "meaning": "to go out / set out",
-          "span": [
-            5,
-            10
-          ],
-          "chinese_cognate_note": null
+          "word": "人",
+          "reading": "ひと",
+          "meaning": "人（此处指等待的恋人）",
+          "span": null,
+          "chinese_cognate_note": "人"
         },
         {
-          "word": "みれば",
-          "reading": "みれば",
-          "meaning": "when I look",
-          "span": [
-            10,
-            13
-          ],
+          "word": "待つ",
+          "reading": "まつ",
+          "meaning": "等待",
+          "span": null,
+          "chinese_cognate_note": "待"
+        },
+        {
+          "word": "時",
+          "reading": "とき",
+          "meaning": "时候",
+          "span": null,
+          "chinese_cognate_note": "时"
+        },
+        {
+          "word": "は",
+          "reading": "は",
+          "meaning": "提示主题（系助词）",
+          "span": null,
           "chinese_cognate_note": null
         },
         {
           "word": "白妙",
           "reading": "しろたえ",
-          "meaning": "white cloth / pure white",
-          "span": [
-            13,
-            15
-          ],
-          "chinese_cognate_note": "白 is white; 妙 is exquisite."
+          "meaning": "洁白的布（枕词，修饰后面的“袖”）",
+          "span": null,
+          "chinese_cognate_note": null
         },
         {
           "word": "の",
           "reading": "の",
-          "meaning": "possessive particle (of)",
-          "span": [
-            15,
-            16
-          ],
+          "meaning": "的（格助词）",
+          "span": null,
           "chinese_cognate_note": null
         },
         {
-          "word": "富士",
-          "reading": "ふじ",
-          "meaning": "Mt. Fuji",
-          "span": [
-            16,
-            18
-          ],
-          "chinese_cognate_note": "Direct cognate."
-        },
-        {
-          "word": "の",
-          "reading": "の",
-          "meaning": "possessive particle (of)",
-          "span": [
-            18,
-            19
-          ],
-          "chinese_cognate_note": null
-        },
-        {
-          "word": "高嶺",
-          "reading": "たかね",
-          "meaning": "high peak",
-          "span": [
-            19,
-            21
-          ],
-          "chinese_cognate_note": "高 (high) 嶺 (mountain ridge)."
-        },
-        {
-          "word": "に",
-          "reading": "に",
-          "meaning": "on (location marker)",
-          "span": [
-            21,
-            22
-          ],
-          "chinese_cognate_note": null
-        },
-        {
-          "word": "雪",
-          "reading": "ゆき",
-          "meaning": "snow",
-          "span": [
-            22,
-            23
-          ],
-          "chinese_cognate_note": "Direct cognate."
-        },
-        {
-          "word": "は",
-          "reading": "は",
-          "meaning": "topic marker",
-          "span": [
-            23,
-            24
-          ],
-          "chinese_cognate_note": null
-        },
-        {
-          "word": "降りつつ",
-          "reading": "ふりつつ",
-          "meaning": "falling continuously",
-          "span": [
-            24,
-            28
-          ],
-          "chinese_cognate_note": null
-        }
-      ],
-      "focus_highlight": [
-        24,
-        28
-      ]
-    },
-    {
-      "type": "grammar_spotlight",
-      "content": "In the poem above, the poet looks at Mt. Fuji and sees the snow. By ending with **降りつつ (furi-tsutsu)**, the poet emphasizes that the snow isn't just 'there'—it is **in the process of falling**. \n\nIn programming terms:\n`while(is_viewing(Fuji)) { snow_falls(); }` \n\nIf the poet had used `furi-te`, it would imply the snow fell and then something else happened. `tsutsu` keeps the action active and ongoing.",
-      "evidence": "See the poem above."
-    },
-    {
-      "type": "poem_presentation",
-      "poem_id": "ogura100_d70e6b4bb485eb24",
-      "display": {
-        "text_with_furigana": "<ruby>嘆<rt>なげ</rt></ruby>きつつひとり<ruby>寝<rt>ぬ</rt></ruby>る<ruby>夜<rt>よ</rt></ruby>の<ruby>明<rt>あ</rt></ruby>くる<ruby>間<rt>ま</rt></ruby>はいかに<ruby>久<rt>ひさ</rt></ruby>しきものとかは<ruby>知<rt>し</rt></ruby>る",
-        "romaji": "nageki tsutsu, hitori nuru yo no, akuru ma wa, ika ni hisashiki, mono to ka wa shiru",
-        "translation": "Do you know how long the time is until the dawn, during the night when I sleep alone while sighing in grief?"
-      },
-      "vocabulary": [
-        {
-          "word": "嘆きつつ",
-          "reading": "なげきつつ",
-          "meaning": "while sighing / while grieving",
-          "span": [
-            0,
-            4
-          ],
-          "chinese_cognate_note": "嘆 is 'to sigh' in Chinese."
-        },
-        {
-          "word": "ひとり",
-          "reading": "ひとり",
-          "meaning": "alone / one person",
-          "span": [
-            4,
-            7
-          ],
-          "chinese_cognate_note": "一人."
-        },
-        {
-          "word": "寝る",
-          "reading": "ぬる",
-          "meaning": "to sleep",
-          "span": [
-            7,
-            9
-          ],
-          "chinese_cognate_note": null
-        },
-        {
-          "word": "夜",
-          "reading": "よ",
-          "meaning": "night",
-          "span": [
-            9,
-            10
-          ],
-          "chinese_cognate_note": "Direct cognate."
-        },
-        {
-          "word": "の",
-          "reading": "の",
-          "meaning": "possessive particle (of)",
-          "span": [
-            10,
-            11
-          ],
-          "chinese_cognate_note": null
-        },
-        {
-          "word": "明くる",
-          "reading": "あくる",
-          "meaning": "to dawn / to break (day)",
-          "span": [
-            11,
-            14
-          ],
-          "chinese_cognate_note": null
-        },
-        {
-          "word": "間",
-          "reading": "ま",
-          "meaning": "interval / time",
-          "span": [
-            14,
-            15
-          ],
-          "chinese_cognate_note": "Direct cognate for 'space/interval'."
-        },
-        {
-          "word": "は",
-          "reading": "は",
-          "meaning": "topic marker",
-          "span": [
-            15,
-            16
-          ],
-          "chinese_cognate_note": null
-        },
-        {
-          "word": "いかに",
-          "reading": "いかに",
-          "meaning": "how / in what way",
-          "span": [
-            16,
-            19
-          ],
-          "chinese_cognate_note": null
-        },
-        {
-          "word": "久しき",
-          "reading": "ひさしき",
-          "meaning": "long (time)",
-          "span": [
-            19,
-            22
-          ],
-          "chinese_cognate_note": "久 is 'long time' in Chinese."
-        },
-        {
-          "word": "もの",
-          "reading": "もの",
-          "meaning": "thing",
-          "span": [
-            22,
-            24
-          ],
-          "chinese_cognate_note": "物."
-        },
-        {
-          "word": "と",
-          "reading": "と",
-          "meaning": "quotative particle",
-          "span": [
-            24,
-            25
-          ],
-          "chinese_cognate_note": null
+          "word": "袖",
+          "reading": "そで",
+          "meaning": "衣袖",
+          "span": null,
+          "chinese_cognate_note": "袖"
         },
         {
           "word": "か",
           "reading": "か",
-          "meaning": "question particle",
-          "span": [
-            25,
-            26
-          ],
+          "meaning": "表示疑问或不确定（系助词）",
+          "span": null,
           "chinese_cognate_note": null
         },
         {
-          "word": "は",
-          "reading": "は",
-          "meaning": "topic/emphasis marker",
-          "span": [
-            26,
-            27
-          ],
+          "word": "と",
+          "reading": "と",
+          "meaning": "表示引用的内容（格助词）",
+          "span": null,
           "chinese_cognate_note": null
         },
         {
-          "word": "知る",
-          "reading": "しる",
-          "meaning": "to know",
-          "span": [
-            27,
-            29
-          ],
-          "chinese_cognate_note": "知."
+          "word": "のみ",
+          "reading": "のみ",
+          "meaning": "只、仅仅（副助词）",
+          "span": null,
+          "chinese_cognate_note": null
+        },
+        {
+          "word": "ぞ",
+          "reading": "ぞ",
+          "meaning": "表示强调（系助词）",
+          "span": null,
+          "chinese_cognate_note": null
+        },
+        {
+          "word": "誤たれける",
+          "reading": "あやまたれける",
+          "meaning": "弄错了、误认了（“誤つ”的被动、过去形式）",
+          "span": null,
+          "chinese_cognate_note": "误"
         }
       ],
       "focus_highlight": [
-        0,
+        2,
         4
       ]
     },
     {
-      "type": "contrast_example",
-      "content": "In this second poem, **嘆きつつ (nageki-tsutsu)** shows **simultaneous action**. The speaker is sleeping (state) *while* sighing (action). \n\nIn Chinese, this is exactly like **一边叹息一边睡觉** (yībiān tànxī yībiān shuìjiào). The sighing is a continuous thread that runs through the entire night."
+      "type": "grammar_spotlight",
+      "content": "请注意诗的开头：「花見つつ」（Hana mi tsutsu）。\n\n*   **结构**：`見`（动词“見る”的连用形）+ `つつ`。\n*   **功能**：表示**同时进行**（Simultaneous Action）。\n*   **解析**：诗人并不是看完花再等人，而是“一边看着花，一边处于等待的状态”。\n\n这种用法完全对应现代中文的“一边……一边……”。",
+      "evidence": "See the poem above."
+    },
+    {
+      "type": "literary_insight",
+      "content": "这首诗使用了两个重要的修辞技法：\n\n1.  **枕词 (Makurakotoba)**：\n    「<ruby>白妙<rt>しろたえ</rt></ruby>の」是“枕词”，字面意思是洁白的布，专门用来修饰“袖”、“衣”、“雪”等与白色或布料相关的词。它在这里起装饰作用，增加语言的庄重感和色彩美。\n\n2.  **见立 (Mitate)**：\n    这是一种视觉比喻。诗人将飘落的樱花（视觉A）误认为是恋人挥动的白袖（视觉B）。这种“美丽的误会”将客观景物主观化，表达了诗人等待之切——因为太想见到对方，连落花都看成了对方的衣袖。",
+      "literary_device": "見立て (Visual Metaphor)",
+      "chinese_parallel": "类似于中国诗歌中的“拟物”或巧妙的比喻。如：“应为洛神波上袜，可怜容易逐风飞。”（将落花比作洛神的袜子）"
     },
     {
       "type": "poem_presentation",
-      "poem_id": "ogura100_2eaba95627b91dd3",
+      "poem_id": "lapis_15c6d1e3219ed7db",
       "display": {
-        "text_with_furigana": "<ruby>御垣守<rt>みかきもり</rt></ruby><ruby>衛士<rt>えじ</rt></ruby>のたく<ruby>火<rt>ひ</rt></ruby>の<ruby>夜<rt>よる</rt></ruby>は<ruby>燃<rt>も</rt></ruby>え<ruby>昼<rt>ひる</rt></ruby>は<ruby>消<rt>き</rt></ruby>えつつ<ruby>物<rt>もの</rt></ruby>をこそ<ruby>思<rt>おも</rt></ruby>へ",
-        "romaji": "mikakimori, eji no taku hi no, yoru wa moe, hiru wa kie tsutsu, mono o koso omoe",
-        "translation": "Like the fire lit by the palace guards, which burns by night and goes out by day, I too am lost in thought (repeatedly)."
+        "text_with_furigana": "<ruby>君<rt>きみ</rt></ruby>が<ruby>辺<rt>あたり</rt></ruby><ruby>見<rt>み</rt></ruby>つつもをらむ<ruby>生駒山<rt>いこまやま</rt></ruby><ruby>雲<rt>くも</rt></ruby>な<ruby>棚引<rt>たなび</rt></ruby>き<ruby>雨<rt>あめ</rt></ruby>は<ruby>降<rt>ふ</rt></ruby>るとも",
+        "romaji": "kimi ga atari mitsutsu mo oramu ikomayama kumo na tanabiki ame wa furu tomo",
+        "translation": "我愿一直凝望着你所在的方向，生驹山啊，切莫云雾缭绕，哪怕雨落纷纷。"
       },
       "vocabulary": [
         {
-          "word": "御垣守",
-          "reading": "みかきもり",
-          "meaning": "palace gate guard",
-          "span": [
-            0,
-            3
-          ],
+          "word": "君",
+          "reading": "きみ",
+          "meaning": "你（指恋人）",
+          "span": null,
+          "chinese_cognate_note": "君"
+        },
+        {
+          "word": "が",
+          "reading": "が",
+          "meaning": "的（格助词，表示连体修饰）",
+          "span": null,
           "chinese_cognate_note": null
         },
         {
-          "word": "衛士",
-          "reading": "えじ",
-          "meaning": "guardsman",
-          "span": [
-            3,
-            5
-          ],
-          "chinese_cognate_note": "衛 is 'to guard', 士 is 'soldier'."
+          "word": "辺",
+          "reading": "あたり",
+          "meaning": "附近、方向",
+          "span": null,
+          "chinese_cognate_note": "边"
         },
         {
-          "word": "の",
-          "reading": "の",
-          "meaning": "possessive particle (of)",
-          "span": [
-            5,
-            6
-          ],
+          "word": "見",
+          "reading": "み",
+          "meaning": "看（动词“見る”的连用形）",
+          "span": null,
+          "chinese_cognate_note": "见"
+        },
+        {
+          "word": "つつ",
+          "reading": "つつ",
+          "meaning": "一直……（表示持续）",
+          "span": null,
           "chinese_cognate_note": null
         },
         {
-          "word": "たく",
-          "reading": "たく",
-          "meaning": "to burn / to light a fire",
-          "span": [
-            6,
-            8
-          ],
+          "word": "も",
+          "reading": "も",
+          "meaning": "强调（系助词）",
+          "span": null,
           "chinese_cognate_note": null
         },
         {
-          "word": "火",
-          "reading": "ひ",
-          "meaning": "fire",
-          "span": [
-            8,
-            9
-          ],
-          "chinese_cognate_note": "Direct cognate."
-        },
-        {
-          "word": "の",
-          "reading": "の",
-          "meaning": "possessive particle (of)",
-          "span": [
-            9,
-            10
-          ],
+          "word": "をら",
+          "reading": "をら",
+          "meaning": "在、居（动词“居り”的未然形）",
+          "span": null,
           "chinese_cognate_note": null
         },
         {
-          "word": "夜",
-          "reading": "よる",
-          "meaning": "night",
-          "span": [
-            10,
-            11
-          ],
-          "chinese_cognate_note": "Direct cognate."
+          "word": "む",
+          "reading": "む",
+          "meaning": "想要……（意志助动词）",
+          "span": null,
+          "chinese_cognate_note": null
+        },
+        {
+          "word": "生駒山",
+          "reading": "いこまやま",
+          "meaning": "生驹山（地名）",
+          "span": null,
+          "chinese_cognate_note": null
+        },
+        {
+          "word": "雲",
+          "reading": "くも",
+          "meaning": "云",
+          "span": null,
+          "chinese_cognate_note": "云"
+        },
+        {
+          "word": "な",
+          "reading": "な",
+          "meaning": "不要……（禁止副词）",
+          "span": null,
+          "chinese_cognate_note": null
+        },
+        {
+          "word": "棚引き",
+          "reading": "たなびき",
+          "meaning": "横向飘荡（动词“棚引く”的连用形）",
+          "span": null,
+          "chinese_cognate_note": null
+        },
+        {
+          "word": "雨",
+          "reading": "あめ",
+          "meaning": "雨",
+          "span": null,
+          "chinese_cognate_note": "雨"
         },
         {
           "word": "は",
           "reading": "は",
-          "meaning": "topic marker",
-          "span": [
-            11,
-            12
-          ],
+          "meaning": "提示主题（系助词）",
+          "span": null,
           "chinese_cognate_note": null
         },
         {
-          "word": "燃え",
-          "reading": "もえ",
-          "meaning": "burn",
-          "span": [
-            12,
-            14
-          ],
+          "word": "降る",
+          "reading": "ふる",
+          "meaning": "下（雨）",
+          "span": null,
+          "chinese_cognate_note": "降"
+        },
+        {
+          "word": "とも",
+          "reading": "とも",
+          "meaning": "即使……也（逆接接续助词）",
+          "span": null,
           "chinese_cognate_note": null
-        },
-        {
-          "word": "昼",
-          "reading": "ひる",
-          "meaning": "daytime",
-          "span": [
-            14,
-            15
-          ],
-          "chinese_cognate_note": "Direct cognate."
-        },
-        {
-          "word": "は",
-          "reading": "は",
-          "meaning": "topic marker",
-          "span": [
-            15,
-            16
-          ],
-          "chinese_cognate_note": null
-        },
-        {
-          "word": "消えつつ",
-          "reading": "きえつつ",
-          "meaning": "extinguishing repeatedly / while going out",
-          "span": [
-            16,
-            20
-          ],
-          "chinese_cognate_note": "消 is 'to disappear/extinguish'."
-        },
-        {
-          "word": "物",
-          "reading": "もの",
-          "meaning": "things / matters",
-          "span": [
-            20,
-            21
-          ],
-          "chinese_cognate_note": "物."
-        },
-        {
-          "word": "を",
-          "reading": "を",
-          "meaning": "object marker",
-          "span": [
-            21,
-            22
-          ],
-          "chinese_cognate_note": null
-        },
-        {
-          "word": "こそ",
-          "reading": "こそ",
-          "meaning": "strong emphasis particle",
-          "span": [
-            22,
-            24
-          ],
-          "chinese_cognate_note": null
-        },
-        {
-          "word": "思へ",
-          "reading": "おもへ",
-          "meaning": "to think / to long for",
-          "span": [
-            24,
-            26
-          ],
-          "chinese_cognate_note": "思."
         }
       ],
       "focus_highlight": [
-        18,
-        22
+        7,
+        9
+      ]
+    },
+    {
+      "type": "grammar_spotlight",
+      "content": "这里同样使用了「見つつ」（Mi tsutsu），但语境略有不同。\n\n*   **语境**：诗人表达的是一种强烈的愿望（をらむ - 想要以此状态存在）。\n*   **解析**：这里的「つつ」不只是“一边……一边……”，更侧重于**持续性**（Continuity）。\n*   **翻译**：与其翻译为“一边看一边在”，不如理解为“**一直**看着”、“**不断地**凝望”。\n\n这种用法常用于表达深情的凝视或长久的思念。",
+      "evidence": "See the poem above."
+    },
+    {
+      "type": "poem_presentation",
+      "poem_id": "lapis_74ac4ed0700e4fef",
+      "display": {
+        "text_with_furigana": "<ruby>常人<rt>つねひと</rt></ruby>も<ruby>起<rt>お</rt></ruby>きつつ<ruby>聞<rt>き</rt></ruby>くぞ<ruby>杜鵑<rt>ほととぎす</rt></ruby>この<ruby>暁<rt>あかとき</rt></ruby>に<ruby>来鳴<rt>きな</rt></ruby>く<ruby>初声<rt>はつこゑ</rt></ruby>",
+        "romaji": "tsune hito mo okitsutsu kiku zo hototogisu kono akatoki ni kinaku hatsukoe",
+        "translation": "世人也都彻夜未眠，只为听那杜鹃在黎明时分传来的第一声啼鸣。"
+      },
+      "vocabulary": [
+        {
+          "word": "常人",
+          "reading": "つねひと",
+          "meaning": "普通人、世人",
+          "span": null,
+          "chinese_cognate_note": "常人"
+        },
+        {
+          "word": "も",
+          "reading": "も",
+          "meaning": "也（系助词）",
+          "span": null,
+          "chinese_cognate_note": null
+        },
+        {
+          "word": "起き",
+          "reading": "おき",
+          "meaning": "醒着、起床（动词“起く”的连用形）",
+          "span": null,
+          "chinese_cognate_note": "起"
+        },
+        {
+          "word": "つつ",
+          "reading": "つつ",
+          "meaning": "保持……状态（接续助词）",
+          "span": null,
+          "chinese_cognate_note": null
+        },
+        {
+          "word": "聞く",
+          "reading": "きく",
+          "meaning": "听",
+          "span": null,
+          "chinese_cognate_note": "闻"
+        },
+        {
+          "word": "ぞ",
+          "reading": "ぞ",
+          "meaning": "强调（系助词）",
+          "span": null,
+          "chinese_cognate_note": null
+        },
+        {
+          "word": "杜鵑",
+          "reading": "ほととぎす",
+          "meaning": "杜鹃鸟",
+          "span": null,
+          "chinese_cognate_note": null
+        },
+        {
+          "word": "この",
+          "reading": "この",
+          "meaning": "这个（连体词）",
+          "span": null,
+          "chinese_cognate_note": null
+        },
+        {
+          "word": "暁",
+          "reading": "あかとき",
+          "meaning": "黎明",
+          "span": null,
+          "chinese_cognate_note": "晓"
+        },
+        {
+          "word": "に",
+          "reading": "に",
+          "meaning": "在（格助词，表示时间）",
+          "span": null,
+          "chinese_cognate_note": null
+        },
+        {
+          "word": "来鳴く",
+          "reading": "きなく",
+          "meaning": "飞来鸣叫",
+          "span": null,
+          "chinese_cognate_note": null
+        },
+        {
+          "word": "初声",
+          "reading": "はつこゑ",
+          "meaning": "第一声啼鸣",
+          "span": null,
+          "chinese_cognate_note": "初声"
+        }
+      ],
+      "focus_highlight": [
+        7,
+        9
       ]
     },
     {
       "type": "comprehension_check",
-      "question": "In the third poem, the fire 'burns at night' and 'goes out by day' (消えつつ). Why is つつ used here instead of a simple 'ended' form?",
-      "answer": "Because the fire goes out every single day in a repeating cycle. つつ captures the iterative, recurring nature of the action, just like the poet's recurring thoughts of love.",
-      "hint": "Think about whether the fire goes out once and stays out, or if it's a daily 'loop'."
+      "question": "「起きつつ聞く」最准确的理解是：",
+      "answer": "保持醒着的状态一直在听",
+      "hint": "这里的「起き」不是瞬间的“起床”，而是指“没睡/醒着”的状态。诗人是为了等待鸟鸣。"
     }
   ],
   "reference_card": {
-    "point": "つつ (tsutsu)",
-    "one_liner": "The 'while' or 'continuous' particle used for simultaneous or repeating actions.",
-    "example": "雪は降りつつ (Yuki wa furitsutsu) = The snow keeps on falling.",
+    "point": "接续助词「つつ」",
+    "one_liner": "接在动词连用形后，表示动作的同时进行或持续。",
+    "example": "花見つつ (Hana mi tsutsu) - 一边赏花一边...",
     "see_also": [
+      "lesson_conjugation_renyokei",
       "particle_te"
     ]
   },
   "forward_references": [
     {
-      "point": "こそ (koso) + 思へ (omoe)",
-      "note": "Notice how the verb 'omoe' ends differently because of 'koso'. This is a special grammatical 'handshake' called Kakari-Musubi, which we will study in Unit 7."
+      "point": "助动词「む」",
+      "note": "在第二首诗中出现的「をらむ」，表示意志或推测，我们将在后续单元详细学习。"
     },
     {
-      "point": "みれば (mireba)",
-      "note": "The 'ba' at the end of 'mire' means 'when' or 'if'. We will cover these conditional links in Unit 5."
+      "point": "逆接助词「とも」",
+      "note": "第二首诗末尾的「とも」，表示“即使……也”，是常用的逆接条件。"
     }
   ]
 }

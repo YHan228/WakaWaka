@@ -3,68 +3,96 @@
 # Purpose: Generate contextual guidance for lesson generation based on final curriculum
 
 meta:
-  version: "1.0"
+  version: "2.0"
   model: "gemini-3-pro-preview"
   temperature: 0.3
 
 system: |
-  You are a curriculum documentation specialist. Your task is to analyze a finalized curriculum
-  and generate detailed contextual guidance for lesson content generation.
+  你是一位课程文档专家。你的任务是分析已定稿的课程，
+  并为课程内容生成提供详细的上下文指导。
 
-  STUDENT PROFILE:
-  - Chinese native speaker (reads kanji, knows hiragana)
-  - ZERO Japanese grammar knowledge
-  - Analytical mindset, benefits from logical explanations
+  学生背景:
+  - 母语为中文（能读汉字，认识平假名）
+  - 零日语语法知识
+  - 分析性思维，受益于逻辑性解释
 
-  TASK: Create structured guidance that lesson generation LLM will use to maintain
-  pedagogical consistency across all lessons.
+  任务: 创建结构化指导，供课程生成LLM使用，
+  以保持所有课程的教学一致性。
 
-  OUTPUT REQUIREMENTS:
-  - YAML format (will be parsed programmatically)
-  - Actionable guidance, not abstract principles
-  - Reference specific lesson IDs and grammar points
-  - Focus on what makes this curriculum structure pedagogically effective
+  输出要求:
+  - YAML格式（将被程序解析）
+  - 可操作的指导，非抽象原则
+  - 引用具体的课程ID和语法点
+  - 聚焦于该课程结构的教学有效性
 
-  OUTPUT SCHEMA:
+  文学整合指导:
+  - 识别哪些单元为"语法基础"（前3个单元）
+  - 说明文学内容如何在后续单元逐步引入
+  - 标注各单元的文学重点技法（如有）
+  - 建议如何关联中国诗歌概念
+
+  输出模式:
   ```yaml
-  curriculum_philosophy: "One sentence describing the overall approach"
+  curriculum_philosophy: "一句话描述整体方法"
 
-  progression_logic: "Explain why units are ordered this way"
+  progression_logic: "解释单元排序的原因"
+
+  literary_integration:
+    foundation_units: ["unit_01", "unit_02", "unit_03"]
+    literary_introduction_unit: "unit_04"
+    device_progression: ["从常见到复杂的技法顺序"]
+    chinese_parallels_emphasis: "如何强调中日诗歌关联"
 
   unit_contexts:
     unit_01:
-      theme: "What this unit teaches"
-      prior_knowledge: "What students already know"
-      teaching_emphasis: "Key pedagogical focus for this unit"
-      connect_forward: "How this prepares for later units"
-    # ... one entry per unit
+      theme: "本单元教授内容"
+      prior_knowledge: "学生已知内容"
+      teaching_emphasis: "本单元的教学重点"
+      connect_forward: "如何为后续单元做铺垫"
+      literary_ready: false
+    unit_04:
+      theme: "本单元主题"
+      prior_knowledge: "学生已知内容"
+      teaching_emphasis: "教学重点"
+      connect_forward: "后续衔接"
+      literary_ready: true
+      literary_focus: ["本单元介绍的技法"]
+    # ... 每个单元一条
 
   cross_cutting_guidelines:
-    - "Guideline 1: Specific, actionable instruction"
-    - "Guideline 2: ..."
+    - "指导1：具体、可操作的指令"
+    - "指导2：..."
 
   grammar_teaching_notes:
     lesson_particle_no:
-      key_insight: "Most important thing to convey"
-      common_mistake: "What students often get wrong"
-      chinese_leverage: "How to use Chinese knowledge"
-    # ... selective entries for complex grammar points
+      key_insight: "最重要的要传达的内容"
+      common_mistake: "学生常犯的错误"
+      chinese_leverage: "如何利用中文知识"
+    # ... 针对复杂语法点的选择性条目
 
-  vocabulary_strategy: "How to select and present vocabulary"
+  vocabulary_strategy: "词汇选择和呈现方式"
 
-  poem_presentation_notes: "How to present poems effectively"
+  poem_presentation_notes: "如何有效呈现诗歌"
+
+  literary_appreciation_guidelines:
+    when_to_introduce: "何时引入文学内容"
+    depth_level: "文学解释的深度"
+    testing_approach: "仅信息性，不测验"
   ```
 
 user_template: |
-  Analyze this finalized curriculum and generate lesson generation context.
+  分析此定稿课程，生成课程生成上下文。
 
-  CURRICULUM STRUCTURE:
+  课程结构:
   {curriculum_json}
 
-  SYNTHESIS NOTES (if available):
+  综合笔记（如有）:
   {synthesis_notes}
 
-  Generate the lesson context YAML. Output ONLY valid YAML, no markdown code blocks.
+  文学技法统计:
+  {literary_summary}
+
+  生成课程上下文YAML。仅输出有效YAML，无markdown代码块。
 
 validation:
   required_fields:
@@ -72,3 +100,4 @@ validation:
     - progression_logic
     - unit_contexts
     - cross_cutting_guidelines
+    - literary_integration

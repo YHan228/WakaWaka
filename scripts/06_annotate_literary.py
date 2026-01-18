@@ -432,7 +432,9 @@ def analyze_poem(
         PoemLiteraryAnalysis or None on failure
     """
     poem_id = poem_row["poem_id"]
-    text = poem_row["text"]
+    original_text = poem_row["text"]
+    # Use kanji_transcription if available, otherwise use original text
+    kanji_transcription = poem_row.get("kanji_transcription") or original_text
 
     # Check cache
     cache_key = get_cache_key(poem_id, client.model_name, prompt_config["meta"]["version"])
@@ -442,7 +444,7 @@ def analyze_poem(
         if cached:
             logger.debug(f"Using cached response for {poem_id}")
             try:
-                fixed = validate_and_fix_analysis(cached, poem_id, text)
+                fixed = validate_and_fix_analysis(cached, poem_id, kanji_transcription)
                 return build_literary_analysis(fixed)
             except Exception as e:
                 logger.warning(f"Cached response invalid for {poem_id}: {e}")
@@ -454,7 +456,8 @@ def analyze_poem(
     user_prompt = format_prompt(
         prompt_config["user_template"],
         poem_id=poem_id,
-        text=text,
+        kanji_transcription=kanji_transcription,
+        original_text=original_text,
         reading_hiragana=poem_row.get("reading_hiragana", ""),
         reading_romaji=poem_row.get("reading_romaji", ""),
         author=poem_row.get("author") or "Unknown",
@@ -479,7 +482,7 @@ def analyze_poem(
             save_cached_response(cache_key, llm_response)
 
         # Validate and build
-        fixed = validate_and_fix_analysis(llm_response, poem_id, text)
+        fixed = validate_and_fix_analysis(llm_response, poem_id, kanji_transcription)
         return build_literary_analysis(fixed)
 
     except Exception as e:

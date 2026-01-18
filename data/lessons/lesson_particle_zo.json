@@ -1,535 +1,289 @@
 {
   "lesson_id": "lesson_particle_zo",
-  "lesson_title": "The Emphatic Spotlight: Particle ぞ (zo) and the Logic of Binding",
-  "lesson_summary": "This lesson introduces the particle 'zo', a powerful tool used to highlight specific information, and explains how it triggers a grammatical 'handshake' that changes the end of the sentence.",
+  "lesson_title": "聚焦的光束：系助词「ぞ」与系结法则",
+  "lesson_summary": "学习系助词「ぞ」如何像聚光灯一样强调句子中的特定成分，并掌握古典日语中最重要的句法规则——系结法则（係結び）。",
   "grammar_point": "particle_zo",
   "grammar_explanation": {
-    "concept": "The particle ぞ (zo) acts like a spotlight. In Chinese, it functions similarly to the '是...的' construction or the word '正是' (zhèngshì), emphasizing that the preceding word is the crucial piece of information. However, in Japanese, this emphasis creates a 'logical ripple' called Kakari-Musubi (系結). When 'zo' appears, the sentence cannot end normally; it must end in the Rentaikei (Attributive form) you learned in Unit 3.",
-    "formation": "[Emphasized Word] + ぞ + ... + [Verb/Adjective in Rentaikei]",
+    "concept": "系助词「ぞ」用于强烈强调其前置的词语（类似于在文本中加粗或高亮）。它不仅改变语气，更强制改变句尾谓语的形态。",
+    "formation": "【系结法则 (Kakarimusubi)】\n1. 触发词：系助词「ぞ」出现在句中。\n2. 规则：句尾的谓语（动词、形容词、助动词）必须从“终止形”变为“连体形”。\n3. 逻辑类比：就像编程中打开了一个强调标签 `<strong class='zo'>`，必须在句尾用特定的格式 `</strong>`（连体形）来闭合，否则会产生语法错误。",
     "variations": [
-      "Often follows nouns, but can follow other particles like 'ni' or 'to'."
+      "ぞ...连体形 (强调)",
+      "なむ...连体形 (强调，比ぞ柔和，本课暂不涉及)",
+      "や/か...连体形 (疑问/反语，已学过)"
     ],
     "common_confusions": [
-      "Unlike 'ka' or 'ya' which you learned recently, 'zo' does not ask a question; it makes a strong, definitive statement."
+      "连体形结句 vs. 连体形修饰名词：\n通常“连体形”后必须接名词（如“泣く鹿”）。但在“系结法则”中，受「ぞ」影响，句子可以直接以“连体形”结束。这是一种特殊的句法闭合方式，不要误以为后面漏掉了名词。"
     ]
   },
   "teaching_sequence": [
     {
       "type": "introduction",
-      "content": "In our previous lessons, we explored how 'ka' and 'ya' introduce doubt or questions. Today, we look at their assertive cousin: ぞ (zo). Think of 'zo' as a logical operator that 'binds' a specific word to the end of the sentence. If you see 'zo' in the middle of a line, your brain should immediately look for a Rentaikei (Attributive form) at the end. This is not just a stylistic choice; it is a strict grammatical requirement—much like how certain functions in programming require a specific return type."
-    },
-    {
-      "type": "poem_presentation",
-      "poem_id": "ogura100_14cdf0b746d56fbb",
-      "display": {
-        "text_with_furigana": "<ruby>夕<rt>ゆう</rt></ruby>されば<ruby>門田<rt>かどた</rt></ruby>の<ruby>稲葉<rt>いなば</rt></ruby>おとづれて<ruby>蘆<rt>あし</rt></ruby>のまろやに<ruby>秋風<rt>あきかぜ</rt></ruby><span style='color: #ff4500; font-weight: bold;'>ぞ</span><ruby>吹<rt>ふ</rt></ruby>く",
-        "romaji": "yuusareba, kadota no inaba, otozurete, ashi no maroya ni, akikaze zo fuku",
-        "translation": "When evening comes, the leaves of the rice stalks by the gate rustle, and into my reed-thatched hut, the autumn wind blows."
-      },
-      "vocabulary": [
-        {
-          "word": "夕",
-          "reading": "ゆう",
-          "meaning": "evening",
-          "span": [
-            0,
-            1
-          ],
-          "chinese_cognate_note": "Same as Chinese 夕 (xī)."
-        },
-        {
-          "word": "され",
-          "reading": "され",
-          "meaning": "to pass/to come (of time)",
-          "span": [
-            1,
-            3
-          ],
-          "chinese_cognate_note": null
-        },
-        {
-          "word": "ば",
-          "reading": "ば",
-          "meaning": "when/since (conditional)",
-          "span": [
-            3,
-            4
-          ],
-          "chinese_cognate_note": null
-        },
-        {
-          "word": "門田",
-          "reading": "かどた",
-          "meaning": "rice paddies near the gate",
-          "span": [
-            4,
-            6
-          ],
-          "chinese_cognate_note": "門 (gate) + 田 (field)."
-        },
-        {
-          "word": "の",
-          "reading": "の",
-          "meaning": "possessive particle (of)",
-          "span": [
-            6,
-            7
-          ],
-          "chinese_cognate_note": null
-        },
-        {
-          "word": "稲葉",
-          "reading": "inaba",
-          "meaning": "rice leaves",
-          "span": [
-            7,
-            9
-          ],
-          "chinese_cognate_note": "稲 (rice) + 葉 (leaf)."
-        },
-        {
-          "word": "おとづれ",
-          "reading": "おとづれ",
-          "meaning": "to visit/to make a sound",
-          "span": [
-            9,
-            13
-          ],
-          "chinese_cognate_note": null
-        },
-        {
-          "word": "て",
-          "reading": "て",
-          "meaning": "and (linking particle)",
-          "span": [
-            13,
-            14
-          ],
-          "chinese_cognate_note": null
-        },
-        {
-          "word": "蘆",
-          "reading": "あし",
-          "meaning": "reed/rush",
-          "span": [
-            14,
-            15
-          ],
-          "chinese_cognate_note": null
-        },
-        {
-          "word": "の",
-          "reading": "の",
-          "meaning": "possessive particle (of)",
-          "span": [
-            15,
-            16
-          ],
-          "chinese_cognate_note": null
-        },
-        {
-          "word": "まろや",
-          "reading": "まろや",
-          "meaning": "humble round hut",
-          "span": [
-            16,
-            19
-          ],
-          "chinese_cognate_note": null
-        },
-        {
-          "word": "に",
-          "reading": "ni",
-          "meaning": "into/at (target particle)",
-          "span": [
-            19,
-            20
-          ],
-          "chinese_cognate_note": null
-        },
-        {
-          "word": "秋風",
-          "reading": "あきかぜ",
-          "meaning": "autumn wind",
-          "span": [
-            20,
-            22
-          ],
-          "chinese_cognate_note": "秋 (autumn) + 風 (wind)."
-        },
-        {
-          "word": "ぞ",
-          "reading": "zo",
-          "meaning": "[Emphatic Particle]",
-          "span": [
-            22,
-            23
-          ],
-          "chinese_cognate_note": null
-        },
-        {
-          "word": "吹く",
-          "reading": "ふく",
-          "meaning": "to blow (Rentaikei form)",
-          "span": [
-            23,
-            25
-          ],
-          "chinese_cognate_note": null
-        }
-      ],
-      "focus_highlight": [
-        22,
-        23
-      ]
-    },
-    {
-      "type": "grammar_spotlight",
-      "content": "Look at the end of the poem above: 秋風ぞ吹く (Akikaze zo fuku). \n\n1. **The Spotlight**: By placing 'zo' after 'Akikaze' (Autumn Wind), the poet is saying: 'It is specifically the *autumn wind* (and nothing else) that is blowing.'\n2. **The Binding**: Because 'zo' is used, the verb 'fuku' (to blow) must be in the **Rentaikei**. While 'fuku' looks the same in its standard form, grammatically it has switched roles to 'close' the emphasis started by 'zo'. This 'handshake' between the particle and the ending is the essence of Kakari-Musubi.",
-      "evidence": "See the poem above."
+      "content": "在之前的课程中，我们学习了“连体形”通常用于修饰名词（如“<span class='highlight'>鳴く</span>鹿”）。\n\n但在古典和歌中，你经常会看到句子以连体形结束，后面却没有名词。这通常是因为句中隐藏着一个“触发器”。\n\n今天我们要学习的「ぞ」，就是这样一个强力的触发器。它如同舞台上的聚光灯，打在谁身上，谁就是焦点，同时要求句尾做出相应的变形配合。这就是古典语法中最核心的规则之一：**系结法则（係結び）**。"
     },
     {
       "type": "poem_presentation",
       "poem_id": "ogura100_975eceac6c0fd0c6",
       "display": {
-        "text_with_furigana": "<ruby>奥山<rt>おくやま</rt></ruby>に<ruby>紅葉<rt>もみじ</rt></ruby><ruby>踏<rt>ふ</rt></ruby>みわけ<ruby>鳴<rt>な</rt></ruby>く<ruby>鹿<rt>しか</rt></ruby>の<ruby>声<rt>こえ</rt></ruby>きく<ruby>時<rt>とき</rt></ruby><span style='color: #ff4500; font-weight: bold;'>ぞ</span><ruby>秋<rt>あき</rt></ruby>は<ruby>悲<rt>かな</rt></ruby>しき",
-        "romaji": "okuyama ni, momiji fumiwake, naku shika no, koe kiku toki zo, aki wa kanashiki",
-        "translation": "Deep in the mountains, treading through the crimson leaves, when I hear the cry of the deer, it is then that autumn is truly sad."
+        "text_with_furigana": "<ruby>奥山<rt>おくやま</rt></ruby>に<ruby>紅葉<rt>もみじ</rt></ruby><ruby>踏<rt>ふ</rt></ruby>み<ruby>分<rt>わ</rt></ruby>け<ruby>鳴<rt>な</rt></ruby>く<ruby>鹿<rt>しか</rt></ruby>の<ruby>声<rt>こえ</rt></ruby><ruby>聞<rt>き</rt></ruby>く<ruby>時<rt>とき</rt></ruby><span class='highlight'>ぞ</span><ruby>秋<rt>あき</rt></ruby>は<ruby>悲<rt>かな</rt></ruby>し<span class='highlight'>き</span>",
+        "romaji": "okuyama ni momiji fumiwake naku shika no koe kiku toki zo aki wa kanashiki",
+        "translation": "深山红叶踏分行，鹿鸣声声入耳际。正当此时闻此声，秋日悲愁最动情。"
       },
       "vocabulary": [
         {
           "word": "奥山",
           "reading": "おくやま",
-          "meaning": "deep mountains",
-          "span": [
-            0,
-            2
-          ],
-          "chinese_cognate_note": "奥 (deep/interior) + 山 (mountain)."
+          "meaning": "深山",
+          "span": null,
+          "chinese_cognate_note": "奥(深处) + 山"
         },
         {
           "word": "に",
-          "reading": "ni",
-          "meaning": "in (location particle)",
-          "span": [
-            2,
-            3
-          ],
+          "reading": "に",
+          "meaning": "在（格助词，表示场所）",
+          "span": null,
           "chinese_cognate_note": null
         },
         {
           "word": "紅葉",
           "reading": "もみじ",
-          "meaning": "autumn colors/maple leaves",
-          "span": [
-            3,
-            5
-          ],
-          "chinese_cognate_note": "Same as Chinese 紅葉 (hóngyè)."
+          "meaning": "红叶",
+          "span": null,
+          "chinese_cognate_note": "红叶"
         },
         {
           "word": "踏み分け",
           "reading": "ふみわけ",
-          "meaning": "treading through/parting",
+          "meaning": "拨开...踏行（动词连用形）",
           "span": null,
-          "chinese_cognate_note": null
+          "chinese_cognate_note": "踏 + 分"
         },
         {
           "word": "鳴く",
           "reading": "なく",
-          "meaning": "to cry (animal)/to sing (bird)",
-          "span": [
-            9,
-            11
-          ],
-          "chinese_cognate_note": null
+          "meaning": "鸣叫（动词连体形，修饰下文的鹿）",
+          "span": null,
+          "chinese_cognate_note": "鸣"
         },
         {
           "word": "鹿",
           "reading": "しか",
-          "meaning": "deer",
-          "span": [
-            11,
-            12
-          ],
-          "chinese_cognate_note": "Same as Chinese 鹿 (lù)."
+          "meaning": "鹿",
+          "span": null,
+          "chinese_cognate_note": "鹿"
         },
         {
           "word": "の",
           "reading": "の",
-          "meaning": "subject marker (in a sub-clause)",
-          "span": [
-            12,
-            13
-          ],
+          "meaning": "的（格助词）",
+          "span": null,
           "chinese_cognate_note": null
         },
         {
           "word": "声",
           "reading": "こえ",
-          "meaning": "voice",
-          "span": [
-            13,
-            14
-          ],
-          "chinese_cognate_note": "Same as Chinese 聲 (shēng)."
+          "meaning": "声音",
+          "span": null,
+          "chinese_cognate_note": "声"
         },
         {
-          "word": "きく",
+          "word": "聞く",
           "reading": "きく",
-          "meaning": "to hear",
-          "span": [
-            14,
-            16
-          ],
-          "chinese_cognate_note": null
+          "meaning": "听（动词连体形，修饰下文的“时”）",
+          "span": null,
+          "chinese_cognate_note": "闻"
         },
         {
           "word": "時",
           "reading": "とき",
-          "meaning": "time/when",
-          "span": [
-            16,
-            17
-          ],
-          "chinese_cognate_note": "Same as Chinese 時 (shí)."
+          "meaning": "时候",
+          "span": null,
+          "chinese_cognate_note": "时"
         },
         {
           "word": "ぞ",
-          "reading": "zo",
-          "meaning": "[Emphatic Particle]",
-          "span": [
-            17,
-            18
-          ],
+          "reading": "ぞ",
+          "meaning": "正是...（系助词，表示强调）",
+          "span": null,
           "chinese_cognate_note": null
         },
         {
           "word": "秋",
           "reading": "あき",
-          "meaning": "autumn",
-          "span": [
-            18,
-            19
-          ],
-          "chinese_cognate_note": "Same as Chinese 秋 (qiū)."
+          "meaning": "秋天",
+          "span": null,
+          "chinese_cognate_note": "秋"
         },
         {
           "word": "は",
-          "reading": "wa",
-          "meaning": "topic marker",
-          "span": [
-            19,
-            20
-          ],
+          "reading": "は",
+          "meaning": "关于...（系助词，提示话题）",
+          "span": null,
           "chinese_cognate_note": null
         },
         {
           "word": "悲しき",
           "reading": "かなしき",
-          "meaning": "sad (Rentaikei form)",
-          "span": [
-            20,
-            23
-          ],
-          "chinese_cognate_note": null
+          "meaning": "悲伤的/动人的（形容词シク活用·连体形）",
+          "span": null,
+          "chinese_cognate_note": "悲"
         }
       ],
       "focus_highlight": [
         17,
-        18
+        23
+      ]
+    },
+    {
+      "type": "grammar_spotlight",
+      "content": "请注意句尾的「悲しき」。\n\n形容词「悲し」的正常结句形式（终止形）应该是「悲し」。\n但在本诗中，因为前面出现了强调助词「ぞ」（第17个字符），触发了**系结法则**，强制句尾变成了连体形「悲しき」。\n\n逻辑链条：\n1. 诗人想强调“闻鹿鸣之**时**”（時ぞ）。\n2. 「ぞ」不仅加强了语气（正是这个时候！），还向句尾发射信号。\n3. 句尾形容词接收信号，变形为连体形「悲しき」以完成闭环。\n\n这种结构比普通的“秋は悲し”（秋天很悲伤）情感要强烈得多，表达了“唯有此时，秋意最悲”的断定感。",
+      "evidence": "See the poem above."
+    },
+    {
+      "type": "poem_presentation",
+      "poem_id": "ogura100_14cdf0b746d56fbb",
+      "display": {
+        "text_with_furigana": "<ruby>夕<rt>ゆう</rt></ruby><ruby>去<rt>さ</rt></ruby>れば<ruby>門田<rt>かどた</rt></ruby>の<ruby>稲葉<rt>いなば</rt></ruby><ruby>音<rt>おと</rt></ruby><ruby>連<rt>づ</rt></ruby>れて<ruby>蘆<rt>あし</rt></ruby>の<ruby>丸屋<rt>まろや</rt></ruby>に<ruby>秋風<rt>あきかぜ</rt></ruby><span class='highlight'>ぞ</span><ruby>吹<rt>ふ</rt></ruby><span class='highlight'>く</span>",
+        "romaji": "yuu sareba kadota no inaba otozurete ashi no maroya ni akikaze zo fuku",
+        "translation": "夕阳西下时，门前稻叶响。芦苇圆屋里，秋风正造访。"
+      },
+      "vocabulary": [
+        {
+          "word": "夕",
+          "reading": "ゆう",
+          "meaning": "傍晚",
+          "span": null,
+          "chinese_cognate_note": "夕"
+        },
+        {
+          "word": "去れば",
+          "reading": "されば",
+          "meaning": "到来时/变成那样的话（动词已然形+ば）",
+          "span": null,
+          "chinese_cognate_note": null
+        },
+        {
+          "word": "門田",
+          "reading": "かどた",
+          "meaning": "门前的稻田",
+          "span": null,
+          "chinese_cognate_note": "门田"
+        },
+        {
+          "word": "の",
+          "reading": "の",
+          "meaning": "的（格助词）",
+          "span": null,
+          "chinese_cognate_note": null
+        },
+        {
+          "word": "稲葉",
+          "reading": "いなば",
+          "meaning": "稻叶",
+          "span": null,
+          "chinese_cognate_note": "稻叶"
+        },
+        {
+          "word": "音連れて",
+          "reading": "おとづれて",
+          "meaning": "发出声响/访问（动词连用形+て，双关语）",
+          "span": null,
+          "chinese_cognate_note": "音连"
+        },
+        {
+          "word": "蘆",
+          "reading": "あし",
+          "meaning": "芦苇",
+          "span": null,
+          "chinese_cognate_note": "芦"
+        },
+        {
+          "word": "の",
+          "reading": "の",
+          "meaning": "的（格助词）",
+          "span": null,
+          "chinese_cognate_note": null
+        },
+        {
+          "word": "丸屋",
+          "reading": "まろや",
+          "meaning": "简陋的小屋（草庵）",
+          "span": null,
+          "chinese_cognate_note": "丸屋"
+        },
+        {
+          "word": "に",
+          "reading": "に",
+          "meaning": "向/对（格助词）",
+          "span": null,
+          "chinese_cognate_note": null
+        },
+        {
+          "word": "秋風",
+          "reading": "あきかぜ",
+          "meaning": "秋风",
+          "span": null,
+          "chinese_cognate_note": "秋风"
+        },
+        {
+          "word": "ぞ",
+          "reading": "ぞ",
+          "meaning": "正是...（系助词，强调）",
+          "span": null,
+          "chinese_cognate_note": null
+        },
+        {
+          "word": "吹く",
+          "reading": "ふく",
+          "meaning": "吹（动词连体形）",
+          "span": null,
+          "chinese_cognate_note": "吹"
+        }
+      ],
+      "focus_highlight": [
+        22,
+        25
       ]
     },
     {
       "type": "contrast_example",
-      "content": "In Poem 2, notice the very last word: 悲しき (kanashiki). \n- Standard ending (Shuushikei): 悲し (kanashi) = 'is sad'.\n- Rentaikei ending: 悲しき (kanashiki).\n\nBecause the poet used **時ぞ (toki zo)**, the sentence is 'forced' to end in **悲しき**. This creates a logical link: 'It is at this *time* (ぞ) ... that autumn *is sad* (き)'. Without 'zo', the poem would simply end in 'kanashi'."
-    },
-    {
-      "type": "poem_presentation",
-      "poem_id": "ogura100_66ee6c827498ae8c",
-      "display": {
-        "text_with_furigana": "<ruby>風<rt>かぜ</rt></ruby>そよぐ<ruby>楢<rt>なら</rt></ruby>の<ruby>小川<rt>おがわ</rt></ruby>の<ruby>夕暮<rt>ゆうぐれ</rt></ruby>はみそぎ<span style='color: #ff4500; font-weight: bold;'>ぞ</span><ruby>夏<rt>なつ</rt></ruby>のしるしなりける",
-        "romaji": "kaze soyogu, nara no ogawa no, yuugure wa, misogi zo natsu no, shirushi nari keru",
-        "translation": "In the evening breeze rustling the leaves of the oaks by the stream, the purification rites are the only sign that summer remains."
-      },
-      "vocabulary": [
-        {
-          "word": "風",
-          "reading": "かぜ",
-          "meaning": "wind",
-          "span": [
-            0,
-            1
-          ],
-          "chinese_cognate_note": "Same as Chinese 風 (fēng)."
-        },
-        {
-          "word": "そよぐ",
-          "reading": "soyogu",
-          "meaning": "to rustle",
-          "span": [
-            1,
-            4
-          ],
-          "chinese_cognate_note": null
-        },
-        {
-          "word": "楢",
-          "reading": "なら",
-          "meaning": "oak tree",
-          "span": [
-            4,
-            5
-          ],
-          "chinese_cognate_note": null
-        },
-        {
-          "word": "の",
-          "reading": "の",
-          "meaning": "possessive particle (of)",
-          "span": [
-            5,
-            6
-          ],
-          "chinese_cognate_note": null
-        },
-        {
-          "word": "小川",
-          "reading": "おがわ",
-          "meaning": "small stream",
-          "span": [
-            6,
-            8
-          ],
-          "chinese_cognate_note": "小 (small) + 川 (river)."
-        },
-        {
-          "word": "の",
-          "reading": "の",
-          "meaning": "possessive particle (of)",
-          "span": [
-            8,
-            9
-          ],
-          "chinese_cognate_note": null
-        },
-        {
-          "word": "夕暮",
-          "reading": "ゆうぐれ",
-          "meaning": "evening twilight",
-          "span": [
-            9,
-            11
-          ],
-          "chinese_cognate_note": "夕 (evening) + 暮 (dusk)."
-        },
-        {
-          "word": "は",
-          "reading": "wa",
-          "meaning": "topic marker",
-          "span": [
-            11,
-            12
-          ],
-          "chinese_cognate_note": null
-        },
-        {
-          "word": "みそぎ",
-          "reading": "misogi",
-          "meaning": "purification ceremony",
-          "span": [
-            12,
-            15
-          ],
-          "chinese_cognate_note": null
-        },
-        {
-          "word": "ぞ",
-          "reading": "zo",
-          "meaning": "[Emphatic Particle]",
-          "span": [
-            15,
-            16
-          ],
-          "chinese_cognate_note": null
-        },
-        {
-          "word": "夏",
-          "reading": "なつ",
-          "meaning": "summer",
-          "span": [
-            16,
-            17
-          ],
-          "chinese_cognate_note": "Same as Chinese 夏 (xià)."
-        },
-        {
-          "word": "の",
-          "reading": "の",
-          "meaning": "possessive particle (of)",
-          "span": [
-            17,
-            18
-          ],
-          "chinese_cognate_note": null
-        },
-        {
-          "word": "しるし",
-          "reading": "しるし",
-          "meaning": "sign/evidence",
-          "span": [
-            18,
-            21
-          ],
-          "chinese_cognate_note": null
-        },
-        {
-          "word": "なり",
-          "reading": "nari",
-          "meaning": "is (copula)",
-          "span": [
-            21,
-            23
-          ],
-          "chinese_cognate_note": null
-        },
-        {
-          "word": "ける",
-          "reading": "ける",
-          "meaning": "past/realization (Rentaikei form)",
-          "span": [
-            23,
-            25
-          ],
-          "chinese_cognate_note": null
-        }
-      ],
-      "focus_highlight": [
-        15,
-        16
-      ]
+      "content": "在这首诗中，「秋風ぞ吹く」的「吹く」看起来和普通形式一样。\n\n这是因为「吹く」是四段活用动词，其**终止形**和**连体形**在形态上是相同的（都是 fuku）。\n\n虽然肉眼看不出区别，但在语法逻辑上，这里的「吹く」是**连体形**。如果把动词换成“有”（あり），就会变成「秋風ぞある」（而不是あり）。\n\n这里的「ぞ」强调了“正是秋风”在吹拂，赋予了风一种主角般的存在感。"
     },
     {
       "type": "comprehension_check",
-      "question": "In Poem 3, the sentence ends with 'keru' (ける) instead of the standard 'keri' (けり). Which word in the poem triggered this change?",
-      "answer": "The particle ぞ (zo) following 'misogi' (purification ceremony).",
-      "hint": "Look for the 'spotlight' particle that appears earlier in the same phrase."
+      "question": "观察下面的诗句（POEM 3），找出系助词「ぞ」及其对应的结句词（受系结法则影响的词）。",
+      "answer": "ぞ ... ける",
+      "hint": "寻找「ぞ」，然后看句子的最后一个词。注意那个词必须是连体形。助动词「けり」（表示感叹/过去）的连体形是「ける」。"
+    },
+    {
+      "type": "literary_insight",
+      "content": "在语法之外，让我们欣赏一下「ぞ」的文学力量。\n\n在第一首诗中，诗人面对满山红叶和鹿鸣，情感在最后爆发。「ぞ」不仅是语法标记，更像是情感的重音符号。如果去掉「ぞ」，句子变成「鹿の声聞く時は秋は悲し」（闻鹿鸣之时秋悲），就变成了一句平淡的陈述。\n\n加上「ぞ」并配合连体形结句「悲しき」，产生了一种余音绕梁的效果——“正是在这个时候啊，秋意是如此悲凉。”\n\n这种“系结法则”常被用来制造**咏叹**（Exclamation）的效果，类似于中国诗歌中“正是江南好风景”的“正是”，起到了强调与定调的作用。",
+      "literary_device": "係結 (Kakarimusubi) 的情感功能",
+      "chinese_parallel": "强调词（如：正是、唯有）"
+    },
+    {
+      "type": "literary_insight",
+      "content": "此外，第二首诗中出现了一个非常巧妙的技法：**掛詞 (Kakekotoba)**，即双关语。\n\n词语「おとづれて」有两层含义：\n1. **音連れて**：发出声响（风吹稻叶声）。\n2. **訪れて**：访问/造访（秋风像客人一样来到小屋）。\n\n诗人通过一个词同时表达了听觉上的“声响”和拟人化的“造访”，这种高密度的语义压缩是和歌的精髓。",
+      "literary_device": "掛詞 (双关语)",
+      "chinese_parallel": "双关语 (如：东边日出西边雨，道是无晴却有晴)"
     }
   ],
   "reference_card": {
-    "point": "Particle ぞ (zo)",
-    "one_liner": "An emphatic particle that highlights a word and requires the sentence to end in the Rentaikei (Attributive) form.",
-    "example": "秋風ぞ吹く (It is the autumn wind that blows.)",
+    "point": "系助词「ぞ」 (Particle Zo)",
+    "one_liner": "强调前词，并强制句尾变为连体形（系结法则）。",
+    "example": "秋風ぞ吹く (Akikaze zo fuku) - 正是秋风在吹。",
     "see_also": [
-      "particle_ka",
-      "particle_ya",
-      "lesson_conjugation_rentaikei"
+      "syntax_kakarimusubi",
+      "conjugation_rentaikei"
     ]
   },
   "forward_references": [
     {
-      "point": "particle_koso",
-      "note": "In a future lesson, we will see 'koso', which is even stronger than 'zo' and requires a different ending called the Izenkei."
+      "point": "系助词「なむ」",
+      "note": "我们将在后续课程学习另一个强调系助词「なむ」，它的语法规则与「ぞ」完全相同，但语气更为柔和。"
+    },
+    {
+      "point": "系助词「こそ」",
+      "note": "这是最强的强调助词，它要求句尾变为“已然形”，我们将在下一单元详细学习。"
     }
   ]
 }

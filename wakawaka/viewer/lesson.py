@@ -40,6 +40,7 @@ from wakawaka.schemas import (
     ContrastExampleStep,
     ComprehensionCheckStep,
     SummaryStep,
+    LiteraryInsightStep,
     TeachingStep,
 )
 
@@ -407,6 +408,51 @@ def get_vocab_css() -> str:
         opacity: 0.3;
     }
 
+    .step-literary {
+        background: linear-gradient(135deg, #FDF8F5 0%, #FAF0EA 100%);
+        border-left: 4px solid #C53D43;
+        position: relative;
+    }
+
+    .step-literary::before {
+        content: '🎋';
+        position: absolute;
+        top: 1em;
+        right: 1em;
+        font-size: 1.5em;
+        opacity: 0.4;
+    }
+
+    .literary-device-tag {
+        display: inline-block;
+        background: linear-gradient(135deg, #5B8A72 0%, #6B9A82 100%);
+        color: white;
+        padding: 0.25em 0.7em;
+        border-radius: 4px;
+        font-size: 0.85em;
+        font-weight: 500;
+        margin-bottom: 0.8em;
+    }
+
+    .chinese-parallel-box {
+        background: linear-gradient(135deg, #FFF8E8 0%, #FFF4DB 100%);
+        border: 1px solid #F0E6D0;
+        border-radius: 6px;
+        padding: 0.8em 1em;
+        margin-top: 1em;
+        font-family: 'Noto Serif JP', serif;
+        color: #8B6914;
+        font-size: 0.95em;
+    }
+
+    .chinese-parallel-label {
+        font-size: 0.8em;
+        color: #B8860B;
+        text-transform: uppercase;
+        letter-spacing: 0.05em;
+        margin-bottom: 0.3em;
+    }
+
     /* -- Ruby (Furigana) -- */
     ruby {
         ruby-align: center;
@@ -680,6 +726,29 @@ def render_summary(step: SummaryStep) -> str:
     return f'<div class="step-container step-summary"><strong>Summary:</strong><br>{content}</div>'
 
 
+def render_literary_insight(step: LiteraryInsightStep) -> str:
+    """Render a literary insight step."""
+    parts = ['<div class="step-container step-literary">']
+
+    # Literary device tag if present
+    if step.literary_device:
+        parts.append(f'<div class="literary-device-tag">{html.escape(step.literary_device)}</div>')
+
+    # Main content
+    content = markdown_to_html(step.content)
+    parts.append(f'<div>{content}</div>')
+
+    # Chinese poetry parallel if present
+    if step.chinese_parallel:
+        parts.append('<div class="chinese-parallel-box">')
+        parts.append('<div class="chinese-parallel-label">中国诗歌对照</div>')
+        parts.append(f'{html.escape(step.chinese_parallel)}')
+        parts.append('</div>')
+
+    parts.append('</div>')
+    return ''.join(parts)
+
+
 def render_teaching_step(
     step: TeachingStep,
     poem_metadata: Optional[dict] = None,
@@ -710,6 +779,8 @@ def render_teaching_step(
         return ""
     elif isinstance(step, SummaryStep):
         return render_summary(step)
+    elif isinstance(step, LiteraryInsightStep):
+        return render_literary_insight(step)
     else:
         return f"<p>Unknown step type: {type(step)}</p>"
 

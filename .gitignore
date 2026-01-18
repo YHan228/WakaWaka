@@ -5,12 +5,33 @@
 data/*
 # But include runtime files needed for deployment
 !data/classroom.db
+!data/classroom.stats.json
 !data/introduction.json
 !data/audio/
 !data/audio/*
 !data/literary/
-data/literary/.cache/
+!data/literary/poems_literary.parquet
+
+# All cache directories
+**/.cache/
+**/.cache_*/
+**/checkpoints/
 data/literary/.checkpoints/
+
+# Analysis outputs (regenerable)
+data/literary/*.json
+data/literary/*.png
+data/literary/*.md
+
+# Developer notes
+improvements.txt
+reminder.txt
+TODO.txt
+NOTES.txt
+
+# Large binary files
+*.zip
+unidic-waka*.zip
 # Python
 __pycache__/
 *.py[cod]

@@ -1,417 +1,434 @@
 {
   "lesson_id": "lesson_particle_ka",
-  "lesson_title": "The Logic of Inquiry: The Interrogative Particle か (ka)",
-  "lesson_summary": "This lesson introduces the particle か (ka), which functions as a logical 'question tag' to indicate doubt, inquiry, or rhetorical questions, often triggering a specific grammatical harmony in the sentence.",
+  "lesson_title": "疑问与反语：助词「か」",
+  "lesson_summary": "学习如何使用助词「か」提出疑问、表达不确定性（二选一）以及构建强烈的反问句。",
   "grammar_point": "particle_ka",
   "grammar_explanation": {
-    "concept": "The particle か (ka) acts as an interrogative marker. In a logical flow, it functions like a '?' operator or a boolean flag that shifts the sentence from a statement to a query. It can appear at the end of a sentence or in the middle to create interrogative words (like 'what' or 'why').",
-    "formation": "Noun/Verb/Adjective + か",
+    "concept": "助词「か」主要用于标记疑问。在古典和歌中，它不仅表示简单的提问，常用于表达“是A还是B？”的迷茫，或“难道是……吗？（其实不是）”的反问（反语）。",
+    "formation": "接在体言（名词）或用言（动词、形容词）的连体形/终止形之后。",
     "variations": [
-      "なに + か (nani ka - what?)",
-      "なと + か (nato ka - why/how?)"
+      "疑问：……か（是……吗？）",
+      "二选一：……か……か（是A呢？还是B呢？）",
+      "反问：……か（难道是……吗？不，不是）"
     ],
     "common_confusions": [
-      "In modern Japanese, 'ka' is almost always at the end. In classical poetry, it frequently appears in the middle, which forces the final verb into the Rentaikei (Attributive form) — a rule called Kakari-Musubi."
+      "「か」与「が」：在更古老的文本（如《万叶集》）中，格助词「が」（表示所有格或主格）有时会被写成清音的「か」。辨析方法：如果上下文明显是在提问或表达怀疑，则是本课的疑问助词；如果是表示“……的”或主语，则是「が」的变体。"
     ]
   },
   "teaching_sequence": [
     {
       "type": "introduction",
-      "content": "In previous units, we explored how particles define the roles of nouns and how auxiliaries color the timing of actions. Now, we enter the realm of **Interrogative Logic**. Just as a programmer uses a boolean flag to change the flow of a function, the particle **か (ka)** shifts a sentence from a statement of fact to a query. For a Chinese speaker, think of this as the equivalent of adding '吗' (ma) or using '何' (hé) to signal an inquiry."
+      "content": "到目前为止，我们学习了如何使用「の」建立连接，用「は」确立话题，用「なり」进行断定。这些都是陈述事实的工具。但在诗歌中，诗人往往面对的是不确定的景象或无法平息的情感。本课我们将引入**疑问助词「か」**，看诗人如何处理“不确定性”和“自问自答”。"
     },
     {
       "type": "poem_presentation",
-      "poem_id": "lapis_bf42fa36439264f2",
+      "poem_id": "lapis_56730f02ad2c649d",
       "display": {
-        "text_with_furigana": "<ruby>秋山<rt>あきやま</rt></ruby>のしたひかしたに<ruby>鳴<rt>な</rt></ruby>く<ruby>鳥<rt>とり</rt></ruby>の<ruby>声<rt>こゑ</rt></ruby>たにきかはなにか<ruby>嘆<rt>なけ</rt></ruby>かむ",
-        "romaji": "akiyama no, shita hikashita ni, naku tori no, koe tani ki ka wa, nani ka nakekamu",
-        "translation": "Hearing the voice of the bird singing in the valley of the autumn mountain, what is there to lament?"
+        "text_with_furigana": "<ruby>桜花<rt>さくらばな</rt></ruby><ruby>夢<rt>ゆめ</rt></ruby><ruby>か<rt>か</rt></ruby><ruby>現<rt>うつつ</rt></ruby><ruby>か<rt>か</rt></ruby><ruby>白雲<rt>しらくも</rt></ruby><ruby>の<rt>の</rt></ruby><ruby>絶<rt>た</rt></ruby><ruby>えて<rt>えて</rt></ruby><ruby>常<rt>つね</rt></ruby><ruby>なき<rt>なき</rt></ruby><ruby>峰<rt>みね</rt></ruby><ruby>の<rt>の</rt></ruby><ruby>春風<rt>はるかぜ</rt></ruby>",
+        "romaji": "sakurabana yume ka utsutsu ka shirakumo no taete tsunenaki mine no harukaze",
+        "translation": "那是樱花吗？是梦境还是现实？白云断断续续，无常变幻的峰顶吹过春风。"
       },
       "vocabulary": [
         {
-          "word": "あきやま",
-          "reading": "あきやま",
-          "meaning": "autumn mountain",
-          "span": [
-            0,
-            4
-          ],
-          "chinese_cognate_note": "Identical to 秋山 (qiū shān)"
+          "word": "桜花",
+          "reading": "さくらばな",
+          "meaning": "樱花",
+          "span": null,
+          "chinese_cognate_note": "樱花"
         },
         {
-          "word": "の",
-          "reading": "の",
-          "meaning": "possessive particle (of)",
-          "span": [
-            4,
-            5
-          ],
-          "chinese_cognate_note": null
-        },
-        {
-          "word": "した",
-          "reading": "した",
-          "meaning": "did (past action)",
-          "span": [
-            5,
-            7
-          ],
-          "chinese_cognate_note": null
-        },
-        {
-          "word": "ひかした",
-          "reading": "ひかした",
-          "meaning": "to wet / moisten",
-          "span": [
-            7,
-            11
-          ],
-          "chinese_cognate_note": null
-        },
-        {
-          "word": "に",
-          "reading": "に",
-          "meaning": "location marker (in/at)",
-          "span": [
-            11,
-            12
-          ],
-          "chinese_cognate_note": null
-        },
-        {
-          "word": "なく",
-          "reading": "なく",
-          "meaning": "to sing (of birds)",
-          "span": [
-            12,
-            14
-          ],
-          "chinese_cognate_note": "Similar to 鸣 (míng)"
-        },
-        {
-          "word": "とり",
-          "reading": "とり",
-          "meaning": "bird",
-          "span": [
-            14,
-            16
-          ],
-          "chinese_cognate_note": "Identical to 鸟 (niǎo)"
-        },
-        {
-          "word": "の",
-          "reading": "の",
-          "meaning": "possessive particle (of)",
-          "span": [
-            16,
-            17
-          ],
-          "chinese_cognate_note": null
-        },
-        {
-          "word": "こゑ",
-          "reading": "こゑ",
-          "meaning": "voice",
-          "span": [
-            17,
-            19
-          ],
-          "chinese_cognate_note": "Identical to 声 (shēng)"
-        },
-        {
-          "word": "たに",
-          "reading": "たに",
-          "meaning": "valley",
-          "span": [
-            19,
-            21
-          ],
-          "chinese_cognate_note": "Identical to 谷 (gǔ)"
-        },
-        {
-          "word": "き",
-          "reading": "き",
-          "meaning": "hear",
-          "span": [
-            21,
-            22
-          ],
-          "chinese_cognate_note": "Related to 听/闻"
+          "word": "夢",
+          "reading": "ゆめ",
+          "meaning": "梦",
+          "span": null,
+          "chinese_cognate_note": "梦"
         },
         {
           "word": "か",
           "reading": "か",
-          "meaning": "interrogative particle (question marker)",
-          "span": [
-            22,
-            23
-          ],
-          "chinese_cognate_note": null
+          "meaning": "（疑问助词）是……吗？",
+          "span": null,
+          "chinese_cognate_note": "可类比中文“吗”或“呵”"
         },
         {
-          "word": "は",
-          "reading": "は",
-          "meaning": "topic marker",
-          "span": [
-            23,
-            24
-          ],
-          "chinese_cognate_note": null
-        },
-        {
-          "word": "なに",
-          "reading": "なに",
-          "meaning": "what",
-          "span": [
-            24,
-            26
-          ],
-          "chinese_cognate_note": "Identical to 何 (hé)"
+          "word": "現",
+          "reading": "うつつ",
+          "meaning": "现实、清醒状态",
+          "span": null,
+          "chinese_cognate_note": "现（现实）"
         },
         {
           "word": "か",
           "reading": "か",
-          "meaning": "interrogative particle (question marker)",
-          "span": [
-            26,
-            27
-          ],
+          "meaning": "（疑问助词）是……吗？",
+          "span": null,
           "chinese_cognate_note": null
         },
         {
-          "word": "なけかむ",
-          "reading": "なけかむ",
-          "meaning": "will lament/cry",
-          "span": [
-            27,
-            31
-          ],
-          "chinese_cognate_note": null
+          "word": "白雲",
+          "reading": "しらくも",
+          "meaning": "白云",
+          "span": null,
+          "chinese_cognate_note": "白云"
+        },
+        {
+          "word": "の",
+          "reading": "の",
+          "meaning": "（格助词）主语标记",
+          "span": null,
+          "chinese_cognate_note": "之"
+        },
+        {
+          "word": "絶えて",
+          "reading": "たえて",
+          "meaning": "断绝、完全（后接否定）",
+          "span": null,
+          "chinese_cognate_note": "绝"
+        },
+        {
+          "word": "常なき",
+          "reading": "つねなき",
+          "meaning": "无常的、不固定的",
+          "span": null,
+          "chinese_cognate_note": "常（无常）"
+        },
+        {
+          "word": "峰",
+          "reading": "みね",
+          "meaning": "山峰",
+          "span": null,
+          "chinese_cognate_note": "峰"
+        },
+        {
+          "word": "の",
+          "reading": "の",
+          "meaning": "（格助词）所属",
+          "span": null,
+          "chinese_cognate_note": "之"
+        },
+        {
+          "word": "春風",
+          "reading": "はるかぜ",
+          "meaning": "春风",
+          "span": null,
+          "chinese_cognate_note": "春风"
         }
       ],
       "focus_highlight": [
-        25,
-        27
+        2,
+        6
       ]
     },
     {
       "type": "grammar_spotlight",
-      "content": "Look at the phrase **なにか (nani ka)**. In Chinese, '何' (hé) itself implies a question. In Japanese, the noun **なに (what)** is combined with the particle **か (ka)** to explicitly flag the sentence as an inquiry. \n\nNotice a logical 'side effect': when **か** appears in the middle of the sentence, the final verb **なけかむ** is forced into its **Rentaikei (Attributive form)**. You learned this form in Unit 3 as the 'Noun-Linker.' Here, it doesn't link to a noun; it links back to the particle **か** to close the logical loop of the question.",
+      "content": "在这首诗中，「A **か** B **か**」的结构非常清晰，相当于编程逻辑中的 `if (A) ... else if (B) ...` 或者中文的“是A呢？还是B呢？”。\n\n诗人看到远处的景象，无法分辨是樱花还是白云，因此产生了“梦境 vs 现实”的疑惑。这种用法并不寻求答案，而是为了渲染一种朦胧美。",
       "evidence": "See the poem above."
     },
     {
       "type": "poem_presentation",
-      "poem_id": "lapis_7b8b5088aef3ea36",
+      "poem_id": "lapis_7dc85b521d39c65e",
       "display": {
-        "text_with_furigana": "<ruby>闇<rt>やみ</rt></ruby>の<ruby>夜<rt>よ</rt></ruby>はくるしきものをいつしかとわかまつ<ruby>月<rt>つき</rt></ruby>もはやもてらぬか",
-        "romaji": "yami no yo wa, kurushiki mono o, itsushika to, wakamatsu tsuki mo, haya mo tera nu ka",
-        "translation": "The dark night is a painful thing; I wonder when the moon will finally shine through the young pines."
+        "text_with_furigana": "<ruby>君<rt>きみ</rt></ruby><ruby>ならで<rt>ならで</rt></ruby><ruby>誰<rt>だれ</rt></ruby><ruby>に<rt>に</rt></ruby><ruby>か<rt>か</rt></ruby><ruby>見<rt>み</rt></ruby><ruby>せ<rt>せ</rt></ruby><ruby>む<rt>む</rt></ruby><ruby>梅<rt>うめ</rt></ruby><ruby>の<rt>の</rt></ruby><ruby>花<rt>はな</rt></ruby><ruby>色<rt>いろ</rt></ruby><ruby>を<rt>を</rt></ruby><ruby>も<rt>も</rt></ruby><ruby>香<rt>か</rt></ruby><ruby>を<rt>を</rt></ruby><ruby>も<rt>も</rt></ruby><ruby>知<rt>し</rt></ruby><ruby>る<rt>る</rt></ruby><ruby>人<rt>ひと</rt></ruby><ruby>ぞ<rt>ぞ</rt></ruby><ruby>知<rt>し</rt></ruby><ruby>る<rt>る</rt></ruby>",
+        "romaji": "kimi narade dare ni ka misemu ume no hana iro o mo ka o mo shiru hito zo shiru",
+        "translation": "除了你，我还能给谁看呢？这梅花的色与香，只有懂的人才懂。"
       },
       "vocabulary": [
         {
-          "word": "やみ",
-          "reading": "やみ",
-          "meaning": "darkness",
-          "span": [
-            0,
-            2
-          ],
-          "chinese_cognate_note": "Related to 闇/暗 (àn)"
+          "word": "君",
+          "reading": "きみ",
+          "meaning": "你（尊称）",
+          "span": null,
+          "chinese_cognate_note": "君"
         },
         {
-          "word": "の",
-          "reading": "の",
-          "meaning": "possessive particle (of)",
-          "span": [
-            2,
-            3
-          ],
+          "word": "ならで",
+          "reading": "ならで",
+          "meaning": "若非、除了……之外",
+          "span": null,
           "chinese_cognate_note": null
         },
         {
-          "word": "よ",
-          "reading": "よ",
-          "meaning": "night",
-          "span": [
-            3,
-            4
-          ],
-          "chinese_cognate_note": "Identical to 夜 (yè)"
+          "word": "誰",
+          "reading": "だれ",
+          "meaning": "谁",
+          "span": null,
+          "chinese_cognate_note": "谁"
         },
         {
-          "word": "は",
-          "reading": "は",
-          "meaning": "topic marker",
-          "span": [
-            4,
-            5
-          ],
-          "chinese_cognate_note": null
-        },
-        {
-          "word": "くるしき",
-          "reading": "くるしき",
-          "meaning": "painful/distressing",
-          "span": [
-            5,
-            9
-          ],
-          "chinese_cognate_note": "Identical to 苦 (kǔ)"
-        },
-        {
-          "word": "もの",
-          "reading": "もの",
-          "meaning": "thing",
-          "span": [
-            9,
-            11
-          ],
-          "chinese_cognate_note": "Identical to 物 (wù)"
-        },
-        {
-          "word": "を",
-          "reading": "を",
-          "meaning": "object marker / conjunction",
-          "span": [
-            11,
-            12
-          ],
-          "chinese_cognate_note": null
-        },
-        {
-          "word": "いつしか",
-          "reading": "いつしか",
-          "meaning": "at what time / when",
-          "span": [
-            12,
-            16
-          ],
-          "chinese_cognate_note": null
-        },
-        {
-          "word": "と",
-          "reading": "と",
-          "meaning": "quotative particle",
-          "span": [
-            16,
-            17
-          ],
-          "chinese_cognate_note": null
-        },
-        {
-          "word": "わかまつ",
-          "reading": "わかまつ",
-          "meaning": "young pine tree",
-          "span": [
-            17,
-            21
-          ],
-          "chinese_cognate_note": "若松 (ruò sōng)"
-        },
-        {
-          "word": "つき",
-          "reading": "つき",
-          "meaning": "moon",
-          "span": [
-            21,
-            23
-          ],
-          "chinese_cognate_note": "Identical to 月 (yuè)"
-        },
-        {
-          "word": "も",
-          "reading": "も",
-          "meaning": "also/even",
-          "span": [
-            23,
-            24
-          ],
-          "chinese_cognate_note": null
-        },
-        {
-          "word": "はや",
-          "reading": "はや",
-          "meaning": "already/now",
-          "span": [
-            24,
-            26
-          ],
-          "chinese_cognate_note": "Identical to 早 (zǎo)"
-        },
-        {
-          "word": "も",
-          "reading": "も",
-          "meaning": "emphasis particle",
-          "span": [
-            26,
-            27
-          ],
-          "chinese_cognate_note": null
-        },
-        {
-          "word": "てら",
-          "reading": "てら",
-          "meaning": "to shine",
-          "span": [
-            27,
-            29
-          ],
-          "chinese_cognate_note": "Identical to 照 (zhào)"
-        },
-        {
-          "word": "ぬ",
-          "reading": "ぬ",
-          "meaning": "negative auxiliary (not)",
-          "span": [
-            29,
-            30
-          ],
+          "word": "に",
+          "reading": "に",
+          "meaning": "（格助词）向、对",
+          "span": null,
           "chinese_cognate_note": null
         },
         {
           "word": "か",
           "reading": "か",
-          "meaning": "interrogative particle (question marker)",
-          "span": [
-            30,
-            31
-          ],
+          "meaning": "（疑问助词）吗？",
+          "span": null,
           "chinese_cognate_note": null
+        },
+        {
+          "word": "見せ",
+          "reading": "みせ",
+          "meaning": "展示、给……看",
+          "span": null,
+          "chinese_cognate_note": "见（使动）"
+        },
+        {
+          "word": "む",
+          "reading": "む",
+          "meaning": "（助动词）想要、打算（意志）",
+          "span": null,
+          "chinese_cognate_note": null
+        },
+        {
+          "word": "梅",
+          "reading": "うめ",
+          "meaning": "梅花",
+          "span": null,
+          "chinese_cognate_note": "梅"
+        },
+        {
+          "word": "の",
+          "reading": "の",
+          "meaning": "（格助词）之",
+          "span": null,
+          "chinese_cognate_note": "之"
+        },
+        {
+          "word": "花",
+          "reading": "はな",
+          "meaning": "花",
+          "span": null,
+          "chinese_cognate_note": "花"
+        },
+        {
+          "word": "色",
+          "reading": "いろ",
+          "meaning": "颜色",
+          "span": null,
+          "chinese_cognate_note": "色"
+        },
+        {
+          "word": "を",
+          "reading": "を",
+          "meaning": "（格助词）宾语标记",
+          "span": null,
+          "chinese_cognate_note": null
+        },
+        {
+          "word": "も",
+          "reading": "も",
+          "meaning": "（系助词）也",
+          "span": null,
+          "chinese_cognate_note": null
+        },
+        {
+          "word": "香",
+          "reading": "か",
+          "meaning": "香气",
+          "span": null,
+          "chinese_cognate_note": "香（注意：读音也是ka，但这是名词）"
+        },
+        {
+          "word": "を",
+          "reading": "を",
+          "meaning": "（格助词）宾语标记",
+          "span": null,
+          "chinese_cognate_note": null
+        },
+        {
+          "word": "も",
+          "reading": "も",
+          "meaning": "（系助词）也",
+          "span": null,
+          "chinese_cognate_note": null
+        },
+        {
+          "word": "知る",
+          "reading": "しる",
+          "meaning": "懂得、赏识",
+          "span": null,
+          "chinese_cognate_note": "知"
+        },
+        {
+          "word": "人",
+          "reading": "ひと",
+          "meaning": "人",
+          "span": null,
+          "chinese_cognate_note": "人"
+        },
+        {
+          "word": "ぞ",
+          "reading": "ぞ",
+          "meaning": "（系助词）强调",
+          "span": null,
+          "chinese_cognate_note": null
+        },
+        {
+          "word": "知る",
+          "reading": "しる",
+          "meaning": "懂得",
+          "span": null,
+          "chinese_cognate_note": "知"
         }
       ],
       "focus_highlight": [
-        30,
-        31
+        6,
+        7
       ]
     },
     {
       "type": "contrast_example",
-      "content": "In the second poem, **か (ka)** appears at the very end: **てらぬか (tera-nu-ka)**. \n\n1. **てら** (Shine) \n2. **ぬ** (Not - Negative Auxiliary) \n3. **か** (?)\n\nLogical Translation: 'Does it not shine?' \n\nWhen **か** is at the end, it functions exactly like the Chinese sentence-final particle **吗 (ma)**. It turns the preceding statement into a direct question."
+      "content": "请注意这首诗中出现了两个读音为「ka」的词，但功能完全不同：\n\n1. **誰にか** (dare ni **ka**)：这是本课的**疑问助词**，表示“给谁**呢**？”。\n2. **香** (ka)：这是**名词**，意思是“香气”。\n\n**语法点解析：反语**\n「誰にか見せむ」（我打算给谁看呢？）\n结合前面的「君ならで」（除了你之外），这句话的逻辑含义是：“除了你，我**谁也不**给看。”\n\n在古典日语中，疑问词 + 助词「か」 + 推量/意志助动词（如「む」），常构成这种强烈的反问句式。"
+    },
+    {
+      "type": "poem_presentation",
+      "poem_id": "lapis_8989aa2cde50c93d",
+      "display": {
+        "text_with_furigana": "<ruby>吹<rt>ふ</rt></ruby><ruby>き<rt>き</rt></ruby><ruby>迷<rt>まよ</rt></ruby><ruby>ふ<rt>ふ</rt></ruby><ruby>野風<rt>のかぜ</rt></ruby><ruby>を<rt>を</rt></ruby><ruby>寒<rt>さむ</rt></ruby><ruby>み<rt>み</rt></ruby><ruby>秋萩<rt>あきはぎ</rt></ruby><ruby>の<rt>の</rt></ruby><ruby>移<rt>うつ</rt></ruby><ruby>り<rt>り</rt></ruby><ruby>も<rt>も</rt></ruby><ruby>行<rt>ゆ</rt></ruby><ruby>く<rt>く</rt></ruby><ruby>か<rt>か</rt></ruby><ruby>人<rt>ひと</rt></ruby><ruby>の<rt>の</rt></ruby><ruby>心<rt>こころ</rt></ruby><ruby>の<rt>の</rt></ruby>",
+        "romaji": "fuki mayofu nokaze wo samumi akihagi no utsuri mo yuku ka hito no kokoro no",
+        "translation": "野风乱吹寒意深，秋萩花色渐衰褪。随之逝去的吗？那人的心。"
+      },
+      "vocabulary": [
+        {
+          "word": "吹き迷ふ",
+          "reading": "ふきまよふ",
+          "meaning": "乱吹、吹得迷乱",
+          "span": null,
+          "chinese_cognate_note": "吹、迷"
+        },
+        {
+          "word": "野風",
+          "reading": "のかぜ",
+          "meaning": "原野上的风",
+          "span": null,
+          "chinese_cognate_note": "野风"
+        },
+        {
+          "word": "を",
+          "reading": "を",
+          "meaning": "（格助词）对象标记",
+          "span": null,
+          "chinese_cognate_note": null
+        },
+        {
+          "word": "寒み",
+          "reading": "さむみ",
+          "meaning": "因为寒冷（形容词词干+み，表示原因）",
+          "span": null,
+          "chinese_cognate_note": "寒"
+        },
+        {
+          "word": "秋萩",
+          "reading": "あきはぎ",
+          "meaning": "秋天的胡枝子（萩花）",
+          "span": null,
+          "chinese_cognate_note": "秋萩"
+        },
+        {
+          "word": "の",
+          "reading": "の",
+          "meaning": "（格助词）主语标记",
+          "span": null,
+          "chinese_cognate_note": "之"
+        },
+        {
+          "word": "移り",
+          "reading": "うつり",
+          "meaning": "变色、衰退、变心",
+          "span": null,
+          "chinese_cognate_note": "移"
+        },
+        {
+          "word": "も",
+          "reading": "も",
+          "meaning": "（系助词）强调",
+          "span": null,
+          "chinese_cognate_note": null
+        },
+        {
+          "word": "行く",
+          "reading": "ゆく",
+          "meaning": "去、进行下去",
+          "span": null,
+          "chinese_cognate_note": "行"
+        },
+        {
+          "word": "か",
+          "reading": "か",
+          "meaning": "（疑问助词）吗？",
+          "span": null,
+          "chinese_cognate_note": null
+        },
+        {
+          "word": "人",
+          "reading": "ひと",
+          "meaning": "人（指恋人）",
+          "span": null,
+          "chinese_cognate_note": "人"
+        },
+        {
+          "word": "の",
+          "reading": "の",
+          "meaning": "（格助词）所属",
+          "span": null,
+          "chinese_cognate_note": "之"
+        },
+        {
+          "word": "心",
+          "reading": "こころ",
+          "meaning": "心",
+          "span": null,
+          "chinese_cognate_note": "心"
+        },
+        {
+          "word": "の",
+          "reading": "の",
+          "meaning": "（格助词）主语/所属（句末倒装）",
+          "span": null,
+          "chinese_cognate_note": "之"
+        }
+      ],
+      "focus_highlight": [
+        21,
+        22
+      ]
+    },
+    {
+      "type": "literary_insight",
+      "content": "这首诗使用了两个高级技巧：\n\n1.  **倒置法（倒装）**：正常的语序应该是「人の心の移りも行くか」（人心的改变也是这样发生的吗？）。诗人将「人の心の」放到句末，制造了悬念和余韵。读到「移りも行くか」（正在消逝吗？）时，我们以为在说花，最后才发现是在说“心”。\n2.  **自然与情感的平行**：利用「移り」（Utsuri）的双重含义——既指花朵颜色的“褪色”，也指人心的“变迁/移情别恋”。",
+      "literary_device": "倒置法 (Inversion)",
+      "chinese_parallel": "类似于中国诗词中的“情景交融”与倒装句法（如“竹喧归浣女，莲动下渔舟”）。"
     },
     {
       "type": "comprehension_check",
-      "question": "In the phrase 'なとか (nato ka)' from the third poem, what is the logical function of 'ka'?",
-      "answer": "It marks 'nato' (why/how) as an interrogative, turning the phrase into a question.",
-      "hint": "Think about how 'nani' (what) became a question in the first poem."
+      "question": "在诗句「君ならで誰にか見せむ」中，助词「か」起到了什么作用？",
+      "answer": "表示反问（反语）。",
+      "hint": "结合前面的「君ならで」（若不是你/除了你），诗人是真的在问“给谁看”，还是在强调“没人可看”？"
     },
     {
       "type": "summary",
-      "content": "You have now mastered the **Interrogative Logic Gate**. Whether it is embedded in a word like 'nani-ka' (what) or placed at the end of a sentence like 'tera-nu-ka' (does it not shine?), the particle **か** is your primary tool for identifying questions in classical texts."
+      "content": "本课我们学习了助词「か」的核心功能：\n1. **疑问/不确定**：如「夢か現か」（是梦还是真？）。\n2. **反问**：如「誰にか見せむ」（还能给谁看呢？=只给你看）。\n\n在诗歌逻辑中，「か」往往不是为了获取信息，而是为了表达情感的动摇或信念的坚定。"
     }
   ],
   "reference_card": {
-    "point": "Particle か (ka)",
-    "one_liner": "The universal interrogative marker used to indicate questions, doubt, or rhetorical inquiry.",
-    "example": "なに か (nani ka) = What? / てらぬ か (teranu ka) = Does it not shine?",
+    "point": "助词 か (ka)",
+    "one_liner": "表示疑问、不确定（二选一）或反问（反语）。",
+    "example": "夢か現か (Yume ka utsutsu ka) - 是梦境还是现实？",
     "see_also": [
-      "lesson_conjugation_rentaikei",
-      "particle_wa"
+      "particle_ya"
     ]
   },
   "forward_references": [
     {
-      "point": "Kakari-Musubi (Linked Forms)",
-      "note": "We will soon see how 'ka' and other particles 'pull' the end of the sentence into the Rentaikei form in Unit 7.4."
+      "point": "系结法则 (Kakari-musubi)",
+      "note": "本课中「か」出现在句中时（如第三首诗），实际上触发了句末动词的变化规则。我们将在后续专门的系结法则单元深入探讨这一机制。"
+    },
+    {
+      "point": "助动词 む (mu)",
+      "note": "第二首诗中的「見せむ」包含助动词「む」，表示意志或推测。将在下一单元详细学习。"
     }
   ]
 }

@@ -151,6 +151,10 @@ class PoemAnnotation(BaseModel):
     author: Optional[str] = None
     collection: Optional[str] = None
 
+    # Kanji transcription (for hiragana-heavy poems)
+    # If original text is already kanji-heavy or no confident transcription, equals text
+    kanji_transcription: str = ""  # LLM provides kanji version for Chinese learners
+
     # Tokenization (Fugashi — source of truth)
     fugashi_tokens: list[FugashiToken]
 
