@@ -1,0 +1,853 @@
+{
+  "title": "WakaWaka 古典日语速成入门",
+  "subtitle": "利用汉字优势，7课通往和歌之美",
+  "description": "本课程专为零基础的汉语母语者设计。我们将利用您对汉字的既有认知，在7节课内快速掌握46个平假名、日语核心语法（SOV语序、助词）及发音规则（高低音调），为您进入《万叶集》与《百人一首》的古典世界打下坚实基础。",
+  "target_audience": "零基础汉语母语者",
+  "version": "2.0",
+  "lessons": [
+    {
+      "lesson_id": "crash_01",
+      "lesson_number": 1,
+      "title": "第一课：声音的形状与高低",
+      "subtitle": "あ行、か行、さ行与日语声调的秘密",
+      "estimated_minutes": 20,
+      "objectives": [
+        "掌握前15个平假名（あ、か、さ行）",
+        "理解日语“高低音调”（Pitch Accent）与汉语“声调”的区别",
+        "利用汉字草书起源记忆假名"
+      ],
+      "teaching_sequence": [
+        {
+          "type": "text",
+          "title": "汉字使用者的优势",
+          "content": "欢迎来到WakaWaka。作为汉语母语者，您已经掌握了日语中最难的部分——汉字。日语的字母（平假名）其实是汉字的草书变体。例如：'安'的草书演变成了'あ'。本课程将利用这种联系帮助您快速记忆。"
+        },
+        {
+          "type": "text",
+          "title": "关键概念：日语的高低音调 (Pitch Accent)",
+          "content": "这是汉语母语者最容易误解的地方。汉语是'声调语言'（四声），每个字都有固定的调。日语是'高低重音语言'。单词的意思由音节之间的高低变化决定，而不是单个字的声调。\n\n例如：\n1. 箸（筷子）读作 'はし' (Ha-shi)：高→低 (Ha↓shi)\n2. 橋（桥）读作 'はし' (Ha-shi)：低→高 (Ha↑shi)\n\n在阅读和歌时，这种高低起伏构成了诗歌的韵律美。我们在后续词汇中会用箭头标记高低。"
+        },
+        {
+          "type": "kana_chart",
+          "title": "元音：あ行 (A I U E O)",
+          "chart_type": "hiragana",
+          "rows": [
+            {
+              "kana": "あ",
+              "romaji": "a",
+              "mnemonic": "源自汉字'安'。发音同'啊'。",
+              "pitch": "-"
+            },
+            {
+              "kana": "い",
+              "romaji": "i",
+              "mnemonic": "源自汉字'以'。发音同'衣'。",
+              "pitch": "-"
+            },
+            {
+              "kana": "う",
+              "romaji": "u",
+              "mnemonic": "源自汉字'宇'。嘴唇不要太圆，比中文'乌'扁。",
+              "pitch": "-"
+            },
+            {
+              "kana": "え",
+              "romaji": "e",
+              "mnemonic": "源自汉字'衣'。发音介于'欸'和'叶'之间。",
+              "pitch": "-"
+            },
+            {
+              "kana": "お",
+              "romaji": "o",
+              "mnemonic": "源自汉字'於'。发音同'哦'。",
+              "pitch": "-"
+            }
+          ],
+          "highlight_row": 0
+        },
+        {
+          "type": "kana_chart",
+          "title": "辅音：か行 (K) 与 さ行 (S)",
+          "chart_type": "hiragana",
+          "rows": [
+            {
+              "kana": "か",
+              "romaji": "ka",
+              "mnemonic": "源自'加'。左边加力。",
+              "pitch": "-"
+            },
+            {
+              "kana": "き",
+              "romaji": "ki",
+              "mnemonic": "源自'幾'。像吉他的钥匙。",
+              "pitch": "-"
+            },
+            {
+              "kana": "く",
+              "romaji": "ku",
+              "mnemonic": "源自'久'。像鸟嘴开口。",
+              "pitch": "-"
+            },
+            {
+              "kana": "け",
+              "romaji": "ke",
+              "mnemonic": "源自'计'。左边像十，右边像弯钩。",
+              "pitch": "-"
+            },
+            {
+              "kana": "こ",
+              "romaji": "ko",
+              "mnemonic": "源自'己'。上下两笔。",
+              "pitch": "-"
+            },
+            {
+              "kana": "さ",
+              "romaji": "sa",
+              "mnemonic": "源自'左'。",
+              "pitch": "-"
+            },
+            {
+              "kana": "し",
+              "romaji": "shi",
+              "mnemonic": "源自'之'。像钓鱼钩。注意发音是Shi不是Si。",
+              "pitch": "-"
+            },
+            {
+              "kana": "す",
+              "romaji": "su",
+              "mnemonic": "源自'寸'。像一个圆圈打结。",
+              "pitch": "-"
+            },
+            {
+              "kana": "せ",
+              "romaji": "se",
+              "mnemonic": "源自'世'。",
+              "pitch": "-"
+            },
+            {
+              "kana": "そ",
+              "romaji": "so",
+              "mnemonic": "源自'曾'。",
+              "pitch": "-"
+            }
+          ],
+          "highlight_row": 0
+        },
+        {
+          "type": "vocab_intro",
+          "title": "基础词汇练习",
+          "items": [
+            {
+              "japanese": "愛",
+              "reading": "あい (a-i)",
+              "chinese": "爱",
+              "meaning": "爱",
+              "note": "高→低 (a↓i)"
+            },
+            {
+              "japanese": "上",
+              "reading": "うえ (u-e)",
+              "chinese": "上",
+              "meaning": "上面",
+              "note": "低→高 (u↑e)"
+            },
+            {
+              "japanese": "青",
+              "reading": "あお (a-o)",
+              "chinese": "青",
+              "meaning": "蓝色/青色",
+              "note": "低→高 (a↑o)"
+            },
+            {
+              "japanese": "酒",
+              "reading": "さけ (sa-ke)",
+              "chinese": "酒",
+              "meaning": "日本酒",
+              "note": "低→高 (sa↑ke)"
+            }
+          ]
+        },
+        {
+          "type": "practice",
+          "title": "练习：假名辨识",
+          "instruction": "请选出对应的平假名",
+          "exercise_type": "select",
+          "items": [
+            {
+              "question": "汉字'安'演变而来的假名是？",
+              "options": [
+                "あ",
+                "お",
+                "ぬ"
+              ],
+              "answer": "あ",
+              "explanation": "あ源自'安'的草书。"
+            },
+            {
+              "question": "汉字'之'演变而来的假名是？",
+              "options": [
+                "し",
+                "て",
+                "つ"
+              ],
+              "answer": "し",
+              "explanation": "し源自'之'的草书。"
+            }
+          ]
+        }
+      ],
+      "comprehension_check": {
+        "questions": [
+          {
+            "question": "日语中'箸'（筷子）和'橋'（桥）的发音区别在于？",
+            "question_type": "multiple_choice",
+            "options": [
+              "元音的长短",
+              "音节的高低（Pitch Accent）",
+              "声母的送气与否"
+            ],
+            "correct_answer": "音节的高低（Pitch Accent）",
+            "explanation": "日语通过高低音区分同音词，而非像汉语那样使用四声。"
+          }
+        ]
+      }
+    },
+    {
+      "lesson_id": "crash_02",
+      "lesson_number": 2,
+      "title": "第二课：汉字的两张面孔",
+      "subtitle": "た行、な行、は行与音读训读",
+      "estimated_minutes": 25,
+      "objectives": [
+        "掌握た、な、は行共15个平假名",
+        "理解日语SOV语序（主-宾-动）",
+        "深刻理解汉字的'音读'与'训读'"
+      ],
+      "teaching_sequence": [
+        {
+          "type": "kana_chart",
+          "title": "た行(T)、な行(N)、は行(H)",
+          "chart_type": "hiragana",
+          "rows": [
+            {
+              "kana": "た",
+              "romaji": "ta",
+              "mnemonic": "源自'太'。",
+              "pitch": "-"
+            },
+            {
+              "kana": "ち",
+              "romaji": "chi",
+              "mnemonic": "源自'知'。发音是Chi不是Ti。",
+              "pitch": "-"
+            },
+            {
+              "kana": "つ",
+              "romaji": "tsu",
+              "mnemonic": "源自'川'。发音是Tsu不是Tu。",
+              "pitch": "-"
+            },
+            {
+              "kana": "て",
+              "romaji": "te",
+              "mnemonic": "源自'天'。",
+              "pitch": "-"
+            },
+            {
+              "kana": "と",
+              "romaji": "to",
+              "mnemonic": "源自'止'。",
+              "pitch": "-"
+            },
+            {
+              "kana": "な",
+              "romaji": "na",
+              "mnemonic": "源自'奈'。",
+              "pitch": "-"
+            },
+            {
+              "kana": "に",
+              "romaji": "ni",
+              "mnemonic": "源自'仁'。",
+              "pitch": "-"
+            },
+            {
+              "kana": "ぬ",
+              "romaji": "nu",
+              "mnemonic": "源自'奴'。尾巴卷曲。",
+              "pitch": "-"
+            },
+            {
+              "kana": "ね",
+              "romaji": "ne",
+              "mnemonic": "源自'祢'。",
+              "pitch": "-"
+            },
+            {
+              "kana": "の",
+              "romaji": "no",
+              "mnemonic": "源自'乃'。",
+              "pitch": "-"
+            },
+            {
+              "kana": "は",
+              "romaji": "ha",
+              "mnemonic": "源自'波'。",
+              "pitch": "-"
+            },
+            {
+              "kana": "ひ",
+              "romaji": "hi",
+              "mnemonic": "源自'比'。",
+              "pitch": "-"
+            },
+            {
+              "kana": "ふ",
+              "romaji": "fu",
+              "mnemonic": "源自'不'。发音介于Fu和Hu之间。",
+              "pitch": "-"
+            },
+            {
+              "kana": "へ",
+              "romaji": "he",
+              "mnemonic": "源自'部'。",
+              "pitch": "-"
+            },
+            {
+              "kana": "ほ",
+              "romaji": "ho",
+              "mnemonic": "源自'保'。",
+              "pitch": "-"
+            }
+          ],
+          "highlight_row": 0
+        },
+        {
+          "type": "text",
+          "title": "核心概念：音读 vs 训读",
+          "content": "这是汉字使用者学习日语的最大优势，也是最大陷阱。日本引进汉字时，保留了两种读法：\n\n1. **音读 (On-yomi)**：模仿古汉语发音。听起来像中文。通常用于组合词（如：山水 san-sui）。\n2. **训读 (Kun-yomi)**：日本本土原本的读法，只是借用汉字来书写。听起来完全不像中文。通常用于单独的词（如：山 yama）。\n\n**和歌诀窍**：古典和歌中，为了保持韵律和本土情感，绝大多数情况使用**训读**。"
+        },
+        {
+          "type": "text",
+          "title": "语法核心：SOV 语序",
+          "content": "中文是 SVO (主语-动词-宾语)，如'我吃苹果'。\n日语是 SOV (主语-宾语-动词)，逻辑是'我苹果吃'。\n这意味着在阅读日语长句时，动词往往在最后出现，必须耐心读完。"
+        },
+        {
+          "type": "practice",
+          "title": "读音选择",
+          "instruction": "在和歌中，'山'通常读作什么？",
+          "exercise_type": "select",
+          "items": [
+            {
+              "question": "汉字'山'的训读是？",
+              "options": [
+                "san",
+                "yama",
+                "shan"
+              ],
+              "answer": "yama",
+              "explanation": "san是音读（模仿古汉语），yama是训读（日本本土读法）。和歌多使用训读。"
+            }
+          ]
+        }
+      ],
+      "comprehension_check": {
+        "questions": [
+          {
+            "question": "日语'我买书'的语序实际上是？",
+            "question_type": "multiple_choice",
+            "options": [
+              "我买书",
+              "书我买",
+              "我书买"
+            ],
+            "correct_answer": "我书买",
+            "explanation": "日语是SOV结构，动词在最后。"
+          }
+        ]
+      }
+    },
+    {
+      "lesson_id": "crash_03",
+      "lesson_number": 3,
+      "title": "第三课：连接万物的纽带",
+      "subtitle": "ま行、や行与助词“の”",
+      "estimated_minutes": 20,
+      "objectives": [
+        "掌握ま行与や行假名",
+        "掌握助词“の” (no) 的用法",
+        "能够阅读简单的名词短语"
+      ],
+      "teaching_sequence": [
+        {
+          "type": "kana_chart",
+          "title": "ま行 (M) 与 や行 (Y)",
+          "chart_type": "hiragana",
+          "rows": [
+            {
+              "kana": "ま",
+              "romaji": "ma",
+              "mnemonic": "源自'末'。",
+              "pitch": "-"
+            },
+            {
+              "kana": "み",
+              "romaji": "mi",
+              "mnemonic": "源自'美'。",
+              "pitch": "-"
+            },
+            {
+              "kana": "む",
+              "romaji": "mu",
+              "mnemonic": "源自'武'。",
+              "pitch": "-"
+            },
+            {
+              "kana": "め",
+              "romaji": "me",
+              "mnemonic": "源自'女'。比'ぬ'少个圈。",
+              "pitch": "-"
+            },
+            {
+              "kana": "も",
+              "romaji": "mo",
+              "mnemonic": "源自'毛'。",
+              "pitch": "-"
+            },
+            {
+              "kana": "や",
+              "romaji": "ya",
+              "mnemonic": "源自'也'。",
+              "pitch": "-"
+            },
+            {
+              "kana": "ゆ",
+              "romaji": "yu",
+              "mnemonic": "源自'由'。",
+              "pitch": "-"
+            },
+            {
+              "kana": "よ",
+              "romaji": "yo",
+              "mnemonic": "源自'与'。",
+              "pitch": "-"
+            }
+          ],
+          "highlight_row": 0
+        },
+        {
+          "type": "text",
+          "title": "万能助词：の (No)",
+          "content": "这是对中国人最友好的助词，基本对应中文的'的'或文言文的'之'。\n\n用法：名词 A + の + 名词 B\n意义：A 的 B\n\n例：\n秋 (aki) の 空 (sora) = 秋天的天空\n花 (hana) の 色 (iro) = 花的颜色"
+        },
+        {
+          "type": "vocab_intro",
+          "title": "自然词汇 (训读)",
+          "items": [
+            {
+              "japanese": "山",
+              "reading": "やま",
+              "chinese": "山",
+              "meaning": "山",
+              "note": "ya-ma (低-高)"
+            },
+            {
+              "japanese": "夢",
+              "reading": "ゆめ",
+              "chinese": "梦",
+              "meaning": "梦",
+              "note": "yu-me (低-高)"
+            },
+            {
+              "japanese": "雪",
+              "reading": "ゆき",
+              "chinese": "雪",
+              "meaning": "雪",
+              "note": "yu-ki (低-高)"
+            }
+          ]
+        },
+        {
+          "type": "practice",
+          "title": "助词填空",
+          "instruction": "填入正确的助词",
+          "exercise_type": "fill_blank",
+          "items": [
+            {
+              "sentence": "秋___山 (秋天的山)",
+              "blank": "の"
+            },
+            {
+              "sentence": "私___夢 (我的梦)",
+              "blank": "の"
+            }
+          ]
+        }
+      ],
+      "comprehension_check": {
+        "questions": [
+          {
+            "question": "汉字'女'演变出的假名是？",
+            "question_type": "multiple_choice",
+            "options": [
+              "め",
+              "ぬ",
+              "あ"
+            ],
+            "correct_answer": "め",
+            "explanation": "'め'源自'女'的草书。"
+          }
+        ]
+      }
+    },
+    {
+      "lesson_id": "crash_04",
+      "lesson_number": 4,
+      "title": "第四课：最后的拼图",
+      "subtitle": "ら行、わ行、ん与助词“は”",
+      "estimated_minutes": 20,
+      "objectives": [
+        "掌握ら、わ行及'ん'，完成46个假名学习",
+        "掌握助词'は' (wa) 的特殊读音与用法",
+        "区分相似假名（れ/わ/ね）"
+      ],
+      "teaching_sequence": [
+        {
+          "type": "kana_chart",
+          "title": "ら行(R)、わ行(W)与ん(N)",
+          "chart_type": "hiragana",
+          "rows": [
+            {
+              "kana": "ら",
+              "romaji": "ra",
+              "mnemonic": "源自'良'。",
+              "pitch": "-"
+            },
+            {
+              "kana": "り",
+              "romaji": "ri",
+              "mnemonic": "源自'利'。",
+              "pitch": "-"
+            },
+            {
+              "kana": "る",
+              "romaji": "ru",
+              "mnemonic": "源自'留'。尾巴有个圈。",
+              "pitch": "-"
+            },
+            {
+              "kana": "れ",
+              "romaji": "re",
+              "mnemonic": "源自'礼'。",
+              "pitch": "-"
+            },
+            {
+              "kana": "ろ",
+              "romaji": "ro",
+              "mnemonic": "源自'吕'。和'る'像，但没圈。",
+              "pitch": "-"
+            },
+            {
+              "kana": "わ",
+              "romaji": "wa",
+              "mnemonic": "源自'和'。",
+              "pitch": "-"
+            },
+            {
+              "kana": "を",
+              "romaji": "wo/o",
+              "mnemonic": "源自'远'。仅作助词，读o。",
+              "pitch": "-"
+            },
+            {
+              "kana": "ん",
+              "romaji": "n",
+              "mnemonic": "源自'无'。鼻音。",
+              "pitch": "-"
+            }
+          ],
+          "highlight_row": 0
+        },
+        {
+          "type": "text",
+          "title": "核心助词：は (Wa)",
+          "content": "在日语中，'助词'就像胶水。最重要的助词是 **は**。\n\n1. **特殊读音**：作为单词的一部分读 'ha'，但作为助词标记主题时读 **'wa'**。\n2. **功能**：它标记句子的'主题'（Topic）。可以理解为'关于...（的话）'。\n\n**句型：A は B です**\n(A wa B desu)\n意思：A 是 B。"
+        },
+        {
+          "type": "practice",
+          "title": "假名区分",
+          "instruction": "请区分相似的假名",
+          "exercise_type": "select",
+          "items": [
+            {
+              "question": "'re' 的发音对应哪个假名？",
+              "options": [
+                "わ",
+                "れ",
+                "ね"
+              ],
+              "answer": "れ (re)",
+              "explanation": "れ源自汉字'礼'，发音为re。"
+            },
+            {
+              "question": "助词'は'的读音是？",
+              "options": [
+                "ha",
+                "wa"
+              ],
+              "answer": "wa",
+              "explanation": "作为助词时读wa。"
+            }
+          ]
+        }
+      ],
+      "comprehension_check": {
+        "questions": [
+          {
+            "question": "平假名 'ん' (n) 的特点是？",
+            "question_type": "multiple_choice",
+            "options": [
+              "可以放在词首",
+              "它是唯一的辅音韵尾",
+              "发音像m"
+            ],
+            "correct_answer": "它是唯一的辅音韵尾",
+            "explanation": "日语中唯一不能单独发音、必须跟在别的音后面的鼻音。"
+          }
+        ]
+      }
+    },
+    {
+      "lesson_id": "crash_05",
+      "lesson_number": 5,
+      "title": "第五课：主角与背景",
+      "subtitle": "浊音、半浊音与助词“が”",
+      "estimated_minutes": 25,
+      "objectives": [
+        "掌握浊音（加点）和半浊音（加圈）规则",
+        "理解助词'が' (Ga) 与 'は' (Wa) 的区别",
+        "能够描述简单的自然现象"
+      ],
+      "teaching_sequence": [
+        {
+          "type": "text",
+          "title": "浊音：给假名加点浊气",
+          "content": "在平假名右上角加上两点（゛），清音就变成了浊音。加上小圆圈（゜），变成半浊音（仅限哈行）。\n\n规则：\n- K行 → G行 (か ka → が ga)\n- S行 → Z行 (さ sa → ざ za)\n- T行 → D行 (た ta → だ da)\n- H行 → B行 (は ha → ば ba)\n- H行 + 圈 → P行 (は ha → ぱ pa)"
+        },
+        {
+          "type": "text",
+          "title": "难点突破：は (Wa) vs が (Ga)",
+          "content": "这是日语最难的语法点之一，但对于初学者，请记住这个简单的规则：\n\n**は (Wa) - 聚光灯在后面**\n'A は B' 强调的是 B。A只是话题。\n例：我是**学生** (Watashi wa **gakusei**)。\n\n**が (Ga) - 聚光灯在前面**\n'A が B' 强调的是 A。A是主语，动作的执行者。\n例：**雨**下了 (Ame ga furu)。\n\n在和歌中，'が' 常用来描述眼前的景象或强调主语。"
+        },
+        {
+          "type": "vocab_intro",
+          "title": "浊音词汇",
+          "items": [
+            {
+              "japanese": "風",
+              "reading": "かぜ",
+              "chinese": "风",
+              "meaning": "风",
+              "note": "ka↓ze (高→低)"
+            },
+            {
+              "japanese": "水",
+              "reading": "みず",
+              "chinese": "水",
+              "meaning": "水",
+              "note": "mi↓zu (高→低)"
+            }
+          ]
+        },
+        {
+          "type": "practice",
+          "title": "助词选择",
+          "instruction": "描述自然现象'雨在下'，更自然的助词是？",
+          "exercise_type": "select",
+          "items": [
+            {
+              "question": "雨___降る",
+              "options": [
+                "は",
+                "が"
+              ],
+              "answer": "が",
+              "explanation": "描述客观现象通常用が标记主语。"
+            }
+          ]
+        }
+      ],
+      "comprehension_check": {
+        "questions": [
+          {
+            "question": "假名 'か' (ka) 加上浊点后变成？",
+            "question_type": "multiple_choice",
+            "options": [
+              "ga",
+              "za",
+              "da"
+            ],
+            "correct_answer": "ga",
+            "explanation": "K行变G行。"
+          }
+        ]
+      }
+    },
+    {
+      "lesson_id": "crash_06",
+      "lesson_number": 6,
+      "title": "第六课：动作与时空",
+      "subtitle": "助词“を”、“に”与动词基础",
+      "estimated_minutes": 25,
+      "objectives": [
+        "掌握宾语助词'を (wo)'",
+        "掌握方向/位置助词'に (ni)'",
+        "了解动词的基本形态与历史假名遣"
+      ],
+      "teaching_sequence": [
+        {
+          "type": "text",
+          "title": "核心助词：を (wo) 与 に (ni)",
+          "content": "**1. を (wo) - 动作的对象**\n虽然读音和 'お(o)' 一样，但只用来标记宾语。\n结构：对象 + を + 动词\n例：花 を 見る (Hana wo miru) = 看花\n\n**2. に (ni) - 动作的目的地/存在点**\n相当于中文的'在'、'往'。\n例：京 に 行く (Kyo ni iku) = 去京都\n例：山 に ある (Yama ni aru) = 在山上"
+        },
+        {
+          "type": "text",
+          "title": "动词与历史假名遣",
+          "content": "日语动词通常以 u 段音结尾（如 u, ku, su, ru）。\n\n**重要：历史假名遣**\n古典和歌的拼写与现代发音不同。最常见的规则：\n词中的 **は、ひ、ふ、へ、ほ** 往往读作 **wa, i, u, e, o**。\n例如：思ふ (Omo-fu) -> 读作 Omou。"
+        },
+        {
+          "type": "example_sentence",
+          "sentence": "月を見る",
+          "reading": "つき を みる",
+          "translation": "赏月",
+          "breakdown": [
+            {
+              "part": "月",
+              "role": "名词",
+              "meaning": "月亮 (tsu↓ki 高→低)"
+            },
+            {
+              "part": "を",
+              "role": "助词",
+              "meaning": "宾语标记"
+            },
+            {
+              "part": "見る",
+              "role": "动词",
+              "meaning": "看 (mi↑ru 低→高)"
+            }
+          ]
+        },
+        {
+          "type": "practice",
+          "title": "古典发音辨析",
+          "instruction": "单词'思ふ' (Omo-fu) 在和歌中应读作？",
+          "exercise_type": "select",
+          "items": [
+            {
+              "question": "思ふ",
+              "options": [
+                "Omofu",
+                "Omou"
+              ],
+              "answer": "Omou",
+              "explanation": "词尾的fu读作u。"
+            }
+          ]
+        }
+      ],
+      "comprehension_check": {
+        "questions": [
+          {
+            "question": "想要表达'去京都'，应该说？",
+            "question_type": "multiple_choice",
+            "options": [
+              "京に行く",
+              "京を行く",
+              "京の行く"
+            ],
+            "correct_answer": "京に行く",
+            "explanation": "表示移动的目的地用'に'。"
+          }
+        ]
+      }
+    },
+    {
+      "lesson_id": "crash_07",
+      "lesson_number": 7,
+      "title": "第七课：初见和歌",
+      "subtitle": "综合实战：解读小野小町",
+      "estimated_minutes": 30,
+      "objectives": [
+        "综合运用平假名、助词和语法知识",
+        "解读小野小町的《花之色》",
+        "体验古典日语的感叹助动词'keri'"
+      ],
+      "teaching_sequence": [
+        {
+          "type": "text",
+          "title": "实战目标：古今和歌集 No.113",
+          "content": "这是平安时代绝世美女小野小町最著名的诗作。它感叹了容颜易老和时光飞逝。我们将运用学过的知识逐句拆解。"
+        },
+        {
+          "type": "mini_poem",
+          "poem_text": "花の色は\nうつりにけりな\nいたづらに\nわが身世にふる\nながめせしまに",
+          "reading": "Hana no iro wa / Utsurini keri na / Itazura ni / Waga mi yo ni furu / Nagame seshi ma ni",
+          "translation": "花色渐褪尽，红颜亦凋零。空对长雨思往事，容颜虚度老去。",
+          "analysis": "1. **花 (Hana) の 色 (iro) は**:\n   - の: 连接词，'花的颜色'。\n   - は: 主题标记。全诗的主题是'花色'（隐喻容颜）。\n\n2. **うつりにけりな (Utsurini keri na)**:\n   - Utsuri (移/变) + ni (完成) + **keri (咏叹:啊!/了)** + na (感叹)\n   - 意思：啊，已经衰败褪色了啊！\n   - *注意：Keri 是古典日语标志性的词，表示对过去的咏叹。*\n\n3. **いたづらに (Itazura ni)**:\n   - Itazura (徒劳/空虚) + ni (副词标记): 徒劳地、空虚地。\n\n4. **世 (yo) に ふる (furu)**:\n   - に: 在...之中。\n   - ふる: 双关语。既是'降る(下雨)'也是'経る(经历岁月)'。"
+        },
+        {
+          "type": "text",
+          "title": "深度赏析",
+          "content": "这首诗完美展示了汉字使用者的优势：看到'花'、'色'、'身'、'世'，你已经能猜出大意。而假名和助词（の、は、に）则构建了诗歌的骨架和情感流动的方向。"
+        },
+        {
+          "type": "practice",
+          "title": "和歌填空",
+          "instruction": "根据诗文内容填空。",
+          "exercise_type": "fill_blank",
+          "items": [
+            {
+              "sentence": "第一句'花の色は'使用了助词___来标记话题。",
+              "blank": "は"
+            },
+            {
+              "sentence": "诗中的'ふる'是一个双关语，既指___也指经历岁月。",
+              "blank": "下雨"
+            }
+          ]
+        },
+        {
+          "type": "summary",
+          "title": "课程总结与下一步",
+          "key_points": [
+            "您已经完成了零基础入门！",
+            "您掌握了46个平假名、核心助词(の/は/が/を/に)",
+            "您已经成功解读了第一首古典和歌"
+          ],
+          "preview_next": "这只是开始。在WakaWaka的主课程中，我们将系统学习古典语法（文语）、更多著名和歌集（万叶集、百人一首）以及深层的日本美学。请点击'开始主课程'继续您的旅程。"
+        }
+      ],
+      "comprehension_check": {
+        "questions": [
+          {
+            "question": "小野小町这首诗的主题是什么？",
+            "question_type": "multiple_choice",
+            "options": [
+              "赞美春天的到来",
+              "感叹花色褪去与容颜衰老",
+              "描述一场暴风雨"
+            ],
+            "correct_answer": "感叹花色褪去与容颜衰老",
+            "explanation": "通过'花之色'的'移变'(褪色)，隐喻作者自身容颜随时间流逝而衰老。"
+          }
+        ]
+      }
+    }
+  ],
+  "generated_at": "2026-01-18T18:48:04.119086",
+  "synthesis_info": {
+    "num_trials": 10,
+    "model": "gemini-3-pro-preview"
+  }
+}

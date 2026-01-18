@@ -7,6 +7,7 @@ data/*
 !data/classroom.db
 !data/classroom.stats.json
 !data/introduction.json
+!data/crash_course.json
 !data/audio/
 !data/audio/*
 !data/literary/
