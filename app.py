@@ -64,7 +64,7 @@ def inject_global_css():
        GLOBAL APP STYLING - Ink & Paper Theme
        ============================================ */
 
-    @import url('https://fonts.googleapis.com/css2?family=Noto+Serif+JP:wght@400;500;600;700&family=Inter:wght@400;500;600&display=swap');
+    @import url('https://fonts.googleapis.com/css2?family=Noto+Serif+JP:wght@400;500;600;700&family=Noto+Serif+SC:wght@400;500;600;700&family=Inter:wght@400;500;600&display=swap');
 
     /* -- Root Variables -- */
     :root {
@@ -128,11 +128,16 @@ def inject_global_css():
 
     /* -- Main Content Typography -- */
     .stMarkdown {
-        font-family: 'Inter', -apple-system, BlinkMacSystemFont, sans-serif;
+        font-family: 'Inter', 'Noto Serif SC', -apple-system, BlinkMacSystemFont, sans-serif;
+    }
+
+    /* Ensure all Chinese text uses proper fonts */
+    .stMarkdown p, .stMarkdown li, .stMarkdown blockquote {
+        font-family: 'Noto Serif SC', 'Inter', -apple-system, sans-serif;
     }
 
     .stMarkdown h1 {
-        font-family: 'Noto Serif JP', serif;
+        font-family: 'Noto Serif SC', 'Noto Serif JP', serif;
         color: var(--sumi-ink);
         font-weight: 700;
         border-bottom: 2px solid var(--vermillion);
@@ -141,7 +146,7 @@ def inject_global_css():
     }
 
     .stMarkdown h2, .stMarkdown h3 {
-        font-family: 'Noto Serif JP', serif;
+        font-family: 'Noto Serif SC', 'Noto Serif JP', serif;
         color: var(--sumi-ink);
     }
 
@@ -292,7 +297,7 @@ def inject_global_css():
     }
 
     .poem-anthology-text {
-        font-family: 'Noto Serif JP', serif;
+        font-family: 'Noto Serif JP', 'Noto Serif SC', serif;
         font-size: 1.1em;
         color: var(--sumi-ink);
         margin-bottom: 0.5em;
