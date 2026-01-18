@@ -362,7 +362,7 @@ def render_sidebar():
     """Render the sidebar with curriculum tree and progress."""
     with st.sidebar:
         st.markdown("# 📜 WakaWaka")
-        st.caption("Classical Japanese Poetry")
+        st.caption("古典和歌学习平台")
 
         if not st.session_state.loader:
             st.error("Database not found")
@@ -372,7 +372,7 @@ def render_sidebar():
 
         # Progress summary
         stats = nav.get_progress_summary()
-        st.markdown(f"**Progress:** {stats['completed']}/{stats['total_lessons']}")
+        st.markdown(f"**学习进度：** {stats['completed']}/{stats['total_lessons']}")
         st.progress(stats['completion_percent'] / 100)
 
         st.divider()
@@ -380,12 +380,12 @@ def render_sidebar():
         # Navigation buttons for cover and intro
         col1, col2 = st.columns(2)
         with col1:
-            if st.button("🏠 Home", use_container_width=True,
+            if st.button("🏠 首页", use_container_width=True,
                         type="primary" if st.session_state.view_mode == "cover" else "secondary"):
                 st.session_state.view_mode = "cover"
                 st.rerun()
         with col2:
-            if st.button("📖 Intro", use_container_width=True,
+            if st.button("📖 介绍", use_container_width=True,
                         type="primary" if st.session_state.view_mode == "introduction" else "secondary"):
                 st.session_state.view_mode = "introduction"
                 st.rerun()
@@ -396,12 +396,12 @@ def render_sidebar():
         mode_map = {"lesson": 0, "reference": 1, "poems": 2}
         current_mode = st.session_state.view_mode if st.session_state.view_mode in mode_map else "lesson"
         view_mode = st.radio(
-            "Browse",
-            ["📖 Lessons", "📚 Reference", "🎋 Poems"],
+            "浏览",
+            ["📖 课程", "📚 文法", "🎋 诗歌"],
             index=mode_map.get(current_mode, 0),
             horizontal=False,
         )
-        reverse_map = {"📖 Lessons": "lesson", "📚 Reference": "reference", "🎋 Poems": "poems"}
+        reverse_map = {"📖 课程": "lesson", "📚 文法": "reference", "🎋 诗歌": "poems"}
         new_mode = reverse_map.get(view_mode, "lesson")
 
         # Track radio selection to detect actual user clicks
@@ -480,8 +480,8 @@ def select_lesson(lesson_id: str):
 def render_lesson_view():
     """Render the main lesson content."""
     if not st.session_state.loader:
-        st.error("Database not found. Please run the build pipeline first.")
-        with st.expander("Build Instructions"):
+        st.error("数据库未找到。请先运行构建流程。")
+        with st.expander("构建说明"):
             st.code("""
 python scripts/01_ingest_corpus.py --source all
 python scripts/02_annotate_corpus.py --input-dir data/raw --output data/annotated/poems.parquet
@@ -493,8 +493,8 @@ python scripts/05_compile_classroom.py --output data/classroom.db
 
     lesson_id = st.session_state.current_lesson_id
     if not lesson_id:
-        st.markdown("## Welcome to WakaWaka")
-        st.markdown("Select a lesson from the sidebar to begin your journey into classical Japanese poetry.")
+        st.markdown("## 欢迎来到 WakaWaka")
+        st.markdown("从左侧边栏选择一课，开始你的古典日本诗歌学习之旅。")
         return
 
     nav = st.session_state.navigator
@@ -503,7 +503,7 @@ python scripts/05_compile_classroom.py --output data/classroom.db
     # Load lesson content
     lesson = loader.get_lesson_content(lesson_id)
     if not lesson:
-        st.error(f"Lesson not found: {lesson_id}")
+        st.error(f"课程未找到：{lesson_id}")
         return
 
     # Navigation bar
@@ -565,7 +565,7 @@ python scripts/05_compile_classroom.py --output data/classroom.db
 
     # Reference card
     st.divider()
-    st.markdown("### 📋 Reference Card")
+    st.markdown("### 📋 参考卡")
     st.markdown(get_reference_css(), unsafe_allow_html=True)
     st.markdown(render_reference_card_from_lesson(lesson), unsafe_allow_html=True)
 
@@ -585,16 +585,16 @@ def render_navigation_bar(lesson_id: str):
 
     with col1:
         if prev_id and nav.is_lesson_available(prev_id):
-            if st.button("← Previous", use_container_width=True):
+            if st.button("← 上一课", use_container_width=True):
                 select_lesson(prev_id)
 
     with col2:
-        st.markdown(f"<p style='text-align:center;color:#666;margin-top:0.5em;'>Lesson {pos} of {total}</p>",
+        st.markdown(f"<p style='text-align:center;color:#666;margin-top:0.5em;'>第 {pos} 课 / 共 {total} 课</p>",
                     unsafe_allow_html=True)
 
     with col3:
         if next_id and nav.is_lesson_available(next_id):
-            if st.button("Next →", use_container_width=True):
+            if st.button("下一课 →", use_container_width=True):
                 select_lesson(next_id)
 
 
@@ -605,7 +605,7 @@ def render_quiz_section(lesson):
         return
 
     st.divider()
-    st.markdown("### ✍️ Comprehension Check")
+    st.markdown("### ✍️ 理解检测")
 
     for quiz in quizzes:
         quiz_key = f"{lesson.lesson_id}_{quiz.index}"
@@ -613,7 +613,7 @@ def render_quiz_section(lesson):
         st.markdown(f"""
         <div class="quiz-section">
             <div class="quiz-header">
-                <strong>Question {quiz.index + 1}</strong>
+                <strong>问题 {quiz.index + 1}</strong>
             </div>
             <div class="quiz-question">{quiz.question}</div>
         </div>
@@ -621,16 +621,16 @@ def render_quiz_section(lesson):
 
         # Hint expander
         if quiz.hint:
-            with st.expander("💡 Show hint"):
+            with st.expander("💡 显示提示"):
                 st.markdown(f"""
                 <div class="quiz-hint">{quiz.hint}</div>
                 """, unsafe_allow_html=True)
 
         # User answer input
         user_answer = st.text_area(
-            "Your answer:",
+            "你的答案：",
             key=f"answer_{quiz_key}",
-            placeholder="Write your understanding before revealing the answer...",
+            placeholder="在揭示答案前写下你的理解...",
             height=100,
             label_visibility="collapsed",
         )
@@ -645,20 +645,20 @@ def render_quiz_section(lesson):
         col1, col2 = st.columns([1, 3])
         with col1:
             if not revealed:
-                if st.button("Reveal Answer", key=f"reveal_{quiz_key}", type="primary"):
+                if st.button("揭示答案", key=f"reveal_{quiz_key}", type="primary"):
                     st.session_state.quiz_revealed.add(quiz.index)
                     st.rerun()
 
         if revealed:
             st.markdown(f"""
             <div class="quiz-answer-box">
-                <div class="quiz-answer-label">✓ Model Answer</div>
+                <div class="quiz-answer-label">✓ 参考答案</div>
                 <div class="quiz-answer-content">{quiz.answer}</div>
             </div>
             """, unsafe_allow_html=True)
 
             # Self-assessment
-            st.markdown("**How did you do?**")
+            st.markdown("**你掌握了吗？**")
             assess_col1, assess_col2, assess_col3 = st.columns(3)
 
             # Track assessment in session state
@@ -667,25 +667,25 @@ def render_quiz_section(lesson):
                 st.session_state[assessment_key] = None
 
             with assess_col1:
-                if st.button("😊 Got it!", key=f"assess_good_{quiz_key}", use_container_width=True):
+                if st.button("😊 完全掌握", key=f"assess_good_{quiz_key}", use_container_width=True):
                     st.session_state[assessment_key] = "good"
                     st.rerun()
             with assess_col2:
-                if st.button("🤔 Partially", key=f"assess_partial_{quiz_key}", use_container_width=True):
+                if st.button("🤔 部分理解", key=f"assess_partial_{quiz_key}", use_container_width=True):
                     st.session_state[assessment_key] = "partial"
                     st.rerun()
             with assess_col3:
-                if st.button("😅 Need review", key=f"assess_review_{quiz_key}", use_container_width=True):
+                if st.button("😅 需要复习", key=f"assess_review_{quiz_key}", use_container_width=True):
                     st.session_state[assessment_key] = "review"
                     st.rerun()
 
             # Show feedback based on assessment
             if st.session_state[assessment_key] == "good":
-                st.success("Great job! You've mastered this concept.")
+                st.success("太棒了！你已掌握这个概念。")
             elif st.session_state[assessment_key] == "partial":
-                st.info("Good progress! Consider reviewing this section again later.")
+                st.info("进步不错！建议稍后再复习一下这部分内容。")
             elif st.session_state[assessment_key] == "review":
-                st.warning("No worries! Take your time and revisit this concept.")
+                st.warning("没关系！慢慢来，再仔细看看这个概念。")
 
         st.markdown("<br>", unsafe_allow_html=True)
 
@@ -699,16 +699,16 @@ def render_completion_section(lesson_id: str):
     st.divider()
 
     if lesson_progress.status == LessonStatus.COMPLETED:
-        st.success("✓ Lesson completed!")
+        st.success("✓ 课程已完成！")
         col1, col2 = st.columns([3, 1])
         with col2:
-            if st.button("Reset progress"):
+            if st.button("重置进度"):
                 progress.reset_lesson(lesson_id)
                 st.rerun()
     else:
         col1, col2, col3 = st.columns([1, 2, 1])
         with col2:
-            if st.button("✓ Mark Lesson Complete", type="primary", use_container_width=True):
+            if st.button("✓ 标记为已完成", type="primary", use_container_width=True):
                 next_id = nav.complete_lesson(lesson_id)
                 if next_id:
                     st.session_state.current_lesson_id = next_id
@@ -722,25 +722,25 @@ def render_completion_section(lesson_id: str):
 def render_reference_view():
     """Render grammar reference mode."""
     if not st.session_state.loader:
-        st.error("Database not found.")
+        st.error("数据库未找到。")
         return
 
-    st.markdown("# 📚 Grammar Reference")
+    st.markdown("# 📚 文法参考")
 
     loader = st.session_state.loader
     progress = st.session_state.progress
 
     # Search
-    search = st.text_input("🔍 Search grammar points", placeholder="e.g., particle, verb, auxiliary")
+    search = st.text_input("🔍 搜索文法点", placeholder="例如：助词、动词、助动词")
 
     grammar_points = loader.get_all_grammar_points()
     if search:
         grammar_points = filter_grammar_points(grammar_points, search)
 
-    st.caption(f"{len(grammar_points)} grammar points")
+    st.caption(f"共 {len(grammar_points)} 个文法点")
 
     # Tabs
-    tab1, tab2 = st.tabs(["All Grammar", "My Reference Cards"])
+    tab1, tab2 = st.tabs(["全部文法", "我的参考卡"])
 
     with tab1:
         st.markdown(get_reference_css(), unsafe_allow_html=True)
@@ -749,7 +749,7 @@ def render_reference_view():
     with tab2:
         completed_ids = progress.get_completed_lesson_ids()
         if not completed_ids:
-            st.info("Complete lessons to build your reference card collection.")
+            st.info("完成课程以收集参考卡。")
         else:
             st.markdown(get_reference_css(), unsafe_allow_html=True)
             for lid in sorted(completed_ids):
@@ -765,10 +765,10 @@ def render_reference_view():
 def render_poems_view():
     """Render poem anthology view."""
     if not st.session_state.loader:
-        st.error("Database not found.")
+        st.error("数据库未找到。")
         return
 
-    st.markdown("# 🎋 Poem Anthology")
+    st.markdown("# 🎋 诗歌选集")
 
     # Inject literary CSS
     st.markdown(get_literary_css(), unsafe_allow_html=True)
@@ -777,23 +777,27 @@ def render_poems_view():
     literary_loader = st.session_state.literary_loader
     total_poems = loader.get_poem_count()
 
-    st.caption(f"{total_poems} classical Japanese poems")
+    st.caption(f"共收录 {total_poems} 首古典和歌")
 
     # Filters
     col1, col2 = st.columns(2)
     with col1:
-        source_filter = st.selectbox("Source", ["All", "ogura100", "lapis"])
+        source_filter = st.selectbox("来源", ["全部", "百人一首", "Lapis收藏"])
     with col2:
-        difficulty_filter = st.slider("Max Difficulty", 0.0, 1.0, 1.0, 0.1)
+        difficulty_filter = st.slider("最大难度", 0.0, 1.0, 1.0, 0.1)
 
     # Load poems
     poems = loader.get_all_poems(limit=100)
 
-    if source_filter != "All":
-        poems = [p for p in poems if p.source == source_filter]
+    # Map display names to internal values
+    source_map = {"全部": "All", "百人一首": "ogura100", "Lapis收藏": "lapis"}
+    internal_source = source_map.get(source_filter, "All")
+
+    if internal_source != "All":
+        poems = [p for p in poems if p.source == internal_source]
     poems = [p for p in poems if p.difficulty_score <= difficulty_filter]
 
-    st.markdown(f"**Showing {len(poems)} poems**")
+    st.markdown(f"**显示 {len(poems)} 首诗歌**")
 
     # Display
     for poem in poems[:30]:
@@ -802,15 +806,15 @@ def render_poems_view():
             <div class="poem-anthology-item">
                 <div class="poem-anthology-text">{poem.text}</div>
                 <div class="poem-anthology-meta">
-                    {f"Author: {poem.author}" if poem.author else ""}
-                    {f" | Collection: {poem.collection}" if poem.collection else ""}
-                    | Difficulty: {poem.difficulty_score:.2f}
+                    {f"作者：{poem.author}" if poem.author else ""}
+                    {f" | 出典：{poem.collection}" if poem.collection else ""}
+                    | 难度：{poem.difficulty_score:.2f}
                 </div>
             </div>
             """, unsafe_allow_html=True)
 
             if poem.reading_romaji:
-                st.caption(f"Romaji: {poem.reading_romaji}")
+                st.caption(f"罗马音：{poem.reading_romaji}")
 
             # Audio player if available
             audio_path = get_audio_path(poem.id, DATA_DIR)
@@ -829,7 +833,7 @@ def render_poems_view():
 # -----------------------------------------------------------------------------
 
 def render_cover_page():
-    """Render the welcome cover page using native Streamlit components."""
+    """Render the welcome cover page in Chinese for target audience."""
     # Get stats if available
     if st.session_state.loader:
         loader = st.session_state.loader
@@ -845,10 +849,10 @@ def render_cover_page():
 
     # Title section
     st.markdown("# WakaWaka 🎋")
-    st.markdown("### 和歌の世界へようこそ")
+    st.markdown("### 穿越千年时光的四季诗语")
     st.markdown("""
-    *A learning platform for Chinese speakers to master classical Japanese poetry.
-    Leverage your kanji knowledge to unlock the beauty of waka (和歌).*
+    *面向汉语母语者的古典日本诗歌学习平台。*
+    *以汉字为钥，解锁大和民族的心灵密码。*
     """)
 
     st.divider()
@@ -856,51 +860,60 @@ def render_cover_page():
     # Stats using columns
     col1, col2, col3 = st.columns(3)
     with col1:
-        st.metric(label="Lessons", value=total_lessons)
+        st.metric(label="课程", value=total_lessons)
     with col2:
-        st.metric(label="Poems", value=total_poems)
+        st.metric(label="和歌", value=total_poems)
     with col3:
-        st.metric(label="Grammar Points", value=total_grammar)
+        st.metric(label="文法点", value=total_grammar)
 
     st.divider()
 
     # Featured poem
-    st.markdown("#### Featured Poem")
+    st.markdown("#### 名歌赏析")
     st.markdown("""
     > 秋の田の かりほの庵の 苫をあらみ
     > わが衣手は 露にぬれつつ
 
-    *In the autumn field's temporary hut, the thatched roof is rough—
-    my sleeves are wet with dew.*
+    *秋日田边临时草庵，茅屋漏风露水沾衣袖。*
 
-    — Emperor Tenji (天智天皇)
+    — 天智天皇（第一首百人一首）
     """)
 
     st.divider()
 
     # Features using columns
-    st.markdown("#### Why WakaWaka?")
+    st.markdown("#### 为何选择 WakaWaka？")
     col1, col2, col3 = st.columns(3)
     with col1:
-        st.markdown("**🔤 Kanji Advantage**")
-        st.caption("Use your Chinese knowledge as a foundation")
+        st.markdown("**🔤 汉字优势**")
+        st.caption("你已认识60%以上的诗歌内容")
     with col2:
-        st.markdown("**🎯 Grammar Focus**")
-        st.caption("Master classical particles and auxiliaries")
+        st.markdown("**🎯 语法解码**")
+        st.caption("掌握助词与助动词的逻辑")
     with col3:
-        st.markdown("**📜 Real Poetry**")
-        st.caption("Learn from authentic waka masterpieces")
+        st.markdown("**📜 千年诗韵**")
+        st.caption("从百人一首到古今和歌集")
+
+    st.divider()
+
+    # Cultural bridge section
+    st.markdown("#### 与唐诗宋词的情感共鸣")
+    st.markdown("""
+    和歌与中国古典诗词共享相同的审美情趣：**物哀**（物の哀れ）——
+    对世间万物稍纵即逝的淡淡哀愁与感动。无论是樱花飘落还是秋月当空，
+    这份跨越千年的情感，你早已在李白杜甫的诗句中体会过。
+    """)
 
     st.divider()
 
     # Start buttons
     col1, col2, col3 = st.columns([1, 2, 1])
     with col2:
-        if st.button("📖 Start with Introduction", type="primary", use_container_width=True):
+        if st.button("📖 阅读课程介绍", type="primary", use_container_width=True):
             st.session_state.view_mode = "introduction"
             st.rerun()
 
-        if st.button("⏭️ Jump to First Lesson", use_container_width=True):
+        if st.button("⏭️ 直接开始第一课", use_container_width=True):
             st.session_state.view_mode = "lesson"
             if st.session_state.navigator:
                 st.session_state.current_lesson_id = st.session_state.navigator.get_first_lesson_id()
@@ -916,9 +929,9 @@ def render_introduction_view():
     intro = st.session_state.introduction
 
     if not intro:
-        st.warning("Introduction lesson not yet generated.")
+        st.warning("课程介绍尚未生成。")
         st.markdown("""
-        Run the introduction generation script:
+        运行以下脚本生成介绍：
         ```bash
         python scripts/06_generate_introduction.py
         ```
@@ -926,7 +939,7 @@ def render_introduction_view():
         return
 
     # Title
-    st.markdown(f"# {intro.get('title', 'Introduction to Classical Japanese Poetry')}")
+    st.markdown(f"# {intro.get('title', '古典日本诗歌入门')}")
     st.markdown(f"*{intro.get('subtitle', '')}*")
 
     # Sections
@@ -940,12 +953,14 @@ def render_introduction_view():
         # Example poem if present
         if section.get('example_poem'):
             poem = section['example_poem']
+            # Get Chinese translation (new field) or fall back to translation
+            translation = poem.get('chinese_translation') or poem.get('translation', '')
             st.markdown(f"""
 > **{poem.get('text', '')}**
 
 > *{poem.get('romaji', '')}*
 
-> {poem.get('translation', '')}
+> {translation}
             """)
 
             # Analysis
@@ -954,15 +969,20 @@ def render_introduction_view():
 
         # Key points if present
         if section.get('key_points'):
-            st.markdown("**Key Points:**")
+            st.markdown("**要点：**")
             for point in section['key_points']:
                 st.markdown(f"- {point}")
+
+    # Closing message
+    if intro.get('closing_message'):
+        st.divider()
+        st.markdown(f"*{intro.get('closing_message')}*")
 
     # Navigation to first lesson
     st.divider()
     col1, col2 = st.columns([3, 1])
     with col2:
-        if st.button("Start Learning →", type="primary", use_container_width=True):
+        if st.button("开始学习 →", type="primary", use_container_width=True):
             st.session_state.view_mode = "lesson"
             if st.session_state.navigator:
                 st.session_state.current_lesson_id = st.session_state.navigator.get_first_lesson_id()
