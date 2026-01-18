@@ -37,119 +37,170 @@
           "word": "永らへ",
           "reading": "ながらえ",
           "meaning": "长生，活下去（下二段动词未然形）",
-          "span": null,
+          "span": [
+            0,
+            3
+          ],
           "chinese_cognate_note": null
         },
         {
           "word": "ば",
           "reading": "ば",
           "meaning": "如果（接续助词，接未然形表示假定条件）",
-          "span": null,
+          "span": [
+            3,
+            4
+          ],
           "chinese_cognate_note": null
         },
         {
           "word": "また",
           "reading": "また",
           "meaning": "又，将来也",
-          "span": null,
+          "span": [
+            4,
+            6
+          ],
           "chinese_cognate_note": null
         },
         {
           "word": "このごろ",
           "reading": "このごろ",
           "meaning": "现在，近来",
-          "span": null,
+          "span": [
+            6,
+            10
+          ],
           "chinese_cognate_note": null
         },
         {
           "word": "や",
           "reading": "や",
           "meaning": "吗（系助词，表示疑问/反问）",
-          "span": null,
+          "span": [
+            10,
+            11
+          ],
           "chinese_cognate_note": null
         },
         {
           "word": "忍ば",
           "reading": "しのば",
           "meaning": "怀念，追忆（四段动词「忍ぶ」未然形）",
-          "span": null,
+          "span": [
+            11,
+            13
+          ],
           "chinese_cognate_note": null
         },
         {
           "word": "れ",
           "reading": "れ",
           "meaning": "自然而然地（助动词「る」未然形，表示自发）",
-          "span": null,
+          "span": [
+            13,
+            14
+          ],
           "chinese_cognate_note": null
         },
         {
           "word": "む",
           "reading": "む",
           "meaning": "大概会...吧（推量助动词终止形）",
-          "span": null,
+          "span": [
+            14,
+            15
+          ],
           "chinese_cognate_note": null
         },
         {
           "word": "憂し",
           "reading": "うし",
           "meaning": "痛苦的（形容词终止形）",
-          "span": null,
+          "span": [
+            15,
+            17
+          ],
           "chinese_cognate_note": null
         },
         {
           "word": "と",
           "reading": "と",
           "meaning": "觉得...（格助词，表示引用）",
-          "span": null,
+          "span": [
+            17,
+            18
+          ],
           "chinese_cognate_note": null
         },
         {
           "word": "見",
           "reading": "み",
           "meaning": "看待，经历（上一段动词连用形）",
-          "span": null,
+          "span": [
+            18,
+            19
+          ],
           "chinese_cognate_note": null
         },
         {
           "word": "し",
           "reading": "し",
           "meaning": "过去的（过去助动词「き」连体形）",
-          "span": null,
+          "span": [
+            19,
+            20
+          ],
           "chinese_cognate_note": null
         },
         {
           "word": "世",
           "reading": "よ",
           "meaning": "世道，日子",
-          "span": null,
+          "span": [
+            20,
+            21
+          ],
           "chinese_cognate_note": null
         },
         {
           "word": "ぞ",
           "reading": "ぞ",
           "meaning": "正是（系助词，表示强调）",
-          "span": null,
+          "span": [
+            21,
+            22
+          ],
           "chinese_cognate_note": null
         },
         {
           "word": "今",
           "reading": "いま",
           "meaning": "现在",
-          "span": null,
+          "span": [
+            22,
+            23
+          ],
           "chinese_cognate_note": null
         },
         {
           "word": "は",
           "reading": "は",
           "meaning": "至于（系助词，提示话题）",
-          "span": null,
+          "span": [
+            23,
+            24
+          ],
           "chinese_cognate_note": null
         },
         {
           "word": "恋しき",
           "reading": "こいしき",
           "meaning": "令人眷恋的（形容词连体形，受「ぞ」影响结句）",
-          "span": null,
+          "span": [
+            24,
+            27
+          ],
           "chinese_cognate_note": null
         }
       ],
@@ -176,119 +227,170 @@
           "word": "忘ら",
           "reading": "わすら",
           "meaning": "忘记（四段动词「忘る」未然形）",
-          "span": null,
+          "span": [
+            0,
+            2
+          ],
           "chinese_cognate_note": null
         },
         {
           "word": "るる",
           "reading": "るる",
           "meaning": "被...（助动词「る」连体形，表示被动）",
-          "span": null,
+          "span": [
+            2,
+            4
+          ],
           "chinese_cognate_note": null
         },
         {
           "word": "身",
           "reading": "み",
           "meaning": "自身，处境",
-          "span": null,
+          "span": [
+            4,
+            5
+          ],
           "chinese_cognate_note": null
         },
         {
           "word": "をば",
           "reading": "をば",
           "meaning": "把...（格助词「を」+系助词「は」的浊音化，强调宾语）",
-          "span": null,
+          "span": [
+            5,
+            7
+          ],
           "chinese_cognate_note": null
         },
         {
           "word": "思は",
           "reading": "おもは",
           "meaning": "在意，顾虑（四段动词「思ふ」未然形）",
-          "span": null,
+          "span": [
+            7,
+            9
+          ],
           "chinese_cognate_note": null
         },
         {
           "word": "ず",
           "reading": "ず",
           "meaning": "不（否定助动词连用形）",
-          "span": null,
+          "span": [
+            9,
+            10
+          ],
           "chinese_cognate_note": null
         },
         {
           "word": "誓ひ",
           "reading": "ちかひ",
           "meaning": "发誓（四段动词连用形）",
-          "span": null,
+          "span": [
+            10,
+            12
+          ],
           "chinese_cognate_note": null
         },
         {
           "word": "て",
           "reading": "て",
           "meaning": "已经...（完了助动词「つ」连用形）",
-          "span": null,
+          "span": [
+            12,
+            13
+          ],
           "chinese_cognate_note": null
         },
         {
           "word": "し",
           "reading": "し",
           "meaning": "过去的（过去助动词「き」连体形）",
-          "span": null,
+          "span": [
+            13,
+            14
+          ],
           "chinese_cognate_note": null
         },
         {
           "word": "人",
           "reading": "ひと",
           "meaning": "那个人（指负心人）",
-          "span": null,
+          "span": [
+            14,
+            15
+          ],
           "chinese_cognate_note": null
         },
         {
           "word": "の",
           "reading": "の",
           "meaning": "的（格助词）",
-          "span": null,
+          "span": [
+            15,
+            16
+          ],
           "chinese_cognate_note": null
         },
         {
           "word": "命",
           "reading": "いのち",
           "meaning": "性命",
-          "span": null,
+          "span": [
+            16,
+            17
+          ],
           "chinese_cognate_note": null
         },
         {
           "word": "の",
           "reading": "の",
           "meaning": "主格助词（在形容词句中标记主语）",
-          "span": null,
+          "span": [
+            17,
+            18
+          ],
           "chinese_cognate_note": null
         },
         {
           "word": "惜しく",
           "reading": "おしく",
           "meaning": "令人惋惜/痛惜（形容词连用形）",
-          "span": null,
+          "span": [
+            18,
+            21
+          ],
           "chinese_cognate_note": null
         },
         {
           "word": "も",
           "reading": "も",
           "meaning": "也/强调（系助词）",
-          "span": null,
+          "span": [
+            21,
+            22
+          ],
           "chinese_cognate_note": null
         },
         {
           "word": "ある",
           "reading": "ある",
           "meaning": "是/有（拉行变格动词连体形）",
-          "span": null,
+          "span": [
+            22,
+            24
+          ],
           "chinese_cognate_note": null
         },
         {
           "word": "かな",
           "reading": "かな",
           "meaning": "啊（终助词，表示咏叹）",
-          "span": null,
+          "span": [
+            24,
+            26
+          ],
           "chinese_cognate_note": null
         }
       ],

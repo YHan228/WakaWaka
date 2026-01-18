@@ -36,7 +36,10 @@
           "word": "て",
           "reading": "て",
           "meaning": "接续助词，表示动作相继发生",
-          "span": null,
+          "span": [
+            2,
+            3
+          ],
           "chinese_cognate_note": null
         },
         {
@@ -57,84 +60,120 @@
           "word": "て",
           "reading": "て",
           "meaning": "接续助词，表示动作相继发生",
-          "span": null,
+          "span": [
+            7,
+            8
+          ],
           "chinese_cognate_note": null
         },
         {
           "word": "数ふ",
           "reading": "かぞふ",
           "meaning": "数数、计算（此处为连体形“数ふる”）",
-          "span": null,
+          "span": [
+            8,
+            10
+          ],
           "chinese_cognate_note": "数"
         },
         {
           "word": "万代",
           "reading": "よろずよ",
           "meaning": "万世、极长的时间",
-          "span": null,
+          "span": [
+            11,
+            13
+          ],
           "chinese_cognate_note": null
         },
         {
           "word": "は",
           "reading": "は",
           "meaning": "提示助词（读作wa）",
-          "span": null,
+          "span": [
+            13,
+            14
+          ],
           "chinese_cognate_note": null
         },
         {
           "word": "神",
           "reading": "かみ",
           "meaning": "神明",
-          "span": null,
+          "span": [
+            14,
+            15
+          ],
           "chinese_cognate_note": "神"
         },
         {
           "word": "ぞ",
           "reading": "ぞ",
           "meaning": "系助词，表示强调",
-          "span": null,
+          "span": [
+            15,
+            16
+          ],
           "chinese_cognate_note": null
         },
         {
           "word": "知る",
           "reading": "しる",
           "meaning": "知道",
-          "span": null,
+          "span": [
+            16,
+            18
+          ],
           "chinese_cognate_note": "知"
         },
         {
           "word": "らむ",
           "reading": "らむ",
           "meaning": "推量助动词，表示“大概……吧”",
-          "span": null,
+          "span": [
+            18,
+            20
+          ],
           "chinese_cognate_note": null
         },
         {
           "word": "我が",
           "reading": "わが",
           "meaning": "我的（代词+格助词）",
-          "span": null,
+          "span": [
+            20,
+            22
+          ],
           "chinese_cognate_note": "我"
         },
         {
           "word": "君",
           "reading": "きみ",
           "meaning": "君主、您",
-          "span": null,
+          "span": [
+            22,
+            23
+          ],
           "chinese_cognate_note": "君"
         },
         {
           "word": "の",
           "reading": "の",
           "meaning": "属格助词",
-          "span": null,
+          "span": [
+            23,
+            24
+          ],
           "chinese_cognate_note": null
         },
         {
           "word": "ため",
           "reading": "ため",
           "meaning": "为了……（名词）",
-          "span": null,
+          "span": [
+            24,
+            26
+          ],
           "chinese_cognate_note": null
         }
       ],

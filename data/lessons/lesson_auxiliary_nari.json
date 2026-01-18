@@ -34,105 +34,150 @@
           "word": "見る",
           "reading": "みる",
           "meaning": "看，观赏",
-          "span": null,
+          "span": [
+            0,
+            2
+          ],
           "chinese_cognate_note": null
         },
         {
           "word": "人",
           "reading": "ひと",
           "meaning": "人",
-          "span": null,
+          "span": [
+            2,
+            3
+          ],
           "chinese_cognate_note": null
         },
         {
           "word": "も",
           "reading": "も",
           "meaning": "也，甚至（强调助词）",
-          "span": null,
+          "span": [
+            3,
+            4
+          ],
           "chinese_cognate_note": null
         },
         {
           "word": "なくて",
           "reading": "なくて",
           "meaning": "没有...而...（形容词“なし”的连用形+接续助词“て”）",
-          "span": null,
+          "span": [
+            4,
+            7
+          ],
           "chinese_cognate_note": null
         },
         {
           "word": "散り",
           "reading": "ちり",
           "meaning": "散落，凋谢",
-          "span": null,
+          "span": [
+            7,
+            9
+          ],
           "chinese_cognate_note": null
         },
         {
           "word": "ぬる",
           "reading": "ぬる",
           "meaning": "已经...了（完了助动词“ぬ”的连体形）",
-          "span": null,
+          "span": [
+            9,
+            11
+          ],
           "chinese_cognate_note": null
         },
         {
           "word": "奥山",
           "reading": "おくやま",
           "meaning": "深山",
-          "span": null,
+          "span": [
+            11,
+            13
+          ],
           "chinese_cognate_note": "奥山"
         },
         {
           "word": "の",
           "reading": "の",
           "meaning": "的（格助词）",
-          "span": null,
+          "span": [
+            13,
+            14
+          ],
           "chinese_cognate_note": null
         },
         {
           "word": "紅葉",
           "reading": "もみじ",
           "meaning": "红叶",
-          "span": null,
+          "span": [
+            14,
+            16
+          ],
           "chinese_cognate_note": null
         },
         {
           "word": "は",
           "reading": "は",
           "meaning": "关于...（系助词，提示主题）",
-          "span": null,
+          "span": [
+            16,
+            17
+          ],
           "chinese_cognate_note": null
         },
         {
           "word": "夜",
           "reading": "よる",
           "meaning": "夜晚",
-          "span": null,
+          "span": [
+            17,
+            18
+          ],
           "chinese_cognate_note": null
         },
         {
           "word": "の",
           "reading": "の",
           "meaning": "的（格助词）",
-          "span": null,
+          "span": [
+            18,
+            19
+          ],
           "chinese_cognate_note": null
         },
         {
           "word": "錦",
           "reading": "にしき",
           "meaning": "锦缎",
-          "span": null,
+          "span": [
+            19,
+            20
+          ],
           "chinese_cognate_note": "锦"
         },
         {
           "word": "なり",
           "reading": "なり",
           "meaning": "是（断定助动词）",
-          "span": null,
+          "span": [
+            20,
+            22
+          ],
           "chinese_cognate_note": null
         },
         {
           "word": "けり",
           "reading": "けり",
           "meaning": "啊/了（咏叹助动词，表示感叹或发觉）",
-          "span": null,
+          "span": [
+            22,
+            24
+          ],
           "chinese_cognate_note": null
         }
       ],
@@ -159,133 +204,190 @@
           "word": "君",
           "reading": "きみ",
           "meaning": "你（指恋人）",
-          "span": null,
+          "span": [
+            0,
+            1
+          ],
           "chinese_cognate_note": null
         },
         {
           "word": "なく",
           "reading": "なく",
           "meaning": "不在/没有（形容词“なし”的连用形）",
-          "span": null,
+          "span": [
+            1,
+            3
+          ],
           "chinese_cognate_note": null
         },
         {
           "word": "は",
           "reading": "は",
           "meaning": "如果...的话（提示条件）",
-          "span": null,
+          "span": [
+            3,
+            4
+          ],
           "chinese_cognate_note": null
         },
         {
           "word": "なぞ",
           "reading": "なぞ",
           "meaning": "为何",
-          "span": null,
+          "span": [
+            5,
+            7
+          ],
           "chinese_cognate_note": null
         },
         {
           "word": "身",
           "reading": "み",
           "meaning": "身体/自己",
-          "span": null,
+          "span": [
+            7,
+            8
+          ],
           "chinese_cognate_note": null
         },
         {
           "word": "装は",
           "reading": "よそわ",
           "meaning": "打扮（动词未然形）",
-          "span": null,
+          "span": [
+            8,
+            10
+          ],
           "chinese_cognate_note": null
         },
         {
           "word": "む",
           "reading": "ん",
           "meaning": "想要...吗（推量助动词，此处表反问）",
-          "span": null,
+          "span": [
+            10,
+            11
+          ],
           "chinese_cognate_note": null
         },
         {
           "word": "櫛笥",
           "reading": "くしげ",
           "meaning": "梳妆盒",
-          "span": null,
+          "span": [
+            12,
+            14
+          ],
           "chinese_cognate_note": null
         },
         {
           "word": "なる",
           "reading": "なる",
           "meaning": "位于...的（断定/存在助动词“なり”的连体形）",
-          "span": null,
+          "span": [
+            14,
+            16
+          ],
           "chinese_cognate_note": null
         },
         {
           "word": "柘",
           "reading": "つげ",
           "meaning": "黄杨木",
-          "span": null,
+          "span": [
+            17,
+            18
+          ],
           "chinese_cognate_note": null
         },
         {
           "word": "の",
           "reading": "の",
           "meaning": "的（格助词）",
-          "span": null,
+          "span": [
+            18,
+            19
+          ],
           "chinese_cognate_note": null
         },
         {
           "word": "小櫛",
           "reading": "おぐし",
           "meaning": "梳子（“小”为美称）",
-          "span": null,
+          "span": [
+            19,
+            21
+          ],
           "chinese_cognate_note": null
         },
         {
           "word": "も",
           "reading": "も",
           "meaning": "也/连...",
-          "span": null,
+          "span": [
+            21,
+            22
+          ],
           "chinese_cognate_note": null
         },
         {
           "word": "取ら",
           "reading": "とら",
           "meaning": "拿取（动词未然形）",
-          "span": null,
+          "span": [
+            23,
+            25
+          ],
           "chinese_cognate_note": null
         },
         {
           "word": "む",
           "reading": "ん",
           "meaning": "想要（意志助动词）",
-          "span": null,
+          "span": [
+            25,
+            26
+          ],
           "chinese_cognate_note": null
         },
         {
           "word": "と",
           "reading": "と",
           "meaning": "这样（引用助词）",
-          "span": null,
+          "span": [
+            26,
+            27
+          ],
           "chinese_cognate_note": null
         },
         {
           "word": "も",
           "reading": "も",
           "meaning": "也（强调）",
-          "span": null,
+          "span": [
+            27,
+            28
+          ],
           "chinese_cognate_note": null
         },
         {
           "word": "思は",
           "reading": "おもわ",
           "meaning": "想（动词未然形）",
-          "span": null,
+          "span": [
+            28,
+            30
+          ],
           "chinese_cognate_note": null
         },
         {
           "word": "ず",
           "reading": "ず",
           "meaning": "不（否定助动词）",
-          "span": null,
+          "span": [
+            30,
+            31
+          ],
           "chinese_cognate_note": null
         }
       ],

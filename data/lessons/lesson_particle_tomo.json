@@ -29,119 +29,170 @@
           "word": "年",
           "reading": "とし",
           "meaning": "年，岁月",
-          "span": null,
+          "span": [
+            0,
+            1
+          ],
           "chinese_cognate_note": "年"
         },
         {
           "word": "経",
           "reading": "ふ",
           "meaning": "（时间）流逝，经过（下二段动词终止形）",
-          "span": null,
+          "span": [
+            1,
+            2
+          ],
           "chinese_cognate_note": "经"
         },
         {
           "word": "とも",
           "reading": "とも",
           "meaning": "（接续助词）即使……也……",
-          "span": null,
+          "span": [
+            2,
+            4
+          ],
           "chinese_cognate_note": null
         },
         {
           "word": "越",
           "reading": "こし",
           "meaning": "越国（古地名，今北陆地区）",
-          "span": null,
+          "span": [
+            4,
+            5
+          ],
           "chinese_cognate_note": "越"
         },
         {
           "word": "の",
           "reading": "の",
           "meaning": "（格助词）的",
-          "span": null,
+          "span": [
+            5,
+            6
+          ],
           "chinese_cognate_note": null
         },
         {
           "word": "白山",
           "reading": "しらやま",
           "meaning": "白山（山名）",
-          "span": null,
+          "span": [
+            6,
+            8
+          ],
           "chinese_cognate_note": "白山"
         },
         {
           "word": "忘れ",
           "reading": "わすれ",
           "meaning": "忘记（下二段动词未然形）",
-          "span": null,
+          "span": [
+            8,
+            10
+          ],
           "chinese_cognate_note": "忘"
         },
         {
           "word": "ず",
           "reading": "ず",
           "meaning": "（否定助动词）不",
-          "span": null,
+          "span": [
+            10,
+            11
+          ],
           "chinese_cognate_note": null
         },
         {
           "word": "は",
           "reading": "は",
           "meaning": "（系助词）表示假定条件，如果……",
-          "span": null,
+          "span": [
+            11,
+            12
+          ],
           "chinese_cognate_note": null
         },
         {
           "word": "頭",
           "reading": "かしら",
           "meaning": "头，此处指头发",
-          "span": null,
+          "span": [
+            12,
+            13
+          ],
           "chinese_cognate_note": "头"
         },
         {
           "word": "の",
           "reading": "の",
           "meaning": "（格助词）的",
-          "span": null,
+          "span": [
+            13,
+            14
+          ],
           "chinese_cognate_note": null
         },
         {
           "word": "雪",
           "reading": "ゆき",
           "meaning": "雪（隐喻白发）",
-          "span": null,
+          "span": [
+            14,
+            15
+          ],
           "chinese_cognate_note": "雪"
         },
         {
           "word": "を",
           "reading": "を",
           "meaning": "（格助词）表示动作对象",
-          "span": null,
+          "span": [
+            15,
+            16
+          ],
           "chinese_cognate_note": null
         },
         {
           "word": "あはれ",
           "reading": "あはれ",
           "meaning": "令人感动，可怜，情趣",
-          "span": null,
+          "span": [
+            16,
+            19
+          ],
           "chinese_cognate_note": null
         },
         {
           "word": "と",
           "reading": "と",
           "meaning": "（格助词）表示引用的内容",
-          "span": null,
+          "span": [
+            19,
+            20
+          ],
           "chinese_cognate_note": null
         },
         {
           "word": "も",
           "reading": "も",
           "meaning": "（系助词）也",
-          "span": null,
+          "span": [
+            20,
+            21
+          ],
           "chinese_cognate_note": null
         },
         {
           "word": "見よ",
           "reading": "みよ",
           "meaning": "看（上一段动词命令形）",
-          "span": null,
+          "span": [
+            21,
+            23
+          ],
           "chinese_cognate_note": "见"
         }
       ],
@@ -168,119 +219,170 @@
           "word": "余所",
           "reading": "よそ",
           "meaning": "别处，冷淡，无关的样子",
-          "span": null,
+          "span": [
+            0,
+            2
+          ],
           "chinese_cognate_note": null
         },
         {
           "word": "に",
           "reading": "に",
           "meaning": "（格助词）表示状态",
-          "span": null,
+          "span": [
+            2,
+            3
+          ],
           "chinese_cognate_note": null
         },
         {
           "word": "見",
           "reading": "み",
           "meaning": "看（上一段动词连用形）",
-          "span": null,
+          "span": [
+            3,
+            4
+          ],
           "chinese_cognate_note": "见"
         },
         {
           "word": "て",
           "reading": "て",
           "meaning": "（接续助词）表示动作相继",
-          "span": null,
+          "span": [
+            4,
+            5
+          ],
           "chinese_cognate_note": null
         },
         {
           "word": "帰ら",
           "reading": "かえら",
           "meaning": "回去（四段动词未然形）",
-          "span": null,
+          "span": [
+            5,
+            7
+          ],
           "chinese_cognate_note": "归"
         },
         {
           "word": "む",
           "reading": "む",
           "meaning": "（助动词）想要……，将要……（婉曲/推量）",
-          "span": null,
+          "span": [
+            7,
+            8
+          ],
           "chinese_cognate_note": null
         },
         {
           "word": "人",
           "reading": "ひと",
           "meaning": "人",
-          "span": null,
+          "span": [
+            8,
+            9
+          ],
           "chinese_cognate_note": "人"
         },
         {
           "word": "に",
           "reading": "に",
           "meaning": "（格助词）表示动作对象",
-          "span": null,
+          "span": [
+            9,
+            10
+          ],
           "chinese_cognate_note": null
         },
         {
           "word": "藤",
           "reading": "ふじ",
           "meaning": "紫藤",
-          "span": null,
+          "span": [
+            10,
+            11
+          ],
           "chinese_cognate_note": "藤"
         },
         {
           "word": "の",
           "reading": "の",
           "meaning": "（格助词）的",
-          "span": null,
+          "span": [
+            11,
+            12
+          ],
           "chinese_cognate_note": null
         },
         {
           "word": "花",
           "reading": "はな",
           "meaning": "花",
-          "span": null,
+          "span": [
+            12,
+            13
+          ],
           "chinese_cognate_note": "花"
         },
         {
           "word": "這ひ纏はれ",
           "reading": "はいまつわれ",
           "meaning": "爬过去缠绕（复合动词命令形）",
-          "span": null,
+          "span": [
+            13,
+            18
+          ],
           "chinese_cognate_note": "缠"
         },
         {
           "word": "よ",
           "reading": "よ",
           "meaning": "（终助词）表示命令的语气",
-          "span": null,
+          "span": [
+            18,
+            19
+          ],
           "chinese_cognate_note": null
         },
         {
           "word": "枝",
           "reading": "えだ",
           "meaning": "树枝",
-          "span": null,
+          "span": [
+            19,
+            20
+          ],
           "chinese_cognate_note": "枝"
         },
         {
           "word": "は",
           "reading": "は",
           "meaning": "（系助词）提示主题",
-          "span": null,
+          "span": [
+            20,
+            21
+          ],
           "chinese_cognate_note": null
         },
         {
           "word": "折る",
           "reading": "をる",
           "meaning": "折断（四段动词终止形）",
-          "span": null,
+          "span": [
+            21,
+            23
+          ],
           "chinese_cognate_note": "折"
         },
         {
           "word": "とも",
           "reading": "とも",
           "meaning": "（接续助词）即使……也……",
-          "span": null,
+          "span": [
+            23,
+            25
+          ],
           "chinese_cognate_note": null
         }
       ],

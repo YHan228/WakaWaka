@@ -3,66 +3,113 @@
 fix_vocabulary_spans.py - Post-process lessons to add vocabulary spans.
 
 Computes [start, end) spans for each vocabulary item by matching
-word positions in the original poem text.
+word positions in the poem text extracted from the lesson's furigana display.
+
+Updated to handle new waka tokenization and LLM-generated vocabulary.
 """
 
 import json
+import re
 import sys
 from pathlib import Path
 
 PROJECT_ROOT = Path(__file__).parent.parent
 sys.path.insert(0, str(PROJECT_ROOT))
 
-import pandas as pd
+
+def extract_plain_text(furigana_html: str) -> str:
+    """Extract plain text from furigana HTML."""
+    # Remove ruby annotations: <ruby>漢字<rt>かんじ</rt></ruby> -> 漢字
+    text = re.sub(r'<ruby>([^<]+)<rt>[^<]+</rt></ruby>', r'\1', furigana_html)
+    # Remove any remaining HTML tags
+    text = re.sub(r'<[^>]+>', '', text)
+    return text
+
 
 def compute_vocab_spans(poem_text: str, vocabulary: list[dict]) -> list[dict]:
     """
     Compute spans for vocabulary items by matching positions in poem text.
 
-    Uses greedy forward matching - finds next occurrence after last match.
-    Handles repeated words (particles like の, に, etc.)
+    Strategy:
+    1. First pass: find all possible positions for each word
+    2. Assign spans greedily in poem order (left to right)
+    3. Track used character positions to avoid overlaps
 
     Args:
-        poem_text: Original poem text
+        poem_text: Plain poem text (no HTML)
         vocabulary: List of vocab dicts with 'word' field
 
     Returns:
         Updated vocabulary list with 'span' fields populated
     """
-    last_end = 0  # Track position to search from
+    # Track which positions are already assigned
+    used_positions = set()
 
-    for vocab in vocabulary:
+    # Find all possible matches for each vocab word
+    vocab_matches = []
+    for idx, vocab in enumerate(vocabulary):
         word = vocab.get('word', '')
         if not word:
+            vocab_matches.append((idx, word, []))
             continue
 
-        # Find next occurrence after last_end
-        pos = poem_text.find(word, last_end)
+        # Find all occurrences of this word in the text
+        positions = []
+        start = 0
+        while True:
+            pos = poem_text.find(word, start)
+            if pos < 0:
+                break
+            positions.append(pos)
+            start = pos + 1
 
-        if pos >= 0:
-            vocab['span'] = [pos, pos + len(word)]
-            # Don't advance last_end for single-char particles that might be part of compounds
-            # Only advance if word length > 1 or we found it after current position
-            if len(word) > 1:
-                last_end = pos + len(word)
-            else:
-                # For single chars, only advance past if it's clearly separate
-                last_end = pos + 1
-        else:
-            # Word not found after last_end, try from beginning
-            pos = poem_text.find(word)
-            if pos >= 0:
-                vocab['span'] = [pos, pos + len(word)]
-            else:
-                # Still not found - might be a conjugation variant or reading
-                vocab['span'] = None
+        vocab_matches.append((idx, word, positions))
+
+    # Sort vocabulary by their first appearance in the poem
+    # This helps assign spans in reading order
+    def first_pos(item):
+        idx, word, positions = item
+        return positions[0] if positions else float('inf')
+
+    vocab_matches_sorted = sorted(vocab_matches, key=first_pos)
+
+    # Assign spans greedily
+    results = [None] * len(vocabulary)
+
+    for idx, word, positions in vocab_matches_sorted:
+        if not positions:
+            results[idx] = None
+            continue
+
+        # Find first position that doesn't overlap with used positions
+        assigned = False
+        for pos in positions:
+            span_positions = set(range(pos, pos + len(word)))
+            if not span_positions & used_positions:
+                # This position is available
+                results[idx] = [pos, pos + len(word)]
+                used_positions.update(span_positions)
+                assigned = True
+                break
+
+        if not assigned:
+            # All positions overlap - try to find any match
+            # (might happen with repeated particles)
+            results[idx] = None
+
+    # Update vocabulary with spans
+    for idx, vocab in enumerate(vocabulary):
+        vocab['span'] = results[idx]
 
     return vocabulary
 
 
-def fix_lesson_spans(lesson_path: Path, poems_df: pd.DataFrame) -> tuple[int, int]:
+def fix_lesson_spans(lesson_path: Path) -> tuple[int, int]:
     """
     Fix vocabulary spans in a single lesson file.
+
+    Uses the lesson's own display text (from furigana HTML) rather than
+    external parquet file, ensuring consistency with LLM tokenization.
 
     Returns:
         Tuple of (total_vocab_items, items_with_spans)
@@ -78,19 +125,15 @@ def fix_lesson_spans(lesson_path: Path, poems_df: pd.DataFrame) -> tuple[int, in
         if step.get('type') != 'poem_presentation':
             continue
 
-        poem_id = step.get('poem_id')
         vocabulary = step.get('vocabulary', [])
+        display = step.get('display', {})
+        furigana_html = display.get('text_with_furigana', '')
 
-        if not poem_id or not vocabulary:
+        if not vocabulary or not furigana_html:
             continue
 
-        # Get poem text
-        poem_rows = poems_df[poems_df['poem_id'] == poem_id]
-        if poem_rows.empty:
-            print(f"  Warning: poem {poem_id} not found in parquet")
-            continue
-
-        poem_text = poem_rows.iloc[0]['text']
+        # Extract plain text from the lesson's own furigana display
+        poem_text = extract_plain_text(furigana_html)
 
         # Compute spans
         updated_vocab = compute_vocab_spans(poem_text, vocabulary)
@@ -113,20 +156,15 @@ def fix_lesson_spans(lesson_path: Path, poems_df: pd.DataFrame) -> tuple[int, in
 
 def main():
     lessons_dir = PROJECT_ROOT / 'data' / 'lessons'
-    poems_path = PROJECT_ROOT / 'data' / 'annotated' / 'poems.parquet'
-
-    print("Loading poems...")
-    poems_df = pd.read_parquet(poems_path)
-    print(f"  Loaded {len(poems_df)} poems")
 
     lesson_files = sorted(lessons_dir.glob('lesson_*.json'))
-    print(f"\nProcessing {len(lesson_files)} lessons...")
+    print(f"Processing {len(lesson_files)} lessons...")
 
     total_all = 0
     spans_all = 0
 
     for lesson_path in lesson_files:
-        total, with_spans = fix_lesson_spans(lesson_path, poems_df)
+        total, with_spans = fix_lesson_spans(lesson_path)
         total_all += total
         spans_all += with_spans
 

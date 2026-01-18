@@ -33,98 +33,140 @@
           "word": "奥山",
           "reading": "おくやま",
           "meaning": "深山",
-          "span": null,
+          "span": [
+            0,
+            2
+          ],
           "chinese_cognate_note": "奥(深处) + 山"
         },
         {
           "word": "に",
           "reading": "に",
           "meaning": "在（格助词，表示场所）",
-          "span": null,
+          "span": [
+            2,
+            3
+          ],
           "chinese_cognate_note": null
         },
         {
           "word": "紅葉",
           "reading": "もみじ",
           "meaning": "红叶",
-          "span": null,
+          "span": [
+            3,
+            5
+          ],
           "chinese_cognate_note": "红叶"
         },
         {
           "word": "踏み分け",
           "reading": "ふみわけ",
           "meaning": "拨开...踏行（动词连用形）",
-          "span": null,
+          "span": [
+            5,
+            9
+          ],
           "chinese_cognate_note": "踏 + 分"
         },
         {
           "word": "鳴く",
           "reading": "なく",
           "meaning": "鸣叫（动词连体形，修饰下文的鹿）",
-          "span": null,
+          "span": [
+            9,
+            11
+          ],
           "chinese_cognate_note": "鸣"
         },
         {
           "word": "鹿",
           "reading": "しか",
           "meaning": "鹿",
-          "span": null,
+          "span": [
+            11,
+            12
+          ],
           "chinese_cognate_note": "鹿"
         },
         {
           "word": "の",
           "reading": "の",
           "meaning": "的（格助词）",
-          "span": null,
+          "span": [
+            12,
+            13
+          ],
           "chinese_cognate_note": null
         },
         {
           "word": "声",
           "reading": "こえ",
           "meaning": "声音",
-          "span": null,
+          "span": [
+            13,
+            14
+          ],
           "chinese_cognate_note": "声"
         },
         {
           "word": "聞く",
           "reading": "きく",
           "meaning": "听（动词连体形，修饰下文的“时”）",
-          "span": null,
+          "span": [
+            14,
+            16
+          ],
           "chinese_cognate_note": "闻"
         },
         {
           "word": "時",
           "reading": "とき",
           "meaning": "时候",
-          "span": null,
+          "span": [
+            16,
+            17
+          ],
           "chinese_cognate_note": "时"
         },
         {
           "word": "ぞ",
           "reading": "ぞ",
           "meaning": "正是...（系助词，表示强调）",
-          "span": null,
+          "span": [
+            17,
+            18
+          ],
           "chinese_cognate_note": null
         },
         {
           "word": "秋",
           "reading": "あき",
           "meaning": "秋天",
-          "span": null,
+          "span": [
+            18,
+            19
+          ],
           "chinese_cognate_note": "秋"
         },
         {
           "word": "は",
           "reading": "は",
           "meaning": "关于...（系助词，提示话题）",
-          "span": null,
+          "span": [
+            19,
+            20
+          ],
           "chinese_cognate_note": null
         },
         {
           "word": "悲しき",
           "reading": "かなしき",
           "meaning": "悲伤的/动人的（形容词シク活用·连体形）",
-          "span": null,
+          "span": [
+            20,
+            23
+          ],
           "chinese_cognate_note": "悲"
         }
       ],
@@ -151,91 +193,130 @@
           "word": "夕",
           "reading": "ゆう",
           "meaning": "傍晚",
-          "span": null,
+          "span": [
+            0,
+            1
+          ],
           "chinese_cognate_note": "夕"
         },
         {
           "word": "去れば",
           "reading": "されば",
           "meaning": "到来时/变成那样的话（动词已然形+ば）",
-          "span": null,
+          "span": [
+            1,
+            4
+          ],
           "chinese_cognate_note": null
         },
         {
           "word": "門田",
           "reading": "かどた",
           "meaning": "门前的稻田",
-          "span": null,
+          "span": [
+            4,
+            6
+          ],
           "chinese_cognate_note": "门田"
         },
         {
           "word": "の",
           "reading": "の",
           "meaning": "的（格助词）",
-          "span": null,
+          "span": [
+            6,
+            7
+          ],
           "chinese_cognate_note": null
         },
         {
           "word": "稲葉",
           "reading": "いなば",
           "meaning": "稻叶",
-          "span": null,
+          "span": [
+            7,
+            9
+          ],
           "chinese_cognate_note": "稻叶"
         },
         {
           "word": "音連れて",
           "reading": "おとづれて",
           "meaning": "发出声响/访问（动词连用形+て，双关语）",
-          "span": null,
+          "span": [
+            9,
+            13
+          ],
           "chinese_cognate_note": "音连"
         },
         {
           "word": "蘆",
           "reading": "あし",
           "meaning": "芦苇",
-          "span": null,
+          "span": [
+            13,
+            14
+          ],
           "chinese_cognate_note": "芦"
         },
         {
           "word": "の",
           "reading": "の",
           "meaning": "的（格助词）",
-          "span": null,
+          "span": [
+            14,
+            15
+          ],
           "chinese_cognate_note": null
         },
         {
           "word": "丸屋",
           "reading": "まろや",
           "meaning": "简陋的小屋（草庵）",
-          "span": null,
+          "span": [
+            15,
+            17
+          ],
           "chinese_cognate_note": "丸屋"
         },
         {
           "word": "に",
           "reading": "に",
           "meaning": "向/对（格助词）",
-          "span": null,
+          "span": [
+            17,
+            18
+          ],
           "chinese_cognate_note": null
         },
         {
           "word": "秋風",
           "reading": "あきかぜ",
           "meaning": "秋风",
-          "span": null,
+          "span": [
+            18,
+            20
+          ],
           "chinese_cognate_note": "秋风"
         },
         {
           "word": "ぞ",
           "reading": "ぞ",
           "meaning": "正是...（系助词，强调）",
-          "span": null,
+          "span": [
+            20,
+            21
+          ],
           "chinese_cognate_note": null
         },
         {
           "word": "吹く",
           "reading": "ふく",
           "meaning": "吹（动词连体形）",
-          "span": null,
+          "span": [
+            21,
+            23
+          ],
           "chinese_cognate_note": "吹"
         }
       ],

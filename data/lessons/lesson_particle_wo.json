@@ -29,105 +29,150 @@
           "word": "和歌の浦",
           "reading": "わかのうら",
           "meaning": "和歌浦（地名）",
-          "span": null,
+          "span": [
+            0,
+            4
+          ],
           "chinese_cognate_note": "地名"
         },
         {
           "word": "を",
           "reading": "を",
           "meaning": "（格助词）标记宾语",
-          "span": null,
+          "span": [
+            4,
+            5
+          ],
           "chinese_cognate_note": null
         },
         {
           "word": "松",
           "reading": "まつ",
           "meaning": "松树",
-          "span": null,
+          "span": [
+            5,
+            6
+          ],
           "chinese_cognate_note": "松"
         },
         {
           "word": "の",
           "reading": "の",
           "meaning": "（格助词）表示所属",
-          "span": null,
+          "span": [
+            6,
+            7
+          ],
           "chinese_cognate_note": null
         },
         {
           "word": "葉",
           "reading": "は",
           "meaning": "叶子",
-          "span": null,
+          "span": [
+            7,
+            8
+          ],
           "chinese_cognate_note": "叶"
         },
         {
           "word": "越し",
           "reading": "ごし",
           "meaning": "越过、透过",
-          "span": null,
+          "span": [
+            8,
+            10
+          ],
           "chinese_cognate_note": "越"
         },
         {
           "word": "に",
           "reading": "に",
           "meaning": "（格助词）表示状态/方式",
-          "span": null,
+          "span": [
+            10,
+            11
+          ],
           "chinese_cognate_note": null
         },
         {
           "word": "眺むれ",
           "reading": "ながむれ",
           "meaning": "眺望（已然形）",
-          "span": null,
+          "span": [
+            11,
+            14
+          ],
           "chinese_cognate_note": "眺"
         },
         {
           "word": "ば",
           "reading": "ば",
           "meaning": "（接续助词）如果/因为/当……时候",
-          "span": null,
+          "span": [
+            14,
+            15
+          ],
           "chinese_cognate_note": null
         },
         {
           "word": "梢",
           "reading": "こずえ",
           "meaning": "树梢",
-          "span": null,
+          "span": [
+            15,
+            16
+          ],
           "chinese_cognate_note": "梢"
         },
         {
           "word": "に",
           "reading": "に",
           "meaning": "（格助词）表示位置",
-          "span": null,
+          "span": [
+            16,
+            17
+          ],
           "chinese_cognate_note": null
         },
         {
           "word": "寄する",
           "reading": "よする",
           "meaning": "靠近、停靠（连体形）",
-          "span": null,
+          "span": [
+            17,
+            20
+          ],
           "chinese_cognate_note": "寄"
         },
         {
           "word": "海人",
           "reading": "あま",
           "meaning": "渔夫",
-          "span": null,
+          "span": [
+            20,
+            22
+          ],
           "chinese_cognate_note": null
         },
         {
           "word": "の",
           "reading": "の",
           "meaning": "（格助词）表示所属",
-          "span": null,
+          "span": [
+            22,
+            23
+          ],
           "chinese_cognate_note": null
         },
         {
           "word": "釣船",
           "reading": "つりぶね",
           "meaning": "钓船",
-          "span": null,
+          "span": [
+            23,
+            25
+          ],
           "chinese_cognate_note": "钓船"
         }
       ],

@@ -39,7 +39,10 @@
           "word": "や",
           "reading": "や",
           "meaning": "【切字】啊！（表示强烈的咏叹与强调）",
-          "span": null,
+          "span": [
+            2,
+            3
+          ],
           "chinese_cognate_note": null
         },
         {
@@ -53,84 +56,120 @@
           "word": "行く",
           "reading": "ゆく",
           "meaning": "去、离开（京城）",
-          "span": null,
+          "span": [
+            5,
+            7
+          ],
           "chinese_cognate_note": null
         },
         {
           "word": "も",
           "reading": "も",
           "meaning": "也、无论...还是...",
-          "span": null,
+          "span": [
+            7,
+            8
+          ],
           "chinese_cognate_note": null
         },
         {
           "word": "帰る",
           "reading": "かえる",
           "meaning": "归、回（京城）",
-          "span": null,
+          "span": [
+            8,
+            10
+          ],
           "chinese_cognate_note": null
         },
         {
           "word": "も",
           "reading": "も",
           "meaning": "也",
-          "span": null,
+          "span": [
+            10,
+            11
+          ],
           "chinese_cognate_note": null
         },
         {
           "word": "別れて",
           "reading": "わかれて",
           "meaning": "分别（动词“別る”的连用形+接续助词“て”）",
-          "span": null,
+          "span": [
+            11,
+            14
+          ],
           "chinese_cognate_note": null
         },
         {
           "word": "は",
           "reading": "は",
           "meaning": "（提示助词，此处表示反复发生的动作）",
-          "span": null,
+          "span": [
+            14,
+            15
+          ],
           "chinese_cognate_note": null
         },
         {
           "word": "知る",
           "reading": "しる",
           "meaning": "认识、相识",
-          "span": null,
+          "span": [
+            15,
+            17
+          ],
           "chinese_cognate_note": null
         },
         {
           "word": "も",
           "reading": "も",
           "meaning": "也",
-          "span": null,
+          "span": [
+            17,
+            18
+          ],
           "chinese_cognate_note": null
         },
         {
           "word": "知ら",
           "reading": "しら",
           "meaning": "不认识（动词“知る”的未然形）",
-          "span": null,
+          "span": [
+            18,
+            20
+          ],
           "chinese_cognate_note": null
         },
         {
           "word": "ぬ",
           "reading": "ぬ",
           "meaning": "不（否定助动词“ず”的连体形）",
-          "span": null,
+          "span": [
+            20,
+            21
+          ],
           "chinese_cognate_note": null
         },
         {
           "word": "も",
           "reading": "も",
           "meaning": "也",
-          "span": null,
+          "span": [
+            21,
+            22
+          ],
           "chinese_cognate_note": null
         },
         {
           "word": "逢坂の関",
           "reading": "おうさかのせき",
           "meaning": "逢坂关（地名，位于京都与滋贺交界）",
-          "span": null,
+          "span": [
+            22,
+            26
+          ],
           "chinese_cognate_note": null
         }
       ],
@@ -157,91 +196,130 @@
           "word": "唐錦",
           "reading": "からにしき",
           "meaning": "唐锦（精美的中国织锦，喻指红叶）",
-          "span": null,
+          "span": [
+            0,
+            2
+          ],
           "chinese_cognate_note": "唐锦"
         },
         {
           "word": "秋",
           "reading": "あき",
           "meaning": "秋天",
-          "span": null,
+          "span": [
+            2,
+            3
+          ],
           "chinese_cognate_note": null
         },
         {
           "word": "の",
           "reading": "の",
           "meaning": "的（格助词）",
-          "span": null,
+          "span": [
+            3,
+            4
+          ],
           "chinese_cognate_note": null
         },
         {
           "word": "形見",
           "reading": "かたみ",
           "meaning": "遗物、纪念品",
-          "span": null,
+          "span": [
+            4,
+            6
+          ],
           "chinese_cognate_note": null
         },
         {
           "word": "や",
           "reading": "や",
           "meaning": "【切字】啊！（咏叹）",
-          "span": null,
+          "span": [
+            6,
+            7
+          ],
           "chinese_cognate_note": null
         },
         {
           "word": "竜田山",
           "reading": "たつたやま",
           "meaning": "龙田山（地名，红叶名胜）",
-          "span": null,
+          "span": [
+            7,
+            10
+          ],
           "chinese_cognate_note": null
         },
         {
           "word": "散り敢え",
           "reading": "ちりあえ",
           "meaning": "散尽（动词“散る”+辅助动词“敢ふ”的未然形）",
-          "span": null,
+          "span": [
+            10,
+            14
+          ],
           "chinese_cognate_note": null
         },
         {
           "word": "ぬ",
           "reading": "ぬ",
           "meaning": "没有（否定助动词“ず”的连体形）",
-          "span": null,
+          "span": [
+            14,
+            15
+          ],
           "chinese_cognate_note": null
         },
         {
           "word": "枝",
           "reading": "えだ",
           "meaning": "树枝",
-          "span": null,
+          "span": [
+            15,
+            16
+          ],
           "chinese_cognate_note": null
         },
         {
           "word": "に",
           "reading": "に",
           "meaning": "在（格助词）",
-          "span": null,
+          "span": [
+            16,
+            17
+          ],
           "chinese_cognate_note": null
         },
         {
           "word": "嵐",
           "reading": "あらし",
           "meaning": "暴风、山风",
-          "span": null,
+          "span": [
+            17,
+            18
+          ],
           "chinese_cognate_note": null
         },
         {
           "word": "吹く",
           "reading": "ふく",
           "meaning": "吹",
-          "span": null,
+          "span": [
+            18,
+            20
+          ],
           "chinese_cognate_note": null
         },
         {
           "word": "なり",
           "reading": "なり",
           "meaning": "听说、好像（传闻/推定助动词）",
-          "span": null,
+          "span": [
+            20,
+            22
+          ],
           "chinese_cognate_note": null
         }
       ],
@@ -275,119 +353,170 @@
           "word": "袖",
           "reading": "そで",
           "meaning": "袖子",
-          "span": null,
+          "span": [
+            0,
+            1
+          ],
           "chinese_cognate_note": null
         },
         {
           "word": "漬ち",
           "reading": "ひち",
           "meaning": "浸湿（动词“漬つ”的连用形）",
-          "span": null,
+          "span": [
+            1,
+            3
+          ],
           "chinese_cognate_note": null
         },
         {
           "word": "て",
           "reading": "て",
           "meaning": "（接续助词，表示动作先后）",
-          "span": null,
+          "span": [
+            3,
+            4
+          ],
           "chinese_cognate_note": null
         },
         {
           "word": "掬び",
           "reading": "むすび",
           "meaning": "用手捧（水）（动词“掬ぶ”的连用形）",
-          "span": null,
+          "span": [
+            4,
+            6
+          ],
           "chinese_cognate_note": null
         },
         {
           "word": "し",
           "reading": "し",
           "meaning": "曾经（过去助动词“き”的连体形）",
-          "span": null,
+          "span": [
+            6,
+            7
+          ],
           "chinese_cognate_note": null
         },
         {
           "word": "水",
           "reading": "みず",
           "meaning": "水",
-          "span": null,
+          "span": [
+            7,
+            8
+          ],
           "chinese_cognate_note": null
         },
         {
           "word": "の",
           "reading": "の",
           "meaning": "（主格助词，表示“水”是“冻”的主语）",
-          "span": null,
+          "span": [
+            8,
+            9
+          ],
           "chinese_cognate_note": null
         },
         {
           "word": "凍れ",
           "reading": "こほれ",
           "meaning": "结冰（动词“凍る”的已然形）",
-          "span": null,
+          "span": [
+            9,
+            11
+          ],
           "chinese_cognate_note": null
         },
         {
           "word": "る",
           "reading": "る",
           "meaning": "着/了（存续助动词“り”的连体形）",
-          "span": null,
+          "span": [
+            11,
+            12
+          ],
           "chinese_cognate_note": null
         },
         {
           "word": "を",
           "reading": "を",
           "meaning": "把/对（宾格助词，提示动作对象）",
-          "span": null,
+          "span": [
+            12,
+            13
+          ],
           "chinese_cognate_note": null
         },
         {
           "word": "春立つ",
           "reading": "はるたつ",
           "meaning": "立春",
-          "span": null,
+          "span": [
+            13,
+            16
+          ],
           "chinese_cognate_note": null
         },
         {
           "word": "今日",
           "reading": "きょう",
           "meaning": "今天",
-          "span": null,
+          "span": [
+            16,
+            18
+          ],
           "chinese_cognate_note": null
         },
         {
           "word": "の",
           "reading": "の",
           "meaning": "的",
-          "span": null,
+          "span": [
+            18,
+            19
+          ],
           "chinese_cognate_note": null
         },
         {
           "word": "風",
           "reading": "かぜ",
           "meaning": "风",
-          "span": null,
+          "span": [
+            19,
+            20
+          ],
           "chinese_cognate_note": null
         },
         {
           "word": "や",
           "reading": "や",
           "meaning": "【切字/疑问】是...吗？（兼具咏叹与疑问）",
-          "span": null,
+          "span": [
+            20,
+            21
+          ],
           "chinese_cognate_note": null
         },
         {
           "word": "解く",
           "reading": "とく",
           "meaning": "融化、解开",
-          "span": null,
+          "span": [
+            21,
+            23
+          ],
           "chinese_cognate_note": null
         },
         {
           "word": "らむ",
           "reading": "らむ",
           "meaning": "大概正在...吧（现在推量助动词，连体形）",
-          "span": null,
+          "span": [
+            23,
+            25
+          ],
           "chinese_cognate_note": null
         }
       ],

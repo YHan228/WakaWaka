@@ -32,98 +32,140 @@
           "word": "奥山",
           "reading": "おくやま",
           "meaning": "深山",
-          "span": null,
+          "span": [
+            0,
+            2
+          ],
           "chinese_cognate_note": "奥(深处) + 山"
         },
         {
           "word": "に",
           "reading": "に",
           "meaning": "在（表示场所的格助词）",
-          "span": null,
+          "span": [
+            2,
+            3
+          ],
           "chinese_cognate_note": null
         },
         {
           "word": "紅葉",
           "reading": "もみじ",
           "meaning": "红叶",
-          "span": null,
+          "span": [
+            3,
+            5
+          ],
           "chinese_cognate_note": "汉字意同"
         },
         {
           "word": "踏みわけ",
           "reading": "ふみわけ",
           "meaning": "踏开、拨开（红叶前行）",
-          "span": null,
+          "span": [
+            5,
+            9
+          ],
           "chinese_cognate_note": "踏 + 分"
         },
         {
           "word": "鳴く",
           "reading": "なく",
           "meaning": "鸣叫（动物）",
-          "span": null,
+          "span": [
+            9,
+            11
+          ],
           "chinese_cognate_note": "鸣"
         },
         {
           "word": "鹿",
           "reading": "しか",
           "meaning": "鹿",
-          "span": null,
+          "span": [
+            11,
+            12
+          ],
           "chinese_cognate_note": "汉字意同"
         },
         {
           "word": "の",
           "reading": "の",
           "meaning": "的（格助词）",
-          "span": null,
+          "span": [
+            12,
+            13
+          ],
           "chinese_cognate_note": "似中文“之”"
         },
         {
           "word": "声",
           "reading": "こえ",
           "meaning": "声音",
-          "span": null,
+          "span": [
+            13,
+            14
+          ],
           "chinese_cognate_note": "汉字意同"
         },
         {
           "word": "聞く",
           "reading": "きく",
           "meaning": "听",
-          "span": null,
+          "span": [
+            14,
+            16
+          ],
           "chinese_cognate_note": "闻"
         },
         {
           "word": "時",
           "reading": "とき",
           "meaning": "时候",
-          "span": null,
+          "span": [
+            16,
+            17
+          ],
           "chinese_cognate_note": "时"
         },
         {
           "word": "ぞ",
           "reading": "ぞ",
           "meaning": "（强调助词，表示强烈情感）",
-          "span": null,
+          "span": [
+            17,
+            18
+          ],
           "chinese_cognate_note": null
         },
         {
           "word": "秋",
           "reading": "あき",
           "meaning": "秋天",
-          "span": null,
+          "span": [
+            18,
+            19
+          ],
           "chinese_cognate_note": "汉字意同"
         },
         {
           "word": "は",
           "reading": "わ",
           "meaning": "（提示主题的系助词）",
-          "span": null,
+          "span": [
+            19,
+            20
+          ],
           "chinese_cognate_note": null
         },
         {
           "word": "悲しき",
           "reading": "かなしき",
           "meaning": "悲伤的、令人感动的",
-          "span": null,
+          "span": [
+            20,
+            23
+          ],
           "chinese_cognate_note": "悲"
         }
       ],
@@ -150,91 +192,130 @@
           "word": "三茎",
           "reading": "みつくき",
           "meaning": "三茎（地名）",
-          "span": null,
+          "span": [
+            0,
+            2
+          ],
           "chinese_cognate_note": null
         },
         {
           "word": "の",
           "reading": "の",
           "meaning": "之/的",
-          "span": null,
+          "span": [
+            2,
+            3
+          ],
           "chinese_cognate_note": null
         },
         {
           "word": "岡",
           "reading": "おか",
           "meaning": "山岗",
-          "span": null,
+          "span": [
+            3,
+            4
+          ],
           "chinese_cognate_note": "岗"
         },
         {
           "word": "の",
           "reading": "の",
           "meaning": "之/的",
-          "span": null,
+          "span": [
+            4,
+            5
+          ],
           "chinese_cognate_note": null
         },
         {
           "word": "葛葉",
           "reading": "くずは",
           "meaning": "葛叶",
-          "span": null,
+          "span": [
+            5,
+            7
+          ],
           "chinese_cognate_note": "汉字意同"
         },
         {
           "word": "も",
           "reading": "も",
           "meaning": "也/连...都",
-          "span": null,
+          "span": [
+            7,
+            8
+          ],
           "chinese_cognate_note": null
         },
         {
           "word": "色づき",
           "reading": "いろづき",
           "meaning": "变色（指叶子变红）",
-          "span": null,
+          "span": [
+            8,
+            11
+          ],
           "chinese_cognate_note": "色 + 付"
         },
         {
           "word": "て",
           "reading": "て",
           "meaning": "（接续助词，表示动作相继）",
-          "span": null,
+          "span": [
+            11,
+            12
+          ],
           "chinese_cognate_note": null
         },
         {
           "word": "今朝",
           "reading": "けさ",
           "meaning": "今天早上",
-          "span": null,
+          "span": [
+            12,
+            14
+          ],
           "chinese_cognate_note": "今朝"
         },
         {
           "word": "うらがなし",
           "reading": "うらがなし",
           "meaning": "心中悲凉",
-          "span": null,
+          "span": [
+            14,
+            19
+          ],
           "chinese_cognate_note": "心(里) + 悲"
         },
         {
           "word": "秋",
           "reading": "あき",
           "meaning": "秋天",
-          "span": null,
+          "span": [
+            19,
+            20
+          ],
           "chinese_cognate_note": "秋"
         },
         {
           "word": "の",
           "reading": "の",
           "meaning": "之/的",
-          "span": null,
+          "span": [
+            20,
+            21
+          ],
           "chinese_cognate_note": null
         },
         {
           "word": "初風",
           "reading": "はつかぜ",
           "meaning": "初风（秋天的第一阵风）",
-          "span": null,
+          "span": [
+            21,
+            23
+          ],
           "chinese_cognate_note": "初风"
         }
       ],

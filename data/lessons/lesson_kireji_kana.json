@@ -29,77 +29,110 @@
           "word": "古",
           "reading": "いにしえ",
           "meaning": "往昔、过去",
-          "span": null,
+          "span": [
+            0,
+            1
+          ],
           "chinese_cognate_note": "古"
         },
         {
           "word": "に",
           "reading": "に",
           "meaning": "格助词（表示方向/对象）",
-          "span": null,
+          "span": [
+            1,
+            2
+          ],
           "chinese_cognate_note": null
         },
         {
           "word": "猶",
           "reading": "なお",
           "meaning": "依然、还是",
-          "span": null,
+          "span": [
+            2,
+            3
+          ],
           "chinese_cognate_note": "犹"
         },
         {
           "word": "立ち返る",
           "reading": "たちかえる",
           "meaning": "折返、回到",
-          "span": null,
+          "span": [
+            3,
+            7
+          ],
           "chinese_cognate_note": "返"
         },
         {
           "word": "心",
           "reading": "こころ",
           "meaning": "心、心绪",
-          "span": null,
+          "span": [
+            7,
+            8
+          ],
           "chinese_cognate_note": "心"
         },
         {
           "word": "かな",
           "reading": "かな",
           "meaning": "咏叹助词（啊……）",
-          "span": null,
+          "span": [
+            8,
+            10
+          ],
           "chinese_cognate_note": null
         },
         {
           "word": "恋しき",
           "reading": "こいしき",
           "meaning": "思念的（形容词连体形）",
-          "span": null,
+          "span": [
+            10,
+            13
+          ],
           "chinese_cognate_note": "恋"
         },
         {
           "word": "こと",
           "reading": "こと",
           "meaning": "事情/原因",
-          "span": null,
+          "span": [
+            13,
+            15
+          ],
           "chinese_cognate_note": null
         },
         {
           "word": "に",
           "reading": "に",
           "meaning": "格助词（表示原因）",
-          "span": null,
+          "span": [
+            15,
+            16
+          ],
           "chinese_cognate_note": null
         },
         {
           "word": "物忘れ",
           "reading": "ものわすれ",
           "meaning": "健忘、恍惚",
-          "span": null,
+          "span": [
+            16,
+            19
+          ],
           "chinese_cognate_note": "忘"
         },
         {
           "word": "して",
           "reading": "して",
           "meaning": "做（动词“す”的接续形式）",
-          "span": null,
+          "span": [
+            19,
+            21
+          ],
           "chinese_cognate_note": null
         }
       ],
@@ -135,112 +168,160 @@
           "word": "秋",
           "reading": "あき",
           "meaning": "秋天",
-          "span": null,
+          "span": [
+            0,
+            1
+          ],
           "chinese_cognate_note": "秋"
         },
         {
           "word": "の",
           "reading": "の",
           "meaning": "格助词（的）",
-          "span": null,
+          "span": [
+            1,
+            2
+          ],
           "chinese_cognate_note": null
         },
         {
           "word": "野",
           "reading": "の",
           "meaning": "原野",
-          "span": null,
+          "span": [
+            2,
+            3
+          ],
           "chinese_cognate_note": "野"
         },
         {
           "word": "に",
           "reading": "に",
           "meaning": "格助词（在）",
-          "span": null,
+          "span": [
+            3,
+            4
+          ],
           "chinese_cognate_note": null
         },
         {
           "word": "乱れて",
           "reading": "みだれて",
           "meaning": "纷乱地（动词接续）",
-          "span": null,
+          "span": [
+            4,
+            7
+          ],
           "chinese_cognate_note": "乱"
         },
         {
           "word": "咲ける",
           "reading": "さける",
           "meaning": "盛开着的（动词+存续助动词连体形）",
-          "span": null,
+          "span": [
+            7,
+            10
+          ],
           "chinese_cognate_note": null
         },
         {
           "word": "花",
           "reading": "はな",
           "meaning": "花",
-          "span": null,
+          "span": [
+            10,
+            11
+          ],
           "chinese_cognate_note": "花"
         },
         {
           "word": "の",
           "reading": "の",
           "meaning": "格助词（的）",
-          "span": null,
+          "span": [
+            11,
+            12
+          ],
           "chinese_cognate_note": null
         },
         {
           "word": "色",
           "reading": "いろ",
           "meaning": "颜色/种类",
-          "span": null,
+          "span": [
+            12,
+            13
+          ],
           "chinese_cognate_note": "色"
         },
         {
           "word": "千種",
           "reading": "ちぐさ",
           "meaning": "千种（花草）/千种（思绪）",
-          "span": null,
+          "span": [
+            13,
+            15
+          ],
           "chinese_cognate_note": "千种"
         },
         {
           "word": "に",
           "reading": "に",
           "meaning": "格助词（作为/呈现出）",
-          "span": null,
+          "span": [
+            15,
+            16
+          ],
           "chinese_cognate_note": null
         },
         {
           "word": "物",
           "reading": "もの",
           "meaning": "事情",
-          "span": null,
+          "span": [
+            16,
+            17
+          ],
           "chinese_cognate_note": "物"
         },
         {
           "word": "を",
           "reading": "を",
           "meaning": "格助词（宾语标记）",
-          "span": null,
+          "span": [
+            17,
+            18
+          ],
           "chinese_cognate_note": null
         },
         {
           "word": "思ふ",
           "reading": "おもう",
           "meaning": "思考/忧虑（连体形）",
-          "span": null,
+          "span": [
+            18,
+            20
+          ],
           "chinese_cognate_note": "思"
         },
         {
           "word": "ころ",
           "reading": "ころ",
           "meaning": "时候/时节",
-          "span": null,
+          "span": [
+            20,
+            22
+          ],
           "chinese_cognate_note": "顷"
         },
         {
           "word": "かな",
           "reading": "かな",
           "meaning": "咏叹助词（啊……）",
-          "span": null,
+          "span": [
+            22,
+            24
+          ],
           "chinese_cognate_note": null
         }
       ],

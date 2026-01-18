@@ -583,12 +583,15 @@ def render_poem_with_vocabulary(
                 word_type = detect_word_type(vocab)
                 css_class = WORD_TYPE_COLORS.get(word_type, "vocab-noun")
 
-                # Check if this span overlaps with focus highlight
+                # Check if this span overlaps with any focus highlight
                 has_focus = False
-                if focus_span:
-                    focus_start, focus_end = focus_span
-                    if start < focus_end and end > focus_start:
-                        has_focus = True
+                if focus_span and len(focus_span) >= 2:
+                    # Handle multiple spans: [s1, e1, s2, e2, ...]
+                    for i in range(0, len(focus_span) - 1, 2):
+                        focus_start, focus_end = focus_span[i], focus_span[i + 1]
+                        if start < focus_end and end > focus_start:
+                            has_focus = True
+                            break
 
                 span_text = poem_text[start:end]
                 tooltip = render_vocab_tooltip(vocab)
@@ -603,16 +606,22 @@ def render_poem_with_vocabulary(
                 continue
 
         # Check for focus highlight without vocabulary
-        if focus_span:
-            focus_start, focus_end = focus_span
-            if pos == focus_start:
-                # Find end of focus or next vocab span
-                end_pos = focus_end
-                if vocab_idx < len(vocab_with_spans):
-                    next_vocab_start = vocab_with_spans[vocab_idx].span[0]
-                    end_pos = min(end_pos, next_vocab_start)
-                result.append(f'<span class="focus-highlight">{html.escape(poem_text[pos:end_pos])}</span>')
-                pos = end_pos
+        # focus_span can be [start, end] or [s1, e1, s2, e2, ...] for multiple spans
+        if focus_span and len(focus_span) >= 2:
+            matched_focus = False
+            for i in range(0, len(focus_span) - 1, 2):
+                focus_start, focus_end = focus_span[i], focus_span[i + 1]
+                if pos == focus_start:
+                    # Find end of focus or next vocab span
+                    end_pos = focus_end
+                    if vocab_idx < len(vocab_with_spans):
+                        next_vocab_start = vocab_with_spans[vocab_idx].span[0]
+                        end_pos = min(end_pos, next_vocab_start)
+                    result.append(f'<span class="focus-highlight">{html.escape(poem_text[pos:end_pos])}</span>')
+                    pos = end_pos
+                    matched_focus = True
+                    break
+            if matched_focus:
                 continue
 
         # Regular character

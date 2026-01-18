@@ -29,112 +29,160 @@
           "word": "逢ふ",
           "reading": "あふ",
           "meaning": "相逢",
-          "span": null,
+          "span": [
+            0,
+            2
+          ],
           "chinese_cognate_note": "逢"
         },
         {
           "word": "事",
           "reading": "こと",
           "meaning": "事情/行为（形式名词）",
-          "span": null,
+          "span": [
+            2,
+            3
+          ],
           "chinese_cognate_note": "事"
         },
         {
           "word": "は",
           "reading": "は",
           "meaning": "提示助词（表示对比）",
-          "span": null,
+          "span": [
+            3,
+            4
+          ],
           "chinese_cognate_note": null
         },
         {
           "word": "玉の緒",
           "reading": "たまのを",
           "meaning": "串珠的线（比喻短暂或生命）",
-          "span": null,
+          "span": [
+            4,
+            7
+          ],
           "chinese_cognate_note": "玉绪"
         },
         {
           "word": "ばかり",
           "reading": "ばかり",
           "meaning": "副助词：仅仅、只有",
-          "span": null,
+          "span": [
+            7,
+            10
+          ],
           "chinese_cognate_note": null
         },
         {
           "word": "名",
           "reading": "な",
           "meaning": "名声/传闻",
-          "span": null,
+          "span": [
+            10,
+            11
+          ],
           "chinese_cognate_note": "名"
         },
         {
           "word": "の",
           "reading": "の",
           "meaning": "主格助词（相当于ga）",
-          "span": null,
+          "span": [
+            11,
+            12
+          ],
           "chinese_cognate_note": null
         },
         {
           "word": "立つ",
           "reading": "たつ",
           "meaning": "传开/扬起",
-          "span": null,
+          "span": [
+            12,
+            14
+          ],
           "chinese_cognate_note": "立"
         },
         {
           "word": "は",
           "reading": "は",
           "meaning": "提示助词（表示对比）",
-          "span": null,
+          "span": [
+            14,
+            15
+          ],
           "chinese_cognate_note": null
         },
         {
           "word": "吉野",
           "reading": "よしの",
           "meaning": "地名（吉野山）",
-          "span": null,
+          "span": [
+            15,
+            17
+          ],
           "chinese_cognate_note": null
         },
         {
           "word": "の",
           "reading": "の",
           "meaning": "修饰助词（的）",
-          "span": null,
+          "span": [
+            17,
+            18
+          ],
           "chinese_cognate_note": null
         },
         {
           "word": "河",
           "reading": "かわ",
           "meaning": "河",
-          "span": null,
+          "span": [
+            18,
+            19
+          ],
           "chinese_cognate_note": "河"
         },
         {
           "word": "の",
           "reading": "の",
           "meaning": "修饰助词（的）",
-          "span": null,
+          "span": [
+            19,
+            20
+          ],
           "chinese_cognate_note": null
         },
         {
           "word": "激つ瀬",
           "reading": "たきつせ",
           "meaning": "激流/湍急的浅滩",
-          "span": null,
+          "span": [
+            20,
+            23
+          ],
           "chinese_cognate_note": "激"
         },
         {
           "word": "の",
           "reading": "の",
           "meaning": "修饰助词（如...一样）",
-          "span": null,
+          "span": [
+            23,
+            24
+          ],
           "chinese_cognate_note": null
         },
         {
           "word": "こと",
           "reading": "こと",
           "meaning": "样态/事情（形式名词）",
-          "span": null,
+          "span": [
+            24,
+            26
+          ],
           "chinese_cognate_note": null
         }
       ],
@@ -167,105 +215,150 @@
           "word": "衣",
           "reading": "ころも",
           "meaning": "衣服",
-          "span": null,
+          "span": [
+            0,
+            1
+          ],
           "chinese_cognate_note": "衣"
         },
         {
           "word": "打つ",
           "reading": "うつ",
           "meaning": "敲打（捣衣）",
-          "span": null,
+          "span": [
+            1,
+            3
+          ],
           "chinese_cognate_note": "打"
         },
         {
           "word": "音",
           "reading": "おと",
           "meaning": "声音",
-          "span": null,
+          "span": [
+            3,
+            4
+          ],
           "chinese_cognate_note": "音"
         },
         {
           "word": "は",
           "reading": "は",
           "meaning": "提示助词（话题）",
-          "span": null,
+          "span": [
+            4,
+            5
+          ],
           "chinese_cognate_note": null
         },
         {
           "word": "枕",
           "reading": "まくら",
           "meaning": "枕头",
-          "span": null,
+          "span": [
+            5,
+            6
+          ],
           "chinese_cognate_note": "枕"
         },
         {
           "word": "に",
           "reading": "に",
           "meaning": "格助词（动作落脚点）",
-          "span": null,
+          "span": [
+            6,
+            7
+          ],
           "chinese_cognate_note": null
         },
         {
           "word": "澄河原",
           "reading": "すかはら",
           "meaning": "地名（澄之河原）/ 清澈的河滩",
-          "span": null,
+          "span": [
+            7,
+            10
+          ],
           "chinese_cognate_note": "澄"
         },
         {
           "word": "や",
           "reading": "や",
           "meaning": "切字（感叹/咏叹）",
-          "span": null,
+          "span": [
+            10,
+            11
+          ],
           "chinese_cognate_note": null
         },
         {
           "word": "伏見",
           "reading": "ふしみ",
           "meaning": "地名（伏见）/ 卧着看",
-          "span": null,
+          "span": [
+            11,
+            13
+          ],
           "chinese_cognate_note": "伏见"
         },
         {
           "word": "の",
           "reading": "の",
           "meaning": "修饰助词（的）",
-          "span": null,
+          "span": [
+            13,
+            14
+          ],
           "chinese_cognate_note": null
         },
         {
           "word": "夢",
           "reading": "ゆめ",
           "meaning": "梦",
-          "span": null,
+          "span": [
+            14,
+            15
+          ],
           "chinese_cognate_note": "梦"
         },
         {
           "word": "を",
           "reading": "を",
           "meaning": "格助词（宾语标记）",
-          "span": null,
+          "span": [
+            15,
+            16
+          ],
           "chinese_cognate_note": null
         },
         {
           "word": "幾夜",
           "reading": "いくよ",
           "meaning": "几夜",
-          "span": null,
+          "span": [
+            16,
+            18
+          ],
           "chinese_cognate_note": "几夜"
         },
         {
           "word": "残し",
           "reading": "のこし",
           "meaning": "留下",
-          "span": null,
+          "span": [
+            18,
+            20
+          ],
           "chinese_cognate_note": "残"
         },
         {
           "word": "つ",
           "reading": "つ",
           "meaning": "完了助动词（已经/了）",
-          "span": null,
+          "span": [
+            20,
+            21
+          ],
           "chinese_cognate_note": null
         }
       ],
@@ -293,91 +386,130 @@
           "word": "海原",
           "reading": "わたのはら",
           "meaning": "大海原",
-          "span": null,
+          "span": [
+            0,
+            2
+          ],
           "chinese_cognate_note": "原"
         },
         {
           "word": "八十島",
           "reading": "やそしま",
           "meaning": "众多的岛屿",
-          "span": null,
+          "span": [
+            2,
+            5
+          ],
           "chinese_cognate_note": "八十岛"
         },
         {
           "word": "かけて",
           "reading": "かけて",
           "meaning": "以此为目标/途径",
-          "span": null,
+          "span": [
+            5,
+            8
+          ],
           "chinese_cognate_note": null
         },
         {
           "word": "漕ぎ出で",
           "reading": "こぎいで",
           "meaning": "划船出去",
-          "span": null,
+          "span": [
+            8,
+            12
+          ],
           "chinese_cognate_note": "漕出"
         },
         {
           "word": "ぬ",
           "reading": "ぬ",
           "meaning": "完了助动词（已经...了）",
-          "span": null,
+          "span": [
+            12,
+            13
+          ],
           "chinese_cognate_note": null
         },
         {
           "word": "と",
           "reading": "と",
           "meaning": "引用助词（内容是...）",
-          "span": null,
+          "span": [
+            13,
+            14
+          ],
           "chinese_cognate_note": null
         },
         {
           "word": "人",
           "reading": "ひと",
           "meaning": "人（指京城的亲友）",
-          "span": null,
+          "span": [
+            14,
+            15
+          ],
           "chinese_cognate_note": "人"
         },
         {
           "word": "に",
           "reading": "に",
           "meaning": "对象助词（对...）",
-          "span": null,
+          "span": [
+            15,
+            16
+          ],
           "chinese_cognate_note": null
         },
         {
           "word": "は",
           "reading": "は",
           "meaning": "提示助词（强调/限定）",
-          "span": null,
+          "span": [
+            16,
+            17
+          ],
           "chinese_cognate_note": null
         },
         {
           "word": "告げよ",
           "reading": "つげよ",
           "meaning": "告诉吧（命令形）",
-          "span": null,
+          "span": [
+            17,
+            20
+          ],
           "chinese_cognate_note": "告"
         },
         {
           "word": "海人",
           "reading": "あま",
           "meaning": "渔夫",
-          "span": null,
+          "span": [
+            20,
+            22
+          ],
           "chinese_cognate_note": "海人"
         },
         {
           "word": "の",
           "reading": "の",
           "meaning": "修饰助词（的）",
-          "span": null,
+          "span": [
+            22,
+            23
+          ],
           "chinese_cognate_note": null
         },
         {
           "word": "釣舟",
           "reading": "つりぶね",
           "meaning": "钓鱼船",
-          "span": null,
+          "span": [
+            23,
+            25
+          ],
           "chinese_cognate_note": "钓舟"
         }
       ],

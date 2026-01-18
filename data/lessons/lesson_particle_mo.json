@@ -39,119 +39,170 @@
           "word": "や",
           "reading": "や",
           "meaning": "（感叹/强调助词）",
-          "span": null,
+          "span": [
+            2,
+            3
+          ],
           "chinese_cognate_note": null
         },
         {
           "word": "この",
           "reading": "この",
           "meaning": "这个（连体词，此处与前文构成固定句式“这就是那个...”）",
-          "span": null,
+          "span": [
+            3,
+            5
+          ],
           "chinese_cognate_note": null
         },
         {
           "word": "行く",
           "reading": "ゆく",
           "meaning": "去、离开",
-          "span": null,
+          "span": [
+            5,
+            7
+          ],
           "chinese_cognate_note": null
         },
         {
           "word": "も",
           "reading": "も",
           "meaning": "也、都（表示并列）",
-          "span": null,
+          "span": [
+            7,
+            8
+          ],
           "chinese_cognate_note": null
         },
         {
           "word": "帰る",
           "reading": "かえる",
           "meaning": "回、归来",
-          "span": null,
+          "span": [
+            8,
+            10
+          ],
           "chinese_cognate_note": "归"
         },
         {
           "word": "も",
           "reading": "も",
           "meaning": "也、都（表示并列）",
-          "span": null,
+          "span": [
+            10,
+            11
+          ],
           "chinese_cognate_note": null
         },
         {
           "word": "別れ",
           "reading": "わかれ",
           "meaning": "分别、离别",
-          "span": null,
+          "span": [
+            11,
+            13
+          ],
           "chinese_cognate_note": "别"
         },
         {
           "word": "て",
           "reading": "て",
           "meaning": "（接续助词，表示动作的承接）",
-          "span": null,
+          "span": [
+            13,
+            14
+          ],
           "chinese_cognate_note": null
         },
         {
           "word": "は",
           "reading": "は",
           "meaning": "（提示助词，此处强调状态）",
-          "span": null,
+          "span": [
+            14,
+            15
+          ],
           "chinese_cognate_note": null
         },
         {
           "word": "知る",
           "reading": "しる",
           "meaning": "认识、知晓",
-          "span": null,
+          "span": [
+            15,
+            17
+          ],
           "chinese_cognate_note": "知"
         },
         {
           "word": "も",
           "reading": "も",
           "meaning": "也、都",
-          "span": null,
+          "span": [
+            17,
+            18
+          ],
           "chinese_cognate_note": null
         },
         {
           "word": "知ら",
           "reading": "しら",
           "meaning": "认识（动词未然形）",
-          "span": null,
+          "span": [
+            18,
+            20
+          ],
           "chinese_cognate_note": null
         },
         {
           "word": "ぬ",
           "reading": "ぬ",
           "meaning": "不（否定助动词）",
-          "span": null,
+          "span": [
+            20,
+            21
+          ],
           "chinese_cognate_note": null
         },
         {
           "word": "も",
           "reading": "も",
           "meaning": "也、都",
-          "span": null,
+          "span": [
+            21,
+            22
+          ],
           "chinese_cognate_note": null
         },
         {
           "word": "逢坂",
           "reading": "おうさか",
           "meaning": "逢坂（地名，意为相逢之坡）",
-          "span": null,
+          "span": [
+            22,
+            24
+          ],
           "chinese_cognate_note": "逢"
         },
         {
           "word": "の",
           "reading": "の",
           "meaning": "的（属性/同格）",
-          "span": null,
+          "span": [
+            24,
+            25
+          ],
           "chinese_cognate_note": null
         },
         {
           "word": "関",
           "reading": "せき",
           "meaning": "关卡、关隘",
-          "span": null,
+          "span": [
+            25,
+            26
+          ],
           "chinese_cognate_note": "关"
         }
       ],
@@ -184,84 +235,120 @@
           "word": "ちはやぶる",
           "reading": "ちはやぶる",
           "meaning": "（枕词，修饰“神”）",
-          "span": null,
+          "span": [
+            0,
+            5
+          ],
           "chinese_cognate_note": null
         },
         {
           "word": "神代",
           "reading": "かみよ",
           "meaning": "神话时代",
-          "span": null,
+          "span": [
+            5,
+            7
+          ],
           "chinese_cognate_note": "神代"
         },
         {
           "word": "も",
           "reading": "も",
           "meaning": "甚至、连...也",
-          "span": null,
+          "span": [
+            7,
+            8
+          ],
           "chinese_cognate_note": null
         },
         {
           "word": "聞か",
           "reading": "きか",
           "meaning": "听（动词未然形）",
-          "span": null,
+          "span": [
+            8,
+            10
+          ],
           "chinese_cognate_note": "闻"
         },
         {
           "word": "ず",
           "reading": "ず",
           "meaning": "不（否定助动词）",
-          "span": null,
+          "span": [
+            10,
+            11
+          ],
           "chinese_cognate_note": null
         },
         {
           "word": "竜田川",
           "reading": "たつたがわ",
           "meaning": "龙田川（河名）",
-          "span": null,
+          "span": [
+            11,
+            14
+          ],
           "chinese_cognate_note": null
         },
         {
           "word": "唐紅",
           "reading": "からくれない",
           "meaning": "深红色、韩红",
-          "span": null,
+          "span": [
+            14,
+            16
+          ],
           "chinese_cognate_note": "唐红"
         },
         {
           "word": "に",
           "reading": "に",
           "meaning": "变成（表示结果/变化）",
-          "span": null,
+          "span": [
+            16,
+            17
+          ],
           "chinese_cognate_note": null
         },
         {
           "word": "水",
           "reading": "みず",
           "meaning": "水",
-          "span": null,
+          "span": [
+            17,
+            18
+          ],
           "chinese_cognate_note": "水"
         },
         {
           "word": "括る",
           "reading": "くくる",
           "meaning": "绞染（一种染色技法）",
-          "span": null,
+          "span": [
+            18,
+            20
+          ],
           "chinese_cognate_note": "括"
         },
         {
           "word": "と",
           "reading": "と",
           "meaning": "（引用/内容）",
-          "span": null,
+          "span": [
+            20,
+            21
+          ],
           "chinese_cognate_note": null
         },
         {
           "word": "は",
           "reading": "は",
           "meaning": "（提示助词，此处表示感叹）",
-          "span": null,
+          "span": [
+            21,
+            22
+          ],
           "chinese_cognate_note": null
         }
       ],

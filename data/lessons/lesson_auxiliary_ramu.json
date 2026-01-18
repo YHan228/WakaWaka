@@ -32,98 +32,140 @@
           "word": "秋",
           "reading": "あき",
           "meaning": "秋天",
-          "span": null,
+          "span": [
+            0,
+            1
+          ],
           "chinese_cognate_note": "秋"
         },
         {
           "word": "は",
           "reading": "は",
           "meaning": "提示主题（系助词）",
-          "span": null,
+          "span": [
+            1,
+            2
+          ],
           "chinese_cognate_note": null
         },
         {
           "word": "来",
           "reading": "き",
           "meaning": "来（动词“来”的连用形）",
-          "span": null,
+          "span": [
+            2,
+            3
+          ],
           "chinese_cognate_note": "来"
         },
         {
           "word": "に",
           "reading": "に",
           "meaning": "表示完了/确认（助动词“ぬ”的连用形）",
-          "span": null,
+          "span": [
+            3,
+            4
+          ],
           "chinese_cognate_note": null
         },
         {
           "word": "うらびれ",
           "reading": "うらびれ",
           "meaning": "感到凄凉、萧条（动词“うらびる”的连用形）",
-          "span": null,
+          "span": [
+            4,
+            8
+          ],
           "chinese_cognate_note": null
         },
         {
           "word": "居",
           "reading": "お",
           "meaning": "在、坐着（动词“居り”的已然形）",
-          "span": null,
+          "span": [
+            8,
+            9
+          ],
           "chinese_cognate_note": "居"
         },
         {
           "word": "れば",
           "reading": "れば",
           "meaning": "因为……所以（接续助词“ば”接在已然形后）",
-          "span": null,
+          "span": [
+            9,
+            11
+          ],
           "chinese_cognate_note": null
         },
         {
           "word": "足引の",
           "reading": "あしひきの",
           "meaning": "枕词，修饰“山”",
-          "span": null,
+          "span": [
+            11,
+            14
+          ],
           "chinese_cognate_note": null
         },
         {
           "word": "山下",
           "reading": "やました",
           "meaning": "山脚、山谷",
-          "span": null,
+          "span": [
+            14,
+            16
+          ],
           "chinese_cognate_note": "山下"
         },
         {
           "word": "響み",
           "reading": "とよみ",
           "meaning": "轰鸣、回响（动词“響む”的连用形）",
-          "span": null,
+          "span": [
+            16,
+            18
+          ],
           "chinese_cognate_note": "响"
         },
         {
           "word": "鹿",
           "reading": "しか",
           "meaning": "鹿",
-          "span": null,
+          "span": [
+            18,
+            19
+          ],
           "chinese_cognate_note": "鹿"
         },
         {
           "word": "の",
           "reading": "の",
           "meaning": "主格助词（表示主语）",
-          "span": null,
+          "span": [
+            19,
+            20
+          ],
           "chinese_cognate_note": null
         },
         {
           "word": "鳴く",
           "reading": "なく",
           "meaning": "鸣叫（动词）",
-          "span": null,
+          "span": [
+            20,
+            22
+          ],
           "chinese_cognate_note": "鸣"
         },
         {
           "word": "らむ",
           "reading": "らむ",
           "meaning": "想必正在……吧（现在推量助动词）",
-          "span": null,
+          "span": [
+            22,
+            24
+          ],
           "chinese_cognate_note": null
         }
       ],
@@ -150,105 +192,150 @@
           "word": "住の江",
           "reading": "すみのえ",
           "meaning": "地名（住吉之江）",
-          "span": null,
+          "span": [
+            0,
+            3
+          ],
           "chinese_cognate_note": null
         },
         {
           "word": "の",
           "reading": "の",
           "meaning": "格助词（的）",
-          "span": null,
+          "span": [
+            3,
+            4
+          ],
           "chinese_cognate_note": null
         },
         {
           "word": "岸",
           "reading": "きし",
           "meaning": "岸",
-          "span": null,
+          "span": [
+            4,
+            5
+          ],
           "chinese_cognate_note": "岸"
         },
         {
           "word": "に",
           "reading": "に",
           "meaning": "格助词（向、对）",
-          "span": null,
+          "span": [
+            5,
+            6
+          ],
           "chinese_cognate_note": null
         },
         {
           "word": "寄る",
           "reading": "よる",
           "meaning": "靠近、涌来",
-          "span": null,
+          "span": [
+            6,
+            8
+          ],
           "chinese_cognate_note": null
         },
         {
           "word": "浪",
           "reading": "なみ",
           "meaning": "波浪",
-          "span": null,
+          "span": [
+            8,
+            9
+          ],
           "chinese_cognate_note": "浪"
         },
         {
           "word": "よる",
           "reading": "よる",
           "meaning": "夜晚（此处双关“靠近”）",
-          "span": null,
+          "span": [
+            9,
+            11
+          ],
           "chinese_cognate_note": "夜"
         },
         {
           "word": "さへ",
           "reading": "さえ",
           "meaning": "连……也（表示添加/强调）",
-          "span": null,
+          "span": [
+            11,
+            13
+          ],
           "chinese_cognate_note": null
         },
         {
           "word": "や",
           "reading": "や",
           "meaning": "表示疑问（系助词）",
-          "span": null,
+          "span": [
+            13,
+            14
+          ],
           "chinese_cognate_note": null
         },
         {
           "word": "夢",
           "reading": "ゆめ",
           "meaning": "梦",
-          "span": null,
+          "span": [
+            14,
+            15
+          ],
           "chinese_cognate_note": "梦"
         },
         {
           "word": "の",
           "reading": "の",
           "meaning": "格助词（的）",
-          "span": null,
+          "span": [
+            15,
+            16
+          ],
           "chinese_cognate_note": null
         },
         {
           "word": "通ひ路",
           "reading": "かよいじ",
           "meaning": "往来的路（指梦路）",
-          "span": null,
+          "span": [
+            16,
+            19
+          ],
           "chinese_cognate_note": "通路"
         },
         {
           "word": "人目",
           "reading": "ひとめ",
           "meaning": "别人的视线",
-          "span": null,
+          "span": [
+            19,
+            21
+          ],
           "chinese_cognate_note": "人目"
         },
         {
           "word": "避く",
           "reading": "よく",
           "meaning": "避开、躲避（动词终止形）",
-          "span": null,
+          "span": [
+            21,
+            23
+          ],
           "chinese_cognate_note": "避"
         },
         {
           "word": "らむ",
           "reading": "らむ",
           "meaning": "究竟是为什么……呢（原因推量）",
-          "span": null,
+          "span": [
+            23,
+            25
+          ],
           "chinese_cognate_note": null
         }
       ],
